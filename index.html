@@ -161,12 +161,14 @@ pulse.append("animate").attr("attributeName","stroke-opacity").attr("values",".5
 const label=node.append("text").attr("x",d=>radius(d)+6).attr("y",4).text(d=>d.label);
 // sanfte Einblend-Animation der Knoten beim Laden (gestaffelt)
 node.transition().delay((d,i)=>Math.min(i*14,900)).duration(700).style("opacity",1);
-// Label-Sichtbarkeit: immer wichtige; Rest nur bei Zoom>1.4 oder Nachbar des aktiven Knotens
-let curZoom=1, activeId=null, neighbors=new Set();
+// Label-Sichtbarkeit: immer wichtige; Rest nur beim Reinzoomen (über die Auto-Fit-Ansicht
+// hinaus) oder als Nachbar des aktiven Knotens. Schwelle relativ zum Fit-Zoom, damit die
+// Standardansicht ruhig bleibt (nur wenige Labels).
+let curZoom=1, fitZoom=1, activeId=null, neighbors=new Set();
 function labelVisible(d){
   if(alwaysLabel.has(d.id))return true;
   if(activeId&&(d.id===activeId||neighbors.has(d.id)))return true;
-  return curZoom>1.4;
+  return curZoom>Math.max(1.4, fitZoom*1.4);
 }
 function updateLabels(k){
   if(typeof k==="number")curZoom=k;
@@ -206,6 +208,7 @@ function fitToViewport(){
   const bw=(maxX-minX)||1,bh=(maxY-minY)||1;
   const pad=MOB?40:60;
   const k=Math.min((W-pad*2)/bw,(H-pad*2)/bh,3.5);
+  fitZoom=k; updateLabels();
   const tx=W/2-k*(minX+maxX)/2, ty=H/2-k*(minY+maxY)/2;
   svg.transition().duration(600).call(zoom.transform,d3.zoomIdentity.translate(tx,ty).scale(k));
 }
