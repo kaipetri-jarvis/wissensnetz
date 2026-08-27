@@ -1,34 +1,63 @@
 <!DOCTYPE html><html lang="de"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
 <title>🧠 Etsy-Projekt — Wissensnetz</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#0a0e1a;color:#e8edf5;font-family:-apple-system,Segoe UI,Roboto,sans-serif;overflow:hidden}
+html,body{height:100%;overscroll-behavior:none}
+body{background:#0a0e1a;color:#e8edf5;font-family:-apple-system,Segoe UI,Roboto,sans-serif;overflow:hidden;-webkit-tap-highlight-color:transparent}
 #hdr{position:fixed;top:0;left:0;right:0;padding:14px 20px;z-index:5;pointer-events:none}
 #hdr h1{font-size:20px} #hdr p{font-size:12px;color:#9fb0c8;max-width:70%;margin-top:4px}
-#cnt{position:fixed;top:14px;right:20px;text-align:right;font-size:13px;color:#7fa8ff;z-index:6}
-#legend{position:fixed;top:90px;left:16px;background:#131a2c;border:1px solid #223;border-radius:12px;padding:12px;z-index:6}
+#hdr .short{display:none}
+#cnt{position:fixed;top:14px;right:20px;text-align:right;font-size:13px;color:#7fa8ff;z-index:6;pointer-events:none}
+#legToggle{display:none;position:fixed;top:12px;left:12px;z-index:8;background:#131a2c;border:1px solid #2a3550;border-radius:20px;color:#e8edf5;padding:9px 14px;font-size:14px;align-items:center;gap:6px;cursor:pointer}
+#legend{position:fixed;top:90px;left:16px;background:#131a2c;border:1px solid #223;border-radius:12px;padding:12px;z-index:7}
 #legend .ttl{font-size:11px;letter-spacing:1px;color:#8090a8;margin-bottom:8px}
+#legend .lgClose{display:none}
 .lg{display:flex;align-items:center;gap:8px;font-size:13px;padding:3px 0;cursor:pointer;opacity:.95}
 .lg.off{opacity:.35} .dot{width:12px;height:12px;border-radius:50%}
 #search{position:fixed;bottom:20px;left:16px;z-index:6}
 #search input{background:#131a2c;border:1px solid #2a3550;border-radius:20px;color:#e8edf5;padding:10px 16px;width:260px;font-size:14px;outline:none}
-#panel{position:fixed;bottom:20px;right:20px;width:300px;background:#131a2c;border:1px solid #2a3550;border-radius:14px;padding:16px;z-index:6;display:none}
-#panel h3{font-size:15px;margin-bottom:6px} #panel p{font-size:13px;color:#b8c4d8;line-height:1.5}
+#panel{position:fixed;bottom:20px;right:20px;width:300px;background:#131a2c;border:1px solid #2a3550;border-radius:14px;padding:16px;z-index:9;display:none}
+#panel h3{font-size:15px;margin-bottom:6px;padding-right:24px} #panel p{font-size:13px;color:#b8c4d8;line-height:1.5}
 #panel .nb{font-size:11px;color:#7fa8ff;margin-top:8px}
+#panel .pClose{position:absolute;top:10px;right:12px;width:30px;height:30px;border-radius:50%;background:#1c2740;border:1px solid #2a3550;color:#e8edf5;font-size:18px;line-height:28px;text-align:center;cursor:pointer}
 #fallback{display:none}
 .hint{position:fixed;bottom:20px;right:20px;font-size:11px;color:#6a7690;z-index:4}
-svg{width:100vw;height:100vh} .link{stroke:#2a3550;stroke-opacity:.5}
+.mhint{display:none}
+svg{width:100vw;height:100vh;touch-action:none;-webkit-user-select:none;user-select:none} .link{stroke:#2a3550;stroke-opacity:.5}
 .node circle{cursor:pointer;filter:drop-shadow(0 0 6px currentColor)}
 .node text{font-size:11px;fill:#c8d4e8;pointer-events:none}
+@media (max-width:640px){
+  #hdr{padding:10px 12px}
+  #hdr h1{font-size:16px}
+  #hdr p.long{display:none}
+  #hdr .short{display:block;font-size:11px;color:#9fb0c8;max-width:60%;margin-top:2px}
+  #cnt{top:12px;right:12px;font-size:11px}
+  #legToggle{display:flex}
+  #legend{display:none;top:auto;bottom:80px;left:12px;right:12px;padding:14px 16px}
+  #legend.open{display:block}
+  #legend .lgClose{display:block;position:absolute;top:8px;right:12px;font-size:20px;color:#8090a8;cursor:pointer}
+  .lg{font-size:15px;padding:6px 0}
+  .dot{width:15px;height:15px}
+  #search{left:12px;right:12px;bottom:16px}
+  #search input{width:100%}
+  #panel{left:0;right:0;bottom:0;width:auto;border-radius:18px 18px 0 0;padding:20px 18px calc(20px + env(safe-area-inset-bottom));border-bottom:none}
+  #panel h3{font-size:18px} #panel p{font-size:15px} #panel .nb{font-size:13px}
+  .hint{display:none}
+  .mhint{display:block;position:fixed;bottom:64px;left:12px;right:12px;text-align:center;font-size:11px;color:#6a7690;z-index:4;pointer-events:none}
+  .node text{font-size:14px}
+}
 </style></head><body>
-<div id="hdr"><h1>🧠 Etsy-Projekt — Wissensnetz</h1>
-<p>Stand: 27.08.2026 — zusammengeführtes Wissen aus allen KI-Agenten (Claude/Jarvis, Gemini, ChatGPT) und Projektschritten. Aktualisiert sich automatisch. Hover/Klick = Details · Ziehen · Zoomen · Suchen.</p></div>
+<div id="hdr"><h1>🧠 Etsy-Wissensnetz</h1>
+<p class="long">Stand: 27.08.2026 — zusammengeführtes Wissen aus allen KI-Agenten (Claude/Jarvis, Gemini, ChatGPT) und Projektschritten. Aktualisiert sich automatisch. Hover/Klick = Details · Ziehen · Zoomen · Suchen.</p>
+<div class="short">Stand: 27.08.2026 · Wissen aller KI-Agenten</div></div>
 <div id="cnt"><b id="nc">0</b> Knoten<br><b id="lc">0</b> Verbindungen</div>
-<div id="legend"><div class="ttl">KATEGORIEN</div><div class="lg" data-cat="zentrum"><span class="dot" style="background:#ffffff"></span>Zentrum</div><div class="lg" data-cat="produkt"><span class="dot" style="background:#3ddc84"></span>Produkte</div><div class="lg" data-cat="ki"><span class="dot" style="background:#ff5ea8"></span>KI-Agenten</div><div class="lg" data-cat="technik"><span class="dot" style="background:#3aa0ff"></span>Technik/System</div><div class="lg" data-cat="strategie"><span class="dot" style="background:#ff9d3a"></span>Strategie/Entscheidungen</div><div class="lg" data-cat="design"><span class="dot" style="background:#b57cff"></span>Design-Wissen</div></div>
+<div id="legToggle">☰ Kategorien</div>
+<div id="legend"><span class="lgClose" id="lgClose">×</span><div class="ttl">KATEGORIEN</div><div class="lg" data-cat="zentrum"><span class="dot" style="background:#ffffff"></span>Zentrum</div><div class="lg" data-cat="produkt"><span class="dot" style="background:#3ddc84"></span>Produkte</div><div class="lg" data-cat="ki"><span class="dot" style="background:#ff5ea8"></span>KI-Agenten</div><div class="lg" data-cat="technik"><span class="dot" style="background:#3aa0ff"></span>Technik/System</div><div class="lg" data-cat="strategie"><span class="dot" style="background:#ff9d3a"></span>Strategie/Entscheidungen</div><div class="lg" data-cat="design"><span class="dot" style="background:#b57cff"></span>Design-Wissen</div></div>
 <div id="search"><input id="q" placeholder="Knoten suchen / filtern…"></div>
-<div id="panel"><h3 id="pt"></h3><p id="pd"></p><div class="nb" id="pn"></div></div>
+<div id="panel"><span class="pClose" id="pClose">×</span><h3 id="pt"></h3><p id="pd"></p><div class="nb" id="pn"></div></div>
 <div class="hint">Scroll = Zoom · Node ziehen = fixieren · Doppelklick Hintergrund = zurücksetzen</div>
+<div class="mhint">Tipp: 2 Finger zoomen · tippen für Details</div>
 <div id="fallback" style="position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px">
 <h1 style="color:#ff9d3a">⚠️ Graph-Bibliothek nicht geladen</h1>
 <p style="max-width:420px;margin-top:16px;color:#b8c4d8">Diese Datei ist eigenständig — falls das nicht lädt, bitte Seite neu laden.</p></div>
@@ -42,42 +71,65 @@ const DATA = {"nodes": [{"id": "kern", "label": "Kais Etsy-Projekt", "cat": "zen
 if(typeof d3==="undefined"){document.getElementById("fallback").style.display="flex";}
 else {
 const cats=DATA.cats;
+const MOB=window.matchMedia("(max-width:640px)").matches||('ontouchstart' in window&&window.innerWidth<=820);
+const RS=MOB?1.4:1;  // Größen-Skalierung mobil
 document.getElementById("nc").textContent=DATA.nodes.length;
 document.getElementById("lc").textContent=DATA.links.length;
 const svg=d3.select("body").append("svg");
-const W=window.innerWidth,H=window.innerHeight;
+let W=window.innerWidth,H=window.innerHeight;
 const g=svg.append("g");
-svg.call(d3.zoom().scaleExtent([0.2,4]).on("zoom",e=>g.attr("transform",e.transform)));
-svg.on("dblclick.zoom",null).on("dblclick",()=>svg.transition().call(d3.zoom().transform,d3.zoomIdentity));
+const zoom=d3.zoom().scaleExtent([0.2,4]).on("zoom",e=>g.attr("transform",e.transform));
+svg.call(zoom);
+svg.on("dblclick.zoom",null).on("dblclick",()=>svg.transition().call(zoom.transform,d3.zoomIdentity));
 const sim=d3.forceSimulation(DATA.nodes)
  .force("link",d3.forceLink(DATA.links).id(d=>d.id).distance(70).strength(.5))
  .force("charge",d3.forceManyBody().strength(-160))
  .force("center",d3.forceCenter(W/2,H/2))
- .force("collide",d3.forceCollide(22));
+ .force("collide",d3.forceCollide(22*RS));
 const link=g.append("g").selectAll("line").data(DATA.links).join("line").attr("class","link");
 const node=g.append("g").selectAll("g").data(DATA.nodes).join("g").attr("class","node")
- .call(d3.drag().on("start",(e,d)=>{if(!e.active)sim.alphaTarget(.3).restart();d.fx=d.x;d.fy=d.y;})
- .on("drag",(e,d)=>{d.fx=e.x;d.fy=e.y;}).on("end",(e,d)=>{if(!e.active)sim.alphaTarget(0);}));
-node.append("circle").attr("r",d=>d.cat==="zentrum"?26:(d.cat==="ki"?15:9))
+ .call(d3.drag()
+   .on("start",(e,d)=>{if(!e.active)sim.alphaTarget(.3).restart();d.fx=d.x;d.fy=d.y;})
+   .on("drag",(e,d)=>{d.fx=e.x;d.fy=e.y;})
+   .on("end",(e,d)=>{if(!e.active)sim.alphaTarget(0);}));
+node.append("circle").attr("r",d=>(d.cat==="zentrum"?26:(d.cat==="ki"?15:9))*RS)
  .attr("fill",d=>cats[d.cat].color).style("color",d=>cats[d.cat].color);
-node.append("text").attr("x",12).attr("y",4).text(d=>d.label);
+node.append("text").attr("x",d=>((d.cat==="zentrum"?26:(d.cat==="ki"?15:9))*RS)+3).attr("y",4).text(d=>d.label);
 const P=document.getElementById("panel");
-node.on("click",(e,d)=>{
+function showPanel(d){
   document.getElementById("pt").textContent=d.label;
   document.getElementById("pd").textContent=d.desc||"";
   const nb=DATA.links.filter(l=>l.source.id===d.id||l.target.id===d.id)
     .map(l=>l.source.id===d.id?l.target.label:l.source.label);
   document.getElementById("pn").textContent=nb.length?("Verbunden mit: "+nb.slice(0,8).join(", ")):"";
   P.style.display="block";
-});
+}
+node.on("click",(e,d)=>showPanel(d));
+document.getElementById("pClose").addEventListener("click",()=>{P.style.display="none";});
 sim.on("tick",()=>{
   link.attr("x1",d=>d.source.x).attr("y1",d=>d.source.y).attr("x2",d=>d.target.x).attr("y2",d=>d.target.y);
   node.attr("transform",d=>`translate(${d.x},${d.y})`);
 });
+// Auto-Fit: nach dem ersten Einschwingen den ganzen Graph ins Bild zoomen
+let fitted=false;
+function fitToViewport(){
+  const xs=DATA.nodes.map(n=>n.x),ys=DATA.nodes.map(n=>n.y);
+  const minX=Math.min(...xs),maxX=Math.max(...xs),minY=Math.min(...ys),maxY=Math.max(...ys);
+  const bw=(maxX-minX)||1,bh=(maxY-minY)||1;
+  const pad=MOB?40:60;
+  const k=Math.min((W-pad*2)/bw,(H-pad*2)/bh,3.5);
+  const tx=W/2-k*(minX+maxX)/2, ty=H/2-k*(minY+maxY)/2;
+  svg.transition().duration(500).call(zoom.transform,d3.zoomIdentity.translate(tx,ty).scale(k));
+}
+sim.on("end",()=>{if(!fitted){fitted=true;fitToViewport();}});
+setTimeout(()=>{if(!fitted){fitted=true;fitToViewport();}},1600);
+// Legende ein-/ausklappen (mobil)
+const leg=document.getElementById("legend");
+document.getElementById("legToggle").addEventListener("click",()=>leg.classList.toggle("open"));
+document.getElementById("lgClose").addEventListener("click",()=>leg.classList.remove("open"));
 // Legende-Filter
 document.querySelectorAll(".lg").forEach(el=>el.addEventListener("click",()=>{
   el.classList.toggle("off");const off=el.classList.contains("off");const c=el.dataset.cat;
-  node.style("display",d=>d.cat===c&&off?"none":(d._hidden?"none":null));
   node.each(d=>{if(d.cat===c)d._hidden=off;});
   node.style("display",d=>d._hidden?"none":null);
   link.style("display",l=>l.source._hidden||l.target._hidden?"none":null);
@@ -87,5 +139,7 @@ document.getElementById("q").addEventListener("input",ev=>{
   const q=ev.target.value.toLowerCase();
   node.style("opacity",d=>!q||d.label.toLowerCase().includes(q)||(d.desc||"").toLowerCase().includes(q)?1:.12);
 });
+// Resize-Handling
+window.addEventListener("resize",()=>{W=window.innerWidth;H=window.innerHeight;});
 }
 </script></body></html>
