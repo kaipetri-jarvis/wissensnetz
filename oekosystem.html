@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Kais KI-Ökosystem · Die Station</title>
 <style>
   :root{
@@ -76,7 +76,28 @@
   .legend .row{display:flex; align-items:center; gap:7px;}
   .legend .sw{width:9px;height:9px;border-radius:3px; box-shadow:0 0 8px currentColor;}
   .hint{position:fixed; z-index:5; left:50%; bottom:52px; transform:translateX(-50%); font-size:10px; color:var(--dim);
-    letter-spacing:.08em; text-transform:uppercase; opacity:.7; pointer-events:none;}
+    letter-spacing:.08em; text-transform:uppercase; opacity:.7; pointer-events:none; text-align:center; max-width:92vw;}
+
+  /* zoom buttons */
+  .zoombar{position:fixed; z-index:6; right:14px; bottom:60px; display:flex; flex-direction:column; gap:8px;}
+  .zoombar button{width:44px; height:44px; border-radius:12px; border:1px solid rgba(255,255,255,.14);
+    background:rgba(18,20,28,.72); backdrop-filter:blur(8px); color:var(--ink); font-size:22px; line-height:1;
+    font-weight:700; cursor:pointer; display:flex; align-items:center; justify-content:center;
+    box-shadow:0 4px 14px rgba(0,0,0,.35); transition:background .15s, transform .08s; -webkit-tap-highlight-color:transparent;}
+  .zoombar button:active{transform:scale(.92); background:rgba(40,44,58,.9);}
+
+  /* tap-to-inspect info card */
+  .infocard{position:fixed; z-index:7; left:50%; bottom:64px; transform:translate(-50%,14px);
+    width:min(340px,90vw); padding:16px 18px 15px; border-radius:16px;
+    background:rgba(16,18,26,.9); backdrop-filter:blur(14px); border:1px solid rgba(255,255,255,.12);
+    box-shadow:0 12px 40px rgba(0,0,0,.5); opacity:0; pointer-events:none; transition:opacity .22s, transform .22s;}
+  .infocard.show{opacity:1; pointer-events:auto; transform:translate(-50%,0);}
+  .infocard .ic-close{position:absolute; top:8px; right:10px; width:28px; height:28px; border:0; background:transparent;
+    color:var(--dim); font-size:22px; line-height:1; cursor:pointer;}
+  .infocard .ic-name{font-size:17px; font-weight:800; letter-spacing:.01em; padding-right:24px;}
+  .infocard .ic-model{font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--dim); margin:3px 0 10px;}
+  .infocard .ic-task{font-size:13.5px; line-height:1.5; color:var(--ink);}
+  .infocard .ic-task b{color:#fff;}
 
   @media (max-width:720px){
     .brand .sub{max-width:52vw;}
@@ -125,7 +146,20 @@
   <div class="row"><span class="sw" style="background:var(--sub);color:var(--sub)"></span> Sub-Agenten</div>
 </div>
 
-<div class="hint">Ziehen zum Schwenken · lebendige Simulation</div>
+<div class="hint">Ziehen zum Schwenken · 2 Finger / Doppeltipp = Zoom · Figur antippen = Info</div>
+
+<div class="zoombar">
+  <button id="zin"  aria-label="Vergrößern">+</button>
+  <button id="zout" aria-label="Verkleinern">−</button>
+  <button id="zrst" aria-label="Zurücksetzen">⤢</button>
+</div>
+
+<div class="infocard" id="infocard">
+  <button class="ic-close" id="icClose" aria-label="Schließen">×</button>
+  <div class="ic-name" id="icName">—</div>
+  <div class="ic-model" id="icModel">—</div>
+  <div class="ic-task" id="icTask">—</div>
+</div>
 
 <div class="ticker">
   <div class="tag"><span class="pdot"></span> Live</div>
@@ -167,43 +201,155 @@ function resize(){
   const dispW = WORLD_W*scale, dispH = WORLD_H*scale;
   fit.ox = (W - dispW)/2;
   fit.oy = (H - dispH)/2;
-  panMax.x = Math.max(0,(dispW - W)/2 + 40);
-  panMax.y = Math.max(0,(dispH - H)/2 + 60);
   if(!fit._init){
     fit._init=true;
     // center the active station band (agents + reactor + panels ~ world y 250..720)
     if(portrait){
       const targetScreenY = H*0.46;                 // where world y=480 should land
       const desiredPan = targetScreenY - (fit.oy + 480*fit.scale);
-      pan.y = Math.max(-panMax.y, Math.min(panMax.y, desiredPan));
+      pan.y = desiredPan;
     }
   }
-  pan.x = Math.max(-panMax.x, Math.min(panMax.x, pan.x));
-  pan.y = Math.max(-panMax.y, Math.min(panMax.y, pan.y));
+  clampPan();
 }
 window.addEventListener('resize', resize);
 
-/* map world coords -> screen */
-function tx(x){ return fit.ox + pan.x + x*fit.scale; }
-function ty(y){ return fit.oy + pan.y + y*fit.scale; }
-function ts(v){ return v*fit.scale; }
+/* user zoom multiplier on top of the fit scale (pinch / double-tap / wheel) */
+let uz = 1;                       // user zoom factor
+const UZ_MIN = 1, UZ_MAX = 4;
+function effScale(){ return fit.scale * uz; }
 
-/* ---------- drag to pan ---------- */
+/* map world coords -> screen (fit scale × user zoom, panned) */
+function tx(x){ return fit.ox + pan.x + x*effScale(); }
+function ty(y){ return fit.oy + pan.y + y*effScale(); }
+function ts(v){ return v*effScale(); }
+
+/* keep pan inside bounds given current zoom */
+function clampPan(){
+  const dispW = WORLD_W*effScale(), dispH = WORLD_H*effScale();
+  panMax.x = Math.max(0,(dispW - W)/2 + 40);
+  panMax.y = Math.max(0,(dispH - H)/2 + 60);
+  pan.x = Math.max(-panMax.x, Math.min(panMax.x, pan.x));
+  pan.y = Math.max(-panMax.y, Math.min(panMax.y, pan.y));
+}
+
+/* zoom toward a screen anchor point (sx,sy) so that spot stays put */
+function zoomTo(nz, sx, sy){
+  nz = Math.max(UZ_MIN, Math.min(UZ_MAX, nz));
+  if(nz===uz) return;
+  // world point under the anchor before zoom
+  const es0 = effScale();
+  const wx = (sx - fit.ox - pan.x)/es0;
+  const wy = (sy - fit.oy - pan.y)/es0;
+  uz = nz;
+  const es1 = effScale();
+  // re-solve pan so (wx,wy) maps back to (sx,sy)
+  pan.x = sx - fit.ox - wx*es1;
+  pan.y = sy - fit.oy - wy*es1;
+  clampPan();
+}
+
+/* ---------- drag to pan · pinch to zoom · double-tap · tap-to-inspect ---------- */
 (function(){
-  let dragging=false, lx=0, ly=0;
-  function down(x,y){ dragging=true; lx=x; ly=y; }
+  let dragging=false, lx=0, ly=0, moved=0, downX=0, downY=0, downT=0;
+  let lastTapT=0, lastTapX=0, lastTapY=0;
+  let pinch=null; // {d0, uz0, cx, cy}
+
+  function down(x,y){ dragging=true; lx=x; ly=y; downX=x; downY=y; moved=0; downT=performance.now(); }
   function move(x,y){ if(!dragging) return;
-    pan.x = Math.max(-panMax.x, Math.min(panMax.x, pan.x+(x-lx)));
-    pan.y = Math.max(-panMax.y, Math.min(panMax.y, pan.y+(y-ly)));
+    const dx=x-lx, dy=y-ly; moved += Math.abs(dx)+Math.abs(dy);
+    pan.x = Math.max(-panMax.x, Math.min(panMax.x, pan.x+dx));
+    pan.y = Math.max(-panMax.y, Math.min(panMax.y, pan.y+dy));
     lx=x; ly=y; }
-  function up(){ dragging=false; }
+  function up(x,y){
+    dragging=false;
+    // treat as a tap if it barely moved and was quick
+    if(moved<10 && performance.now()-downT<350){
+      const now=performance.now();
+      if(now-lastTapT<300 && Math.abs(downX-lastTapX)<40 && Math.abs(downY-lastTapY)<40){
+        // double-tap → zoom toggle at that point
+        zoomTo(uz>1.2?1:2.2, downX, downY);
+        lastTapT=0;
+      } else {
+        handleTap(downX, downY);
+        lastTapT=now; lastTapX=downX; lastTapY=downY;
+      }
+    }
+  }
+  function dist(t0,t1){ return Math.hypot(t0.clientX-t1.clientX, t0.clientY-t1.clientY); }
+
+  // mouse
   cvs.addEventListener('mousedown',e=>down(e.clientX,e.clientY));
   window.addEventListener('mousemove',e=>move(e.clientX,e.clientY));
-  window.addEventListener('mouseup',up);
-  cvs.addEventListener('touchstart',e=>{const t=e.touches[0];down(t.clientX,t.clientY);},{passive:true});
-  cvs.addEventListener('touchmove',e=>{const t=e.touches[0];move(t.clientX,t.clientY);},{passive:true});
-  cvs.addEventListener('touchend',up);
+  window.addEventListener('mouseup',e=>up(e.clientX,e.clientY));
+  // wheel zoom (desktop / trackpad)
+  cvs.addEventListener('wheel',e=>{
+    e.preventDefault();
+    const factor = e.deltaY<0 ? 1.12 : 1/1.12;
+    zoomTo(uz*factor, e.clientX, e.clientY);
+  },{passive:false});
+
+  // touch
+  cvs.addEventListener('touchstart',e=>{
+    if(e.touches.length===2){
+      dragging=false;
+      const [a,b]=e.touches;
+      pinch={ d0:dist(a,b), uz0:uz, cx:(a.clientX+b.clientX)/2, cy:(a.clientY+b.clientY)/2 };
+    } else {
+      const t=e.touches[0]; down(t.clientX,t.clientY);
+    }
+  },{passive:true});
+  cvs.addEventListener('touchmove',e=>{
+    if(e.touches.length===2 && pinch){
+      const [a,b]=e.touches;
+      const d=dist(a,b);
+      const cx=(a.clientX+b.clientX)/2, cy=(a.clientY+b.clientY)/2;
+      zoomTo(pinch.uz0 * (d/pinch.d0), cx, cy);
+    } else if(e.touches.length===1){
+      const t=e.touches[0]; move(t.clientX,t.clientY);
+    }
+  },{passive:true});
+  cvs.addEventListener('touchend',e=>{
+    if(pinch && e.touches.length<2){ pinch=null; return; }
+    // use last known position for tap detection
+    up(lx,ly);
+  });
 })();
+
+/* ---------- tap-to-inspect: hit-test agent figures ---------- */
+const _ic = {
+  el:document.getElementById('infocard'),
+  name:document.getElementById('icName'),
+  model:document.getElementById('icModel'),
+  task:document.getElementById('icTask'),
+};
+function showInfo(a){
+  _ic.name.textContent = a.name;
+  _ic.model.textContent = a.model;
+  _ic.task.innerHTML = '<b>Gerade:</b> ' + (a.target||a.states[0]);
+  _ic.el.classList.add('show');
+  _ic._agent = a;
+}
+function hideInfo(){ _ic.el.classList.remove('show'); _ic._agent=null; }
+document.getElementById('icClose').addEventListener('click', hideInfo);
+
+function handleTap(sx, sy){
+  // figures are drawn around screen point (tx(a.x), ty(a.y)); use a generous radius
+  let best=null, bestD=1e9;
+  for(const a of AGENTS){
+    const px=tx(a.x), py=ty(a.y);
+    const d=Math.hypot(sx-px, sy-py);
+    if(d<bestD){ bestD=d; best=a; }
+  }
+  const hitR = Math.max(56, ts(70));   // scales with zoom, min 56px
+  if(best && bestD<hitR){ showInfo(best); }
+  else { hideInfo(); }
+}
+
+/* ---------- zoom buttons ---------- */
+document.getElementById('zin').addEventListener('click', ()=>zoomTo(uz*1.4, W/2, H/2));
+document.getElementById('zout').addEventListener('click', ()=>zoomTo(uz/1.4, W/2, H/2));
+document.getElementById('zrst').addEventListener('click', ()=>{ uz=1; pan.x=0; if(W<H){resize();} else {pan.y=0;} clampPan(); hideInfo(); });
 
 /* ============================================================
    DATA — echte Zahlen/Texte aus ARBEITSSTAND.md
@@ -1065,6 +1211,7 @@ function updateAgents(dt){
         a.hold=0; a.typeI=0; a._acc=0;
         let n; do{ n=a.states[Math.floor(Math.random()*a.states.length)]; }while(n===a.target && a.states.length>1);
         a.target=n; a.working=!/pausiert|Limit/.test(n);
+        if(_ic._agent===a){ _ic.task.innerHTML='<b>Gerade:</b> '+n; }
       }
     }
   }
