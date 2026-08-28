@@ -423,8 +423,9 @@ const SUBS = [
   {name:'Build',      col:COL.sub, tasks:['rendert PDF…','packt ZIP…','baut XLSX-Formeln…','erzeugt Cover…','QA läuft…']},
   {name:'Design',     col:COL.gemini, tasks:['positioniert Mockup…','wählt Farbwelt…','baut Badges ✓','feint Thumbnail…']},
   {name:'Recherche',  col:COL.sub, tasks:['scannt eRank Q1/26…','prüft Konkurrenz…','Live-Etsy-Check…','sucht Keywords…']},
-  {name:'Listing',    col:COL.gold, tasks:['schreibt 13 Tags…','kürzt Titel <140…','textet Beschreibung…','setzt Preis…']},
+  {name:'Listing',    col:COL.gold, tasks:['prüft 13/13 Tags ✓','Titel 104/140 ✓','Etsy-Regeln validiert','setzt Preis…']},
   {name:'SEO',        col:COL.chatgpt, tasks:['prüft Long-Tail…','matcht Nische…','zählt Zeichen…','ordnet Tags…']},
+  {name:'Upscaler',   col:COL.codex, tasks:['Real-ESRGAN 4× …','1024²→4096² px ✓','300 DPI · 35×52 cm','druckfertig ✓','lokal · 0 € · kein Limit']},
 ];
 
 // etsy shop console — echte Produkte + Preise (+ Fortschritt für Hologramm-Balken)
@@ -454,7 +455,9 @@ const TICKS = [
   ['x','ChatGPT · Nische','<b>Landlord Management Kit (EN)</b> $19.90 vorgeschlagen — DE+EN gebaut'],
   ['g','Gemini · Design','Herz-Emblem → dezenter <b>„Baum des Lebens"</b> (Salbeigrün)'],
   ['c','Claude','<b>17 Bundle-ZIPs</b> verkaufsfertig — Datei-Limit gelöst'],
-  ['s','Sub-Agenten','Build · Design · Recherche · Listing · SEO wuseln durch die Station'],
+  ['s','Sub-Agenten','Build · Design · Recherche · Listing · SEO · Upscaler wuseln durch die Station'],
+  ['c','Druckkette live','<b>Real-ESRGAN</b> lokal: Motiv 4× → <b>4096×6144 px @300 DPI</b> (35×52 cm) — kostenlos, kein Limit'],
+  ['c','Etsy-Baustein','<b>etsy_listing.py</b> prüft Titel ≤140, genau 13 Tags, Preis — regelkonform ✓'],
 ];
 
 /* Log stream lines for the Recherche terminal (Cyber-Ästhetik) */
