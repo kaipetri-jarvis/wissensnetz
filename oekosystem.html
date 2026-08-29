@@ -12,6 +12,7 @@
     --panel:rgba(12,17,36,.55);
     --claude:#e0a878;   --gemini:#6fb4ff;  --chatgpt:#4fe0b0;
     --sub:#b79bff;      --gold:#f0c674;    --beacon:#8fd7ff;
+    --ultron:#25e0d0;   --atlas:#8ab4ff;
   }
   *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
   html,body{margin:0; padding:0; height:100%; width:100%;}
@@ -65,7 +66,7 @@
   .ticker .track{white-space:nowrap; will-change:transform; padding-left:100%; animation:scroll 46s linear infinite; font-size:13px;}
   .ticker .track:hover{animation-play-state:paused;}
   .ticker .item{display:inline-flex; align-items:center; gap:8px; margin:0 34px;}
-  .ticker .who{font-weight:800;} .ticker .who.c{color:var(--claude)} .ticker .who.g{color:var(--gemini)} .ticker .who.x{color:var(--chatgpt)} .ticker .who.s{color:var(--sub)}
+  .ticker .who{font-weight:800;} .ticker .who.c{color:var(--claude)} .ticker .who.g{color:var(--gemini)} .ticker .who.x{color:var(--chatgpt)} .ticker .who.s{color:var(--sub)} .ticker .who.u{color:var(--ultron)}
   .ticker .tt{color:var(--muted);} .ticker b{color:var(--ink); font-weight:700;}
   @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
 
@@ -141,9 +142,11 @@
 
 <div class="legend">
   <div class="row"><span class="sw" style="background:var(--claude);color:var(--claude)"></span> Claude · Jarvis</div>
+  <div class="row"><span class="sw" style="background:var(--ultron);color:var(--ultron)"></span> Ultron · zweiter Kopf</div>
   <div class="row"><span class="sw" style="background:var(--gemini);color:var(--gemini)"></span> Gemini</div>
   <div class="row"><span class="sw" style="background:var(--chatgpt);color:var(--chatgpt)"></span> ChatGPT</div>
   <div class="row"><span class="sw" style="background:var(--sub);color:var(--sub)"></span> Sub-Agenten</div>
+  <div class="row"><span class="sw" style="background:var(--atlas);color:var(--atlas)"></span> ATLAS · Fabrik</div>
 </div>
 
 <div class="hint">Ziehen zum Schwenken · 2 Finger / Doppeltipp = Zoom · Figur antippen = Info</div>
@@ -357,7 +360,8 @@ document.getElementById('zrst').addEventListener('click', ()=>{ uz=1; pan.x=0; i
 const COL = {
   claude:'#e0a878', gemini:'#6fb4ff', chatgpt:'#4fe0b0',
   codex:'#ff9d6b', github:'#c9d1e6',
-  sub:'#b79bff', gold:'#f0c674', beacon:'#8fd7ff'
+  sub:'#b79bff', gold:'#f0c674', beacon:'#8fd7ff',
+  ultron:'#25e0d0', atlas:'#8ab4ff'
 };
 
 // zones (world coords) — Zonen etwas näher an den Reaktor gerückt
@@ -367,6 +371,7 @@ const ZONES = [
   {key:'deck',      label:'STRATEGIE-DECK', sub:'ChatGPT · Nischen', x:630, y:270, w:350, h:135, col:COL.chatgpt},
   {key:'shop',      label:'ETSY-SHOP-KONSOLE', sub:'DeskLane Studio', x:1095, y:285, w:340, h:250, col:COL.gold},
   {key:'recherche', label:'RECHERCHE-TERMINAL', sub:'eRank · Live-Etsy', x:170, y:270, w:300, h:250, col:COL.sub},
+  {key:'ultron',    label:'ZWEITER KOPF · Ultron', sub:'paralleler Denker · prüft gegen', x:620, y:700, w:360, h:132, col:COL.ultron},
 ];
 
 // main agents — leuchtende Figuren; face/pose leicht variiert
@@ -410,12 +415,23 @@ const AGENTS = [
       'prüft Shop-Positionierung über 5 Nischen…',
       'Idee: Jobwechsel-System mit Gehaltsverhandlungs-Rechner',
     ]},
+  { key:'ultron', name:'Ultron', model:'zweiter Assistent · läuft auf claude-opus-4-8', col:COL.ultron,
+    zone:'ultron', x:800, y:752, face:'dualcore', pose:'upright',
+    states:[
+      'Nehme mir das im eigenen Kontext vor — melde mich mit dem Ergebnis.',
+      'Gegengeprüft. Übergabe an Jarvis läuft.',
+      'Zweite Meinung? Bin schon dran.',
+      'arbeite parallel — getrennter Kontext, gleiches Memory',
+      'ATLAS-Verdikt gesichtet — pushe es an Kai',
+    ]},
 ];
 
 // infrastructure nodes — feste Systemknoten (keine wandernden Figuren)
 const INFRA = [
   {key:'github', name:'GitHub', sub:'Wissensnetz · Gist · Pages', x:800, y:120, col:COL.github,
    states:['push wissensnetz ✓','ARBEITSSTAND.md → Gist synchron','Pages deployed · oekosystem.html live','commit f74c0b9 · Ökosystem mobil']},
+  {key:'atlas', name:'ATLAS · Fabrik', sub:'Multi-KI-Software-Fabrik', x:1080, y:120, col:COL.atlas,
+   states:['Jarvis prüft als 3. Reviewer (nur-lesend)','coordination-fleet aktiv · Docker online','Postgres + NATS verbunden','Review-Verdikt → Telegram an Kai','schreibgeschützt: kann nichts kaputtmachen']},
 ];
 
 // small sub-agents / minions wandering between zones
@@ -458,6 +474,8 @@ const TICKS = [
   ['s','Sub-Agenten','Build · Design · Recherche · Listing · SEO · Upscaler wuseln durch die Station'],
   ['c','Druckkette live','<b>Real-ESRGAN</b> lokal: Motiv 4× → <b>4096×6144 px @300 DPI</b> (35×52 cm) — kostenlos, kein Limit'],
   ['c','Etsy-Baustein','<b>etsy_listing.py</b> prüft Titel ≤140, genau 13 Tags, Preis — regelkonform ✓'],
+  ['u','Ultron · zweiter Kopf','arbeitet parallel im eigenen Kontext — <b>prüft gegen</b> &amp; übergibt an Jarvis'],
+  ['u','Ultron · ATLAS-Melder','pusht jedes <b>Review-Verdikt</b> der Fabrik schreibgeschützt per Telegram an Kai'],
 ];
 
 /* Log stream lines for the Recherche terminal (Cyber-Ästhetik) */
@@ -1138,6 +1156,16 @@ function drawFigure(a,T){
     ctx.beginPath(); ctx.arc(hx-4*s,hy-1*s,2.4*s,0,6.28); ctx.arc(hx+4*s,hy-1*s,2.4*s,0,6.28); ctx.fill();
     ctx.fillStyle=hexA('#ffffff',.9); ctx.font=`${9*s}px system-ui`; ctx.textAlign='center';
     ctx.fillText('✦', hx, hy+9*s);
+  } else if(a.face==='dualcore'){ // Ultron: twin synced reactor eyes + pulsing sync bar
+    const sync=(Math.sin(T*2.4+a.phase)*.5+.5);
+    for(const ex of [-4.2*s, 4.2*s]){
+      const eg=ctx.createRadialGradient(hx+ex,hy-1*s,0,hx+ex,hy-1*s,3.4*s);
+      eg.addColorStop(0,'#eafffb'); eg.addColorStop(.5,hexA(col,1)); eg.addColorStop(1,hexA(col,0));
+      ctx.fillStyle=eg; ctx.beginPath(); ctx.arc(hx+ex,hy-1*s,3.2*s,0,6.28); ctx.fill();
+    }
+    // thin sync-link between the two cores (pulses like a heartbeat between them)
+    ctx.strokeStyle=hexA('#eafffb',.4+.5*sync); ctx.lineWidth=1.4*s; ctx.lineCap='round';
+    ctx.beginPath(); ctx.moveTo(hx-4.2*s,hy-1*s); ctx.lineTo(hx+4.2*s,hy-1*s); ctx.stroke();
   } else { // ChatGPT: calm curved smile eyes
     ctx.strokeStyle='rgba(6,8,16,.9)'; ctx.lineWidth=2*s; ctx.lineCap='round';
     ctx.beginPath(); ctx.arc(hx-4*s,hy-1*s,2.6*s,0.2,Math.PI-0.2); ctx.stroke();
@@ -1293,6 +1321,7 @@ function frame(now){
   drawBeacon(T);                    // big reactor
   drawZone(ZONES[0],T);             // werkstatt (front)
   drawZone(ZONES[1],T);             // design (front)
+  drawZone(ZONES[5],T);             // Ultron · zweiter Kopf (front, below reactor)
 
   // energy links from agents
   const bx=tx(800), by=ty(465);
