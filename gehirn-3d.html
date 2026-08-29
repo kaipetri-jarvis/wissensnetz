@@ -199,11 +199,18 @@ const bgGroup = new THREE.Group();
 scene.add(bgGroup);
 
 // faint circuit grid far behind the brain
-const grid = new THREE.GridHelper(600, 40, 0x0d3a66, 0x0a2748);
-grid.material.transparent = true; grid.material.opacity = 0.12;
-grid.position.set(0, -60, -120);
+const grid = new THREE.GridHelper(700, 56, 0x1a5fa0, 0x0f3a6a);
+grid.material.transparent = true; grid.material.opacity = 0.22;
+grid.position.set(0, -62, -130);
 grid.rotation.x = Math.PI * 0.04;
 bgGroup.add(grid);
+
+// second grid overhead for a "data corridor" feel
+const grid2 = new THREE.GridHelper(700, 56, 0x14507f, 0x0c2e58);
+grid2.material.transparent = true; grid2.material.opacity = 0.12;
+grid2.position.set(0, 78, -130);
+grid2.rotation.x = -Math.PI * 0.04;
+bgGroup.add(grid2);
 
 // floating digital particles drifting in the space around the brain
 const PN = 600;
@@ -219,6 +226,42 @@ pfGeo.setAttribute('position', new THREE.BufferAttribute(pfPos, 3));
 const pfMat = new THREE.PointsMaterial({ size: 1.4, map: glowTex, color: 0x3aa0ff, transparent:true, opacity:0.5, blending:THREE.AdditiveBlending, depthWrite:false });
 const dataParticles = new THREE.Points(pfGeo, pfMat);
 bgGroup.add(dataParticles);
+
+// ---- Holographic circuit rings orbiting the brain (HUD look) ----
+const ringGroup = new THREE.Group();
+scene.add(ringGroup);
+const ringObjs = [];
+const ringDefs = [
+  { r: 52, col: 0x3ea6ff, tilt: [Math.PI*0.5, 0, 0],            spin: 0.15,  seg: 96, dash: true },
+  { r: 62, col: 0x2f7fe0, tilt: [Math.PI*0.42, Math.PI*0.15, 0],spin: -0.10, seg: 96, dash: false },
+  { r: 46, col: 0x8fd0ff, tilt: [Math.PI*0.5, 0, Math.PI*0.3],  spin: 0.22,  seg: 72, dash: true },
+];
+ringDefs.forEach(rd => {
+  const pts = [];
+  for (let a = 0; a <= rd.seg; a++) {
+    const ang = (a/rd.seg) * Math.PI * 2;
+    pts.push(new THREE.Vector3(Math.cos(ang)*rd.r, Math.sin(ang)*rd.r, 0));
+  }
+  const g = new THREE.BufferGeometry().setFromPoints(pts);
+  const m = rd.dash
+    ? new THREE.LineDashedMaterial({ color: rd.col, transparent:true, opacity:0.5, dashSize:3, gapSize:3, blending:THREE.AdditiveBlending, depthWrite:false })
+    : new THREE.LineBasicMaterial({ color: rd.col, transparent:true, opacity:0.4, blending:THREE.AdditiveBlending, depthWrite:false });
+  const line = new THREE.Line(g, m);
+  if (rd.dash) line.computeLineDistances();
+  line.rotation.set(rd.tilt[0], rd.tilt[1], rd.tilt[2]);
+  ringGroup.add(line);
+
+  // little data-nodes riding on the ring
+  const nodeCount = 6;
+  const nodes = [];
+  for (let n = 0; n < nodeCount; n++) {
+    const sMat = new THREE.SpriteMaterial({ map: glowTex, color: rd.col, transparent:true, blending:THREE.AdditiveBlending, depthWrite:false });
+    const sp = new THREE.Sprite(sMat); sp.scale.set(4,4,1);
+    line.add(sp);
+    nodes.push({ sp, base: (n/nodeCount)*Math.PI*2 });
+  }
+  ringObjs.push({ line, spin: rd.spin, r: rd.r, nodes });
+});
 
 // ---- Electric spark bolts arcing through the brain net ----
 const SPARKS = 7;
@@ -281,7 +324,21 @@ function animate() {
   agentGroup.rotation.y = rotY + autoRot;
   agentGroup.rotation.x = rotX;
 
-  camera.position.z += (zoom - camera.position.z) * 0.08;
+  // dynamic camera: gentle breathing zoom (only when user isn't manually zooming)
+  const breathe = 10 * Math.sin(t * 0.35);
+  camera.position.z += ((zoom + breathe) - camera.position.z) * 0.06;
+
+  // holographic rings spin + data-nodes ride around them
+  ringGroup.rotation.y = (rotY + autoRot);
+  ringGroup.rotation.x = rotX;
+  ringObjs.forEach(ro => {
+    ro.line.rotation.z += ro.spin * 0.016;
+    ro.nodes.forEach(nd => {
+      const ang = nd.base + t * (ro.spin * 1.5);
+      nd.sp.position.set(Math.cos(ang)*ro.r, Math.sin(ang)*ro.r, 0);
+      nd.sp.material.opacity = 0.6 + 0.4*Math.sin(t*3 + nd.base);
+    });
+  });
 
   // background parallax + drifting data particles
   bgGroup.rotation.y = (rotY + autoRot) * 0.3;
@@ -298,7 +355,7 @@ function animate() {
   // electric sparks: fire on timer, then fade
   sparkObjs.forEach(s => {
     s.next -= 0.016;
-    if (s.next <= 0 && s.ttl <= 0) { fireSpark(s); s.next = 0.4 + Math.random()*1.8; }
+    if (s.next <= 0 && s.ttl <= 0) { fireSpark(s); s.next = 0.15 + Math.random()*0.9; }
     if (s.ttl > 0) {
       s.life += 0.016;
       const k = s.life / s.ttl;
