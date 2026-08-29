@@ -990,8 +990,8 @@ function drawBeaconLabel(bx,by,T){
   // on phones the area below the core is occupied by the info dock, so
   // place the label just under the core (fixed screen offset) to avoid overlap.
   const mobile = istMobil();
-  const ly1 = mobile ? by + 92 : by + ts(60);
-  const ly2 = mobile ? ly1 + 14 : by + ts(75);
+  const ly1 = mobile ? by + 92 : by + ts(85);
+  const ly2 = mobile ? ly1 + 14 : by + ts(100);
   ctx.save();
   ctx.fillStyle=hexA(COL.beacon,.9); ctx.font=`700 ${mobile?12:ts(13)}px -apple-system,system-ui,sans-serif`;
   ctx.textAlign='center';
