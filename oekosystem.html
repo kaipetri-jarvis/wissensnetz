@@ -761,12 +761,34 @@ function drawBeacon(T){
   ctx.fillStyle=hexA('#ffffff',.95);
   ctx.beginPath(); ctx.arc(bx,by,ts(15+pulse*4),0,6.28); ctx.fill();
 
+  // ---- DENDRITEN: verzweigte Nervenfortsätze, die vom Kern ausgehen (Gehirn-Look) ----
+  ctx.save(); ctx.globalCompositeOperation='lighter';
+  const DEN=14;                              // Anzahl Hauptdendriten
+  for(let d=0; d<DEN; d++){
+    const ang = (d/DEN)*6.283 + Math.sin(T*0.25+d)*0.12;
+    const reach = ts(60 + 34*(0.5+0.5*Math.sin(T*0.9+d*1.7)));  // atmet
+    const ox=bx+Math.cos(ang)*ts(30), oy=by+Math.sin(ang)*ts(30);
+    const ex=bx+Math.cos(ang)*reach,  ey=by+Math.sin(ang)*reach;
+    // leichte seitliche Krümmung
+    const cx=(ox+ex)/2 + Math.cos(ang+1.57)*ts(10)*Math.sin(T*0.7+d);
+    const cy=(oy+ey)/2 + Math.sin(ang+1.57)*ts(10)*Math.sin(T*0.7+d);
+    const fade=0.10+0.16*(0.5+0.5*Math.sin(T*1.3+d*2.1));
+    ctx.strokeStyle=hexA(COL.beacon,fade); ctx.lineWidth=ts(1.1);
+    ctx.beginPath(); ctx.moveTo(ox,oy); ctx.quadraticCurveTo(cx,cy,ex,ey); ctx.stroke();
+    // kleine Verzweigung + Synapsen-Endknopf
+    const bx2=ex+Math.cos(ang+0.5)*ts(11), by2=ey+Math.sin(ang+0.5)*ts(11);
+    ctx.beginPath(); ctx.moveTo(ex,ey); ctx.lineTo(bx2,by2); ctx.stroke();
+    ctx.fillStyle=hexA(COL.beacon,fade*1.6);
+    ctx.beginPath(); ctx.arc(ex,ey,ts(1.6),0,6.28); ctx.fill();
+  }
+  ctx.restore();
+
   // label
   ctx.fillStyle=hexA(COL.beacon,.9); ctx.font=`700 ${ts(13)}px -apple-system,system-ui,sans-serif`;
   ctx.textAlign='center';
-  ctx.fillText('REAKTOR · OpenClaw', bx, by+ts(215));
+  ctx.fillText('SYNAPSEN-KERN · OpenClaw', bx, by+ts(215));
   ctx.fillStyle=hexA(COL.beacon,.5); ctx.font=`500 ${ts(9.5)}px ui-monospace,monospace`;
-  ctx.fillText('core online · '+(3200+Math.floor((Math.sin(T*2)*.5+.5)*180))+' ops/s', bx, by+ts(230));
+  ctx.fillText('neuronal aktiv · '+(3200+Math.floor((Math.sin(T*2)*.5+.5)*180))+' Signale/s', bx, by+ts(230));
 }
 
 /* ---- infrastructure node (fester Systemknoten, z.B. GitHub) ---- */
@@ -1036,6 +1058,25 @@ function drawLink(ax,ay,bx,by,col,T,seed,bend){
     gr.addColorStop(.35,hexA(col,.8*edge));
     gr.addColorStop(1,hexA(col,0));
     ctx.fillStyle=gr; ctx.beginPath(); ctx.arc(px,py,rr,0,6.28); ctx.fill();
+  }
+
+  // ---- SYNAPSE FIRE: gelegentlich zündet ein Aktionspotenzial die ganze Bahn ----
+  // Zyklus pro Linie (durch seed versetzt); nur ein kurzes Zeitfenster feuert.
+  const cyc = (T*0.5 + seed*3.1) % 3.0;      // alle ~6s ein Feuern (T läuft ~halbe Geschwindigkeit)
+  if(cyc < 1.0){
+    const fp = cyc;                          // 0..1: Position der Feuerwelle entlang der Bahn
+    const flash = Math.sin(cyc*Math.PI);     // 0..1..0 Helligkeitshüllkurve
+    // heller Wellenkopf
+    const [wx,wy]=qbez(ax,ay,mx,my,bx,by,fp);
+    const wr=ts(11)*flash;
+    const wg=ctx.createRadialGradient(wx,wy,0,wx,wy,wr);
+    wg.addColorStop(0,hexA('#ffffff',.9*flash));
+    wg.addColorStop(.4,hexA(col,.7*flash));
+    wg.addColorStop(1,hexA(col,0));
+    ctx.fillStyle=wg; ctx.beginPath(); ctx.arc(wx,wy,wr,0,6.28); ctx.fill();
+    // kurz aufleuchtende Bahn hinter dem Kopf (Myelin-Glühen)
+    ctx.strokeStyle=hexA(col,.30*flash); ctx.lineWidth=ts(2.4);
+    ctx.beginPath(); ctx.moveTo(ax,ay); ctx.quadraticCurveTo(mx,my,bx,by); ctx.stroke();
   }
   ctx.restore();
 }
