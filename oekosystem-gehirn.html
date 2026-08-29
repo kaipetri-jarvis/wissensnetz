@@ -537,7 +537,7 @@ const ZONES = [
 // main agents — leuchtende Figuren; face/pose leicht variiert
 const AGENTS = [
   { key:'jarvis', name:'Jarvis', model:'Assistent · läuft auf claude-opus-4-8', col:COL.claude,
-    zone:'werkstatt', x:395, y:720, face:'butler', pose:'lean',
+    zone:'werkstatt', x:395, y:700, face:'butler', pose:'lean',
     states:[
       'baut Rechnungs-/Angebots-Vorlage (DE) — PDF + Excel + Word…',
       'schnürt Bundle „Selbstständig-Startklar" (40 Dateien)…',
@@ -548,7 +548,7 @@ const AGENTS = [
       'baut Nachlass- & Vorsorgeplaner (11 Seiten)…',
     ]},
   { key:'codex', name:'Codex', model:'Coding-Harness · Standby', col:COL.codex,
-    zone:'werkstatt', x:440, y:318, face:'brain', pose:'upright',
+    zone:'werkstatt', x:440, y:298, face:'brain', pose:'upright',
     states:[
       'Coding-Harness aktiv — wartet auf Programmier-Auftrag…',
       'Standby: Jarvis übernimmt aktuell das Coden',
@@ -556,7 +556,7 @@ const AGENTS = [
       'idle · keine offene Code-Aufgabe',
     ]},
   { key:'gemini', name:'Gemini', model:'google/gemini-3.5-flash', col:COL.gemini,
-    zone:'design', x:1175, y:205, face:'crystal', pose:'upright',
+    zone:'design', x:1175, y:185, face:'crystal', pose:'upright',
     states:[
       'bewertet Nachlass-Thumbnail: 9,5/10 — vorher „unsichtbar"',
       'schlägt Cross-Selling vor: Preiskalkulator + Rechnung',
@@ -566,7 +566,7 @@ const AGENTS = [
       'recherchiert Nische: Vermieter-/Ferienwohnungs-Set…',
     ]},
   { key:'chatgpt', name:'ChatGPT', model:'openai/gpt-5.5', col:COL.chatgpt,
-    zone:'deck', x:1350, y:480, face:'brain', pose:'wide',
+    zone:'deck', x:1350, y:460, face:'brain', pose:'wide',
     states:[
       'entwirft Bundle-Strategie: „Selbstständig Startklar" 39 €',
       'skizziert Pflege-/Angehörigen-Mappe (11 S., würdevoll)…',
