@@ -1327,10 +1327,10 @@ function drawLink(ax,ay,bx,by,col,T,seed,bend){
   const my=(ay+by)/2 - ts(70) + ny*ts(bend);
 
   // soft under-glow
-  ctx.strokeStyle=hexA(col,.10); ctx.lineWidth=ts(5);
+  ctx.strokeStyle=hexA(col,.22); ctx.lineWidth=ts(7);
   ctx.beginPath(); ctx.moveTo(ax,ay); ctx.quadraticCurveTo(mx,my,bx,by); ctx.stroke();
   // core line
-  ctx.strokeStyle=hexA(col,.26); ctx.lineWidth=ts(1.8);
+  ctx.strokeStyle=hexA(col,.55); ctx.lineWidth=ts(2.6);
   ctx.beginPath(); ctx.moveTo(ax,ay); ctx.quadraticCurveTo(mx,my,bx,by); ctx.stroke();
 
   ctx.save(); ctx.globalCompositeOperation='lighter';
@@ -1904,7 +1904,7 @@ requestAnimationFrame(frame);
     const invGroup = new THREE.Matrix4().copy(brainGroup.matrixWorld).invert();
     // Verlaengertes Rueckenmark kuerzen: alles unterhalb der Kortex-Unterkante
     // (group-y < STEM_TH) wird Richtung Gehirn gestaucht.
-    const STEM_TH=-12, STEM_K=0.48;
+    const STEM_TH=-12, STEM_K=0.15;
     { const vv=new THREE.Vector3();
       model.traverse(o=>{ if(!o.isMesh)return; const p=o.geometry.attributes.position;
         o.updateWorldMatrix(true,false);
