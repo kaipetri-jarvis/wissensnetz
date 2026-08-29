@@ -411,6 +411,16 @@ loader.load('assets/brain.glb', (gltf) => {
     }
     filGeo.setAttribute('position', new THREE.BufferAttribute(new Float32Array(fp), 3));
     filGeo.attributes.position.needsUpdate = true;
+
+    // radiating data lines: many fine rays from the brain surface outward (old-design look)
+    const rp = [];
+    for (let i = 0; i < 120; i++) {
+      const p = pts[(Math.random()*pts.length)|0];
+      const len = 1.15 + Math.random()*0.5;                 // shoot a bit past the surface
+      rp.push(p.x*0.7, p.y*0.7, p.z*0.7, p.x*len, p.y*len, p.z*len);
+    }
+    radialGeo.setAttribute('position', new THREE.BufferAttribute(new Float32Array(rp), 3));
+    radialGeo.attributes.position.needsUpdate = true;
   }
   window.__brainLoaded = true;                      // marker for render verification
 }, undefined, (err) => { console.error('brain.glb load failed', err); window.__brainLoadError = String(err); });
@@ -461,6 +471,13 @@ const filMat = new THREE.LineBasicMaterial({ color: 0x9fd8ff, transparent:true, 
 const filaments = new THREE.LineSegments(filGeo, filMat);
 brainGroup.add(filaments);
 
+// radiating data rays from the brain outward (filled after the model loads)
+const radialGeo = new THREE.BufferGeometry();
+radialGeo.setAttribute('position', new THREE.BufferAttribute(new Float32Array(0), 3));
+const radialMat = new THREE.LineBasicMaterial({ color: 0x5fbaff, transparent:true, opacity:0.22, blending:THREE.AdditiveBlending, depthWrite:false });
+const radialRays = new THREE.LineSegments(radialGeo, radialMat);
+brainGroup.add(radialRays);
+
 // ---- Agent satellites (outside, accessing the brain) ----
 const AD = 64; // agent orbit distance (closer so labels stay in frame)
 const agents = [
@@ -493,10 +510,27 @@ agents.forEach(a => {
     const d = points[s].distanceTo(pos);
     if (d < best) { best = d; target = points[s].clone(); }
   }
+  // multiple access lines per agent — a bright fan of data links reaching into the
+  // brain (like the old design with many visible connections to the centre)
+  const FAN = 4;
+  const fanTargets = [];
+  const alPos = [];
+  for (let f = 0; f < FAN; f++) {
+    // pick varied surface points near the agent so the lines fan out
+    let ft = points[0].clone(), best = Infinity;
+    const jitter = f * 7 + ((Math.random()*points.length)|0);
+    for (let s = 0; s < points.length; s += 7) {
+      const idx = (s + jitter) % points.length;
+      const d = points[idx].distanceTo(pos) + Math.random()*18;
+      if (d < best) { best = d; ft = points[idx].clone(); }
+    }
+    fanTargets.push(ft);
+    alPos.push(pos.x,pos.y,pos.z, ft.x,ft.y,ft.z);
+  }
   const alGeo = new THREE.BufferGeometry();
-  alGeo.setAttribute('position', new THREE.BufferAttribute(new Float32Array([pos.x,pos.y,pos.z, target.x,target.y,target.z]), 3));
-  const alMat = new THREE.LineBasicMaterial({ color: a.color, transparent:true, opacity:0.45, blending:THREE.AdditiveBlending, depthWrite:false });
-  const al = new THREE.Line(alGeo, alMat);
+  alGeo.setAttribute('position', new THREE.BufferAttribute(new Float32Array(alPos), 3));
+  const alMat = new THREE.LineBasicMaterial({ color: a.color, transparent:true, opacity:0.6, blending:THREE.AdditiveBlending, depthWrite:false });
+  const al = new THREE.LineSegments(alGeo, alMat);
   agentGroup.add(al);
 
   // traveling pulse along the line
