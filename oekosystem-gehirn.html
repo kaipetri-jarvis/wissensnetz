@@ -112,15 +112,15 @@
     .clock .date{display:none;}
     .clock .live{margin-top:2px; font-size:8.5px; letter-spacing:.10em;}
 
-    /* stats: kompakter 2x2-Block oben links (statt voller Reihe).
+    /* stats: 4 tiles fit the full width in one non-overflowing row.
        !important guards the layout props against the wider desktop base rule. */
-    .stats{top:50px !important; left:7px !important; right:auto !important; width:auto !important;
-      display:grid !important; grid-template-columns:auto auto !important; flex-wrap:unset !important;
-      gap:4px !important; padding:0 !important;}
-    .stat{flex:0 0 auto !important; min-width:0 !important; width:auto !important; padding:4px 7px; border-radius:9px; overflow:hidden;}
-    .stat .n{font-size:12px; white-space:nowrap;}
+    .stats{top:50px !important; left:7px !important; right:7px !important; width:auto !important;
+      display:flex !important; flex-wrap:nowrap !important;
+      gap:5px !important; padding:0 !important;}
+    .stat{flex:1 1 0 !important; min-width:0 !important; width:0 !important; padding:5px 4px; border-radius:10px; overflow:hidden;}
+    .stat .n{font-size:13px; white-space:nowrap;}
     .stat .n span{font-size:.5em;}
-    .stat .l{font-size:6px; letter-spacing:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+    .stat .l{font-size:6.5px; letter-spacing:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
 
     /* the wide canvas station panels are unreadable when zoomed to the brain
        on a phone, so hide the desktop legend and surface the key facts in a
@@ -1594,11 +1594,11 @@ function frame(now){
   // keep a clean brain + reactor; all their info lives in the HTML dock instead.
   const MOBILE = (W < H);
   if(MOBILE){
-    // RECHERCHE-TERMINAL kompakt im freien Band zwischen Stat-Kacheln und Gehirn (Screen-Space)
-    const termW = Math.min(W-40, 300);
+    // RECHERCHE-TERMINAL im freien Band zwischen Stat-Kacheln und Gehirn (Screen-Space)
+    const termW = Math.min(W-28, 360);
     const termX = (W-termW)/2;
-    const termY = 180;
-    const termH = 132;
+    const termY = 190;
+    const termH = 168;
     drawLogTerminal(ZONES[4], T, dt, {x:termX, y:termY, w:termW, h:termH});
     drawBeacon(T);
     updateSubs(dt,T);   // keep sub state fresh (cheap) though not drawn
