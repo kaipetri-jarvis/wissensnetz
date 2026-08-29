@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-29T14:58:43+00:00",
+  "generated": "2026-08-29T15:08:43+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-08-29T17:08:36+02:00",
+      "text": "Oekosystem-Gehirn: Orbit-Linien zurueck auf Desktop-Optik (fliessende Bahnen + Daten-Pakete statt dicke Adern)"
+    },
+    {
+      "at": "2026-08-29T17:06:19+02:00",
+      "text": "Oekosystem-Gehirn: kraeftige sichtbare Verbindungsadern Knoten->Gehirn (Mobile)"
+    },
+    {
+      "at": "2026-08-29T17:04:24+02:00",
+      "text": "Oekosystem-Gehirn: schwebende Agenten-Knoten ums Gehirn mit Verbindungslinien (Mobile)"
+    },
+    {
       "at": "2026-08-29T16:56:19+02:00",
       "text": "Oekosystem-Gehirn: Titel-Label 'SYNAPSEN-KERN · OpenClaw' entfernt (nur dezente Live-Zeile bleibt)"
     },
@@ -22,18 +34,6 @@
     {
       "at": "2026-08-29T16:51:35+02:00",
       "text": "Oekosystem-Gehirn: 3D-Gehirn korrekt am Synapsen-Kern zentriert (Canvas-CSS-Groesse fix, war doppelte DPR-Groesse -> Versatz unten rechts), kleiner + Rauszoomen"
-    },
-    {
-      "at": "2026-08-29T16:18:03+02:00",
-      "text": "Oekosystem-Gehirn: Sonne/Reaktor komplett abgeschaltet (God-Rays/Ringe/Kern raus), nur dezenter Schein + Label unterm 3D-Gehirn"
-    },
-    {
-      "at": "2026-08-29T16:11:14+02:00",
-      "text": "Oekosystem-Gehirn: Handy-Ansicht brauchbar (Gehirn gross+mittig, Stat-Kacheln 1 Reihe, wischbarer Info-Dock mit Live-Tasks+Inventar), Desktop unveraendert"
-    },
-    {
-      "at": "2026-08-29T15:53:59+02:00",
-      "text": "Oekosystem-Gehirn: Portrait/Handy fit an Hoehe + zentriert aufs Gehirn (statt winzig gequetscht)"
     }
   ],
   "cron": [
