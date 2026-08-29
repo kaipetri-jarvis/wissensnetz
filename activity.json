@@ -1,8 +1,8 @@
 {
-  "generated": "2026-08-29T22:18:49+00:00",
+  "generated": "2026-08-29T22:28:48+00:00",
   "bots": {
-    "jarvis": false,
-    "ultron": false
+    "jarvis": true,
+    "ultron": true
   },
   "atlas": {
     "fleet": true,
@@ -36,5 +36,11 @@
       "text": "Revert (Mobile): Stat-Kacheln zurueck auf breite Reihe, RECHERCHE-TERMINAL zurueck auf vorherige Groesse"
     }
   ],
-  "cron": []
+  "cron": [
+    "jarvis-crash-log-watcher crash-log-watcher cron",
+    "heartbeat:main Heartbeat (main)",
+    "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
+    "heartbeat:ultron Heartbeat (ultron)",
+    "jarvis-wissensnetz-auto wissensnetz-auto-update cron"
+  ]
 }
