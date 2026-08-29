@@ -1817,7 +1817,7 @@ requestAnimationFrame(frame);
     const invGroup = new THREE.Matrix4().copy(brainGroup.matrixWorld).invert();
     // Verlaengertes Rueckenmark kuerzen: alles unterhalb der Kortex-Unterkante
     // (group-y < STEM_TH) wird Richtung Gehirn gestaucht.
-    const STEM_TH=-12, STEM_K=0.4;
+    const STEM_TH=-12, STEM_K=0.48;
     { const vv=new THREE.Vector3();
       model.traverse(o=>{ if(!o.isMesh)return; const p=o.geometry.attributes.position;
         o.updateWorldMatrix(true,false);
