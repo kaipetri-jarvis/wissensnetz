@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-29T15:58:44+00:00",
+  "generated": "2026-08-29T16:08:44+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-08-29T18:03:15+02:00",
+      "text": "Oekosystem-Gehirn (Mobile): Kollisionsschutz — obere Orbit-Knoten (Watchdog/ChatGPT) weichen dem RECHERCHE-TERMINAL oben links nach unten aus; Terminal bleibt k"
+    },
+    {
+      "at": "2026-08-29T17:59:58+02:00",
+      "text": "Oekosystem-Gehirn (Mobile): RECHERCHE-TERMINAL Feinschliff — kompakter+schmaler (termH 168->140, termW min(W*0.55,210)) fuer klare Trennung zu Gehirn/Knoten; bl"
+    },
     {
       "at": "2026-08-29T17:52:06+02:00",
       "text": "Oekosystem-Gehirn (Mobile): RECHERCHE-TERMINAL zurueck auf oben links (14/0.60/230/150); @media(min-width:721px) fuer erzwungene Mobil-Ansicht auf Desktop-Breit"
@@ -26,14 +34,6 @@
     {
       "at": "2026-08-29T17:20:26+02:00",
       "text": "Oekosystem-Gehirn (Mobile): Stat-Kacheln als 2x2-Block oben links, RECHERCHE-TERMINAL kompakter"
-    },
-    {
-      "at": "2026-08-29T17:16:05+02:00",
-      "text": "Oekosystem-Gehirn: RECHERCHE-TERMINAL (eRank Live-Log) auch in Mobile-Ansicht, im freien Band ueber dem Gehirn"
-    },
-    {
-      "at": "2026-08-29T17:09:28+02:00",
-      "text": "Oekosystem-Gehirn: Titel-Label 'SYNAPSEN-KERN · OpenClaw' wieder eingefuegt"
     }
   ],
   "cron": [
