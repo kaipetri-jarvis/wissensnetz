@@ -1424,6 +1424,25 @@ function drawFigure(a,T){
   for(let i=0;i<3;i++){ ctx.fillStyle=hexA(col,.6);
     ctx.fillRect(bx+18*s+armSpread, by+13*s+i*5*s+tap*0.2, (10+ (i*7+Math.floor(T*4))%18)*s, 2*s); }
 
+  // ---- Sprite-Modus: generierte Circuit-Androiden (Kais finale Auswahl) ----
+  const img=AGENT_IMG[a.key];
+  if(img && img.complete && img.naturalWidth){
+    const ih=150*s, iw=ih*img.naturalWidth/img.naturalHeight;
+    const footY=gy+46*s, topY=footY-ih+bob*0.35;
+    ctx.save(); ctx.globalCompositeOperation='screen'; ctx.globalAlpha=0.97;
+    ctx.drawImage(img, bx-iw/2, topY, iw, ih);
+    ctx.restore();
+    const hx=bx, hy=topY+18*s;
+    drawBubble(hx, hy-10*s, a);
+    ctx.textAlign='center';
+    ctx.fillStyle='#fff'; ctx.font=`800 ${ts(12)}px -apple-system,system-ui,sans-serif`;
+    ctx.fillText(a.name, bx, gy+60*s);
+    ctx.fillStyle=hexA(col,.8); ctx.font=`600 ${ts(9)}px ui-monospace,monospace`;
+    ctx.fillText(a.model, bx, gy+73*s);
+    a._bx=bx; a._by=by;
+    return;
+  }
+
   // ---- orbit rings around figure (activity) ----
   ctx.save();
   ctx.translate(bx, by+2*s);
@@ -1614,6 +1633,8 @@ function drawSub(m,T){
 /* ============================================================
    State init
    ============================================================ */
+const AGENT_IMG={};
+['jarvis','codex','gemini','chatgpt','ultron'].forEach(k=>{ const im=new Image(); im.src='assets/agents/'+k+'.png'; AGENT_IMG[k]=im; });
 AGENTS.forEach((a,i)=>{
   a.phase=i*2.1; a.target=a.states[0]; a.shown=''; a.typeI=0; a.hold=0; a.working=true;
   a.link = 'beacon';   // alle Agenten (auch ChatGPT) ans Gehirn — Kais Wunsch
