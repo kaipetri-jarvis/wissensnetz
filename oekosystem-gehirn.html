@@ -1716,7 +1716,7 @@ function frame(now){
   }
 
   // Energie-Linien ZUERST zeichnen, damit die Panels sie ueberdecken
-  const bx=tx(800), by=ty(BRAIN_Y()-100);   // Linien-Treffpunkt: mittig im Gehirn
+  const bx=tx(800), by=ty(BRAIN_Y()-95);   // Linien-Treffpunkt: mittig im Gehirn
   const shop=ZONES[3];
   // beacon -> shop console (main output flow)
   drawLink(bx, by, tx(shop.x), ty(shop.y+shop.h/2), COL.gold, T, 0.15, -45);   // sanfter Bogen: zwischen Mac-Server (oben) und Ultron (unten) hindurch
