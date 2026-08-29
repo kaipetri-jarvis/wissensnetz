@@ -521,18 +521,18 @@ const COL = {
 
 // zones (world coords) — Zonen etwas näher an den Reaktor gerückt
 const ZONES = [
-  {key:'werkstatt', label:'WERKSTATT', sub:'Jarvis baut Produkte', x:275, y:565, w:324, h:135, col:COL.claude},
-  {key:'design',    label:'DESIGN-LABOR', sub:'Gemini · Thumbnails', x:985, y:565, w:324, h:135, col:COL.gemini},
+  {key:'werkstatt', label:'WERKSTATT', sub:'Jarvis baut Produkte', x:275, y:680, w:324, h:135, col:COL.claude},
+  {key:'design',    label:'DESIGN-LABOR', sub:'Gemini · Thumbnails', x:1180, y:680, w:324, h:135, col:COL.gemini},
   {key:'deck',      label:'STRATEGIE-DECK', sub:'ChatGPT · Nischen', x:1300, y:490, w:306, h:122, col:COL.chatgpt},
-  {key:'shop',      label:'ETSY-SHOP-KONSOLE', sub:'DeskLane Studio', x:1095, y:275, w:306, h:225, col:COL.gold},
-  {key:'recherche', label:'RECHERCHE-TERMINAL', sub:'eRank · Live-Etsy', x:225, y:250, w:270, h:225, col:COL.sub},
+  {key:'shop',      label:'ETSY-SHOP-KONSOLE', sub:'DeskLane Studio', x:1330, y:250, w:306, h:225, col:COL.gold},
+  {key:'recherche', label:'RECHERCHE-TERMINAL', sub:'eRank · Live-Etsy', x:170, y:270, w:300, h:250, col:COL.sub},
   {key:'ultron',    label:'ZWEITER KOPF · Ultron', sub:'paralleler Denker · prüft gegen', x:620, y:750, w:324, h:119, col:COL.ultron},
 ];
 
 // main agents — leuchtende Figuren; face/pose leicht variiert
 const AGENTS = [
   { key:'jarvis', name:'Jarvis', model:'Assistent · läuft auf claude-opus-4-8', col:COL.claude,
-    zone:'werkstatt', x:385, y:620, face:'butler', pose:'lean',
+    zone:'werkstatt', x:360, y:735, face:'butler', pose:'lean',
     states:[
       'baut Rechnungs-/Angebots-Vorlage (DE) — PDF + Excel + Word…',
       'schnürt Bundle „Selbstständig-Startklar" (40 Dateien)…',
@@ -543,7 +543,7 @@ const AGENTS = [
       'baut Nachlass- & Vorsorgeplaner (11 Seiten)…',
     ]},
   { key:'codex', name:'Codex', model:'Coding-Harness · Standby', col:COL.codex,
-    zone:'werkstatt', x:545, y:625, face:'brain', pose:'upright',
+    zone:'werkstatt', x:200, y:735, face:'brain', pose:'upright',
     states:[
       'Coding-Harness aktiv — wartet auf Programmier-Auftrag…',
       'Standby: Jarvis übernimmt aktuell das Coden',
@@ -551,7 +551,7 @@ const AGENTS = [
       'idle · keine offene Code-Aufgabe',
     ]},
   { key:'gemini', name:'Gemini', model:'google/gemini-3.5-flash', col:COL.gemini,
-    zone:'design', x:1085, y:615, face:'crystal', pose:'upright',
+    zone:'design', x:1160, y:730, face:'crystal', pose:'upright',
     states:[
       'bewertet Nachlass-Thumbnail: 9,5/10 — vorher „unsichtbar"',
       'schlägt Cross-Selling vor: Preiskalkulator + Rechnung',
@@ -585,31 +585,31 @@ const AGENTS = [
 // verifiziert aus config + launchd + `openclaw cron list` (29.08.2026)
 const INFRA = [
   // --- Ausgabe / extern (oben rechts, wie gehabt) ---
-  {key:'github', name:'GitHub', sub:'Wissensnetz · Gist · Pages', x:860, y:175, col:COL.github,
+  {key:'github', name:'GitHub', sub:'Wissensnetz · Gist · Pages', x:967, y:308, col:COL.github,
    states:['push wissensnetz ✓','ARBEITSSTAND.md → Gist synchron','Pages deployed · oekosystem.html live','commit f74c0b9 · Ökosystem mobil']},
-  {key:'atlas', name:'ATLAS · Fabrik', sub:'Multi-KI-Software-Fabrik', x:1330, y:150, col:COL.atlas,
+  {key:'atlas', name:'ATLAS · Fabrik', sub:'Multi-KI-Software-Fabrik', x:1056, y:429, col:COL.atlas,
    states:['Jarvis prüft als 3. Reviewer (nur-lesend)','coordination-fleet aktiv · Docker online','Postgres + NATS verbunden','Review-Verdikt → Telegram an Kai','schreibgeschützt: kann nichts kaputtmachen']},
 
   // --- Fundament / System (linke Flanke, prominent: Gateway) ---
-  {key:'gateway', name:'OpenClaw Gateway', sub:'launchd · Port 18789 · das Fundament', x:150, y:195, col:COL.gateway, big:true,
+  {key:'gateway', name:'OpenClaw Gateway', sub:'launchd · Port 18789 · das Fundament', x:633, y:308, col:COL.gateway, big:true,
    states:['ai.openclaw.gateway läuft · KeepAlive','routet alle Kanäle & Agenten','main + ultron gebunden','Config live · kein Reload-Abbruch','das Nervensystem der ganzen Station']},
-  {key:'watchdog', name:'Watchdog', sub:'Selbstheilung · Absturzwarnung', x:150, y:300, col:COL.watchdog,
+  {key:'watchdog', name:'Watchdog', sub:'Selbstheilung · Absturzwarnung', x:544, y:429, col:COL.watchdog,
    states:['ai.openclaw.watchdog überwacht Gateway','Crash → Neustart + Telegram-Alarm','Crash-Log-Watcher alle 10 Min','hält die Station 24/7 am Leben']},
-  {key:'tailscale', name:'Tailscale', sub:'Tailnet · Fernsteuerung vom iPhone', x:150, y:470, col:COL.tailscale,
+  {key:'tailscale', name:'Tailscale', sub:'Tailnet · Fernsteuerung vom iPhone', x:575, y:568, col:COL.tailscale,
    states:['Mac 100.73.109.29 ↔ iPhone 100.108.47.120','Serve auf Port 18789','Kai steuert die Station vom Handy','verschlüsseltes Mesh · kein offener Port']},
-  {key:'mac', name:'Mac · 24/7-Server', sub:'schläft nie · zugeklappt weiter', x:150, y:635, col:COL.mac,
+  {key:'mac', name:'Mac · 24/7-Server', sub:'schläft nie · zugeklappt weiter', x:720, y:645, col:COL.mac,
    states:['caffeinate · kein Ruhezustand','Deckel zu → läuft weiter','Host für Gateway + alle Dienste','Dauerbetrieb seit Setup']},
 
   // --- Sprache (oben Mitte-links) ---
-  {key:'voice', name:'Sprache · TTS/STT', sub:'KatjaNeural · Whisper', x:200, y:760, col:COL.voice,
+  {key:'voice', name:'Sprache · TTS/STT', sub:'KatjaNeural · Whisper', x:1025, y:568, col:COL.voice,
    states:['TTS Microsoft de-DE-KatjaNeural (auto)','Fallback Google TTS','STT lokal · Whisper (transcribe.sh)','liest jede Antwort vor']},
 
   // --- Automation / Cron (unten links, ein Sammelknoten) ---
-  {key:'cron', name:'Automation · Cron', sub:'nächtliche & stündliche Jobs', x:360, y:660, col:COL.cron,
+  {key:'cron', name:'Automation · Cron', sub:'nächtliche & stündliche Jobs', x:889, y:645, col:COL.cron,
    states:['Wissensnetz-Auto 3:15 · Memory-Dreaming 3:00','Heartbeats main/ultron/atlas stündlich','Activity-Feed live · alle 10 Min','Postfach-Watcher Frau Lind · werktags','läuft, während Kai schläft']},
 
   // --- Kanal (oben Mitte-rechts) ---
-  {key:'telegram', name:'Telegram', sub:'@Jarvis_Slave · @kai_ultron', x:640, y:185, col:COL.telegram,
+  {key:'telegram', name:'Telegram', sub:'@Jarvis_Slave · @kai_ultron', x:800, y:250, col:COL.telegram,
    states:['2 Bots · main + ultron','Kais Hauptkanal','Voice-Notes + Text','Alarme & Übergaben laufen hier']},
 ];
 
@@ -1936,7 +1936,7 @@ requestAnimationFrame(frame);
   let zoom=1, tZoom=1, focussed=false, hovering=false, pulse=0, moved=0;
   const el=bRenderer.domElement;
   // Treffer-Test: liegt der Zeiger ueber dem Gehirn (Beacon-Umkreis)?
-  function overBrain(x,y){ const bx=tx(800), by=ty(465), r=ts(1)*260*zoom; const dx=x-bx, dy=y-by; return dx*dx+dy*dy < r*r; }
+  function overBrain(x,y){ const bx=tx(800), by=ty(465), r=ts(1)*190*zoom; const dx=x-bx, dy=y-by; return dx*dx+dy*dy < r*r; }
   const down=(x,y)=>{ if(!overBrain(x,y)) return; dragging=true;userRot=true;vy=vx=0;px=x;py=y;moved=0; };
   const move=(x,y)=>{ hovering=overBrain(x,y); el.style.cursor = hovering ? (dragging?'grabbing':'grab') : 'default';
     if(!dragging)return; const dy=(x-px)*0.006,dx=(y-py)*0.006; moved+=Math.abs(x-px)+Math.abs(y-py); tRy+=dy;tRx+=dx;vy=dy;vx=dx; tRx=Math.max(-1.4,Math.min(1.4,tRx)); px=x;py=y; };
@@ -1970,7 +1970,7 @@ requestAnimationFrame(frame);
     // beacon radius ~240 world units on the page; scale brain to match
     // (base 1.9 = deutlich groesser; focusZoom kommt per Doppelklick dazu)
     zoom += (tZoom - zoom) * 0.08;
-    brainGroup.scale.setScalar(Math.max(0.08, scale * 1.9 * zoom));
+    brainGroup.scale.setScalar(Math.max(0.08, scale * 1.33 * zoom));
   }
   function loop(){
     requestAnimationFrame(loop);
