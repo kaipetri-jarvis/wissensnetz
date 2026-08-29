@@ -1326,7 +1326,7 @@ function drawLink(ax,ay,bx,by,col,T,seed,bend,strong){
   const nx=-dy/len, ny=dx/len;               // unit normal (perpendicular)
   const mx=(ax+bx)/2 + nx*ts(bend);
   const horiz=Math.abs(dx)/len;               // 1 = waagerechte Linie, 0 = senkrechte
-  const my=(ay+by)/2 - ts(260)*horiz + ny*ts(bend);
+  const my=(ay+by)/2 - ts(400)*horiz + ny*ts(bend);
 
   // soft under-glow
   ctx.strokeStyle=hexA(col,strong?.32:.13); ctx.lineWidth=ts(strong?8:5);
