@@ -58,40 +58,45 @@ scene.add(brainGroup);
 const R = 32; // brain radius scale
 const points = [];
 
-// Generate a brain-ish shape: two symmetric lobed hemispheres with a central fissure
-function brainRadius(theta, phi) {
-  // base radius modulated by gyri-like folds (mirror-symmetric across hemispheres)
-  let r = 1.0;
-  r *= 1.0 + 0.14 * Math.sin(phi * 4.0);
-  r *= 1.0 + 0.10 * Math.cos(theta * 5.0);
-  r *= 1.0 + 0.06 * Math.sin(theta * 9.0 + phi * 2.0);
-  return r;
-}
-
-const NUM = 2800;
+// Single closed anatomical brain (side-profile): a solid ellipsoidal volume,
+// elongated front-back (z), rounded top, flattened bottom, with a brain-stem nub,
+// and a fine gyri (fold) ripple so the surface reads as a real brain.
+const NUM = 3000;
 for (let i = 0; i < NUM; i++) {
-  const side = (i % 2 === 0) ? 1 : -1;
   const u = Math.random();
   const v = Math.random();
-  const theta = 2 * Math.PI * u;
-  const phi = Math.acos(2 * v - 1);
-  const rr = brainRadius(theta, phi) * (0.9 + Math.random() * 0.1);
+  const theta = 2 * Math.PI * u;             // around
+  const phi = Math.acos(2 * v - 1);          // pole to pole
 
-  // base ellipsoid coords (single hemisphere lobe centered at origin)
-  let bx = rr * Math.sin(phi) * Math.cos(theta);
-  let by = rr * Math.sin(phi) * Math.sin(theta) * 0.85; // flatten vertically
-  let bz = rr * Math.cos(phi) * 1.25;                    // elongate front-back
+  // gyri folds: fine surface ripple (thickness in the shell), same everywhere -> continuous brain
+  const fold = 1
+    + 0.10 * Math.sin(theta * 8.0)
+    + 0.08 * Math.sin(phi * 7.0 + theta * 2.0)
+    + 0.05 * Math.cos(theta * 13.0);
+  const rr = fold * (0.9 + Math.random() * 0.12);
 
-  // build ONE lobe on the positive-x side, then mirror it for the other hemisphere
-  let lobeX = Math.abs(bx) * 0.5 + 0.16;   // keep lobe on one side, narrow fissure gap
-  let x = side * lobeX;                     // mirror -> symmetric hemispheres
-  let y = by;
-  let z = bz;
+  let x = rr * Math.sin(phi) * Math.cos(theta) * 0.78;  // width (left-right, thinner in profile)
+  let y = rr * Math.sin(phi) * Math.sin(theta) * 0.82;  // height
+  let z = rr * Math.cos(phi) * 1.30;                    // front-back (elongated)
 
-  // squash the bottom (brain stem region)
-  if (y < -0.55) { y = -0.55 + (y + 0.55) * 0.6; }
+  // round crown / flatten underside: lift-flatten the bottom like a real brain base
+  if (y < -0.35) { y = -0.35 + (y + 0.35) * 0.5; }
+  // frontal lobe bulge (front = +z): swell the top-front slightly
+  if (z > 0.5 && y > 0.1) { z *= 1.06; }
 
   points.push(new THREE.Vector3(x * R, y * R, z * R));
+}
+
+// brain-stem / cerebellum nub hanging under the back-bottom
+const STEM = 260;
+for (let i = 0; i < STEM; i++) {
+  const a = Math.random() * Math.PI * 2;
+  const rad = (0.28 + Math.random() * 0.22) * R;
+  const drop = (0.2 + Math.random() * 0.8);
+  const x = Math.cos(a) * rad * 0.45 * (1 - drop*0.4);
+  const y = (-0.55 - drop * 0.65) * R;
+  const z = (-0.35 + Math.sin(a) * 0.25) * R - drop * 0.3 * R;
+  points.push(new THREE.Vector3(x, y, z));
 }
 
 // point cloud geometry
@@ -140,10 +145,28 @@ const lines = new THREE.LineSegments(lineGeo, lineMat);
 brainGroup.add(lines);
 
 // ---- Core glow at center ----
-const coreMat = new THREE.SpriteMaterial({ map: glowTex, color: 0x9fd0ff, transparent: true, blending: THREE.AdditiveBlending, opacity: 0.9, depthWrite:false });
+const coreMat = new THREE.SpriteMaterial({ map: glowTex, color: 0xcfeaff, transparent: true, blending: THREE.AdditiveBlending, opacity: 1.0, depthWrite:false });
 const core = new THREE.Sprite(coreMat);
-core.scale.set(38, 38, 1);
+core.scale.set(42, 42, 1);
 brainGroup.add(core);
+
+// ---- Bright filaments radiating from the core out toward the surface ----
+// (the neuron-firing burst seen in the reference image)
+const filPos = [];
+const FIL = 90;
+for (let i = 0; i < FIL; i++) {
+  const p = points[(Math.random()*points.length)|0];
+  // start near core (jittered), end at a surface point
+  filPos.push(
+    (Math.random()-0.5)*4, (Math.random()-0.5)*4, (Math.random()-0.5)*4,
+    p.x*0.92, p.y*0.92, p.z*0.92
+  );
+}
+const filGeo = new THREE.BufferGeometry();
+filGeo.setAttribute('position', new THREE.BufferAttribute(new Float32Array(filPos), 3));
+const filMat = new THREE.LineBasicMaterial({ color: 0x9fd8ff, transparent:true, opacity:0.30, blending:THREE.AdditiveBlending, depthWrite:false });
+const filaments = new THREE.LineSegments(filGeo, filMat);
+brainGroup.add(filaments);
 
 // ---- Agent satellites (outside, accessing the brain) ----
 const AD = 64; // agent orbit distance (closer so labels stay in frame)
@@ -211,6 +234,34 @@ grid2.material.transparent = true; grid2.material.opacity = 0.12;
 grid2.position.set(0, 78, -130);
 grid2.rotation.x = -Math.PI * 0.04;
 bgGroup.add(grid2);
+
+// HUD panels: glowing rectangular circuit outlines lying on the floor plane
+function hudRect(w, h) {
+  const g = new THREE.BufferGeometry().setFromPoints([
+    new THREE.Vector3(-w/2,0,-h/2), new THREE.Vector3(w/2,0,-h/2),
+    new THREE.Vector3(w/2,0,h/2), new THREE.Vector3(-w/2,0,h/2),
+    new THREE.Vector3(-w/2,0,-h/2),
+  ]);
+  return g;
+}
+const hudDefs = [
+  { x:-95, z: 30, w: 34, h: 22, c: 0x3aa0ff },
+  { x: 100, z: 20, w: 40, h: 26, c: 0x59c0ff },
+  { x:-70, z: -55, w: 26, h: 18, c: 0x2f80d0 },
+  { x: 78, z: -60, w: 30, h: 20, c: 0x59c0ff },
+  { x: 0,  z: 95, w: 50, h: 16, c: 0x3aa0ff },
+];
+const hudPanels = [];
+hudDefs.forEach(d => {
+  const line = new THREE.Line(hudRect(d.w, d.h), new THREE.LineBasicMaterial({ color:d.c, transparent:true, opacity:0.4, blending:THREE.AdditiveBlending, depthWrite:false }));
+  line.position.set(d.x, -50, d.z);
+  bgGroup.add(line);
+  // inner tick line for a circuit feel
+  const inner = new THREE.Line(hudRect(d.w*0.6, d.h*0.5), new THREE.LineBasicMaterial({ color:d.c, transparent:true, opacity:0.25, blending:THREE.AdditiveBlending, depthWrite:false }));
+  inner.position.set(d.x, -49.8, d.z);
+  bgGroup.add(inner);
+  hudPanels.push(line.material, inner.material);
+});
 
 // ---- Data sphere: shell of floating data points enclosing the brain ----
 const sphereGroup = new THREE.Group();
@@ -414,6 +465,11 @@ function animate() {
       if (k >= 1) s.ttl = 0;
     }
   });
+
+  // core filaments flicker like firing neurons
+  filMat.opacity = 0.22 + 0.18 * Math.abs(Math.sin(t * 4.0));
+  // HUD floor panels gently pulse
+  hudPanels.forEach((m, i) => { m.opacity = 0.25 + 0.15 * Math.sin(t * 1.2 + i); });
 
   // pulse the point cloud brightness
   ptMat.opacity = 0.8 + 0.2 * Math.sin(t * 1.5);
