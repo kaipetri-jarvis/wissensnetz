@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-29T12:18:28+00:00",
+  "generated": "2026-08-29T12:28:28+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-08-29T14:21:08+02:00",
+      "text": "Gehirn-3D: echte Furchen (Gyri/Sulci-Displacement in der Oberflaeche + Ridge-Shading)"
+    },
     {
       "at": "2026-08-29T14:11:40+02:00",
       "text": "Gehirn-3D: echte Gyri-Furchen (maeandernde Kontur-Linien) statt Kugel-Wireframe"
@@ -30,10 +34,6 @@
     {
       "at": "2026-08-29T13:43:54+02:00",
       "text": "Gehirn-3D: geschlossene Profilform + Kern-Filamente + HUD-Panels (Referenzbild)"
-    },
-    {
-      "at": "2026-08-29T13:40:24+02:00",
-      "text": "Gehirn-3D: Daten-Sphaere um das Gehirn + Kern-Energiewellen"
     }
   ],
   "cron": [
