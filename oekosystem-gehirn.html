@@ -1697,7 +1697,8 @@ function frame(now){
   // beacon -> shop console (main output flow)
   drawLink(bx, by, tx(shop.x), ty(shop.y+shop.h/2), COL.gold, T, 0.15, 90);   // Andockpunkt links mittig; Bogen taucht nach UNTEN ab (weg von ChatGPT)
   // beacon -> system/infra nodes (sync/deploy/heartbeat flows)
-  for(const n of INFRA){ drawLink(bx, by, tx(n.x), ty(n.y)+ts((n.big?11.6:9.2)*(n.sz||1)), n.col, T, 0.5, (n.x<800?24:-24)); }
+  for(const n of INFRA){ const nb = n.key==='atlas' ? 120 : (n.x<800?24:-24);   // ATLAS: weiter Bogen um den SYNAPSEN-KERN-Schriftzug
+  drawLink(bx, by, tx(n.x), ty(n.y)+ts((n.big?11.6:9.2)*(n.sz||1)), n.col, T, 0.5, nb); }
 
   // zones (back to front)
   drawLogTerminal(ZONES[4],T,dt);   // recherche (back left) — log stream
