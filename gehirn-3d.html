@@ -94,6 +94,46 @@
     #terminal { width: min(300px, 82vw); max-height: 132px; }
     #terminal .tbody { font-size: 9.5px; }
   }
+  /* ---- ETSY Holo-Inventar panel (top-right) ---- */
+  #inventory {
+    position: fixed; z-index: 11; right: 12px; top: calc(env(safe-area-inset-top,10px) + 118px);
+    width: min(310px, 74vw); max-height: 46vh; overflow: hidden;
+    background: rgba(4,10,22,0.82); border: 1px solid rgba(255,209,102,0.3);
+    border-radius: 12px; box-shadow: 0 0 22px rgba(180,140,40,0.22); backdrop-filter: blur(4px);
+  }
+  #inventory .ihead { padding: 8px 12px 4px; cursor: pointer; pointer-events: auto; }
+  #inventory .ihead .t { color: #ffd166; font-weight: 800; font-size: clamp(12px,3.2vw,15px); }
+  #inventory .ihead .s { color: #8fb0d8; font-size: 9.5px; letter-spacing: 0.12em; text-transform: uppercase; font-family: ui-monospace, monospace; }
+  #inventory .ibody { padding: 4px 12px 10px; overflow-y: auto; max-height: calc(46vh - 44px); }
+  #inventory .prod { padding: 6px 0; border-bottom: 1px solid rgba(120,150,210,0.12); }
+  #inventory .prod:last-child { border-bottom: none; }
+  #inventory .prow { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+  #inventory .pname { color: #dcecff; font-size: clamp(11px,2.9vw,13px); font-weight: 600; display: flex; align-items: center; gap: 6px; }
+  #inventory .pdot2 { width: 7px; height: 7px; border-radius: 50%; flex: 0 0 auto; }
+  #inventory .pprice { color: #ffd166; font-size: clamp(11px,2.9vw,13px); font-weight: 700; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  #inventory .pbar { height: 3px; margin-top: 4px; border-radius: 3px; background: rgba(120,150,210,0.16); overflow: hidden; }
+  #inventory .pbar > i { display: block; height: 100%; border-radius: 3px; background: linear-gradient(90deg,#46e08a,#8fd0ff); }
+  #inventory.min .ibody { display: none; }
+  /* ---- Design-Labor / Gemini + Upscaler badges (bottom-right) ---- */
+  #labs { position: fixed; z-index: 11; right: 12px; bottom: calc(env(safe-area-inset-bottom,10px) + 30px); display: flex; flex-direction: column; gap: 8px; align-items: flex-end; pointer-events: none; }
+  #labs .card { background: rgba(4,10,22,0.82); border: 1px solid rgba(178,141,255,0.35); border-radius: 12px; padding: 9px 12px; box-shadow: 0 0 18px rgba(120,90,220,0.25); backdrop-filter: blur(4px); max-width: min(230px,66vw); }
+  #labs .card .lt { color: #b28dff; font-weight: 800; font-size: clamp(11px,2.9vw,13px); }
+  #labs .card .ls { color: #8fb0d8; font-size: 9.5px; margin-top: 1px; }
+  #labs .card .lm { color: #cbb8ff; font-size: 9.5px; margin-top: 4px; font-family: ui-monospace, monospace; }
+  #labs .badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(4,10,22,0.82); border: 1px solid rgba(255,159,104,0.4); border-radius: 999px; padding: 5px 11px; font-size: 10.5px; color: #ff9f68; font-weight: 700; box-shadow: 0 0 14px rgba(220,110,50,0.22); }
+  #labs .badge i { width: 7px; height: 7px; border-radius: 50%; background: #ff9f68; box-shadow: 0 0 8px #ff9f68; }
+  /* collapsed state for the inventory panel (used on mobile by default) */
+  #inventory.min .ibody { display: none; }
+  #inventory.min { max-height: none; }
+  #labs.min .card, #labs.min .badge span { display: none; }
+  @media (max-width: 560px) {
+    #inventory { width: min(190px, 56vw); max-height: 34vh; top: calc(env(safe-area-inset-top,10px) + 156px); }
+    #inventory .ihead .t { font-size: 12px; }
+    #inventory .ibody { max-height: calc(34vh - 40px); }
+    #labs { bottom: calc(env(safe-area-inset-bottom,10px) + 74px); }
+    #labs .card { max-width: 60vw; }
+    #terminal { max-height: 118px; }
+  }
 </style>
 </head>
 <body>
@@ -119,6 +159,21 @@
 <div id="terminal">
   <div class="thead" onclick="this.parentElement.classList.toggle('min')"><span class="dot"></span>RECHERCHE-TERMINAL · eRank · Live-Etsy</div>
   <div class="tbody" id="tbody"></div>
+</div>
+<div id="inventory">
+  <div class="ihead" onclick="this.parentElement.classList.toggle('min')">
+    <div class="t">ETSY · DeskLane Studio</div>
+    <div class="s">Holo-Inventar · live</div>
+  </div>
+  <div class="ibody" id="ibody"></div>
+</div>
+<div id="labs" onclick="this.classList.toggle('min')" style="pointer-events:auto">
+  <div class="badge"><i></i> <span>Upscaler · Real-ESRGAN 4×</span></div>
+  <div class="card">
+    <div class="lt">DESIGN-LABOR · Gemini</div>
+    <div class="ls">Thumbnails · prüft 8 SEO-Titel — 4 über 140 Zeichen</div>
+    <div class="lm">google/gemini-3.5-flash</div>
+  </div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -858,6 +913,41 @@ function pushLog(){
 }
 for (let i=0;i<7;i++) pushLog();
 setInterval(pushLog, 1800);
+
+// ---- ETSY Holo-Inventar: real products + prices + progress (from the old Station) ----
+const CATALOG = [
+  ['Dated Planner 2027','$8',0.95],
+  ['ADHD Planner for Adults','$7',1.00],
+  ['Landlord Management Kit (EN)','$19.90',0.78],
+  ['Caregiver Organizer (EN)','$14.99',0.66],
+  ['Rechnungs-/Angebots-Vorlagen (DE)','9,90 €',1.00],
+  ['Selbstständig Startklar · Bundle','39 €',1.00],
+  ['Nachlass- & Vorsorgeplaner (DE)','14,90 €',1.00],
+  ['Vermieter-/Ferienwohnungs-Set','19,90 €',0.85],
+  ['Pflege-/Angehörigen-Mappe (DE)','14,90 €',0.72],
+  ['Preiskalkulator Freelancer (DE)','8,90 €',1.00],
+  ['Elterngeld- & Baby-Budget-Planer','8,90 €',0.90],
+  ['Wedding Planner','9,90 €',1.00],
+];
+const ibody = document.getElementById('ibody');
+ibody.innerHTML = CATALOG.map(([name, price, prog]) => {
+  const done = prog >= 1.0;
+  const dot = done ? '#46e08a' : '#ffd166';
+  return `<div class="prod">
+    <div class="prow">
+      <span class="pname"><span class="pdot2" style="background:${dot};box-shadow:0 0 8px ${dot}"></span>${name}</span>
+      <span class="pprice">${price}</span>
+    </div>
+    <div class="pbar"><i style="width:${Math.round(prog*100)}%"></i></div>
+  </div>`;
+}).join('');
+
+// on small screens start the heavy panels collapsed so the brain stays clear
+if (window.matchMedia('(max-width: 560px)').matches) {
+  document.getElementById('inventory').classList.add('min');
+  document.getElementById('labs').classList.add('min');
+  document.getElementById('terminal').classList.add('min');
+}
 </script>
 </body>
 </html>
