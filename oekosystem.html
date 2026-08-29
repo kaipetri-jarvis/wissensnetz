@@ -1361,13 +1361,55 @@ function clock(){
 }
 clock(); setInterval(clock,1000);
 
-/* ---------- ticker (DOM) ---------- */
-(function(){
+/* ---------- ticker (DOM) + LIVE-Feed (activity.json) ---------- */
+let LIVE_TICKS = [];   // echte Live-Einträge, vorne vor den Standard-TICKS
+function renderTicker(){
   const track=document.getElementById('track');
-  const build=()=> TICKS.map(([w,who,txt])=>
+  const all = LIVE_TICKS.concat(TICKS);
+  const build=()=> all.map(([w,who,txt])=>
     `<span class="item"><span class="who ${w}">▸ ${who}</span><span class="tt">${txt}</span></span>`).join('');
   track.innerHTML=build()+build();
-})();
+}
+renderTicker();
+
+/* Live-Feed: lädt echte Aktivität (Bots/ATLAS/Commits) und mischt sie ein.
+   Aktualität im Minutentakt — die Datei wird serverseitig per Cron erneuert. */
+function fmtAgo(iso){
+  try{ const d=(Date.now()-new Date(iso).getTime())/1000;
+    if(d<90) return 'gerade eben';
+    if(d<5400) return Math.round(d/60)+' Min';
+    if(d<172800) return Math.round(d/3600)+' Std';
+    return Math.round(d/86400)+' Tg'; }catch(e){ return ''; }
+}
+async function loadLive(){
+  try{
+    const r = await fetch('activity.json?ts='+Date.now(), {cache:'no-store'});
+    if(!r.ok) return;
+    const a = await r.json();
+    const t = [];
+    // Live-Status: Bots + ATLAS
+    if(a.bots){
+      const on = (a.bots.jarvis?'Jarvis ✓':'Jarvis ✗') + ' · ' + (a.bots.ultron?'Ultron ✓':'Ultron ✗');
+      t.push(['c','● LIVE · Bots', on + ' — beide Köpfe '+((a.bots.jarvis&&a.bots.ultron)?'online':'teilweise offline')]);
+    }
+    if(a.atlas){
+      t.push(['u','● LIVE · ATLAS', a.atlas.online
+        ? '<b>Fabrik online</b> — Fleet+Postgres+NATS laufen · Jarvis prüft nur-lesend'
+        : 'Fabrik teilweise offline (Docker/Dienst) — Details siehe Status']);
+    }
+    // Echte letzte Commits (was wirklich gebaut wurde)
+    (a.commits||[]).slice(0,4).forEach(c=>{
+      t.push(['c','● Gebaut · '+fmtAgo(c.at), c.text.replace(/</g,'&lt;')]);
+    });
+    if(a.generated){
+      t.push(['s','● Feed', 'Live-Stand '+fmtAgo(a.generated)+' — aktualisiert sich automatisch']);
+    }
+    LIVE_TICKS = t;
+    renderTicker();
+  }catch(e){ /* offline/Datei fehlt: still, Standard-Ticker bleibt */ }
+}
+loadLive();
+setInterval(loadLive, 30000);
 
 /* ---------- go ---------- */
 resize();
