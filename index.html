@@ -108,11 +108,12 @@ const MOB=window.matchMedia("(max-width:640px)").matches||('ontouchstart' in win
 const RS=MOB?1.35:1;  // Größen-Skalierung mobil
 document.getElementById("nc").textContent=DATA.nodes.length;
 document.getElementById("lc").textContent=DATA.links.length;
-// Knoten-Radius: Zentrum + KI-Agenten größer, Rest dezent klein
-function radius(d){return (d.cat==="zentrum"?24:(d.cat==="ki"?14:7.5))*RS;}
-// Immer sichtbare Labels: Zentrum, KI-Agenten, Zentrum-Nachbarn mit großem Grad
+// Knoten-Radius: Zentrum + Haupt-Akteure (KI/Agenten) größer, Rest dezent klein
+const BIG=new Set(["ki","agent"]);
+function radius(d){return (d.cat==="zentrum"?24:(BIG.has(d.cat)?14:7.5))*RS;}
+// Immer sichtbare Labels: Zentrum, Haupt-Akteure, Zentrum-Nachbarn mit großem Grad
 const alwaysLabel=new Set();
-DATA.nodes.forEach(n=>{if(n.cat==="zentrum"||n.cat==="ki")alwaysLabel.add(n.id);});
+DATA.nodes.forEach(n=>{if(n.cat==="zentrum"||BIG.has(n.cat))alwaysLabel.add(n.id);});
 const svg=d3.select("body").append("svg");
 let W=window.innerWidth,H=window.innerHeight;
 // SVG-Defs: edler Soft-Glow-Filter (kein harter Neon-Kreis)
