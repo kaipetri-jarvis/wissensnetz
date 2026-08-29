@@ -691,8 +691,27 @@ for(let i=0;i<26;i++) reactorMotes.push({
   ph:Math.random()*6.28
 });
 
-/* central energy REACTOR — MASSIVE, dominant "heart of the station" */
+/* central energy REACTOR — the old "sun".
+   REPLACED BY THE 3D BRAIN: the WebGL brain overlay sits exactly here, so the sun
+   itself is switched off. We only keep a faint ground glow + label so the brain is
+   grounded, and skip all god-rays / rings / bright core. */
 function drawBeacon(T){
+  const bx=tx(800), by=ty(465);
+  const pulse=(Math.sin(T*2)*.5+.5);
+  ctx.save();
+  ctx.globalCompositeOperation='lighter';
+  // soft base glow only (no rays, no rings, no bright core) so the brain has an anchor
+  const bg=ctx.createRadialGradient(bx,by,0,bx,by,ts(210+pulse*24));
+  bg.addColorStop(0,hexA(COL.beacon,.0));
+  bg.addColorStop(.45,hexA(COL.beacon,.05));
+  bg.addColorStop(1,hexA(COL.beacon,0));
+  ctx.fillStyle=bg; ctx.beginPath(); ctx.arc(bx,by,ts(210+pulse*24),0,6.28); ctx.fill();
+  ctx.restore();
+  drawBeaconLabel(bx,by,T);
+  return;
+}
+/* legacy full reactor kept for reference but unused */
+function drawBeaconOLD(T){
   const bx=tx(800), by=ty(465);
   const pulse=(Math.sin(T*2)*.5+.5);
   // gentle breathing on a second, slower frequency (atmet)
@@ -846,16 +865,23 @@ function drawBeacon(T){
   }
   ctx.restore();
 
-  // label — on phones the area below the core is occupied by the info dock, so
+  drawBeaconLabel(bx,by,T);
+}
+
+/* central label under the brain (kept when the sun/reactor body is switched off) */
+function drawBeaconLabel(bx,by,T){
+  // on phones the area below the core is occupied by the info dock, so
   // place the label just under the core (fixed screen offset) to avoid overlap.
   const mobile = (W < H);
   const ly1 = mobile ? by + 92 : by + ts(215);
   const ly2 = mobile ? ly1 + 14 : by + ts(230);
+  ctx.save();
   ctx.fillStyle=hexA(COL.beacon,.9); ctx.font=`700 ${mobile?12:ts(13)}px -apple-system,system-ui,sans-serif`;
   ctx.textAlign='center';
   ctx.fillText('SYNAPSEN-KERN · OpenClaw', bx, ly1);
   ctx.fillStyle=hexA(COL.beacon,.5); ctx.font=`500 ${mobile?9:ts(9.5)}px ui-monospace,monospace`;
   ctx.fillText('neuronal aktiv · '+(3200+Math.floor((Math.sin(T*2)*.5+.5)*180))+' Signale/s', bx, ly2);
+  ctx.restore();
 }
 
 /* ---- infrastructure node (fester Systemknoten, z.B. GitHub) ---- */
