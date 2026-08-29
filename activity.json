@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-29T11:48:28+00:00",
+  "generated": "2026-08-29T11:58:28+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-08-29T13:55:19+02:00",
+      "text": "Gehirn-3D: freie Drag-Rotation in alle Richtungen + Traegheit + Pinch-Zoom"
+    },
     {
       "at": "2026-08-29T13:43:54+02:00",
       "text": "Gehirn-3D: geschlossene Profilform + Kern-Filamente + HUD-Panels (Referenzbild)"
@@ -30,17 +34,7 @@
     {
       "at": "2026-08-29T13:35:21+02:00",
       "text": "3D-Gehirn (gehirn-3d.html): Three.js Punktwolke, rotierend, Agenten als Satelliten"
-    },
-    {
-      "at": "2026-08-29T13:02:50+02:00",
-      "text": "Neuronales Gehirn-Netz (lokale Quelle)"
     }
   ],
-  "cron": [
-    "jarvis-crash-log-watcher crash-log-watcher cron",
-    "heartbeat:ultron Heartbeat (ultron)",
-    "heartbeat:main Heartbeat (main)",
-    "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
-    "jarvis-wissensnetz-auto wissensnetz-auto-update cron"
-  ]
+  "cron": []
 }
