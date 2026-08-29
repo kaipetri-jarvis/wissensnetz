@@ -1328,10 +1328,10 @@ function drawLink(ax,ay,bx,by,col,T,seed,bend,strong){
   const my=(ay+by)/2 - ts(70) + ny*ts(bend);
 
   // soft under-glow
-  ctx.strokeStyle=hexA(col,strong?.22:.13); ctx.lineWidth=ts(strong?6:5);
+  ctx.strokeStyle=hexA(col,strong?.32:.13); ctx.lineWidth=ts(strong?8:5);
   ctx.beginPath(); ctx.moveTo(ax,ay); ctx.quadraticCurveTo(mx,my,bx,by); ctx.stroke();
   // core line
-  ctx.strokeStyle=hexA(col,strong?.55:.34); ctx.lineWidth=ts(strong?2.4:1.8);
+  ctx.strokeStyle=hexA(col,strong?.78:.34); ctx.lineWidth=ts(strong?3.2:1.8);
   ctx.beginPath(); ctx.moveTo(ax,ay); ctx.quadraticCurveTo(mx,my,bx,by); ctx.stroke();
 
   ctx.save(); ctx.globalCompositeOperation='lighter';
