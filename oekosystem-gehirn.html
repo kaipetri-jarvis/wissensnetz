@@ -521,7 +521,7 @@ const COL = {
 
 // zones (world coords) — Zonen etwas näher an den Reaktor gerückt
 const ZONES = [
-  {key:'werkstatt', label:'WERKSTATT', sub:'Jarvis baut Produkte', x:275, y:680, w:324, h:135, col:COL.claude},
+  {key:'werkstatt', label:'WERKSTATT', sub:'Jarvis baut Produkte', x:200, y:495, w:324, h:135, col:COL.claude},
   {key:'design',    label:'DESIGN-LABOR', sub:'Gemini · Thumbnails', x:1130, y:705, w:324, h:135, col:COL.gemini},
   {key:'deck',      label:'STRATEGIE-DECK', sub:'ChatGPT · Nischen', x:1230, y:565, w:306, h:122, col:COL.chatgpt},
   {key:'shop',      label:'ETSY-SHOP-KONSOLE', sub:'DeskLane Studio', x:1240, y:245, w:340, h:250, col:COL.gold},
@@ -532,7 +532,7 @@ const ZONES = [
 // main agents — leuchtende Figuren; face/pose leicht variiert
 const AGENTS = [
   { key:'jarvis', name:'Jarvis', model:'Assistent · läuft auf claude-opus-4-8', col:COL.claude,
-    zone:'werkstatt', x:395, y:735, face:'butler', pose:'lean',
+    zone:'werkstatt', x:290, y:548, face:'butler', pose:'lean',
     states:[
       'baut Rechnungs-/Angebots-Vorlage (DE) — PDF + Excel + Word…',
       'schnürt Bundle „Selbstständig-Startklar" (40 Dateien)…',
@@ -543,7 +543,7 @@ const AGENTS = [
       'baut Nachlass- & Vorsorgeplaner (11 Seiten)…',
     ]},
   { key:'codex', name:'Codex', model:'Coding-Harness · Standby', col:COL.codex,
-    zone:'werkstatt', x:160, y:735, face:'brain', pose:'upright',
+    zone:'werkstatt', x:90, y:545, face:'brain', pose:'upright',
     states:[
       'Coding-Harness aktiv — wartet auf Programmier-Auftrag…',
       'Standby: Jarvis übernimmt aktuell das Coden',
