@@ -105,56 +105,120 @@
   .mdock{display:none;}
   @media (max-width:720px){
     /* top HUD compacted */
-    .top{padding:9px 12px 8px; align-items:flex-start; gap:10px;}
-    .brand h1{font-size:15.5px; white-space:normal; line-height:1.08;}
-    .brand .sub{max-width:58vw; font-size:9.5px; margin-top:2px;}
-    .clock{min-width:0; flex:0 0 auto; text-align:right;}
-    .clock .time{font-size:14px;}
-    .clock .date{display:none;}
-    .clock .live{margin-top:2px; font-size:8.5px; letter-spacing:.10em;}
+    html:not([data-ansicht="desktop"]) .top{padding:9px 12px 8px; align-items:flex-start; gap:10px;}
+    html:not([data-ansicht="desktop"]) .brand h1{font-size:15.5px; white-space:normal; line-height:1.08;}
+    html:not([data-ansicht="desktop"]) .brand .sub{max-width:58vw; font-size:9.5px; margin-top:2px;}
+    html:not([data-ansicht="desktop"]) .clock{min-width:0; flex:0 0 auto; text-align:right;}
+    html:not([data-ansicht="desktop"]) .clock .time{font-size:14px;}
+    html:not([data-ansicht="desktop"]) .clock .date{display:none;}
+    html:not([data-ansicht="desktop"]) .clock .live{margin-top:2px; font-size:8.5px; letter-spacing:.10em;}
 
     /* stats: 4 tiles fit the full width in one non-overflowing row.
        !important guards the layout props against the wider desktop base rule. */
-    .stats{top:50px !important; left:7px !important; right:7px !important; width:auto !important;
+    html:not([data-ansicht="desktop"]) .stats{top:50px !important; left:7px !important; right:7px !important; width:auto !important;
       display:flex !important; flex-wrap:nowrap !important;
       gap:5px !important; padding:0 !important;}
-    .stat{flex:1 1 0 !important; min-width:0 !important; width:0 !important; padding:5px 4px; border-radius:10px; overflow:hidden;}
-    .stat .n{font-size:13px; white-space:nowrap;}
-    .stat .n span{font-size:.5em;}
-    .stat .l{font-size:6.5px; letter-spacing:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+    html:not([data-ansicht="desktop"]) .stat{flex:1 1 0 !important; min-width:0 !important; width:0 !important; padding:5px 4px; border-radius:10px; overflow:hidden;}
+    html:not([data-ansicht="desktop"]) .stat .n{font-size:13px; white-space:nowrap;}
+    html:not([data-ansicht="desktop"]) .stat .n span{font-size:.5em;}
+    html:not([data-ansicht="desktop"]) .stat .l{font-size:6.5px; letter-spacing:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
 
     /* the wide canvas station panels are unreadable when zoomed to the brain
        on a phone, so hide the desktop legend and surface the key facts in a
        dedicated HTML dock instead. */
-    .legend{display:none;}
-    .hint{display:none;}
-    .zoombar{bottom:auto; top:96px; right:8px; gap:6px;}
-    .zoombar button{width:38px; height:38px; font-size:19px; border-radius:10px;}
+    html:not([data-ansicht="desktop"]) .legend{display:none;}
+    html:not([data-ansicht="desktop"]) .hint{display:none;}
+    html:not([data-ansicht="desktop"]) .zoombar{bottom:auto; top:96px; right:8px; gap:6px;}
+    html:not([data-ansicht="desktop"]) .zoombar button{width:38px; height:38px; font-size:19px; border-radius:10px;}
 
     /* info dock: readable, scrollable card strip sitting above the ticker */
-    .mdock{display:block; position:fixed; z-index:6; left:0; right:0; bottom:44px;
+    html:not([data-ansicht="desktop"]) .mdock{display:block; position:fixed; z-index:6; left:0; right:0; bottom:44px;
       padding:6px 7px 8px; pointer-events:none;
       background:linear-gradient(0deg,rgba(2,3,10,.94),rgba(2,3,10,.6) 62%,rgba(2,3,10,0));}
     /* compact 2-column grid: all agent cards visible at once, no horizontal swipe */
-    .mdock .mrow{display:grid; grid-template-columns:1fr 1fr; gap:5px;
+    html:not([data-ansicht="desktop"]) .mdock .mrow{display:grid; grid-template-columns:1fr 1fr; gap:5px;
       pointer-events:auto;}
-    .mcard{min-width:0; background:var(--panel);
+    html:not([data-ansicht="desktop"]) .mcard{min-width:0; background:var(--panel);
       border:1px solid var(--line); border-radius:10px; padding:5px 8px; backdrop-filter:blur(12px);
       -webkit-backdrop-filter:blur(12px); box-shadow:0 5px 18px rgba(0,0,0,.4);}
-    .mcard.wide{grid-column:1 / -1;}   /* inventory spans the full width */
-    .mcard .mh{display:flex; align-items:center; gap:5px; font-size:10px; font-weight:800; letter-spacing:.01em;}
-    .mcard .mh .dot{width:7px; height:7px; border-radius:50%; box-shadow:0 0 7px currentColor; flex:0 0 auto;}
-    .mcard .mt{font-size:8.5px; line-height:1.32; color:var(--muted); margin-top:2px;
+    html:not([data-ansicht="desktop"]) .mcard.wide{grid-column:1 / -1;}   /* inventory spans the full width */
+    html:not([data-ansicht="desktop"]) .mcard .mh{display:flex; align-items:center; gap:5px; font-size:10px; font-weight:800; letter-spacing:.01em;}
+    html:not([data-ansicht="desktop"]) .mcard .mh .dot{width:7px; height:7px; border-radius:50%; box-shadow:0 0 7px currentColor; flex:0 0 auto;}
+    html:not([data-ansicht="desktop"]) .mcard .mt{font-size:8.5px; line-height:1.32; color:var(--muted); margin-top:2px;
       display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;}
-    .mcard .mt b{color:var(--ink); font-weight:700;}
-    .mcard.wide .prow{display:flex; justify-content:space-between; gap:8px; font-size:9px; line-height:1.5;}
-    .mcard.wide .prow span:first-child{color:var(--ink); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
-    .mcard.wide .prow span:last-child{color:var(--gold); font-weight:700; font-variant-numeric:tabular-nums; flex:0 0 auto;}
+    html:not([data-ansicht="desktop"]) .mcard .mt b{color:var(--ink); font-weight:700;}
+    html:not([data-ansicht="desktop"]) .mcard.wide .prow{display:flex; justify-content:space-between; gap:8px; font-size:9px; line-height:1.5;}
+    html:not([data-ansicht="desktop"]) .mcard.wide .prow span:first-child{color:var(--ink); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+    html:not([data-ansicht="desktop"]) .mcard.wide .prow span:last-child{color:var(--gold); font-weight:700; font-variant-numeric:tabular-nums; flex:0 0 auto;}
     /* inventory: 2 columns of products so it stays short */
-    .mcard.wide .plist{display:grid; grid-template-columns:1fr 1fr; gap:0 12px; margin-top:3px; padding-right:2px;}
-    .mdock .mswipe{display:none;}
+    html:not([data-ansicht="desktop"]) .mcard.wide .plist{display:grid; grid-template-columns:1fr 1fr; gap:0 12px; margin-top:3px; padding-right:2px;}
+    html:not([data-ansicht="desktop"]) .mdock .mswipe{display:none;}
   }
+  /* erzwungene Mobil-Ansicht (?ansicht=mobil) — gleiche Regeln, geraeteunabhaengig */
+  html[data-ansicht="mobil"] body .mdock{display:block;}
+
+    /* top HUD compacted */
+    html[data-ansicht="mobil"] .top{padding:9px 12px 8px; align-items:flex-start; gap:10px;}
+    html[data-ansicht="mobil"] .brand h1{font-size:15.5px; white-space:normal; line-height:1.08;}
+    html[data-ansicht="mobil"] .brand .sub{max-width:58vw; font-size:9.5px; margin-top:2px;}
+    html[data-ansicht="mobil"] .clock{min-width:0; flex:0 0 auto; text-align:right;}
+    html[data-ansicht="mobil"] .clock .time{font-size:14px;}
+    html[data-ansicht="mobil"] .clock .date{display:none;}
+    html[data-ansicht="mobil"] .clock .live{margin-top:2px; font-size:8.5px; letter-spacing:.10em;}
+
+    /* stats: 4 tiles fit the full width in one non-overflowing row.
+       !important guards the layout props against the wider desktop base rule. */
+    html[data-ansicht="mobil"] .stats{top:50px !important; left:7px !important; right:7px !important; width:auto !important;
+      display:flex !important; flex-wrap:nowrap !important;
+      gap:5px !important; padding:0 !important;}
+    html[data-ansicht="mobil"] .stat{flex:1 1 0 !important; min-width:0 !important; width:0 !important; padding:5px 4px; border-radius:10px; overflow:hidden;}
+    html[data-ansicht="mobil"] .stat .n{font-size:13px; white-space:nowrap;}
+    html[data-ansicht="mobil"] .stat .n span{font-size:.5em;}
+    html[data-ansicht="mobil"] .stat .l{font-size:6.5px; letter-spacing:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+
+    /* the wide canvas station panels are unreadable when zoomed to the brain
+       on a phone, so hide the desktop legend and surface the key facts in a
+       dedicated HTML dock instead. */
+    html[data-ansicht="mobil"] .legend{display:none;}
+    html[data-ansicht="mobil"] .hint{display:none;}
+    html[data-ansicht="mobil"] .zoombar{bottom:auto; top:96px; right:8px; gap:6px;}
+    html[data-ansicht="mobil"] .zoombar button{width:38px; height:38px; font-size:19px; border-radius:10px;}
+
+    /* info dock: readable, scrollable card strip sitting above the ticker */
+    html[data-ansicht="mobil"] .mdock{display:block; position:fixed; z-index:6; left:0; right:0; bottom:44px;
+      padding:6px 7px 8px; pointer-events:none;
+      background:linear-gradient(0deg,rgba(2,3,10,.94),rgba(2,3,10,.6) 62%,rgba(2,3,10,0));}
+    /* compact 2-column grid: all agent cards visible at once, no horizontal swipe */
+    html[data-ansicht="mobil"] .mdock .mrow{display:grid; grid-template-columns:1fr 1fr; gap:5px;
+      pointer-events:auto;}
+    html[data-ansicht="mobil"] .mcard{min-width:0; background:var(--panel);
+      border:1px solid var(--line); border-radius:10px; padding:5px 8px; backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px); box-shadow:0 5px 18px rgba(0,0,0,.4);}
+    html[data-ansicht="mobil"] .mcard.wide{grid-column:1 / -1;}   /* inventory spans the full width */
+    html[data-ansicht="mobil"] .mcard .mh{display:flex; align-items:center; gap:5px; font-size:10px; font-weight:800; letter-spacing:.01em;}
+    html[data-ansicht="mobil"] .mcard .mh .dot{width:7px; height:7px; border-radius:50%; box-shadow:0 0 7px currentColor; flex:0 0 auto;}
+    html[data-ansicht="mobil"] .mcard .mt{font-size:8.5px; line-height:1.32; color:var(--muted); margin-top:2px;
+      display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;}
+    html[data-ansicht="mobil"] .mcard .mt b{color:var(--ink); font-weight:700;}
+    html[data-ansicht="mobil"] .mcard.wide .prow{display:flex; justify-content:space-between; gap:8px; font-size:9px; line-height:1.5;}
+    html[data-ansicht="mobil"] .mcard.wide .prow span:first-child{color:var(--ink); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+    html[data-ansicht="mobil"] .mcard.wide .prow span:last-child{color:var(--gold); font-weight:700; font-variant-numeric:tabular-nums; flex:0 0 auto;}
+    /* inventory: 2 columns of products so it stays short */
+    html[data-ansicht="mobil"] .mcard.wide .plist{display:grid; grid-template-columns:1fr 1fr; gap:0 12px; margin-top:3px; padding-right:2px;}
+    html[data-ansicht="mobil"] .mdock .mswipe{display:none;}
+
+  /* Ansicht-Umschalter (Mobil/Desktop/Auto) */
+  .vswitch{position:fixed; z-index:8; right:10px; bottom:52px; display:flex; gap:4px; font-size:9px;}
+  .vswitch a{color:var(--muted); text-decoration:none; border:1px solid var(--line); background:var(--panel);
+    padding:3px 7px; border-radius:8px; letter-spacing:.06em; backdrop-filter:blur(10px);}
+  .vswitch a.on{color:var(--ink); border-color:rgba(140,190,255,.5);}
 </style>
+<script>
+// Ansicht erzwingen: ?ansicht=mobil | ?ansicht=desktop (sonst automatisch nach Format)
+const ANSICHT_FORCE=(new URLSearchParams(location.search).get('ansicht')||'').toLowerCase();
+document.documentElement.dataset.ansicht = (ANSICHT_FORCE==='mobil'||ANSICHT_FORCE==='desktop') ? ANSICHT_FORCE : 'auto';
+function istMobil(){ return ANSICHT_FORCE==='mobil' ? true : ANSICHT_FORCE==='desktop' ? false : (window.innerWidth < window.innerHeight); }
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
 </head>
@@ -240,7 +304,7 @@ function resize(){
   cvs.style.width=W+'px'; cvs.style.height=H+'px';
   ctx.setTransform(DPR,0,0,DPR,0,0);
   const sx = W/WORLD_W, sy = H/WORLD_H;
-  const portrait = W < H;
+  const portrait = istMobil();
   let scale;
   if(portrait){
     // Portrait (phone): the station is a wide landscape scene. Size the fit so
@@ -294,11 +358,11 @@ function clampPan(){
   const dispW = WORLD_W*effScale(), dispH = WORLD_H*effScale();
   // On phones the view is deliberately locked to the brain-in-band framing set
   // by resize(); allow a little slack around it but keep the brain centred.
-  if(W < H && uz>=0.999 && uz<=1.001){
+  if(istMobil() && uz>=0.999 && uz<=1.001){
     panMax.x = 30; panMax.y = 30;
     return;   // at the default fit, keep resize()'s exact brain-in-band framing
   }
-  if(W < H && uz<0.999){
+  if(istMobil() && uz<0.999){
     // Zoomed OUT on phone: recentre the whole station (brain at beacon 800,465)
     // in the viewport so you actually see the extra context you zoomed out for.
     pan.x = (W/2)      - (fit.ox + 800*effScale());
@@ -429,7 +493,7 @@ function handleTap(sx, sy){
 /* ---------- zoom buttons ---------- */
 document.getElementById('zin').addEventListener('click', ()=>zoomTo(uz*1.4, W/2, H/2));
 document.getElementById('zout').addEventListener('click', ()=>zoomTo(uz/1.4, W/2, H/2));
-document.getElementById('zrst').addEventListener('click', ()=>{ uz=1; pan.x=0; if(W<H){resize();} else {pan.y=0;} clampPan(); hideInfo(); });
+document.getElementById('zrst').addEventListener('click', ()=>{ uz=1; pan.x=0; if(istMobil()){resize();} else {pan.y=0;} clampPan(); hideInfo(); });
 
 /* ============================================================
    DATA — echte Zahlen/Texte aus ARBEITSSTAND.md
@@ -913,7 +977,7 @@ function drawBeaconOLD(T){
 function drawBeaconLabel(bx,by,T){
   // on phones the area below the core is occupied by the info dock, so
   // place the label just under the core (fixed screen offset) to avoid overlap.
-  const mobile = (W < H);
+  const mobile = istMobil();
   const ly1 = mobile ? by + 92 : by + ts(215);
   const ly2 = mobile ? ly1 + 14 : by + ts(230);
   ctx.save();
@@ -1594,7 +1658,7 @@ function frame(now){
   // On phones (portrait) the wide landscape station panels + agent figures are
   // positioned off to the sides and only clutter the brain, so we hide them and
   // keep a clean brain + reactor; all their info lives in the HTML dock instead.
-  const MOBILE = (W < H);
+  const MOBILE = istMobil();
   if(MOBILE){
     // RECHERCHE-TERMINAL im freien Band zwischen Stat-Kacheln und Gehirn (Screen-Space)
     const termW = Math.min(W-28, 360);
@@ -1903,5 +1967,9 @@ requestAnimationFrame(frame);
   window.addEventListener('resize', ()=>{ bCam.aspect=window.innerWidth/window.innerHeight; bCam.updateProjectionMatrix(); bRenderer.setSize(window.innerWidth, window.innerHeight); });
 })();
 </script>
+<div class="vswitch" id="vswitch">
+  <a href="?" data-v="auto">AUTO</a><a href="?ansicht=mobil" data-v="mobil">MOBIL</a><a href="?ansicht=desktop" data-v="desktop">DESKTOP</a>
+</div>
+<script>document.querySelectorAll('#vswitch a').forEach(a=>{ if(a.dataset.v===document.documentElement.dataset.ansicht) a.classList.add('on'); });</script>
 </body>
 </html>
