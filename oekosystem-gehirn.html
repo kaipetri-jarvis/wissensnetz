@@ -130,7 +130,9 @@
     /* the wide canvas station panels are unreadable when zoomed to the brain
        on a phone, so hide the desktop legend and surface the key facts in a
        dedicated HTML dock instead. */
-    html:not([data-ansicht="desktop"]) .legend{display:none;}
+    html:not([data-ansicht="desktop"]) .legend{right:8px; top:104px; padding:9px 11px; font-size:10.5px; min-width:0; gap:6px;}
+    html:not([data-ansicht="desktop"]) .legend .sw{width:10px; height:10px;}
+    html:not([data-ansicht="desktop"]) .mdock{display:none !important;}
     html:not([data-ansicht="desktop"]) .hint{display:none;}
     html:not([data-ansicht="desktop"]) .zoombar{bottom:auto; top:96px; right:8px; gap:6px;}
     html:not([data-ansicht="desktop"]) .zoombar button{width:38px; height:38px; font-size:19px; border-radius:10px;}
@@ -159,7 +161,7 @@
     html:not([data-ansicht="desktop"]) .mdock .mswipe{display:none;}
   }
   /* erzwungene Mobil-Ansicht (?ansicht=mobil) — gleiche Regeln, geraeteunabhaengig */
-  html[data-ansicht="mobil"] body .mdock{display:block;}
+  html[data-ansicht="mobil"] body .mdock{display:none !important;}
 
     /* top HUD compacted */
     html[data-ansicht="mobil"] .top{padding:9px 12px 8px; align-items:flex-start; gap:10px;}
@@ -183,7 +185,9 @@
     /* the wide canvas station panels are unreadable when zoomed to the brain
        on a phone, so hide the desktop legend and surface the key facts in a
        dedicated HTML dock instead. */
-    html[data-ansicht="mobil"] .legend{display:none;}
+    html[data-ansicht="mobil"] .legend{right:8px; top:104px; padding:9px 11px; font-size:10.5px; min-width:0; gap:6px;}
+    html[data-ansicht="mobil"] .legend .sw{width:10px; height:10px;}
+    html[data-ansicht="mobil"] .mdock{display:none !important;}
     html[data-ansicht="mobil"] .hint{display:none;}
     html[data-ansicht="mobil"] .zoombar{bottom:auto; top:96px; right:8px; gap:6px;}
     html[data-ansicht="mobil"] .zoombar button{width:38px; height:38px; font-size:19px; border-radius:10px;}
@@ -323,17 +327,11 @@ function resize(){
   const portrait = istMobil();
   let scale;
   if(portrait){
-    // Portrait (phone): the station is a wide landscape scene. Size the fit so
-    // the central glass brain is BIG but fully visible inside the clear band
-    // between the top stats and the bottom info dock — not clipped, not tiny.
-    // The brain's on-screen diameter is ~ (2*brainWorldR)*effScale; brainWorldR≈235.
-    const topUI = 108, botUI = 178;              // reserved screen bands
-    const band  = Math.max(220, H - topUI - botUI);
-    const brainWorldD = 470;                     // ~ visible brain diameter in world units
-    // Calmer default: the brain should sit inside the scene, not fill it.
-    const scaleForWidth  = (W   * 0.62) / brainWorldD;
-    const scaleForHeight = (band * 0.68) / brainWorldD;
-    scale = Math.min(scaleForWidth, scaleForHeight);
+    // Portrait (phone): show the FULL desktop station, scaled down to the narrow
+    // screen. Fit the wide 1600×900 scene to the phone width so the whole layout
+    // (zones, agent figures, terminal, shop console, connection lines) is visible
+    // — same content as desktop, only smaller.
+    scale = (W / WORLD_W) * 0.98;
   } else {
     scale = Math.max(sx, sy) * 1.02;
   }
@@ -341,16 +339,11 @@ function resize(){
   const dispW = WORLD_W*scale, dispH = WORLD_H*scale;
   fit.ox = (W - dispW)/2;
   fit.oy = (H - dispH)/2;
-  // On phones we lock the view (no residual pan) and centre the brain in the
-  // usable band: below the compact top HUD/stats, above the info dock + ticker.
+  // On phones, centre the whole station vertically; no residual pan (the view
+  // is locked to this full-station fit framing).
   if(portrait){
-    const topUI = 108, botUI = 178;
-    // Bias the anchor DOWN: the anatomical brain's mass sits above the beacon
-    // point (world 465), so dropping it ~0.16·H centres the brain in the band
-    // and uses the lower space instead of crowding the top stats.
-    const bandCentre = topUI + (H - topUI - botUI)/2 + H*0.02;
-    pan.x = (W/2)       - (fit.ox + 800*fit.scale);
-    pan.y = bandCentre  - (fit.oy + 465*fit.scale);
+    pan.x = 0;
+    pan.y = (H*0.5) - (fit.oy + (WORLD_H/2)*fit.scale);
     fit._init = true;
   } else if(!fit._init){
     fit._init = true;
@@ -373,16 +366,17 @@ function ts(v){ return v*effScale(); }
 function clampPan(){
   const dispW = WORLD_W*effScale(), dispH = WORLD_H*effScale();
   // On phones the view is deliberately locked to the brain-in-band framing set
-  // by resize(); allow a little slack around it but keep the brain centred.
+  // by resize(); allow a little slack around it but keep the whole station centred.
   if(istMobil() && uz>=0.999 && uz<=1.001){
-    panMax.x = 30; panMax.y = 30;
-    return;   // at the default fit, keep resize()'s exact brain-in-band framing
+    pan.x = 0;
+    pan.y = (H*0.5) - (fit.oy + (WORLD_H/2)*effScale());
+    panMax.x = 20; panMax.y = 40;
+    return;
   }
   if(istMobil() && uz<0.999){
-    // Zoomed OUT on phone: recentre the whole station (brain at beacon 800,465)
-    // in the viewport so you actually see the extra context you zoomed out for.
-    pan.x = (W/2)      - (fit.ox + 800*effScale());
-    pan.y = (H*0.46)   - (fit.oy + 465*effScale());
+    // Zoomed OUT on phone: recentre the whole station in the viewport.
+    pan.x = (W/2)   - (fit.ox + (WORLD_W/2)*effScale());
+    pan.y = (H*0.5) - (fit.oy + (WORLD_H/2)*effScale());
     panMax.x = Math.max(0,(dispW - W)/2 + 80);
     panMax.y = Math.max(0,(dispH - H)/2 + 80);
     return;
@@ -1696,24 +1690,9 @@ function frame(now){
   ctx.clearRect(0,0,W,H);
   drawBackground(T);
 
-  // On phones (portrait) the wide landscape station panels + agent figures are
-  // positioned off to the sides and only clutter the brain, so we hide them and
-  // keep a clean brain + reactor; all their info lives in the HTML dock instead.
-  const MOBILE = istMobil();
-  if(MOBILE){
-    // RECHERCHE-TERMINAL im freien Band zwischen Stat-Kacheln und Gehirn (Screen-Space)
-    const termW = Math.min(W-28, 360);
-    const termX = (W-termW)/2;
-    const termY = 190;
-    const termH = 168;
-    drawLogTerminal(ZONES[4], T, dt, {x:termX, y:termY, w:termW, h:termH});
-    drawBeacon(T);
-    updateSubs(dt,T);   // keep sub state fresh (cheap) though not drawn
-    updateAgents(dt);   // keep agent task typewriter running for the dock
-    drawMobileOrbit(T); // floating agent nodes + connection lines to the brain
-    requestAnimationFrame(frame);
-    return;
-  }
+  // Phones now render the SAME full desktop station, just fitted to the narrow
+  // screen (see resize()): all zones, agent figures, terminal, shop console and
+  // connection lines — identical content to desktop, only scaled down.
 
   // Energie-Linien ZUERST zeichnen, damit die Panels sie ueberdecken
   const bx=tx(800), by=ty(BRAIN_Y()-95);   // Linien-Treffpunkt: mittig im Gehirn
