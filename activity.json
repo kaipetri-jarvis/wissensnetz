@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-29T13:28:28+00:00",
+  "generated": "2026-08-29T13:38:28+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-08-29T15:36:14+02:00",
+      "text": "Gehirn-3D: mehr sichtbare Verbindungslinien (Agenten-Fächer je 4 Linien + radiale Rays aus dem Gehirn) wie altes Design"
+    },
+    {
+      "at": "2026-08-29T15:34:02+02:00",
+      "text": "Gehirn-3D: ETSY Holo-Inventar (echte Produkte+Preise) + Design-Labor/Gemini + Upscaler-Badge; Mobil: schwere Panels eingeklappt starten"
+    },
+    {
+      "at": "2026-08-29T15:30:11+02:00",
+      "text": "Gehirn-3D: Oekosystem-Station-Kopf (Stat-Karten 19+4/17/14/3 + Uhr + Station aktiv) + echtes eRank-Live-Etsy-Terminal wie alter Stand"
+    },
+    {
       "at": "2026-08-29T15:22:48+02:00",
       "text": "Gehirn-3D: mobil-optimiert + KI/Agenten-Labels hervorgehoben (Farbe/KI-Stil) + Recherche-Terminal (Die Station) mit Live-Log"
     },
@@ -22,23 +34,11 @@
     {
       "at": "2026-08-29T14:47:27+02:00",
       "text": "Gehirn-3D: Neuronen-Punktwolke aus echtem Mesh gesampelt -> deckungsgleich mit Gehirnform"
-    },
-    {
-      "at": "2026-08-29T14:33:21+02:00",
-      "text": "Gehirn-3D: echtes anatomisches Gehirn-Modell (brain.glb, MIT) mit Glas-Shader statt prozeduraler Kugel"
-    },
-    {
-      "at": "2026-08-29T14:21:08+02:00",
-      "text": "Gehirn-3D: echte Furchen (Gyri/Sulci-Displacement in der Oberflaeche + Ridge-Shading)"
-    },
-    {
-      "at": "2026-08-29T14:11:40+02:00",
-      "text": "Gehirn-3D: echte Gyri-Furchen (maeandernde Kontur-Linien) statt Kugel-Wireframe"
     }
   ],
   "cron": [
-    "jarvis-crash-log-watcher crash-log-watcher cron",
     "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
+    "jarvis-crash-log-watcher crash-log-watcher cron",
     "heartbeat:ultron Heartbeat (ultron)",
     "heartbeat:main Heartbeat (main)",
     "jarvis-wissensnetz-auto wissensnetz-auto-update cron"
