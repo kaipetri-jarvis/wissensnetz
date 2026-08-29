@@ -585,31 +585,31 @@ const AGENTS = [
 // verifiziert aus config + launchd + `openclaw cron list` (29.08.2026)
 const INFRA = [
   // --- Ausgabe / extern (oben rechts, wie gehabt) ---
-  {key:'github', name:'GitHub', sub:'Wissensnetz · Gist · Pages', x:967, y:308, col:COL.github,
+  {key:'github', name:'GitHub', sub:'Wissensnetz · Gist · Pages', x:1080, y:280, col:COL.github,
    states:['push wissensnetz ✓','ARBEITSSTAND.md → Gist synchron','Pages deployed · oekosystem.html live','commit f74c0b9 · Ökosystem mobil']},
-  {key:'atlas', name:'ATLAS · Fabrik', sub:'Multi-KI-Software-Fabrik', x:1040, y:390, col:COL.atlas,
+  {key:'atlas', name:'ATLAS · Fabrik', sub:'Multi-KI-Software-Fabrik', x:1110, y:640, col:COL.atlas,
    states:['Jarvis prüft als 3. Reviewer (nur-lesend)','coordination-fleet aktiv · Docker online','Postgres + NATS verbunden','Review-Verdikt → Telegram an Kai','schreibgeschützt: kann nichts kaputtmachen']},
 
   // --- Fundament / System (linke Flanke, prominent: Gateway) ---
-  {key:'gateway', name:'OpenClaw Gateway', sub:'launchd · Port 18789 · das Fundament', x:633, y:308, col:COL.gateway, big:true,
+  {key:'gateway', name:'OpenClaw Gateway', sub:'launchd · Port 18789 · das Fundament', x:540, y:250, col:COL.gateway, big:true,
    states:['ai.openclaw.gateway läuft · KeepAlive','routet alle Kanäle & Agenten','main + ultron gebunden','Config live · kein Reload-Abbruch','das Nervensystem der ganzen Station']},
-  {key:'watchdog', name:'Watchdog', sub:'Selbstheilung · Absturzwarnung', x:544, y:429, col:COL.watchdog,
+  {key:'watchdog', name:'Watchdog', sub:'Selbstheilung · Absturzwarnung', x:440, y:420, col:COL.watchdog,
    states:['ai.openclaw.watchdog überwacht Gateway','Crash → Neustart + Telegram-Alarm','Crash-Log-Watcher alle 10 Min','hält die Station 24/7 am Leben']},
-  {key:'tailscale', name:'Tailscale', sub:'Tailnet · Fernsteuerung vom iPhone', x:500, y:540, col:COL.tailscale,
+  {key:'tailscale', name:'Tailscale', sub:'Tailnet · Fernsteuerung vom iPhone', x:480, y:590, col:COL.tailscale,
    states:['Mac 100.73.109.29 ↔ iPhone 100.108.47.120','Serve auf Port 18789','Kai steuert die Station vom Handy','verschlüsseltes Mesh · kein offener Port']},
-  {key:'mac', name:'Mac · 24/7-Server', sub:'schläft nie · zugeklappt weiter', x:520, y:655, col:COL.mac,
+  {key:'mac', name:'Mac · 24/7-Server', sub:'schläft nie · zugeklappt weiter', x:620, y:710, col:COL.mac,
    states:['caffeinate · kein Ruhezustand','Deckel zu → läuft weiter','Host für Gateway + alle Dienste','Dauerbetrieb seit Setup']},
 
   // --- Sprache (oben Mitte-links) ---
-  {key:'voice', name:'Sprache · TTS/STT', sub:'KatjaNeural · Whisper', x:1025, y:568, col:COL.voice,
+  {key:'voice', name:'Sprache · TTS/STT', sub:'KatjaNeural · Whisper', x:970, y:700, col:COL.voice,
    states:['TTS Microsoft de-DE-KatjaNeural (auto)','Fallback Google TTS','STT lokal · Whisper (transcribe.sh)','liest jede Antwort vor']},
 
   // --- Automation / Cron (unten links, ein Sammelknoten) ---
-  {key:'cron', name:'Automation · Cron', sub:'nächtliche & stündliche Jobs', x:950, y:625, col:COL.cron,
+  {key:'cron', name:'Automation · Cron', sub:'nächtliche & stündliche Jobs', x:790, y:745, col:COL.cron,
    states:['Wissensnetz-Auto 3:15 · Memory-Dreaming 3:00','Heartbeats main/ultron/atlas stündlich','Activity-Feed live · alle 10 Min','Postfach-Watcher Frau Lind · werktags','läuft, während Kai schläft']},
 
   // --- Kanal (oben Mitte-rechts) ---
-  {key:'telegram', name:'Telegram', sub:'@Jarvis_Slave · @kai_ultron', x:800, y:250, col:COL.telegram,
+  {key:'telegram', name:'Telegram', sub:'@Jarvis_Slave · @kai_ultron', x:800, y:180, col:COL.telegram,
    states:['2 Bots · main + ultron','Kais Hauptkanal','Voice-Notes + Text','Alarme & Übergaben laufen hier']},
 ];
 
