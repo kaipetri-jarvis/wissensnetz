@@ -1,0 +1,238 @@
+<!DOCTYPE html><html lang="de"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>Kais KI-Gehirn · Neuronales Netz</title>
+<style>
+  :root{
+    --bg:#04060f; --ink:#e6eeff; --muted:#8ea3c8;
+    --claude:#e0a878; --ultron:#25e0d0; --gemini:#6fb4ff; --chatgpt:#4fe0b0;
+    --gold:#f0c674; --beacon:#8fd7ff; --atlas:#8ab4ff; --sub:#b79bff;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  html,body{margin:0;padding:0;height:100%;width:100%;background:var(--bg);overflow:hidden;
+    font-family:Inter,-apple-system,system-ui,sans-serif;color:var(--ink);}
+  canvas{display:block;width:100vw;height:100vh;touch-action:none;}
+  #hdr{position:fixed;top:0;left:0;right:0;padding:16px 22px;z-index:5;pointer-events:none;}
+  #hdr h1{margin:0;font-size:21px;font-weight:800;letter-spacing:.01em;}
+  #hdr h1 span{color:var(--beacon);}
+  #hdr p{margin:3px 0 0;font-size:12px;color:var(--muted);max-width:60%;}
+  #legend{position:fixed;right:16px;bottom:16px;z-index:5;font-size:12px;
+    background:rgba(10,16,34,.55);backdrop-filter:blur(12px);border:1px solid rgba(140,165,220,.16);
+    border-radius:14px;padding:12px 14px;}
+  #legend .row{display:flex;align-items:center;gap:9px;padding:3px 0;color:#c7d3e8;}
+  #legend .sw{width:11px;height:11px;border-radius:50%;box-shadow:0 0 8px currentColor;}
+  #hint{position:fixed;left:16px;bottom:16px;z-index:4;font-size:11px;color:#5e6c86;}
+</style></head><body>
+<div id="hdr">
+  <h1>Kais KI-Gehirn · <span>Neuronales Netz</span></h1>
+  <p>OpenClaw als Kern, die Agenten & Projekte als Knotenpunkte — verbunden zu einem denkenden Netz. Ziehen · Zoomen.</p>
+</div>
+<div id="legend"></div>
+<div id="hint">Neuronen feuern · große Knoten = reale Agenten/Projekte</div>
+<canvas id="c"></canvas>
+<script>
+const cv=document.getElementById('c'), ctx=cv.getContext('2d');
+let W=0,H=0,DPR=Math.min(2,window.devicePixelRatio||1);
+function resize(){ W=cv.clientWidth; H=cv.clientHeight; cv.width=W*DPR; cv.height=H*DPR; ctx.setTransform(DPR,0,0,DPR,0,0); layout(); }
+window.addEventListener('resize',resize);
+
+const COL={claude:'#e0a878',ultron:'#25e0d0',gemini:'#6fb4ff',chatgpt:'#4fe0b0',
+  gold:'#f0c674',beacon:'#8fd7ff',atlas:'#8ab4ff',sub:'#b79bff'};
+function hexA(hex,a){const n=parseInt(hex.slice(1),16);return `rgba(${(n>>16)&255},${(n>>8)&255},${n&255},${a})`;}
+
+/* ---- Gehirnform: rechte Halbkontur (relativ, Einheit ~ -1..1), gespiegelt ---- */
+const HALF=[
+  [0.00,-1.00],[0.30,-0.97],[0.58,-0.86],[0.82,-0.62],[0.97,-0.28],  // Stirnlappen-Wölbung oben
+  [1.00, 0.04],[0.94, 0.34],[0.80, 0.56],                            // breiteste Stelle, rundet ab
+  [0.60, 0.70],[0.46, 0.86],                                          // Temporallappen
+  [0.55, 1.02],[0.40, 1.10],                                          // Kleinhirn-Ausbuchtung (hinten unten)
+  [0.24, 1.02],[0.12, 0.80],                                          // Einzug Richtung Hirnstamm
+  [0.07, 0.95],[0.00, 1.00]                                           // Hirnstamm ragt runter (Mitte)
+];
+function buildOutline(){
+  const half=[],dens=14;
+  for(let i=0;i<HALF.length-1;i++)for(let k=0;k<dens;k++){const t=k/dens;
+    half.push([HALF[i][0]+(HALF[i+1][0]-HALF[i][0])*t, HALF[i][1]+(HALF[i+1][1]-HALF[i][1])*t]);}
+  half.push(HALF[HALF.length-1]);
+  const pts=half.map(p=>[p[0],p[1]]);
+  for(let i=half.length-1;i>=0;i--)pts.push([-half[i][0],half[i][1]]);
+  return pts;
+}
+const OUTLINE=buildOutline();
+
+/* ---- Welt-Transform (Gehirn zentriert, skaliert auf Viewport) ---- */
+let CX=0,CY=0,RX=0,RY=0;
+function layout(){
+  CX=W*0.5; CY=H*0.52;
+  const s=Math.min(W,H*1.35);
+  RX=s*0.42; RY=s*0.34;
+  placeNeurons();
+}
+const toX=nx=>CX+nx*RX, toY=ny=>CY+ny*RY;
+
+/* ---- Punkt-in-Polygon-Test (für Neuronen-Verteilung in der Form) ---- */
+function inBrain(nx,ny){
+  let inside=false;
+  for(let i=0,j=OUTLINE.length-1;i<OUTLINE.length;j=i++){
+    const xi=OUTLINE[i][0],yi=OUTLINE[i][1],xj=OUTLINE[j][0],yj=OUTLINE[j][1];
+    if(((yi>ny)!=(yj>ny)) && (nx < (xj-xi)*(ny-yi)/(yj-yi)+xi)) inside=!inside;
+  }
+  return inside;
+}
+
+/* ---- REALE KNOTEN (deine Agenten/Projekte) — Position in normalisierter Hirnform ---- */
+const HUBS=[
+  {id:'openclaw',label:'OpenClaw',sub:'Kern',       nx: 0.00,ny: 0.02,col:COL.beacon,r:16},
+  {id:'jarvis',  label:'Jarvis',  sub:'Assistent',  nx:-0.42,ny:-0.30,col:COL.claude, r:11},
+  {id:'ultron',  label:'Ultron',  sub:'2. Kopf',    nx: 0.42,ny:-0.30,col:COL.ultron, r:11},
+  {id:'atlas',   label:'ATLAS',   sub:'Fabrik',     nx: 0.10,ny:-0.62,col:COL.atlas,  r:9},
+  {id:'gemini',  label:'Gemini',  sub:'Design',     nx:-0.60,ny: 0.20,col:COL.gemini, r:8},
+  {id:'chatgpt', label:'ChatGPT', sub:'Stratege',   nx: 0.58,ny: 0.22,col:COL.chatgpt,r:8},
+  {id:'etsy',    label:'Etsy-Shop',sub:'Projekt 1', nx: 0.00,ny: 0.60,col:COL.gold,   r:10},
+  {id:'memory',  label:'Memory',  sub:'Gedächtnis', nx:-0.20,ny: 0.42,col:COL.sub,    r:7},
+  {id:'telegram',label:'Telegram',sub:'Kanal',      nx: 0.24,ny: 0.44,col:COL.beacon, r:7},
+];
+
+/* ---- Neuronen (kleine Knoten, füllen die Gehirnform) ---- */
+let NEURONS=[], EDGES=[];
+function placeNeurons(){
+  NEURONS=[]; EDGES=[];
+  // reale Hubs zuerst (als „Anker-Neuronen")
+  HUBS.forEach(h=>{h.x=toX(h.nx);h.y=toY(h.ny);});
+  // A) dichte Rand-Neuronen ENTLANG der Kontur → scharfe Gehirn-Silhouette
+  for(let i=0;i<OUTLINE.length;i++){
+    const p=OUTLINE[i];
+    const x=toX(p[0]),y=toY(p[1]);
+    NEURONS.push({x,y,nx:p[0],ny:p[1],ph:Math.random()*6.28,sp:0.5+Math.random()*1.5,r:1.1+Math.random()*1.1,edge:true});
+  }
+  // B) Neuronen entlang der Mittelfurche (trennt Hemisphären)
+  for(let k=0;k<26;k++){
+    const t=k/25; const ny=-0.9+1.75*t;
+    const nx=0.04*Math.sin(t*Math.PI); // leichte S-Kurve
+    if(!inBrain(nx,ny))continue;
+    NEURONS.push({x:toX(nx),y:toY(ny),nx,ny,ph:Math.random()*6.28,sp:0.6+Math.random()*1.4,r:1.0+Math.random(),furrow:true});
+  }
+  // C) zufällige Füll-Neuronen in der Form (target zählt NUR Füllpunkte)
+  const fillTarget=Math.round((W*H)/6000)+260;
+  let filled=0, tries=0;
+  while(filled<fillTarget && tries<fillTarget*60){
+    tries++;
+    const nx=(Math.random()*2-1)*1.02, ny=(Math.random()*2-1)*1.02;
+    if(!inBrain(nx,ny)) continue;
+    // Lücke entlang der Mittelfurche lassen (damit die Trennung sichtbar bleibt)
+    if(Math.abs(nx)<0.05) continue;
+    const x=toX(nx),y=toY(ny);
+    let ok=true;
+    for(const h of HUBS){ if(Math.hypot(x-h.x,y-h.y)<h.r*2.4){ok=false;break;} }
+    if(ok){ NEURONS.push({x,y,nx,ny,ph:Math.random()*6.28,sp:0.5+Math.random()*1.5,r:0.8+Math.random()*1.3}); filled++; }
+  }
+  // Kanten: jedes Neuron mit seinen nächsten Nachbarn verbinden (Netz)
+  const all=NEURONS.concat(HUBS.map(h=>({x:h.x,y:h.y,hub:true})));
+  for(let i=0;i<all.length;i++){
+    const dists=[];
+    for(let j=0;j<all.length;j++) if(i!==j){
+      const d=Math.hypot(all[i].x-all[j].x,all[i].y-all[j].y);
+      if(d<Math.min(W,H)*0.085) dists.push([d,j]);
+    }
+    dists.sort((a,b)=>a[0]-b[0]);
+    dists.slice(0,4).forEach(([d,j])=>{ if(i<j) EDGES.push([i,j,d]); });
+  }
+  window._ALL=all;
+}
+
+/* ---- Signale, die durchs Netz feuern ---- */
+const SIGNALS=[];
+function spawnSignal(){
+  if(EDGES.length===0)return;
+  const e=EDGES[(Math.random()*EDGES.length)|0];
+  SIGNALS.push({e, t:0, sp:0.6+Math.random()*1.2});
+}
+
+/* ---- Interaktion: Pan + Zoom (einfach) ---- */
+let pan={x:0,y:0}, zoom=1, drag=null;
+cv.addEventListener('pointerdown',e=>{drag={x:e.clientX,y:e.clientY,px:pan.x,py:pan.y};});
+cv.addEventListener('pointermove',e=>{if(drag){pan.x=drag.px+(e.clientX-drag.x);pan.y=drag.py+(e.clientY-drag.y);}});
+cv.addEventListener('pointerup',()=>drag=null);
+cv.addEventListener('wheel',e=>{e.preventDefault();zoom=Math.max(0.6,Math.min(2.4,zoom*(e.deltaY<0?1.1:0.9)));},{passive:false});
+
+/* ---- Zeichnen ---- */
+let last=0, sigTimer=0;
+function frame(now){
+  const T=now/1000, dt=Math.min(0.05,(now-last)/1000); last=now;
+  ctx.clearRect(0,0,W,H);
+  ctx.save();
+  ctx.translate(pan.x,pan.y);
+  ctx.translate(CX,CY); ctx.scale(zoom,zoom); ctx.translate(-CX,-CY);
+
+  // Hintergrund-Schimmer in Gehirnform
+  const all=window._ALL||[];
+  const breath=0.5+0.5*Math.sin(T*0.6);
+
+  // 1) Kanten (Netz-Fasern) — sichtbarer für Netz-Gefühl
+  ctx.lineWidth=1;
+  for(const [i,j] of EDGES){
+    const a=all[i],b=all[j]; if(!a||!b)continue;
+    ctx.strokeStyle=hexA('#7fb0ea',0.13+0.06*breath);
+    ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();
+  }
+
+  // 2) Signale entlang Kanten
+  sigTimer+=dt; if(sigTimer>0.10){sigTimer=0; if(SIGNALS.length<70) spawnSignal();}
+  ctx.globalCompositeOperation='lighter';
+  for(let s=SIGNALS.length-1;s>=0;s--){
+    const sg=SIGNALS[s]; sg.t+=dt*sg.sp;
+    if(sg.t>=1){SIGNALS.splice(s,1);continue;}
+    const a=all[sg.e[0]],b=all[sg.e[1]]; if(!a||!b){SIGNALS.splice(s,1);continue;}
+    const x=a.x+(b.x-a.x)*sg.t, y=a.y+(b.y-a.y)*sg.t;
+    const rr=2.6;
+    const g=ctx.createRadialGradient(x,y,0,x,y,rr*3);
+    g.addColorStop(0,hexA('#ffffff',.9));g.addColorStop(.4,hexA(COL.beacon,.7));g.addColorStop(1,hexA(COL.beacon,0));
+    ctx.fillStyle=g;ctx.beginPath();ctx.arc(x,y,rr*3,0,6.28);ctx.fill();
+  }
+
+  // 3) Neuronen (kleine Knoten) — Rand/Furche heller, Füll-Neuronen deutlich sichtbar
+  for(const n of NEURONS){
+    const tw=0.5+0.5*Math.sin(T*n.sp+n.ph);
+    const boost=(n.edge||n.furrow)?1.9:1.35;
+    const rr=(n.r+0.5)*(0.85+0.45*tw)*(n.edge?1.15:1);
+    const a0=(n.edge||n.furrow)?(.75+.25*tw):(.6+.35*tw);
+    const g=ctx.createRadialGradient(n.x,n.y,0,n.x,n.y,rr*2.4*boost);
+    g.addColorStop(0,hexA('#e6f2ff',a0));g.addColorStop(.5,hexA('#7fb0ea',.34*tw));g.addColorStop(1,hexA('#7fb0ea',0));
+    ctx.fillStyle=g;ctx.beginPath();ctx.arc(n.x,n.y,rr*2.4*boost,0,6.28);ctx.fill();
+    // fester heller Kern für jeden Knoten (macht sie als Punkte erkennbar)
+    ctx.fillStyle=hexA('#ffffff',(n.edge||n.furrow)?.8:.55);
+    ctx.beginPath();ctx.arc(n.x,n.y,Math.max(0.8,n.r*0.7),0,6.28);ctx.fill();
+  }
+  ctx.globalCompositeOperation='source-over';
+
+  // 4) reale Hubs (große beschriftete Knoten)
+  for(const h of HUBS){
+    const pulse=0.5+0.5*Math.sin(T*1.2+h.nx*3);
+    // Glow
+    ctx.globalCompositeOperation='lighter';
+    const gg=ctx.createRadialGradient(h.x,h.y,0,h.x,h.y,h.r*3.2);
+    gg.addColorStop(0,hexA(h.col,.7));gg.addColorStop(.4,hexA(h.col,.3));gg.addColorStop(1,hexA(h.col,0));
+    ctx.fillStyle=gg;ctx.beginPath();ctx.arc(h.x,h.y,h.r*3.2*(0.9+0.2*pulse),0,6.28);ctx.fill();
+    ctx.globalCompositeOperation='source-over';
+    // Kern
+    ctx.fillStyle=h.id==='openclaw'?'#ffffff':hexA(h.col,.95);
+    ctx.beginPath();ctx.arc(h.x,h.y,h.r,0,6.28);ctx.fill();
+    ctx.strokeStyle=hexA('#ffffff',.5);ctx.lineWidth=1.2;ctx.stroke();
+    // Label
+    ctx.fillStyle=hexA('#ffffff',.95);ctx.font=`700 ${Math.max(11,h.r*0.95)}px system-ui`;ctx.textAlign='center';
+    ctx.fillText(h.label,h.x,h.y+h.r+14);
+    ctx.fillStyle=hexA(h.col,.75);ctx.font=`500 ${Math.max(9,h.r*0.7)}px system-ui`;
+    ctx.fillText(h.sub,h.x,h.y+h.r+27);
+  }
+
+  ctx.restore();
+  requestAnimationFrame(frame);
+}
+
+// Legende
+document.getElementById('legend').innerHTML = HUBS.slice(0,7).map(h=>
+  `<div class="row"><span class="sw" style="background:${h.col};color:${h.col}"></span>${h.label}</div>`).join('');
+
+resize();
+requestAnimationFrame(frame);
+</script>
+</body></html>
