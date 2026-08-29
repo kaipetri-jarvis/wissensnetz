@@ -212,6 +212,16 @@
   .vswitch a{color:var(--muted); text-decoration:none; border:1px solid var(--line); background:var(--panel);
     padding:3px 7px; border-radius:8px; letter-spacing:.06em; backdrop-filter:blur(10px);}
   .vswitch a.on{color:var(--ink); border-color:rgba(140,190,255,.5);}
+
+  /* Erzwungene Mobil-Ansicht auf breiten Bildschirmen: auf Handy-Breite
+     zentrieren, damit sie exakt wie auf dem Geraet aussieht. */
+  @media (min-width:721px){
+    html[data-ansicht="mobil"] .mdock{left:50%; right:auto; transform:translateX(-50%);
+      width:min(96vw,430px); border-radius:14px 14px 0 0;}
+    html[data-ansicht="mobil"] .stats{left:50% !important; right:auto !important;
+      transform:translateX(-50%); width:min(96vw,430px) !important;}
+    html[data-ansicht="mobil"] .vswitch{right:calc(50% - min(48vw,215px));}
+  }
 </style>
 <script>
 // Ansicht erzwingen: ?ansicht=mobil | ?ansicht=desktop (sonst automatisch nach Format)
