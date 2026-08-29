@@ -553,10 +553,15 @@ agents.forEach(a => {
   const al = new THREE.LineSegments(alGeo, alMat);
   agentGroup.add(al);
 
-  // traveling pulse along the line
-  const pulseMat = new THREE.SpriteMaterial({ map: glowTex, color: 0xffffff, transparent:true, blending:THREE.AdditiveBlending, depthWrite:false });
-  const pulse = new THREE.Sprite(pulseMat); pulse.scale.set(5,5,1);
-  agentGroup.add(pulse);
+  // traveling data packets — one per fan line, so each connection visibly "flows"
+  // into the brain like the old design's animated links
+  const packets = [];
+  for (let f = 0; f < fanTargets.length; f++) {
+    const pMat = new THREE.SpriteMaterial({ map: glowTex, color: a.color, transparent:true, blending:THREE.AdditiveBlending, depthWrite:false });
+    const p = new THREE.Sprite(pMat); p.scale.set(4.5,4.5,1);
+    agentGroup.add(p);
+    packets.push({ sp: p, target: fanTargets[f], off: f/fanTargets.length + Math.random()*0.1, spd: 0.5 + Math.random()*0.4 });
+  }
 
   // highlight labels: KI models get a stronger 'ki' style, all get their agent color
   const KI_MODELS = ['Jarvis','Ultron','Gemini','ChatGPT','ATLAS'];
@@ -568,7 +573,7 @@ agents.forEach(a => {
   label.style.setProperty('--aglow', hex + '88');
   labelsDiv.appendChild(label);
 
-  agentObjs.push({ sp, pos, target, al, pulse, label, color: a.color, phase: Math.random()*Math.PI*2 });
+  agentObjs.push({ sp, pos, target, al, packets, label, color: a.color, phase: Math.random()*Math.PI*2 });
 });
 
 // ---- Cyber background: grid plane + floating data particles ----
@@ -897,12 +902,14 @@ function animate() {
   core.scale.setScalar(36 + 4 * Math.sin(t * 2.0));
   coreMat.opacity = 0.75 + 0.2 * Math.sin(t * 2.0);
 
-  // agents: bob + traveling pulses + labels
+  // agents: bob + flowing data packets on every fan line + labels
   agentObjs.forEach(o => {
     o.sp.scale.setScalar(8 + 2 * Math.sin(t*2 + o.phase));
-    const k = (Math.sin(t*1.2 + o.phase) * 0.5 + 0.5); // 0..1
-    o.pulse.position.lerpVectors(o.pos, o.target, k);
-    o.pulse.material.opacity = 0.9 * (1 - Math.abs(k - 0.5) * 1.2);
+    o.packets.forEach(pk => {
+      let k = (t * pk.spd + pk.off) % 1;               // travel agent -> brain, loop
+      pk.sp.position.lerpVectors(o.pos, pk.target, k);
+      pk.sp.material.opacity = 0.95 * (1 - Math.abs(k - 0.5) * 1.1);  // fade at ends
+    });
 
     // project label to screen
     const world = o.pos.clone().applyMatrix4(agentGroup.matrixWorld);
