@@ -1,8 +1,8 @@
 {
-  "generated": "2026-08-29T20:58:47+00:00",
+  "generated": "2026-08-29T21:08:48+00:00",
   "bots": {
-    "jarvis": false,
-    "ultron": false
+    "jarvis": true,
+    "ultron": true
   },
   "atlas": {
     "fleet": true,
