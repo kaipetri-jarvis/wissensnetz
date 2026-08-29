@@ -1685,15 +1685,7 @@ function frame(now){
     return;
   }
 
-  // zones (back to front)
-  drawLogTerminal(ZONES[4],T,dt);   // recherche (back left) — log stream
-  drawZone(ZONES[2],T);             // deck
-  drawShopConsole(ZONES[3],T);      // shop hologram inventory
-  drawBeacon(T);                    // big reactor
-  drawZone(ZONES[0],T);             // werkstatt (front)
-  drawZone(ZONES[1],T);             // design (front)
-  drawZone(ZONES[5],T);             // Ultron · zweiter Kopf (front, below reactor)
-
+  // Energie-Linien ZUERST zeichnen, damit die Panels sie ueberdecken
   // energy links from agents
   const bx=tx(800), by=ty(465);
   const shop=ZONES[3];
@@ -1711,6 +1703,16 @@ function frame(now){
   drawLink(bx, by, tx(shop.x+shop.w/2), ty(shop.y+shop.h/2), COL.gold, T, 0.15, -24);
   // beacon -> system/infra nodes (sync/deploy/heartbeat flows)
   for(const n of INFRA){ drawLink(bx, by, tx(n.x), ty(n.y)+ts(n.big?38:30), n.col, T, 0.5, (n.x<800?24:-24)); }
+
+  // zones (back to front)
+  drawLogTerminal(ZONES[4],T,dt);   // recherche (back left) — log stream
+  drawZone(ZONES[2],T);             // deck
+  drawShopConsole(ZONES[3],T);      // shop hologram inventory
+  drawBeacon(T);                    // big reactor
+  drawZone(ZONES[0],T);             // werkstatt (front)
+  drawZone(ZONES[1],T);             // design (front)
+  drawZone(ZONES[5],T);             // Ultron · zweiter Kopf (front, below reactor)
+
   for(const n of INFRA){ drawInfraNode(n,T); }
 
   // subs behind figures
