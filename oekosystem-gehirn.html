@@ -119,7 +119,7 @@
 
     /* stats: 4 tiles fit the full width in one non-overflowing row.
        !important guards the layout props against the wider desktop base rule. */
-    html:not([data-ansicht="desktop"]) .stats{top:82px !important; left:7px !important; right:7px !important; width:auto !important;
+    html:not([data-ansicht="desktop"]) .stats{top:auto !important; bottom:52px !important; left:7px !important; right:7px !important; width:auto !important;
       display:flex !important; flex-wrap:nowrap !important;
       gap:5px !important; padding:0 !important;}
     html:not([data-ansicht="desktop"]) .stat{flex:1 1 0 !important; min-width:0 !important; width:0 !important; padding:5px 4px; border-radius:10px; overflow:hidden;}
@@ -175,7 +175,7 @@
 
     /* stats: 4 tiles fit the full width in one non-overflowing row.
        !important guards the layout props against the wider desktop base rule. */
-    html[data-ansicht="mobil"] .stats{top:82px !important; left:7px !important; right:7px !important; width:auto !important;
+    html[data-ansicht="mobil"] .stats{top:auto !important; bottom:52px !important; left:7px !important; right:7px !important; width:auto !important;
       display:flex !important; flex-wrap:nowrap !important;
       gap:5px !important; padding:0 !important;}
     html[data-ansicht="mobil"] .stat{flex:1 1 0 !important; min-width:0 !important; width:0 !important; padding:5px 4px; border-radius:10px; overflow:hidden;}
@@ -236,7 +236,7 @@
 const ANSICHT_FORCE=(new URLSearchParams(location.search).get('ansicht')||'').toLowerCase();
 document.documentElement.dataset.ansicht = (ANSICHT_FORCE==='mobil'||ANSICHT_FORCE==='desktop') ? ANSICHT_FORCE : 'auto';
 function istMobil(){ return ANSICHT_FORCE==='mobil' ? true : ANSICHT_FORCE==='desktop' ? false : (window.innerWidth < window.innerHeight); }
-function BRAIN_Y(){ return istMobil() ? 950 : 545; }  // Portrait: Gehirn vertikal mittig; Desktop: weiter unten
+function BRAIN_Y(){ return istMobil() ? 1080 : 545; }  // Portrait: Gehirn vertikal mittig; Desktop: weiter unten
 function BRAIN_X(){ return istMobil() ? 450 : 800; }  // Portrait world is 900 wide → Mitte 450
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -314,7 +314,7 @@ const ctx = cvs.getContext('2d');
 let W=0,H=0,DPR=1;
 
 const DESK_W = 1600, DESK_H = 900;
-const PORT_W = 900,  PORT_H = 1860;   // portrait world: tall stack, brain centred
+const PORT_W = 900,  PORT_H = 1980;   // portrait world: tall stack, brain centred
 // Active world dims — swapped by resize() depending on orientation. tx/ty and
 // clampPan read these so the whole coordinate system reflows for portrait.
 let WORLD_W = DESK_W, WORLD_H = DESK_H;
@@ -631,30 +631,33 @@ const INFRA = [
 const PORTRAIT_POS = {
   // zones (also carry w/h so panels shrink to fit the narrow world).
   // Top panel band sits BELOW the top HUD + zoom bar (world y≥150).
-  z_recherche: {x:35,  y:240,  w:360, h:180},
-  z_werkstatt: {x:470, y:240,  w:395, h:86},
-  z_deck:      {x:470, y:336,  w:395, h:86},
-  z_design:    {x:35,  y:432,  w:360, h:86},
-  z_ultron:    {x:470, y:432,  w:395, h:86},
-  z_shop:      {x:195, y:1560, w:510, h:250},
-  // infra ring — ABOVE the brain (brain centre 450,950; panels end ~y518)
-  n_cron:     {x:90,  y:600},
-  n_telegram: {x:450, y:568},
-  n_github:   {x:660, y:600},
-  n_gateway:  {x:270, y:600},
-  n_voice:    {x:760, y:700},
-  n_watchdog: {x:90,  y:800},
+  // ETSY-DeskLane-Shop-Konsole jetzt OBEN (mit den Kacheln getauscht — Kais Wunsch);
+  // die KPI-Kacheln (HTML .stats) sitzen dafür unten.
+  z_shop:      {x:35,  y:150,  w:830, h:250},
+  // Panel-Band unter der Shop-Konsole
+  z_recherche: {x:35,  y:430,  w:360, h:165},
+  z_werkstatt: {x:470, y:430,  w:395, h:78},
+  z_deck:      {x:470, y:516,  w:395, h:78},
+  z_design:    {x:35,  y:607,  w:360, h:78},
+  z_ultron:    {x:470, y:607,  w:395, h:78},
+  // infra ring — ABOVE the brain (brain centre 450,1080; panels end ~y632)
+  n_cron:     {x:90,  y:730},
+  n_telegram: {x:450, y:700},
+  n_github:   {x:660, y:730},
+  n_gateway:  {x:270, y:730},
+  n_voice:    {x:760, y:830},
+  n_watchdog: {x:90,  y:930},
   // infra — sides & BELOW the brain (kept apart from the agents next to them)
-  n_mac:      {x:840, y:720},
-  n_tailscale:{x:110, y:1300},
-  n_atlas:    {x:660, y:1330},
+  n_mac:      {x:840, y:850},
+  n_tailscale:{x:110, y:1430},
+  n_atlas:    {x:660, y:1460},
   // agents — wide ring around the brain (figures float here). Kept clear of the
   // infra-node labels above/below them (Codex↔Watchdog, Gemini↔Mac).
-  a_codex:    {x:220, y:710},
-  a_gemini:   {x:820, y:900},
-  a_jarvis:   {x:150, y:1080},
-  a_chatgpt:  {x:815, y:1150},
-  a_ultron:   {x:410, y:1300},
+  a_codex:    {x:220, y:840},
+  a_gemini:   {x:820, y:1030},
+  a_jarvis:   {x:150, y:1210},
+  a_chatgpt:  {x:815, y:1280},
+  a_ultron:   {x:410, y:1430},
 };
 function applyLayout(){
   const P = istMobil();
