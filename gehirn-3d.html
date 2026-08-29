@@ -206,8 +206,52 @@ loader.load('assets/brain.glb', (gltf) => {
   const s = (R2 * 2.15) / maxDim;
   model.scale.setScalar(s);
   model.position.sub(center.multiplyScalar(s));
+  model.updateWorldMatrix(true, true);
   glassBrain = model;
   brainGroup.add(model);
+
+  // ---- Rebuild the neural point cloud by sampling the REAL brain surface, so the
+  // glowing points sit exactly inside the mesh (they were offset before). ----
+  const tris = [];
+  const tmp = new THREE.Vector3();
+  model.traverse(o => {
+    if (!o.isMesh || !o.geometry) return;
+    const g = o.geometry;
+    const pos = g.attributes.position;
+    const idx = g.index;
+    o.updateWorldMatrix(true, false);
+    const m = o.matrixWorld;
+    const va = new THREE.Vector3(), vb = new THREE.Vector3(), vc = new THREE.Vector3();
+    const n = idx ? idx.count : pos.count;
+    for (let i = 0; i < n; i += 3) {
+      const a = idx ? idx.getX(i)   : i;
+      const b = idx ? idx.getX(i+1) : i+1;
+      const c = idx ? idx.getX(i+2) : i+2;
+      va.fromBufferAttribute(pos, a).applyMatrix4(m);
+      vb.fromBufferAttribute(pos, b).applyMatrix4(m);
+      vc.fromBufferAttribute(pos, c).applyMatrix4(m);
+      // convert from model-local (brainGroup) space: matrixWorld includes brainGroup,
+      // but brainGroup has no offset yet at load time, so this is brainGroup-local.
+      tris.push([va.x,va.y,va.z, vb.x,vb.y,vb.z, vc.x,vc.y,vc.z]);
+    }
+  });
+  if (tris.length) {
+    const N = 3200;
+    const sampled = new Float32Array(N * 3);
+    for (let i = 0; i < N; i++) {
+      const t = tris[(Math.random()*tris.length)|0];
+      let r1 = Math.random(), r2 = Math.random();
+      if (r1 + r2 > 1) { r1 = 1 - r1; r2 = 1 - r2; }
+      const r0 = 1 - r1 - r2;
+      // pull slightly inward (0.82..1.0) so points fill the volume, not just the shell
+      const k = 0.80 + Math.random() * 0.20;
+      sampled[i*3]   = (t[0]*r0 + t[3]*r1 + t[6]*r2) * k;
+      sampled[i*3+1] = (t[1]*r0 + t[4]*r1 + t[7]*r2) * k;
+      sampled[i*3+2] = (t[2]*r0 + t[5]*r1 + t[8]*r2) * k;
+    }
+    ptGeo.setAttribute('position', new THREE.BufferAttribute(sampled, 3));
+    ptGeo.attributes.position.needsUpdate = true;
+  }
   window.__brainLoaded = true;                      // marker for render verification
 }, undefined, (err) => { console.error('brain.glb load failed', err); window.__brainLoadError = String(err); });
 
