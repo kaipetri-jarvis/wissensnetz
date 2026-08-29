@@ -228,7 +228,7 @@
 const ANSICHT_FORCE=(new URLSearchParams(location.search).get('ansicht')||'').toLowerCase();
 document.documentElement.dataset.ansicht = (ANSICHT_FORCE==='mobil'||ANSICHT_FORCE==='desktop') ? ANSICHT_FORCE : 'auto';
 function istMobil(){ return ANSICHT_FORCE==='mobil' ? true : ANSICHT_FORCE==='desktop' ? false : (window.innerWidth < window.innerHeight); }
-function BRAIN_Y(){ return istMobil() ? 465 : 505; }  // Desktop: Gehirn weiter unten
+function BRAIN_Y(){ return istMobil() ? 465 : 545; }  // Desktop: Gehirn weiter unten
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
