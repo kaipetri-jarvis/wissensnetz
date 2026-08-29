@@ -997,8 +997,11 @@ function drawZone(z,T){
 
 /* Recherche terminal — glass panel filled with a fast monospace LOG stream */
 let LOG_BUF=[]; let logAcc=0; let logCursor=0;
-function drawLogTerminal(z,T,dt){
-  const x=tx(z.x), y=ty(z.y), w=ts(z.w), h=ts(z.h);
+function drawLogTerminal(z,T,dt,rect){
+  const x = rect ? rect.x : tx(z.x);
+  const y = rect ? rect.y : ty(z.y);
+  const w = rect ? rect.w : ts(z.w);
+  const h = rect ? rect.h : ts(z.h);
   glassPanel(x,y,w,h,ts(14),z.col);
   // header
   ctx.textAlign='left'; ctx.fillStyle='#fff'; ctx.font=`800 ${ts(12)}px -apple-system,system-ui,sans-serif`;
@@ -1535,6 +1538,12 @@ function frame(now){
   // keep a clean brain + reactor; all their info lives in the HTML dock instead.
   const MOBILE = (W < H);
   if(MOBILE){
+    // RECHERCHE-TERMINAL im freien Band zwischen Stat-Kacheln und Gehirn (Screen-Space)
+    const termW = Math.min(W-28, 360);
+    const termX = (W-termW)/2;
+    const termY = 190;
+    const termH = 168;
+    drawLogTerminal(ZONES[4], T, dt, {x:termX, y:termY, w:termW, h:termH});
     drawBeacon(T);
     updateSubs(dt,T);   // keep sub state fresh (cheap) though not drawn
     updateAgents(dt);   // keep agent task typewriter running for the dock
