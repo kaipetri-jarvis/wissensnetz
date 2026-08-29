@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-29T10:48:05+00:00",
+  "generated": "2026-08-29T10:58:05+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-08-29T12:51:40+02:00",
+      "text": "Gehirn-Silhouette v2 (lokale Quelle)"
+    },
     {
       "at": "2026-08-29T12:45:28+02:00",
       "text": "Gehirn-Variante (gehirn.html) + Backup der Station"
@@ -30,15 +34,11 @@
     {
       "at": "2026-08-28T19:26:52+02:00",
       "text": "Backup: OpenClaw-Workspace (Etsy-Projekt, Memory, Konfig) — sensible Dokumente ausgeschlossen"
-    },
-    {
-      "at": "2026-08-28T07:13:16+02:00",
-      "text": "POD-Upscaler: lokale Real-ESRGAN-Kette (4x → 300 DPI Druckgröße), kostenlos & ohne Limit"
     }
   ],
   "cron": [
-    "jarvis-crash-log-watcher crash-log-watcher cron",
     "heartbeat:ultron Heartbeat (ultron)",
+    "jarvis-crash-log-watcher crash-log-watcher cron",
     "heartbeat:main Heartbeat (main)",
     "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
     "jarvis-wissensnetz-auto wissensnetz-auto-update cron"
