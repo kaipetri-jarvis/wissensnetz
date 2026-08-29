@@ -124,7 +124,80 @@ const ptMat = new THREE.PointsMaterial({
   blending: THREE.AdditiveBlending, color: 0x66b3ff, opacity: 0.95
 });
 const cloud = new THREE.Points(ptGeo, ptMat);
+cloud.renderOrder = 1;
 brainGroup.add(cloud);
+
+// ---- Glass brain shell: a smooth translucent surface with glowing edges (fresnel) ----
+// Deform a sphere into the same side-profile brain shape + gyri folds, so it reads
+// as a real glassy brain (like the reference image) enclosing the neural point cloud.
+function brainShape(x, y, z) {
+  // x,y,z are unit-sphere coords; return the deformed brain-space position (already *R)
+  const fold = 1
+    + 0.055 * Math.sin(Math.atan2(z, x) * 8.0)
+    + 0.045 * Math.sin(Math.asin(Math.max(-1,Math.min(1,y))) * 7.0)
+    + 0.03  * Math.cos(Math.atan2(z, x) * 13.0);
+  let px = x * 0.78 * fold;
+  let py = y * 0.82 * fold;
+  let pz = z * 1.30 * fold;
+  if (py < -0.35) py = -0.35 + (py + 0.35) * 0.5;   // flatten underside
+  if (pz > 0.5 && py > 0.1) pz *= 1.06;             // frontal bulge
+  return [px * R, py * R, pz * R];
+}
+const shellGeo = new THREE.SphereGeometry(1, 72, 48);
+{
+  const pa = shellGeo.attributes.position.array;
+  for (let i = 0; i < pa.length; i += 3) {
+    const [nx, ny, nz] = brainShape(pa[i], pa[i+1], pa[i+2]);
+    pa[i] = nx; pa[i+1] = ny; pa[i+2] = nz;
+  }
+  shellGeo.computeVertexNormals();
+}
+const glassMat = new THREE.ShaderMaterial({
+  transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, side: THREE.DoubleSide,
+  uniforms: { uTime: { value: 0 }, uColor: { value: new THREE.Color(0x8fd0ff) }, uEdge: { value: new THREE.Color(0xdff2ff) } },
+  vertexShader: `
+    varying vec3 vN; varying vec3 vView; varying vec3 vPos;
+    void main(){
+      vec4 wp = modelViewMatrix * vec4(position,1.0);
+      vN = normalize(normalMatrix * normal);
+      vView = normalize(-wp.xyz);
+      vPos = position;
+      gl_Position = projectionMatrix * wp;
+    }`,
+  fragmentShader: `
+    uniform float uTime; uniform vec3 uColor; uniform vec3 uEdge;
+    varying vec3 vN; varying vec3 vView; varying vec3 vPos;
+    void main(){
+      float fres = pow(1.0 - abs(dot(normalize(vN), normalize(vView))), 2.4); // bright rim
+      // fine gyri sheen along the surface
+      float sheen = 0.5 + 0.5*sin(vPos.x*0.9 + vPos.z*0.7 + uTime*0.6);
+      vec3 col = mix(uColor*0.18, uEdge, fres);
+      col += uColor * sheen * 0.10;
+      float a = fres*0.9 + 0.06 + sheen*0.05;
+      gl_FragColor = vec4(col, a);
+    }`
+});
+const glassBrain = new THREE.Mesh(shellGeo, glassMat);
+glassBrain.renderOrder = 2;
+brainGroup.add(glassBrain);
+
+// glowing gyri contour lines on the glass surface (wireframe of a coarser shell)
+const wireGeo = new THREE.SphereGeometry(1, 24, 16);
+{
+  const wa = wireGeo.attributes.position.array;
+  for (let i = 0; i < wa.length; i += 3) {
+    const [nx, ny, nz] = brainShape(wa[i], wa[i+1], wa[i+2]);
+    wa[i] = nx*1.005; wa[i+1] = ny*1.005; wa[i+2] = nz*1.005;
+  }
+}
+const wireMat = new THREE.LineBasicMaterial({ color: 0x6fc0ff, transparent:true, opacity:0.14, blending:THREE.AdditiveBlending, depthWrite:false });
+const gyriLines = new THREE.LineSegments(new THREE.WireframeGeometry(wireGeo), wireMat);
+gyriLines.renderOrder = 2;
+brainGroup.add(gyriLines);
+
+// dim the inner point cloud so the glass surface reads as the main form
+ptMat.opacity = 0.55;
+ptMat.size = 1.8;
 
 // ---- Neural connection lines (nearest neighbors) ----
 const linePos = [];
@@ -468,6 +541,7 @@ function animate() {
   const autoRot = userInteracted ? 0 : t * 0.12;
   brainGroup.rotation.y = rotY + autoRot;
   brainGroup.rotation.x = rotX;
+  glassMat.uniforms.uTime.value = t;
   agentGroup.rotation.y = rotY + autoRot;
   agentGroup.rotation.x = rotX;
 
