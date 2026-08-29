@@ -1565,7 +1565,10 @@ function drawFigure(a,T){
 /* status bubble with typewriter + state dot */
 function drawBubble(cx, cy, a){
   ctx.font=`500 ${ts(11)}px -apple-system,system-ui,sans-serif`;
-  const txt=a.shown;
+  // Blasen-Text um 50% gekuerzt (Kais Wunsch)
+  const _cap=Math.max(12, Math.ceil(((a.target||a.shown||'').length)*0.5));
+  let txt=a.shown||'';
+  if(txt.length>_cap) txt=txt.slice(0,_cap-1)+'…';
   const pad=ts(11); const tw=ctx.measureText(txt).width;
   const bw=Math.min(ts(300), tw+pad*2+ts(14)); const bh=ts(30);
   let bx=cx-bw/2; let by=cy-bh;
