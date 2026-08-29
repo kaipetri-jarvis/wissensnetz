@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-29T11:58:28+00:00",
+  "generated": "2026-08-29T12:08:28+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-08-29T14:08:25+02:00",
+      "text": "Gehirn-3D: glasartige Gehirn-Huelle (Fresnel-Rand-Glow + Gyri-Konturen) statt reiner Punktwolke"
+    },
+    {
+      "at": "2026-08-29T14:01:39+02:00",
+      "text": "Gehirn-3D: horizontaler Datenstrom seitlich + dezentere Kern-Filamente (Referenzbild-Look)"
+    },
     {
       "at": "2026-08-29T13:55:19+02:00",
       "text": "Gehirn-3D: freie Drag-Rotation in alle Richtungen + Traegheit + Pinch-Zoom"
@@ -26,15 +34,13 @@
     {
       "at": "2026-08-29T13:38:48+02:00",
       "text": "Gehirn-3D: Video-2-Look (Holo-Ringe, Daten-Knoten, HUD-Grid, Kamera-Zoom)"
-    },
-    {
-      "at": "2026-08-29T13:36:49+02:00",
-      "text": "Gehirn-3D: Cyber-Look (Funken, Partikel, Grid)"
-    },
-    {
-      "at": "2026-08-29T13:35:21+02:00",
-      "text": "3D-Gehirn (gehirn-3d.html): Three.js Punktwolke, rotierend, Agenten als Satelliten"
     }
   ],
-  "cron": []
+  "cron": [
+    "jarvis-crash-log-watcher crash-log-watcher cron",
+    "heartbeat:main Heartbeat (main)",
+    "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
+    "heartbeat:ultron Heartbeat (ultron)",
+    "jarvis-wissensnetz-auto wissensnetz-auto-update cron"
+  ]
 }
