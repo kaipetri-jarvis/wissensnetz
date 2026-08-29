@@ -119,7 +119,7 @@
 
     /* stats: 4 tiles fit the full width in one non-overflowing row.
        !important guards the layout props against the wider desktop base rule. */
-    html:not([data-ansicht="desktop"]) .stats{top:50px !important; left:7px !important; right:7px !important; width:auto !important;
+    html:not([data-ansicht="desktop"]) .stats{top:82px !important; left:7px !important; right:7px !important; width:auto !important;
       display:flex !important; flex-wrap:nowrap !important;
       gap:5px !important; padding:0 !important;}
     html:not([data-ansicht="desktop"]) .stat{flex:1 1 0 !important; min-width:0 !important; width:0 !important; padding:5px 4px; border-radius:10px; overflow:hidden;}
@@ -135,7 +135,7 @@
     html:not([data-ansicht="desktop"]) .legend{display:none !important;}
     html:not([data-ansicht="desktop"]) .mdock{display:none !important;}
     html:not([data-ansicht="desktop"]) .hint{display:none;}
-    html:not([data-ansicht="desktop"]) .zoombar{bottom:auto; top:96px; right:8px; gap:6px;}
+    html:not([data-ansicht="desktop"]) .zoombar{bottom:auto; top:auto; bottom:96px; left:8px; right:auto; flex-direction:column; gap:8px;}
     html:not([data-ansicht="desktop"]) .zoombar button{width:38px; height:38px; font-size:19px; border-radius:10px;}
 
     /* info dock: readable, scrollable card strip sitting above the ticker */
@@ -175,7 +175,7 @@
 
     /* stats: 4 tiles fit the full width in one non-overflowing row.
        !important guards the layout props against the wider desktop base rule. */
-    html[data-ansicht="mobil"] .stats{top:50px !important; left:7px !important; right:7px !important; width:auto !important;
+    html[data-ansicht="mobil"] .stats{top:82px !important; left:7px !important; right:7px !important; width:auto !important;
       display:flex !important; flex-wrap:nowrap !important;
       gap:5px !important; padding:0 !important;}
     html[data-ansicht="mobil"] .stat{flex:1 1 0 !important; min-width:0 !important; width:0 !important; padding:5px 4px; border-radius:10px; overflow:hidden;}
@@ -189,7 +189,7 @@
     html[data-ansicht="mobil"] .legend{display:none !important;}
     html[data-ansicht="mobil"] .mdock{display:none !important;}
     html[data-ansicht="mobil"] .hint{display:none;}
-    html[data-ansicht="mobil"] .zoombar{bottom:auto; top:96px; right:8px; gap:6px;}
+    html[data-ansicht="mobil"] .zoombar{bottom:auto; top:auto; bottom:96px; left:8px; right:auto; flex-direction:column; gap:8px;}
     html[data-ansicht="mobil"] .zoombar button{width:38px; height:38px; font-size:19px; border-radius:10px;}
 
     /* info dock: readable, scrollable card strip sitting above the ticker */
@@ -236,7 +236,8 @@
 const ANSICHT_FORCE=(new URLSearchParams(location.search).get('ansicht')||'').toLowerCase();
 document.documentElement.dataset.ansicht = (ANSICHT_FORCE==='mobil'||ANSICHT_FORCE==='desktop') ? ANSICHT_FORCE : 'auto';
 function istMobil(){ return ANSICHT_FORCE==='mobil' ? true : ANSICHT_FORCE==='desktop' ? false : (window.innerWidth < window.innerHeight); }
-function BRAIN_Y(){ return istMobil() ? 465 : 545; }  // Desktop: Gehirn weiter unten
+function BRAIN_Y(){ return istMobil() ? 820 : 545; }  // Portrait: Gehirn vertikal mittig; Desktop: weiter unten
+function BRAIN_X(){ return istMobil() ? 450 : 800; }  // Portrait world is 900 wide → Mitte 450
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
@@ -312,7 +313,11 @@ const cvs = document.getElementById('scene');
 const ctx = cvs.getContext('2d');
 let W=0,H=0,DPR=1;
 
-const WORLD_W = 1600, WORLD_H = 900;
+const DESK_W = 1600, DESK_H = 900;
+const PORT_W = 900,  PORT_H = 1640;   // portrait world: tall stack, brain centred
+// Active world dims — swapped by resize() depending on orientation. tx/ty and
+// clampPan read these so the whole coordinate system reflows for portrait.
+let WORLD_W = DESK_W, WORLD_H = DESK_H;
 let fit = {scale:1, ox:0, oy:0};
 let pan = {x:0, y:0};
 let panMax = {x:0, y:0};
@@ -323,22 +328,18 @@ function resize(){
   cvs.width = W*DPR; cvs.height = H*DPR;
   cvs.style.width=W+'px'; cvs.style.height=H+'px';
   ctx.setTransform(DPR,0,0,DPR,0,0);
-  const sx = W/WORLD_W, sy = H/WORLD_H;
   const portrait = istMobil();
+  // Swap the active world dims + reflow every element into the matching layout.
+  WORLD_W = portrait ? PORT_W : DESK_W;
+  WORLD_H = portrait ? PORT_H : DESK_H;
+  applyLayout();
+  const sx = W/WORLD_W, sy = H/WORLD_H;
   let scale;
   if(portrait){
-    // Portrait (phone): show the FULL desktop station and make it FILL the tall
-    // screen. The scene is wide 16:9; fitting it to width alone leaves big empty
-    // bands top & bottom. Instead we scale it up so the used content band fills
-    // most of the viewport height, keeping the left/right panels just inside the
-    // edges (the panels sit at x≈45–305 and x≈1180–1520, so the widest keep-fit
-    // is ~W/1500). We take the larger of width-fit and a height-driven fill.
-    const widthFit  = (W / WORLD_W);
-    const contentW  = 1500;                       // left panel start → right panel end
-    const sideFit   = (W / contentW) * 0.99;      // biggest scale keeping side panels in view
-    const contentH  = 700;                        // used vertical band (y≈150→850)
-    const heightFit = (H * 0.9) / contentH;       // fill ~90% of screen height
-    scale = Math.max(widthFit, Math.min(sideFit, heightFit));
+    // Portrait world is 900×1640 (tall) — a near-phone ratio. Fit it to width so
+    // the whole restacked station (panels above/below the brain, agents + infra
+    // ringed around it) fills the screen top-to-bottom with no big empty bands.
+    scale = (W / WORLD_W);
   } else {
     scale = Math.max(sx, sy) * 1.02;
   }
@@ -346,11 +347,11 @@ function resize(){
   const dispW = WORLD_W*scale, dispH = WORLD_H*scale;
   fit.ox = (W - dispW)/2;
   fit.oy = (H - dispH)/2;
-  // On phones, centre the used content band (world y≈150→850, mid≈500) in the
-  // viewport so it fills the screen; no residual pan (view locked to this fit).
+  // Portrait: the tall world already fills the width; centre it vertically. Any
+  // overflow past the screen top/bottom is pannable via clampPan.
   if(portrait){
     pan.x = 0;
-    pan.y = (H*0.5) - (fit.oy + 500*fit.scale);
+    pan.y = (H*0.5) - (fit.oy + (WORLD_H/2)*fit.scale);
     fit._init = true;
   } else if(!fit._init){
     fit._init = true;
@@ -376,14 +377,15 @@ function clampPan(){
   // by resize(); allow a little slack around it but keep the whole station centred.
   if(istMobil() && uz>=0.999 && uz<=1.001){
     pan.x = 0;
-    pan.y = (H*0.5) - (fit.oy + 500*effScale());   // centre used content band (mid≈500)
-    panMax.x = Math.max(0,(dispW - W)/2 + 20); panMax.y = 40;
+    pan.y = (H*0.5) - (fit.oy + (WORLD_H/2)*effScale());   // centre the tall portrait world
+    panMax.x = 12; panMax.y = Math.max(0,(dispH - H)/2 + 30);
+    pan.y = Math.max(-panMax.y, Math.min(panMax.y, pan.y));
     return;
   }
   if(istMobil() && uz<0.999){
     // Zoomed OUT on phone: recentre the whole station in the viewport.
     pan.x = (W/2)   - (fit.ox + (WORLD_W/2)*effScale());
-    pan.y = (H*0.5) - (fit.oy + 500*effScale());
+    pan.y = (H*0.5) - (fit.oy + (WORLD_H/2)*effScale());
     panMax.x = Math.max(0,(dispW - W)/2 + 80);
     panMax.y = Math.max(0,(dispH - H)/2 + 80);
     return;
@@ -619,6 +621,54 @@ const INFRA = [
    states:['2 Bots · main + ultron','Kais Hauptkanal','Voice-Notes + Text','Alarme & Übergaben laufen hier']},
 ];
 
+/* ---------- PORTRAIT REFLOW ----------
+   The desktop station is a wide 16:9 scene (side panels left/right). On a tall
+   phone that leaves big empty bands. PORTRAIT_POS restacks every element into a
+   900×1640 portrait world: panels above and below the brain, agents + infra
+   nodes ringed around it. applyLayout() swaps each element's live x/y (zones,
+   panel sizes, agents, infra) between desktop defaults and this portrait map on
+   every resize, so all existing draw functions reflow automatically. */
+const PORTRAIT_POS = {
+  // zones (also carry w/h so panels shrink to fit the narrow world).
+  // Top panel band sits BELOW the top HUD + zoom bar (world y≥150).
+  z_recherche: {x:35,  y:150,  w:360, h:196},
+  z_werkstatt: {x:470, y:150,  w:395, h:90},
+  z_deck:      {x:470, y:256,  w:395, h:90},
+  z_design:    {x:35,  y:362,  w:360, h:90},
+  z_ultron:    {x:470, y:362,  w:395, h:90},
+  z_shop:      {x:195, y:1330, w:510, h:250},
+  // infra ring — ABOVE the brain (brain centre 450,820; keep clear radius ≥210)
+  n_cron:     {x:80,  y:560},
+  n_gateway:  {x:260, y:520},
+  n_telegram: {x:450, y:500},
+  n_github:   {x:650, y:520},
+  n_voice:    {x:750, y:600},
+  n_watchdog: {x:70,  y:770},
+  // infra — sides & BELOW the brain (kept apart from the agents next to them)
+  n_mac:      {x:835, y:600},
+  n_tailscale:{x:110, y:1140},
+  n_atlas:    {x:660, y:1160},
+  // agents — wide ring around the brain (figures float here). Kept clear of the
+  // infra-node labels above/below them (Codex↔Watchdog, Gemini↔Mac).
+  a_codex:    {x:210, y:610},
+  a_gemini:   {x:815, y:830},
+  a_jarvis:   {x:150, y:930},
+  a_chatgpt:  {x:810, y:1000},
+  a_ultron:   {x:405, y:1130},
+};
+function applyLayout(){
+  const P = istMobil();
+  const setXY=(o, pre)=>{
+    if(o._dx===undefined){ o._dx=o.x; o._dy=o.y; o._dw=o.w; o._dh=o.h; }   // capture desktop defaults once
+    const pp = PORTRAIT_POS[pre+o.key];
+    if(P && pp){ o.x=pp.x; o.y=pp.y; if(pp.w!==undefined)o.w=pp.w; if(pp.h!==undefined)o.h=pp.h; }
+    else { o.x=o._dx; o.y=o._dy; if(o._dw!==undefined)o.w=o._dw; if(o._dh!==undefined)o.h=o._dh; }
+  };
+  for(const z of ZONES)  setXY(z,'z_');
+  for(const a of AGENTS) setXY(a,'a_');
+  for(const n of INFRA)  setXY(n,'n_');
+}
+
 // small sub-agents / minions wandering between zones
 const SUBS = [
   {name:'Build',      col:COL.sub, tasks:['rendert PDF…','packt ZIP…','baut XLSX-Formeln…','erzeugt Cover…','QA läuft…']},
@@ -719,7 +769,7 @@ function roundRect(x,y,w,h,r){ ctx.beginPath();
    ============================================================ */
 function drawBackground(T){
   // deep radial veil
-  const g=ctx.createRadialGradient(tx(800),ty(320),ts(50),tx(800),ty(460),ts(1200));
+  const g=ctx.createRadialGradient(tx(BRAIN_X()),ty(320),ts(50),tx(BRAIN_X()),ty(460),ts(1200));
   g.addColorStop(0,'rgba(30,44,96,.34)'); g.addColorStop(.5,'rgba(10,14,32,.14)'); g.addColorStop(1,'rgba(2,3,10,0)');
   ctx.fillStyle=g; ctx.fillRect(0,0,W,H);
 
@@ -771,7 +821,7 @@ function drawBackground(T){
 function drawGridFloor(T){
   const hz = ty(500);          // horizon line (world y ~500)
   const bottom = ty(WORLD_H+260);
-  const cxW = tx(800);
+  const cxW = tx(BRAIN_X());
   if(bottom < 0 || hz > H) {}
   ctx.save();
   // horizon glow
@@ -818,7 +868,7 @@ for(let i=0;i<26;i++) reactorMotes.push({
    itself is switched off. We only keep a faint ground glow + label so the brain is
    grounded, and skip all god-rays / rings / bright core. */
 function drawBeacon(T){
-  const bx=tx(800), by=ty(BRAIN_Y());
+  const bx=tx(BRAIN_X()), by=ty(BRAIN_Y());
   const pulse=(Math.sin(T*2)*.5+.5);
   ctx.save();
   ctx.globalCompositeOperation='lighter';
@@ -995,8 +1045,8 @@ function drawBeaconLabel(bx,by,T){
   // on phones the area below the core is occupied by the info dock, so
   // place the label just under the core (fixed screen offset) to avoid overlap.
   const mobile = istMobil();
-  const ly1 = mobile ? by + 92 : by + ts(115);
-  const ly2 = mobile ? ly1 + 14 : by + ts(130);
+  const ly1 = mobile ? by + ts(150) : by + ts(115);   // portrait: gut unter dem Gehirn, klar vom Ring getrennt
+  const ly2 = mobile ? ly1 + 16 : by + ts(130);
   ctx.save();
   ctx.fillStyle=hexA(COL.beacon,.9); ctx.font=`700 ${mobile?12:ts(13)}px -apple-system,system-ui,sans-serif`;
   ctx.textAlign='center';
@@ -1433,7 +1483,10 @@ function drawFigure(a,T){
     ctx.save(); ctx.globalCompositeOperation='screen'; ctx.globalAlpha=0.97;
     ctx.drawImage(img, bx-iw/2, topY, iw, ih);
     ctx.restore();
-    const hx=bx, hy=topY+18*s;
+    // Portrait: nudge the status bubble sideways AWAY from the brain (left-ring
+    // agents → left, right-ring → right) so ringed agents' bubbles don't collide.
+    const hx = istMobil() ? bx + (a.x < BRAIN_X() ? -ts(46) : ts(46)) : bx;
+    const hy = topY+18*s;
     drawBubble(hx, hy-10*s, a);
     ctx.textAlign='center';
     ctx.fillStyle='#fff'; ctx.font=`800 ${ts(12)}px -apple-system,system-ui,sans-serif`;
@@ -1566,13 +1619,17 @@ function drawFigure(a,T){
 /* status bubble with typewriter + state dot */
 function drawBubble(cx, cy, a){
   ctx.font=`500 ${ts(11)}px -apple-system,system-ui,sans-serif`;
-  // Blasen-Text um 50% gekuerzt (Kais Wunsch)
-  const _cap=Math.max(8, Math.ceil(((a.target||a.shown||'').length)*0.32));
+  // Blasen-Text gekuerzt; im Portrait (enge Ring-Anordnung) noch knapper, damit
+  // sich die Sprechblasen der ringförmig angeordneten Agenten nicht überdecken.
+  const _mob=istMobil();
+  const _cap=Math.max(_mob?6:8, Math.ceil(((a.target||a.shown||'').length)*(_mob?0.20:0.32)));
   let txt=a.shown||'';
   if(txt.length>_cap) txt=txt.slice(0,_cap-1)+'…';
   const pad=ts(11); const tw=ctx.measureText(txt).width;
-  const bw=Math.min(ts(300), tw+pad*2+ts(14)); const bh=ts(30);
+  const bw=Math.min(ts(_mob?190:300), tw+pad*2+ts(14)); const bh=ts(30);
   let bx=cx-bw/2; let by=cy-bh;
+  // keep the whole bubble on-screen (portrait ring pushes some past the edges)
+  if(_mob){ bx=Math.max(ts(4), Math.min(W-bw-ts(4), bx)); cx=bx+bw/2; }
   const col=a.col;
   // glass bubble
   ctx.save(); ctx.shadowColor=hexA(col,.4); ctx.shadowBlur=ts(10);
@@ -1702,12 +1759,13 @@ function frame(now){
   // connection lines — identical content to desktop, only scaled down.
 
   // Energie-Linien ZUERST zeichnen, damit die Panels sie ueberdecken
-  const bx=tx(800), by=ty(BRAIN_Y()-95);   // Linien-Treffpunkt: mittig im Gehirn
+  const CX = BRAIN_X();
+  const bx=tx(CX), by=ty(BRAIN_Y()-95);   // Linien-Treffpunkt: mittig im Gehirn
   const shop=ZONES[3];
   // beacon -> shop console (main output flow)
-  drawLink(bx, by, tx(shop.x), ty(shop.y+shop.h/2), COL.gold, T, 0.15, -45);   // sanfter Bogen: zwischen Mac-Server (oben) und Ultron (unten) hindurch
+  drawLink(bx, by, tx(shop.x), ty(shop.y+shop.h/2), COL.gold, T, 0.15, istMobil()?0:-45);   // Desktop: Bogen zwischen Mac/Ultron; Portrait: gerade nach unten
   // beacon -> system/infra nodes (sync/deploy/heartbeat flows)
-  for(const n of INFRA){ const nb = n.key==='atlas' ? 190 : (n.x<800?24:-24);   // ATLAS: weiter Bogen um den SYNAPSEN-KERN-Schriftzug
+  for(const n of INFRA){ const nb = istMobil() ? 0 : (n.key==='atlas' ? 190 : (n.x<CX?24:-24));   // Portrait: gerade Speichen; Desktop: ATLAS weiter Bogen
   drawLink(bx, by, tx(n.x), ty(n.y)+ts((n.big?11.6:9.2)*(n.sz||1)), n.col, T, 0.5, nb); }
 
   // zones (back to front)
@@ -1726,7 +1784,7 @@ function frame(now){
       drawLink(a._bx, a._by-ts(24), tx(shop.x+shop.w/2), ty(shop.y+shop.h), a.col, T, a.phase*0.2, 30, true);
     } else {
       // gently curve each spoke to its own side so lines fan out and cross less at the core
-      const bend = a.key==='chatgpt' ? 0 : (a.x<800) ? 46 : -46;   // ChatGPT: gerade auf den Treffpunkt
+      const bend = istMobil() ? 0 : (a.key==='chatgpt' ? 0 : (a.x<CX) ? 46 : -46);   // Portrait: gerade Speichen
       drawLink(a._bx, a._by-ts(24), bx, by, a.col, T, a.phase*0.2, bend, true);
     }
   }
@@ -1735,7 +1793,9 @@ function frame(now){
 
   // subs behind figures
   updateSubs(dt,T);
-  for(const m of SUBS) drawSub(m,T);
+  // Portrait: skip the roaming sub-minions — in the tight vertical ring they
+  // drift across the brain and their bubbles clutter/overlap the agents.
+  if(!istMobil()) for(const m of SUBS) drawSub(m,T);
 
   // agents
   updateAgents(dt);
@@ -1960,7 +2020,7 @@ requestAnimationFrame(frame);
   let zoom=1, tZoom=1, focussed=false, hovering=false, pulse=0, moved=0;
   const el=bRenderer.domElement;
   // Treffer-Test: liegt der Zeiger ueber dem Gehirn (Beacon-Umkreis)?
-  function overBrain(x,y){ const bx=tx(800), by=ty(BRAIN_Y()), r=ts(1)*190*zoom; const dx=x-bx, dy=y-by; return dx*dx+dy*dy < r*r; }
+  function overBrain(x,y){ const bx=tx(BRAIN_X()), by=ty(BRAIN_Y()), r=ts(1)*190*zoom; const dx=x-bx, dy=y-by; return dx*dx+dy*dy < r*r; }
   const down=(x,y)=>{ if(!overBrain(x,y)) return; dragging=true;userRot=true;vy=vx=0;px=x;py=y;moved=0; };
   const move=(x,y)=>{ hovering=overBrain(x,y); el.style.cursor = hovering ? (dragging?'grabbing':'grab') : 'default';
     if(!dragging)return; const dy=(x-px)*0.006,dx=(y-py)*0.006; moved+=Math.abs(x-px)+Math.abs(y-py); tRy+=dy;tRx+=dx;vy=dy;vx=dx; tRx=Math.max(-1.4,Math.min(1.4,tRx)); px=x;py=y; };
@@ -1982,7 +2042,7 @@ requestAnimationFrame(frame);
     const aspNow = window.innerWidth/window.innerHeight;
     if(Math.abs(bCam.aspect - aspNow) > 1e-4){ bCam.aspect = aspNow; bCam.updateProjectionMatrix(); }
     // beacon world position (800,465) -> screen px via the page's transform
-    const bx = tx(800), by = ty(BRAIN_Y()), scale = ts(1);
+    const bx = tx(BRAIN_X()), by = ty(BRAIN_Y()), scale = ts(1);
     // convert screen px to camera-space so the brain lands exactly on the beacon
     const ndcX = (bx / window.innerWidth) * 2 - 1;
     const ndcY = -((by / window.innerHeight) * 2 - 1);
