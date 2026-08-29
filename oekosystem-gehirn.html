@@ -1140,22 +1140,7 @@ function drawMobileOrbit(T){
     const py = by + Math.sin(n.ang)*r*0.78 + bob;     // flattened ellipse, biased outward
     n._px=px; n._py=py;
     const bend = Math.cos(n.ang) < 0 ? 20 : -20;
-    // kräftige, gut sichtbare Grundlinie Knoten -> Gehirn (unter dem animierten drawLink)
-    (function(){
-      const dx=bx-px, dy=by-py, len=Math.hypot(dx,dy)||1;
-      const nx=-dy/len, ny=dx/len;
-      const mx=(px+bx)/2 + nx*ts(bend);
-      const my=(py+by)/2 - ts(70) + ny*ts(bend);
-      ctx.save();
-      ctx.lineCap='round';
-      // weicher breiter Schein
-      ctx.strokeStyle=hexA(n.col,.16); ctx.lineWidth=ts(7);
-      ctx.beginPath(); ctx.moveTo(px,py); ctx.quadraticCurveTo(mx,my,bx,by); ctx.stroke();
-      // deutlich sichtbare Kernader
-      ctx.strokeStyle=hexA(n.col,.62); ctx.lineWidth=ts(2.6);
-      ctx.beginPath(); ctx.moveTo(px,py); ctx.quadraticCurveTo(mx,my,bx,by); ctx.stroke();
-      ctx.restore();
-    })();
+    // gleiche Linien-Optik wie Desktop: drawLink (fließende Bahn + Daten-Pakete)
     drawLink(px, py, bx, by, n.col, T, n.ang*0.5, bend);
   }
   for(const n of _ORBIT){
