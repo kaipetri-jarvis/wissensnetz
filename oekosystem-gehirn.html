@@ -1111,6 +1111,75 @@ function qbez(ax,ay,mx,my,bx,by,p){
 /* energy link — curved, ordered, with a LIVE data stream of light packets
    travelling in BOTH directions at varied speeds, each with a glow tail.
    `bend` lets callers gently bundle/curve lines so they cross less at center. */
+/* ============================================================
+   MOBILE ORBIT — floating agent nodes around the brain, each tied
+   to the core (800,465) with an animated connection line. Phone only.
+   ============================================================ */
+// angles chosen so nodes sit AROUND the brain (top arc + sides), clear of the
+// bottom info dock. -PI/2 = straight up; positive = clockwise toward the right.
+const _ORBIT = [
+  {key:'jarvis',  label:'Jarvis',  col:COL.claude,  ang:-2.55, rk:1.00},
+  {key:'chatgpt', label:'ChatGPT', col:COL.chatgpt, ang:-1.85, rk:1.05},
+  {key:'atlas',   label:'ATLAS',   col:COL.atlas,   ang:-1.15, rk:1.00},
+  {key:'github',  label:'GitHub',  col:COL.github,  ang:-0.45, rk:1.05},
+  {key:'gemini',  label:'Gemini',  col:COL.gemini,  ang: 2.75, rk:1.00},
+  {key:'ultron',  label:'Ultron',  col:COL.ultron,  ang: 0.55, rk:1.05},
+];
+function drawMobileOrbit(T){
+  const bx=tx(800), by=ty(465);
+  // The WebGL brain canvas is layered ABOVE this 2D canvas (z-index 3 vs 0), so
+  // any node placed UNDER the brain's silhouette is invisibly hidden behind it.
+  // Nodes must clear the brain's on-screen radius by a wide margin.
+  const brainR = ts(235);
+  let ringR = Math.max(brainR*1.9, 190);
+  ringR = Math.min(ringR, (W/2) - 40, (by - 88));   // keep inside width + below top HUD
+  for(const n of _ORBIT){
+    const bob = Math.sin(T*0.9 + n.ang*2.0)*ts(9);
+    const r   = ringR*(n.rk||1);
+    const px = bx + Math.cos(n.ang)*r;
+    const py = by + Math.sin(n.ang)*r*0.78 + bob;     // flattened ellipse, biased outward
+    n._px=px; n._py=py;
+    const bend = Math.cos(n.ang) < 0 ? 20 : -20;
+    drawLink(px, py, bx, by, n.col, T, n.ang*0.5, bend);
+  }
+  for(const n of _ORBIT){
+    drawOrbitNode(n._px, n._py, n.col, n.label, T, n.ang);
+  }
+}
+function drawOrbitNode(x,y,col,label,T,seed){
+  ctx.save();
+  ctx.globalCompositeOperation='lighter';
+  // outer soft glow
+  const rg=ctx.createRadialGradient(x,y,0,x,y,ts(26));
+  rg.addColorStop(0,hexA(col,.55)); rg.addColorStop(.5,hexA(col,.16)); rg.addColorStop(1,hexA(col,0));
+  ctx.fillStyle=rg; ctx.beginPath(); ctx.arc(x,y,ts(26),0,6.28); ctx.fill();
+  // pulsing activity ring
+  const pr=ts(13)+ts(2.5)*Math.sin(T*2.2+seed);
+  ctx.strokeStyle=hexA(col,.5); ctx.lineWidth=ts(1.4);
+  ctx.beginPath(); ctx.arc(x,y,pr,0,6.28); ctx.stroke();
+  ctx.restore();
+  // solid core dot
+  ctx.fillStyle=hexA(col,.95);
+  ctx.beginPath(); ctx.arc(x,y,ts(6),0,6.28); ctx.fill();
+  ctx.fillStyle=hexA('#ffffff',.9);
+  ctx.beginPath(); ctx.arc(x,y,ts(2.6),0,6.28); ctx.fill();
+  // label pill under the node
+  ctx.font=`700 ${ts(11)}px -apple-system,system-ui,sans-serif`;
+  ctx.textAlign='center'; ctx.textBaseline='middle';
+  const tw=ctx.measureText(label).width, padX=ts(7), ph=ts(17), pw=tw+padX*2;
+  const ly=y+ts(24);
+  ctx.fillStyle='rgba(6,9,20,.78)';
+  roundRectPath(x-pw/2, ly-ph/2, pw, ph, ts(7)); ctx.fill();
+  ctx.strokeStyle=hexA(col,.4); ctx.lineWidth=ts(1);
+  roundRectPath(x-pw/2, ly-ph/2, pw, ph, ts(7)); ctx.stroke();
+  ctx.fillStyle=hexA('#eaf2ff',.96); ctx.fillText(label, x, ly+ts(0.5));
+  ctx.textBaseline='alphabetic';
+}
+function roundRectPath(x,y,w,h,r){
+  ctx.beginPath();
+  ctx.moveTo(x+r,y); ctx.arcTo(x+w,y,x+w,y+h,r); ctx.arcTo(x+w,y+h,x,y+h,r);
+  ctx.arcTo(x,y+h,x,y,r); ctx.arcTo(x,y,x+w,y,r); ctx.closePath();
+}
 function drawLink(ax,ay,bx,by,col,T,seed,bend){
   bend = (bend===undefined) ? 0 : bend;
   // control point: lift the arc + apply a lateral bend so lines fan out instead of overlapping
@@ -1169,10 +1238,10 @@ function drawLink(ax,ay,bx,by,col,T,seed,bend){
   const cyc = (T*0.5 + seed*3.1) % 3.0;      // alle ~6s ein Feuern (T läuft ~halbe Geschwindigkeit)
   if(cyc < 1.0){
     const fp = cyc;                          // 0..1: Position der Feuerwelle entlang der Bahn
-    const flash = Math.sin(cyc*Math.PI);     // 0..1..0 Helligkeitshüllkurve
+    const flash = Math.max(0, Math.sin(cyc*Math.PI));     // 0..1..0 Helligkeitshüllkurve
     // heller Wellenkopf
     const [wx,wy]=qbez(ax,ay,mx,my,bx,by,fp);
-    const wr=ts(11)*flash;
+    const wr=Math.max(0.01, ts(11)*flash);
     const wg=ctx.createRadialGradient(wx,wy,0,wx,wy,wr);
     wg.addColorStop(0,hexA('#ffffff',.9*flash));
     wg.addColorStop(.4,hexA(col,.7*flash));
@@ -1467,6 +1536,7 @@ function frame(now){
     drawBeacon(T);
     updateSubs(dt,T);   // keep sub state fresh (cheap) though not drawn
     updateAgents(dt);   // keep agent task typewriter running for the dock
+    drawMobileOrbit(T); // floating agent nodes + connection lines to the brain
     requestAnimationFrame(frame);
     return;
   }
