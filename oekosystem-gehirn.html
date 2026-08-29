@@ -236,7 +236,7 @@
 const ANSICHT_FORCE=(new URLSearchParams(location.search).get('ansicht')||'').toLowerCase();
 document.documentElement.dataset.ansicht = (ANSICHT_FORCE==='mobil'||ANSICHT_FORCE==='desktop') ? ANSICHT_FORCE : 'auto';
 function istMobil(){ return ANSICHT_FORCE==='mobil' ? true : ANSICHT_FORCE==='desktop' ? false : (window.innerWidth < window.innerHeight); }
-function BRAIN_Y(){ return istMobil() ? 820 : 545; }  // Portrait: Gehirn vertikal mittig; Desktop: weiter unten
+function BRAIN_Y(){ return istMobil() ? 950 : 545; }  // Portrait: Gehirn vertikal mittig; Desktop: weiter unten
 function BRAIN_X(){ return istMobil() ? 450 : 800; }  // Portrait world is 900 wide → Mitte 450
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -314,7 +314,7 @@ const ctx = cvs.getContext('2d');
 let W=0,H=0,DPR=1;
 
 const DESK_W = 1600, DESK_H = 900;
-const PORT_W = 900,  PORT_H = 1640;   // portrait world: tall stack, brain centred
+const PORT_W = 900,  PORT_H = 1860;   // portrait world: tall stack, brain centred
 // Active world dims — swapped by resize() depending on orientation. tx/ty and
 // clampPan read these so the whole coordinate system reflows for portrait.
 let WORLD_W = DESK_W, WORLD_H = DESK_H;
@@ -631,30 +631,30 @@ const INFRA = [
 const PORTRAIT_POS = {
   // zones (also carry w/h so panels shrink to fit the narrow world).
   // Top panel band sits BELOW the top HUD + zoom bar (world y≥150).
-  z_recherche: {x:35,  y:150,  w:360, h:196},
-  z_werkstatt: {x:470, y:150,  w:395, h:90},
-  z_deck:      {x:470, y:256,  w:395, h:90},
-  z_design:    {x:35,  y:362,  w:360, h:90},
-  z_ultron:    {x:470, y:362,  w:395, h:90},
-  z_shop:      {x:195, y:1330, w:510, h:250},
-  // infra ring — ABOVE the brain (brain centre 450,820; keep clear radius ≥210)
-  n_cron:     {x:80,  y:560},
-  n_gateway:  {x:260, y:520},
-  n_telegram: {x:450, y:500},
-  n_github:   {x:650, y:520},
-  n_voice:    {x:750, y:600},
-  n_watchdog: {x:70,  y:770},
+  z_recherche: {x:35,  y:240,  w:360, h:180},
+  z_werkstatt: {x:470, y:240,  w:395, h:86},
+  z_deck:      {x:470, y:336,  w:395, h:86},
+  z_design:    {x:35,  y:432,  w:360, h:86},
+  z_ultron:    {x:470, y:432,  w:395, h:86},
+  z_shop:      {x:195, y:1560, w:510, h:250},
+  // infra ring — ABOVE the brain (brain centre 450,950; panels end ~y518)
+  n_cron:     {x:90,  y:600},
+  n_telegram: {x:450, y:568},
+  n_github:   {x:660, y:600},
+  n_gateway:  {x:270, y:600},
+  n_voice:    {x:760, y:700},
+  n_watchdog: {x:90,  y:800},
   // infra — sides & BELOW the brain (kept apart from the agents next to them)
-  n_mac:      {x:835, y:600},
-  n_tailscale:{x:110, y:1140},
-  n_atlas:    {x:660, y:1160},
+  n_mac:      {x:840, y:720},
+  n_tailscale:{x:110, y:1300},
+  n_atlas:    {x:660, y:1330},
   // agents — wide ring around the brain (figures float here). Kept clear of the
   // infra-node labels above/below them (Codex↔Watchdog, Gemini↔Mac).
-  a_codex:    {x:210, y:610},
-  a_gemini:   {x:815, y:830},
-  a_jarvis:   {x:150, y:930},
-  a_chatgpt:  {x:810, y:1000},
-  a_ultron:   {x:405, y:1130},
+  a_codex:    {x:220, y:710},
+  a_gemini:   {x:820, y:900},
+  a_jarvis:   {x:150, y:1080},
+  a_chatgpt:  {x:815, y:1150},
+  a_ultron:   {x:410, y:1300},
 };
 function applyLayout(){
   const P = istMobil();
