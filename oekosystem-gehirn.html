@@ -198,8 +198,10 @@ function resize(){
   const portrait = W < H;
   let scale;
   if(portrait){
-    // zoom in a bit so the station fills the screen instead of leaving a big void
-    scale = sx * 1.55;
+    // Portrait (phone): the station is a wide landscape scene, so fit it to the
+    // HEIGHT and zoom in on the central brain + nearby agents; the outer panels
+    // are reachable by dragging. This keeps the centre big and readable.
+    scale = sy * 0.92;
   } else {
     scale = Math.max(sx, sy) * 1.02;
   }
@@ -209,11 +211,10 @@ function resize(){
   fit.oy = (H - dispH)/2;
   if(!fit._init){
     fit._init=true;
-    // center the active station band (agents + reactor + panels ~ world y 250..720)
     if(portrait){
-      const targetScreenY = H*0.46;                 // where world y=480 should land
-      const desiredPan = targetScreenY - (fit.oy + 480*fit.scale);
-      pan.y = desiredPan;
+      // centre the view on the brain/reactor (world 800,465)
+      pan.x = (W/2)  - (fit.ox + 800*fit.scale);
+      pan.y = (H*0.5)- (fit.oy + 465*fit.scale);
     }
   }
   clampPan();
