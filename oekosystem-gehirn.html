@@ -995,7 +995,7 @@ function drawBeaconLabel(bx,by,T){
   ctx.save();
   ctx.fillStyle=hexA(COL.beacon,.9); ctx.font=`700 ${mobile?12:ts(13)}px -apple-system,system-ui,sans-serif`;
   ctx.textAlign='center';
-  ctx.fillText('SYNAPSEN-KERN · OpenClaw', bx, ly1);
+  ctx.fillText('SYNAPSEN-KERN', bx, ly1);
   ctx.fillStyle=hexA(COL.beacon,.5); ctx.font=`500 ${mobile?9:ts(9.5)}px ui-monospace,monospace`;
   ctx.fillText('neuronal aktiv · '+(3200+Math.floor((Math.sin(T*2)*.5+.5)*180))+' Signale/s', bx, ly2);
   ctx.restore();
