@@ -130,8 +130,9 @@
     /* the wide canvas station panels are unreadable when zoomed to the brain
        on a phone, so hide the desktop legend and surface the key facts in a
        dedicated HTML dock instead. */
-    html:not([data-ansicht="desktop"]) .legend{right:8px; top:104px; padding:9px 11px; font-size:10.5px; min-width:0; gap:6px;}
-    html:not([data-ansicht="desktop"]) .legend .sw{width:10px; height:10px;}
+    /* Legend hidden on phone: the station now fills the screen and the agent
+       roster would overlap it — the agents are already labelled in the canvas. */
+    html:not([data-ansicht="desktop"]) .legend{display:none !important;}
     html:not([data-ansicht="desktop"]) .mdock{display:none !important;}
     html:not([data-ansicht="desktop"]) .hint{display:none;}
     html:not([data-ansicht="desktop"]) .zoombar{bottom:auto; top:96px; right:8px; gap:6px;}
@@ -185,8 +186,7 @@
     /* the wide canvas station panels are unreadable when zoomed to the brain
        on a phone, so hide the desktop legend and surface the key facts in a
        dedicated HTML dock instead. */
-    html[data-ansicht="mobil"] .legend{right:8px; top:104px; padding:9px 11px; font-size:10.5px; min-width:0; gap:6px;}
-    html[data-ansicht="mobil"] .legend .sw{width:10px; height:10px;}
+    html[data-ansicht="mobil"] .legend{display:none !important;}
     html[data-ansicht="mobil"] .mdock{display:none !important;}
     html[data-ansicht="mobil"] .hint{display:none;}
     html[data-ansicht="mobil"] .zoombar{bottom:auto; top:96px; right:8px; gap:6px;}
@@ -327,11 +327,18 @@ function resize(){
   const portrait = istMobil();
   let scale;
   if(portrait){
-    // Portrait (phone): show the FULL desktop station, scaled down to the narrow
-    // screen. Fit the wide 1600×900 scene to the phone width so the whole layout
-    // (zones, agent figures, terminal, shop console, connection lines) is visible
-    // — same content as desktop, only smaller.
-    scale = (W / WORLD_W) * 0.98;
+    // Portrait (phone): show the FULL desktop station and make it FILL the tall
+    // screen. The scene is wide 16:9; fitting it to width alone leaves big empty
+    // bands top & bottom. Instead we scale it up so the used content band fills
+    // most of the viewport height, keeping the left/right panels just inside the
+    // edges (the panels sit at x≈45–305 and x≈1180–1520, so the widest keep-fit
+    // is ~W/1500). We take the larger of width-fit and a height-driven fill.
+    const widthFit  = (W / WORLD_W);
+    const contentW  = 1500;                       // left panel start → right panel end
+    const sideFit   = (W / contentW) * 0.99;      // biggest scale keeping side panels in view
+    const contentH  = 700;                        // used vertical band (y≈150→850)
+    const heightFit = (H * 0.9) / contentH;       // fill ~90% of screen height
+    scale = Math.max(widthFit, Math.min(sideFit, heightFit));
   } else {
     scale = Math.max(sx, sy) * 1.02;
   }
@@ -339,11 +346,11 @@ function resize(){
   const dispW = WORLD_W*scale, dispH = WORLD_H*scale;
   fit.ox = (W - dispW)/2;
   fit.oy = (H - dispH)/2;
-  // On phones, centre the whole station vertically; no residual pan (the view
-  // is locked to this full-station fit framing).
+  // On phones, centre the used content band (world y≈150→850, mid≈500) in the
+  // viewport so it fills the screen; no residual pan (view locked to this fit).
   if(portrait){
     pan.x = 0;
-    pan.y = (H*0.5) - (fit.oy + (WORLD_H/2)*fit.scale);
+    pan.y = (H*0.5) - (fit.oy + 500*fit.scale);
     fit._init = true;
   } else if(!fit._init){
     fit._init = true;
@@ -369,14 +376,14 @@ function clampPan(){
   // by resize(); allow a little slack around it but keep the whole station centred.
   if(istMobil() && uz>=0.999 && uz<=1.001){
     pan.x = 0;
-    pan.y = (H*0.5) - (fit.oy + (WORLD_H/2)*effScale());
-    panMax.x = 20; panMax.y = 40;
+    pan.y = (H*0.5) - (fit.oy + 500*effScale());   // centre used content band (mid≈500)
+    panMax.x = Math.max(0,(dispW - W)/2 + 20); panMax.y = 40;
     return;
   }
   if(istMobil() && uz<0.999){
     // Zoomed OUT on phone: recentre the whole station in the viewport.
     pan.x = (W/2)   - (fit.ox + (WORLD_W/2)*effScale());
-    pan.y = (H*0.5) - (fit.oy + (WORLD_H/2)*effScale());
+    pan.y = (H*0.5) - (fit.oy + 500*effScale());
     panMax.x = Math.max(0,(dispW - W)/2 + 80);
     panMax.y = Math.max(0,(dispH - H)/2 + 80);
     return;
