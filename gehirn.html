@@ -123,7 +123,7 @@
 
 <div class="hud top">
   <div class="brand">
-    <h1>Kais KI-Ökosystem · Die Station</h1>
+    <h1>Kais KI-Gehirn · Die Station</h1>
     <div class="sub">Meine Agenten arbeiten, während ich schlafe.</div>
   </div>
   <div class="clock">
@@ -509,36 +509,56 @@ for(let i=0;i<90;i++) starsNear.push({x:Math.random()*WORLD_W,y:Math.random()*WO
 for(let i=0;i<46;i++) dust.push({x:Math.random()*WORLD_W,y:Math.random()*WORLD_H,
   r:Math.random()*2.4+1,vy:-(Math.random()*.22+.06),a:Math.random()*.4+.1,hue:Math.random()});
 
-/* ---- GEHIRN-SILHOUETTE: Kontur-Punkte (Neuronen entlang eines Hirn-Umrisses) ----
-   Weltzentrum ~ (800,430). Radius-Funktion formt zwei Hemisphären mit oberen
-   Wölbungen und unterer Kleinhirn-Einbuchtung. Punkte pulsieren als Neuronen. */
-const BRAIN_CX=800, BRAIN_CY=430, BRAIN_RX=560, BRAIN_RY=380;
-function brainRadius(th){
-  // th: 0..2π ; formt die typische Gehirnkontur (symmetrisch links/rechts)
-  const c=Math.cos(th), s=Math.sin(th);
-  let r = 1.0
-    + 0.16*Math.cos(2*th)            // seitliche Breite
-    - 0.10*Math.sin(th)              // oben etwas höher als unten
-    + 0.06*Math.cos(4*th)            // Wölbungen (Lappen)
-    - 0.13*Math.max(0, -s)*Math.pow(Math.abs(c),0.6); // untere Einbuchtung (Hirnstamm/Kleinhirn)
-  return r;
+/* ---- GEHIRN-SILHOUETTE: expliziter, erkennbarer Gehirn-Umriss ----
+   Halbe Kontur (rechte Hälfte, oben→unten) als Bézier-Stützpunkte in
+   Weltkoordinaten; wird gespiegelt für die linke Hälfte. Bewusst als DEUTLICHE
+   Form gebaut (nicht subtil), damit man sofort ein Gehirn erkennt.
+   Zentrum ~(800,430). */
+const BRAIN_CX=800, BRAIN_CY=440;
+// rechte Halbkontur: [dx, dy] relativ zum Zentrum, von oben-Mitte im Uhrzeigersinn bis unten-Mitte
+const BRAIN_HALF=[
+  [0,   -300],   // Scheitel (oben Mitte)
+  [155, -288],   // obere Wölbung (Stirnlappen-Kuppe)
+  [320, -232],   // oberer Seitenlappen
+  [440, -120],   // Schläfe
+  [485,    5],   // breiteste Stelle (Seite)
+  [470,  120],   // rundet ab nach unten
+  [415,  210],   // Temporallappen
+  [325,  272],   // untere runde Wölbung
+  [225,  300],   // unten breit + rund
+  [140,  305],   // untere Wölbung Richtung Mitte
+  [70,   292],   // sanfter Übergang
+  [30,   300],   // kleiner Hirnstamm-Ansatz (dezent)
+  [0,    306],   // untere Mitte
+];
+// dichte Kontur-Punkte durch Interpolation der Halbkontur + Spiegelung
+function buildBrainOutline(){
+  const pts=[];
+  const half=BRAIN_HALF;
+  const dens=10; // Punkte pro Segment
+  const chain=[];
+  for(let i=0;i<half.length-1;i++){
+    for(let k=0;k<dens;k++){
+      const t=k/dens;
+      chain.push([ half[i][0]+(half[i+1][0]-half[i][0])*t,
+                   half[i][1]+(half[i+1][1]-half[i][1])*t ]);
+    }
+  }
+  chain.push(half[half.length-1]);
+  // rechte Seite (oben→unten)
+  chain.forEach(p=> pts.push([BRAIN_CX+p[0], BRAIN_CY+p[1]]));
+  // linke Seite (unten→oben, gespiegelt)
+  for(let i=chain.length-1;i>=0;i--){ const p=chain[i]; pts.push([BRAIN_CX-p[0], BRAIN_CY+p[1]]); }
+  return pts;
 }
-const brainDots=[];
-for(let i=0;i<220;i++){
-  const th=(i/220)*6.2832;
-  const rr=brainRadius(th);
-  brainDots.push({
-    x: BRAIN_CX + Math.cos(th)*BRAIN_RX*rr*0.5,
-    y: BRAIN_CY - Math.sin(th)*BRAIN_RY*rr*0.5,
-    ph: Math.random()*6.28, sp: 0.6+Math.random()*1.2, r: 0.8+Math.random()*1.4
-  });
-}
-// innere "Windungen": ein paar geschwungene Bögen als Gyri-Andeutung
+const BRAIN_OUTLINE=buildBrainOutline();   // [ [x,y], ... ] geschlossene Kontur
+const brainDots=BRAIN_OUTLINE.map((p,i)=>({x:p[0],y:p[1],
+  ph:(i*0.3)%6.28, sp:0.7+((i*7)%10)/10, r:1.0+((i*3)%5)/5}));
+// innere Windungen (Gyri): horizontale geschwungene Bögen je Hemisphäre
 const brainGyri=[];
-for(let g=0; g<7; g++){
-  const side = g%2===0 ? 1 : -1;
-  const yb = BRAIN_CY - 150 + g*44;
-  brainGyri.push({side, y:yb, amp: 34+Math.random()*26, ph:Math.random()*6.28});
+for(let g=0; g<6; g++){
+  const yb = BRAIN_CY - 200 + g*66;
+  brainGyri.push({y:yb, amp: 40+((g*13)%30), ph:g*1.1});
 }
 
 /* slow-drifting nebula blobs (volumetric glow) */
@@ -564,59 +584,77 @@ function roundRect(x,y,w,h,r){ ctx.beginPath();
 /* ============================================================
    Draw: atmospheric background depth
    ============================================================ */
+function brainPath(){
+  // baut den geschlossenen Kontur-Pfad in Bildschirmkoordinaten (glatt)
+  ctx.beginPath();
+  const o=BRAIN_OUTLINE;
+  ctx.moveTo(tx(o[0][0]), ty(o[0][1]));
+  for(let i=1;i<o.length;i++){
+    const p0=o[i-1], p1=o[i];
+    const mx=(p0[0]+p1[0])/2, my=(p0[1]+p1[1])/2;
+    ctx.quadraticCurveTo(tx(p0[0]),ty(p0[1]), tx(mx),ty(my));
+  }
+  ctx.closePath();
+}
 function drawBrainSilhouette(T){
   ctx.save();
-  ctx.globalCompositeOperation='lighter';
   const col=COL.beacon;
-  const breath=0.5+0.5*Math.sin(T*0.6);   // globaler Atem-Puls
+  const breath=0.5+0.5*Math.sin(T*0.6);
 
-  // 1) weiches inneres Leuchten (Gehirn-Volumen)
+  // 1) gefüllter Innenschimmer (deutlich sichtbares Gehirn-Volumen)
+  ctx.save();
+  brainPath(); ctx.clip();
   const gx=tx(BRAIN_CX), gy=ty(BRAIN_CY);
-  const vg=ctx.createRadialGradient(gx,gy,ts(40),gx,gy,ts(BRAIN_RX*0.62));
-  vg.addColorStop(0,hexA(col,.05+.03*breath));
-  vg.addColorStop(.6,hexA('#3a5fd0',.03));
-  vg.addColorStop(1,hexA(col,0));
-  ctx.fillStyle=vg; ctx.beginPath(); ctx.arc(gx,gy,ts(BRAIN_RX*0.62),0,6.28); ctx.fill();
+  const vg=ctx.createRadialGradient(gx,gy-ts(40),ts(30),gx,gy,ts(560));
+  vg.addColorStop(0, hexA('#2a4fb0',.22+.06*breath));
+  vg.addColorStop(.55,hexA('#16264f',.14));
+  vg.addColorStop(1, hexA('#0a1330',.05));
+  ctx.fillStyle=vg; ctx.fillRect(0,0,W,H);
 
-  // 2) Kontur als Kette leuchtender Neuronen-Punkte
-  for(let i=0;i<brainDots.length;i++){
-    const d=brainDots[i];
-    const px=tx(d.x), py=ty(d.y);
-    // Wanderpuls: eine Helligkeitswelle läuft rund um die Kontur
-    const wave=0.5+0.5*Math.sin(T*1.1 - (i/brainDots.length)*6.2832*2);
-    const tw=0.35+0.65*(0.5+0.5*Math.sin(T*d.sp+d.ph));
-    const a=(0.10+0.22*wave)*tw;
-    const rr=ts(d.r)*(0.8+0.6*wave);
-    const dg=ctx.createRadialGradient(px,py,0,px,py,rr*2.2);
-    dg.addColorStop(0,hexA('#ffffff',a));
-    dg.addColorStop(.4,hexA(col,a*0.8));
-    dg.addColorStop(1,hexA(col,0));
-    ctx.fillStyle=dg; ctx.beginPath(); ctx.arc(px,py,rr*2.2,0,6.28); ctx.fill();
-    // dünne Verbindung zum Nachbarn (Kontur-Faden)
-    if(i>0){
-      const pd=brainDots[i-1];
-      ctx.strokeStyle=hexA(col,0.06+0.05*wave); ctx.lineWidth=ts(0.8);
-      ctx.beginPath(); ctx.moveTo(tx(pd.x),ty(pd.y)); ctx.lineTo(px,py); ctx.stroke();
+  // Gyri-Windungen INNERHALB der geclippten Form (deutlich)
+  ctx.globalCompositeOperation='lighter';
+  for(const g2 of brainGyri){
+    for(const side of [1,-1]){
+      const yy=ty(g2.y + Math.sin(T*0.4+g2.ph)*6);
+      ctx.strokeStyle=hexA(col,.14+.08*breath); ctx.lineWidth=ts(2.2);
+      ctx.beginPath();
+      const x0=tx(BRAIN_CX+side*18), x1=tx(BRAIN_CX+side*(18+g2.amp*4.2));
+      const cxg=tx(BRAIN_CX+side*(18+g2.amp*2));
+      ctx.moveTo(x0,yy);
+      ctx.bezierCurveTo(cxg, yy-ts(28), cxg, yy+ts(28), x1, yy);
+      ctx.stroke();
     }
   }
+  ctx.restore();
 
-  // 3) Mittelfurche (Fissura longitudinalis) — trennt die Hemisphären
-  ctx.strokeStyle=hexA(col,.10+.06*breath); ctx.lineWidth=ts(1.4);
+  // 2) kräftige, klar erkennbare Umrisslinie (mehrlagig für Glow)
+  ctx.globalCompositeOperation='lighter';
+  // äußerer weicher Glow
+  brainPath();
+  ctx.strokeStyle=hexA(col,.18+.08*breath); ctx.lineWidth=ts(10); ctx.stroke();
+  // mittlere Linie
+  brainPath();
+  ctx.strokeStyle=hexA(col,.55); ctx.lineWidth=ts(3.2); ctx.stroke();
+  // heller Kern der Linie
+  brainPath();
+  ctx.strokeStyle=hexA('#dff0ff',.9); ctx.lineWidth=ts(1.3); ctx.stroke();
+
+  // 3) Mittelfurche (trennt die Hemisphären) — deutlich
+  ctx.strokeStyle=hexA(col,.32+.12*breath); ctx.lineWidth=ts(2.4);
   ctx.beginPath();
-  ctx.moveTo(tx(BRAIN_CX), ty(BRAIN_CY-BRAIN_RY*0.46));
-  ctx.quadraticCurveTo(tx(BRAIN_CX+14), ty(BRAIN_CY), tx(BRAIN_CX), ty(BRAIN_CY+BRAIN_RY*0.40));
+  ctx.moveTo(tx(BRAIN_CX), ty(BRAIN_CY-260));
+  ctx.quadraticCurveTo(tx(BRAIN_CX+16), ty(BRAIN_CY-40), tx(BRAIN_CX), ty(BRAIN_CY+150));
   ctx.stroke();
 
-  // 4) angedeutete Windungen (Gyri) — geschwungene Bögen je Hemisphäre
-  for(const gy2 of brainGyri){
-    const yy=ty(gy2.y);
-    ctx.strokeStyle=hexA(col,.05+.05*breath); ctx.lineWidth=ts(1.1);
-    ctx.beginPath();
-    const x0=tx(BRAIN_CX + gy2.side*30), x1=tx(BRAIN_CX + gy2.side*(30+gy2.amp*3.2));
-    const cxg=tx(BRAIN_CX + gy2.side*(30+gy2.amp)) ;
-    ctx.moveTo(x0,yy);
-    ctx.quadraticCurveTo(cxg, yy - ts(gy2.amp)*Math.sin(T*0.5+gy2.ph)*0.5, x1, yy);
-    ctx.stroke();
+  // 4) wandernde Synapsen-Pulse auf der Kontur (Leben)
+  const N=BRAIN_OUTLINE.length;
+  for(let s=0;s<3;s++){
+    const idx=Math.floor(((T*0.12+s/3)%1)*N);
+    const p=BRAIN_OUTLINE[idx];
+    const px=tx(p[0]),py=ty(p[1]); const rr=ts(9);
+    const pg=ctx.createRadialGradient(px,py,0,px,py,rr);
+    pg.addColorStop(0,hexA('#ffffff',.95)); pg.addColorStop(.4,hexA(col,.7)); pg.addColorStop(1,hexA(col,0));
+    ctx.fillStyle=pg; ctx.beginPath(); ctx.arc(px,py,rr,0,6.28); ctx.fill();
   }
   ctx.restore();
 }
