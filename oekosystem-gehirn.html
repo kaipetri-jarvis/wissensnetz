@@ -71,7 +71,7 @@
   .ticker .tt{color:var(--muted);} .ticker b{color:var(--ink); font-weight:700;}
   @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
 
-  .legend{position:fixed; z-index:5; right:200px; bottom:52px; display:flex; flex-direction:column; gap:5px;
+  .legend{position:fixed; z-index:5; right:14px; top:120px; bottom:auto; display:flex; flex-direction:column; gap:5px;
     background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:9px 12px; backdrop-filter:blur(14px);
     -webkit-backdrop-filter:blur(14px);
     font-size:10.5px; color:var(--muted); box-shadow:0 8px 30px rgba(0,0,0,.4);}
@@ -522,9 +522,9 @@ const COL = {
 // zones (world coords) — Zonen etwas näher an den Reaktor gerückt
 const ZONES = [
   {key:'werkstatt', label:'WERKSTATT', sub:'Jarvis baut Produkte', x:275, y:680, w:324, h:135, col:COL.claude},
-  {key:'design',    label:'DESIGN-LABOR', sub:'Gemini · Thumbnails', x:1180, y:680, w:324, h:135, col:COL.gemini},
-  {key:'deck',      label:'STRATEGIE-DECK', sub:'ChatGPT · Nischen', x:1300, y:490, w:306, h:122, col:COL.chatgpt},
-  {key:'shop',      label:'ETSY-SHOP-KONSOLE', sub:'DeskLane Studio', x:1330, y:250, w:306, h:225, col:COL.gold},
+  {key:'design',    label:'DESIGN-LABOR', sub:'Gemini · Thumbnails', x:1130, y:680, w:324, h:135, col:COL.gemini},
+  {key:'deck',      label:'STRATEGIE-DECK', sub:'ChatGPT · Nischen', x:1230, y:490, w:306, h:122, col:COL.chatgpt},
+  {key:'shop',      label:'ETSY-SHOP-KONSOLE', sub:'DeskLane Studio', x:1240, y:255, w:340, h:250, col:COL.gold},
   {key:'recherche', label:'RECHERCHE-TERMINAL', sub:'eRank · Live-Etsy', x:170, y:270, w:300, h:250, col:COL.sub},
   {key:'ultron',    label:'ZWEITER KOPF · Ultron', sub:'paralleler Denker · prüft gegen', x:620, y:750, w:324, h:119, col:COL.ultron},
 ];
@@ -551,7 +551,7 @@ const AGENTS = [
       'idle · keine offene Code-Aufgabe',
     ]},
   { key:'gemini', name:'Gemini', model:'google/gemini-3.5-flash', col:COL.gemini,
-    zone:'design', x:1160, y:730, face:'crystal', pose:'upright',
+    zone:'design', x:1110, y:730, face:'crystal', pose:'upright',
     states:[
       'bewertet Nachlass-Thumbnail: 9,5/10 — vorher „unsichtbar"',
       'schlägt Cross-Selling vor: Preiskalkulator + Rechnung',
@@ -561,7 +561,7 @@ const AGENTS = [
       'recherchiert Nische: Vermieter-/Ferienwohnungs-Set…',
     ]},
   { key:'chatgpt', name:'ChatGPT', model:'openai/gpt-5.5', col:COL.chatgpt,
-    zone:'deck', x:1290, y:545, face:'brain', pose:'wide',
+    zone:'deck', x:1220, y:545, face:'brain', pose:'wide',
     states:[
       'entwirft Bundle-Strategie: „Selbstständig Startklar" 39 €',
       'skizziert Pflege-/Angehörigen-Mappe (11 S., würdevoll)…',
@@ -587,7 +587,7 @@ const INFRA = [
   // --- Ausgabe / extern (oben rechts, wie gehabt) ---
   {key:'github', name:'GitHub', sub:'Wissensnetz · Gist · Pages', x:967, y:308, col:COL.github,
    states:['push wissensnetz ✓','ARBEITSSTAND.md → Gist synchron','Pages deployed · oekosystem.html live','commit f74c0b9 · Ökosystem mobil']},
-  {key:'atlas', name:'ATLAS · Fabrik', sub:'Multi-KI-Software-Fabrik', x:1056, y:429, col:COL.atlas,
+  {key:'atlas', name:'ATLAS · Fabrik', sub:'Multi-KI-Software-Fabrik', x:1040, y:390, col:COL.atlas,
    states:['Jarvis prüft als 3. Reviewer (nur-lesend)','coordination-fleet aktiv · Docker online','Postgres + NATS verbunden','Review-Verdikt → Telegram an Kai','schreibgeschützt: kann nichts kaputtmachen']},
 
   // --- Fundament / System (linke Flanke, prominent: Gateway) ---
@@ -595,9 +595,9 @@ const INFRA = [
    states:['ai.openclaw.gateway läuft · KeepAlive','routet alle Kanäle & Agenten','main + ultron gebunden','Config live · kein Reload-Abbruch','das Nervensystem der ganzen Station']},
   {key:'watchdog', name:'Watchdog', sub:'Selbstheilung · Absturzwarnung', x:544, y:429, col:COL.watchdog,
    states:['ai.openclaw.watchdog überwacht Gateway','Crash → Neustart + Telegram-Alarm','Crash-Log-Watcher alle 10 Min','hält die Station 24/7 am Leben']},
-  {key:'tailscale', name:'Tailscale', sub:'Tailnet · Fernsteuerung vom iPhone', x:575, y:568, col:COL.tailscale,
+  {key:'tailscale', name:'Tailscale', sub:'Tailnet · Fernsteuerung vom iPhone', x:500, y:540, col:COL.tailscale,
    states:['Mac 100.73.109.29 ↔ iPhone 100.108.47.120','Serve auf Port 18789','Kai steuert die Station vom Handy','verschlüsseltes Mesh · kein offener Port']},
-  {key:'mac', name:'Mac · 24/7-Server', sub:'schläft nie · zugeklappt weiter', x:720, y:645, col:COL.mac,
+  {key:'mac', name:'Mac · 24/7-Server', sub:'schläft nie · zugeklappt weiter', x:520, y:655, col:COL.mac,
    states:['caffeinate · kein Ruhezustand','Deckel zu → läuft weiter','Host für Gateway + alle Dienste','Dauerbetrieb seit Setup']},
 
   // --- Sprache (oben Mitte-links) ---
@@ -605,7 +605,7 @@ const INFRA = [
    states:['TTS Microsoft de-DE-KatjaNeural (auto)','Fallback Google TTS','STT lokal · Whisper (transcribe.sh)','liest jede Antwort vor']},
 
   // --- Automation / Cron (unten links, ein Sammelknoten) ---
-  {key:'cron', name:'Automation · Cron', sub:'nächtliche & stündliche Jobs', x:889, y:645, col:COL.cron,
+  {key:'cron', name:'Automation · Cron', sub:'nächtliche & stündliche Jobs', x:950, y:625, col:COL.cron,
    states:['Wissensnetz-Auto 3:15 · Memory-Dreaming 3:00','Heartbeats main/ultron/atlas stündlich','Activity-Feed live · alle 10 Min','Postfach-Watcher Frau Lind · werktags','läuft, während Kai schläft']},
 
   // --- Kanal (oben Mitte-rechts) ---
