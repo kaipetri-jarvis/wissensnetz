@@ -71,12 +71,16 @@
   .ticker .tt{color:var(--muted);} .ticker b{color:var(--ink); font-weight:700;}
   @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
 
-  .legend{position:fixed; z-index:5; right:14px; top:120px; bottom:auto; display:flex; flex-direction:column; gap:5px;
-    background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:9px 12px; backdrop-filter:blur(14px);
+  .legend{position:fixed; z-index:5; right:14px; top:120px; bottom:auto; display:flex; flex-direction:column; gap:8px;
+    background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:13px 16px; backdrop-filter:blur(14px);
     -webkit-backdrop-filter:blur(14px);
-    font-size:10.5px; color:var(--muted); box-shadow:0 8px 30px rgba(0,0,0,.4);}
-  .legend .row{display:flex; align-items:center; gap:7px;}
-  .legend .sw{width:9px;height:9px;border-radius:3px; box-shadow:0 0 8px currentColor;}
+    font-size:13.5px; color:var(--ink); box-shadow:0 8px 30px rgba(0,0,0,.4); min-width:190px;}
+  .legend .row{display:flex; align-items:center; gap:9px;}
+  .legend .sw{width:12px;height:12px;border-radius:4px; box-shadow:0 0 10px currentColor; flex:0 0 auto;}
+  .legend .lst{margin-left:auto; font-size:10px; letter-spacing:.05em; display:inline-flex; align-items:center; gap:5px; color:var(--muted);}
+  .legend .lst::before{content:""; width:7px; height:7px; border-radius:50%; background:#4fe0b0; box-shadow:0 0 7px #4fe0b0; animation:lpulse 2s infinite;}
+  .legend .lst.standby{color:var(--dim);} .legend .lst.standby::before{background:#8a93a8; box-shadow:none; animation:none;}
+  @keyframes lpulse{0%,100%{opacity:1} 50%{opacity:.45}}
   .hint{position:fixed; z-index:5; left:50%; bottom:52px; transform:translateX(-50%); font-size:10px; color:var(--dim);
     letter-spacing:.08em; text-transform:uppercase; opacity:.7; pointer-events:none; text-align:center; max-width:92vw;}
 
@@ -258,13 +262,13 @@ function BRAIN_Y(){ return istMobil() ? 465 : 545; }  // Desktop: Gehirn weiter 
 </div>
 
 <div class="legend">
-  <div class="row"><span class="sw" style="background:var(--gold);color:var(--gold)"></span> Claude</div>
-  <div class="row"><span class="sw" style="background:var(--claude);color:var(--claude)"></span> Jarvis</div>
-  <div class="row"><span class="sw" style="background:var(--ultron);color:var(--ultron)"></span> Ultron</div>
-  <div class="row"><span class="sw" style="background:var(--gemini);color:var(--gemini)"></span> Gemini</div>
-  <div class="row"><span class="sw" style="background:var(--chatgpt);color:var(--chatgpt)"></span> ChatGPT</div>
-  <div class="row"><span class="sw" style="background:var(--sub);color:var(--sub)"></span> Sub-Agenten</div>
-  <div class="row"><span class="sw" style="background:var(--atlas);color:var(--atlas)"></span> ATLAS · Fabrik</div>
+  <div class="row"><span class="sw" style="background:var(--gold);color:var(--gold)"></span> Claude <span class="lst">online</span></div>
+  <div class="row"><span class="sw" style="background:var(--claude);color:var(--claude)"></span> Jarvis <span class="lst" data-agent="jarvis">aktiv</span></div>
+  <div class="row"><span class="sw" style="background:var(--ultron);color:var(--ultron)"></span> Ultron <span class="lst" data-agent="ultron">aktiv</span></div>
+  <div class="row"><span class="sw" style="background:var(--gemini);color:var(--gemini)"></span> Gemini <span class="lst" data-agent="gemini">aktiv</span></div>
+  <div class="row"><span class="sw" style="background:var(--chatgpt);color:var(--chatgpt)"></span> ChatGPT <span class="lst" data-agent="chatgpt">aktiv</span></div>
+  <div class="row"><span class="sw" style="background:var(--sub);color:var(--sub)"></span> Sub-Agenten <span class="lst">aktiv</span></div>
+  <div class="row"><span class="sw" style="background:var(--atlas);color:var(--atlas)"></span> ATLAS · Fabrik <span class="lst">online</span></div>
 </div>
 
 <div class="hint">Ziehen zum Schwenken · 2 Finger / Doppeltipp = Zoom · Figur antippen = Info</div>
@@ -1786,6 +1790,12 @@ function buildMDock(){
     + `<div class="plist">${prods}</div></div>`;
   row.innerHTML = html;
 }
+setInterval(()=>{
+  document.querySelectorAll('.legend .lst[data-agent]').forEach(el=>{
+    const a=AGENTS.find(x=>x.key===el.dataset.agent); if(!a) return;
+    const on=!!a.working; el.textContent=on?'aktiv':'standby'; el.classList.toggle('standby',!on);
+  });
+}, 2000);
 buildMDock();
 /* refresh the agent task lines so the dock tracks the live typewriter status */
 setInterval(()=>{
