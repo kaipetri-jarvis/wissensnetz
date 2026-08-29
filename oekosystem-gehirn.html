@@ -562,7 +562,7 @@ const AGENTS = [
       'recherchiert Nische: Vermieter-/Ferienwohnungs-Set…',
     ]},
   { key:'chatgpt', name:'ChatGPT', model:'openai/gpt-5.5', col:COL.chatgpt,
-    zone:'deck', x:1130, y:400, face:'brain', pose:'wide',
+    zone:'deck', x:1120, y:275, face:'brain', pose:'wide',
     states:[
       'entwirft Bundle-Strategie: „Selbstständig Startklar" 39 €',
       'skizziert Pflege-/Angehörigen-Mappe (11 S., würdevoll)…',
@@ -1612,7 +1612,7 @@ function drawSub(m,T){
    ============================================================ */
 AGENTS.forEach((a,i)=>{
   a.phase=i*2.1; a.target=a.states[0]; a.shown=''; a.typeI=0; a.hold=0; a.working=true;
-  a.link = (a.key==='chatgpt') ? 'shop' : 'beacon';
+  a.link = 'beacon';   // alle Agenten (auch ChatGPT) ans Gehirn — Kais Wunsch
 });
 SUBS.forEach((m,i)=>{
   m.phase=i*1.4;
@@ -1711,7 +1711,7 @@ function frame(now){
       drawLink(a._bx, a._by-ts(24), tx(shop.x+shop.w/2), ty(shop.y+shop.h), a.col, T, a.phase*0.2, 30, true);
     } else {
       // gently curve each spoke to its own side so lines fan out and cross less at the core
-      const bend = (a.x<800) ? 46 : -46;
+      const bend = a.key==='chatgpt' ? 0 : (a.x<800) ? 46 : -46;   // ChatGPT: gerade auf den Treffpunkt
       drawLink(a._bx, a._by-ts(24), bx, by, a.col, T, a.phase*0.2, bend, true);
     }
   }
