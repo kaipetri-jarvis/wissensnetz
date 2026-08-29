@@ -1,0 +1,38 @@
+{
+  "generated": "2026-08-29T10:22:52+00:00",
+  "bots": {
+    "jarvis": true,
+    "ultron": true
+  },
+  "atlas": {
+    "fleet": true,
+    "postgres": true,
+    "nats": true,
+    "online": true
+  },
+  "commits": [
+    {
+      "at": "2026-08-29T11:55:49+02:00",
+      "text": "System-Graph (Option B): OpenClaw + Assistenten als Fundament, Etsy als erstes Projekt"
+    },
+    {
+      "at": "2026-08-28T19:26:52+02:00",
+      "text": "Backup: OpenClaw-Workspace (Etsy-Projekt, Memory, Konfig) — sensible Dokumente ausgeschlossen"
+    },
+    {
+      "at": "2026-08-28T07:13:16+02:00",
+      "text": "POD-Upscaler: lokale Real-ESRGAN-Kette (4x → 300 DPI Druckgröße), kostenlos & ohne Limit"
+    },
+    {
+      "at": "2026-08-28T07:03:48+02:00",
+      "text": "Etsy-Baustein: regelkonformer Listing-Validator (Titel/Tags/Preis) — Vorbereitung Etsy-Integration"
+    }
+  ],
+  "cron": [
+    "jarvis-crash-log-watcher crash-log-watcher cron",
+    "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
+    "heartbeat:ultron Heartbeat (ultron)",
+    "heartbeat:main Heartbeat (main)",
+    "jarvis-wissensnetz-auto wissensnetz-auto-update cron"
+  ]
+}
