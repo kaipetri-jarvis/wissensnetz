@@ -236,21 +236,44 @@ loader.load('assets/brain.glb', (gltf) => {
     }
   });
   if (tris.length) {
-    const N = 3200;
+    const N = 3600;
     const sampled = new Float32Array(N * 3);
+    const pts = [];
     for (let i = 0; i < N; i++) {
       const t = tris[(Math.random()*tris.length)|0];
       let r1 = Math.random(), r2 = Math.random();
       if (r1 + r2 > 1) { r1 = 1 - r1; r2 = 1 - r2; }
       const r0 = 1 - r1 - r2;
-      // pull slightly inward (0.82..1.0) so points fill the volume, not just the shell
-      const k = 0.80 + Math.random() * 0.20;
-      sampled[i*3]   = (t[0]*r0 + t[3]*r1 + t[6]*r2) * k;
-      sampled[i*3+1] = (t[1]*r0 + t[4]*r1 + t[7]*r2) * k;
-      sampled[i*3+2] = (t[2]*r0 + t[5]*r1 + t[8]*r2) * k;
+      // pull inward (0.6..1.0) so points fill the whole volume, not just the shell
+      const k = 0.60 + Math.random() * 0.40;
+      const px = (t[0]*r0 + t[3]*r1 + t[6]*r2) * k;
+      const py = (t[1]*r0 + t[4]*r1 + t[7]*r2) * k;
+      const pz = (t[2]*r0 + t[5]*r1 + t[8]*r2) * k;
+      sampled[i*3]=px; sampled[i*3+1]=py; sampled[i*3+2]=pz;
+      pts.push(new THREE.Vector3(px, py, pz));
     }
     ptGeo.setAttribute('position', new THREE.BufferAttribute(sampled, 3));
     ptGeo.attributes.position.needsUpdate = true;
+
+    // rebuild neural connection lines from the in-brain points (old ones used the sphere)
+    const lp = [];
+    for (let i = 0; i < pts.length; i += 2) {
+      let found = 0;
+      for (let j = i + 1; j < pts.length && found < 3; j++) {
+        if (pts[i].distanceTo(pts[j]) < 7.5) { lp.push(pts[i].x,pts[i].y,pts[i].z, pts[j].x,pts[j].y,pts[j].z); found++; }
+      }
+    }
+    lineGeo.setAttribute('position', new THREE.BufferAttribute(new Float32Array(lp), 3));
+    lineGeo.attributes.position.needsUpdate = true;
+
+    // rebuild core filaments to end on real in-brain points
+    const fp = [];
+    for (let i = 0; i < 45; i++) {
+      const p = pts[(Math.random()*pts.length)|0];
+      fp.push((Math.random()-0.5)*4,(Math.random()-0.5)*4,(Math.random()-0.5)*4, p.x*0.92,p.y*0.92,p.z*0.92);
+    }
+    filGeo.setAttribute('position', new THREE.BufferAttribute(new Float32Array(fp), 3));
+    filGeo.attributes.position.needsUpdate = true;
   }
   window.__brainLoaded = true;                      // marker for render verification
 }, undefined, (err) => { console.error('brain.glb load failed', err); window.__brainLoadError = String(err); });
@@ -453,18 +476,10 @@ const dsGeo = new THREE.BufferGeometry();
 dsGeo.setAttribute('position', new THREE.BufferAttribute(dsPos, 3));
 const dsMat = new THREE.PointsMaterial({ size: 2.0, map: glowTex, color: 0x69c0ff, transparent:true, opacity:0.7, blending:THREE.AdditiveBlending, depthWrite:false });
 const dataSphere = new THREE.Points(dsGeo, dsMat);
+// NOTE: the enclosing data sphere is disabled — Kai wants the glowing points INSIDE
+// the brain, not floating around it. Kept the object so the animation loop stays valid.
+dataSphere.visible = false;
 sphereGroup.add(dataSphere);
-
-// faint radial links from a few shell points inward (circuit-like enclosure)
-const shellLinkPos = [];
-for (let i = 0; i < DN; i += 14) {
-  const b = dsBase[i];
-  shellLinkPos.push(b.x*b.r, b.y*b.r, b.z*b.r, b.x*b.r*0.72, b.y*b.r*0.72, b.z*b.r*0.72);
-}
-const slGeo = new THREE.BufferGeometry();
-slGeo.setAttribute('position', new THREE.BufferAttribute(new Float32Array(shellLinkPos), 3));
-const slMat = new THREE.LineBasicMaterial({ color: 0x2a78d0, transparent:true, opacity:0.16, blending:THREE.AdditiveBlending, depthWrite:false });
-sphereGroup.add(new THREE.LineSegments(slGeo, slMat));
 
 // ---- Energy waves pulsing outward from the core ----
 const WAVES = 3;
