@@ -10,34 +10,74 @@
   #app { position: fixed; inset: 0; }
   canvas { display: block; }
   #title {
-    position: fixed; top: 18px; left: 0; right: 0; text-align: center;
-    color: #cfe8ff; font-size: 20px; font-weight: 600; letter-spacing: 0.5px;
+    position: fixed; top: env(safe-area-inset-top, 14px); padding-top: 6px; left: 0; right: 0; text-align: center;
+    color: #cfe8ff; font-size: clamp(17px, 5vw, 22px); font-weight: 700; letter-spacing: 0.5px;
     text-shadow: 0 0 18px rgba(80,160,255,0.8); pointer-events: none; z-index: 10;
   }
   #sub {
-    position: fixed; top: 46px; left: 0; right: 0; text-align: center;
-    color: #6a8fc0; font-size: 12px; letter-spacing: 0.3px; pointer-events: none; z-index: 10;
+    position: fixed; top: calc(env(safe-area-inset-top, 14px) + 32px); left: 0; right: 0; text-align: center;
+    color: #7ba0d0; font-size: clamp(10px, 3vw, 12px); letter-spacing: 0.3px; pointer-events: none; z-index: 10;
+    padding: 0 12px;
   }
   #hint {
-    position: fixed; bottom: 14px; left: 0; right: 0; text-align: center;
-    color: #47618a; font-size: 11px; pointer-events: none; z-index: 10;
+    position: fixed; bottom: calc(env(safe-area-inset-bottom, 10px) + 6px); left: 0; right: 0; text-align: center;
+    color: #5a7aa8; font-size: clamp(10px, 3vw, 11px); pointer-events: none; z-index: 10; padding: 0 12px;
   }
   .label {
     position: absolute; transform: translate(-50%, -50%);
-    color: #dcecff; font-size: 12px; font-weight: 600; letter-spacing: 0.3px;
-    text-shadow: 0 0 8px rgba(0,0,0,0.9), 0 0 14px rgba(60,140,255,0.6);
+    color: #eaf4ff; font-size: clamp(11px, 3.4vw, 13px); font-weight: 700; letter-spacing: 0.2px;
+    text-shadow: 0 0 6px rgba(0,0,0,0.95);
     pointer-events: none; white-space: nowrap; z-index: 5;
-    padding: 2px 7px; border-radius: 8px;
-    background: rgba(8,16,32,0.55); border: 1px solid rgba(90,150,255,0.25);
+    padding: 3px 9px 3px 8px; border-radius: 9px;
+    background: rgba(6,12,26,0.72);
+    border: 1px solid var(--acol, rgba(90,150,255,0.5));
+    box-shadow: 0 0 10px var(--aglow, rgba(60,140,255,0.35)), inset 0 0 6px rgba(255,255,255,0.04);
+    display: flex; align-items: center; gap: 6px;
+  }
+  .label::before {
+    content: ''; width: 7px; height: 7px; border-radius: 50%;
+    background: var(--acol, #6cf); box-shadow: 0 0 8px var(--acol, #6cf);
+    flex: 0 0 auto;
+  }
+  .label.ki { font-size: clamp(11.5px, 3.7vw, 14px); border-width: 1.5px;
+    background: rgba(8,14,30,0.8); box-shadow: 0 0 14px var(--aglow, rgba(60,140,255,0.5)); }
+  /* Terminal panel (echo of the old "RECHERCHE-TERMINAL" station log) */
+  #terminal {
+    position: fixed; z-index: 11; left: 12px; bottom: calc(env(safe-area-inset-bottom, 10px) + 30px);
+    width: min(340px, 78vw); max-height: 168px; overflow: hidden;
+    background: rgba(4,10,22,0.82); border: 1px solid rgba(90,150,255,0.32);
+    border-radius: 10px; box-shadow: 0 0 22px rgba(30,90,190,0.28);
+    backdrop-filter: blur(3px); font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+  #terminal .thead {
+    display: flex; align-items: center; gap: 7px; padding: 6px 10px;
+    border-bottom: 1px solid rgba(90,150,255,0.2); color: #8fd0ff;
+    font-size: 10.5px; font-weight: 700; letter-spacing: 0.6px;
+  }
+  #terminal .dot { width: 8px; height: 8px; border-radius: 50%; background: #46e08a; box-shadow: 0 0 8px #46e08a; animation: blink 1.6s infinite; }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.35} }
+  #terminal .tbody { padding: 6px 10px 8px; font-size: 10px; line-height: 1.5; color: #9fc4e8; }
+  #terminal .tbody .ln { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  #terminal .tbody .ln .tk { color: #6ee0ff; }
+  #terminal .tbody .ln .ok { color: #46e08a; }
+  #terminal.min .tbody { display: none; }
+  #terminal .thead { cursor: pointer; pointer-events: auto; }
+  @media (max-width: 560px) {
+    #terminal { width: min(300px, 82vw); max-height: 132px; }
+    #terminal .tbody { font-size: 9.5px; }
   }
 </style>
 </head>
 <body>
 <div id="title">🧠 Kais KI-Gehirn</div>
-<div id="sub">OpenClaw · Jarvis · Ultron — das Nervensystem, das alles verbindet</div>
+<div id="sub">OpenClaw · Jarvis · Ultron — Die Station</div>
 <div id="app"></div>
-<div id="hint">🖱️ Ziehen zum frei Drehen · Scrollen / Pinch zum Zoomen</div>
+<div id="hint">Ziehen zum Drehen · Pinch/Scroll zum Zoomen</div>
 <div id="labels"></div>
+<div id="terminal">
+  <div class="thead" onclick="this.parentElement.classList.toggle('min')"><span class="dot"></span>RECHERCHE-TERMINAL · DIE STATION</div>
+  <div class="tbody" id="tbody"></div>
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
@@ -367,7 +407,14 @@ agents.forEach(a => {
   const pulse = new THREE.Sprite(pulseMat); pulse.scale.set(5,5,1);
   agentGroup.add(pulse);
 
-  const label = document.createElement('div'); label.className = 'label'; label.textContent = a.name;
+  // highlight labels: KI models get a stronger 'ki' style, all get their agent color
+  const KI_MODELS = ['Jarvis','Ultron','Gemini','ChatGPT','ATLAS'];
+  const label = document.createElement('div');
+  label.className = 'label' + (KI_MODELS.includes(a.name) ? ' ki' : '');
+  label.textContent = a.name;
+  const hex = '#' + a.color.toString(16).padStart(6,'0');
+  label.style.setProperty('--acol', hex);
+  label.style.setProperty('--aglow', hex + '88');
   labelsDiv.appendChild(label);
 
   agentObjs.push({ sp, pos, target, al, pulse, label, color: a.color, phase: Math.random()*Math.PI*2 });
@@ -727,6 +774,43 @@ window.addEventListener('resize', () => {
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
 });
+
+// ---- Recherche-Terminal: a live monospace log stream (echo of the old Station) ----
+const tbody = document.getElementById('tbody');
+const AGENT_NAMES = ['Jarvis','Ultron','ATLAS','Gemini','ChatGPT','Etsy','Telegram','Memory'];
+const VERBS = [
+  ['sync','memory/MEMORY.md','ok'],
+  ['scan','etsy-listings','12 gefunden'],
+  ['build','wissensnetz','deployed'],
+  ['fetch','activity.json','200'],
+  ['review','ATLAS-verdict','pass'],
+  ['index','session-corpus','ok'],
+  ['pulse','neuron-cluster','fired'],
+  ['route','telegram:msg','delivered'],
+  ['embed','daily-notes','ok'],
+  ['watch','gateway-health','alive'],
+];
+const termLines = [];
+function pushLine(html) {
+  termLines.push(html);
+  if (termLines.length > 7) termLines.shift();
+  tbody.innerHTML = termLines.map(l => '<div class="ln">'+l+'</div>').join('');
+}
+function synthLine() {
+  const a = AGENT_NAMES[(Math.random()*AGENT_NAMES.length)|0];
+  const v = VERBS[(Math.random()*VERBS.length)|0];
+  const hh = String(8 + ((Math.random()*14)|0)).padStart(2,'0');
+  const mm = String((Math.random()*60)|0).padStart(2,'0');
+  const ss = String((Math.random()*60)|0).padStart(2,'0');
+  return `<span class="tk">${hh}:${mm}:${ss}</span> ${a} › ${v[0]} ${v[1]} <span class="ok">${v[2]}</span>`;
+}
+// seed + tick
+for (let i=0;i<6;i++) pushLine(synthLine());
+setInterval(() => pushLine(synthLine()), 2200);
+// mix in real activity if available (best-effort; ignored if not present)
+fetch('activity.json', { cache:'no-store' }).then(r=>r.ok?r.json():null).then(a=>{
+  if (a && a.generated) pushLine(`<span class="tk">● FEED</span> Live-Stand geladen <span class="ok">ok</span>`);
+}).catch(()=>{});
 </script>
 </body>
 </html>
