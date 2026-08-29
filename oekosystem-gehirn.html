@@ -1427,7 +1427,7 @@ function drawFigure(a,T){
   // ---- Sprite-Modus: generierte Circuit-Androiden (Kais finale Auswahl) ----
   const img=AGENT_IMG[a.key];
   if(img && img.complete && img.naturalWidth){
-    const ih=150*s, iw=ih*img.naturalWidth/img.naturalHeight;
+    const ih=118*s, iw=ih*img.naturalWidth/img.naturalHeight;
     const footY=gy+46*s, topY=footY-ih+bob*0.35;
     ctx.save(); ctx.globalCompositeOperation='screen'; ctx.globalAlpha=0.97;
     ctx.drawImage(img, bx-iw/2, topY, iw, ih);
