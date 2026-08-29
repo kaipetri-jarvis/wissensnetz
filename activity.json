@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-29T15:08:43+00:00",
+  "generated": "2026-08-29T15:18:43+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-08-29T17:16:05+02:00",
+      "text": "Oekosystem-Gehirn: RECHERCHE-TERMINAL (eRank Live-Log) auch in Mobile-Ansicht, im freien Band ueber dem Gehirn"
+    },
+    {
+      "at": "2026-08-29T17:09:28+02:00",
+      "text": "Oekosystem-Gehirn: Titel-Label 'SYNAPSEN-KERN · OpenClaw' wieder eingefuegt"
+    },
     {
       "at": "2026-08-29T17:08:36+02:00",
       "text": "Oekosystem-Gehirn: Orbit-Linien zurueck auf Desktop-Optik (fliessende Bahnen + Daten-Pakete statt dicke Adern)"
@@ -26,14 +34,6 @@
     {
       "at": "2026-08-29T16:56:19+02:00",
       "text": "Oekosystem-Gehirn: Titel-Label 'SYNAPSEN-KERN · OpenClaw' entfernt (nur dezente Live-Zeile bleibt)"
-    },
-    {
-      "at": "2026-08-29T16:54:58+02:00",
-      "text": "Oekosystem-Gehirn: Handy-Info-Dock als kompaktes 2-Spalten-Grid (alle Agenten-Kacheln + Inventar auf einen Blick, kein Wischen mehr)"
-    },
-    {
-      "at": "2026-08-29T16:51:35+02:00",
-      "text": "Oekosystem-Gehirn: 3D-Gehirn korrekt am Synapsen-Kern zentriert (Canvas-CSS-Groesse fix, war doppelte DPR-Groesse -> Versatz unten rechts), kleiner + Rauszoomen"
     }
   ],
   "cron": [
