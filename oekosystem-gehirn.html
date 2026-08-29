@@ -132,24 +132,26 @@
 
     /* info dock: readable, scrollable card strip sitting above the ticker */
     .mdock{display:block; position:fixed; z-index:6; left:0; right:0; bottom:44px;
-      padding:8px 8px 10px; pointer-events:none;
-      background:linear-gradient(0deg,rgba(2,3,10,.92),rgba(2,3,10,.55) 62%,rgba(2,3,10,0));}
-    .mdock .mrow{display:flex; gap:7px; overflow-x:auto; overflow-y:hidden;
-      -webkit-overflow-scrolling:touch; scrollbar-width:none; pointer-events:auto; padding-bottom:2px;}
-    .mdock .mrow::-webkit-scrollbar{display:none;}
-    .mcard{flex:0 0 auto; min-width:172px; max-width:200px; background:var(--panel);
-      border:1px solid var(--line); border-radius:12px; padding:8px 10px; backdrop-filter:blur(12px);
-      -webkit-backdrop-filter:blur(12px); box-shadow:0 6px 22px rgba(0,0,0,.42);}
-    .mcard.wide{min-width:200px; max-width:230px;}
-    .mcard .mh{display:flex; align-items:center; gap:6px; font-size:11px; font-weight:800; letter-spacing:.01em;}
-    .mcard .mh .dot{width:8px; height:8px; border-radius:50%; box-shadow:0 0 8px currentColor; flex:0 0 auto;}
-    .mcard .mt{font-size:10px; line-height:1.42; color:var(--muted); margin-top:4px;}
+      padding:6px 7px 8px; pointer-events:none;
+      background:linear-gradient(0deg,rgba(2,3,10,.94),rgba(2,3,10,.6) 62%,rgba(2,3,10,0));}
+    /* compact 2-column grid: all agent cards visible at once, no horizontal swipe */
+    .mdock .mrow{display:grid; grid-template-columns:1fr 1fr; gap:5px;
+      pointer-events:auto;}
+    .mcard{min-width:0; background:var(--panel);
+      border:1px solid var(--line); border-radius:10px; padding:5px 8px; backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px); box-shadow:0 5px 18px rgba(0,0,0,.4);}
+    .mcard.wide{grid-column:1 / -1;}   /* inventory spans the full width */
+    .mcard .mh{display:flex; align-items:center; gap:5px; font-size:10px; font-weight:800; letter-spacing:.01em;}
+    .mcard .mh .dot{width:7px; height:7px; border-radius:50%; box-shadow:0 0 7px currentColor; flex:0 0 auto;}
+    .mcard .mt{font-size:8.5px; line-height:1.32; color:var(--muted); margin-top:2px;
+      display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;}
     .mcard .mt b{color:var(--ink); font-weight:700;}
-    .mcard .prow{display:flex; justify-content:space-between; gap:8px; font-size:10px; line-height:1.7;}
-    .mcard .prow span:first-child{color:var(--ink); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
-    .mcard .prow span:last-child{color:var(--gold); font-weight:700; font-variant-numeric:tabular-nums; flex:0 0 auto;}
-    .mdock .mswipe{font-size:8.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--dim);
-      text-align:center; margin-bottom:5px; pointer-events:none;}
+    .mcard.wide .prow{display:flex; justify-content:space-between; gap:8px; font-size:9px; line-height:1.5;}
+    .mcard.wide .prow span:first-child{color:var(--ink); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+    .mcard.wide .prow span:last-child{color:var(--gold); font-weight:700; font-variant-numeric:tabular-nums; flex:0 0 auto;}
+    /* inventory: 2 columns of products so it stays short */
+    .mcard.wide .plist{display:grid; grid-template-columns:1fr 1fr; gap:0 12px; margin-top:3px; padding-right:2px;}
+    .mdock .mswipe{display:none;}
   }
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -1551,7 +1553,7 @@ function buildMDock(){
     `<div class="prow"><span>${nm}</span><span>${pr}</span></div>`).join('');
   html += `<div class="mcard wide"><div class="mh">`
     + `<span class="dot" style="background:var(--gold);color:var(--gold)"></span>ETSY · Inventar</div>`
-    + `<div style="margin-top:5px">${prods}</div></div>`;
+    + `<div class="plist">${prods}</div></div>`;
   row.innerHTML = html;
 }
 buildMDock();
