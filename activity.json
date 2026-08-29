@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-29T12:38:28+00:00",
+  "generated": "2026-08-29T12:48:28+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-08-29T14:47:27+02:00",
+      "text": "Gehirn-3D: Neuronen-Punktwolke aus echtem Mesh gesampelt -> deckungsgleich mit Gehirnform"
+    },
     {
       "at": "2026-08-29T14:33:21+02:00",
       "text": "Gehirn-3D: echtes anatomisches Gehirn-Modell (brain.glb, MIT) mit Glas-Shader statt prozeduraler Kugel"
@@ -30,17 +34,13 @@
     {
       "at": "2026-08-29T14:01:39+02:00",
       "text": "Gehirn-3D: horizontaler Datenstrom seitlich + dezentere Kern-Filamente (Referenzbild-Look)"
-    },
-    {
-      "at": "2026-08-29T13:55:19+02:00",
-      "text": "Gehirn-3D: freie Drag-Rotation in alle Richtungen + Traegheit + Pinch-Zoom"
     }
   ],
   "cron": [
-    "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
     "jarvis-crash-log-watcher crash-log-watcher cron",
     "heartbeat:ultron Heartbeat (ultron)",
     "heartbeat:main Heartbeat (main)",
+    "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
     "jarvis-wissensnetz-auto wissensnetz-auto-update cron"
   ]
 }
