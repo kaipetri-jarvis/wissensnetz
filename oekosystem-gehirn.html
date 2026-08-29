@@ -228,6 +228,7 @@
 const ANSICHT_FORCE=(new URLSearchParams(location.search).get('ansicht')||'').toLowerCase();
 document.documentElement.dataset.ansicht = (ANSICHT_FORCE==='mobil'||ANSICHT_FORCE==='desktop') ? ANSICHT_FORCE : 'auto';
 function istMobil(){ return ANSICHT_FORCE==='mobil' ? true : ANSICHT_FORCE==='desktop' ? false : (window.innerWidth < window.innerHeight); }
+function BRAIN_Y(){ return istMobil() ? 465 : 505; }  // Desktop: Gehirn weiter unten
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
@@ -812,7 +813,7 @@ for(let i=0;i<26;i++) reactorMotes.push({
    itself is switched off. We only keep a faint ground glow + label so the brain is
    grounded, and skip all god-rays / rings / bright core. */
 function drawBeacon(T){
-  const bx=tx(800), by=ty(465);
+  const bx=tx(800), by=ty(BRAIN_Y());
   const pulse=(Math.sin(T*2)*.5+.5);
   ctx.save();
   ctx.globalCompositeOperation='lighter';
@@ -828,7 +829,7 @@ function drawBeacon(T){
 }
 /* legacy full reactor kept for reference but unused */
 function drawBeaconOLD(T){
-  const bx=tx(800), by=ty(465);
+  const bx=tx(800), by=ty(BRAIN_Y());
   const pulse=(Math.sin(T*2)*.5+.5);
   // gentle breathing on a second, slower frequency (atmet)
   const breath=(Math.sin(T*0.9)*.5+.5);
@@ -1258,7 +1259,7 @@ const _ORBIT = [
   {key:'mac',       label:'Mac 24/7',  col:COL.mac,       ang: 2.35, ring:1},
 ];
 function drawMobileOrbit(T){
-  const bx=tx(800), by=ty(465);
+  const bx=tx(800), by=ty(BRAIN_Y());
   // The WebGL brain canvas is layered ABOVE this 2D canvas (z-index 3 vs 0), so
   // any node placed UNDER the brain's silhouette is invisibly hidden behind it.
   // Nodes must clear the brain's on-screen radius by a wide margin.
@@ -1687,7 +1688,7 @@ function frame(now){
 
   // Energie-Linien ZUERST zeichnen, damit die Panels sie ueberdecken
   // energy links from agents
-  const bx=tx(800), by=ty(465);
+  const bx=tx(800), by=ty(BRAIN_Y());
   const shop=ZONES[3];
   for(const a of AGENTS){
     if(!a._bx) continue;
@@ -1936,7 +1937,7 @@ requestAnimationFrame(frame);
   let zoom=1, tZoom=1, focussed=false, hovering=false, pulse=0, moved=0;
   const el=bRenderer.domElement;
   // Treffer-Test: liegt der Zeiger ueber dem Gehirn (Beacon-Umkreis)?
-  function overBrain(x,y){ const bx=tx(800), by=ty(465), r=ts(1)*190*zoom; const dx=x-bx, dy=y-by; return dx*dx+dy*dy < r*r; }
+  function overBrain(x,y){ const bx=tx(800), by=ty(BRAIN_Y()), r=ts(1)*190*zoom; const dx=x-bx, dy=y-by; return dx*dx+dy*dy < r*r; }
   const down=(x,y)=>{ if(!overBrain(x,y)) return; dragging=true;userRot=true;vy=vx=0;px=x;py=y;moved=0; };
   const move=(x,y)=>{ hovering=overBrain(x,y); el.style.cursor = hovering ? (dragging?'grabbing':'grab') : 'default';
     if(!dragging)return; const dy=(x-px)*0.006,dx=(y-py)*0.006; moved+=Math.abs(x-px)+Math.abs(y-py); tRy+=dy;tRx+=dx;vy=dy;vx=dx; tRx=Math.max(-1.4,Math.min(1.4,tRx)); px=x;py=y; };
@@ -1958,7 +1959,7 @@ requestAnimationFrame(frame);
     const aspNow = window.innerWidth/window.innerHeight;
     if(Math.abs(bCam.aspect - aspNow) > 1e-4){ bCam.aspect = aspNow; bCam.updateProjectionMatrix(); }
     // beacon world position (800,465) -> screen px via the page's transform
-    const bx = tx(800), by = ty(465), scale = ts(1);
+    const bx = tx(800), by = ty(BRAIN_Y()), scale = ts(1);
     // convert screen px to camera-space so the brain lands exactly on the beacon
     const ndcX = (bx / window.innerWidth) * 2 - 1;
     const ndcY = -((by / window.innerHeight) * 2 - 1);
