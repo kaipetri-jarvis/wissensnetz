@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-29T23:38:48+00:00",
+  "generated": "2026-08-29T23:48:48+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-08-30T01:47:43+02:00",
+      "text": "Auto-Backup 2026-08-30 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-08-30T01:45:35+02:00",
+      "text": "Auto-Backup 2026-08-30 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-08-30T01:42:54+02:00",
+      "text": "Voll-Backup 2026-08-30: Etsy-Produktvorschauen (Toolkit DE, A4-Seiten, Galerie) + Memory-Notizen + Gehirn-Graph-Stand"
+    },
+    {
       "at": "2026-08-30T01:12:48+02:00",
       "text": "Oekosystem-Gehirn: echter Portrait-Reflow fuer Mobile — 900x1640-Portrait-Welt, Panels ueber/unter dem Gehirn, Agenten+Infra ringfoermig (PORTRAIT_POS + applyLa"
     },
@@ -22,18 +34,6 @@
     {
       "at": "2026-08-30T00:33:07+02:00",
       "text": "Oekosystem-Gehirn (Mobile): volle Desktop-Station auch auf dem Handy — MOBILE-Short-Circuit in frame() entfernt, resize() fittet die ganze 1600x900-Szene auf Ha"
-    },
-    {
-      "at": "2026-08-30T00:15:19+02:00",
-      "text": "Oekosystem-Gehirn (Mobile): volle Desktop-Station auch auf dem Handy — MOBILE-Short-Circuit in frame() entfernt, resize() fittet die ganze 1600x900-Szene auf di"
-    },
-    {
-      "at": "2026-08-29T18:03:15+02:00",
-      "text": "Oekosystem-Gehirn (Mobile): Kollisionsschutz — obere Orbit-Knoten (Watchdog/ChatGPT) weichen dem RECHERCHE-TERMINAL oben links nach unten aus; Terminal bleibt k"
-    },
-    {
-      "at": "2026-08-29T17:59:58+02:00",
-      "text": "Oekosystem-Gehirn (Mobile): RECHERCHE-TERMINAL Feinschliff — kompakter+schmaler (termH 168->140, termW min(W*0.55,210)) fuer klare Trennung zu Gehirn/Knoten; bl"
     }
   ],
   "cron": [
