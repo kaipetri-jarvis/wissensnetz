@@ -246,8 +246,9 @@ function resize(){
     const topUI = 108, botUI = 178;              // reserved screen bands
     const band  = Math.max(220, H - topUI - botUI);
     const brainWorldD = 470;                     // ~ visible brain diameter in world units
-    const scaleForWidth  = (W   * 0.90) / brainWorldD;
-    const scaleForHeight = (band * 1.00) / brainWorldD;
+    // Calmer default: the brain should sit inside the scene, not fill it.
+    const scaleForWidth  = (W   * 0.62) / brainWorldD;
+    const scaleForHeight = (band * 0.68) / brainWorldD;
     scale = Math.min(scaleForWidth, scaleForHeight);
   } else {
     scale = Math.max(sx, sy) * 1.02;
@@ -263,7 +264,7 @@ function resize(){
     // Bias the anchor DOWN: the anatomical brain's mass sits above the beacon
     // point (world 465), so dropping it ~0.16·H centres the brain in the band
     // and uses the lower space instead of crowding the top stats.
-    const bandCentre = topUI + (H - topUI - botUI)/2 + H*0.10;
+    const bandCentre = topUI + (H - topUI - botUI)/2 + H*0.02;
     pan.x = (W/2)       - (fit.ox + 800*fit.scale);
     pan.y = bandCentre  - (fit.oy + 465*fit.scale);
     fit._init = true;
@@ -276,7 +277,7 @@ window.addEventListener('resize', resize);
 
 /* user zoom multiplier on top of the fit scale (pinch / double-tap / wheel) */
 let uz = 1;                       // user zoom factor
-const UZ_MIN = 1, UZ_MAX = 4;
+const UZ_MIN = 0.35, UZ_MAX = 4;  // allow zooming OUT below the fit scale
 function effScale(){ return fit.scale * uz; }
 
 /* map world coords -> screen (fit scale × user zoom, panned) */
@@ -289,9 +290,18 @@ function clampPan(){
   const dispW = WORLD_W*effScale(), dispH = WORLD_H*effScale();
   // On phones the view is deliberately locked to the brain-in-band framing set
   // by resize(); allow a little slack around it but keep the brain centred.
-  if(W < H && uz<=1.001){
+  if(W < H && uz>=0.999 && uz<=1.001){
     panMax.x = 30; panMax.y = 30;
-    return;   // keep resize()'s exact pan (don't recentre to world origin)
+    return;   // at the default fit, keep resize()'s exact brain-in-band framing
+  }
+  if(W < H && uz<0.999){
+    // Zoomed OUT on phone: recentre the whole station (brain at beacon 800,465)
+    // in the viewport so you actually see the extra context you zoomed out for.
+    pan.x = (W/2)      - (fit.ox + 800*effScale());
+    pan.y = (H*0.46)   - (fit.oy + 465*effScale());
+    panMax.x = Math.max(0,(dispW - W)/2 + 80);
+    panMax.y = Math.max(0,(dispH - H)/2 + 80);
+    return;
   }
   panMax.x = Math.max(0,(dispW - W)/2 + 40);
   panMax.y = Math.max(0,(dispH - H)/2 + 60);
@@ -1608,12 +1618,13 @@ requestAnimationFrame(frame);
 (function(){
   const wrap = document.getElementById('brainwrap');
   const bScene = new THREE.Scene();
-  const bCam = new THREE.PerspectiveCamera(45, 1, 0.1, 2000);
+  const bCam = new THREE.PerspectiveCamera(45, window.innerWidth/window.innerHeight, 0.1, 2000);
   bCam.position.set(0, 0, 300);
+  bCam.updateProjectionMatrix();
   const bRenderer = new THREE.WebGLRenderer({ antialias:true, alpha:true });
   bRenderer.setSize(window.innerWidth, window.innerHeight);
   bRenderer.setPixelRatio(Math.min(devicePixelRatio, 2));
-  bRenderer.domElement.style.cssText = 'position:fixed;inset:0;pointer-events:auto;';
+  bRenderer.domElement.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:auto;';
   wrap.appendChild(bRenderer.domElement);
 
   const brainGroup = new THREE.Group(); bScene.add(brainGroup);
@@ -1644,15 +1655,29 @@ requestAnimationFrame(frame);
   loader.load('assets/brain.glb', (gltf)=>{
     const model = gltf.scene;
     model.traverse(o=>{ if(o.isMesh){ o.material=glassMat; } });
-    const box=new THREE.Box3().setFromObject(model); const size=new THREE.Vector3(); box.getSize(size);
-    const center=new THREE.Vector3(); box.getCenter(center);
+    // Robust centering: scale first, then measure the bounding box in the
+    // ALREADY-SCALED space and shift the model so its true centre sits at the
+    // group origin. (Doing centre*s on the unscaled box mis-centres GLTFs that
+    // carry their own internal node transforms — that pushed the brain off to
+    // the bottom-right of the beacon.)
+    const box0=new THREE.Box3().setFromObject(model); const size=new THREE.Vector3(); box0.getSize(size);
     const s=(R*2.15)/(Math.max(size.x,size.y,size.z)||1);
-    model.scale.setScalar(s); model.position.sub(center.multiplyScalar(s));
+    model.scale.setScalar(s);
+    model.updateWorldMatrix(true,true);
+    const box=new THREE.Box3().setFromObject(model);
+    const center=new THREE.Vector3(); box.getCenter(center);
+    model.position.sub(center);          // center already in scaled world units
     model.updateWorldMatrix(true,true);
     brainGroup.add(model);
-    // sample points inside the mesh
+    // Sample points inside the mesh, expressed in brainGroup-LOCAL space.
+    // (Using matrixWorld baked in brainGroup's live per-frame transform, so the
+    // cloud got transformed twice and drifted off to the bottom-right. We take
+    // each mesh's matrix relative to brainGroup instead.)
+    brainGroup.updateWorldMatrix(true,false);
+    const invGroup = new THREE.Matrix4().copy(brainGroup.matrixWorld).invert();
     const tris=[];
-    model.traverse(o=>{ if(!o.isMesh)return; const g=o.geometry,p=g.attributes.position,idx=g.index; o.updateWorldMatrix(true,false); const m=o.matrixWorld;
+    model.traverse(o=>{ if(!o.isMesh)return; const g=o.geometry,p=g.attributes.position,idx=g.index; o.updateWorldMatrix(true,false);
+      const m=new THREE.Matrix4().multiplyMatrices(invGroup, o.matrixWorld);
       const a=new THREE.Vector3(),b=new THREE.Vector3(),c=new THREE.Vector3(); const n=idx?idx.count:p.count;
       for(let i=0;i<n;i+=3){ const ia=idx?idx.getX(i):i,ib=idx?idx.getX(i+1):i+1,ic=idx?idx.getX(i+2):i+2;
         a.fromBufferAttribute(p,ia).applyMatrix4(m); b.fromBufferAttribute(p,ib).applyMatrix4(m); c.fromBufferAttribute(p,ic).applyMatrix4(m);
@@ -1681,6 +1706,10 @@ requestAnimationFrame(frame);
 
   let bt=0;
   function project(){
+    // keep the WebGL camera aspect in lockstep with the real viewport, so the
+    // brain lands ON the 2D beacon even if no resize event fired after load.
+    const aspNow = window.innerWidth/window.innerHeight;
+    if(Math.abs(bCam.aspect - aspNow) > 1e-4){ bCam.aspect = aspNow; bCam.updateProjectionMatrix(); }
     // beacon world position (800,465) -> screen px via the page's transform
     const bx = tx(800), by = ty(465), scale = ts(1);
     // convert screen px to camera-space so the brain lands exactly on the beacon
@@ -1691,8 +1720,8 @@ requestAnimationFrame(frame);
     const hWorld = 2 * Math.tan(vFOV/2) * dist;       // world height at z=0 plane
     const wWorld = hWorld * bCam.aspect;
     brainGroup.position.set(ndcX * wWorld/2, ndcY * hWorld/2, 0);
-    // beacon radius ~240 world units on the page; scale brain to match
-    brainGroup.scale.setScalar(Math.max(0.12, scale * 2.4));
+    // beacon radius ~240 world units on the page; scale brain to match (calmer)
+    brainGroup.scale.setScalar(Math.max(0.08, scale * 1.5));
   }
   function loop(){
     requestAnimationFrame(loop);
