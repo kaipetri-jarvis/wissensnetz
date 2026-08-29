@@ -48,9 +48,25 @@
   #stats .a .n{color:#ffd166} #stats .b .n{color:#b28dff} #stats .c .n{color:#74e39a} #stats .d .n{color:#66e0ff}
   @media (max-width: 560px) { #stats .stat { min-width: 0; flex: 1 1 40%; padding: 6px 10px; } }
   #hint {
-    position: fixed; bottom: calc(env(safe-area-inset-bottom, 10px) + 6px); left: 0; right: 0; text-align: center;
+    position: fixed; bottom: calc(env(safe-area-inset-bottom, 10px) + 30px); left: 0; right: 0; text-align: center;
     color: #5a7aa8; font-size: clamp(10px, 3vw, 11px); pointer-events: none; z-index: 10; padding: 0 12px;
   }
+  /* Sub-Agenten ticker along the very bottom (echo of the old Station ticker) */
+  #ticker {
+    position: fixed; z-index: 11; left: 0; right: 0; bottom: 0; height: 26px; overflow: hidden;
+    background: linear-gradient(0deg, rgba(2,4,10,0.95), rgba(2,4,10,0.35));
+    border-top: 1px solid rgba(90,150,255,0.22); display: flex; align-items: center;
+    backdrop-filter: blur(6px);
+  }
+  #ticker .tag { flex: 0 0 auto; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #74e39a;
+    padding: 0 11px; display: flex; align-items: center; gap: 6px; border-right: 1px solid rgba(90,150,255,0.2); height: 100%; font-weight: 700; }
+  #ticker .tdot { width: 6px; height: 6px; border-radius: 50%; background: #74e39a; box-shadow: 0 0 8px #74e39a; }
+  #ticker .track { white-space: nowrap; padding-left: 100%; animation: tscroll 52s linear infinite; font-size: 11px; }
+  #ticker .item { display: inline-flex; align-items: center; gap: 7px; margin: 0 28px; }
+  #ticker .who { font-weight: 800; }
+  #ticker .who.c{color:#66e0ff} #ticker .who.g{color:#b28dff} #ticker .who.x{color:#74e39a} #ticker .who.s{color:#8fb0d8} #ticker .who.u{color:#ff7a7a}
+  #ticker .tt { color: #9fc4e8; } #ticker b { color: #eaf4ff; font-weight: 700; }
+  @keyframes tscroll { 0%{transform:translateX(0)} 100%{transform:translateX(-100%)} }
   .label {
     position: absolute; transform: translate(-50%, -50%);
     color: #eaf4ff; font-size: clamp(11px, 3.4vw, 13px); font-weight: 700; letter-spacing: 0.2px;
@@ -71,7 +87,7 @@
     background: rgba(8,14,30,0.8); box-shadow: 0 0 14px var(--aglow, rgba(60,140,255,0.5)); }
   /* Terminal panel (echo of the old "RECHERCHE-TERMINAL" station log) */
   #terminal {
-    position: fixed; z-index: 11; left: 12px; bottom: calc(env(safe-area-inset-bottom, 10px) + 30px);
+    position: fixed; z-index: 11; left: 12px; bottom: calc(env(safe-area-inset-bottom, 10px) + 40px);
     width: min(340px, 78vw); max-height: 168px; overflow: hidden;
     background: rgba(4,10,22,0.82); border: 1px solid rgba(90,150,255,0.32);
     border-radius: 10px; box-shadow: 0 0 22px rgba(30,90,190,0.28);
@@ -115,7 +131,7 @@
   #inventory .pbar > i { display: block; height: 100%; border-radius: 3px; background: linear-gradient(90deg,#46e08a,#8fd0ff); }
   #inventory.min .ibody { display: none; }
   /* ---- Design-Labor / Gemini + Upscaler badges (bottom-right) ---- */
-  #labs { position: fixed; z-index: 11; right: 12px; bottom: calc(env(safe-area-inset-bottom,10px) + 30px); display: flex; flex-direction: column; gap: 8px; align-items: flex-end; pointer-events: none; }
+  #labs { position: fixed; z-index: 11; right: 12px; bottom: calc(env(safe-area-inset-bottom,10px) + 40px); display: flex; flex-direction: column; gap: 8px; align-items: flex-end; pointer-events: none; }
   #labs .card { background: rgba(4,10,22,0.82); border: 1px solid rgba(178,141,255,0.35); border-radius: 12px; padding: 9px 12px; box-shadow: 0 0 18px rgba(120,90,220,0.25); backdrop-filter: blur(4px); max-width: min(230px,66vw); }
   #labs .card .lt { color: #b28dff; font-weight: 800; font-size: clamp(11px,2.9vw,13px); }
   #labs .card .ls { color: #8fb0d8; font-size: 9.5px; margin-top: 1px; }
@@ -139,7 +155,7 @@
 <body>
 <div id="top">
   <div class="brand">
-    <h1>🧠 Kais KI-Gehirn · Die Station</h1>
+    <h1>🧠 Kais KI-Ökosystem · Die Station</h1>
     <div class="sub">Meine Agenten arbeiten, während ich schlafe.</div>
   </div>
   <div class="clock">
@@ -174,6 +190,10 @@
     <div class="ls">Thumbnails · prüft 8 SEO-Titel — 4 über 140 Zeichen</div>
     <div class="lm">google/gemini-3.5-flash</div>
   </div>
+</div>
+<div id="ticker">
+  <div class="tag"><span class="tdot"></span>Sub-Agenten</div>
+  <div class="track" id="track"></div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -982,6 +1002,24 @@ if (window.matchMedia('(max-width: 560px)').matches) {
   document.getElementById('labs').classList.add('min');
   document.getElementById('terminal').classList.add('min');
 }
+
+// ---- Sub-Agenten ticker: real Station events scrolling along the bottom ----
+const TICKS = [
+  ['g','Gemini bewertet','Thumbnail <b>Nachlass</b> von „unsichtbar" auf <b>9,5/10</b> gehoben'],
+  ['x','ChatGPT pausiert','5h-OAuth-Limit erreicht — plant sich neu in <b>~15 Min</b>'],
+  ['c','Claude baut','<b>Nachlass- &amp; Vorsorgeplaner</b> (11 Seiten) fertig'],
+  ['c','Claude · QA','<b>12/12 PDFs</b> intakt · 3/3 XLSX-Auto-Formeln ✓'],
+  ['g','Gemini · SEO','<b>4 Titel</b> über 140 Z. gefunden &amp; gekürzt'],
+  ['x','ChatGPT · Nische','<b>Landlord Management Kit (EN)</b> $19.90 — DE+EN gebaut'],
+  ['c','Claude','<b>17 Bundle-ZIPs</b> verkaufsfertig — Datei-Limit gelöst'],
+  ['s','Sub-Agenten','Build · Design · Recherche · Listing · SEO · Upscaler wuseln durch die Station'],
+  ['c','Druckkette live','<b>Real-ESRGAN</b> lokal: 4× → <b>4096×6144 px @300 DPI</b> — kostenlos'],
+  ['u','Ultron · zweiter Kopf','arbeitet parallel · <b>prüft gegen</b> &amp; übergibt an Jarvis'],
+  ['u','Ultron · ATLAS-Melder','pusht jedes <b>Review-Verdikt</b> per Telegram an Kai'],
+];
+const track = document.getElementById('track');
+const tickHtml = TICKS.map(([w,who,tt]) => `<span class="item"><span class="who ${w}">${who}</span> <span class="tt">${tt}</span></span>`).join('<span class="tt" style="opacity:.4"> · </span>');
+track.innerHTML = tickHtml + tickHtml;   // duplicate for a seamless loop
 </script>
 </body>
 </html>
