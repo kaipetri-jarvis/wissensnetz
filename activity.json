@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-29T13:18:28+00:00",
+  "generated": "2026-08-29T13:28:28+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-08-29T15:22:48+02:00",
+      "text": "Gehirn-3D: mobil-optimiert + KI/Agenten-Labels hervorgehoben (Farbe/KI-Stil) + Recherche-Terminal (Die Station) mit Live-Log"
+    },
     {
       "at": "2026-08-29T14:50:32+02:00",
       "text": "Gehirn-3D: umhuellende Daten-Sphaere entfernt + Linien/Filamente aus Mesh-Punkten -> alle Punkte IM Gehirn"
@@ -30,10 +34,6 @@
     {
       "at": "2026-08-29T14:11:40+02:00",
       "text": "Gehirn-3D: echte Gyri-Furchen (maeandernde Kontur-Linien) statt Kugel-Wireframe"
-    },
-    {
-      "at": "2026-08-29T14:08:25+02:00",
-      "text": "Gehirn-3D: glasartige Gehirn-Huelle (Fresnel-Rand-Glow + Gyri-Konturen) statt reiner Punktwolke"
     }
   ],
   "cron": [
