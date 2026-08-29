@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-29T23:08:48+00:00",
+  "generated": "2026-08-29T23:18:48+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-08-30T01:12:48+02:00",
+      "text": "Oekosystem-Gehirn: echter Portrait-Reflow fuer Mobile — 900x1640-Portrait-Welt, Panels ueber/unter dem Gehirn, Agenten+Infra ringfoermig (PORTRAIT_POS + applyLa"
+    },
     {
       "at": "2026-08-30T00:54:52+02:00",
       "text": "Oekosystem-Gehirn (Mobile): Station fuellt jetzt die Handybreite aus (sideFit-Skalierung bis an die Panel-Kanten), Legende auf Mobile ausgeblendet (keine Ueberl"
@@ -30,10 +34,6 @@
     {
       "at": "2026-08-29T17:59:58+02:00",
       "text": "Oekosystem-Gehirn (Mobile): RECHERCHE-TERMINAL Feinschliff — kompakter+schmaler (termH 168->140, termW min(W*0.55,210)) fuer klare Trennung zu Gehirn/Knoten; bl"
-    },
-    {
-      "at": "2026-08-29T17:52:06+02:00",
-      "text": "Oekosystem-Gehirn (Mobile): RECHERCHE-TERMINAL zurueck auf oben links (14/0.60/230/150); @media(min-width:721px) fuer erzwungene Mobil-Ansicht auf Desktop-Breit"
     }
   ],
   "cron": [
