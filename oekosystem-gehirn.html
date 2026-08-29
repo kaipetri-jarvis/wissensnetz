@@ -1831,15 +1831,22 @@ requestAnimationFrame(frame);
     }
   });
 
-  // drag to rotate the brain
+  // drag to rotate the brain · dblclick = Fokus-Zoom · hover = Aufleuchten · click = Synapsen-Impuls
   let dragging=false,px=0,py=0,ry=0,rx=0,tRy=0,tRx=0,vy=0,vx=0,userRot=false;
+  let zoom=1, tZoom=1, focussed=false, hovering=false, pulse=0, moved=0;
   const el=bRenderer.domElement;
-  const down=(x,y)=>{dragging=true;userRot=true;vy=vx=0;px=x;py=y;};
-  const move=(x,y)=>{ if(!dragging)return; const dy=(x-px)*0.006,dx=(y-py)*0.006; tRy+=dy;tRx+=dx;vy=dy;vx=dx; tRx=Math.max(-1.4,Math.min(1.4,tRx)); px=x;py=y; };
-  const up=()=>{dragging=false;};
+  // Treffer-Test: liegt der Zeiger ueber dem Gehirn (Beacon-Umkreis)?
+  function overBrain(x,y){ const bx=tx(800), by=ty(465), r=ts(1)*260*zoom; const dx=x-bx, dy=y-by; return dx*dx+dy*dy < r*r; }
+  const down=(x,y)=>{ if(!overBrain(x,y)) return; dragging=true;userRot=true;vy=vx=0;px=x;py=y;moved=0; };
+  const move=(x,y)=>{ hovering=overBrain(x,y); el.style.cursor = hovering ? (dragging?'grabbing':'grab') : 'default';
+    if(!dragging)return; const dy=(x-px)*0.006,dx=(y-py)*0.006; moved+=Math.abs(x-px)+Math.abs(y-py); tRy+=dy;tRx+=dx;vy=dy;vx=dx; tRx=Math.max(-1.4,Math.min(1.4,tRx)); px=x;py=y; };
+  const up=()=>{ if(dragging && moved<6) pulse=1;   // Klick ohne Ziehen: Synapsen-Impuls
+    dragging=false; };
   el.addEventListener('mousedown',e=>down(e.clientX,e.clientY));
   window.addEventListener('mousemove',e=>move(e.clientX,e.clientY));
   window.addEventListener('mouseup',up);
+  el.addEventListener('dblclick',e=>{ if(!overBrain(e.clientX,e.clientY)) return;
+    focussed=!focussed; tZoom = focussed ? 1.55 : 1; });
   el.addEventListener('touchstart',e=>{ if(e.touches[0])down(e.touches[0].clientX,e.touches[0].clientY); },{passive:true});
   window.addEventListener('touchmove',e=>{ if(e.touches[0])move(e.touches[0].clientX,e.touches[0].clientY); },{passive:true});
   window.addEventListener('touchend',up);
@@ -1860,18 +1867,24 @@ requestAnimationFrame(frame);
     const hWorld = 2 * Math.tan(vFOV/2) * dist;       // world height at z=0 plane
     const wWorld = hWorld * bCam.aspect;
     brainGroup.position.set(ndcX * wWorld/2, ndcY * hWorld/2, 0);
-    // beacon radius ~240 world units on the page; scale brain to match (calmer)
-    brainGroup.scale.setScalar(Math.max(0.08, scale * 1.5));
+    // beacon radius ~240 world units on the page; scale brain to match
+    // (base 1.9 = deutlich groesser; focusZoom kommt per Doppelklick dazu)
+    zoom += (tZoom - zoom) * 0.08;
+    brainGroup.scale.setScalar(Math.max(0.08, scale * 1.9 * zoom));
   }
   function loop(){
     requestAnimationFrame(loop);
     bt += 0.016;
     if(!dragging){ tRy+=vy; tRx+=vx; tRx=Math.max(-1.4,Math.min(1.4,tRx)); vy*=0.94; vx*=0.94; if(Math.abs(vy)<2e-4)vy=0; if(Math.abs(vx)<2e-4)vx=0; }
     ry+=(tRy-ry)*0.12; rx+=(tRx-rx)*0.12;
-    const auto = userRot?0:bt*0.12;
+    const auto = userRot?0:bt*(hovering?0.3:0.12);   // unter dem Zeiger dreht es lebendiger
     brainGroup.rotation.y = ry+auto; brainGroup.rotation.x = rx;
     glassMat.uniforms.uTime.value = bt;
-    ptMat.opacity = 0.6 + 0.2*Math.sin(bt*1.5);
+    if(pulse>0) pulse=Math.max(0,pulse-0.02);         // Klick-Impuls klingt ab
+    const glow = hovering?0.25:0;
+    ptMat.opacity = Math.min(1, 0.6 + 0.2*Math.sin(bt*1.5) + glow + pulse*0.5);
+    ptMat.size = 2.2 + glow*2 + pulse*3;
+    rays.material.opacity = Math.min(1, 0.22 + glow + pulse*0.7);
     project();
     bRenderer.render(bScene, bCam);
   }
