@@ -181,17 +181,38 @@ const glassBrain = new THREE.Mesh(shellGeo, glassMat);
 glassBrain.renderOrder = 2;
 brainGroup.add(glassBrain);
 
-// glowing gyri contour lines on the glass surface (wireframe of a coarser shell)
-const wireGeo = new THREE.SphereGeometry(1, 24, 16);
-{
-  const wa = wireGeo.attributes.position.array;
-  for (let i = 0; i < wa.length; i += 3) {
-    const [nx, ny, nz] = brainShape(wa[i], wa[i+1], wa[i+2]);
-    wa[i] = nx*1.005; wa[i+1] = ny*1.005; wa[i+2] = nz*1.005;
+// glowing gyri/sulcus contour lines: meandering grooves that wander over the
+// brain surface like real cortical folds (this is what makes it read as a brain).
+const gyriSegs = [];
+const SULCI = 46;                       // number of winding grooves
+for (let s = 0; s < SULCI; s++) {
+  // each groove sweeps from pole region across the surface with a wavy offset
+  const phi0 = 0.25 + Math.random() * (Math.PI - 0.5);   // latitude band it lives in
+  const dir  = Math.random() * Math.PI * 2;              // travel direction on the sphere
+  const amp  = 0.35 + Math.random() * 0.5;               // how much it meanders
+  const freq = 2 + Math.floor(Math.random() * 4);
+  const len  = 1.4 + Math.random() * 1.6;                // arc length
+  const t0   = Math.random() * Math.PI * 2;
+  const STEP = 26;
+  let prev = null;
+  for (let k = 0; k <= STEP; k++) {
+    const tt = (k / STEP) * len;
+    // path on the unit sphere: base great-circle-ish sweep + sinusoidal wander
+    const theta = t0 + dir * tt;
+    const phi = phi0 + amp * Math.sin(tt * freq) * 0.5 + (tt - len/2) * 0.15;
+    const sx = Math.sin(phi) * Math.cos(theta);
+    const sy = Math.cos(phi);
+    const sz = Math.sin(phi) * Math.sin(theta);
+    const [nx, ny, nz] = brainShape(sx, sy, sz);
+    const cur = [nx * 1.008, ny * 1.008, nz * 1.008];
+    if (prev) gyriSegs.push(prev[0], prev[1], prev[2], cur[0], cur[1], cur[2]);
+    prev = cur;
   }
 }
-const wireMat = new THREE.LineBasicMaterial({ color: 0x6fc0ff, transparent:true, opacity:0.14, blending:THREE.AdditiveBlending, depthWrite:false });
-const gyriLines = new THREE.LineSegments(new THREE.WireframeGeometry(wireGeo), wireMat);
+const gyriGeo = new THREE.BufferGeometry();
+gyriGeo.setAttribute('position', new THREE.BufferAttribute(new Float32Array(gyriSegs), 3));
+const gyriMat = new THREE.LineBasicMaterial({ color: 0xbfe6ff, transparent:true, opacity:0.34, blending:THREE.AdditiveBlending, depthWrite:false });
+const gyriLines = new THREE.LineSegments(gyriGeo, gyriMat);
 gyriLines.renderOrder = 2;
 brainGroup.add(gyriLines);
 
