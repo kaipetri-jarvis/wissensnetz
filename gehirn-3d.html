@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kais KI-Gehirn · 3D</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 100%; height: 100%; overflow: hidden; background: #02040a; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  #app { position: fixed; inset: 0; }
+  canvas { display: block; }
+  #title {
+    position: fixed; top: 18px; left: 0; right: 0; text-align: center;
+    color: #cfe8ff; font-size: 20px; font-weight: 600; letter-spacing: 0.5px;
+    text-shadow: 0 0 18px rgba(80,160,255,0.8); pointer-events: none; z-index: 10;
+  }
+  #sub {
+    position: fixed; top: 46px; left: 0; right: 0; text-align: center;
+    color: #6a8fc0; font-size: 12px; letter-spacing: 0.3px; pointer-events: none; z-index: 10;
+  }
+  #hint {
+    position: fixed; bottom: 14px; left: 0; right: 0; text-align: center;
+    color: #47618a; font-size: 11px; pointer-events: none; z-index: 10;
+  }
+  .label {
+    position: absolute; transform: translate(-50%, -50%);
+    color: #dcecff; font-size: 12px; font-weight: 600; letter-spacing: 0.3px;
+    text-shadow: 0 0 8px rgba(0,0,0,0.9), 0 0 14px rgba(60,140,255,0.6);
+    pointer-events: none; white-space: nowrap; z-index: 5;
+    padding: 2px 7px; border-radius: 8px;
+    background: rgba(8,16,32,0.55); border: 1px solid rgba(90,150,255,0.25);
+  }
+</style>
+</head>
+<body>
+<div id="title">🧠 Kais KI-Gehirn</div>
+<div id="sub">OpenClaw · Jarvis · Ultron — das Nervensystem, das alles verbindet</div>
+<div id="app"></div>
+<div id="hint">Ziehen zum Drehen · Scrollen zum Zoomen</div>
+<div id="labels"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+const scene = new THREE.Scene();
+const app = document.getElementById('app');
+const camera = new THREE.PerspectiveCamera(55, window.innerWidth/window.innerHeight, 0.1, 1000);
+camera.position.set(0, 0, 135);
+
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+app.appendChild(renderer.domElement);
+
+// ---- Brain point cloud (two hemispheres, folded surface) ----
+const brainGroup = new THREE.Group();
+scene.add(brainGroup);
+
+const R = 32; // brain radius scale
+const points = [];
+
+// Generate a brain-ish shape: two symmetric lobed hemispheres with a central fissure
+function brainRadius(theta, phi) {
+  // base radius modulated by gyri-like folds (mirror-symmetric across hemispheres)
+  let r = 1.0;
+  r *= 1.0 + 0.14 * Math.sin(phi * 4.0);
+  r *= 1.0 + 0.10 * Math.cos(theta * 5.0);
+  r *= 1.0 + 0.06 * Math.sin(theta * 9.0 + phi * 2.0);
+  return r;
+}
+
+const NUM = 2800;
+for (let i = 0; i < NUM; i++) {
+  const side = (i % 2 === 0) ? 1 : -1;
+  const u = Math.random();
+  const v = Math.random();
+  const theta = 2 * Math.PI * u;
+  const phi = Math.acos(2 * v - 1);
+  const rr = brainRadius(theta, phi) * (0.9 + Math.random() * 0.1);
+
+  // base ellipsoid coords (single hemisphere lobe centered at origin)
+  let bx = rr * Math.sin(phi) * Math.cos(theta);
+  let by = rr * Math.sin(phi) * Math.sin(theta) * 0.85; // flatten vertically
+  let bz = rr * Math.cos(phi) * 1.25;                    // elongate front-back
+
+  // build ONE lobe on the positive-x side, then mirror it for the other hemisphere
+  let lobeX = Math.abs(bx) * 0.5 + 0.16;   // keep lobe on one side, narrow fissure gap
+  let x = side * lobeX;                     // mirror -> symmetric hemispheres
+  let y = by;
+  let z = bz;
+
+  // squash the bottom (brain stem region)
+  if (y < -0.55) { y = -0.55 + (y + 0.55) * 0.6; }
+
+  points.push(new THREE.Vector3(x * R, y * R, z * R));
+}
+
+// point cloud geometry
+const posArr = new Float32Array(points.length * 3);
+points.forEach((p, i) => { posArr[i*3]=p.x; posArr[i*3+1]=p.y; posArr[i*3+2]=p.z; });
+const ptGeo = new THREE.BufferGeometry();
+ptGeo.setAttribute('position', new THREE.BufferAttribute(posArr, 3));
+
+// glowing sprite for points
+function makeGlowTexture() {
+  const c = document.createElement('canvas'); c.width = c.height = 64;
+  const g = c.getContext('2d');
+  const grd = g.createRadialGradient(32,32,0,32,32,32);
+  grd.addColorStop(0, 'rgba(180,220,255,1)');
+  grd.addColorStop(0.25, 'rgba(90,170,255,0.9)');
+  grd.addColorStop(0.6, 'rgba(40,110,220,0.35)');
+  grd.addColorStop(1, 'rgba(20,60,140,0)');
+  g.fillStyle = grd; g.fillRect(0,0,64,64);
+  const t = new THREE.CanvasTexture(c); return t;
+}
+const glowTex = makeGlowTexture();
+
+const ptMat = new THREE.PointsMaterial({
+  size: 2.2, map: glowTex, transparent: true, depthWrite: false,
+  blending: THREE.AdditiveBlending, color: 0x66b3ff, opacity: 0.95
+});
+const cloud = new THREE.Points(ptGeo, ptMat);
+brainGroup.add(cloud);
+
+// ---- Neural connection lines (nearest neighbors) ----
+const linePos = [];
+const maxLinks = 3, linkDist = 7.5;
+for (let i = 0; i < points.length; i += 2) {
+  let found = 0;
+  for (let j = i + 1; j < points.length && found < maxLinks; j++) {
+    if (points[i].distanceTo(points[j]) < linkDist) {
+      linePos.push(points[i].x, points[i].y, points[i].z, points[j].x, points[j].y, points[j].z);
+      found++;
+    }
+  }
+}
+const lineGeo = new THREE.BufferGeometry();
+lineGeo.setAttribute('position', new THREE.BufferAttribute(new Float32Array(linePos), 3));
+const lineMat = new THREE.LineBasicMaterial({ color: 0x2f7fe0, transparent: true, opacity: 0.18, blending: THREE.AdditiveBlending, depthWrite: false });
+const lines = new THREE.LineSegments(lineGeo, lineMat);
+brainGroup.add(lines);
+
+// ---- Core glow at center ----
+const coreMat = new THREE.SpriteMaterial({ map: glowTex, color: 0x9fd0ff, transparent: true, blending: THREE.AdditiveBlending, opacity: 0.9, depthWrite:false });
+const core = new THREE.Sprite(coreMat);
+core.scale.set(38, 38, 1);
+brainGroup.add(core);
+
+// ---- Agent satellites (outside, accessing the brain) ----
+const AD = 64; // agent orbit distance (closer so labels stay in frame)
+const agents = [
+  { name: 'Jarvis',   color: 0x66e0ff, angle: 0.0,          dist: AD, y: 10 },
+  { name: 'Ultron',   color: 0xff7a7a, angle: Math.PI*0.25, dist: AD, y: -16 },
+  { name: 'ATLAS',    color: 0xffd166, angle: Math.PI*0.5,  dist: AD, y: 20 },
+  { name: 'Gemini',   color: 0xb28dff, angle: Math.PI*0.75, dist: AD, y: -6 },
+  { name: 'ChatGPT',  color: 0x74e39a, angle: Math.PI,      dist: AD, y: 18 },
+  { name: 'Etsy',     color: 0xff9f68, angle: Math.PI*1.25, dist: AD, y: -20 },
+  { name: 'Telegram', color: 0x69b7ff, angle: Math.PI*1.5,  dist: AD, y: 8 },
+  { name: 'Memory',   color: 0xa0f0d0, angle: Math.PI*1.75, dist: AD, y: -10 },
+];
+
+const agentGroup = new THREE.Group();
+scene.add(agentGroup);
+const labelsDiv = document.getElementById('labels');
+const agentObjs = [];
+
+agents.forEach(a => {
+  const pos = new THREE.Vector3(Math.cos(a.angle)*a.dist, a.y, Math.sin(a.angle)*a.dist);
+  // node sprite
+  const mat = new THREE.SpriteMaterial({ map: glowTex, color: a.color, transparent:true, blending:THREE.AdditiveBlending, depthWrite:false });
+  const sp = new THREE.Sprite(mat);
+  sp.scale.set(9, 9, 1); sp.position.copy(pos);
+  agentGroup.add(sp);
+
+  // access line from agent into the brain: target the nearest surface point
+  let target = points[0].clone(), best = Infinity;
+  for (let s = 0; s < points.length; s += 5) {
+    const d = points[s].distanceTo(pos);
+    if (d < best) { best = d; target = points[s].clone(); }
+  }
+  const alGeo = new THREE.BufferGeometry();
+  alGeo.setAttribute('position', new THREE.BufferAttribute(new Float32Array([pos.x,pos.y,pos.z, target.x,target.y,target.z]), 3));
+  const alMat = new THREE.LineBasicMaterial({ color: a.color, transparent:true, opacity:0.45, blending:THREE.AdditiveBlending, depthWrite:false });
+  const al = new THREE.Line(alGeo, alMat);
+  agentGroup.add(al);
+
+  // traveling pulse along the line
+  const pulseMat = new THREE.SpriteMaterial({ map: glowTex, color: 0xffffff, transparent:true, blending:THREE.AdditiveBlending, depthWrite:false });
+  const pulse = new THREE.Sprite(pulseMat); pulse.scale.set(5,5,1);
+  agentGroup.add(pulse);
+
+  const label = document.createElement('div'); label.className = 'label'; label.textContent = a.name;
+  labelsDiv.appendChild(label);
+
+  agentObjs.push({ sp, pos, target, al, pulse, label, color: a.color, phase: Math.random()*Math.PI*2 });
+});
+
+// ---- Interaction: drag to rotate, scroll to zoom ----
+let isDragging = false, prevX = 0, prevY = 0;
+let targetRotY = 0, targetRotX = 0, rotY = 0, rotX = 0;
+let zoom = 135;
+
+function down(x,y){ isDragging=true; prevX=x; prevY=y; }
+function move(x,y){ if(!isDragging) return; targetRotY += (x-prevX)*0.005; targetRotX += (y-prevY)*0.005; targetRotX=Math.max(-1.2,Math.min(1.2,targetRotX)); prevX=x; prevY=y; }
+function up(){ isDragging=false; }
+
+renderer.domElement.addEventListener('mousedown', e=>down(e.clientX,e.clientY));
+window.addEventListener('mousemove', e=>move(e.clientX,e.clientY));
+window.addEventListener('mouseup', up);
+renderer.domElement.addEventListener('touchstart', e=>{ if(e.touches[0]) down(e.touches[0].clientX,e.touches[0].clientY); }, {passive:true});
+window.addEventListener('touchmove', e=>{ if(e.touches[0]) move(e.touches[0].clientX,e.touches[0].clientY); }, {passive:true});
+window.addEventListener('touchend', up);
+renderer.domElement.addEventListener('wheel', e=>{ zoom += e.deltaY*0.05; zoom=Math.max(60,Math.min(240,zoom)); e.preventDefault(); }, {passive:false});
+
+// ---- Animate ----
+let t = 0;
+function animate() {
+  requestAnimationFrame(animate);
+  t += 0.016;
+
+  // auto-rotate slowly + user rotation
+  rotY += (targetRotY - rotY) * 0.08;
+  rotX += (targetRotX - rotX) * 0.08;
+  const autoRot = t * 0.12;
+  brainGroup.rotation.y = rotY + autoRot;
+  brainGroup.rotation.x = rotX;
+  agentGroup.rotation.y = rotY + autoRot;
+  agentGroup.rotation.x = rotX;
+
+  camera.position.z += (zoom - camera.position.z) * 0.08;
+
+  // pulse the point cloud brightness
+  ptMat.opacity = 0.8 + 0.2 * Math.sin(t * 1.5);
+  core.scale.setScalar(36 + 4 * Math.sin(t * 2.0));
+  coreMat.opacity = 0.75 + 0.2 * Math.sin(t * 2.0);
+
+  // agents: bob + traveling pulses + labels
+  agentObjs.forEach(o => {
+    o.sp.scale.setScalar(8 + 2 * Math.sin(t*2 + o.phase));
+    const k = (Math.sin(t*1.2 + o.phase) * 0.5 + 0.5); // 0..1
+    o.pulse.position.lerpVectors(o.pos, o.target, k);
+    o.pulse.material.opacity = 0.9 * (1 - Math.abs(k - 0.5) * 1.2);
+
+    // project label to screen
+    const world = o.pos.clone().applyMatrix4(agentGroup.matrixWorld);
+    const proj = world.project(camera);
+    const sx = (proj.x * 0.5 + 0.5) * window.innerWidth;
+    const sy = (-proj.y * 0.5 + 0.5) * window.innerHeight;
+    if (proj.z < 1) {
+      o.label.style.display = 'block';
+      o.label.style.left = sx + 'px';
+      o.label.style.top = (sy - 16) + 'px';
+    } else { o.label.style.display = 'none'; }
+  });
+
+  renderer.render(scene, camera);
+}
+animate();
+
+window.addEventListener('resize', () => {
+  camera.aspect = window.innerWidth/window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+});
+</script>
+</body>
+</html>
