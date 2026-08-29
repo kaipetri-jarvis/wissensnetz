@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-29T11:28:05+00:00",
+  "generated": "2026-08-29T11:38:28+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-08-29T13:36:49+02:00",
+      "text": "Gehirn-3D: Cyber-Look (Funken, Partikel, Grid)"
+    },
+    {
+      "at": "2026-08-29T13:35:21+02:00",
+      "text": "3D-Gehirn (gehirn-3d.html): Three.js Punktwolke, rotierend, Agenten als Satelliten"
+    },
     {
       "at": "2026-08-29T13:02:50+02:00",
       "text": "Neuronales Gehirn-Netz (lokale Quelle)"
@@ -26,19 +34,11 @@
     {
       "at": "2026-08-29T12:39:06+02:00",
       "text": "Gehirn-Look: Synapsen-Feuern + Dendriten (lokale Quelle gesynct)"
-    },
-    {
-      "at": "2026-08-29T12:28:54+02:00",
-      "text": "Live-Feed für Ökosystem-Station (Stufe 3): Collector + fetch-Loop"
-    },
-    {
-      "at": "2026-08-29T11:55:49+02:00",
-      "text": "System-Graph (Option B): OpenClaw + Assistenten als Fundament, Etsy als erstes Projekt"
     }
   ],
   "cron": [
-    "jarvis-crash-log-watcher crash-log-watcher cron",
     "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
+    "jarvis-crash-log-watcher crash-log-watcher cron",
     "heartbeat:ultron Heartbeat (ultron)",
     "heartbeat:main Heartbeat (main)",
     "jarvis-wissensnetz-auto wissensnetz-auto-update cron"
