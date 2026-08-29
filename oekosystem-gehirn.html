@@ -112,15 +112,15 @@
     .clock .date{display:none;}
     .clock .live{margin-top:2px; font-size:8.5px; letter-spacing:.10em;}
 
-    /* stats: 4 tiles fit the full width in one non-overflowing row.
+    /* stats: kompakter 2x2-Block oben links (statt voller Reihe).
        !important guards the layout props against the wider desktop base rule. */
-    .stats{top:50px !important; left:7px !important; right:7px !important; width:auto !important;
-      display:flex !important; flex-wrap:nowrap !important;
-      gap:5px !important; padding:0 !important;}
-    .stat{flex:1 1 0 !important; min-width:0 !important; width:0 !important; padding:5px 4px; border-radius:10px; overflow:hidden;}
-    .stat .n{font-size:13px; white-space:nowrap;}
+    .stats{top:50px !important; left:7px !important; right:auto !important; width:auto !important;
+      display:grid !important; grid-template-columns:auto auto !important; flex-wrap:unset !important;
+      gap:4px !important; padding:0 !important;}
+    .stat{flex:0 0 auto !important; min-width:0 !important; width:auto !important; padding:4px 7px; border-radius:9px; overflow:hidden;}
+    .stat .n{font-size:12px; white-space:nowrap;}
     .stat .n span{font-size:.5em;}
-    .stat .l{font-size:6.5px; letter-spacing:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+    .stat .l{font-size:6px; letter-spacing:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
 
     /* the wide canvas station panels are unreadable when zoomed to the brain
        on a phone, so hide the desktop legend and surface the key facts in a
@@ -436,7 +436,10 @@ const COL = {
   claude:'#e0a878', gemini:'#6fb4ff', chatgpt:'#4fe0b0',
   codex:'#ff9d6b', github:'#c9d1e6',
   sub:'#b79bff', gold:'#f0c674', beacon:'#8fd7ff',
-  ultron:'#25e0d0', atlas:'#8ab4ff'
+  ultron:'#25e0d0', atlas:'#8ab4ff',
+  // system / infrastructure ring
+  gateway:'#7ee0ff', watchdog:'#ff7a7a', tailscale:'#8f7dff',
+  mac:'#9fb0c4', voice:'#ffcf6b', cron:'#7fd8a0', telegram:'#4aa8ff'
 };
 
 // zones (world coords) — Zonen etwas näher an den Reaktor gerückt
@@ -502,11 +505,35 @@ const AGENTS = [
 ];
 
 // infrastructure nodes — feste Systemknoten (keine wandernden Figuren)
+// verifiziert aus config + launchd + `openclaw cron list` (29.08.2026)
 const INFRA = [
+  // --- Ausgabe / extern (oben rechts, wie gehabt) ---
   {key:'github', name:'GitHub', sub:'Wissensnetz · Gist · Pages', x:800, y:120, col:COL.github,
    states:['push wissensnetz ✓','ARBEITSSTAND.md → Gist synchron','Pages deployed · oekosystem.html live','commit f74c0b9 · Ökosystem mobil']},
   {key:'atlas', name:'ATLAS · Fabrik', sub:'Multi-KI-Software-Fabrik', x:1080, y:120, col:COL.atlas,
    states:['Jarvis prüft als 3. Reviewer (nur-lesend)','coordination-fleet aktiv · Docker online','Postgres + NATS verbunden','Review-Verdikt → Telegram an Kai','schreibgeschützt: kann nichts kaputtmachen']},
+
+  // --- Fundament / System (linke Flanke, prominent: Gateway) ---
+  {key:'gateway', name:'OpenClaw Gateway', sub:'launchd · Port 18789 · das Fundament', x:150, y:110, col:COL.gateway, big:true,
+   states:['ai.openclaw.gateway läuft · KeepAlive','routet alle Kanäle & Agenten','main + ultron gebunden','Config live · kein Reload-Abbruch','das Nervensystem der ganzen Station']},
+  {key:'watchdog', name:'Watchdog', sub:'Selbstheilung · Absturzwarnung', x:150, y:300, col:COL.watchdog,
+   states:['ai.openclaw.watchdog überwacht Gateway','Crash → Neustart + Telegram-Alarm','Crash-Log-Watcher alle 10 Min','hält die Station 24/7 am Leben']},
+  {key:'tailscale', name:'Tailscale', sub:'Tailnet · Fernsteuerung vom iPhone', x:150, y:470, col:COL.tailscale,
+   states:['Mac 100.73.109.29 ↔ iPhone 100.108.47.120','Serve auf Port 18789','Kai steuert die Station vom Handy','verschlüsseltes Mesh · kein offener Port']},
+  {key:'mac', name:'Mac · 24/7-Server', sub:'schläft nie · zugeklappt weiter', x:150, y:635, col:COL.mac,
+   states:['caffeinate · kein Ruhezustand','Deckel zu → läuft weiter','Host für Gateway + alle Dienste','Dauerbetrieb seit Setup']},
+
+  // --- Sprache (oben Mitte-links) ---
+  {key:'voice', name:'Sprache · TTS/STT', sub:'KatjaNeural · Whisper', x:470, y:120, col:COL.voice,
+   states:['TTS Microsoft de-DE-KatjaNeural (auto)','Fallback Google TTS','STT lokal · Whisper (transcribe.sh)','liest jede Antwort vor']},
+
+  // --- Automation / Cron (unten links, ein Sammelknoten) ---
+  {key:'cron', name:'Automation · Cron', sub:'nächtliche & stündliche Jobs', x:360, y:660, col:COL.cron,
+   states:['Wissensnetz-Auto 3:15 · Memory-Dreaming 3:00','Heartbeats main/ultron/atlas stündlich','Activity-Feed live · alle 10 Min','Postfach-Watcher Frau Lind · werktags','läuft, während Kai schläft']},
+
+  // --- Kanal (oben Mitte-rechts) ---
+  {key:'telegram', name:'Telegram', sub:'@Jarvis_Slave · @kai_ultron', x:640, y:120, col:COL.telegram,
+   states:['2 Bots · main + ultron','Kais Hauptkanal','Voice-Notes + Text','Alarme & Übergaben laufen hier']},
 ];
 
 // small sub-agents / minions wandering between zones
@@ -900,11 +927,11 @@ function drawBeaconLabel(bx,by,T){
 function drawInfraNode(n,T){
   const cx=tx(n.x), cy=ty(n.y);
   const pulse=(Math.sin(T*1.6+n.x)*.5+.5);
-  const R=ts(30);
+  const R=ts(n.big?38:30);   // Gateway (big) etwas größer/prominenter
   // soft glow
   ctx.save(); ctx.globalCompositeOperation='lighter';
   const gl=ctx.createRadialGradient(cx,cy,0,cx,cy,R*2.4);
-  gl.addColorStop(0,hexA(n.col,.35)); gl.addColorStop(1,hexA(n.col,0));
+  gl.addColorStop(0,hexA(n.col,n.big?.5:.35)); gl.addColorStop(1,hexA(n.col,0));
   ctx.fillStyle=gl; ctx.beginPath(); ctx.arc(cx,cy,R*2.4,0,6.28); ctx.fill();
   ctx.restore();
   // rotating dashed ring
@@ -917,15 +944,28 @@ function drawInfraNode(n,T){
   const bg=ctx.createLinearGradient(cx,cy-R,cx,cy+R);
   bg.addColorStop(0,'rgba(30,36,60,.9)'); bg.addColorStop(1,'rgba(12,16,32,.9)');
   ctx.fillStyle=bg; ctx.fill();
-  ctx.strokeStyle=hexA(n.col,.8); ctx.lineWidth=ts(1.8); ctx.stroke();
-  // GitHub cat-mark (simplified)
-  ctx.fillStyle=hexA(n.col,.95);
-  ctx.beginPath(); ctx.arc(cx,cy-ts(2),ts(11),0,6.28); ctx.fill();
-  ctx.fillStyle='rgba(12,16,32,1)';
-  ctx.beginPath(); ctx.arc(cx-ts(4),cy-ts(3),ts(2),0,6.28); ctx.fill();
-  ctx.beginPath(); ctx.arc(cx+ts(4),cy-ts(3),ts(2),0,6.28); ctx.fill();
-  ctx.strokeStyle=hexA(n.col,.95); ctx.lineWidth=ts(2.2); ctx.beginPath();
-  ctx.moveTo(cx,cy+ts(8)); ctx.lineTo(cx,cy+ts(16)); ctx.stroke();
+  ctx.strokeStyle=hexA(n.col,.8); ctx.lineWidth=ts(n.big?2.4:1.8); ctx.stroke();
+  // glyph: GitHub keeps its cat-mark; all other system nodes get a clean node-core
+  if(n.key==='github'){
+    ctx.fillStyle=hexA(n.col,.95);
+    ctx.beginPath(); ctx.arc(cx,cy-ts(2),ts(11),0,6.28); ctx.fill();
+    ctx.fillStyle='rgba(12,16,32,1)';
+    ctx.beginPath(); ctx.arc(cx-ts(4),cy-ts(3),ts(2),0,6.28); ctx.fill();
+    ctx.beginPath(); ctx.arc(cx+ts(4),cy-ts(3),ts(2),0,6.28); ctx.fill();
+    ctx.strokeStyle=hexA(n.col,.95); ctx.lineWidth=ts(2.2); ctx.beginPath();
+    ctx.moveTo(cx,cy+ts(8)); ctx.lineTo(cx,cy+ts(16)); ctx.stroke();
+  } else {
+    // concentric node-core: pulsing ring + solid center dot
+    ctx.save(); ctx.globalCompositeOperation='lighter';
+    const cr=ts(9)+ts(2)*pulse;
+    ctx.strokeStyle=hexA(n.col,.7); ctx.lineWidth=ts(1.6);
+    ctx.beginPath(); ctx.arc(cx,cy,cr,0,6.28); ctx.stroke();
+    ctx.restore();
+    ctx.fillStyle=hexA(n.col,.95);
+    ctx.beginPath(); ctx.arc(cx,cy,ts(5),0,6.28); ctx.fill();
+    ctx.fillStyle=hexA('#ffffff',.9);
+    ctx.beginPath(); ctx.arc(cx,cy,ts(2.2),0,6.28); ctx.fill();
+  }
   // label
   ctx.textAlign='center';
   ctx.fillStyle=hexA(n.col,.95); ctx.font=`700 ${ts(13)}px -apple-system,system-ui,sans-serif`;
@@ -1121,13 +1161,24 @@ function qbez(ax,ay,mx,my,bx,by,p){
    ============================================================ */
 // angles chosen so nodes sit AROUND the brain (top arc + sides), clear of the
 // bottom info dock. -PI/2 = straight up; positive = clockwise toward the right.
+// Two concentric rings so the brain isn't overloaded:
+//   ring 0 = INNER = KI / Agenten   ·   ring 1 = OUTER = System / Infrastruktur
 const _ORBIT = [
-  {key:'jarvis',  label:'Jarvis',  col:COL.claude,  ang:-2.55, rk:1.00},
-  {key:'chatgpt', label:'ChatGPT', col:COL.chatgpt, ang:-1.85, rk:1.05},
-  {key:'atlas',   label:'ATLAS',   col:COL.atlas,   ang:-1.15, rk:1.00},
-  {key:'github',  label:'GitHub',  col:COL.github,  ang:-0.45, rk:1.05},
-  {key:'gemini',  label:'Gemini',  col:COL.gemini,  ang: 2.75, rk:1.00},
-  {key:'ultron',  label:'Ultron',  col:COL.ultron,  ang: 0.55, rk:1.05},
+  // --- inner ring: KI / Agenten ---
+  {key:'jarvis',  label:'Jarvis',  col:COL.claude,  ang:-2.55, ring:0},
+  {key:'chatgpt', label:'ChatGPT', col:COL.chatgpt, ang:-1.90, ring:0},
+  {key:'atlas',   label:'ATLAS',   col:COL.atlas,   ang:-1.25, ring:0},
+  {key:'gemini',  label:'Gemini',  col:COL.gemini,  ang: 2.70, ring:0},
+  {key:'ultron',  label:'Ultron',  col:COL.ultron,  ang: 0.55, ring:0},
+  // --- outer ring: System / Infrastruktur ---
+  {key:'gateway',   label:'Gateway',   col:COL.gateway,   ang:-2.85, ring:1, big:true},
+  {key:'watchdog',  label:'Watchdog',  col:COL.watchdog,  ang:-2.15, ring:1},
+  {key:'tailscale', label:'Tailscale', col:COL.tailscale, ang:-1.55, ring:1},
+  {key:'voice',     label:'Sprache',   col:COL.voice,     ang:-0.95, ring:1},
+  {key:'telegram',  label:'Telegram',  col:COL.telegram,  ang:-0.35, ring:1},
+  {key:'github',    label:'GitHub',    col:COL.github,    ang: 0.30, ring:1},
+  {key:'cron',      label:'Cron',      col:COL.cron,      ang: 3.05, ring:1},
+  {key:'mac',       label:'Mac 24/7',  col:COL.mac,       ang: 2.35, ring:1},
 ];
 function drawMobileOrbit(T){
   const bx=tx(800), by=ty(465);
@@ -1135,41 +1186,46 @@ function drawMobileOrbit(T){
   // any node placed UNDER the brain's silhouette is invisibly hidden behind it.
   // Nodes must clear the brain's on-screen radius by a wide margin.
   const brainR = ts(235);
-  let ringR = Math.max(brainR*1.9, 190);
-  ringR = Math.min(ringR, (W/2) - 40, (by - 88));   // keep inside width + below top HUD
+  let ringR = Math.max(brainR*1.7, 172);
+  ringR = Math.min(ringR, (W/2) - 34, (by - 82));   // inner ring: keep inside width + below top HUD
+  const outerR = Math.min(ringR*1.42, (W/2) - 18, (by - 44)); // outer ring: system nodes
   for(const n of _ORBIT){
-    const bob = Math.sin(T*0.9 + n.ang*2.0)*ts(9);
-    const r   = ringR*(n.rk||1);
-    const px = bx + Math.cos(n.ang)*r;
-    const py = by + Math.sin(n.ang)*r*0.78 + bob;     // flattened ellipse, biased outward
+    const base = n.ring ? outerR : ringR;
+    const bob = Math.sin(T*0.9 + n.ang*2.0)*ts(n.ring?6:9);
+    const px = bx + Math.cos(n.ang)*base;
+    const py = by + Math.sin(n.ang)*base*0.80 + bob;   // flattened ellipse, biased outward
     n._px=px; n._py=py;
-    const bend = Math.cos(n.ang) < 0 ? 20 : -20;
+    const bend = Math.cos(n.ang) < 0 ? 18 : -18;
     // gleiche Linien-Optik wie Desktop: drawLink (fließende Bahn + Daten-Pakete)
+    // Systemknoten (outer) dezenter angebunden, damit die KI-Anbindung im Fokus bleibt
     drawLink(px, py, bx, by, n.col, T, n.ang*0.5, bend);
   }
-  for(const n of _ORBIT){
-    drawOrbitNode(n._px, n._py, n.col, n.label, T, n.ang);
-  }
+  // outer (system) nodes first, then inner (KI) on top so KI reads as the core
+  for(const n of _ORBIT){ if(n.ring) drawOrbitNode(n._px, n._py, n.col, n.label, T, n.ang, true); }
+  for(const n of _ORBIT){ if(!n.ring) drawOrbitNode(n._px, n._py, n.col, n.label, T, n.ang, false); }
 }
-function drawOrbitNode(x,y,col,label,T,seed){
+function drawOrbitNode(x,y,col,label,T,seed,small){
+  // system/outer nodes render a touch smaller + dimmer so the KI ring stays the focus
+  const k = small ? 0.78 : 1.0;
+  const gr0 = small ? .42 : .55;
   ctx.save();
   ctx.globalCompositeOperation='lighter';
   // outer soft glow
-  const rg=ctx.createRadialGradient(x,y,0,x,y,ts(26));
-  rg.addColorStop(0,hexA(col,.55)); rg.addColorStop(.5,hexA(col,.16)); rg.addColorStop(1,hexA(col,0));
-  ctx.fillStyle=rg; ctx.beginPath(); ctx.arc(x,y,ts(26),0,6.28); ctx.fill();
+  const rg=ctx.createRadialGradient(x,y,0,x,y,ts(26*k));
+  rg.addColorStop(0,hexA(col,gr0)); rg.addColorStop(.5,hexA(col,.16)); rg.addColorStop(1,hexA(col,0));
+  ctx.fillStyle=rg; ctx.beginPath(); ctx.arc(x,y,ts(26*k),0,6.28); ctx.fill();
   // pulsing activity ring
-  const pr=ts(13)+ts(2.5)*Math.sin(T*2.2+seed);
-  ctx.strokeStyle=hexA(col,.5); ctx.lineWidth=ts(1.4);
+  const pr=ts(13*k)+ts(2.5)*Math.sin(T*2.2+seed);
+  ctx.strokeStyle=hexA(col,small?.4:.5); ctx.lineWidth=ts(1.4);
   ctx.beginPath(); ctx.arc(x,y,pr,0,6.28); ctx.stroke();
   ctx.restore();
   // solid core dot
   ctx.fillStyle=hexA(col,.95);
-  ctx.beginPath(); ctx.arc(x,y,ts(6),0,6.28); ctx.fill();
+  ctx.beginPath(); ctx.arc(x,y,ts(6*k),0,6.28); ctx.fill();
   ctx.fillStyle=hexA('#ffffff',.9);
-  ctx.beginPath(); ctx.arc(x,y,ts(2.6),0,6.28); ctx.fill();
+  ctx.beginPath(); ctx.arc(x,y,ts(2.6*k),0,6.28); ctx.fill();
   // label pill under the node
-  ctx.font=`700 ${ts(11)}px -apple-system,system-ui,sans-serif`;
+  ctx.font=`700 ${ts((small?10:11))}px -apple-system,system-ui,sans-serif`;
   ctx.textAlign='center'; ctx.textBaseline='middle';
   const tw=ctx.measureText(label).width, padX=ts(7), ph=ts(17), pw=tw+padX*2;
   const ly=y+ts(24);
@@ -1538,11 +1594,11 @@ function frame(now){
   // keep a clean brain + reactor; all their info lives in the HTML dock instead.
   const MOBILE = (W < H);
   if(MOBILE){
-    // RECHERCHE-TERMINAL im freien Band zwischen Stat-Kacheln und Gehirn (Screen-Space)
-    const termW = Math.min(W-28, 360);
+    // RECHERCHE-TERMINAL kompakt im freien Band zwischen Stat-Kacheln und Gehirn (Screen-Space)
+    const termW = Math.min(W-40, 300);
     const termX = (W-termW)/2;
-    const termY = 190;
-    const termH = 168;
+    const termY = 180;
+    const termH = 132;
     drawLogTerminal(ZONES[4], T, dt, {x:termX, y:termY, w:termW, h:termH});
     drawBeacon(T);
     updateSubs(dt,T);   // keep sub state fresh (cheap) though not drawn
@@ -1576,8 +1632,8 @@ function frame(now){
   }
   // beacon -> shop console (main output flow)
   drawLink(bx, by, tx(shop.x+shop.w/2), ty(shop.y+shop.h/2), COL.gold, T, 0.15, -24);
-  // beacon -> GitHub (sync/deploy flow)
-  for(const n of INFRA){ drawLink(bx, by, tx(n.x), ty(n.y)+ts(30), n.col, T, 0.5, 20); }
+  // beacon -> system/infra nodes (sync/deploy/heartbeat flows)
+  for(const n of INFRA){ drawLink(bx, by, tx(n.x), ty(n.y)+ts(n.big?38:30), n.col, T, 0.5, (n.x<800?24:-24)); }
   for(const n of INFRA){ drawInfraNode(n,T); }
 
   // subs behind figures
