@@ -1004,7 +1004,7 @@ function drawBeaconLabel(bx,by,T){
 function drawInfraNode(n,T){
   const cx=tx(n.x), cy=ty(n.y);
   const pulse=(Math.sin(T*1.6+n.x)*.5+.5);
-  const R=ts((n.big?19:15)*(n.sz||1));   // alle Infra-Knoten 50% kleiner; n.sz: individueller Faktor
+  const R=ts((n.big?11.6:9.2)*(n.sz||1));   // Infra-Knoten nochmal 39% kleiner; n.sz: individueller Faktor
   // soft glow
   ctx.save(); ctx.globalCompositeOperation='lighter';
   const gl=ctx.createRadialGradient(cx,cy,0,cx,cy,R*2.4);
@@ -1702,7 +1702,7 @@ function frame(now){
   // beacon -> shop console (main output flow)
   drawLink(bx, by, tx(shop.x+shop.w/2), ty(shop.y+shop.h/2), COL.gold, T, 0.15, -24);
   // beacon -> system/infra nodes (sync/deploy/heartbeat flows)
-  for(const n of INFRA){ drawLink(bx, by, tx(n.x), ty(n.y)+ts((n.big?19:15)*(n.sz||1)), n.col, T, 0.5, (n.x<800?24:-24)); }
+  for(const n of INFRA){ drawLink(bx, by, tx(n.x), ty(n.y)+ts((n.big?11.6:9.2)*(n.sz||1)), n.col, T, 0.5, (n.x<800?24:-24)); }
 
   // zones (back to front)
   drawLogTerminal(ZONES[4],T,dt);   // recherche (back left) — log stream
