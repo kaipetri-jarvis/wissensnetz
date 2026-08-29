@@ -1748,7 +1748,7 @@ renderTicker();
    as scrollable cards, because the wide canvas panels are illegible when the
    phone view is zoomed onto the central brain. Data comes from the same
    AGENTS/CATALOG arrays the canvas uses, so it stays in sync/truthful. */
-const _mdockAgents = ['jarvis','ultron','gemini','chatgpt'];
+const _mdockAgents = ['jarvis','ultron','gemini','chatgpt','codex'];
 const _colClass = {claude:'d',ultron:'u',gemini:'b',chatgpt:'c'};
 function buildMDock(){
   const row = document.getElementById('mrow');
@@ -1760,6 +1760,18 @@ function buildMDock(){
     html += `<div class="mcard" data-agent="${a.key}">`
       + `<div class="mh"><span class="dot" style="background:${a.col};color:${a.col}"></span>${a.name}</div>`
       + `<div class="mt" data-role="task"><b>Gerade:</b> ${task}</div></div>`;
+  }
+  // weitere Systeme der Station (statisch, gleiche Optik wie die Agenten-Karten)
+  const SYSTEME = [
+    ['ATLAS · Fabrik',   'COL.atlas',    'Agenten-Fabrik · Builds &amp; Review-Verdikte an Kai'],
+    ['OpenClaw · Gateway','COL.gateway', 'Synapsen-Kern · Telegram-Kanäle &amp; Cron, 24/7 auf dem Mac'],
+    ['Watchdog',         'COL.watchdog', 'überwacht Gateway &amp; Logs · Crash-Check alle 10 Min'],
+    ['Recherche · eRank','COL.sub',      'Live-Etsy-Scan · Keywords, Ranks &amp; Trends'],
+  ];
+  for(const [nm,colRef,txt] of SYSTEME){
+    const col = colRef==='COL.atlas'?COL.atlas:colRef==='COL.gateway'?COL.gateway:colRef==='COL.watchdog'?COL.watchdog:COL.sub;
+    html += `<div class="mcard"><div class="mh"><span class="dot" style="background:${col};color:${col}"></span>${nm}</div>`
+      + `<div class="mt">${txt}</div></div>`;
   }
   // shop / inventory card with real products + prices
   const prods = CATALOG.slice(0,6).map(([nm,pr])=>
