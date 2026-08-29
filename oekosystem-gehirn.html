@@ -885,14 +885,13 @@ function drawBeaconLabel(bx,by,T){
   // on phones the area below the core is occupied by the info dock, so
   // place the label just under the core (fixed screen offset) to avoid overlap.
   const mobile = (W < H);
+  // Title "SYNAPSEN-KERN · OpenClaw" removed per request; keep only the dezente
+  // live pulse line at the title's former position.
   const ly1 = mobile ? by + 92 : by + ts(215);
-  const ly2 = mobile ? ly1 + 14 : by + ts(230);
   ctx.save();
-  ctx.fillStyle=hexA(COL.beacon,.9); ctx.font=`700 ${mobile?12:ts(13)}px -apple-system,system-ui,sans-serif`;
   ctx.textAlign='center';
-  ctx.fillText('SYNAPSEN-KERN · OpenClaw', bx, ly1);
   ctx.fillStyle=hexA(COL.beacon,.5); ctx.font=`500 ${mobile?9:ts(9.5)}px ui-monospace,monospace`;
-  ctx.fillText('neuronal aktiv · '+(3200+Math.floor((Math.sin(T*2)*.5+.5)*180))+' Signale/s', bx, ly2);
+  ctx.fillText('neuronal aktiv · '+(3200+Math.floor((Math.sin(T*2)*.5+.5)*180))+' Signale/s', bx, ly1);
   ctx.restore();
 }
 
