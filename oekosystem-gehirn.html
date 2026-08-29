@@ -71,7 +71,7 @@
   .ticker .tt{color:var(--muted);} .ticker b{color:var(--ink); font-weight:700;}
   @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
 
-  .legend{position:fixed; z-index:5; right:16px; bottom:56px; display:flex; flex-direction:column; gap:5px;
+  .legend{position:fixed; z-index:5; left:16px; bottom:56px; display:flex; flex-direction:column; gap:5px;
     background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:9px 12px; backdrop-filter:blur(14px);
     -webkit-backdrop-filter:blur(14px);
     font-size:10.5px; color:var(--muted); box-shadow:0 8px 30px rgba(0,0,0,.4);}
@@ -81,7 +81,7 @@
     letter-spacing:.08em; text-transform:uppercase; opacity:.7; pointer-events:none; text-align:center; max-width:92vw;}
 
   /* zoom buttons */
-  .zoombar{position:fixed; z-index:6; right:14px; bottom:60px; display:flex; flex-direction:column; gap:8px;}
+  .zoombar{position:fixed; z-index:6; right:14px; bottom:96px; display:flex; flex-direction:column; gap:8px;}
   .zoombar button{width:44px; height:44px; border-radius:12px; border:1px solid rgba(255,255,255,.14);
     background:rgba(18,20,28,.72); backdrop-filter:blur(8px); color:var(--ink); font-size:22px; line-height:1;
     font-weight:700; cursor:pointer; display:flex; align-items:center; justify-content:center;
@@ -523,10 +523,10 @@ const COL = {
 const ZONES = [
   {key:'werkstatt', label:'WERKSTATT', sub:'Jarvis baut Produkte', x:275, y:565, w:360, h:150, col:COL.claude},
   {key:'design',    label:'DESIGN-LABOR', sub:'Gemini · Thumbnails', x:965, y:565, w:360, h:150, col:COL.gemini},
-  {key:'deck',      label:'STRATEGIE-DECK', sub:'ChatGPT · Nischen', x:630, y:270, w:350, h:135, col:COL.chatgpt},
+  {key:'deck',      label:'STRATEGIE-DECK', sub:'ChatGPT · Nischen', x:1420, y:490, w:340, h:135, col:COL.chatgpt},
   {key:'shop',      label:'ETSY-SHOP-KONSOLE', sub:'DeskLane Studio', x:1095, y:285, w:340, h:250, col:COL.gold},
-  {key:'recherche', label:'RECHERCHE-TERMINAL', sub:'eRank · Live-Etsy', x:170, y:270, w:300, h:250, col:COL.sub},
-  {key:'ultron',    label:'ZWEITER KOPF · Ultron', sub:'paralleler Denker · prüft gegen', x:620, y:700, w:360, h:132, col:COL.ultron},
+  {key:'recherche', label:'RECHERCHE-TERMINAL', sub:'eRank · Live-Etsy', x:360, y:270, w:300, h:250, col:COL.sub},
+  {key:'ultron',    label:'ZWEITER KOPF · Ultron', sub:'paralleler Denker · prüft gegen', x:620, y:742, w:360, h:132, col:COL.ultron},
 ];
 
 // main agents — leuchtende Figuren; face/pose leicht variiert
@@ -561,7 +561,7 @@ const AGENTS = [
       'recherchiert Nische: Vermieter-/Ferienwohnungs-Set…',
     ]},
   { key:'chatgpt', name:'ChatGPT', model:'openai/gpt-5.5', col:COL.chatgpt,
-    zone:'deck', x:805, y:325, face:'brain', pose:'wide',
+    zone:'deck', x:1400, y:545, face:'brain', pose:'wide',
     states:[
       'entwirft Bundle-Strategie: „Selbstständig Startklar" 39 €',
       'skizziert Pflege-/Angehörigen-Mappe (11 S., würdevoll)…',
@@ -571,7 +571,7 @@ const AGENTS = [
       'Idee: Jobwechsel-System mit Gehaltsverhandlungs-Rechner',
     ]},
   { key:'ultron', name:'Ultron', model:'zweiter Assistent · läuft auf claude-opus-4-8', col:COL.ultron,
-    zone:'ultron', x:800, y:752, face:'dualcore', pose:'upright',
+    zone:'ultron', x:800, y:795, face:'dualcore', pose:'upright',
     states:[
       'Nehme mir das im eigenen Kontext vor — melde mich mit dem Ergebnis.',
       'Gegengeprüft. Übergabe an Jarvis läuft.',
@@ -585,7 +585,7 @@ const AGENTS = [
 // verifiziert aus config + launchd + `openclaw cron list` (29.08.2026)
 const INFRA = [
   // --- Ausgabe / extern (oben rechts, wie gehabt) ---
-  {key:'github', name:'GitHub', sub:'Wissensnetz · Gist · Pages', x:800, y:120, col:COL.github,
+  {key:'github', name:'GitHub', sub:'Wissensnetz · Gist · Pages', x:940, y:120, col:COL.github,
    states:['push wissensnetz ✓','ARBEITSSTAND.md → Gist synchron','Pages deployed · oekosystem.html live','commit f74c0b9 · Ökosystem mobil']},
   {key:'atlas', name:'ATLAS · Fabrik', sub:'Multi-KI-Software-Fabrik', x:1080, y:120, col:COL.atlas,
    states:['Jarvis prüft als 3. Reviewer (nur-lesend)','coordination-fleet aktiv · Docker online','Postgres + NATS verbunden','Review-Verdikt → Telegram an Kai','schreibgeschützt: kann nichts kaputtmachen']},
