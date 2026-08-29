@@ -100,21 +100,56 @@
   .infocard .ic-task{font-size:13.5px; line-height:1.5; color:var(--ink);}
   .infocard .ic-task b{color:#fff;}
 
+  /* ---------- mobile info dock (HTML overlay, phone only) ---------- */
+  .mdock{display:none;}
   @media (max-width:720px){
-    .brand .sub{max-width:52vw;}
-    .stats{top:66px; left:10px; gap:6px;}
-    .stat{padding:6px 9px; min-width:0;}
-    .stat .l{font-size:8px;}
-    .legend{display:none;}
-    .top{padding:10px 12px; align-items:center;}
-    .brand h1{font-size:17px; white-space:nowrap;}
-    .brand .sub{max-width:56vw; font-size:10px; margin-top:3px;}
-    .clock{min-width:0;}
-    .clock .time{font-size:16px;}
+    /* top HUD compacted */
+    .top{padding:9px 12px 8px; align-items:flex-start; gap:10px;}
+    .brand h1{font-size:15.5px; white-space:normal; line-height:1.08;}
+    .brand .sub{max-width:58vw; font-size:9.5px; margin-top:2px;}
+    .clock{min-width:0; flex:0 0 auto; text-align:right;}
+    .clock .time{font-size:14px;}
     .clock .date{display:none;}
-    .clock .live{margin-top:3px;}
-    .hint{font-size:8.5px; bottom:50px;}
-    .stats{top:58px;}
+    .clock .live{margin-top:2px; font-size:8.5px; letter-spacing:.10em;}
+
+    /* stats: 4 tiles fit the full width in one non-overflowing row.
+       !important guards the layout props against the wider desktop base rule. */
+    .stats{top:50px !important; left:7px !important; right:7px !important; width:auto !important;
+      display:flex !important; flex-wrap:nowrap !important;
+      gap:5px !important; padding:0 !important;}
+    .stat{flex:1 1 0 !important; min-width:0 !important; width:0 !important; padding:5px 4px; border-radius:10px; overflow:hidden;}
+    .stat .n{font-size:13px; white-space:nowrap;}
+    .stat .n span{font-size:.5em;}
+    .stat .l{font-size:6.5px; letter-spacing:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+
+    /* the wide canvas station panels are unreadable when zoomed to the brain
+       on a phone, so hide the desktop legend and surface the key facts in a
+       dedicated HTML dock instead. */
+    .legend{display:none;}
+    .hint{display:none;}
+    .zoombar{bottom:auto; top:96px; right:8px; gap:6px;}
+    .zoombar button{width:38px; height:38px; font-size:19px; border-radius:10px;}
+
+    /* info dock: readable, scrollable card strip sitting above the ticker */
+    .mdock{display:block; position:fixed; z-index:6; left:0; right:0; bottom:44px;
+      padding:8px 8px 10px; pointer-events:none;
+      background:linear-gradient(0deg,rgba(2,3,10,.92),rgba(2,3,10,.55) 62%,rgba(2,3,10,0));}
+    .mdock .mrow{display:flex; gap:7px; overflow-x:auto; overflow-y:hidden;
+      -webkit-overflow-scrolling:touch; scrollbar-width:none; pointer-events:auto; padding-bottom:2px;}
+    .mdock .mrow::-webkit-scrollbar{display:none;}
+    .mcard{flex:0 0 auto; min-width:172px; max-width:200px; background:var(--panel);
+      border:1px solid var(--line); border-radius:12px; padding:8px 10px; backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px); box-shadow:0 6px 22px rgba(0,0,0,.42);}
+    .mcard.wide{min-width:200px; max-width:230px;}
+    .mcard .mh{display:flex; align-items:center; gap:6px; font-size:11px; font-weight:800; letter-spacing:.01em;}
+    .mcard .mh .dot{width:8px; height:8px; border-radius:50%; box-shadow:0 0 8px currentColor; flex:0 0 auto;}
+    .mcard .mt{font-size:10px; line-height:1.42; color:var(--muted); margin-top:4px;}
+    .mcard .mt b{color:var(--ink); font-weight:700;}
+    .mcard .prow{display:flex; justify-content:space-between; gap:8px; font-size:10px; line-height:1.7;}
+    .mcard .prow span:first-child{color:var(--ink); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+    .mcard .prow span:last-child{color:var(--gold); font-weight:700; font-variant-numeric:tabular-nums; flex:0 0 auto;}
+    .mdock .mswipe{font-size:8.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--dim);
+      text-align:center; margin-bottom:5px; pointer-events:none;}
   }
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -167,6 +202,12 @@
   <div class="ic-task" id="icTask">—</div>
 </div>
 
+<!-- mobile-only info dock: key readable facts as horizontally-scrollable cards -->
+<div class="mdock" id="mdock">
+  <div class="mswipe">← wischen · Agenten &amp; Shop →</div>
+  <div class="mrow" id="mrow"></div>
+</div>
+
 <div class="ticker">
   <div class="tag"><span class="pdot"></span> Live</div>
   <div class="track" id="track"></div>
@@ -198,10 +239,16 @@ function resize(){
   const portrait = W < H;
   let scale;
   if(portrait){
-    // Portrait (phone): the station is a wide landscape scene, so fit it to the
-    // HEIGHT and zoom in on the central brain + nearby agents; the outer panels
-    // are reachable by dragging. This keeps the centre big and readable.
-    scale = sy * 0.92;
+    // Portrait (phone): the station is a wide landscape scene. Size the fit so
+    // the central glass brain is BIG but fully visible inside the clear band
+    // between the top stats and the bottom info dock — not clipped, not tiny.
+    // The brain's on-screen diameter is ~ (2*brainWorldR)*effScale; brainWorldR≈235.
+    const topUI = 108, botUI = 178;              // reserved screen bands
+    const band  = Math.max(220, H - topUI - botUI);
+    const brainWorldD = 470;                     // ~ visible brain diameter in world units
+    const scaleForWidth  = (W   * 0.90) / brainWorldD;
+    const scaleForHeight = (band * 1.00) / brainWorldD;
+    scale = Math.min(scaleForWidth, scaleForHeight);
   } else {
     scale = Math.max(sx, sy) * 1.02;
   }
@@ -209,13 +256,19 @@ function resize(){
   const dispW = WORLD_W*scale, dispH = WORLD_H*scale;
   fit.ox = (W - dispW)/2;
   fit.oy = (H - dispH)/2;
-  if(!fit._init){
-    fit._init=true;
-    if(portrait){
-      // centre the view on the brain/reactor (world 800,465)
-      pan.x = (W/2)  - (fit.ox + 800*fit.scale);
-      pan.y = (H*0.5)- (fit.oy + 465*fit.scale);
-    }
+  // On phones we lock the view (no residual pan) and centre the brain in the
+  // usable band: below the compact top HUD/stats, above the info dock + ticker.
+  if(portrait){
+    const topUI = 108, botUI = 178;
+    // Bias the anchor DOWN: the anatomical brain's mass sits above the beacon
+    // point (world 465), so dropping it ~0.16·H centres the brain in the band
+    // and uses the lower space instead of crowding the top stats.
+    const bandCentre = topUI + (H - topUI - botUI)/2 + H*0.10;
+    pan.x = (W/2)       - (fit.ox + 800*fit.scale);
+    pan.y = bandCentre  - (fit.oy + 465*fit.scale);
+    fit._init = true;
+  } else if(!fit._init){
+    fit._init = true;
   }
   clampPan();
 }
@@ -234,6 +287,12 @@ function ts(v){ return v*effScale(); }
 /* keep pan inside bounds given current zoom */
 function clampPan(){
   const dispW = WORLD_W*effScale(), dispH = WORLD_H*effScale();
+  // On phones the view is deliberately locked to the brain-in-band framing set
+  // by resize(); allow a little slack around it but keep the brain centred.
+  if(W < H && uz<=1.001){
+    panMax.x = 30; panMax.y = 30;
+    return;   // keep resize()'s exact pan (don't recentre to world origin)
+  }
   panMax.x = Math.max(0,(dispW - W)/2 + 40);
   panMax.y = Math.max(0,(dispH - H)/2 + 60);
   pan.x = Math.max(-panMax.x, Math.min(panMax.x, pan.x));
@@ -787,12 +846,16 @@ function drawBeacon(T){
   }
   ctx.restore();
 
-  // label
-  ctx.fillStyle=hexA(COL.beacon,.9); ctx.font=`700 ${ts(13)}px -apple-system,system-ui,sans-serif`;
+  // label — on phones the area below the core is occupied by the info dock, so
+  // place the label just under the core (fixed screen offset) to avoid overlap.
+  const mobile = (W < H);
+  const ly1 = mobile ? by + 92 : by + ts(215);
+  const ly2 = mobile ? ly1 + 14 : by + ts(230);
+  ctx.fillStyle=hexA(COL.beacon,.9); ctx.font=`700 ${mobile?12:ts(13)}px -apple-system,system-ui,sans-serif`;
   ctx.textAlign='center';
-  ctx.fillText('SYNAPSEN-KERN · OpenClaw', bx, by+ts(215));
-  ctx.fillStyle=hexA(COL.beacon,.5); ctx.font=`500 ${ts(9.5)}px ui-monospace,monospace`;
-  ctx.fillText('neuronal aktiv · '+(3200+Math.floor((Math.sin(T*2)*.5+.5)*180))+' Signale/s', bx, by+ts(230));
+  ctx.fillText('SYNAPSEN-KERN · OpenClaw', bx, ly1);
+  ctx.fillStyle=hexA(COL.beacon,.5); ctx.font=`500 ${mobile?9:ts(9.5)}px ui-monospace,monospace`;
+  ctx.fillText('neuronal aktiv · '+(3200+Math.floor((Math.sin(T*2)*.5+.5)*180))+' Signale/s', bx, ly2);
 }
 
 /* ---- infrastructure node (fester Systemknoten, z.B. GitHub) ---- */
@@ -1359,6 +1422,18 @@ function frame(now){
   ctx.clearRect(0,0,W,H);
   drawBackground(T);
 
+  // On phones (portrait) the wide landscape station panels + agent figures are
+  // positioned off to the sides and only clutter the brain, so we hide them and
+  // keep a clean brain + reactor; all their info lives in the HTML dock instead.
+  const MOBILE = (W < H);
+  if(MOBILE){
+    drawBeacon(T);
+    updateSubs(dt,T);   // keep sub state fresh (cheap) though not drawn
+    updateAgents(dt);   // keep agent task typewriter running for the dock
+    requestAnimationFrame(frame);
+    return;
+  }
+
   // zones (back to front)
   drawLogTerminal(ZONES[4],T,dt);   // recherche (back left) — log stream
   drawZone(ZONES[2],T);             // deck
@@ -1416,6 +1491,43 @@ function renderTicker(){
   track.innerHTML=build()+build();
 }
 renderTicker();
+
+/* ---------- mobile info dock (phone only) ----------
+   Surfaces the key readable facts (agents + current task, top shop products)
+   as scrollable cards, because the wide canvas panels are illegible when the
+   phone view is zoomed onto the central brain. Data comes from the same
+   AGENTS/CATALOG arrays the canvas uses, so it stays in sync/truthful. */
+const _mdockAgents = ['jarvis','ultron','gemini','chatgpt'];
+const _colClass = {claude:'d',ultron:'u',gemini:'b',chatgpt:'c'};
+function buildMDock(){
+  const row = document.getElementById('mrow');
+  if(!row) return;
+  let html = '';
+  for(const key of _mdockAgents){
+    const a = AGENTS.find(x=>x.key===key); if(!a) continue;
+    const task = (a.target || a.states[0]);
+    html += `<div class="mcard" data-agent="${a.key}">`
+      + `<div class="mh"><span class="dot" style="background:${a.col};color:${a.col}"></span>${a.name}</div>`
+      + `<div class="mt" data-role="task"><b>Gerade:</b> ${task}</div></div>`;
+  }
+  // shop / inventory card with real products + prices
+  const prods = CATALOG.slice(0,6).map(([nm,pr])=>
+    `<div class="prow"><span>${nm}</span><span>${pr}</span></div>`).join('');
+  html += `<div class="mcard wide"><div class="mh">`
+    + `<span class="dot" style="background:var(--gold);color:var(--gold)"></span>ETSY · Inventar</div>`
+    + `<div style="margin-top:5px">${prods}</div></div>`;
+  row.innerHTML = html;
+}
+buildMDock();
+/* refresh the agent task lines so the dock tracks the live typewriter status */
+setInterval(()=>{
+  const row=document.getElementById('mrow'); if(!row) return;
+  row.querySelectorAll('.mcard[data-agent]').forEach(card=>{
+    const a=AGENTS.find(x=>x.key===card.dataset.agent); if(!a) return;
+    const el=card.querySelector('[data-role="task"]');
+    if(el) el.innerHTML = '<b>Gerade:</b> ' + (a.target||a.states[0]);
+  });
+}, 1500);
 
 /* Live-Feed: lädt echte Aktivität (Bots/ATLAS/Commits) und mischt sie ein.
    Aktualität im Minutentakt — die Datei wird serverseitig per Cron erneuert. */
