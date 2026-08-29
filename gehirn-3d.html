@@ -194,6 +194,61 @@ agents.forEach(a => {
   agentObjs.push({ sp, pos, target, al, pulse, label, color: a.color, phase: Math.random()*Math.PI*2 });
 });
 
+// ---- Cyber background: grid plane + floating data particles ----
+const bgGroup = new THREE.Group();
+scene.add(bgGroup);
+
+// faint circuit grid far behind the brain
+const grid = new THREE.GridHelper(600, 40, 0x0d3a66, 0x0a2748);
+grid.material.transparent = true; grid.material.opacity = 0.12;
+grid.position.set(0, -60, -120);
+grid.rotation.x = Math.PI * 0.04;
+bgGroup.add(grid);
+
+// floating digital particles drifting in the space around the brain
+const PN = 600;
+const pfPos = new Float32Array(PN * 3);
+const pfVel = [];
+for (let i = 0; i < PN; i++) {
+  const rx = (Math.random()-0.5)*260, ry = (Math.random()-0.5)*180, rz = (Math.random()-0.5)*220;
+  pfPos[i*3]=rx; pfPos[i*3+1]=ry; pfPos[i*3+2]=rz;
+  pfVel.push((Math.random()-0.5)*0.06, (Math.random()*0.05+0.02), (Math.random()-0.5)*0.06);
+}
+const pfGeo = new THREE.BufferGeometry();
+pfGeo.setAttribute('position', new THREE.BufferAttribute(pfPos, 3));
+const pfMat = new THREE.PointsMaterial({ size: 1.4, map: glowTex, color: 0x3aa0ff, transparent:true, opacity:0.5, blending:THREE.AdditiveBlending, depthWrite:false });
+const dataParticles = new THREE.Points(pfGeo, pfMat);
+bgGroup.add(dataParticles);
+
+// ---- Electric spark bolts arcing through the brain net ----
+const SPARKS = 7;
+const sparkObjs = [];
+for (let i = 0; i < SPARKS; i++) {
+  const geo = new THREE.BufferGeometry();
+  geo.setAttribute('position', new THREE.BufferAttribute(new Float32Array(6*3), 3)); // up to 6 segment nodes
+  const mat = new THREE.LineBasicMaterial({ color: 0xbfe4ff, transparent:true, opacity:0, blending:THREE.AdditiveBlending, depthWrite:false });
+  const bolt = new THREE.Line(geo, mat);
+  brainGroup.add(bolt);
+  sparkObjs.push({ bolt, geo, mat, life: 0, ttl: 0, next: Math.random()*1.5 });
+}
+
+// build a jagged bolt between two random brain points
+function fireSpark(s) {
+  const a = points[(Math.random()*points.length)|0];
+  const b = points[(Math.random()*points.length)|0];
+  const seg = 5;
+  const arr = s.geo.attributes.position.array;
+  for (let k = 0; k <= seg; k++) {
+    const tt = k/seg;
+    const jitter = (k===0||k===seg) ? 0 : 4;
+    arr[k*3]   = a.x + (b.x-a.x)*tt + (Math.random()-0.5)*jitter;
+    arr[k*3+1] = a.y + (b.y-a.y)*tt + (Math.random()-0.5)*jitter;
+    arr[k*3+2] = a.z + (b.z-a.z)*tt + (Math.random()-0.5)*jitter;
+  }
+  s.geo.attributes.position.needsUpdate = true;
+  s.life = 0; s.ttl = 0.18 + Math.random()*0.22;
+}
+
 // ---- Interaction: drag to rotate, scroll to zoom ----
 let isDragging = false, prevX = 0, prevY = 0;
 let targetRotY = 0, targetRotX = 0, rotY = 0, rotX = 0;
@@ -227,6 +282,30 @@ function animate() {
   agentGroup.rotation.x = rotX;
 
   camera.position.z += (zoom - camera.position.z) * 0.08;
+
+  // background parallax + drifting data particles
+  bgGroup.rotation.y = (rotY + autoRot) * 0.3;
+  const pa = pfGeo.attributes.position.array;
+  for (let i = 0; i < PN; i++) {
+    pa[i*3]   += pfVel[i*3];
+    pa[i*3+1] += pfVel[i*3+1];
+    pa[i*3+2] += pfVel[i*3+2];
+    if (pa[i*3+1] > 95) pa[i*3+1] = -95; // wrap upward drift
+  }
+  pfGeo.attributes.position.needsUpdate = true;
+  pfMat.opacity = 0.35 + 0.2 * Math.sin(t * 0.8);
+
+  // electric sparks: fire on timer, then fade
+  sparkObjs.forEach(s => {
+    s.next -= 0.016;
+    if (s.next <= 0 && s.ttl <= 0) { fireSpark(s); s.next = 0.4 + Math.random()*1.8; }
+    if (s.ttl > 0) {
+      s.life += 0.016;
+      const k = s.life / s.ttl;
+      s.mat.opacity = k < 1 ? Math.sin(k * Math.PI) * 0.95 : 0;
+      if (k >= 1) s.ttl = 0;
+    }
+  });
 
   // pulse the point cloud brightness
   ptMat.opacity = 0.8 + 0.2 * Math.sin(t * 1.5);
