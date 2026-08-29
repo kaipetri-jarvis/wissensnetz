@@ -9,16 +9,44 @@
   html, body { width: 100%; height: 100%; overflow: hidden; background: #02040a; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
   #app { position: fixed; inset: 0; }
   canvas { display: block; }
-  #title {
-    position: fixed; top: env(safe-area-inset-top, 14px); padding-top: 6px; left: 0; right: 0; text-align: center;
-    color: #cfe8ff; font-size: clamp(17px, 5vw, 22px); font-weight: 700; letter-spacing: 0.5px;
-    text-shadow: 0 0 18px rgba(80,160,255,0.8); pointer-events: none; z-index: 10;
+  /* ---- Ökosystem-Station header (brand + clock + stat cards), like the old Station ---- */
+  #top {
+    position: fixed; z-index: 10; top: 0; left: 0; right: 0;
+    padding: calc(env(safe-area-inset-top, 10px) + 12px) 16px 10px;
+    display: flex; align-items: flex-start; justify-content: space-between; gap: 12px;
+    background: linear-gradient(180deg, rgba(2,4,10,0.9), rgba(2,4,10,0)); pointer-events: none;
   }
-  #sub {
-    position: fixed; top: calc(env(safe-area-inset-top, 14px) + 32px); left: 0; right: 0; text-align: center;
-    color: #7ba0d0; font-size: clamp(10px, 3vw, 12px); letter-spacing: 0.3px; pointer-events: none; z-index: 10;
-    padding: 0 12px;
+  #top .brand h1 {
+    margin: 0; font-size: clamp(16px, 4.6vw, 26px); font-weight: 800; letter-spacing: -0.4px; line-height: 1.05;
+    background: linear-gradient(92deg, #fff, #cfd8ff 42%, #b28dff 74%, #74e39a);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    text-shadow: 0 0 26px rgba(111,180,255,0.18);
   }
+  #top .brand .sub { margin-top: 4px; color: #7ba0d0; font-size: clamp(10px, 2.6vw, 13px); font-style: italic; }
+  #top .clock { text-align: right; min-width: 96px; }
+  #top .clock .time { font-variant-numeric: tabular-nums; font-size: clamp(15px, 3.6vw, 24px); font-weight: 700; letter-spacing: 1px; color: #fff; text-shadow: 0 0 18px rgba(143,215,255,0.4); }
+  #top .clock .live { display: inline-flex; align-items: center; gap: 6px; margin-top: 5px; font-size: clamp(8px,2.2vw,10px); color: #74e39a; letter-spacing: 0.14em; text-transform: uppercase; }
+  #top .clock .pdot { width: 7px; height: 7px; border-radius: 50%; background: #74e39a; box-shadow: 0 0 10px #74e39a; animation: pulseDot 1.8s infinite; }
+  @keyframes pulseDot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.32;transform:scale(.65)} }
+  #stats {
+    position: fixed; z-index: 10; top: calc(env(safe-area-inset-top, 10px) + 56px); left: 16px; right: 16px;
+    display: flex; gap: 8px; flex-wrap: wrap; pointer-events: none;
+  }
+  #stats .stat {
+    background: rgba(8,14,28,0.6); border: 1px solid rgba(90,150,255,0.2); border-radius: 12px;
+    padding: 6px 12px; backdrop-filter: blur(10px); min-width: 82px; position: relative; overflow: hidden;
+    box-shadow: 0 6px 22px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.05);
+  }
+  #stats .stat::before { content:""; position:absolute; inset:0 0 auto 0; height:2px; opacity:.7; }
+  #stats .a::before{background:linear-gradient(90deg,transparent,#ffd166,transparent)}
+  #stats .b::before{background:linear-gradient(90deg,transparent,#b28dff,transparent)}
+  #stats .c::before{background:linear-gradient(90deg,transparent,#74e39a,transparent)}
+  #stats .d::before{background:linear-gradient(90deg,transparent,#66e0ff,transparent)}
+  #stats .n { font-size: clamp(15px,3.8vw,21px); font-weight: 800; letter-spacing:-0.4px; line-height:1; }
+  #stats .n span { font-size: .55em; opacity: .85; }
+  #stats .l { font-size: clamp(8px,2vw,9.5px); color: #7ba0d0; margin-top: 3px; letter-spacing: .05em; text-transform: uppercase; }
+  #stats .a .n{color:#ffd166} #stats .b .n{color:#b28dff} #stats .c .n{color:#74e39a} #stats .d .n{color:#66e0ff}
+  @media (max-width: 560px) { #stats .stat { min-width: 0; flex: 1 1 40%; padding: 6px 10px; } }
   #hint {
     position: fixed; bottom: calc(env(safe-area-inset-bottom, 10px) + 6px); left: 0; right: 0; text-align: center;
     color: #5a7aa8; font-size: clamp(10px, 3vw, 11px); pointer-events: none; z-index: 10; padding: 0 12px;
@@ -69,13 +97,27 @@
 </style>
 </head>
 <body>
-<div id="title">🧠 Kais KI-Gehirn</div>
-<div id="sub">OpenClaw · Jarvis · Ultron — Die Station</div>
+<div id="top">
+  <div class="brand">
+    <h1>🧠 Kais KI-Gehirn · Die Station</h1>
+    <div class="sub">Meine Agenten arbeiten, während ich schlafe.</div>
+  </div>
+  <div class="clock">
+    <div class="time" id="clock">–</div>
+    <div class="live"><span class="pdot"></span> Station aktiv</div>
+  </div>
+</div>
+<div id="stats">
+  <div class="stat a"><div class="n">19<span>+4</span></div><div class="l">Produkte · Bundles</div></div>
+  <div class="stat b"><div class="n">17</div><div class="l">verkaufsf. ZIPs</div></div>
+  <div class="stat c"><div class="n">14</div><div class="l">Thumbnails · Ø 8–9,5</div></div>
+  <div class="stat d"><div class="n">3</div><div class="l">KI-Modelle</div></div>
+</div>
 <div id="app"></div>
 <div id="hint">Ziehen zum Drehen · Pinch/Scroll zum Zoomen</div>
 <div id="labels"></div>
 <div id="terminal">
-  <div class="thead" onclick="this.parentElement.classList.toggle('min')"><span class="dot"></span>RECHERCHE-TERMINAL · DIE STATION</div>
+  <div class="thead" onclick="this.parentElement.classList.toggle('min')"><span class="dot"></span>RECHERCHE-TERMINAL · eRank · Live-Etsy</div>
   <div class="tbody" id="tbody"></div>
 </div>
 
@@ -775,42 +817,47 @@ window.addEventListener('resize', () => {
   renderer.setSize(window.innerWidth, window.innerHeight);
 });
 
-// ---- Recherche-Terminal: a live monospace log stream (echo of the old Station) ----
+// ---- live clock (top-right, like the old Station) ----
+const clockEl = document.getElementById('clock');
+function tickClock(){ const d=new Date(); clockEl.textContent = [d.getHours(),d.getMinutes(),d.getSeconds()].map(n=>String(n).padStart(2,'0')).join(':'); }
+tickClock(); setInterval(tickClock, 1000);
+
+// ---- Recherche-Terminal: real eRank · Live-Etsy log stream (from the old Station) ----
 const tbody = document.getElementById('tbody');
-const AGENT_NAMES = ['Jarvis','Ultron','ATLAS','Gemini','ChatGPT','Etsy','Telegram','Memory'];
-const VERBS = [
-  ['sync','memory/MEMORY.md','ok'],
-  ['scan','etsy-listings','12 gefunden'],
-  ['build','wissensnetz','deployed'],
-  ['fetch','activity.json','200'],
-  ['review','ATLAS-verdict','pass'],
-  ['index','session-corpus','ok'],
-  ['pulse','neuron-cluster','fired'],
-  ['route','telegram:msg','delivered'],
-  ['embed','daily-notes','ok'],
-  ['watch','gateway-health','alive'],
+const LOG_LINES = [
+  'eRank » scan keyword_pool q1/26 ......... OK',
+  'GET etsy.com/search?q=nachlassplaner  200',
+  'rank[nachlassplaner] competition=LOW  ✓',
+  'tag_gen » 13/13 long-tail matched',
+  'title.len check » 140 » 4 over_limit',
+  'trend[caregiver organizer] +18% mom',
+  'sku SELF-STARTKLAR bundle=40files zip OK',
+  'thumb render 2000x2000 headless_chrome',
+  'QA pdf 12/12 intact · xlsx 3/3 formula ✓',
+  'sync ARBEITSSTAND.md -> gist push HEAD',
+  'niche[landlord_mgmt_kit] EN price=$19.90',
+  'gemini.rate thumb=9.5/10 prev="unsichtbar"',
+  'oauth chatgpt » 5h_limit replan +15min',
+  'crawl live-etsy » 42 listings sampled',
+  'kw density check » 0.82 optimal',
+  'export listing.md · tags.csv · seo.json',
 ];
+// colorize: trailing OK/✓/200 as green, leading token before » as cyan
+function fmtLog(s){
+  let h = s.replace(/(\bOK\b|✓|\b200\b)/g, '<span class="ok">$1</span>');
+  h = h.replace(/^([a-zA-Z_.\[\]]+)(\s»)/, '<span class="tk">$1</span>$2');
+  return h;
+}
+let logIdx = 0;
 const termLines = [];
-function pushLine(html) {
-  termLines.push(html);
-  if (termLines.length > 7) termLines.shift();
-  tbody.innerHTML = termLines.map(l => '<div class="ln">'+l+'</div>').join('');
+function pushLog(){
+  termLines.push('<div class="ln">› ' + fmtLog(LOG_LINES[logIdx % LOG_LINES.length]) + '</div>');
+  logIdx++;
+  if (termLines.length > 8) termLines.shift();
+  tbody.innerHTML = termLines.join('');
 }
-function synthLine() {
-  const a = AGENT_NAMES[(Math.random()*AGENT_NAMES.length)|0];
-  const v = VERBS[(Math.random()*VERBS.length)|0];
-  const hh = String(8 + ((Math.random()*14)|0)).padStart(2,'0');
-  const mm = String((Math.random()*60)|0).padStart(2,'0');
-  const ss = String((Math.random()*60)|0).padStart(2,'0');
-  return `<span class="tk">${hh}:${mm}:${ss}</span> ${a} › ${v[0]} ${v[1]} <span class="ok">${v[2]}</span>`;
-}
-// seed + tick
-for (let i=0;i<6;i++) pushLine(synthLine());
-setInterval(() => pushLine(synthLine()), 2200);
-// mix in real activity if available (best-effort; ignored if not present)
-fetch('activity.json', { cache:'no-store' }).then(r=>r.ok?r.json():null).then(a=>{
-  if (a && a.generated) pushLine(`<span class="tk">● FEED</span> Live-Stand geladen <span class="ok">ok</span>`);
-}).catch(()=>{});
+for (let i=0;i<7;i++) pushLog();
+setInterval(pushLog, 1800);
 </script>
 </body>
 </html>
