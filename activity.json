@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-29T13:48:28+00:00",
+  "generated": "2026-08-29T13:58:28+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-08-29T15:53:59+02:00",
+      "text": "Oekosystem-Gehirn: Portrait/Handy fit an Hoehe + zentriert aufs Gehirn (statt winzig gequetscht)"
+    },
     {
       "at": "2026-08-29T15:45:38+02:00",
       "text": "Oekosystem-Station: zentrale Sonne durch echtes 3D-Glas-Gehirn ersetzt (WebGL-Overlay auf Beacon-Position), Rest der Station 1:1"
@@ -30,17 +34,13 @@
     {
       "at": "2026-08-29T15:34:02+02:00",
       "text": "Gehirn-3D: ETSY Holo-Inventar (echte Produkte+Preise) + Design-Labor/Gemini + Upscaler-Badge; Mobil: schwere Panels eingeklappt starten"
-    },
-    {
-      "at": "2026-08-29T15:30:11+02:00",
-      "text": "Gehirn-3D: Oekosystem-Station-Kopf (Stat-Karten 19+4/17/14/3 + Uhr + Station aktiv) + echtes eRank-Live-Etsy-Terminal wie alter Stand"
     }
   ],
   "cron": [
     "jarvis-crash-log-watcher crash-log-watcher cron",
-    "heartbeat:ultron Heartbeat (ultron)",
     "heartbeat:main Heartbeat (main)",
     "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
+    "heartbeat:ultron Heartbeat (ultron)",
     "jarvis-wissensnetz-auto wissensnetz-auto-update cron"
   ]
 }
