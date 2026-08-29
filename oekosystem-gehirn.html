@@ -1400,7 +1400,7 @@ function drawFigure(a,T){
   const tap=Math.sin(T*7+a.phase)*ts(3)*(a.working?1:0.2); // typing
   const bx=tx(a.x), by=ty(a.y)+bob;
   const col=a.col;
-  const s=ts(0.56);   // Agenten 30% kleiner (Kais Wunsch)
+  const s=ts(1.45);   // Agenten 159% groesser als zuvor (Kais Wunsch)
   // pose variation
   const lean = a.pose==='lean' ? 3*s : 0;
   const armSpread = a.pose==='wide' ? 6*s : 0;
