@@ -40,6 +40,7 @@
 <div id="labels"></div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
 <script>
 const scene = new THREE.Scene();
 const app = document.getElementById('app');
@@ -158,86 +159,57 @@ function brainShape(x, y, z) {
   if (pz > 0.5 && py > 0.1) pz *= 1.06;             // frontal bulge
   return [px * R, py * R, pz * R];
 }
-const shellGeo = new THREE.SphereGeometry(1, 80, 56);
-{
-  const pa = shellGeo.attributes.position.array;
-  const foldAttr = new Float32Array(pa.length / 3);
-  for (let i = 0, j = 0; i < pa.length; i += 3, j++) {
-    const ux = pa[i], uy = pa[i+1], uz = pa[i+2];
-    foldAttr[j] = corticalFold(ux, uy, uz);            // store groove/ridge per vertex
-    const [nx, ny, nz] = brainShape(ux, uy, uz);
-    pa[i] = nx; pa[i+1] = ny; pa[i+2] = nz;
-  }
-  shellGeo.setAttribute('aFold', new THREE.BufferAttribute(foldAttr, 1));
-  shellGeo.computeVertexNormals();
-}
+// Glass shader material for the REAL anatomical brain mesh (loaded from brain.glb).
+// Fresnel rim + normal-based sheen make it read as glowing blue glass, and because
+// the mesh has real gyri/sulci geometry the folds are anatomically correct.
 const glassMat = new THREE.ShaderMaterial({
   transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, side: THREE.DoubleSide,
-  uniforms: { uTime: { value: 0 }, uColor: { value: new THREE.Color(0x8fd0ff) }, uEdge: { value: new THREE.Color(0xdff2ff) } },
+  uniforms: { uTime: { value: 0 }, uColor: { value: new THREE.Color(0x7cc4ff) }, uEdge: { value: new THREE.Color(0xe6f4ff) } },
   vertexShader: `
-    attribute float aFold;
-    varying vec3 vN; varying vec3 vView; varying vec3 vPos; varying float vFold;
+    varying vec3 vN; varying vec3 vView; varying vec3 vWorld;
     void main(){
       vec4 wp = modelViewMatrix * vec4(position,1.0);
       vN = normalize(normalMatrix * normal);
       vView = normalize(-wp.xyz);
-      vPos = position;
-      vFold = aFold;
+      vWorld = position;
       gl_Position = projectionMatrix * wp;
     }`,
   fragmentShader: `
     uniform float uTime; uniform vec3 uColor; uniform vec3 uEdge;
-    varying vec3 vN; varying vec3 vView; varying vec3 vPos; varying float vFold;
+    varying vec3 vN; varying vec3 vView; varying vec3 vWorld;
     void main(){
-      float fres = pow(1.0 - abs(dot(normalize(vN), normalize(vView))), 2.4); // bright rim
-      float ridge = smoothstep(-0.2, 0.6, vFold);   // gyri brighter, sulci darker
-      float sheen = 0.5 + 0.5*sin(vPos.x*0.9 + vPos.z*0.7 + uTime*0.6);
-      vec3 col = mix(uColor*0.12, uEdge, fres);
-      col += uColor * ridge * 0.22;                 // highlight the ridges
-      col *= (0.55 + 0.45*ridge);                   // darken inside the sulci
-      col += uColor * sheen * 0.05;
-      float a = fres*0.85 + 0.05 + ridge*0.10;
+      vec3 N = normalize(vN);
+      float fres = pow(1.0 - abs(dot(N, normalize(vView))), 2.2);   // bright glass rim
+      // crease shading from surface curvature proxy: normal facing sideways = groove wall
+      float crease = 0.5 + 0.5 * N.y;
+      float sheen = 0.5 + 0.5*sin(vWorld.x*4.0 + vWorld.z*3.0 + uTime*0.6);
+      vec3 col = mix(uColor*0.14, uEdge, fres);
+      col += uColor * crease * 0.10;
+      col += uColor * sheen * 0.04;
+      float a = fres*0.9 + 0.10;
       gl_FragColor = vec4(col, a);
     }`
 });
-const glassBrain = new THREE.Mesh(shellGeo, glassMat);
-glassBrain.renderOrder = 2;
-brainGroup.add(glassBrain);
 
-// glowing gyri/sulcus contour lines: meandering grooves that wander over the
-// brain surface like real cortical folds (this is what makes it read as a brain).
-const gyriSegs = [];
-const SULCI = 46;                       // number of winding grooves
-for (let s = 0; s < SULCI; s++) {
-  // each groove sweeps from pole region across the surface with a wavy offset
-  const phi0 = 0.25 + Math.random() * (Math.PI - 0.5);   // latitude band it lives in
-  const dir  = Math.random() * Math.PI * 2;              // travel direction on the sphere
-  const amp  = 0.35 + Math.random() * 0.5;               // how much it meanders
-  const freq = 2 + Math.floor(Math.random() * 4);
-  const len  = 1.4 + Math.random() * 1.6;                // arc length
-  const t0   = Math.random() * Math.PI * 2;
-  const STEP = 26;
-  let prev = null;
-  for (let k = 0; k <= STEP; k++) {
-    const tt = (k / STEP) * len;
-    // path on the unit sphere: base great-circle-ish sweep + sinusoidal wander
-    const theta = t0 + dir * tt;
-    const phi = phi0 + amp * Math.sin(tt * freq) * 0.5 + (tt - len/2) * 0.15;
-    const sx = Math.sin(phi) * Math.cos(theta);
-    const sy = Math.cos(phi);
-    const sz = Math.sin(phi) * Math.sin(theta);
-    const [nx, ny, nz] = brainShape(sx, sy, sz);
-    const cur = [nx * 1.008, ny * 1.008, nz * 1.008];
-    if (prev) gyriSegs.push(prev[0], prev[1], prev[2], cur[0], cur[1], cur[2]);
-    prev = cur;
-  }
-}
-const gyriGeo = new THREE.BufferGeometry();
-gyriGeo.setAttribute('position', new THREE.BufferAttribute(new Float32Array(gyriSegs), 3));
-const gyriMat = new THREE.LineBasicMaterial({ color: 0xbfe6ff, transparent:true, opacity:0.34, blending:THREE.AdditiveBlending, depthWrite:false });
-const gyriLines = new THREE.LineSegments(gyriGeo, gyriMat);
-gyriLines.renderOrder = 2;
-brainGroup.add(gyriLines);
+// Load the real brain model, fit it to the brain group's scale, apply glass material.
+let glassBrain = null;
+const R2 = R; // target radius (matches the neural cloud extent)
+const loader = new THREE.GLTFLoader();
+loader.load('assets/brain.glb', (gltf) => {
+  const model = gltf.scene;
+  model.traverse(o => { if (o.isMesh) { o.material = glassMat; o.renderOrder = 2; } });
+  // center + scale to match the neural point cloud (~R across)
+  const box = new THREE.Box3().setFromObject(model);
+  const size = new THREE.Vector3(); box.getSize(size);
+  const center = new THREE.Vector3(); box.getCenter(center);
+  const maxDim = Math.max(size.x, size.y, size.z) || 1;
+  const s = (R2 * 2.15) / maxDim;
+  model.scale.setScalar(s);
+  model.position.sub(center.multiplyScalar(s));
+  glassBrain = model;
+  brainGroup.add(model);
+  window.__brainLoaded = true;                      // marker for render verification
+}, undefined, (err) => { console.error('brain.glb load failed', err); window.__brainLoadError = String(err); });
 
 // dim the inner point cloud so the glass surface reads as the main form
 ptMat.opacity = 0.55;
