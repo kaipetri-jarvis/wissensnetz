@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-29T15:48:44+00:00",
+  "generated": "2026-08-29T15:58:44+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-08-29T17:52:06+02:00",
+      "text": "Oekosystem-Gehirn (Mobile): RECHERCHE-TERMINAL zurueck auf oben links (14/0.60/230/150); @media(min-width:721px) fuer erzwungene Mobil-Ansicht auf Desktop-Breit"
+    },
     {
       "at": "2026-08-29T17:46:01+02:00",
       "text": "Oekosystem-Gehirn (Mobile): RECHERCHE-TERMINAL nach oben links, schmaler (termX=14, termW=min(W*0.6,230), termY=150)"
@@ -30,17 +34,13 @@
     {
       "at": "2026-08-29T17:09:28+02:00",
       "text": "Oekosystem-Gehirn: Titel-Label 'SYNAPSEN-KERN · OpenClaw' wieder eingefuegt"
-    },
-    {
-      "at": "2026-08-29T17:08:36+02:00",
-      "text": "Oekosystem-Gehirn: Orbit-Linien zurueck auf Desktop-Optik (fliessende Bahnen + Daten-Pakete statt dicke Adern)"
     }
   ],
   "cron": [
     "jarvis-crash-log-watcher crash-log-watcher cron",
-    "heartbeat:ultron Heartbeat (ultron)",
     "heartbeat:main Heartbeat (main)",
     "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
+    "heartbeat:ultron Heartbeat (ultron)",
     "jarvis-wissensnetz-auto wissensnetz-auto-update cron"
   ]
 }
