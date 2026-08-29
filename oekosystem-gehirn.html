@@ -1687,19 +1687,8 @@ function frame(now){
   }
 
   // Energie-Linien ZUERST zeichnen, damit die Panels sie ueberdecken
-  // energy links from agents
   const bx=tx(800), by=ty(BRAIN_Y());
   const shop=ZONES[3];
-  for(const a of AGENTS){
-    if(!a._bx) continue;
-    if(a.link==='shop'){
-      drawLink(a._bx, a._by-ts(24), tx(shop.x+shop.w/2), ty(shop.y+shop.h), a.col, T, a.phase*0.2, 30, true);
-    } else {
-      // gently curve each spoke to its own side so lines fan out and cross less at the core
-      const bend = (a.x<800) ? 46 : -46;
-      drawLink(a._bx, a._by-ts(24), bx, by, a.col, T, a.phase*0.2, bend, true);
-    }
-  }
   // beacon -> shop console (main output flow)
   drawLink(bx, by, tx(shop.x), ty(shop.y+shop.h/2), COL.gold, T, 0.15, -24);   // Andockpunkt: linke Kachelkante, mittig
   // beacon -> system/infra nodes (sync/deploy/heartbeat flows)
@@ -1713,6 +1702,18 @@ function frame(now){
   drawZone(ZONES[0],T);             // werkstatt (front)
   drawZone(ZONES[1],T);             // design (front)
   drawZone(ZONES[5],T);             // Ultron · zweiter Kopf (front, below reactor)
+
+  // Agenten-Linien NACH den Panels: KI-Anbindung immer sichtbar
+  for(const a of AGENTS){
+    if(!a._bx) continue;
+    if(a.link==='shop'){
+      drawLink(a._bx, a._by-ts(24), tx(shop.x+shop.w/2), ty(shop.y+shop.h), a.col, T, a.phase*0.2, 30, true);
+    } else {
+      // gently curve each spoke to its own side so lines fan out and cross less at the core
+      const bend = (a.x<800) ? 46 : -46;
+      drawLink(a._bx, a._by-ts(24), bx, by, a.col, T, a.phase*0.2, bend, true);
+    }
+  }
 
   for(const n of INFRA){ drawInfraNode(n,T); }
 
