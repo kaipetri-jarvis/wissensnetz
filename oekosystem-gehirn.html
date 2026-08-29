@@ -1815,6 +1815,17 @@ requestAnimationFrame(frame);
     // each mesh's matrix relative to brainGroup instead.)
     brainGroup.updateWorldMatrix(true,false);
     const invGroup = new THREE.Matrix4().copy(brainGroup.matrixWorld).invert();
+    // Verlaengertes Rueckenmark kuerzen: alles unterhalb der Kortex-Unterkante
+    // (group-y < STEM_TH) wird Richtung Gehirn gestaucht.
+    const STEM_TH=-12, STEM_K=0.4;
+    { const vv=new THREE.Vector3();
+      model.traverse(o=>{ if(!o.isMesh)return; const p=o.geometry.attributes.position;
+        o.updateWorldMatrix(true,false);
+        const m=new THREE.Matrix4().multiplyMatrices(invGroup,o.matrixWorld);
+        const mi=new THREE.Matrix4().copy(m).invert();
+        for(let i=0;i<p.count;i++){ vv.fromBufferAttribute(p,i).applyMatrix4(m);
+          if(vv.y<STEM_TH){ vv.y=STEM_TH+(vv.y-STEM_TH)*STEM_K; vv.applyMatrix4(mi); p.setXYZ(i,vv.x,vv.y,vv.z); } }
+        p.needsUpdate=true; o.geometry.computeVertexNormals(); o.geometry.computeBoundingSphere(); }); }
     const tris=[];
     model.traverse(o=>{ if(!o.isMesh)return; const g=o.geometry,p=g.attributes.position,idx=g.index; o.updateWorldMatrix(true,false);
       const m=new THREE.Matrix4().multiplyMatrices(invGroup, o.matrixWorld);
