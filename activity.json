@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-29T13:38:28+00:00",
+  "generated": "2026-08-29T13:48:28+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-08-29T15:45:38+02:00",
+      "text": "Oekosystem-Station: zentrale Sonne durch echtes 3D-Glas-Gehirn ersetzt (WebGL-Overlay auf Beacon-Position), Rest der Station 1:1"
+    },
+    {
+      "at": "2026-08-29T15:41:19+02:00",
+      "text": "Gehirn-3D: Agenten mit fliessenden Daten-Paketen auf jeder Faecher-Linie angebunden (wie altes Design)"
+    },
+    {
+      "at": "2026-08-29T15:38:56+02:00",
+      "text": "Gehirn-3D: Titel 'Kais KI-Oekosystem . Die Station' + Sub-Agenten-Ticker unten (echte Station-Events)"
+    },
+    {
       "at": "2026-08-29T15:36:14+02:00",
       "text": "Gehirn-3D: mehr sichtbare Verbindungslinien (Agenten-Fächer je 4 Linien + radiale Rays aus dem Gehirn) wie altes Design"
     },
@@ -22,25 +34,13 @@
     {
       "at": "2026-08-29T15:30:11+02:00",
       "text": "Gehirn-3D: Oekosystem-Station-Kopf (Stat-Karten 19+4/17/14/3 + Uhr + Station aktiv) + echtes eRank-Live-Etsy-Terminal wie alter Stand"
-    },
-    {
-      "at": "2026-08-29T15:22:48+02:00",
-      "text": "Gehirn-3D: mobil-optimiert + KI/Agenten-Labels hervorgehoben (Farbe/KI-Stil) + Recherche-Terminal (Die Station) mit Live-Log"
-    },
-    {
-      "at": "2026-08-29T14:50:32+02:00",
-      "text": "Gehirn-3D: umhuellende Daten-Sphaere entfernt + Linien/Filamente aus Mesh-Punkten -> alle Punkte IM Gehirn"
-    },
-    {
-      "at": "2026-08-29T14:47:27+02:00",
-      "text": "Gehirn-3D: Neuronen-Punktwolke aus echtem Mesh gesampelt -> deckungsgleich mit Gehirnform"
     }
   ],
   "cron": [
-    "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
     "jarvis-crash-log-watcher crash-log-watcher cron",
     "heartbeat:ultron Heartbeat (ultron)",
     "heartbeat:main Heartbeat (main)",
+    "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
     "jarvis-wissensnetz-auto wissensnetz-auto-update cron"
   ]
 }
