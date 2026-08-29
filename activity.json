@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-29T14:48:43+00:00",
+  "generated": "2026-08-29T14:58:43+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-08-29T16:56:19+02:00",
+      "text": "Oekosystem-Gehirn: Titel-Label 'SYNAPSEN-KERN · OpenClaw' entfernt (nur dezente Live-Zeile bleibt)"
+    },
+    {
+      "at": "2026-08-29T16:54:58+02:00",
+      "text": "Oekosystem-Gehirn: Handy-Info-Dock als kompaktes 2-Spalten-Grid (alle Agenten-Kacheln + Inventar auf einen Blick, kein Wischen mehr)"
+    },
+    {
+      "at": "2026-08-29T16:51:35+02:00",
+      "text": "Oekosystem-Gehirn: 3D-Gehirn korrekt am Synapsen-Kern zentriert (Canvas-CSS-Groesse fix, war doppelte DPR-Groesse -> Versatz unten rechts), kleiner + Rauszoomen"
+    },
+    {
       "at": "2026-08-29T16:18:03+02:00",
       "text": "Oekosystem-Gehirn: Sonne/Reaktor komplett abgeschaltet (God-Rays/Ringe/Kern raus), nur dezenter Schein + Label unterm 3D-Gehirn"
     },
@@ -22,22 +34,11 @@
     {
       "at": "2026-08-29T15:53:59+02:00",
       "text": "Oekosystem-Gehirn: Portrait/Handy fit an Hoehe + zentriert aufs Gehirn (statt winzig gequetscht)"
-    },
-    {
-      "at": "2026-08-29T15:45:38+02:00",
-      "text": "Oekosystem-Station: zentrale Sonne durch echtes 3D-Glas-Gehirn ersetzt (WebGL-Overlay auf Beacon-Position), Rest der Station 1:1"
-    },
-    {
-      "at": "2026-08-29T15:41:19+02:00",
-      "text": "Gehirn-3D: Agenten mit fliessenden Daten-Paketen auf jeder Faecher-Linie angebunden (wie altes Design)"
-    },
-    {
-      "at": "2026-08-29T15:38:56+02:00",
-      "text": "Gehirn-3D: Titel 'Kais KI-Oekosystem . Die Station' + Sub-Agenten-Ticker unten (echte Station-Events)"
     }
   ],
   "cron": [
     "jarvis-crash-log-watcher crash-log-watcher cron",
+    "heartbeat:ultron Heartbeat (ultron)",
     "jarvis-wissensnetz-auto wissensnetz-auto-update cron",
     "- etsy-projekt-treiber cron"
   ]
