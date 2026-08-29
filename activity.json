@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-29T10:58:05+00:00",
+  "generated": "2026-08-29T11:08:05+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-08-29T13:02:50+02:00",
+      "text": "Neuronales Gehirn-Netz (lokale Quelle)"
+    },
     {
       "at": "2026-08-29T12:51:40+02:00",
       "text": "Gehirn-Silhouette v2 (lokale Quelle)"
@@ -30,17 +34,13 @@
     {
       "at": "2026-08-29T11:55:49+02:00",
       "text": "System-Graph (Option B): OpenClaw + Assistenten als Fundament, Etsy als erstes Projekt"
-    },
-    {
-      "at": "2026-08-28T19:26:52+02:00",
-      "text": "Backup: OpenClaw-Workspace (Etsy-Projekt, Memory, Konfig) — sensible Dokumente ausgeschlossen"
     }
   ],
   "cron": [
-    "heartbeat:ultron Heartbeat (ultron)",
     "jarvis-crash-log-watcher crash-log-watcher cron",
     "heartbeat:main Heartbeat (main)",
     "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
+    "heartbeat:ultron Heartbeat (ultron)",
     "jarvis-wissensnetz-auto wissensnetz-auto-update cron"
   ]
 }
