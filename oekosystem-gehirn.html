@@ -346,7 +346,9 @@ function resize(){
     const availH = Math.max(320, H - TOP_HUD - BOT_BAND);
     scale = Math.min(W / WORLD_W, availH / WORLD_H);
   } else {
-    scale = Math.max(sx, sy) * 1.02;
+    // Contain-Fit: die ganze Station sichtbar, unterhalb des Top-HUD
+    const availH = Math.max(320, H - TOP_HUD - BOT_BAND);
+    scale = Math.min(sx, availH / WORLD_H);
   }
   fit.scale = scale;
   const dispW = WORLD_W*scale, dispH = WORLD_H*scale;
@@ -358,7 +360,8 @@ function resize(){
     pan.y = TOP_HUD + Math.max(0, (H - TOP_HUD - BOT_BAND - dispH)/2);
     fit._init = true;
   } else {
-    fit.oy = (H - dispH)/2;
+    // im Band zwischen Top-HUD und LIVE-Ticker zentrieren
+    fit.oy = TOP_HUD + Math.max(0, (H - TOP_HUD - BOT_BAND - dispH)/2);
     if(!fit._init) fit._init = true;
   }
   clampPan();
