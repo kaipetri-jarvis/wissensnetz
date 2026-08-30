@@ -117,11 +117,11 @@
     html:not([data-ansicht="desktop"]) .clock .date{display:none;}
     html:not([data-ansicht="desktop"]) .clock .live{margin-top:2px; font-size:8.5px; letter-spacing:.10em;}
     /* AUTO/MOBIL/DESKTOP-Umschalter mittig UNTER dem Untertitel (nicht darüber) */
-    html:not([data-ansicht="desktop"]) .vswitch{left:50%; right:auto; transform:translateX(-50%); top:62px;}
+    html:not([data-ansicht="desktop"]) .vswitch{left:50%; right:auto; transform:translateX(-50%); top:48px;}
 
     /* stats: 4 tiles fit the full width in one non-overflowing row.
        !important guards the layout props against the wider desktop base rule. */
-    html:not([data-ansicht="desktop"]) .stats{top:90px !important; bottom:auto !important; left:7px !important; right:7px !important; width:auto !important;
+    html:not([data-ansicht="desktop"]) .stats{top:76px !important; bottom:auto !important; left:7px !important; right:7px !important; width:auto !important;
       display:flex !important; flex-wrap:nowrap !important;
       gap:5px !important; padding:0 !important;}
     html:not([data-ansicht="desktop"]) .stat{flex:1 1 0 !important; min-width:0 !important; width:0 !important; padding:5px 4px; border-radius:10px; overflow:hidden;}
@@ -177,7 +177,7 @@
 
     /* stats: 4 tiles fit the full width in one non-overflowing row.
        !important guards the layout props against the wider desktop base rule. */
-    html[data-ansicht="mobil"] .stats{top:90px !important; bottom:auto !important; left:7px !important; right:7px !important; width:auto !important;
+    html[data-ansicht="mobil"] .stats{top:76px !important; bottom:auto !important; left:7px !important; right:7px !important; width:auto !important;
       display:flex !important; flex-wrap:nowrap !important;
       gap:5px !important; padding:0 !important;}
     html[data-ansicht="mobil"] .stat{flex:1 1 0 !important; min-width:0 !important; width:0 !important; padding:5px 4px; border-radius:10px; overflow:hidden;}
@@ -337,7 +337,7 @@ function resize(){
   applyLayout();
   const sx = W/WORLD_W, sy = H/WORLD_H;
   let scale;
-  const TOP_HUD = 132;   // reserved screen px for the fixed HTML HUD (title/subtitle/switch/KPI cards)
+  const TOP_HUD = 116;   // reserved screen px for the fixed HTML HUD (title/subtitle/switch/KPI cards)
   const BOT_BAND = 46;   // reserved screen px at the bottom for the LIVE ticker
   if(portrait){
     // Fit the canvas station into the area BETWEEN the top HTML HUD and the bottom
@@ -380,7 +380,7 @@ function clampPan(){
   const dispW = WORLD_W*effScale(), dispH = WORLD_H*effScale();
   // Portrait at default zoom: station is fitted into the band below the HTML HUD
   // (see resize). Lock to that framing; a little slack only.
-  const TOP_HUD = 132, BOT_BAND = 46;
+  const TOP_HUD = 116, BOT_BAND = 46;
   if(istMobil() && uz>=0.999 && uz<=1.001){
     pan.x = 0;
     pan.y = TOP_HUD + Math.max(0, (H - TOP_HUD - BOT_BAND - dispH)/2);
