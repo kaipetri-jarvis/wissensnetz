@@ -877,11 +877,22 @@ function drawBackground(T){
     ctx.fillStyle= s.r>1.3 ? `rgba(200,225,255,${a})` : `rgba(150,220,200,${a*.9})`;
     ctx.fill();
   }
-  // GLOW stars — screen-fixed, whole viewport incl. the top HUD band
+  // GLOW stars — screen-fixed, nur in LEEREM Raum (Kollisionsprüfung gegen alle Elemente)
+  const obst=[];                                             // Hindernisse als Screen-Rechtecke [x1,y1,x2,y2]
+  for(const z of ZONES) obst.push([tx(z.x)-24, ty(z.y)-24, tx(z.x+z.w)+24, ty(z.y+z.h)+24]);
+  for(const ag of AGENTS) obst.push([tx(ag.x)-ts(110), ty(ag.y)-ts(160), tx(ag.x)+ts(110), ty(ag.y)+ts(70)]);
+  for(const nd of INFRA) obst.push([tx(nd.x)-ts(95), ty(nd.y)-ts(60), tx(nd.x)+ts(95), ty(nd.y)+ts(75)]);
+  obst.push([0,0,W,64]);                                     // HTML-HUD: Titelzeile
+  obst.push([0,64,640,142]);                                 // KPI-Kacheln links
+  obst.push([W*0.44,36,W*0.62,120]);                         // Ansicht-Switch + Zoombar
+  obst.push([W-270,60,W,255]);                               // Legende rechts oben
+  obst.push([W-250,0,W,60]);                                 // Uhr
+  const inObst=(x,y)=>{ for(const o of obst){ if(x>o[0]&&x<o[2]&&y>o[1]&&y<o[3]) return true; } return false; };
   ctx.globalCompositeOperation='lighter';
   for(const s of glowStars){
     s.tw+=s.sp; const a=(Math.sin(s.tw)*.5+.5)*0.9+0.1;
     const px=s.fx*W, py=s.fy*H;
+    if(inObst(px,py)) continue;                              // Stern liegt hinter einem Element → auslassen
     const col = s.hue<.33?'160,200,255' : s.hue<.66?'190,235,220' : '235,220,255';
     const hg=ctx.createRadialGradient(px,py,0,px,py,s.halo);
     hg.addColorStop(0,`rgba(${col},${0.28*a})`); hg.addColorStop(1,`rgba(${col},0)`);
