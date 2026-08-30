@@ -605,7 +605,7 @@ const ZONES = [
 
 // main agents — leuchtende Figuren; face/pose leicht variiert
 const AGENTS = [
-  { key:'jarvis', name:'Jarvis', model:'Assistent · läuft auf claude-opus-4-8', col:COL.claude,
+  { key:'jarvis', name:'Jarvis', model:'Assistent · Opus 4.8', col:COL.claude,
     zone:'werkstatt', x:385, y:685, face:'butler', pose:'lean',
     states:[
       'baut Rechnungs-/Angebots-Vorlage (DE) — PDF + Excel + Word…',
@@ -644,7 +644,7 @@ const AGENTS = [
       'prüft Shop-Positionierung über 5 Nischen…',
       'Idee: Jobwechsel-System mit Gehaltsverhandlungs-Rechner',
     ]},
-  { key:'vision', name:'Vision', model:'Bild- & Design-Agent · Port 18790 (mit Ultron)', col:COL.vision,
+  { key:'vision', name:'Vision', model:'Design-Agent · Port 18790', col:COL.vision,
     zone:'design', x:580, y:705, face:'crystal', pose:'upright',
     states:[
       'in Aufbau — wird Kais Bild- & Design-Auge',
@@ -653,7 +653,7 @@ const AGENTS = [
       'geplant: prüft jede Vorschau vor dem Upload',
       'wartet auf ersten Einsatz…',
     ]},
-  { key:'gaia', name:'Gaia', model:'Wissens- & Memory-Agentin · Port 18791', col:COL.gaia,
+  { key:'gaia', name:'Gaia', model:'Memory-Agentin · Port 18791', col:COL.gaia,
     zone:'deck', x:795, y:712, face:'crystal', pose:'wide',
     states:[
       'in Aufbau — Hüterin von Wissensnetz & Memory',
@@ -662,7 +662,7 @@ const AGENTS = [
       'geplant: verdichtet Memory-Dateien beim Dreaming',
       'wartet auf ersten Einsatz…',
     ]},
-  { key:'ultron', name:'Ultron', model:'zweiter Assistent · läuft auf claude-opus-4-8', col:COL.ultron,
+  { key:'ultron', name:'Ultron', model:'2. Assistent · Opus 4.8', col:COL.ultron,
     zone:'ultron', x:1023, y:694, face:'dualcore', pose:'upright',
     states:[
       'Nehme mir das im eigenen Kontext vor — melde mich mit dem Ergebnis.',
@@ -836,9 +836,9 @@ for(let i=0;i<90;i++) starsNear.push({x:Math.random()*WORLD_W,y:Math.random()*WO
 /* leuchtende Glow-Sterne — bildschirmfest, über die GANZE Fläche (auch HUD-Band oben) */
 const glowStars=[];
 { /* Poisson-artige Verteilung: Mindestabstand generell, größerer Abstand für gleiche Helligkeitsklasse */
-  const MIND=0.015, MINDSAME=0.037;
+  const MIND=0.013, MINDSAME=0.033;
   let tries=0;
-  while(glowStars.length<1500 && tries<90000){
+  while(glowStars.length<1900 && tries<120000){
     tries++;
     const fx=Math.random(), fy=Math.random();
     const b=(q=>q<0.25?1.6:q<0.7?1.0:0.45)(Math.random());   // ~25% strahlend, ~45% mittel, ~30% schwach
