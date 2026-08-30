@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-30T11:28:54+00:00",
+  "generated": "2026-08-30T11:38:54+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-08-30T13:31:47+02:00",
+      "text": "Oekosystem-Gehirn (Mobile): untere Panels auf die Hoehe des Boden-Schleiers/Glow-Bands hochgezogen (y935) — Kais Wunsch. Kein Overlap mit Ultron/Zoom. Desktop u"
+    },
     {
       "at": "2026-08-30T13:26:36+02:00",
       "text": "Oekosystem-Gehirn (Mobile): Panels-Position zurueck auf ausgewogenen Stand (PORT_H 1235) — die 1300er-Version war zu weit unten (Kai). Desktop unveraendert."
@@ -30,17 +34,13 @@
     {
       "at": "2026-08-30T13:02:04+02:00",
       "text": "Oekosystem-Gehirn (Mobile): untere Panels ueberlappungsfrei neu gepackt — Hoehen/Abstaende so gesetzt, dass sich RECHERCHE/DESIGN links und WERKSTATT/STRATEGIE-"
-    },
-    {
-      "at": "2026-08-30T12:58:30+02:00",
-      "text": "Oekosystem-Gehirn (Mobile): untere Panels weiter nach unten + Ultron nach oben — keine Ueberschneidung mehr zwischen Ultron-Avatar/Label und den Panels. Kais Wu"
     }
   ],
   "cron": [
     "jarvis-crash-log-watcher crash-log-watcher cron",
+    "heartbeat:ultron Heartbeat (ultron)",
     "heartbeat:main Heartbeat (main)",
     "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
-    "heartbeat:ultron Heartbeat (ultron)",
     "jarvis-wissensnetz-auto wissensnetz-auto-update cron"
   ]
 }
