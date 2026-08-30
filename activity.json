@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-30T10:38:53+00:00",
+  "generated": "2026-08-30T10:48:53+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-08-30T12:42:36+02:00",
+      "text": "Oekosystem-Gehirn (Mobile): KI-Avatare nach AUSSEN in den freien Raum (Codex/Jarvis links, Gemini/ChatGPT rechts in die Ecken, Ultron mittig unten), Infra-/Syst"
+    },
     {
       "at": "2026-08-30T12:32:07+02:00",
       "text": "Oekosystem-Gehirn (Mobile): Knoten viel enger ans Gehirn (Ring stark kontrahiert, Mindest-Abstand 135), Portrait-Figuren kleiner (1.02 statt 1.45) damit sie nah"
@@ -30,10 +34,6 @@
     {
       "at": "2026-08-30T12:20:02+02:00",
       "text": "Oekosystem-Gehirn (Mobile): Infra-/Agenten-Ring naeher ans Gehirn gezogen (ATLAS, Tailscale, Gemini, ChatGPT etc. kontrahiert Richtung Zentrum) — Kais Wunsch. N"
-    },
-    {
-      "at": "2026-08-30T12:14:21+02:00",
-      "text": "Oekosystem-Gehirn (Mobile): fuellt jetzt die volle Breite (Kais seitliche Leerbaender weg) — Portrait-Welt vertikal komprimiert (PORT_H 1520->1160, alle Positio"
     }
   ],
   "cron": [
