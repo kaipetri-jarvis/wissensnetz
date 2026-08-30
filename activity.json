@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-30T00:18:49+00:00",
+  "generated": "2026-08-30T00:28:49+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-08-30T02:25:15+02:00",
+      "text": "Oekosystem-Gehirn (Mobile): Zoom-Buttons horizontal nebeneinander statt untereinander (rechte Ecke ueber den unteren Panels). Kais Wunsch."
+    },
+    {
+      "at": "2026-08-30T02:20:32+02:00",
+      "text": "Oekosystem-Gehirn: Klick/Tap auf einzelne KI/Agenten UND Infra-Knoten zoomt jetzt sanft darauf und zentriert sie (Desktop + Mobil); Tap ins Leere zoomt zurueck."
+    },
     {
       "at": "2026-08-30T02:12:28+02:00",
       "text": "Oekosystem-Gehirn (Mobile): Zoom-Buttons (+/-/fit) nach oben rechts ueber die KPI-Kacheln verlegt (kompakter), damit die unteren Panels frei bleiben. Kais Wunsc"
@@ -26,14 +34,6 @@
     {
       "at": "2026-08-30T01:47:43+02:00",
       "text": "Auto-Backup 2026-08-30 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-08-30T01:45:35+02:00",
-      "text": "Auto-Backup 2026-08-30 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-08-30T01:42:54+02:00",
-      "text": "Voll-Backup 2026-08-30: Etsy-Produktvorschauen (Toolkit DE, A4-Seiten, Galerie) + Memory-Notizen + Gehirn-Graph-Stand"
     }
   ],
   "cron": [
