@@ -137,7 +137,7 @@
     html:not([data-ansicht="desktop"]) .legend{display:none !important;}
     html:not([data-ansicht="desktop"]) .mdock{display:none !important;}
     html:not([data-ansicht="desktop"]) .hint{display:none;}
-    html:not([data-ansicht="desktop"]) .zoombar{top:auto; bottom:186px; transform:none; left:50%; margin-left:-58px; right:auto; flex-direction:row; gap:6px;}
+    html:not([data-ansicht="desktop"]) .zoombar{top:auto; bottom:190px; transform:none; left:auto; margin-left:0; right:8px; flex-direction:row; gap:6px;}
     html:not([data-ansicht="desktop"]) .zoombar button{width:30px; height:30px; font-size:15px; border-radius:8px;}
 
     /* info dock: readable, scrollable card strip sitting above the ticker */
@@ -191,7 +191,7 @@
     html[data-ansicht="mobil"] .legend{display:none !important;}
     html[data-ansicht="mobil"] .mdock{display:none !important;}
     html[data-ansicht="mobil"] .hint{display:none;}
-    html[data-ansicht="mobil"] .zoombar{top:auto; bottom:186px; transform:none; left:50%; margin-left:-58px; right:auto; flex-direction:row; gap:6px;}
+    html[data-ansicht="mobil"] .zoombar{top:auto; bottom:190px; transform:none; left:auto; margin-left:0; right:8px; flex-direction:row; gap:6px;}
     html[data-ansicht="mobil"] .zoombar button{width:30px; height:30px; font-size:15px; border-radius:8px;}
 
     /* info dock: readable, scrollable card strip sitting above the ticker */
@@ -706,11 +706,11 @@ const PORTRAIT_POS = {
   n_tailscale:{x:264, y:711},
   n_atlas:    {x:547, y:690},
   // agents — wide ring around the brain
-  a_codex:    {x:325, y:439},
-  a_gemini:   {x:664, y:507},
-  a_jarvis:   {x:290, y:623},
-  a_chatgpt:  {x:658, y:667},
-  a_ultron:   {x:394, y:750},
+  a_codex:    {x:115, y:405},
+  a_gemini:   {x:795, y:445},
+  a_jarvis:   {x:120, y:690},
+  a_chatgpt:  {x:795, y:705},
+  a_ultron:   {x:450, y:815},
 };
 function applyLayout(){
   const P = istMobil();
@@ -1513,7 +1513,7 @@ function drawFigure(a,T){
   const tap=Math.sin(T*7+a.phase)*ts(3)*(a.working?1:0.2); // typing
   const bx=tx(a.x), by=ty(a.y)+bob;
   const col=a.col;
-  const s=ts(istMobil() ? 1.02 : 1.45);   // Portrait: kleinere Figuren, damit sie eng ans Gehirn ruecken koennen
+  const s=ts(istMobil() ? 1.22 : 1.45);   // Portrait: kleinere Figuren, damit sie eng ans Gehirn ruecken koennen
   // pose variation
   const lean = a.pose==='lean' ? 3*s : 0;
   const armSpread = a.pose==='wide' ? 6*s : 0;
