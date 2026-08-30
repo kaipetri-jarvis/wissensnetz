@@ -1,8 +1,8 @@
 {
-  "generated": "2026-08-30T13:59:01+00:00",
+  "generated": "2026-08-30T14:08:59+00:00",
   "bots": {
-    "jarvis": false,
-    "ultron": false
+    "jarvis": true,
+    "ultron": true
   },
   "atlas": {
     "fleet": true,
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-08-30T16:04:16+02:00",
+      "text": "Oekosystem-Gehirn (Mobile): Zoom-Buttons (+/-/⤢) nach unten in die rechte Ecke auf LIVE-Hoehe gesetzt (bottom:18, war 190) — frei von allen Panels. Kais Wunsch."
+    },
     {
       "at": "2026-08-30T15:39:38+02:00",
       "text": "Oekosystem-Gehirn (Mobile): der ECHTE Schleier weg — der farbige 3D-Tiefen-Sockel (slab side, hexA(z.col,.12)) unter den Zone-Kaesten war der tuerkis/gruene Sch"
@@ -30,10 +34,6 @@
     {
       "at": "2026-08-30T14:51:50+02:00",
       "text": "Oekosystem-Gehirn (Mobile): Hintergrund-Schleier komplett weg — im Portrait jetzt auch Nebel-Blobs, Farb-Dunst-Partikel und die radiale Tiefen-Vignette abgescha"
-    },
-    {
-      "at": "2026-08-30T14:28:26+02:00",
-      "text": "Oekosystem-Gehirn (Mobile): Perspektiv-Bodengitter + Horizont-Glow im Portrait komplett aus (drawGridFloor return bei istMobil) — auf dem Handy war das der 'Sch"
     }
   ],
   "cron": [
