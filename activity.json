@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-30T07:18:51+00:00",
+  "generated": "2026-08-30T07:28:51+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-08-30T09:19:24+02:00",
+      "text": "Oekosystem-Gehirn (Mobile): AUTO/MOBIL/DESKTOP-Umschalter mittig unter den Titel gesetzt (vorher rechts versetzt). Sauberer, frei von Uhr/STATION-AKTIV rechts."
+    },
     {
       "at": "2026-08-30T09:15:34+02:00",
       "text": "Oekosystem-Gehirn (Mobile): KPI-Kacheln noch ein Stueck hoeher (top:58, direkt unter die AUTO/MOBIL/DESKTOP-Buttons). Kais Wunsch."
@@ -30,10 +34,6 @@
     {
       "at": "2026-08-30T02:42:47+02:00",
       "text": "Oekosystem-Gehirn (Mobile): KPI-Kacheln jetzt UNTER die ETSY-DeskLane-Konsole (DeskLane ganz oben, Kacheln darunter). Kais Wunsch. Gemini: PASST."
-    },
-    {
-      "at": "2026-08-30T02:25:15+02:00",
-      "text": "Oekosystem-Gehirn (Mobile): Zoom-Buttons horizontal nebeneinander statt untereinander (rechte Ecke ueber den unteren Panels). Kais Wunsch."
     }
   ],
   "cron": [
