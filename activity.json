@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-30T11:08:54+00:00",
+  "generated": "2026-08-30T11:18:54+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-08-30T13:16:41+02:00",
+      "text": "Oekosystem-Gehirn (Mobile): untere Panels weiter runter + mehr Platz fuer Avatare (PORT_H 1235, Jarvis/ChatGPT/Ultron tiefer, Panels ueberlappungsfrei unten). R"
+    },
+    {
+      "at": "2026-08-30T13:13:38+02:00",
+      "text": "Oekosystem-Gehirn (Mobile): untere Panels weiter runter + mehr Platz fuer die Avatare — Portrait-Welt hoeher (PORT_H 1235), untere Avatare (Jarvis/ChatGPT/Ultro"
+    },
     {
       "at": "2026-08-30T13:02:04+02:00",
       "text": "Oekosystem-Gehirn (Mobile): untere Panels ueberlappungsfrei neu gepackt — Hoehen/Abstaende so gesetzt, dass sich RECHERCHE/DESIGN links und WERKSTATT/STRATEGIE-"
@@ -26,14 +34,6 @@
     {
       "at": "2026-08-30T12:49:33+02:00",
       "text": "Oekosystem-Gehirn (Mobile): vertikale Abstaende ausgeglichen — oberer Block (Kacheln/DeskLane) ein Stueck nach unten (z_shop y55, Kacheln top:78), untere Panels"
-    },
-    {
-      "at": "2026-08-30T12:42:36+02:00",
-      "text": "Oekosystem-Gehirn (Mobile): KI-Avatare nach AUSSEN in den freien Raum (Codex/Jarvis links, Gemini/ChatGPT rechts in die Ecken, Ultron mittig unten), Infra-/Syst"
-    },
-    {
-      "at": "2026-08-30T12:32:07+02:00",
-      "text": "Oekosystem-Gehirn (Mobile): Knoten viel enger ans Gehirn (Ring stark kontrahiert, Mindest-Abstand 135), Portrait-Figuren kleiner (1.02 statt 1.45) damit sie nah"
     }
   ],
   "cron": [
