@@ -119,7 +119,7 @@
 
     /* stats: 4 tiles fit the full width in one non-overflowing row.
        !important guards the layout props against the wider desktop base rule. */
-    html:not([data-ansicht="desktop"]) .stats{top:82px !important; bottom:auto !important; left:7px !important; right:7px !important; width:auto !important;
+    html:not([data-ansicht="desktop"]) .stats{top:70px !important; bottom:auto !important; left:7px !important; right:7px !important; width:auto !important;
       display:flex !important; flex-wrap:nowrap !important;
       gap:5px !important; padding:0 !important;}
     html:not([data-ansicht="desktop"]) .stat{flex:1 1 0 !important; min-width:0 !important; width:0 !important; padding:5px 4px; border-radius:10px; overflow:hidden;}
@@ -175,7 +175,7 @@
 
     /* stats: 4 tiles fit the full width in one non-overflowing row.
        !important guards the layout props against the wider desktop base rule. */
-    html[data-ansicht="mobil"] .stats{top:82px !important; bottom:auto !important; left:7px !important; right:7px !important; width:auto !important;
+    html[data-ansicht="mobil"] .stats{top:70px !important; bottom:auto !important; left:7px !important; right:7px !important; width:auto !important;
       display:flex !important; flex-wrap:nowrap !important;
       gap:5px !important; padding:0 !important;}
     html[data-ansicht="mobil"] .stat{flex:1 1 0 !important; min-width:0 !important; width:0 !important; padding:5px 4px; border-radius:10px; overflow:hidden;}
@@ -680,7 +680,7 @@ const PORTRAIT_POS = {
   // Top panel band sits BELOW the top HUD + zoom bar (world y≥150).
   // KPI-Kacheln bleiben OBEN (HTML .stats). Darunter die ETSY-DeskLane-Konsole,
   // die Panels (Recherche/Design/Werkstatt/Deck/Ultron) wandern nach UNTEN.
-  z_shop:      {x:35,  y:270,  w:830, h:220},
+  z_shop:      {x:35,  y:268,  w:830, h:212},
   // Panel-Band jetzt UNTEN, unter dem Gehirn/Ring
   z_recherche: {x:35,  y:1560, w:360, h:165},
   z_werkstatt: {x:470, y:1560, w:395, h:78},
