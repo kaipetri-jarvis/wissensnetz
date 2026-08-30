@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-30T14:18:59+00:00",
+  "generated": "2026-08-30T14:29:00+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-08-30T16:24:29+02:00",
+      "text": "Oekosystem-Gehirn (Mobile): Zoom-Buttons nochmal tiefer (bottom:168) — doppelter Schritt der letzten Aenderung. Sitzt in der Luecke ueber WERKSTATT. Kais Wunsch"
+    },
+    {
+      "at": "2026-08-30T16:19:54+02:00",
+      "text": "Oekosystem-Gehirn (Mobile): Zoom-Buttons einen Tick tiefer (bottom:196) — sauber in der Luecke ueber dem WERKSTATT-Kasten. Kais Wunsch."
+    },
     {
       "at": "2026-08-30T16:13:38+02:00",
       "text": "Oekosystem-Gehirn (Mobile): Zoom-Buttons ueber den WERKSTATT-Kasten gesetzt (bottom:210) — bottom:18 war zu weit unten. Kais Wunsch."
@@ -26,14 +34,6 @@
     {
       "at": "2026-08-30T15:16:57+02:00",
       "text": "Oekosystem-Gehirn (Mobile): tuerkis/gruener Panel-Glow-Schleier unter den unteren Kaesten (DESIGN-LABOR/ULTRON) entfernt — glassPanel Aussen-Glow im Portrait st"
-    },
-    {
-      "at": "2026-08-30T15:07:01+02:00",
-      "text": "Oekosystem-Gehirn (Mobile): auf Stand von 13:46 zurueck (Kai: 'auf Stand rueckgaengig') — Hintergrund-Atmosphaere (Gitter/Nebel/Dunst/Vignette) im Portrait AN, "
-    },
-    {
-      "at": "2026-08-30T14:57:28+02:00",
-      "text": "Oekosystem-Gehirn (Mobile): Hintergrund-Effekte wieder AN (rueckgaengig) — Kai: 'wir haben vom falschen Schleier gesprochen'. Perspektiv-Gitter, Nebel-Blobs, Fa"
     }
   ],
   "cron": [
