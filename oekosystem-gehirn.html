@@ -687,7 +687,7 @@ const INFRA = [
    states:['Haupt-Gateway 18789 · Jarvis','ai.openclaw.ultron 18790 · Ultron + Vision','ai.openclaw.gaia 18791 · Gaia','routet alle Kanäle & Agenten','das Nervensystem der ganzen Station']},
   {key:'watchdog', name:'Watchdog', sub:'Selbstheilung · Absturzwarnung', x:507, y:457, col:COL.watchdog,
    states:['ai.openclaw.watchdog überwacht Gateway','Crash → Neustart + Telegram-Alarm','Crash-Log-Watcher alle 10 Min','hält die Station 24/7 am Leben']},
-  {key:'tailscale', name:'Tailscale', sub:'Tailnet · Fernsteuerung vom iPhone', x:593, y:556, col:COL.tailscale,
+  {key:'tailscale', name:'Tailscale', sub:'Tailnet · Fernsteuerung vom iPhone', x:695, y:272, col:COL.tailscale,
    states:['Mac 100.73.109.29 ↔ iPhone 100.108.47.120','Serve auf Port 18789','Kai steuert die Station vom Handy','verschlüsseltes Mesh · kein offener Port']},
   {key:'mac', name:'Mac · 24/7-Server', sub:'schläft nie · zugeklappt weiter', x:1092, y:470, col:COL.mac,
    states:['caffeinate · kein Ruhezustand','Deckel zu → läuft weiter','Host für Gateway + alle Dienste','Dauerbetrieb seit Setup']},
@@ -1212,14 +1212,16 @@ function drawBeaconLabel(bx,by,T){
   // on phones the area below the core is occupied by the info dock, so
   // place the label just under the core (fixed screen offset) to avoid overlap.
   const mobile = istMobil();
-  const ly1 = mobile ? by + ts(120) : by + ts(115);   // portrait: knapp unter dem Gehirn (Ultron sitzt versetzt daneben)
-  const ly2 = mobile ? ly1 + 16 : by + ts(130);
+  // Desktop: Label ÜBER dem Gehirn; Portrait: knapp darunter (Dock belegt den Platz)
+  const lx  = mobile ? bx : bx + ts(60);
+  const ly1 = mobile ? by + ts(120) : by - ts(245);
+  const ly2 = mobile ? ly1 + 16 : ly1 + ts(15);
   ctx.save();
   ctx.fillStyle=hexA(COL.beacon,.9); ctx.font=`700 ${mobile?12:ts(13)}px -apple-system,system-ui,sans-serif`;
   ctx.textAlign='center';
-  ctx.fillText('SYNAPSEN-KERN', bx, ly1);
+  ctx.fillText('SYNAPSEN-KERN', lx, ly1);
   ctx.fillStyle=hexA(COL.beacon,.5); ctx.font=`500 ${mobile?9:ts(9.5)}px ui-monospace,monospace`;
-  ctx.fillText('neuronal aktiv · '+(3200+Math.floor((Math.sin(T*2)*.5+.5)*180))+' Signale/s', bx, ly2);
+  ctx.fillText('neuronal aktiv · '+(3200+Math.floor((Math.sin(T*2)*.5+.5)*180))+' Signale/s', lx, ly2);
   ctx.restore();
 }
 
