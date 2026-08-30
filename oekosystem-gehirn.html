@@ -337,14 +337,13 @@ function resize(){
   applyLayout();
   const sx = W/WORLD_W, sy = H/WORLD_H;
   let scale;
-  const TOP_HUD = 150;   // reserved screen px for the fixed HTML HUD (title/subtitle/switch/KPI cards)
+  const TOP_HUD = 132;   // reserved screen px for the fixed HTML HUD (title/subtitle/switch/KPI cards)
+  const BOT_BAND = 46;   // reserved screen px at the bottom for the LIVE ticker
   if(portrait){
-    // The top HTML HUD occupies a fixed pixel band. Fit the canvas station into
-    // the area BELOW it, choosing the scale that shows the whole tall station in
-    // the remaining height AND fills the width as much as possible. On short iOS
-    // Safari viewports this prevents the in-canvas DeskLane console from sliding
-    // up under the HTML KPI cards (the bug on Kai's real device).
-    const availH = Math.max(320, H - TOP_HUD - 8);
+    // Fit the canvas station into the area BETWEEN the top HTML HUD and the bottom
+    // LIVE ticker. This keeps the in-canvas DeskLane console just under the KPI
+    // cards and the bottom panels clear of the LIVE strip on short iOS viewports.
+    const availH = Math.max(320, H - TOP_HUD - BOT_BAND);
     scale = Math.min(W / WORLD_W, availH / WORLD_H);
   } else {
     scale = Math.max(sx, sy) * 1.02;
@@ -355,9 +354,8 @@ function resize(){
   if(portrait){
     fit.oy = 0;
     pan.x = 0;
-    // top-anchor the station right below the HUD band (DeskLane sits just under the
-    // KPI cards); any spare height falls at the bottom, no gap under the cards.
-    pan.y = TOP_HUD;
+    // centre the station in the band between HUD (top) and LIVE ticker (bottom)
+    pan.y = TOP_HUD + Math.max(0, (H - TOP_HUD - BOT_BAND - dispH)/2);
     fit._init = true;
   } else {
     fit.oy = (H - dispH)/2;
@@ -382,10 +380,10 @@ function clampPan(){
   const dispW = WORLD_W*effScale(), dispH = WORLD_H*effScale();
   // Portrait at default zoom: station is fitted into the band below the HTML HUD
   // (see resize). Lock to that framing; a little slack only.
-  const TOP_HUD = 150;
+  const TOP_HUD = 132, BOT_BAND = 46;
   if(istMobil() && uz>=0.999 && uz<=1.001){
     pan.x = 0;
-    pan.y = TOP_HUD;
+    pan.y = TOP_HUD + Math.max(0, (H - TOP_HUD - BOT_BAND - dispH)/2);
     panMax.x = 12; panMax.y = 20;
     return;
   }
@@ -1818,7 +1816,7 @@ function frame(now){
 
   // Energie-Linien ZUERST zeichnen, damit die Panels sie ueberdecken
   const CX = BRAIN_X();
-  const bx=tx(CX), by=ty(BRAIN_Y()-95);   // Linien-Treffpunkt: mittig im Gehirn
+  const bx=tx(CX), by=ty(BRAIN_Y() + (istMobil()? 0 : -95));   // Portrait: Treffpunkt exakt in der Gehirnmitte; Desktop: leicht oben
   const shop=ZONES[3];
   // beacon -> shop console (main output flow)
   drawLink(bx, by, tx(shop.x), ty(shop.y+shop.h/2), COL.gold, T, 0.15, istMobil()?0:-45);   // Desktop: Bogen zwischen Mac/Ultron; Portrait: gerade nach unten
