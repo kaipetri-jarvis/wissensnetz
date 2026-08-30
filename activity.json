@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-30T09:38:53+00:00",
+  "generated": "2026-08-30T09:48:53+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-08-30T11:39:19+02:00",
+      "text": "Oekosystem-Gehirn (Mobile): echte-Geraet-Ueberlappung behoben — Ursache war kurze iOS-Safari-Viewport-Hoehe (URL-Bar): der Canvas-Weltinhalt (DeskLane-Konsole) "
+    },
     {
       "at": "2026-08-30T11:18:49+02:00",
       "text": "Oekosystem-Gehirn (Mobile): ETSY-DeskLane-Konsole tiefer (y340) — lag mit ihrem Header unter den KPI-Kacheln/Pills. Jetzt klarer Abstand: Titel-Untertitel-Umsch"
@@ -30,10 +34,6 @@
     {
       "at": "2026-08-30T09:14:23+02:00",
       "text": "Oekosystem-Gehirn (Mobile): oberer Block (KPI-Kacheln + DeskLane) ein Stueck nach oben gezogen (Kacheln top:70, Konsole y268) — Kais Wunsch. Kacheln oben, DeskL"
-    },
-    {
-      "at": "2026-08-30T09:04:50+02:00",
-      "text": "Oekosystem-Gehirn (Mobile): Rueckgaengig — KPI-Kacheln wieder OBEN, ETSY-DeskLane-Konsole darunter (Kais Wunsch, letzte Umstellung zurueckgenommen)."
     }
   ],
   "cron": [
