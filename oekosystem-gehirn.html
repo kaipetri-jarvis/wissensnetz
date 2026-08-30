@@ -119,7 +119,7 @@
 
     /* stats: 4 tiles fit the full width in one non-overflowing row.
        !important guards the layout props against the wider desktop base rule. */
-    html:not([data-ansicht="desktop"]) .stats{top:auto !important; bottom:52px !important; left:7px !important; right:7px !important; width:auto !important;
+    html:not([data-ansicht="desktop"]) .stats{top:82px !important; bottom:auto !important; left:7px !important; right:7px !important; width:auto !important;
       display:flex !important; flex-wrap:nowrap !important;
       gap:5px !important; padding:0 !important;}
     html:not([data-ansicht="desktop"]) .stat{flex:1 1 0 !important; min-width:0 !important; width:0 !important; padding:5px 4px; border-radius:10px; overflow:hidden;}
@@ -135,7 +135,7 @@
     html:not([data-ansicht="desktop"]) .legend{display:none !important;}
     html:not([data-ansicht="desktop"]) .mdock{display:none !important;}
     html:not([data-ansicht="desktop"]) .hint{display:none;}
-    html:not([data-ansicht="desktop"]) .zoombar{bottom:auto; top:auto; bottom:96px; left:8px; right:auto; flex-direction:column; gap:8px;}
+    html:not([data-ansicht="desktop"]) .zoombar{top:auto; bottom:210px; transform:none; left:50%; margin-left:-58px; right:auto; flex-direction:row; gap:8px;}
     html:not([data-ansicht="desktop"]) .zoombar button{width:38px; height:38px; font-size:19px; border-radius:10px;}
 
     /* info dock: readable, scrollable card strip sitting above the ticker */
@@ -175,7 +175,7 @@
 
     /* stats: 4 tiles fit the full width in one non-overflowing row.
        !important guards the layout props against the wider desktop base rule. */
-    html[data-ansicht="mobil"] .stats{top:auto !important; bottom:52px !important; left:7px !important; right:7px !important; width:auto !important;
+    html[data-ansicht="mobil"] .stats{top:82px !important; bottom:auto !important; left:7px !important; right:7px !important; width:auto !important;
       display:flex !important; flex-wrap:nowrap !important;
       gap:5px !important; padding:0 !important;}
     html[data-ansicht="mobil"] .stat{flex:1 1 0 !important; min-width:0 !important; width:0 !important; padding:5px 4px; border-radius:10px; overflow:hidden;}
@@ -189,7 +189,7 @@
     html[data-ansicht="mobil"] .legend{display:none !important;}
     html[data-ansicht="mobil"] .mdock{display:none !important;}
     html[data-ansicht="mobil"] .hint{display:none;}
-    html[data-ansicht="mobil"] .zoombar{bottom:auto; top:auto; bottom:96px; left:8px; right:auto; flex-direction:column; gap:8px;}
+    html[data-ansicht="mobil"] .zoombar{top:auto; bottom:210px; transform:none; left:50%; margin-left:-58px; right:auto; flex-direction:row; gap:8px;}
     html[data-ansicht="mobil"] .zoombar button{width:38px; height:38px; font-size:19px; border-radius:10px;}
 
     /* info dock: readable, scrollable card strip sitting above the ticker */
@@ -631,33 +631,33 @@ const INFRA = [
 const PORTRAIT_POS = {
   // zones (also carry w/h so panels shrink to fit the narrow world).
   // Top panel band sits BELOW the top HUD + zoom bar (world y≥150).
-  // ETSY-DeskLane-Shop-Konsole jetzt OBEN (mit den Kacheln getauscht — Kais Wunsch);
-  // die KPI-Kacheln (HTML .stats) sitzen dafür unten.
-  z_shop:      {x:35,  y:150,  w:830, h:250},
-  // Panel-Band unter der Shop-Konsole
-  z_recherche: {x:35,  y:430,  w:360, h:165},
-  z_werkstatt: {x:470, y:430,  w:395, h:78},
-  z_deck:      {x:470, y:516,  w:395, h:78},
-  z_design:    {x:35,  y:607,  w:360, h:78},
-  z_ultron:    {x:470, y:607,  w:395, h:78},
-  // infra ring — ABOVE the brain (brain centre 450,1080; panels end ~y632)
-  n_cron:     {x:90,  y:730},
-  n_telegram: {x:450, y:700},
-  n_github:   {x:660, y:730},
-  n_gateway:  {x:270, y:730},
-  n_voice:    {x:760, y:830},
-  n_watchdog: {x:90,  y:930},
-  // infra — sides & BELOW the brain (kept apart from the agents next to them)
-  n_mac:      {x:840, y:850},
-  n_tailscale:{x:110, y:1430},
-  n_atlas:    {x:660, y:1460},
+  // KPI-Kacheln bleiben OBEN (HTML .stats). Darunter die ETSY-DeskLane-Konsole,
+  // die Panels (Recherche/Design/Werkstatt/Deck/Ultron) wandern nach UNTEN.
+  z_shop:      {x:35,  y:270,  w:830, h:220},
+  // Panel-Band jetzt UNTEN, unter dem Gehirn/Ring
+  z_recherche: {x:35,  y:1560, w:360, h:165},
+  z_werkstatt: {x:470, y:1560, w:395, h:78},
+  z_deck:      {x:470, y:1646, w:395, h:78},
+  z_design:    {x:35,  y:1735, w:360, h:78},
+  z_ultron:    {x:470, y:1735, w:395, h:78},
+  // infra ring — ABOVE the brain (brain centre 450,1080; DeskLane ends ~y435)
+  n_cron:     {x:90,  y:620},
+  n_telegram: {x:450, y:585},
+  n_github:   {x:660, y:620},
+  n_gateway:  {x:270, y:620},
+  n_voice:    {x:760, y:730},
+  n_watchdog: {x:90,  y:850},
+  // infra — sides & around the brain (kept apart from the agents next to them)
+  n_mac:      {x:840, y:800},
+  n_tailscale:{x:110, y:1330},
+  n_atlas:    {x:660, y:1380},
   // agents — wide ring around the brain (figures float here). Kept clear of the
   // infra-node labels above/below them (Codex↔Watchdog, Gemini↔Mac).
-  a_codex:    {x:220, y:840},
-  a_gemini:   {x:820, y:1030},
-  a_jarvis:   {x:150, y:1210},
-  a_chatgpt:  {x:815, y:1280},
-  a_ultron:   {x:410, y:1430},
+  a_codex:    {x:220, y:760},
+  a_gemini:   {x:820, y:980},
+  a_jarvis:   {x:150, y:1200},
+  a_chatgpt:  {x:815, y:1270},
+  a_ultron:   {x:410, y:1400},
 };
 function applyLayout(){
   const P = istMobil();
