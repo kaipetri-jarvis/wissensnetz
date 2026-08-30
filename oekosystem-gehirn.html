@@ -238,9 +238,8 @@
 const ANSICHT_FORCE=(new URLSearchParams(location.search).get('ansicht')||'').toLowerCase();
 document.documentElement.dataset.ansicht = (ANSICHT_FORCE==='mobil'||ANSICHT_FORCE==='desktop') ? ANSICHT_FORCE : 'auto';
 function istMobil(){ return ANSICHT_FORCE==='mobil' ? true : ANSICHT_FORCE==='desktop' ? false : (window.innerWidth < window.innerHeight); }
-let LAY_KX = 1, LAY_KY = 1;  // Auto-Verhältnis-Faktoren (Desktop), gesetzt in applyLayout()
-function BRAIN_Y(){ return istMobil() ? 574 : 545*LAY_KY; }  // Portrait: Gehirn vertikal mittig; Desktop: weiter unten
-function BRAIN_X(){ return istMobil() ? 450 : 800*LAY_KX; }  // Portrait world is 900 wide → Mitte 450
+function BRAIN_Y(){ return istMobil() ? 574 : 545; }  // Portrait: Gehirn vertikal mittig; Desktop: weiter unten
+function BRAIN_X(){ return istMobil() ? 450 : 800; }  // Portrait world is 900 wide → Mitte 450
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
@@ -347,9 +346,7 @@ function resize(){
     const availH = Math.max(320, H - TOP_HUD - BOT_BAND);
     scale = Math.min(W / WORLD_W, availH / WORLD_H);
   } else {
-    // Contain-Fit: die ganze Station sichtbar, unterhalb des Top-HUD
-    const availH = Math.max(320, H - TOP_HUD - BOT_BAND);
-    scale = Math.min(sx, availH / WORLD_H);
+    scale = Math.max(sx, sy) * 1.02;
   }
   fit.scale = scale;
   const dispW = WORLD_W*scale, dispH = WORLD_H*scale;
@@ -361,8 +358,7 @@ function resize(){
     pan.y = TOP_HUD + Math.max(0, (H - TOP_HUD - BOT_BAND - dispH)/2);
     fit._init = true;
   } else {
-    // im Band zwischen Top-HUD und LIVE-Ticker zentrieren
-    fit.oy = TOP_HUD + Math.max(0, (H - TOP_HUD - BOT_BAND - dispH)/2);
+    fit.oy = (H - dispH)/2;
     if(!fit._init) fit._init = true;
   }
   clampPan();
@@ -728,32 +724,11 @@ const PORTRAIT_POS = {
 };
 function applyLayout(){
   const P = istMobil();
-  // Auto-Verhältnis (Desktop): Welt ans tatsächliche Bildschirmformat dehnen,
-  // damit die Fläche immer gefüllt ist, ohne etwas abzuschneiden. Elemente
-  // werden vom Gehirn-Anker (800/545) aus nach außen gespreizt; die Element-
-  // größen selbst bleiben unverzerrt.
-  LAY_KX = 1; LAY_KY = 1;
-  if(!P){
-    const availW = W, availH = Math.max(320, H - 104 - 46);   // Band unter HUD / über Ticker
-    const ta = availW/availH, wa = DESK_W/DESK_H;
-    const SPREAD = 1.8;    // Grund-Spreizung: mehr Luft zwischen den Elementen
-    if(ta > wa){ LAY_KX = Math.min(2.8,  SPREAD*ta/wa); LAY_KY = SPREAD; }  // breiter Screen → horizontal spreizen
-    else       { LAY_KY = Math.min(2.5,  SPREAD*wa/ta); LAY_KX = SPREAD; }  // höherer Screen (16:10 …) → vertikal spreizen
-    WORLD_W = DESK_W*LAY_KX; WORLD_H = DESK_H*LAY_KY;
-  }
-  const stretch=(o)=>{
-    if(P || (LAY_KX===1 && LAY_KY===1)) return;
-    const cx = o._dw!==undefined ? o.x+o._dw/2 : o.x;
-    const cy = o._dh!==undefined ? o.y+o._dh/2 : o.y;
-    const nx = cx*LAY_KX, ny = cy*LAY_KY;      // Positionen skalieren, Größen bleiben
-    o.x = o._dw!==undefined ? nx-o._dw/2 : nx;
-    o.y = o._dh!==undefined ? ny-o._dh/2 : ny;
-  };
   const setXY=(o, pre)=>{
     if(o._dx===undefined){ o._dx=o.x; o._dy=o.y; o._dw=o.w; o._dh=o.h; }   // capture desktop defaults once
     const pp = PORTRAIT_POS[pre+o.key];
     if(P && pp){ o.x=pp.x; o.y=pp.y; if(pp.w!==undefined)o.w=pp.w; if(pp.h!==undefined)o.h=pp.h; }
-    else { o.x=o._dx; o.y=o._dy; if(o._dw!==undefined)o.w=o._dw; if(o._dh!==undefined)o.h=o._dh; stretch(o); }
+    else { o.x=o._dx; o.y=o._dy; if(o._dw!==undefined)o.w=o._dw; if(o._dh!==undefined)o.h=o._dh; }
   };
   for(const z of ZONES)  setXY(z,'z_');
   for(const a of AGENTS) setXY(a,'a_');
@@ -859,24 +834,29 @@ function roundRect(x,y,w,h,r){ ctx.beginPath();
    Draw: atmospheric background depth
    ============================================================ */
 function drawBackground(T){
-  // deep radial veil
-  const g=ctx.createRadialGradient(tx(BRAIN_X()),ty(320),ts(50),tx(BRAIN_X()),ty(460),ts(1200));
-  g.addColorStop(0,'rgba(30,44,96,.34)'); g.addColorStop(.5,'rgba(10,14,32,.14)'); g.addColorStop(1,'rgba(2,3,10,0)');
-  ctx.fillStyle=g; ctx.fillRect(0,0,W,H);
-
-  // volumetric nebula blobs (slow animated)
-  ctx.globalCompositeOperation='lighter';
-  for(const nb of nebulae){
-    const wob=Math.sin(T*nb.drift+nb.x)*ts(24);
-    const cx=fit.ox+pan.x*0.22+nb.x*fit.scale;
-    const cy=fit.oy+pan.y*0.22+nb.y*fit.scale+wob;
-    const rr=ts(nb.r)*(1+Math.sin(T*0.2+nb.y)*0.05);
-    const ng=ctx.createRadialGradient(cx,cy,0,cx,cy,rr);
-    const aa=nb.a*(0.8+0.25*Math.sin(T*0.3+nb.r));
-    ng.addColorStop(0,hexA(nb.hue,aa)); ng.addColorStop(1,hexA(nb.hue,0));
-    ctx.fillStyle=ng; ctx.beginPath(); ctx.arc(cx,cy,rr,0,6.28); ctx.fill();
+  const _mob = istMobil();
+  // deep radial veil — Portrait: aus (Kai will keinen Hintergrund-Schleier)
+  if(!_mob){
+    const g=ctx.createRadialGradient(tx(BRAIN_X()),ty(320),ts(50),tx(BRAIN_X()),ty(460),ts(1200));
+    g.addColorStop(0,'rgba(30,44,96,.34)'); g.addColorStop(.5,'rgba(10,14,32,.14)'); g.addColorStop(1,'rgba(2,3,10,0)');
+    ctx.fillStyle=g; ctx.fillRect(0,0,W,H);
   }
-  ctx.globalCompositeOperation='source-over';
+
+  // volumetric nebula blobs (slow animated) — Portrait: aus (reines Sternenfeld)
+  if(!_mob){
+    ctx.globalCompositeOperation='lighter';
+    for(const nb of nebulae){
+      const wob=Math.sin(T*nb.drift+nb.x)*ts(24);
+      const cx=fit.ox+pan.x*0.22+nb.x*fit.scale;
+      const cy=fit.oy+pan.y*0.22+nb.y*fit.scale+wob;
+      const rr=ts(nb.r)*(1+Math.sin(T*0.2+nb.y)*0.05);
+      const ng=ctx.createRadialGradient(cx,cy,0,cx,cy,rr);
+      const aa=nb.a*(0.8+0.25*Math.sin(T*0.3+nb.r));
+      ng.addColorStop(0,hexA(nb.hue,aa)); ng.addColorStop(1,hexA(nb.hue,0));
+      ctx.fillStyle=ng; ctx.beginPath(); ctx.arc(cx,cy,rr,0,6.28); ctx.fill();
+    }
+    ctx.globalCompositeOperation='source-over';
+  }
 
   drawGridFloor(T);
 
@@ -897,8 +877,8 @@ function drawBackground(T){
     ctx.fillStyle= s.r>1.3 ? `rgba(200,225,255,${a})` : `rgba(150,220,200,${a*.9})`;
     ctx.fill();
   }
-  // NEAR drifting nebula dust — fastest parallax
-  for(const d of dust){
+  // NEAR drifting nebula dust — fastest parallax — Portrait: aus (kein Farb-Dunst)
+  if(!_mob) for(const d of dust){
     d.y+=d.vy; if(d.y< -10){ d.y=WORLD_H+10; d.x=Math.random()*WORLD_W; }
     const col = d.hue<.4?COL.gemini:d.hue<.7?COL.chatgpt:COL.sub;
     const px=fit.ox+pan.x*0.65+d.x*fit.scale;
@@ -910,6 +890,10 @@ function drawBackground(T){
 
 /* perspective grid floor receding into depth */
 function drawGridFloor(T){
+  // Portrait/mobile: skip the perspective grid + horizon glow entirely — on the
+  // compact phone view it reads as a "Schleier" (haze) behind/around the panels
+  // that Kai wants gone. Desktop keeps the full floor.
+  if(istMobil()) return;
   const hz = ty(500);          // horizon line (world y ~500)
   const bottom = ty(WORLD_H+260);
   const cxW = tx(BRAIN_X());
@@ -975,7 +959,7 @@ function drawBeacon(T){
 }
 /* legacy full reactor kept for reference but unused */
 function drawBeaconOLD(T){
-  const bx=tx(BRAIN_X()), by=ty(BRAIN_Y());
+  const bx=tx(800), by=ty(BRAIN_Y());
   const pulse=(Math.sin(T*2)*.5+.5);
   // gentle breathing on a second, slower frequency (atmet)
   const breath=(Math.sin(T*0.9)*.5+.5);
@@ -1405,7 +1389,7 @@ const _ORBIT = [
   {key:'mac',       label:'Mac 24/7',  col:COL.mac,       ang: 2.35, ring:1},
 ];
 function drawMobileOrbit(T){
-  const bx=tx(BRAIN_X()), by=ty(BRAIN_Y());
+  const bx=tx(800), by=ty(BRAIN_Y());
   // The WebGL brain canvas is layered ABOVE this 2D canvas (z-index 3 vs 0), so
   // any node placed UNDER the brain's silhouette is invisibly hidden behind it.
   // Nodes must clear the brain's on-screen radius by a wide margin.
@@ -1912,6 +1896,14 @@ function frame(now){
   // beacon -> system/infra nodes (sync/deploy/heartbeat flows)
   for(const n of INFRA){ const nb = istMobil() ? 0 : (n.key==='atlas' ? 190 : (n.x<CX?24:-24));   // Portrait: gerade Speichen; Desktop: ATLAS weiter Bogen
   drawLink(bx, by, tx(n.x), ty(n.y)+ts((n.big?11.6:9.2)*(n.sz||1)), n.col, T, 0.5, nb); }
+
+  // Portrait: solid opaque backdrop behind the bottom panel band so the grid
+  // floor / horizon haze ("Schleier") doesn't shimmer through the glass panels.
+  if(istMobil()){
+    const bandTop = ty(ZONES[4].y) - ts(14);
+    ctx.fillStyle = '#04060e';
+    ctx.fillRect(0, bandTop, W, H - bandTop);
+  }
 
   // zones (back to front)
   drawLogTerminal(ZONES[4],T,dt);   // recherche (back left) — log stream
