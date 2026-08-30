@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-30T12:58:57+00:00",
+  "generated": "2026-08-30T13:08:57+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-08-30T15:07:01+02:00",
+      "text": "Oekosystem-Gehirn (Mobile): auf Stand von 13:46 zurueck (Kai: 'auf Stand rueckgaengig') — Hintergrund-Atmosphaere (Gitter/Nebel/Dunst/Vignette) im Portrait AN, "
+    },
     {
       "at": "2026-08-30T14:57:28+02:00",
       "text": "Oekosystem-Gehirn (Mobile): Hintergrund-Effekte wieder AN (rueckgaengig) — Kai: 'wir haben vom falschen Schleier gesprochen'. Perspektiv-Gitter, Nebel-Blobs, Fa"
@@ -30,10 +34,6 @@
     {
       "at": "2026-08-30T13:46:09+02:00",
       "text": "Oekosystem-Gehirn (Mobile): untere Panels buendig an die Oberkante des LIVE-Feeds gezogen (Bottom-Reihe endet direkt ueber LIVE, kein Spalt). Kais Wunsch. Deskt"
-    },
-    {
-      "at": "2026-08-30T13:39:34+02:00",
-      "text": "Oekosystem-Gehirn (Mobile): Panels zurueck auf ausgewogenen Stand (y1000) — Kai: 'so war es besser' (Schleier-Hoehe y935 zurueckgenommen). Desktop unveraendert."
     }
   ],
   "cron": [
