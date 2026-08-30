@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-30T01:28:49+00:00",
+  "generated": "2026-08-30T01:38:49+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-08-30T03:30:00+02:00",
+      "text": "Auto-Backup 2026-08-30 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-08-30T02:42:47+02:00",
       "text": "Oekosystem-Gehirn (Mobile): KPI-Kacheln jetzt UNTER die ETSY-DeskLane-Konsole (DeskLane ganz oben, Kacheln darunter). Kais Wunsch. Gemini: PASST."
@@ -30,17 +34,13 @@
     {
       "at": "2026-08-30T02:06:36+02:00",
       "text": "Oekosystem-Gehirn (Mobile): KPI-Kacheln bleiben oben, DeskLane-Liste darunter, die 5 Panels (Recherche/Werkstatt/Deck/Design/Ultron) nach UNTEN verschoben (Kais"
-    },
-    {
-      "at": "2026-08-30T01:58:54+02:00",
-      "text": "Oekosystem-Gehirn (Mobile): ETSY-DeskLane-Shop-Konsole nach OBEN, KPI-Kacheln nach UNTEN getauscht (Kais Wunsch). Portrait-Welt 900x1980, Gehirn y1080, Panels+R"
     }
   ],
   "cron": [
     "jarvis-crash-log-watcher crash-log-watcher cron",
+    "heartbeat:ultron Heartbeat (ultron)",
     "heartbeat:main Heartbeat (main)",
     "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
-    "heartbeat:ultron Heartbeat (ultron)",
     "- etsy-projekt-treiber cron"
   ]
 }
