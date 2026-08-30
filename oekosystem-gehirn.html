@@ -606,7 +606,7 @@ const ZONES = [
 // main agents — leuchtende Figuren; face/pose leicht variiert
 const AGENTS = [
   { key:'jarvis', name:'Jarvis', model:'Assistent · läuft auf claude-opus-4-8', col:COL.claude,
-    zone:'werkstatt', x:425, y:685, face:'butler', pose:'lean',
+    zone:'werkstatt', x:385, y:685, face:'butler', pose:'lean',
     states:[
       'baut Rechnungs-/Angebots-Vorlage (DE) — PDF + Excel + Word…',
       'schnürt Bundle „Selbstständig-Startklar" (40 Dateien)…',
@@ -645,7 +645,7 @@ const AGENTS = [
       'Idee: Jobwechsel-System mit Gehaltsverhandlungs-Rechner',
     ]},
   { key:'vision', name:'Vision', model:'Bild- & Design-Agent · Port 18790 (mit Ultron)', col:COL.vision,
-    zone:'design', x:560, y:742, face:'crystal', pose:'upright',
+    zone:'design', x:575, y:742, face:'crystal', pose:'upright',
     states:[
       'in Aufbau — wird Kais Bild- & Design-Auge',
       'läuft auf ai.openclaw.ultron · Port 18790 — gemeinsam mit Ultron',
@@ -1919,7 +1919,7 @@ function drawSub(m,T){
    State init
    ============================================================ */
 const AGENT_IMG={};
-['jarvis','codex','gemini','chatgpt','ultron'].forEach(k=>{ const im=new Image(); im.src='assets/agents/'+k+'.png'; AGENT_IMG[k]=im; });
+['jarvis','codex','gemini','chatgpt','ultron','vision','gaia'].forEach(k=>{ const im=new Image(); im.src='assets/agents/'+k+'.png'; AGENT_IMG[k]=im; });
 AGENTS.forEach((a,i)=>{
   a.phase=i*2.1; a.target=a.states[0]; a.shown=''; a.typeI=0; a.hold=0; a.working=true;
   a.link = 'beacon';   // alle Agenten (auch ChatGPT) ans Gehirn — Kais Wunsch
