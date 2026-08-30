@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-30T13:08:57+00:00",
+  "generated": "2026-08-30T13:18:57+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-08-30T15:16:57+02:00",
+      "text": "Oekosystem-Gehirn (Mobile): tuerkis/gruener Panel-Glow-Schleier unter den unteren Kaesten (DESIGN-LABOR/ULTRON) entfernt — glassPanel Aussen-Glow im Portrait st"
+    },
     {
       "at": "2026-08-30T15:07:01+02:00",
       "text": "Oekosystem-Gehirn (Mobile): auf Stand von 13:46 zurueck (Kai: 'auf Stand rueckgaengig') — Hintergrund-Atmosphaere (Gitter/Nebel/Dunst/Vignette) im Portrait AN, "
@@ -30,10 +34,6 @@
     {
       "at": "2026-08-30T14:03:51+02:00",
       "text": "Oekosystem-Gehirn (Mobile): Boden-Schleier/Haze hinter den unteren Panels entfernt — opake dunkle Backdrop-Flaeche hinter dem Panel-Band (istMobil), sodass Gitt"
-    },
-    {
-      "at": "2026-08-30T13:46:09+02:00",
-      "text": "Oekosystem-Gehirn (Mobile): untere Panels buendig an die Oberkante des LIVE-Feeds gezogen (Bottom-Reihe endet direkt ueber LIVE, kein Spalt). Kais Wunsch. Deskt"
     }
   ],
   "cron": [
