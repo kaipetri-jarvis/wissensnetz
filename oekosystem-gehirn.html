@@ -695,22 +695,22 @@ const PORTRAIT_POS = {
   z_design:    {x:35,  y:1069, w:360, h:76},
   z_ultron:    {x:470, y:1069, w:395, h:76},
   // infra ring — ABOVE the brain (brain centre 450,755)
-  n_cron:     {x:196,  y:276},
-  n_telegram: {x:450, y:241},
-  n_github:   {x:598, y:276},
-  n_gateway:  {x:315, y:270},
-  n_voice:    {x:674, y:373},
-  n_watchdog: {x:205,  y:443},
+  n_cron:     {x:255,  y:346},
+  n_telegram: {x:450, y:308},
+  n_github:   {x:564, y:346},
+  n_gateway:  {x:346, y:339},
+  n_voice:    {x:624, y:418},
+  n_watchdog: {x:260,  y:472},
   // infra — sides & around the brain
-  n_mac:      {x:722, y:367},
-  n_tailscale:{x:204, y:755},
-  n_atlas:    {x:577, y:727},
+  n_mac:      {x:661, y:413},
+  n_tailscale:{x:264, y:711},
+  n_atlas:    {x:547, y:690},
   // agents — wide ring around the brain
-  a_codex:    {x:287, y:399},
-  a_gemini:   {x:731, y:487},
-  a_jarvis:   {x:240, y:638},
-  a_chatgpt:  {x:723, y:697},
-  a_ultron:   {x:382, y:788},
+  a_codex:    {x:325, y:439},
+  a_gemini:   {x:664, y:507},
+  a_jarvis:   {x:290, y:623},
+  a_chatgpt:  {x:658, y:667},
+  a_ultron:   {x:394, y:750},
 };
 function applyLayout(){
   const P = istMobil();
@@ -1513,7 +1513,7 @@ function drawFigure(a,T){
   const tap=Math.sin(T*7+a.phase)*ts(3)*(a.working?1:0.2); // typing
   const bx=tx(a.x), by=ty(a.y)+bob;
   const col=a.col;
-  const s=ts(1.45);   // Agenten 159% groesser als zuvor (Kais Wunsch)
+  const s=ts(istMobil() ? 1.02 : 1.45);   // Portrait: kleinere Figuren, damit sie eng ans Gehirn ruecken koennen
   // pose variation
   const lean = a.pose==='lean' ? 3*s : 0;
   const armSpread = a.pose==='wide' ? 6*s : 0;
