@@ -809,11 +809,25 @@ for(let i=0;i<90;i++) starsNear.push({x:Math.random()*WORLD_W,y:Math.random()*WO
   r:Math.random()*1.8+.6,tw:Math.random()*6.28,sp:Math.random()*.02+.006});
 /* leuchtende Glow-Sterne — bildschirmfest, über die GANZE Fläche (auch HUD-Band oben) */
 const glowStars=[];
-for(let i=0;i<700;i++) glowStars.push({fx:Math.random(),fy:Math.random(),   // ganze Fläche — Leerraum-Filter beim Zeichnen
-  r:Math.random()*1.8+.8, halo:Math.random()*12+6, tw:Math.random()*6.28, sp:Math.random()*.014+.004,
-  hue:Math.random(), spark:Math.random()<0.35,
-  // Helligkeitsklassen (Desktop): ~25% strahlend hell, ~45% mittel, ~30% schwach
-  b:(q=>q<0.25?1.6:q<0.7?1.0:0.45)(Math.random())});
+{ /* Poisson-artige Verteilung: Mindestabstand generell, größerer Abstand für gleiche Helligkeitsklasse */
+  const MIND=0.032, MINDSAME=0.075;
+  let tries=0;
+  while(glowStars.length<420 && tries<30000){
+    tries++;
+    const fx=Math.random(), fy=Math.random();
+    const b=(q=>q<0.25?1.6:q<0.7?1.0:0.45)(Math.random());   // ~25% strahlend, ~45% mittel, ~30% schwach
+    let ok=true;
+    for(const o of glowStars){
+      // Abstand in der Desktop-Geometrie messen (obere Bildschirmhälfte → y-Anteil halbiert)
+      const dx=fx-o.fx, dy=(fy-o.fy)*0.5, d2=dx*dx+dy*dy;
+      if(d2<MIND*MIND || (o.b===b && d2<MINDSAME*MINDSAME)){ ok=false; break; }
+    }
+    if(!ok) continue;
+    glowStars.push({fx,fy, r:Math.random()*1.8+.8, halo:Math.random()*12+6,
+      tw:Math.random()*6.28, sp:Math.random()*.014+.004,
+      hue:Math.random(), spark:Math.random()<0.35, b});
+  }
+}
 /* Glow-Sprites einmal vorrendern (Gradients pro Frame sind zu teuer bei 450 Sternen) */
 const glowSprites = ['160,200,255','190,235,220','235,220,255'].map(col=>{
   const c=document.createElement('canvas'); c.width=c.height=64;
@@ -916,7 +930,7 @@ function drawBackground(T){
   for(const s of glowStars){
     s.tw+=s.sp; const a=(Math.sin(s.tw)*.5+.5)*0.65+0.35;
     // Mobil: Sterne ins tatsächlich sichtbare Band zwischen KPI-Kacheln und unteren Karten konzentrieren
-    const px=s.fx*W, py = M ? 170 + s.fy*(H-250-170) : s.fy*H;
+    const px=s.fx*W, py = M ? 170 + s.fy*(H-250-170) : s.fy*H*0.5;   // Desktop: nur über der Mittellinie
     if(inObst(px,py)) continue;                              // Stern liegt hinter einem Element → auslassen
     const si = s.hue<.33?0 : s.hue<.66?1 : 2;
     const d = s.halo*2*(M?1:(0.7+0.4*s.b));   // helle Sterne bekommen auch einen größeren Halo
