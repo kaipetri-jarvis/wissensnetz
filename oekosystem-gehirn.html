@@ -135,7 +135,7 @@
     html:not([data-ansicht="desktop"]) .legend{display:none !important;}
     html:not([data-ansicht="desktop"]) .mdock{display:none !important;}
     html:not([data-ansicht="desktop"]) .hint{display:none;}
-    html:not([data-ansicht="desktop"]) .zoombar{top:50px; bottom:auto; transform:none; left:auto; margin-left:0; right:8px; flex-direction:row; gap:6px;}
+    html:not([data-ansicht="desktop"]) .zoombar{top:auto; bottom:200px; transform:none; left:auto; margin-left:0; right:8px; flex-direction:column; gap:6px;}
     html:not([data-ansicht="desktop"]) .zoombar button{width:30px; height:30px; font-size:15px; border-radius:8px;}
 
     /* info dock: readable, scrollable card strip sitting above the ticker */
@@ -189,7 +189,7 @@
     html[data-ansicht="mobil"] .legend{display:none !important;}
     html[data-ansicht="mobil"] .mdock{display:none !important;}
     html[data-ansicht="mobil"] .hint{display:none;}
-    html[data-ansicht="mobil"] .zoombar{top:50px; bottom:auto; transform:none; left:auto; margin-left:0; right:8px; flex-direction:row; gap:6px;}
+    html[data-ansicht="mobil"] .zoombar{top:auto; bottom:200px; transform:none; left:auto; margin-left:0; right:8px; flex-direction:column; gap:6px;}
     html[data-ansicht="mobil"] .zoombar button{width:30px; height:30px; font-size:15px; border-radius:8px;}
 
     /* info dock: readable, scrollable card strip sitting above the ticker */
@@ -418,7 +418,11 @@ function zoomTo(nz, sx, sy){
   let lastTapT=0, lastTapX=0, lastTapY=0;
   let pinch=null; // {d0, uz0, cx, cy}
 
-  function down(x,y){ dragging=true; lx=x; ly=y; downX=x; downY=y; moved=0; downT=performance.now(); }
+  function down(x,y){
+    // over the 3D brain? let the brain layer handle rotate; don't pan the scene.
+    if(window._overBrain && window._overBrain(x,y)){ dragging=false; return; }
+    dragging=true; lx=x; ly=y; downX=x; downY=y; moved=0; downT=performance.now();
+  }
   function move(x,y){ if(!dragging) return;
     const dx=x-lx, dy=y-ly; moved += Math.abs(dx)+Math.abs(dy);
     pan.x = Math.max(-panMax.x, Math.min(panMax.x, pan.x+dx));
@@ -496,17 +500,60 @@ function showInfo(a){
 function hideInfo(){ _ic.el.classList.remove('show'); _ic._agent=null; }
 document.getElementById('icClose').addEventListener('click', hideInfo);
 
+/* smoothly zoom onto a world point (wx,wy) at target zoom nz, centred on screen */
+let _focusAnim=null;
+function focusWorld(wx, wy, nz){
+  nz = Math.max(UZ_MIN, Math.min(UZ_MAX, nz));
+  const uz0=uz, px0=pan.x, py0=pan.y;
+  // solve target pan so (wx,wy) lands at screen centre (W/2, H/2) at zoom nz
+  const es1 = fit.scale*nz;
+  const tpx = W/2 - fit.ox - wx*es1;
+  const tpy = H/2 - fit.oy - wy*es1;
+  const t0=performance.now(), dur=460;
+  if(_focusAnim) cancelAnimationFrame(_focusAnim);
+  (function step(now){
+    const k=Math.min(1,(now-t0)/dur), e=1-Math.pow(1-k,3);   // ease-out cubic
+    uz = uz0 + (nz-uz0)*e;
+    pan.x = px0 + (tpx-px0)*e;
+    pan.y = py0 + (tpy-py0)*e;
+    if(k<1) _focusAnim=requestAnimationFrame(step); else _focusAnim=null;
+  })(t0);
+}
+function focusReset(){
+  const uz0=uz, px0=pan.x, py0=pan.y, t0=performance.now(), dur=420;
+  if(_focusAnim) cancelAnimationFrame(_focusAnim);
+  (function step(now){
+    const k=Math.min(1,(now-t0)/dur), e=1-Math.pow(1-k,3);
+    uz = uz0 + (1-uz0)*e;
+    if(istMobil()){ pan.x = px0*(1-e); }   // clampPan re-centres on mobile
+    else { pan.x = px0*(1-e); pan.y = py0*(1-e); }
+    clampPan();
+    if(k<1) _focusAnim=requestAnimationFrame(step); else { _focusAnim=null; clampPan(); }
+  })(t0);
+}
+
 function handleTap(sx, sy){
-  // figures are drawn around screen point (tx(a.x), ty(a.y)); use a generous radius
-  let best=null, bestD=1e9;
+  // hit-test agents AND infra/system nodes; nearest within radius wins
+  let best=null, bestD=1e9, bestKind=null;
   for(const a of AGENTS){
-    const px=tx(a.x), py=ty(a.y);
-    const d=Math.hypot(sx-px, sy-py);
-    if(d<bestD){ bestD=d; best=a; }
+    const d=Math.hypot(sx-tx(a.x), sy-ty(a.y));
+    if(d<bestD){ bestD=d; best=a; bestKind='agent'; }
   }
-  const hitR = Math.max(56, ts(70));   // scales with zoom, min 56px
-  if(best && bestD<hitR){ showInfo(best); }
-  else { hideInfo(); }
+  for(const n of INFRA){
+    const d=Math.hypot(sx-tx(n.x), sy-ty(n.y));
+    if(d<bestD){ bestD=d; best=n; bestKind='infra'; }
+  }
+  const hitR = Math.max(52, ts(70));   // scales with zoom, min 52px
+  if(best && bestD<hitR){
+    // zoom onto the tapped AI / agent / system node and centre it
+    const target = istMobil() ? 2.4 : 2.0;
+    focusWorld(best.x, best.y - (bestKind==='agent'? 30 : 0), target);
+    if(bestKind==='agent') showInfo(best); else hideInfo();
+  } else {
+    // tap on empty space → zoom back out to the full station
+    hideInfo();
+    if(uz>1.05) focusReset();
+  }
 }
 
 /* ---------- zoom buttons ---------- */
@@ -1940,7 +1987,10 @@ requestAnimationFrame(frame);
   const bRenderer = new THREE.WebGLRenderer({ antialias:true, alpha:true });
   bRenderer.setSize(window.innerWidth, window.innerHeight);
   bRenderer.setPixelRatio(Math.min(devicePixelRatio, 2));
-  bRenderer.domElement.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:auto;';
+  // pointer-events:none so taps pass THROUGH to the 2D scene canvas below (agent
+  // hit-testing lives there); the brain's own drag/rotate listens on window with
+  // an overBrain() gate, so rotating the brain still works.
+  bRenderer.domElement.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;';
   wrap.appendChild(bRenderer.domElement);
 
   const brainGroup = new THREE.Group(); bScene.add(brainGroup);
@@ -2024,17 +2074,20 @@ requestAnimationFrame(frame);
   const el=bRenderer.domElement;
   // Treffer-Test: liegt der Zeiger ueber dem Gehirn (Beacon-Umkreis)?
   function overBrain(x,y){ const bx=tx(BRAIN_X()), by=ty(BRAIN_Y()), r=ts(1)*190*zoom; const dx=x-bx, dy=y-by; return dx*dx+dy*dy < r*r; }
+  window._overBrain = overBrain;   // let the scene layer skip pan/tap when over the brain
   const down=(x,y)=>{ if(!overBrain(x,y)) return; dragging=true;userRot=true;vy=vx=0;px=x;py=y;moved=0; };
   const move=(x,y)=>{ hovering=overBrain(x,y); el.style.cursor = hovering ? (dragging?'grabbing':'grab') : 'default';
     if(!dragging)return; const dy=(x-px)*0.006,dx=(y-py)*0.006; moved+=Math.abs(x-px)+Math.abs(y-py); tRy+=dy;tRx+=dx;vy=dy;vx=dx; tRx=Math.max(-1.4,Math.min(1.4,tRx)); px=x;py=y; };
   const up=()=>{ if(dragging && moved<6) pulse=1;   // Klick ohne Ziehen: Synapsen-Impuls
     dragging=false; };
-  el.addEventListener('mousedown',e=>down(e.clientX,e.clientY));
+  // Brain canvas is pointer-events:none now, so listen on the scene canvas (top
+  // interactive layer). down() gates on overBrain(), so this only grabs the brain.
+  cvs.addEventListener('mousedown',e=>down(e.clientX,e.clientY));
   window.addEventListener('mousemove',e=>move(e.clientX,e.clientY));
   window.addEventListener('mouseup',up);
-  el.addEventListener('dblclick',e=>{ if(!overBrain(e.clientX,e.clientY)) return;
+  cvs.addEventListener('dblclick',e=>{ if(!overBrain(e.clientX,e.clientY)) return;
     focussed=!focussed; tZoom = focussed ? 1.55 : 1; });
-  el.addEventListener('touchstart',e=>{ if(e.touches[0])down(e.touches[0].clientX,e.touches[0].clientY); },{passive:true});
+  cvs.addEventListener('touchstart',e=>{ if(e.touches[0])down(e.touches[0].clientX,e.touches[0].clientY); },{passive:true});
   window.addEventListener('touchmove',e=>{ if(e.touches[0])move(e.touches[0].clientX,e.touches[0].clientY); },{passive:true});
   window.addEventListener('touchend',up);
 
