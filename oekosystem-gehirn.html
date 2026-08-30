@@ -810,9 +810,9 @@ for(let i=0;i<90;i++) starsNear.push({x:Math.random()*WORLD_W,y:Math.random()*WO
 /* leuchtende Glow-Sterne — bildschirmfest, über die GANZE Fläche (auch HUD-Band oben) */
 const glowStars=[];
 { /* Poisson-artige Verteilung: Mindestabstand generell, größerer Abstand für gleiche Helligkeitsklasse */
-  const MIND=0.024, MINDSAME=0.058;
+  const MIND=0.019, MINDSAME=0.046;
   let tries=0;
-  while(glowStars.length<650 && tries<40000){
+  while(glowStars.length<1000 && tries<60000){
     tries++;
     const fx=Math.random(), fy=Math.random();
     const b=(q=>q<0.25?1.6:q<0.7?1.0:0.45)(Math.random());   // ~25% strahlend, ~45% mittel, ~30% schwach
