@@ -1830,6 +1830,7 @@ SUBS.forEach((m,i)=>{
 
 function updateSubs(dt,T){
   for(const m of SUBS){
+    if(typeof _ic!=='undefined' && _ic._agent && _ic._agent._sub===m) continue;   // angeklickter Sub haelt an
     const dx=m.tx-m.x, dy=m.ty-m.y, d=Math.hypot(dx,dy);
     if(d<6){
       const z=ZONES[Math.floor(Math.random()*ZONES.length)];
