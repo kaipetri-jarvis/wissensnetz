@@ -953,7 +953,9 @@ function drawBackground(T){
   obst.push([W*0.3,H-90,W*0.7,H-56]);                        // Hinweiszeile
   const inObst=(x,y)=>{ for(const o of obst){ if(x>o[0]&&x<o[2]&&y>o[1]&&y<o[3]) return true; } return false; };
   ctx.globalCompositeOperation='lighter';
+  let _gi=0;
   for(const s of glowStars){
+    _gi++; if(M && (_gi%2)) continue;   // Mobil: 50% weniger Sterne
     s.tw+=s.sp; const a=(Math.sin(s.tw)*.5+.5)*0.65+0.35;
     // Mobil: Sterne ins tatsächlich sichtbare Band zwischen KPI-Kacheln und unteren Karten konzentrieren
     const px=s.fx*W, py = M ? 170 + s.fy*(H-250-170) : s.fy*H*0.5;   // Desktop: nur über der Mittellinie
