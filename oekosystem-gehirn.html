@@ -736,9 +736,9 @@ function applyLayout(){
   if(!P){
     const availW = W, availH = Math.max(320, H - 104 - 46);   // Band unter HUD / über Ticker
     const ta = availW/availH, wa = DESK_W/DESK_H;
-    const SPREAD = 1.15;   // Grund-Spreizung: mehr Luft zwischen den Elementen
-    if(ta > wa){ LAY_KX = Math.min(1.8,  SPREAD*ta/wa); LAY_KY = SPREAD; }  // breiter Screen → horizontal spreizen
-    else       { LAY_KY = Math.min(1.55, SPREAD*wa/ta); LAY_KX = SPREAD; }  // höherer Screen (16:10 …) → vertikal spreizen
+    const SPREAD = 1.3;    // Grund-Spreizung: mehr Luft zwischen den Elementen
+    if(ta > wa){ LAY_KX = Math.min(2.1,  SPREAD*ta/wa); LAY_KY = SPREAD; }  // breiter Screen → horizontal spreizen
+    else       { LAY_KY = Math.min(1.8,  SPREAD*wa/ta); LAY_KX = SPREAD; }  // höherer Screen (16:10 …) → vertikal spreizen
     WORLD_W = DESK_W*LAY_KX; WORLD_H = DESK_H*LAY_KY;
   }
   const stretch=(o)=>{
