@@ -809,7 +809,7 @@ for(let i=0;i<90;i++) starsNear.push({x:Math.random()*WORLD_W,y:Math.random()*WO
   r:Math.random()*1.8+.6,tw:Math.random()*6.28,sp:Math.random()*.02+.006});
 /* leuchtende Glow-Sterne — bildschirmfest, über die GANZE Fläche (auch HUD-Band oben) */
 const glowStars=[];
-for(let i=0;i<450;i++) glowStars.push({fx:Math.random(),fy:Math.random(),   // ganze Fläche — Leerraum-Filter beim Zeichnen
+for(let i=0;i<700;i++) glowStars.push({fx:Math.random(),fy:Math.random(),   // ganze Fläche — Leerraum-Filter beim Zeichnen
   r:Math.random()*1.8+.8, halo:Math.random()*12+6, tw:Math.random()*6.28, sp:Math.random()*.014+.004,
   hue:Math.random(), spark:Math.random()<0.35});
 /* Glow-Sprites einmal vorrendern (Gradients pro Frame sind zu teuer bei 450 Sternen) */
@@ -912,12 +912,13 @@ function drawBackground(T){
   const inObst=(x,y)=>{ for(const o of obst){ if(x>o[0]&&x<o[2]&&y>o[1]&&y<o[3]) return true; } return false; };
   ctx.globalCompositeOperation='lighter';
   for(const s of glowStars){
-    s.tw+=s.sp; const a=(Math.sin(s.tw)*.5+.5)*0.9+0.1;
-    const px=s.fx*W, py=s.fy*H;
+    s.tw+=s.sp; const a=(Math.sin(s.tw)*.5+.5)*0.65+0.35;
+    // Mobil: Sterne ins tatsächlich sichtbare Band zwischen KPI-Kacheln und unteren Karten konzentrieren
+    const px=s.fx*W, py = M ? 170 + s.fy*(H-250-170) : s.fy*H;
     if(inObst(px,py)) continue;                              // Stern liegt hinter einem Element → auslassen
     const si = s.hue<.33?0 : s.hue<.66?1 : 2;
     const d = s.halo*2;
-    ctx.globalAlpha = 0.4*a;
+    ctx.globalAlpha = 0.6*a;
     ctx.drawImage(glowSprites[si], px-s.halo, py-s.halo, d, d);   // vorgerenderter Glow-Sprite
     if(s.spark && a>0.75){   // feines Kreuz-Funkeln auf dem Höhepunkt
       ctx.globalAlpha = 0.35*(a-0.7)/0.3;
