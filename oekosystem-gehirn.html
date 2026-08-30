@@ -238,8 +238,9 @@
 const ANSICHT_FORCE=(new URLSearchParams(location.search).get('ansicht')||'').toLowerCase();
 document.documentElement.dataset.ansicht = (ANSICHT_FORCE==='mobil'||ANSICHT_FORCE==='desktop') ? ANSICHT_FORCE : 'auto';
 function istMobil(){ return ANSICHT_FORCE==='mobil' ? true : ANSICHT_FORCE==='desktop' ? false : (window.innerWidth < window.innerHeight); }
-function BRAIN_Y(){ return istMobil() ? 574 : 545; }  // Portrait: Gehirn vertikal mittig; Desktop: weiter unten
-function BRAIN_X(){ return istMobil() ? 450 : 800; }  // Portrait world is 900 wide → Mitte 450
+let LAY_KX = 1, LAY_KY = 1;  // Auto-Verhältnis-Faktoren (Desktop), gesetzt in applyLayout()
+function BRAIN_Y(){ return istMobil() ? 574 : 545*LAY_KY; }  // Portrait: Gehirn vertikal mittig; Desktop: weiter unten
+function BRAIN_X(){ return istMobil() ? 450 : 800*LAY_KX; }  // Portrait world is 900 wide → Mitte 450
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
@@ -727,11 +728,31 @@ const PORTRAIT_POS = {
 };
 function applyLayout(){
   const P = istMobil();
+  // Auto-Verhältnis (Desktop): Welt ans tatsächliche Bildschirmformat dehnen,
+  // damit die Fläche immer gefüllt ist, ohne etwas abzuschneiden. Elemente
+  // werden vom Gehirn-Anker (800/545) aus nach außen gespreizt; die Element-
+  // größen selbst bleiben unverzerrt.
+  LAY_KX = 1; LAY_KY = 1;
+  if(!P){
+    const availW = W, availH = Math.max(320, H - 104 - 46);   // Band unter HUD / über Ticker
+    const ta = availW/availH, wa = DESK_W/DESK_H;
+    if(ta > wa) LAY_KX = Math.min(1.6,  ta/wa);   // breiter Screen → horizontal spreizen
+    else        LAY_KY = Math.min(1.35, wa/ta);   // höherer Screen (16:10 …) → vertikal spreizen
+    WORLD_W = DESK_W*LAY_KX; WORLD_H = DESK_H*LAY_KY;
+  }
+  const stretch=(o)=>{
+    if(P || (LAY_KX===1 && LAY_KY===1)) return;
+    const cx = o._dw!==undefined ? o.x+o._dw/2 : o.x;
+    const cy = o._dh!==undefined ? o.y+o._dh/2 : o.y;
+    const nx = cx*LAY_KX, ny = cy*LAY_KY;      // Positionen skalieren, Größen bleiben
+    o.x = o._dw!==undefined ? nx-o._dw/2 : nx;
+    o.y = o._dh!==undefined ? ny-o._dh/2 : ny;
+  };
   const setXY=(o, pre)=>{
     if(o._dx===undefined){ o._dx=o.x; o._dy=o.y; o._dw=o.w; o._dh=o.h; }   // capture desktop defaults once
     const pp = PORTRAIT_POS[pre+o.key];
     if(P && pp){ o.x=pp.x; o.y=pp.y; if(pp.w!==undefined)o.w=pp.w; if(pp.h!==undefined)o.h=pp.h; }
-    else { o.x=o._dx; o.y=o._dy; if(o._dw!==undefined)o.w=o._dw; if(o._dh!==undefined)o.h=o._dh; }
+    else { o.x=o._dx; o.y=o._dy; if(o._dw!==undefined)o.w=o._dw; if(o._dh!==undefined)o.h=o._dh; stretch(o); }
   };
   for(const z of ZONES)  setXY(z,'z_');
   for(const a of AGENTS) setXY(a,'a_');
@@ -957,7 +978,7 @@ function drawBeacon(T){
 }
 /* legacy full reactor kept for reference but unused */
 function drawBeaconOLD(T){
-  const bx=tx(800), by=ty(BRAIN_Y());
+  const bx=tx(BRAIN_X()), by=ty(BRAIN_Y());
   const pulse=(Math.sin(T*2)*.5+.5);
   // gentle breathing on a second, slower frequency (atmet)
   const breath=(Math.sin(T*0.9)*.5+.5);
@@ -1387,7 +1408,7 @@ const _ORBIT = [
   {key:'mac',       label:'Mac 24/7',  col:COL.mac,       ang: 2.35, ring:1},
 ];
 function drawMobileOrbit(T){
-  const bx=tx(800), by=ty(BRAIN_Y());
+  const bx=tx(BRAIN_X()), by=ty(BRAIN_Y());
   // The WebGL brain canvas is layered ABOVE this 2D canvas (z-index 3 vs 0), so
   // any node placed UNDER the brain's silhouette is invisibly hidden behind it.
   // Nodes must clear the brain's on-screen radius by a wide margin.
