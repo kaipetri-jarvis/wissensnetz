@@ -13,6 +13,7 @@
     --claude:#e0a878;   --gemini:#6fb4ff;  --chatgpt:#4fe0b0;
     --sub:#b79bff;      --gold:#f0c674;    --beacon:#8fd7ff;
     --ultron:#25e0d0;   --atlas:#8ab4ff;
+    --vision:#c77dff;   --gaia:#8fe08a;
   }
   *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
   html,body{margin:0; padding:0; height:100%; width:100%;}
@@ -67,7 +68,7 @@
   .ticker .track{white-space:nowrap; will-change:transform; padding-left:100%; animation:scroll 92s linear infinite; font-size:13px;}
   .ticker .track:hover{animation-play-state:paused;}
   .ticker .item{display:inline-flex; align-items:center; gap:8px; margin:0 34px;}
-  .ticker .who{font-weight:800;} .ticker .who.c{color:var(--claude)} .ticker .who.g{color:var(--gemini)} .ticker .who.x{color:var(--chatgpt)} .ticker .who.s{color:var(--sub)} .ticker .who.u{color:var(--ultron)}
+  .ticker .who{font-weight:800;} .ticker .who.c{color:var(--claude)} .ticker .who.g{color:var(--gemini)} .ticker .who.x{color:var(--chatgpt)} .ticker .who.s{color:var(--sub)} .ticker .who.u{color:var(--ultron)} .ticker .who.v{color:var(--vision)} .ticker .who.e{color:var(--gaia)}
   .ticker .tt{color:var(--muted);} .ticker b{color:var(--ink); font-weight:700;}
   @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
 
@@ -265,7 +266,7 @@ function BRAIN_X(){ return istMobil() ? 450 : 800; }  // Portrait world is 900 w
   <div class="stat b"><div class="n">17</div><div class="l">verkaufsf. ZIPs</div></div>
   <div class="stat c"><div class="n">14</div><div class="l">Thumbnails · Ø 8–9,5</div></div>
   <div class="stat d"><div class="n">4</div><div class="l">KI-Modelle</div></div>
-  <div class="stat e"><div class="n">4</div><div class="l">Agenten</div></div>
+  <div class="stat e"><div class="n">6</div><div class="l">Agenten</div></div>
 </div>
 
 <div class="legend">
@@ -274,6 +275,8 @@ function BRAIN_X(){ return istMobil() ? 450 : 800; }  // Portrait world is 900 w
   <div class="row"><span class="sw" style="background:var(--ultron);color:var(--ultron)"></span> Ultron <span class="lst" data-agent="ultron">aktiv</span></div>
   <div class="row"><span class="sw" style="background:var(--gemini);color:var(--gemini)"></span> Gemini <span class="lst" data-agent="gemini">aktiv</span></div>
   <div class="row"><span class="sw" style="background:var(--chatgpt);color:var(--chatgpt)"></span> ChatGPT <span class="lst" data-agent="chatgpt">aktiv</span></div>
+  <div class="row"><span class="sw" style="background:var(--vision);color:var(--vision)"></span> Vision <span class="lst" data-agent="vision">aktiv</span></div>
+  <div class="row"><span class="sw" style="background:var(--gaia);color:var(--gaia)"></span> Gaia <span class="lst" data-agent="gaia">aktiv</span></div>
   <div class="row"><span class="sw" style="background:var(--sub);color:var(--sub)"></span> Sub-Agenten <span class="lst">aktiv</span></div>
   <div class="row"><span class="sw" style="background:var(--atlas);color:var(--atlas)"></span> ATLAS · Fabrik <span class="lst">online</span></div>
 </div>
@@ -584,6 +587,7 @@ const COL = {
   codex:'#ff9d6b', github:'#c9d1e6',
   sub:'#b79bff', gold:'#f0c674', beacon:'#8fd7ff',
   ultron:'#25e0d0', atlas:'#8ab4ff',
+  vision:'#c77dff', gaia:'#8fe08a',
   // system / infrastructure ring
   gateway:'#7ee0ff', watchdog:'#ff7a7a', tailscale:'#8f7dff',
   mac:'#9fb0c4', voice:'#ffcf6b', cron:'#7fd8a0', telegram:'#4aa8ff'
@@ -640,6 +644,24 @@ const AGENTS = [
       'prüft Shop-Positionierung über 5 Nischen…',
       'Idee: Jobwechsel-System mit Gehaltsverhandlungs-Rechner',
     ]},
+  { key:'vision', name:'Vision', model:'Bild- & Design-Agent · Port 18790 (mit Ultron)', col:COL.vision,
+    zone:'design', x:560, y:742, face:'crystal', pose:'upright',
+    states:[
+      'in Aufbau — wird Kais Bild- & Design-Auge',
+      'läuft auf ai.openclaw.ultron · Port 18790 — gemeinsam mit Ultron',
+      'geplant: bewertet Thumbnails & Mockups automatisch',
+      'geplant: prüft jede Vorschau vor dem Upload',
+      'wartet auf ersten Einsatz…',
+    ]},
+  { key:'gaia', name:'Gaia', model:'Wissens- & Memory-Agentin · Port 18791', col:COL.gaia,
+    zone:'deck', x:832, y:722, face:'crystal', pose:'wide',
+    states:[
+      'in Aufbau — Hüterin von Wissensnetz & Memory',
+      'eigenes Gateway ai.openclaw.gaia · Port 18791',
+      'geplant: pflegt das Wissensnetz automatisch',
+      'geplant: verdichtet Memory-Dateien beim Dreaming',
+      'wartet auf ersten Einsatz…',
+    ]},
   { key:'ultron', name:'Ultron', model:'zweiter Assistent · läuft auf claude-opus-4-8', col:COL.ultron,
     zone:'ultron', x:1023, y:694, face:'dualcore', pose:'upright',
     states:[
@@ -662,10 +684,10 @@ const INFRA = [
 
   // --- Fundament / System (linke Flanke, prominent: Gateway) ---
   {key:'gateway', name:'OpenClaw Gateway', sub:'launchd · Port 18789 · das Fundament', x:596, y:245, col:COL.gateway, big:true,
-   states:['ai.openclaw.gateway läuft · KeepAlive','routet alle Kanäle & Agenten','main + ultron gebunden','Config live · kein Reload-Abbruch','das Nervensystem der ganzen Station']},
+   states:['Haupt-Gateway 18789 · Jarvis','ai.openclaw.ultron 18790 · Ultron + Vision','ai.openclaw.gaia 18791 · Gaia','routet alle Kanäle & Agenten','das Nervensystem der ganzen Station']},
   {key:'watchdog', name:'Watchdog', sub:'Selbstheilung · Absturzwarnung', x:507, y:457, col:COL.watchdog,
    states:['ai.openclaw.watchdog überwacht Gateway','Crash → Neustart + Telegram-Alarm','Crash-Log-Watcher alle 10 Min','hält die Station 24/7 am Leben']},
-  {key:'tailscale', name:'Tailscale', sub:'Tailnet · Fernsteuerung vom iPhone', x:571, y:637, col:COL.tailscale,
+  {key:'tailscale', name:'Tailscale', sub:'Tailnet · Fernsteuerung vom iPhone', x:593, y:556, col:COL.tailscale,
    states:['Mac 100.73.109.29 ↔ iPhone 100.108.47.120','Serve auf Port 18789','Kai steuert die Station vom Handy','verschlüsseltes Mesh · kein offener Port']},
   {key:'mac', name:'Mac · 24/7-Server', sub:'schläft nie · zugeklappt weiter', x:1092, y:470, col:COL.mac,
    states:['caffeinate · kein Ruhezustand','Deckel zu → läuft weiter','Host für Gateway + alle Dienste','Dauerbetrieb seit Setup']},
@@ -721,6 +743,8 @@ const PORTRAIT_POS = {
   a_jarvis:   {x:120, y:755},
   a_chatgpt:  {x:795, y:770},
   a_ultron:   {x:450, y:835},
+  a_vision:   {x:115, y:570},
+  a_gaia:     {x:795, y:600},
 };
 function applyLayout(){
   const P = istMobil();
@@ -776,6 +800,8 @@ const TICKS = [
   ['c','Druckkette live','<b>Real-ESRGAN</b> lokal: Motiv 4× → <b>4096×6144 px @300 DPI</b> (35×52 cm) — kostenlos, kein Limit'],
   ['c','Etsy-Baustein','<b>etsy_listing.py</b> prüft Titel ≤140, genau 13 Tags, Preis — regelkonform ✓'],
   ['u','Ultron · zweiter Kopf','arbeitet parallel im eigenen Kontext — <b>prüft gegen</b> &amp; übergibt an Jarvis'],
+  ['v','Vision · neu an Bord','Bild- &amp; Design-Agent <b>in Aufbau</b> — wird Thumbnails automatisch bewerten'],
+  ['e','Gaia · neu an Bord','Wissens- &amp; Memory-Agentin <b>in Aufbau</b> — pflegt Wissensnetz &amp; Dreaming'],
   ['u','Ultron · ATLAS-Melder','pusht jedes <b>Review-Verdikt</b> der Fabrik schreibgeschützt per Telegram an Kai'],
 ];
 
