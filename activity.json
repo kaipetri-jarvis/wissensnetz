@@ -1,8 +1,8 @@
 {
-  "generated": "2026-08-30T09:58:54+00:00",
+  "generated": "2026-08-30T10:08:54+00:00",
   "bots": {
-    "jarvis": false,
-    "ultron": false
+    "jarvis": true,
+    "ultron": true
   },
   "atlas": {
     "fleet": true,
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-08-30T12:00:41+02:00",
+      "text": "Oekosystem-Gehirn (Mobile): 3 Feinschliffe nach Kais Geraete-Feedback — (1) DeskLane-Konsole naeher an die KPI-Kacheln (TOP_HUD 150->132), (2) Gehirn exakt im L"
+    },
     {
       "at": "2026-08-30T11:39:19+02:00",
       "text": "Oekosystem-Gehirn (Mobile): echte-Geraet-Ueberlappung behoben — Ursache war kurze iOS-Safari-Viewport-Hoehe (URL-Bar): der Canvas-Weltinhalt (DeskLane-Konsole) "
@@ -30,10 +34,6 @@
     {
       "at": "2026-08-30T09:15:34+02:00",
       "text": "Oekosystem-Gehirn (Mobile): KPI-Kacheln noch ein Stueck hoeher (top:58, direkt unter die AUTO/MOBIL/DESKTOP-Buttons). Kais Wunsch."
-    },
-    {
-      "at": "2026-08-30T09:14:23+02:00",
-      "text": "Oekosystem-Gehirn (Mobile): oberer Block (KPI-Kacheln + DeskLane) ein Stueck nach oben gezogen (Kacheln top:70, Konsole y268) — Kais Wunsch. Kacheln oben, DeskL"
     }
   ],
   "cron": [
