@@ -238,7 +238,7 @@
 const ANSICHT_FORCE=(new URLSearchParams(location.search).get('ansicht')||'').toLowerCase();
 document.documentElement.dataset.ansicht = (ANSICHT_FORCE==='mobil'||ANSICHT_FORCE==='desktop') ? ANSICHT_FORCE : 'auto';
 function istMobil(){ return ANSICHT_FORCE==='mobil' ? true : ANSICHT_FORCE==='desktop' ? false : (window.innerWidth < window.innerHeight); }
-function BRAIN_Y(){ return istMobil() ? 1080 : 545; }  // Portrait: Gehirn vertikal mittig; Desktop: weiter unten
+function BRAIN_Y(){ return istMobil() ? 755 : 545; }  // Portrait: Gehirn vertikal mittig; Desktop: weiter unten
 function BRAIN_X(){ return istMobil() ? 450 : 800; }  // Portrait world is 900 wide → Mitte 450
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -316,7 +316,7 @@ const ctx = cvs.getContext('2d');
 let W=0,H=0,DPR=1;
 
 const DESK_W = 1600, DESK_H = 900;
-const PORT_W = 900,  PORT_H = 1980;   // portrait world: tall stack, brain centred
+const PORT_W = 900,  PORT_H = 1520;   // portrait world: tall stack, brain centred
 // Active world dims — swapped by resize() depending on orientation. tx/ty and
 // clampPan read these so the whole coordinate system reflows for portrait.
 let WORLD_W = DESK_W, WORLD_H = DESK_H;
@@ -337,26 +337,31 @@ function resize(){
   applyLayout();
   const sx = W/WORLD_W, sy = H/WORLD_H;
   let scale;
+  const TOP_HUD = 150;   // reserved screen px for the fixed HTML HUD (title/subtitle/switch/KPI cards)
   if(portrait){
-    // Portrait world is 900×1640 (tall) — a near-phone ratio. Fit it to width so
-    // the whole restacked station (panels above/below the brain, agents + infra
-    // ringed around it) fills the screen top-to-bottom with no big empty bands.
-    scale = (W / WORLD_W);
+    // The top HTML HUD occupies a fixed pixel band. Fit the canvas station into
+    // the area BELOW it, choosing the scale that shows the whole tall station in
+    // the remaining height AND fills the width as much as possible. On short iOS
+    // Safari viewports this prevents the in-canvas DeskLane console from sliding
+    // up under the HTML KPI cards (the bug on Kai's real device).
+    const availH = Math.max(320, H - TOP_HUD - 8);
+    scale = Math.min(W / WORLD_W, availH / WORLD_H);
   } else {
     scale = Math.max(sx, sy) * 1.02;
   }
   fit.scale = scale;
   const dispW = WORLD_W*scale, dispH = WORLD_H*scale;
   fit.ox = (W - dispW)/2;
-  fit.oy = (H - dispH)/2;
-  // Portrait: the tall world already fills the width; centre it vertically. Any
-  // overflow past the screen top/bottom is pannable via clampPan.
   if(portrait){
+    fit.oy = 0;
     pan.x = 0;
-    pan.y = (H*0.5) - (fit.oy + (WORLD_H/2)*fit.scale);
+    // top-anchor the station right below the HUD band (DeskLane sits just under the
+    // KPI cards); any spare height falls at the bottom, no gap under the cards.
+    pan.y = TOP_HUD;
     fit._init = true;
-  } else if(!fit._init){
-    fit._init = true;
+  } else {
+    fit.oy = (H - dispH)/2;
+    if(!fit._init) fit._init = true;
   }
   clampPan();
 }
@@ -375,13 +380,13 @@ function ts(v){ return v*effScale(); }
 /* keep pan inside bounds given current zoom */
 function clampPan(){
   const dispW = WORLD_W*effScale(), dispH = WORLD_H*effScale();
-  // On phones the view is deliberately locked to the brain-in-band framing set
-  // by resize(); allow a little slack around it but keep the whole station centred.
+  // Portrait at default zoom: station is fitted into the band below the HTML HUD
+  // (see resize). Lock to that framing; a little slack only.
+  const TOP_HUD = 150;
   if(istMobil() && uz>=0.999 && uz<=1.001){
     pan.x = 0;
-    pan.y = (H*0.5) - (fit.oy + (WORLD_H/2)*effScale());   // centre the tall portrait world
-    panMax.x = 12; panMax.y = Math.max(0,(dispH - H)/2 + 30);
-    pan.y = Math.max(-panMax.y, Math.min(panMax.y, pan.y));
+    pan.y = TOP_HUD;
+    panMax.x = 12; panMax.y = 20;
     return;
   }
   if(istMobil() && uz<0.999){
@@ -682,31 +687,32 @@ const PORTRAIT_POS = {
   // Top panel band sits BELOW the top HUD + zoom bar (world y≥150).
   // KPI-Kacheln bleiben OBEN (HTML .stats). Darunter die ETSY-DeskLane-Konsole,
   // die Panels (Recherche/Design/Werkstatt/Deck/Ultron) wandern nach UNTEN.
-  z_shop:      {x:35,  y:340,  w:830, h:210},
-  // Panel-Band jetzt UNTEN, unter dem Gehirn/Ring
-  z_recherche: {x:35,  y:1560, w:360, h:165},
-  z_werkstatt: {x:470, y:1560, w:395, h:78},
-  z_deck:      {x:470, y:1646, w:395, h:78},
-  z_design:    {x:35,  y:1735, w:360, h:78},
-  z_ultron:    {x:470, y:1735, w:395, h:78},
-  // infra ring — ABOVE the brain (brain centre 450,1080; DeskLane ends ~y435)
-  n_cron:     {x:90,  y:620},
-  n_telegram: {x:450, y:585},
-  n_github:   {x:660, y:620},
-  n_gateway:  {x:270, y:620},
-  n_voice:    {x:760, y:730},
-  n_watchdog: {x:90,  y:850},
-  // infra — sides & around the brain (kept apart from the agents next to them)
-  n_mac:      {x:840, y:800},
-  n_tailscale:{x:110, y:1330},
-  n_atlas:    {x:660, y:1380},
-  // agents — wide ring around the brain (figures float here). Kept clear of the
-  // infra-node labels above/below them (Codex↔Watchdog, Gemini↔Mac).
-  a_codex:    {x:220, y:760},
-  a_gemini:   {x:820, y:980},
-  a_jarvis:   {x:150, y:1200},
-  a_chatgpt:  {x:815, y:1270},
-  a_ultron:   {x:410, y:1400},
+  // Top-anchored portrait: DeskLane sits at the very top of the canvas (right
+  // below the fixed HTML KPI cards), brain centred at y755, panels at the bottom.
+  z_shop:      {x:35,  y:15,   w:830, h:200},
+  // Panel-Band unten, unter dem Gehirn/Ring
+  z_recherche: {x:35,  y:1235, w:360, h:160},
+  z_werkstatt: {x:470, y:1235, w:395, h:76},
+  z_deck:      {x:470, y:1319, w:395, h:76},
+  z_design:    {x:35,  y:1406, w:360, h:76},
+  z_ultron:    {x:470, y:1406, w:395, h:76},
+  // infra ring — ABOVE the brain (brain centre 450,755)
+  n_cron:     {x:90,  y:300},
+  n_telegram: {x:450, y:268},
+  n_github:   {x:660, y:300},
+  n_gateway:  {x:270, y:300},
+  n_voice:    {x:760, y:410},
+  n_watchdog: {x:90,  y:530},
+  // infra — sides & around the brain
+  n_mac:      {x:840, y:480},
+  n_tailscale:{x:110, y:1010},
+  n_atlas:    {x:660, y:1055},
+  // agents — wide ring around the brain
+  a_codex:    {x:220, y:440},
+  a_gemini:   {x:820, y:660},
+  a_jarvis:   {x:150, y:880},
+  a_chatgpt:  {x:815, y:950},
+  a_ultron:   {x:410, y:1075},
 };
 function applyLayout(){
   const P = istMobil();
