@@ -885,6 +885,10 @@ function drawBackground(T){
 
 /* perspective grid floor receding into depth */
 function drawGridFloor(T){
+  // Portrait/mobile: skip the perspective grid + horizon glow entirely — on the
+  // compact phone view it reads as a "Schleier" (haze) behind/around the panels
+  // that Kai wants gone. Desktop keeps the full floor.
+  if(istMobil()) return;
   const hz = ty(500);          // horizon line (world y ~500)
   const bottom = ty(WORLD_H+260);
   const cxW = tx(BRAIN_X());
