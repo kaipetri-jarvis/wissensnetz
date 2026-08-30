@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-30T12:48:57+00:00",
+  "generated": "2026-08-30T12:58:57+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-08-30T14:57:28+02:00",
+      "text": "Oekosystem-Gehirn (Mobile): Hintergrund-Effekte wieder AN (rueckgaengig) — Kai: 'wir haben vom falschen Schleier gesprochen'. Perspektiv-Gitter, Nebel-Blobs, Fa"
+    },
+    {
+      "at": "2026-08-30T14:51:50+02:00",
+      "text": "Oekosystem-Gehirn (Mobile): Hintergrund-Schleier komplett weg — im Portrait jetzt auch Nebel-Blobs, Farb-Dunst-Partikel und die radiale Tiefen-Vignette abgescha"
+    },
     {
       "at": "2026-08-30T14:28:26+02:00",
       "text": "Oekosystem-Gehirn (Mobile): Perspektiv-Bodengitter + Horizont-Glow im Portrait komplett aus (drawGridFloor return bei istMobil) — auf dem Handy war das der 'Sch"
@@ -26,21 +34,13 @@
     {
       "at": "2026-08-30T13:39:34+02:00",
       "text": "Oekosystem-Gehirn (Mobile): Panels zurueck auf ausgewogenen Stand (y1000) — Kai: 'so war es besser' (Schleier-Hoehe y935 zurueckgenommen). Desktop unveraendert."
-    },
-    {
-      "at": "2026-08-30T13:31:47+02:00",
-      "text": "Oekosystem-Gehirn (Mobile): untere Panels auf die Hoehe des Boden-Schleiers/Glow-Bands hochgezogen (y935) — Kais Wunsch. Kein Overlap mit Ultron/Zoom. Desktop u"
-    },
-    {
-      "at": "2026-08-30T13:26:36+02:00",
-      "text": "Oekosystem-Gehirn (Mobile): Panels-Position zurueck auf ausgewogenen Stand (PORT_H 1235) — die 1300er-Version war zu weit unten (Kai). Desktop unveraendert."
     }
   ],
   "cron": [
     "jarvis-crash-log-watcher crash-log-watcher cron",
-    "heartbeat:ultron Heartbeat (ultron)",
     "heartbeat:main Heartbeat (main)",
     "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
+    "heartbeat:ultron Heartbeat (ultron)",
     "jarvis-wissensnetz-auto wissensnetz-auto-update cron"
   ]
 }
