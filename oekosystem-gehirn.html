@@ -137,7 +137,7 @@
     html:not([data-ansicht="desktop"]) .legend{display:none !important;}
     html:not([data-ansicht="desktop"]) .mdock{display:none !important;}
     html:not([data-ansicht="desktop"]) .hint{display:none;}
-    html:not([data-ansicht="desktop"]) .zoombar{top:auto; bottom:18px; transform:none; left:auto; margin-left:0; right:8px; flex-direction:row; gap:6px;}
+    html:not([data-ansicht="desktop"]) .zoombar{top:auto; bottom:210px; transform:none; left:auto; margin-left:0; right:8px; flex-direction:row; gap:6px;}
     html:not([data-ansicht="desktop"]) .zoombar button{width:30px; height:30px; font-size:15px; border-radius:8px;}
 
     /* info dock: readable, scrollable card strip sitting above the ticker */
@@ -191,7 +191,7 @@
     html[data-ansicht="mobil"] .legend{display:none !important;}
     html[data-ansicht="mobil"] .mdock{display:none !important;}
     html[data-ansicht="mobil"] .hint{display:none;}
-    html[data-ansicht="mobil"] .zoombar{top:auto; bottom:18px; transform:none; left:auto; margin-left:0; right:8px; flex-direction:row; gap:6px;}
+    html[data-ansicht="mobil"] .zoombar{top:auto; bottom:210px; transform:none; left:auto; margin-left:0; right:8px; flex-direction:row; gap:6px;}
     html[data-ansicht="mobil"] .zoombar button{width:30px; height:30px; font-size:15px; border-radius:8px;}
 
     /* info dock: readable, scrollable card strip sitting above the ticker */
@@ -810,9 +810,9 @@ for(let i=0;i<90;i++) starsNear.push({x:Math.random()*WORLD_W,y:Math.random()*WO
 /* leuchtende Glow-Sterne — bildschirmfest, über die GANZE Fläche (auch HUD-Band oben) */
 const glowStars=[];
 { /* Poisson-artige Verteilung: Mindestabstand generell, größerer Abstand für gleiche Helligkeitsklasse */
-  const MIND=0.013, MINDSAME=0.032;
+  const MIND=0.015, MINDSAME=0.037;
   let tries=0;
-  while(glowStars.length<2000 && tries<120000){
+  while(glowStars.length<1500 && tries<90000){
     tries++;
     const fx=Math.random(), fy=Math.random();
     const b=(q=>q<0.25?1.6:q<0.7?1.0:0.45)(Math.random());   // ~25% strahlend, ~45% mittel, ~30% schwach
