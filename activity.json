@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-30T10:48:53+00:00",
+  "generated": "2026-08-30T10:58:54+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-08-30T12:58:30+02:00",
+      "text": "Oekosystem-Gehirn (Mobile): untere Panels weiter nach unten + Ultron nach oben — keine Ueberschneidung mehr zwischen Ultron-Avatar/Label und den Panels. Kais Wu"
+    },
+    {
+      "at": "2026-08-30T12:55:11+02:00",
+      "text": "Oekosystem-Gehirn (Mobile): ETSY-DeskLane-Konsole direkt unter die KPI-Kacheln (z_shop y18) — Abstand geschlossen, Kais Wunsch. Desktop unveraendert."
+    },
+    {
+      "at": "2026-08-30T12:49:33+02:00",
+      "text": "Oekosystem-Gehirn (Mobile): vertikale Abstaende ausgeglichen — oberer Block (Kacheln/DeskLane) ein Stueck nach unten (z_shop y55, Kacheln top:78), untere Panels"
+    },
+    {
       "at": "2026-08-30T12:42:36+02:00",
       "text": "Oekosystem-Gehirn (Mobile): KI-Avatare nach AUSSEN in den freien Raum (Codex/Jarvis links, Gemini/ChatGPT rechts in die Ecken, Ultron mittig unten), Infra-/Syst"
     },
@@ -22,25 +34,13 @@
     {
       "at": "2026-08-30T12:27:04+02:00",
       "text": "Oekosystem-Gehirn (Mobile): ETSY-DeskLane-Konsole + oberer Block noch ein Stueck hoeher (z_shop y4, TOP_HUD 104, Kacheln top:66) — Abstand Kacheln->DeskLane ver"
-    },
-    {
-      "at": "2026-08-30T12:25:14+02:00",
-      "text": "Oekosystem-Gehirn (Mobile): Ring noch enger ans Gehirn gezogen (Knoten Richtung Zentrum kontrahiert, mit Mindest-Abstand 185 als Gehirn-Freiraum) — Kais Wunsch "
-    },
-    {
-      "at": "2026-08-30T12:22:03+02:00",
-      "text": "Oekosystem-Gehirn (Mobile): oberer Block (Umschalter/Kacheln/DeskLane) ein Stueck hoeher — Umschalter top:48 (war 62), Kacheln top:76 (war 90), TOP_HUD 116 (war"
-    },
-    {
-      "at": "2026-08-30T12:20:02+02:00",
-      "text": "Oekosystem-Gehirn (Mobile): Infra-/Agenten-Ring naeher ans Gehirn gezogen (ATLAS, Tailscale, Gemini, ChatGPT etc. kontrahiert Richtung Zentrum) — Kais Wunsch. N"
     }
   ],
   "cron": [
     "jarvis-crash-log-watcher crash-log-watcher cron",
-    "heartbeat:ultron Heartbeat (ultron)",
     "heartbeat:main Heartbeat (main)",
     "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
+    "heartbeat:ultron Heartbeat (ultron)",
     "jarvis-wissensnetz-auto wissensnetz-auto-update cron"
   ]
 }
