@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-30T12:18:54+00:00",
+  "generated": "2026-08-30T12:28:55+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-08-30T14:28:26+02:00",
+      "text": "Oekosystem-Gehirn (Mobile): Perspektiv-Bodengitter + Horizont-Glow im Portrait komplett aus (drawGridFloor return bei istMobil) — auf dem Handy war das der 'Sch"
+    },
     {
       "at": "2026-08-30T14:03:51+02:00",
       "text": "Oekosystem-Gehirn (Mobile): Boden-Schleier/Haze hinter den unteren Panels entfernt — opake dunkle Backdrop-Flaeche hinter dem Panel-Band (istMobil), sodass Gitt"
@@ -30,10 +34,6 @@
     {
       "at": "2026-08-30T13:26:36+02:00",
       "text": "Oekosystem-Gehirn (Mobile): Panels-Position zurueck auf ausgewogenen Stand (PORT_H 1235) — die 1300er-Version war zu weit unten (Kai). Desktop unveraendert."
-    },
-    {
-      "at": "2026-08-30T13:22:15+02:00",
-      "text": "Oekosystem-Gehirn (Mobile): Panels noch weiter runter + mehr Avatar-Platz (PORT_H 1300, BOT_BAND 34, Avatare tiefer). Kais Wunsch. Desktop unveraendert."
     }
   ],
   "cron": [
