@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-30T06:58:51+00:00",
+  "generated": "2026-08-30T07:08:51+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-08-30T09:04:50+02:00",
+      "text": "Oekosystem-Gehirn (Mobile): Rueckgaengig — KPI-Kacheln wieder OBEN, ETSY-DeskLane-Konsole darunter (Kais Wunsch, letzte Umstellung zurueckgenommen)."
+    },
     {
       "at": "2026-08-30T03:30:00+02:00",
       "text": "Auto-Backup 2026-08-30 — täglicher Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-08-30T02:12:28+02:00",
       "text": "Oekosystem-Gehirn (Mobile): Zoom-Buttons (+/-/fit) nach oben rechts ueber die KPI-Kacheln verlegt (kompakter), damit die unteren Panels frei bleiben. Kais Wunsc"
-    },
-    {
-      "at": "2026-08-30T02:06:36+02:00",
-      "text": "Oekosystem-Gehirn (Mobile): KPI-Kacheln bleiben oben, DeskLane-Liste darunter, die 5 Panels (Recherche/Werkstatt/Deck/Design/Ultron) nach UNTEN verschoben (Kais"
     }
   ],
   "cron": [
