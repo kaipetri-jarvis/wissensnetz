@@ -1888,6 +1888,14 @@ function frame(now){
   for(const n of INFRA){ const nb = istMobil() ? 0 : (n.key==='atlas' ? 190 : (n.x<CX?24:-24));   // Portrait: gerade Speichen; Desktop: ATLAS weiter Bogen
   drawLink(bx, by, tx(n.x), ty(n.y)+ts((n.big?11.6:9.2)*(n.sz||1)), n.col, T, 0.5, nb); }
 
+  // Portrait: solid opaque backdrop behind the bottom panel band so the grid
+  // floor / horizon haze ("Schleier") doesn't shimmer through the glass panels.
+  if(istMobil()){
+    const bandTop = ty(ZONES[4].y) - ts(14);
+    ctx.fillStyle = '#04060e';
+    ctx.fillRect(0, bandTop, W, H - bandTop);
+  }
+
   // zones (back to front)
   drawLogTerminal(ZONES[4],T,dt);   // recherche (back left) — log stream
   drawZone(ZONES[2],T);             // deck
