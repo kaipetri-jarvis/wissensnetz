@@ -316,7 +316,7 @@ const ctx = cvs.getContext('2d');
 let W=0,H=0,DPR=1;
 
 const DESK_W = 1600, DESK_H = 900;
-const PORT_W = 900,  PORT_H = 1300;   // portrait world: tall stack, brain centred
+const PORT_W = 900,  PORT_H = 1235;   // portrait world: tall stack, brain centred
 // Active world dims — swapped by resize() depending on orientation. tx/ty and
 // clampPan read these so the whole coordinate system reflows for portrait.
 let WORLD_W = DESK_W, WORLD_H = DESK_H;
@@ -338,7 +338,7 @@ function resize(){
   const sx = W/WORLD_W, sy = H/WORLD_H;
   let scale;
   const TOP_HUD = 104;   // reserved screen px for the fixed HTML HUD (title/subtitle/switch/KPI cards)
-  const BOT_BAND = 34;   // reserved screen px at the bottom for the LIVE ticker
+  const BOT_BAND = 46;   // reserved screen px at the bottom for the LIVE ticker
   if(portrait){
     // Fit the canvas station into the area BETWEEN the top HTML HUD and the bottom
     // LIVE ticker. This keeps the in-canvas DeskLane console just under the KPI
@@ -380,7 +380,7 @@ function clampPan(){
   const dispW = WORLD_W*effScale(), dispH = WORLD_H*effScale();
   // Portrait at default zoom: station is fitted into the band below the HTML HUD
   // (see resize). Lock to that framing; a little slack only.
-  const TOP_HUD = 104, BOT_BAND = 34;
+  const TOP_HUD = 104, BOT_BAND = 46;
   if(istMobil() && uz>=0.999 && uz<=1.001){
     pan.x = 0;
     pan.y = TOP_HUD + Math.max(0, (H - TOP_HUD - BOT_BAND - dispH)/2);
@@ -692,11 +692,11 @@ const PORTRAIT_POS = {
   // below the fixed HTML KPI cards), brain centred at y755, panels at the bottom.
   z_shop:      {x:35,  y:18,   w:830, h:200},
   // Panel-Band unten, unter dem Gehirn/Ring
-  z_recherche: {x:35, y:1070, w:360, h:140},
-  z_werkstatt: {x:470, y:1070, w:395, h:66},
-  z_deck: {x:470, y:1144, w:395, h:66},
-  z_design: {x:35, y:1222, w:360, h:66},
-  z_ultron: {x:470, y:1222, w:395, h:66},
+  z_recherche: {x:35, y:1000, w:360, h:140},
+  z_werkstatt: {x:470, y:1000, w:395, h:66},
+  z_deck: {x:470, y:1074, w:395, h:66},
+  z_design: {x:35, y:1152, w:360, h:66},
+  z_ultron: {x:470, y:1152, w:395, h:66},
   // infra ring — ABOVE the brain (brain centre 450,755)
   n_cron:     {x:255,  y:346},
   n_telegram: {x:450, y:308},
@@ -711,9 +711,9 @@ const PORTRAIT_POS = {
   // agents — wide ring around the brain
   a_codex:    {x:115, y:405},
   a_gemini:   {x:795, y:445},
-  a_jarvis:   {x:120, y:790},
-  a_chatgpt:  {x:795, y:805},
-  a_ultron:   {x:450, y:875},
+  a_jarvis:   {x:120, y:755},
+  a_chatgpt:  {x:795, y:770},
+  a_ultron:   {x:450, y:835},
 };
 function applyLayout(){
   const P = istMobil();
