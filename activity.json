@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-30T00:08:49+00:00",
+  "generated": "2026-08-30T00:18:49+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-08-30T02:12:28+02:00",
+      "text": "Oekosystem-Gehirn (Mobile): Zoom-Buttons (+/-/fit) nach oben rechts ueber die KPI-Kacheln verlegt (kompakter), damit die unteren Panels frei bleiben. Kais Wunsc"
+    },
     {
       "at": "2026-08-30T02:06:36+02:00",
       "text": "Oekosystem-Gehirn (Mobile): KPI-Kacheln bleiben oben, DeskLane-Liste darunter, die 5 Panels (Recherche/Werkstatt/Deck/Design/Ultron) nach UNTEN verschoben (Kais"
@@ -30,10 +34,6 @@
     {
       "at": "2026-08-30T01:42:54+02:00",
       "text": "Voll-Backup 2026-08-30: Etsy-Produktvorschauen (Toolkit DE, A4-Seiten, Galerie) + Memory-Notizen + Gehirn-Graph-Stand"
-    },
-    {
-      "at": "2026-08-30T01:12:48+02:00",
-      "text": "Oekosystem-Gehirn: echter Portrait-Reflow fuer Mobile — 900x1640-Portrait-Welt, Panels ueber/unter dem Gehirn, Agenten+Infra ringfoermig (PORTRAIT_POS + applyLa"
     }
   ],
   "cron": [
