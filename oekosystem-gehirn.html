@@ -551,7 +551,7 @@ function handleTap(sx, sy){
   const hitR = Math.max(52, ts(70));   // scales with zoom, min 52px
   if(best && bestD<hitR){
     // zoom onto the tapped AI / agent / system node and centre it
-    const target = istMobil() ? 1.7 : 1.3;   // sanfter Fokus-Zoom (Kais Wunsch: weniger stark)
+    const target = istMobil() ? 1.3 : 1.0;   // Desktop: kein Kamera-Zoom mehr, nur Highlight; Mobil minimal
     focusWorld(best.x, best.y - (bestKind==='agent'? 30 : 0), target);
     if(bestKind==='agent') showInfo(best); else hideInfo();
   } else {
