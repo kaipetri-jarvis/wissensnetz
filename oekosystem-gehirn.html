@@ -809,8 +809,8 @@ for(let i=0;i<90;i++) starsNear.push({x:Math.random()*WORLD_W,y:Math.random()*WO
   r:Math.random()*1.8+.6,tw:Math.random()*6.28,sp:Math.random()*.02+.006});
 /* leuchtende Glow-Sterne — bildschirmfest, über die GANZE Fläche (auch HUD-Band oben) */
 const glowStars=[];
-for(let i=0;i<42;i++) glowStars.push({fx:Math.random(),fy:Math.random(),
-  r:Math.random()*1.6+.8, halo:Math.random()*10+6, tw:Math.random()*6.28, sp:Math.random()*.014+.004,
+for(let i=0;i<110;i++) glowStars.push({fx:Math.random(),fy:Math.random()*0.35,   // nur oberes Band
+  r:Math.random()*1.8+.8, halo:Math.random()*12+6, tw:Math.random()*6.28, sp:Math.random()*.014+.004,
   hue:Math.random(), spark:Math.random()<0.35});
 for(let i=0;i<46;i++) dust.push({x:Math.random()*WORLD_W,y:Math.random()*WORLD_H,
   r:Math.random()*2.4+1,vy:-(Math.random()*.22+.06),a:Math.random()*.4+.1,hue:Math.random()});
