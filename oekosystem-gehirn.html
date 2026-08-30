@@ -809,7 +809,7 @@ for(let i=0;i<90;i++) starsNear.push({x:Math.random()*WORLD_W,y:Math.random()*WO
   r:Math.random()*1.8+.6,tw:Math.random()*6.28,sp:Math.random()*.02+.006});
 /* leuchtende Glow-Sterne — bildschirmfest, über die GANZE Fläche (auch HUD-Band oben) */
 const glowStars=[];
-for(let i=0;i<110;i++) glowStars.push({fx:Math.random(),fy:Math.random()*0.35,   // nur oberes Band
+for(let i=0;i<260;i++) glowStars.push({fx:Math.random(),fy:Math.random(),   // ganze Fläche — Leerraum-Filter beim Zeichnen
   r:Math.random()*1.8+.8, halo:Math.random()*12+6, tw:Math.random()*6.28, sp:Math.random()*.014+.004,
   hue:Math.random(), spark:Math.random()<0.35});
 for(let i=0;i<46;i++) dust.push({x:Math.random()*WORLD_W,y:Math.random()*WORLD_H,
@@ -887,6 +887,10 @@ function drawBackground(T){
   obst.push([W*0.44,36,W*0.62,120]);                         // Ansicht-Switch + Zoombar
   obst.push([W-270,60,W,255]);                               // Legende rechts oben
   obst.push([W-250,0,W,60]);                                 // Uhr
+  const bx0=tx(BRAIN_X()), by0=ty(BRAIN_Y());                // Gehirn + Synapsen-Label
+  obst.push([bx0-ts(260), by0-ts(230), bx0+ts(260), by0+ts(300)]);
+  obst.push([0,H-56,W,H]);                                   // LIVE-Ticker unten
+  obst.push([W*0.3,H-90,W*0.7,H-56]);                        // Hinweiszeile
   const inObst=(x,y)=>{ for(const o of obst){ if(x>o[0]&&x<o[2]&&y>o[1]&&y<o[3]) return true; } return false; };
   ctx.globalCompositeOperation='lighter';
   for(const s of glowStars){
