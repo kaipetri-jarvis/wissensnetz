@@ -877,17 +877,24 @@ function drawBackground(T){
     ctx.fillStyle= s.r>1.3 ? `rgba(200,225,255,${a})` : `rgba(150,220,200,${a*.9})`;
     ctx.fill();
   }
-  // GLOW stars — nur Desktop; screen-fixed, nur in LEEREM Raum (Kollisionsprüfung)
-  if(!istMobil()){
+  // GLOW stars — screen-fixed, nur in LEEREM Raum (Kollisionsprüfung, eigene HUD-Zonen je Ansicht)
+  {
+  const M = istMobil();
   const obst=[];                                           // Hindernisse als Screen-Rechtecke [x1,y1,x2,y2]
   for(const z of ZONES) obst.push([tx(z.x)-24, ty(z.y)-24, tx(z.x+z.w)+24, ty(z.y+z.h)+24]);
   for(const ag of AGENTS) obst.push([tx(ag.x)-ts(110), ty(ag.y)-ts(160), tx(ag.x)+ts(110), ty(ag.y)+ts(70)]);
   for(const nd of INFRA) obst.push([tx(nd.x)-ts(95), ty(nd.y)-ts(60), tx(nd.x)+ts(95), ty(nd.y)+ts(75)]);
-  obst.push([0,0,W,64]);                                     // HTML-HUD: Titelzeile
-  obst.push([0,64,640,142]);                                 // KPI-Kacheln links
-  obst.push([W*0.44,36,W*0.62,120]);                         // Ansicht-Switch + Zoombar
-  obst.push([W-270,60,W,255]);                               // Legende rechts oben
-  obst.push([W-250,0,W,60]);                                 // Uhr
+  if(M){
+    obst.push([0,0,W,170]);                                  // Titel + Ansicht-Switch + KPI-Kacheln
+    obst.push([0,H-250,W,H]);                                // mdock-Karten + LIVE-Ticker unten
+    obst.push([W-150,H-320,W,H-250]);                        // Zoombar rechts unten
+  } else {
+    obst.push([0,0,W,64]);                                   // HTML-HUD: Titelzeile
+    obst.push([0,64,640,142]);                               // KPI-Kacheln links
+    obst.push([W*0.44,36,W*0.62,120]);                       // Ansicht-Switch + Zoombar
+    obst.push([W-270,60,W,255]);                             // Legende rechts oben
+    obst.push([W-250,0,W,60]);                               // Uhr
+  }
   const bx0=tx(BRAIN_X()), by0=ty(BRAIN_Y());                // Gehirn + Synapsen-Label
   obst.push([bx0-ts(260), by0-ts(230), bx0+ts(260), by0+ts(300)]);
   obst.push([0,H-56,W,H]);                                   // LIVE-Ticker unten
@@ -912,7 +919,7 @@ function drawBackground(T){
     }
   }
   ctx.globalCompositeOperation='source-over';
-  }  // Ende Desktop-only Glow-Sterne
+  }  // Ende Glow-Sterne-Block
   // NEAR drifting nebula dust — fastest parallax
   for(const d of dust){
     d.y+=d.vy; if(d.y< -10){ d.y=WORLD_H+10; d.x=Math.random()*WORLD_W; }
@@ -1249,11 +1256,14 @@ function glassPanel(x,y,w,h,r,col){
 function drawZone(z,T){
   const x=tx(z.x), y=ty(z.y), w=ts(z.w), h=ts(z.h);
   const depth=ts(26);
-  // slab side (depth)
-  ctx.fillStyle=hexA(z.col,.12);
-  ctx.beginPath();
-  ctx.moveTo(x, y+h); ctx.lineTo(x+w, y+h); ctx.lineTo(x+w, y+h+depth); ctx.lineTo(x, y+h+depth); ctx.closePath();
-  ctx.fill();
+  // slab side (depth) — Portrait: aus. Der farbige 3D-Tiefen-Sockel unter den
+  // Kästen war der türkis/grüne "Schleier" unter DESIGN-LABOR/ULTRON (Kai).
+  if(!istMobil()){
+    ctx.fillStyle=hexA(z.col,.12);
+    ctx.beginPath();
+    ctx.moveTo(x, y+h); ctx.lineTo(x+w, y+h); ctx.lineTo(x+w, y+h+depth); ctx.lineTo(x, y+h+depth); ctx.closePath();
+    ctx.fill();
+  }
 
   glassPanel(x,y,w,h,ts(16),z.col);
 
