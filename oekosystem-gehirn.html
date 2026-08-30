@@ -137,7 +137,7 @@
     html:not([data-ansicht="desktop"]) .legend{display:none !important;}
     html:not([data-ansicht="desktop"]) .mdock{display:none !important;}
     html:not([data-ansicht="desktop"]) .hint{display:none;}
-    html:not([data-ansicht="desktop"]) .zoombar{top:auto; bottom:200px; transform:none; left:auto; margin-left:0; right:8px; flex-direction:row; gap:6px;}
+    html:not([data-ansicht="desktop"]) .zoombar{top:auto; bottom:186px; transform:none; left:50%; margin-left:-58px; right:auto; flex-direction:row; gap:6px;}
     html:not([data-ansicht="desktop"]) .zoombar button{width:30px; height:30px; font-size:15px; border-radius:8px;}
 
     /* info dock: readable, scrollable card strip sitting above the ticker */
@@ -191,7 +191,7 @@
     html[data-ansicht="mobil"] .legend{display:none !important;}
     html[data-ansicht="mobil"] .mdock{display:none !important;}
     html[data-ansicht="mobil"] .hint{display:none;}
-    html[data-ansicht="mobil"] .zoombar{top:auto; bottom:200px; transform:none; left:auto; margin-left:0; right:8px; flex-direction:row; gap:6px;}
+    html[data-ansicht="mobil"] .zoombar{top:auto; bottom:186px; transform:none; left:50%; margin-left:-58px; right:auto; flex-direction:row; gap:6px;}
     html[data-ansicht="mobil"] .zoombar button{width:30px; height:30px; font-size:15px; border-radius:8px;}
 
     /* info dock: readable, scrollable card strip sitting above the ticker */
@@ -238,7 +238,7 @@
 const ANSICHT_FORCE=(new URLSearchParams(location.search).get('ansicht')||'').toLowerCase();
 document.documentElement.dataset.ansicht = (ANSICHT_FORCE==='mobil'||ANSICHT_FORCE==='desktop') ? ANSICHT_FORCE : 'auto';
 function istMobil(){ return ANSICHT_FORCE==='mobil' ? true : ANSICHT_FORCE==='desktop' ? false : (window.innerWidth < window.innerHeight); }
-function BRAIN_Y(){ return istMobil() ? 755 : 545; }  // Portrait: Gehirn vertikal mittig; Desktop: weiter unten
+function BRAIN_Y(){ return istMobil() ? 574 : 545; }  // Portrait: Gehirn vertikal mittig; Desktop: weiter unten
 function BRAIN_X(){ return istMobil() ? 450 : 800; }  // Portrait world is 900 wide → Mitte 450
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -316,7 +316,7 @@ const ctx = cvs.getContext('2d');
 let W=0,H=0,DPR=1;
 
 const DESK_W = 1600, DESK_H = 900;
-const PORT_W = 900,  PORT_H = 1520;   // portrait world: tall stack, brain centred
+const PORT_W = 900,  PORT_H = 1160;   // portrait world: tall stack, brain centred
 // Active world dims — swapped by resize() depending on orientation. tx/ty and
 // clampPan read these so the whole coordinate system reflows for portrait.
 let WORLD_W = DESK_W, WORLD_H = DESK_H;
@@ -687,30 +687,30 @@ const PORTRAIT_POS = {
   // die Panels (Recherche/Design/Werkstatt/Deck/Ultron) wandern nach UNTEN.
   // Top-anchored portrait: DeskLane sits at the very top of the canvas (right
   // below the fixed HTML KPI cards), brain centred at y755, panels at the bottom.
-  z_shop:      {x:35,  y:15,   w:830, h:200},
+  z_shop:      {x:35,  y:11,   w:830, h:200},
   // Panel-Band unten, unter dem Gehirn/Ring
-  z_recherche: {x:35,  y:1235, w:360, h:160},
-  z_werkstatt: {x:470, y:1235, w:395, h:76},
-  z_deck:      {x:470, y:1319, w:395, h:76},
-  z_design:    {x:35,  y:1406, w:360, h:76},
-  z_ultron:    {x:470, y:1406, w:395, h:76},
+  z_recherche: {x:35,  y:939, w:360, h:160},
+  z_werkstatt: {x:470, y:939, w:395, h:76},
+  z_deck:      {x:470, y:1002, w:395, h:76},
+  z_design:    {x:35,  y:1069, w:360, h:76},
+  z_ultron:    {x:470, y:1069, w:395, h:76},
   // infra ring — ABOVE the brain (brain centre 450,755)
-  n_cron:     {x:90,  y:300},
-  n_telegram: {x:450, y:268},
-  n_github:   {x:660, y:300},
-  n_gateway:  {x:270, y:300},
-  n_voice:    {x:760, y:410},
-  n_watchdog: {x:90,  y:530},
+  n_cron:     {x:90,  y:228},
+  n_telegram: {x:450, y:204},
+  n_github:   {x:660, y:228},
+  n_gateway:  {x:270, y:228},
+  n_voice:    {x:760, y:312},
+  n_watchdog: {x:90,  y:403},
   // infra — sides & around the brain
-  n_mac:      {x:840, y:480},
-  n_tailscale:{x:110, y:1010},
-  n_atlas:    {x:660, y:1055},
+  n_mac:      {x:840, y:365},
+  n_tailscale:{x:110, y:768},
+  n_atlas:    {x:660, y:802},
   // agents — wide ring around the brain
-  a_codex:    {x:220, y:440},
-  a_gemini:   {x:820, y:660},
-  a_jarvis:   {x:150, y:880},
-  a_chatgpt:  {x:815, y:950},
-  a_ultron:   {x:410, y:1075},
+  a_codex:    {x:220, y:334},
+  a_gemini:   {x:820, y:502},
+  a_jarvis:   {x:150, y:669},
+  a_chatgpt:  {x:815, y:722},
+  a_ultron:   {x:360, y:880},
 };
 function applyLayout(){
   const P = istMobil();
@@ -1101,7 +1101,7 @@ function drawBeaconLabel(bx,by,T){
   // on phones the area below the core is occupied by the info dock, so
   // place the label just under the core (fixed screen offset) to avoid overlap.
   const mobile = istMobil();
-  const ly1 = mobile ? by + ts(150) : by + ts(115);   // portrait: gut unter dem Gehirn, klar vom Ring getrennt
+  const ly1 = mobile ? by + ts(120) : by + ts(115);   // portrait: knapp unter dem Gehirn (Ultron sitzt versetzt daneben)
   const ly2 = mobile ? ly1 + 16 : by + ts(130);
   ctx.save();
   ctx.fillStyle=hexA(COL.beacon,.9); ctx.font=`700 ${mobile?12:ts(13)}px -apple-system,system-ui,sans-serif`;
@@ -2116,7 +2116,9 @@ requestAnimationFrame(frame);
     // beacon radius ~240 world units on the page; scale brain to match
     // (base 1.9 = deutlich groesser; focusZoom kommt per Doppelklick dazu)
     zoom += (tZoom - zoom) * 0.08;
-    brainGroup.scale.setScalar(Math.max(0.08, scale * 1.33 * zoom));
+    // Portrait: smaller brain so it clears the tighter ring/label; Desktop keeps 1.33.
+    const brainMul = istMobil() ? 1.02 : 1.33;
+    brainGroup.scale.setScalar(Math.max(0.08, scale * brainMul * zoom));
   }
   function loop(){
     requestAnimationFrame(loop);
