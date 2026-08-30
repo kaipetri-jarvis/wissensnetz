@@ -1,8 +1,8 @@
 {
-  "generated": "2026-08-30T12:28:55+00:00",
+  "generated": "2026-08-30T12:38:59+00:00",
   "bots": {
-    "jarvis": true,
-    "ultron": true
+    "jarvis": false,
+    "ultron": false
   },
   "atlas": {
     "fleet": true,
@@ -36,11 +36,5 @@
       "text": "Oekosystem-Gehirn (Mobile): Panels-Position zurueck auf ausgewogenen Stand (PORT_H 1235) — die 1300er-Version war zu weit unten (Kai). Desktop unveraendert."
     }
   ],
-  "cron": [
-    "jarvis-crash-log-watcher crash-log-watcher cron",
-    "heartbeat:main Heartbeat (main)",
-    "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
-    "heartbeat:ultron Heartbeat (ultron)",
-    "jarvis-wissensnetz-auto wissensnetz-auto-update cron"
-  ]
+  "cron": []
 }
