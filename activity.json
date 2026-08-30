@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-30T11:18:54+00:00",
+  "generated": "2026-08-30T11:28:54+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-08-30T13:26:36+02:00",
+      "text": "Oekosystem-Gehirn (Mobile): Panels-Position zurueck auf ausgewogenen Stand (PORT_H 1235) — die 1300er-Version war zu weit unten (Kai). Desktop unveraendert."
+    },
+    {
+      "at": "2026-08-30T13:22:15+02:00",
+      "text": "Oekosystem-Gehirn (Mobile): Panels noch weiter runter + mehr Avatar-Platz (PORT_H 1300, BOT_BAND 34, Avatare tiefer). Kais Wunsch. Desktop unveraendert."
+    },
     {
       "at": "2026-08-30T13:16:41+02:00",
       "text": "Oekosystem-Gehirn (Mobile): untere Panels weiter runter + mehr Platz fuer Avatare (PORT_H 1235, Jarvis/ChatGPT/Ultron tiefer, Panels ueberlappungsfrei unten). R"
@@ -26,14 +34,6 @@
     {
       "at": "2026-08-30T12:58:30+02:00",
       "text": "Oekosystem-Gehirn (Mobile): untere Panels weiter nach unten + Ultron nach oben — keine Ueberschneidung mehr zwischen Ultron-Avatar/Label und den Panels. Kais Wu"
-    },
-    {
-      "at": "2026-08-30T12:55:11+02:00",
-      "text": "Oekosystem-Gehirn (Mobile): ETSY-DeskLane-Konsole direkt unter die KPI-Kacheln (z_shop y18) — Abstand geschlossen, Kais Wunsch. Desktop unveraendert."
-    },
-    {
-      "at": "2026-08-30T12:49:33+02:00",
-      "text": "Oekosystem-Gehirn (Mobile): vertikale Abstaende ausgeglichen — oberer Block (Kacheln/DeskLane) ein Stueck nach unten (z_shop y55, Kacheln top:78), untere Panels"
     }
   ],
   "cron": [
