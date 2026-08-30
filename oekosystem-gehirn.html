@@ -316,7 +316,7 @@ const ctx = cvs.getContext('2d');
 let W=0,H=0,DPR=1;
 
 const DESK_W = 1600, DESK_H = 900;
-const PORT_W = 900,  PORT_H = 1160;   // portrait world: tall stack, brain centred
+const PORT_W = 900,  PORT_H = 1235;   // portrait world: tall stack, brain centred
 // Active world dims — swapped by resize() depending on orientation. tx/ty and
 // clampPan read these so the whole coordinate system reflows for portrait.
 let WORLD_W = DESK_W, WORLD_H = DESK_H;
@@ -551,13 +551,9 @@ function handleTap(sx, sy){
   const hitR = Math.max(52, ts(70));   // scales with zoom, min 52px
   if(best && bestD<hitR){
     // zoom onto the tapped AI / agent / system node and centre it
-    if(bestKind==='agent'){
-      showInfo(best);                       // Avatar-Klick: KEINE Kamerabewegung — nur Highlight + Info-Karte
-    } else {
-      const target = istMobil() ? 1.3 : 1.0;
-      focusWorld(best.x, best.y, target);   // System-Knoten behalten den sanften Fokus
-      hideInfo();
-    }
+    const target = istMobil() ? 1.3 : 1.0;   // Desktop: kein Kamera-Zoom mehr, nur Highlight; Mobil minimal
+    focusWorld(best.x, best.y - (bestKind==='agent'? 30 : 0), target);
+    if(bestKind==='agent') showInfo(best); else hideInfo();
   } else {
     // tap on empty space → zoom back out to the full station
     hideInfo();
@@ -693,11 +689,11 @@ const PORTRAIT_POS = {
   // below the fixed HTML KPI cards), brain centred at y755, panels at the bottom.
   z_shop:      {x:35,  y:18,   w:830, h:200},
   // Panel-Band unten, unter dem Gehirn/Ring
-  z_recherche: {x:35, y:930, w:360, h:140},
-  z_werkstatt: {x:470, y:930, w:395, h:66},
-  z_deck: {x:470, y:1004, w:395, h:66},
-  z_design: {x:35, y:1082, w:360, h:66},
-  z_ultron: {x:470, y:1082, w:395, h:66},
+  z_recherche: {x:35, y:1000, w:360, h:140},
+  z_werkstatt: {x:470, y:1000, w:395, h:66},
+  z_deck: {x:470, y:1074, w:395, h:66},
+  z_design: {x:35, y:1152, w:360, h:66},
+  z_ultron: {x:470, y:1152, w:395, h:66},
   // infra ring — ABOVE the brain (brain centre 450,755)
   n_cron:     {x:255,  y:346},
   n_telegram: {x:450, y:308},
@@ -712,9 +708,9 @@ const PORTRAIT_POS = {
   // agents — wide ring around the brain
   a_codex:    {x:115, y:405},
   a_gemini:   {x:795, y:445},
-  a_jarvis:   {x:120, y:690},
-  a_chatgpt:  {x:795, y:705},
-  a_ultron:   {x:450, y:765},
+  a_jarvis:   {x:120, y:755},
+  a_chatgpt:  {x:795, y:770},
+  a_ultron:   {x:450, y:835},
 };
 function applyLayout(){
   const P = istMobil();
