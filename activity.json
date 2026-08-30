@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-30T10:28:53+00:00",
+  "generated": "2026-08-30T10:38:53+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-08-30T12:32:07+02:00",
+      "text": "Oekosystem-Gehirn (Mobile): Knoten viel enger ans Gehirn (Ring stark kontrahiert, Mindest-Abstand 135), Portrait-Figuren kleiner (1.02 statt 1.45) damit sie nah"
+    },
     {
       "at": "2026-08-30T12:27:04+02:00",
       "text": "Oekosystem-Gehirn (Mobile): ETSY-DeskLane-Konsole + oberer Block noch ein Stueck hoeher (z_shop y4, TOP_HUD 104, Kacheln top:66) — Abstand Kacheln->DeskLane ver"
@@ -30,17 +34,13 @@
     {
       "at": "2026-08-30T12:14:21+02:00",
       "text": "Oekosystem-Gehirn (Mobile): fuellt jetzt die volle Breite (Kais seitliche Leerbaender weg) — Portrait-Welt vertikal komprimiert (PORT_H 1520->1160, alle Positio"
-    },
-    {
-      "at": "2026-08-30T12:00:41+02:00",
-      "text": "Oekosystem-Gehirn (Mobile): 3 Feinschliffe nach Kais Geraete-Feedback — (1) DeskLane-Konsole naeher an die KPI-Kacheln (TOP_HUD 150->132), (2) Gehirn exakt im L"
     }
   ],
   "cron": [
     "jarvis-crash-log-watcher crash-log-watcher cron",
+    "heartbeat:ultron Heartbeat (ultron)",
     "heartbeat:main Heartbeat (main)",
     "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
-    "heartbeat:ultron Heartbeat (ultron)",
     "jarvis-wissensnetz-auto wissensnetz-auto-update cron"
   ]
 }
