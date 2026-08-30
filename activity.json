@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-30T09:08:52+00:00",
+  "generated": "2026-08-30T09:18:53+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-08-30T11:18:49+02:00",
+      "text": "Oekosystem-Gehirn (Mobile): ETSY-DeskLane-Konsole tiefer (y340) — lag mit ihrem Header unter den KPI-Kacheln/Pills. Jetzt klarer Abstand: Titel-Untertitel-Umsch"
+    },
+    {
+      "at": "2026-08-30T11:16:07+02:00",
+      "text": "Oekosystem-Gehirn (Mobile): Ueberlappung oben behoben — AUTO/MOBIL/DESKTOP-Umschalter unter den Untertitel gesetzt (top:62, war 42 und lag auf 'Meine Agenten ar"
+    },
     {
       "at": "2026-08-30T09:19:24+02:00",
       "text": "Oekosystem-Gehirn (Mobile): AUTO/MOBIL/DESKTOP-Umschalter mittig unter den Titel gesetzt (vorher rechts versetzt). Sauberer, frei von Uhr/STATION-AKTIV rechts."
@@ -26,14 +34,6 @@
     {
       "at": "2026-08-30T09:04:50+02:00",
       "text": "Oekosystem-Gehirn (Mobile): Rueckgaengig — KPI-Kacheln wieder OBEN, ETSY-DeskLane-Konsole darunter (Kais Wunsch, letzte Umstellung zurueckgenommen)."
-    },
-    {
-      "at": "2026-08-30T03:30:00+02:00",
-      "text": "Auto-Backup 2026-08-30 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-08-30T02:42:47+02:00",
-      "text": "Oekosystem-Gehirn (Mobile): KPI-Kacheln jetzt UNTER die ETSY-DeskLane-Konsole (DeskLane ganz oben, Kacheln darunter). Kais Wunsch. Gemini: PASST."
     }
   ],
   "cron": [
