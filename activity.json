@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-30T10:08:54+00:00",
+  "generated": "2026-08-30T10:18:53+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-08-30T12:14:21+02:00",
+      "text": "Oekosystem-Gehirn (Mobile): fuellt jetzt die volle Breite (Kais seitliche Leerbaender weg) — Portrait-Welt vertikal komprimiert (PORT_H 1520->1160, alle Positio"
+    },
     {
       "at": "2026-08-30T12:00:41+02:00",
       "text": "Oekosystem-Gehirn (Mobile): 3 Feinschliffe nach Kais Geraete-Feedback — (1) DeskLane-Konsole naeher an die KPI-Kacheln (TOP_HUD 150->132), (2) Gehirn exakt im L"
@@ -30,10 +34,6 @@
     {
       "at": "2026-08-30T09:19:24+02:00",
       "text": "Oekosystem-Gehirn (Mobile): AUTO/MOBIL/DESKTOP-Umschalter mittig unter den Titel gesetzt (vorher rechts versetzt). Sauberer, frei von Uhr/STATION-AKTIV rechts."
-    },
-    {
-      "at": "2026-08-30T09:15:34+02:00",
-      "text": "Oekosystem-Gehirn (Mobile): KPI-Kacheln noch ein Stueck hoeher (top:58, direkt unter die AUTO/MOBIL/DESKTOP-Buttons). Kais Wunsch."
     }
   ],
   "cron": [
