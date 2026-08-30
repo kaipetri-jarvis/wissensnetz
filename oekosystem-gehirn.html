@@ -811,7 +811,9 @@ for(let i=0;i<90;i++) starsNear.push({x:Math.random()*WORLD_W,y:Math.random()*WO
 const glowStars=[];
 for(let i=0;i<700;i++) glowStars.push({fx:Math.random(),fy:Math.random(),   // ganze Fläche — Leerraum-Filter beim Zeichnen
   r:Math.random()*1.8+.8, halo:Math.random()*12+6, tw:Math.random()*6.28, sp:Math.random()*.014+.004,
-  hue:Math.random(), spark:Math.random()<0.35});
+  hue:Math.random(), spark:Math.random()<0.35,
+  // Helligkeitsklassen (Desktop): ~25% strahlend hell, ~45% mittel, ~30% schwach
+  b:(q=>q<0.25?1.6:q<0.7?1.0:0.45)(Math.random())});
 /* Glow-Sprites einmal vorrendern (Gradients pro Frame sind zu teuer bei 450 Sternen) */
 const glowSprites = ['160,200,255','190,235,220','235,220,255'].map(col=>{
   const c=document.createElement('canvas'); c.width=c.height=64;
@@ -917,9 +919,9 @@ function drawBackground(T){
     const px=s.fx*W, py = M ? 170 + s.fy*(H-250-170) : s.fy*H;
     if(inObst(px,py)) continue;                              // Stern liegt hinter einem Element → auslassen
     const si = s.hue<.33?0 : s.hue<.66?1 : 2;
-    const d = s.halo*2;
-    ctx.globalAlpha = 0.6*a;
-    ctx.drawImage(glowSprites[si], px-s.halo, py-s.halo, d, d);   // vorgerenderter Glow-Sprite
+    const d = s.halo*2*(M?1:(0.7+0.4*s.b));   // helle Sterne bekommen auch einen größeren Halo
+    ctx.globalAlpha = Math.min(1, 0.6*a*(M?1:s.b));   // Desktop: helle & schwache Sterne gemischt
+    ctx.drawImage(glowSprites[si], px-d/2, py-d/2, d, d);   // vorgerenderter Glow-Sprite, zentriert
     if(s.spark && a>0.75){   // feines Kreuz-Funkeln auf dem Höhepunkt
       ctx.globalAlpha = 0.35*(a-0.7)/0.3;
       const L=s.halo*1.2*(a-0.7);
