@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-30T11:38:54+00:00",
+  "generated": "2026-08-30T11:48:54+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-08-30T13:46:09+02:00",
+      "text": "Oekosystem-Gehirn (Mobile): untere Panels buendig an die Oberkante des LIVE-Feeds gezogen (Bottom-Reihe endet direkt ueber LIVE, kein Spalt). Kais Wunsch. Deskt"
+    },
+    {
+      "at": "2026-08-30T13:39:34+02:00",
+      "text": "Oekosystem-Gehirn (Mobile): Panels zurueck auf ausgewogenen Stand (y1000) — Kai: 'so war es besser' (Schleier-Hoehe y935 zurueckgenommen). Desktop unveraendert."
+    },
     {
       "at": "2026-08-30T13:31:47+02:00",
       "text": "Oekosystem-Gehirn (Mobile): untere Panels auf die Hoehe des Boden-Schleiers/Glow-Bands hochgezogen (y935) — Kais Wunsch. Kein Overlap mit Ultron/Zoom. Desktop u"
@@ -26,14 +34,6 @@
     {
       "at": "2026-08-30T13:16:41+02:00",
       "text": "Oekosystem-Gehirn (Mobile): untere Panels weiter runter + mehr Platz fuer Avatare (PORT_H 1235, Jarvis/ChatGPT/Ultron tiefer, Panels ueberlappungsfrei unten). R"
-    },
-    {
-      "at": "2026-08-30T13:13:38+02:00",
-      "text": "Oekosystem-Gehirn (Mobile): untere Panels weiter runter + mehr Platz fuer die Avatare — Portrait-Welt hoeher (PORT_H 1235), untere Avatare (Jarvis/ChatGPT/Ultro"
-    },
-    {
-      "at": "2026-08-30T13:02:04+02:00",
-      "text": "Oekosystem-Gehirn (Mobile): untere Panels ueberlappungsfrei neu gepackt — Hoehen/Abstaende so gesetzt, dass sich RECHERCHE/DESIGN links und WERKSTATT/STRATEGIE-"
     }
   ],
   "cron": [
