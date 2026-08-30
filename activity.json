@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-30T11:58:54+00:00",
+  "generated": "2026-08-30T12:08:54+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-08-30T14:03:51+02:00",
+      "text": "Oekosystem-Gehirn (Mobile): Boden-Schleier/Haze hinter den unteren Panels entfernt — opake dunkle Backdrop-Flaeche hinter dem Panel-Band (istMobil), sodass Gitt"
+    },
     {
       "at": "2026-08-30T13:46:09+02:00",
       "text": "Oekosystem-Gehirn (Mobile): untere Panels buendig an die Oberkante des LIVE-Feeds gezogen (Bottom-Reihe endet direkt ueber LIVE, kein Spalt). Kais Wunsch. Deskt"
@@ -30,10 +34,6 @@
     {
       "at": "2026-08-30T13:22:15+02:00",
       "text": "Oekosystem-Gehirn (Mobile): Panels noch weiter runter + mehr Avatar-Platz (PORT_H 1300, BOT_BAND 34, Avatare tiefer). Kais Wunsch. Desktop unveraendert."
-    },
-    {
-      "at": "2026-08-30T13:16:41+02:00",
-      "text": "Oekosystem-Gehirn (Mobile): untere Panels weiter runter + mehr Platz fuer Avatare (PORT_H 1235, Jarvis/ChatGPT/Ultron tiefer, Panels ueberlappungsfrei unten). R"
     }
   ],
   "cron": [
