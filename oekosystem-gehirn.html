@@ -1390,10 +1390,19 @@ function drawMobileOrbit(T){
     drawLink(px, py, bx, by, n.col, T, n.ang*0.5, bend);
   }
   // outer (system) nodes first, then inner (KI) on top so KI reads as the core
-  for(const n of _ORBIT){ if(n.ring) drawOrbitNode(n._px, n._py, n.col, n.label, T, n.ang, true); }
-  for(const n of _ORBIT){ if(!n.ring) drawOrbitNode(n._px, n._py, n.col, n.label, T, n.ang, false); }
+  for(const n of _ORBIT){ if(n.ring) drawOrbitNode(n._px, n._py, n.col, n.label, T, n.ang, true, n.key); }
+  for(const n of _ORBIT){ if(!n.ring) drawOrbitNode(n._px, n._py, n.col, n.label, T, n.ang, false, n.key); }
 }
-function drawOrbitNode(x,y,col,label,T,seed,small){
+function drawOrbitNode(x,y,col,label,T,seed,small,key){
+  if(typeof _ic!=='undefined' && _ic._agent && _ic._agent.key===key){
+    const p=(0.5+0.5*Math.sin(T*3.2));
+    ctx.save(); ctx.globalCompositeOperation='lighter';
+    ctx.strokeStyle=hexA(col,.9); ctx.lineWidth=ts(2.2);
+    ctx.beginPath(); ctx.arc(x,y,ts(20)+ts(4)*p,0,6.28); ctx.stroke();
+    ctx.strokeStyle=hexA('#ffffff',.6*p); ctx.lineWidth=ts(1.2);
+    ctx.beginPath(); ctx.arc(x,y,ts(27)+ts(5)*p,0,6.28); ctx.stroke();
+    ctx.restore();
+  }
   // system/outer nodes render a touch smaller + dimmer so the KI ring stays the focus
   const k = small ? 0.78 : 1.0;
   const gr0 = small ? .42 : .55;
@@ -1534,10 +1543,30 @@ function drawFigure(a,T){
   // ---- Sprite-Modus: generierte Circuit-Androiden (Kais finale Auswahl) ----
   const img=AGENT_IMG[a.key];
   if(img && img.complete && img.naturalWidth){
-    const ih=118*s, iw=ih*img.naturalWidth/img.naturalHeight;
+    const sel = (typeof _ic!=='undefined' && _ic._agent===a);   // ausgewaehlt (Info-Karte offen)
+    const selPulse = sel ? (0.5+0.5*Math.sin(T*3.2)) : 0;
+    const ih=(sel?128:118)*s, iw=ih*img.naturalWidth/img.naturalHeight;
     const footY=gy+46*s, topY=footY-ih+bob*0.35;
+    if(sel){
+      // pulsierende Aura hinter der Figur
+      const ag=ctx.createRadialGradient(bx,topY+ih*0.45,0,bx,topY+ih*0.45,ih*0.62);
+      ag.addColorStop(0,hexA(col,.34+.18*selPulse)); ag.addColorStop(1,hexA(col,0));
+      ctx.save(); ctx.globalCompositeOperation='lighter';
+      ctx.fillStyle=ag; ctx.beginPath(); ctx.arc(bx,topY+ih*0.45,ih*0.62,0,6.28); ctx.fill();
+      ctx.restore();
+      // leuchtendes Podest + rotierender Auswahlring
+      ctx.save(); ctx.translate(bx,footY); ctx.scale(1,0.32);
+      ctx.strokeStyle=hexA(col,.85); ctx.lineWidth=ts(2.4);
+      const rot=T*1.4;
+      for(let k=0;k<8;k++){ const a0=rot+k/8*6.28;
+        ctx.beginPath(); ctx.arc(0,0,ih*0.42,a0,a0+0.5); ctx.stroke(); }
+      ctx.strokeStyle=hexA('#ffffff',.5+.4*selPulse); ctx.lineWidth=ts(1.2);
+      ctx.beginPath(); ctx.arc(0,0,ih*0.34,0,6.28); ctx.stroke();
+      ctx.restore();
+    }
     ctx.save(); ctx.globalCompositeOperation='screen'; ctx.globalAlpha=0.97;
     ctx.drawImage(img, bx-iw/2, topY, iw, ih);
+    if(sel){ ctx.globalAlpha=0.35+0.3*selPulse; ctx.drawImage(img, bx-iw/2, topY, iw, ih); }   // Glow-Boost
     ctx.restore();
     // Portrait: nudge the status bubble sideways AWAY from the brain (left-ring
     // agents → left, right-ring → right) so ringed agents' bubbles don't collide.
