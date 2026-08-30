@@ -1213,7 +1213,7 @@ function drawBeaconLabel(bx,by,T){
   // place the label just under the core (fixed screen offset) to avoid overlap.
   const mobile = istMobil();
   // Desktop: Label ÜBER dem Gehirn; Portrait: knapp darunter (Dock belegt den Platz)
-  const lx  = mobile ? bx : bx + ts(60);
+  const lx  = bx;   // mittig über dem Gehirn
   const ly1 = mobile ? by + ts(120) : by - ts(245);
   const ly2 = mobile ? ly1 + 16 : ly1 + ts(15);
   ctx.save();
