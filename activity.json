@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-30T10:58:54+00:00",
+  "generated": "2026-08-30T11:08:54+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-08-30T13:02:04+02:00",
+      "text": "Oekosystem-Gehirn (Mobile): untere Panels ueberlappungsfrei neu gepackt — Hoehen/Abstaende so gesetzt, dass sich RECHERCHE/DESIGN links und WERKSTATT/STRATEGIE-"
+    },
     {
       "at": "2026-08-30T12:58:30+02:00",
       "text": "Oekosystem-Gehirn (Mobile): untere Panels weiter nach unten + Ultron nach oben — keine Ueberschneidung mehr zwischen Ultron-Avatar/Label und den Panels. Kais Wu"
@@ -30,10 +34,6 @@
     {
       "at": "2026-08-30T12:32:07+02:00",
       "text": "Oekosystem-Gehirn (Mobile): Knoten viel enger ans Gehirn (Ring stark kontrahiert, Mindest-Abstand 135), Portrait-Figuren kleiner (1.02 statt 1.45) damit sie nah"
-    },
-    {
-      "at": "2026-08-30T12:27:04+02:00",
-      "text": "Oekosystem-Gehirn (Mobile): ETSY-DeskLane-Konsole + oberer Block noch ein Stueck hoeher (z_shop y4, TOP_HUD 104, Kacheln top:66) — Abstand Kacheln->DeskLane ver"
     }
   ],
   "cron": [
