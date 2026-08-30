@@ -116,6 +116,8 @@
     html:not([data-ansicht="desktop"]) .clock .time{font-size:14px;}
     html:not([data-ansicht="desktop"]) .clock .date{display:none;}
     html:not([data-ansicht="desktop"]) .clock .live{margin-top:2px; font-size:8.5px; letter-spacing:.10em;}
+    /* AUTO/MOBIL/DESKTOP-Umschalter mittig unter dem Titel (Kais Wunsch) */
+    html:not([data-ansicht="desktop"]) .vswitch{left:50%; right:auto; transform:translateX(-50%);}
 
     /* stats: 4 tiles fit the full width in one non-overflowing row.
        !important guards the layout props against the wider desktop base rule. */
@@ -228,7 +230,7 @@
       width:min(96vw,430px); border-radius:14px 14px 0 0;}
     html[data-ansicht="mobil"] .stats{left:50% !important; right:auto !important;
       transform:translateX(-50%); width:min(96vw,430px) !important;}
-    html[data-ansicht="mobil"] .vswitch{right:calc(50% - min(48vw,215px));}
+    html[data-ansicht="mobil"] .vswitch{left:50%; right:auto; transform:translateX(-50%);}
   }
 </style>
 <script>
