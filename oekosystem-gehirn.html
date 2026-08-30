@@ -884,13 +884,13 @@ function drawBackground(T){
     const px=s.fx*W, py=s.fy*H;
     const col = s.hue<.33?'160,200,255' : s.hue<.66?'190,235,220' : '235,220,255';
     const hg=ctx.createRadialGradient(px,py,0,px,py,s.halo);
-    hg.addColorStop(0,`rgba(${col},${0.55*a})`); hg.addColorStop(1,`rgba(${col},0)`);
+    hg.addColorStop(0,`rgba(${col},${0.28*a})`); hg.addColorStop(1,`rgba(${col},0)`);
     ctx.fillStyle=hg; ctx.beginPath(); ctx.arc(px,py,s.halo,0,6.28); ctx.fill();
     ctx.beginPath(); ctx.arc(px,py,s.r,0,6.28);
-    ctx.fillStyle=`rgba(240,248,255,${0.85*a})`; ctx.fill();
+    ctx.fillStyle=`rgba(240,248,255,${0.5*a})`; ctx.fill();
     if(s.spark && a>0.75){   // feines Kreuz-Funkeln auf dem Höhepunkt
-      const L=s.halo*1.4*(a-0.7);
-      ctx.strokeStyle=`rgba(${col},${0.5*(a-0.7)})`; ctx.lineWidth=1;
+      const L=s.halo*1.2*(a-0.7);
+      ctx.strokeStyle=`rgba(${col},${0.3*(a-0.7)})`; ctx.lineWidth=1;
       ctx.beginPath(); ctx.moveTo(px-L,py); ctx.lineTo(px+L,py);
       ctx.moveTo(px,py-L); ctx.lineTo(px,py+L); ctx.stroke();
     }
@@ -1201,9 +1201,10 @@ function drawInfraNode(n,T){
 
 /* ---- glass panel helper (glassmorphism + neon edge) ---- */
 function glassPanel(x,y,w,h,r,col){
-  // outer neon glow
+  // outer neon glow — Portrait: stark gedämpft, damit der farbige Schein (v.a.
+  // türkis/grün) nicht unter den unteren Panels heraus in den LIVE-Bereich blutet.
   ctx.save();
-  ctx.shadowColor=hexA(col,.5); ctx.shadowBlur=ts(18);
+  ctx.shadowColor=hexA(col, istMobil()?.14:.5); ctx.shadowBlur=ts(istMobil()?5:18);
   ctx.fillStyle=hexA(col,.02);
   roundRect(x,y,w,h,r); ctx.fill();
   ctx.restore();
