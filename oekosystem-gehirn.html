@@ -834,29 +834,24 @@ function roundRect(x,y,w,h,r){ ctx.beginPath();
    Draw: atmospheric background depth
    ============================================================ */
 function drawBackground(T){
-  const _mob = istMobil();
-  // deep radial veil — Portrait: aus (Kai will keinen Hintergrund-Schleier)
-  if(!_mob){
-    const g=ctx.createRadialGradient(tx(BRAIN_X()),ty(320),ts(50),tx(BRAIN_X()),ty(460),ts(1200));
-    g.addColorStop(0,'rgba(30,44,96,.34)'); g.addColorStop(.5,'rgba(10,14,32,.14)'); g.addColorStop(1,'rgba(2,3,10,0)');
-    ctx.fillStyle=g; ctx.fillRect(0,0,W,H);
-  }
+  // deep radial veil
+  const g=ctx.createRadialGradient(tx(BRAIN_X()),ty(320),ts(50),tx(BRAIN_X()),ty(460),ts(1200));
+  g.addColorStop(0,'rgba(30,44,96,.34)'); g.addColorStop(.5,'rgba(10,14,32,.14)'); g.addColorStop(1,'rgba(2,3,10,0)');
+  ctx.fillStyle=g; ctx.fillRect(0,0,W,H);
 
-  // volumetric nebula blobs (slow animated) — Portrait: aus (reines Sternenfeld)
-  if(!_mob){
-    ctx.globalCompositeOperation='lighter';
-    for(const nb of nebulae){
-      const wob=Math.sin(T*nb.drift+nb.x)*ts(24);
-      const cx=fit.ox+pan.x*0.22+nb.x*fit.scale;
-      const cy=fit.oy+pan.y*0.22+nb.y*fit.scale+wob;
-      const rr=ts(nb.r)*(1+Math.sin(T*0.2+nb.y)*0.05);
-      const ng=ctx.createRadialGradient(cx,cy,0,cx,cy,rr);
-      const aa=nb.a*(0.8+0.25*Math.sin(T*0.3+nb.r));
-      ng.addColorStop(0,hexA(nb.hue,aa)); ng.addColorStop(1,hexA(nb.hue,0));
-      ctx.fillStyle=ng; ctx.beginPath(); ctx.arc(cx,cy,rr,0,6.28); ctx.fill();
-    }
-    ctx.globalCompositeOperation='source-over';
+  // volumetric nebula blobs (slow animated)
+  ctx.globalCompositeOperation='lighter';
+  for(const nb of nebulae){
+    const wob=Math.sin(T*nb.drift+nb.x)*ts(24);
+    const cx=fit.ox+pan.x*0.22+nb.x*fit.scale;
+    const cy=fit.oy+pan.y*0.22+nb.y*fit.scale+wob;
+    const rr=ts(nb.r)*(1+Math.sin(T*0.2+nb.y)*0.05);
+    const ng=ctx.createRadialGradient(cx,cy,0,cx,cy,rr);
+    const aa=nb.a*(0.8+0.25*Math.sin(T*0.3+nb.r));
+    ng.addColorStop(0,hexA(nb.hue,aa)); ng.addColorStop(1,hexA(nb.hue,0));
+    ctx.fillStyle=ng; ctx.beginPath(); ctx.arc(cx,cy,rr,0,6.28); ctx.fill();
   }
+  ctx.globalCompositeOperation='source-over';
 
   drawGridFloor(T);
 
@@ -877,8 +872,8 @@ function drawBackground(T){
     ctx.fillStyle= s.r>1.3 ? `rgba(200,225,255,${a})` : `rgba(150,220,200,${a*.9})`;
     ctx.fill();
   }
-  // NEAR drifting nebula dust — fastest parallax — Portrait: aus (kein Farb-Dunst)
-  if(!_mob) for(const d of dust){
+  // NEAR drifting nebula dust — fastest parallax
+  for(const d of dust){
     d.y+=d.vy; if(d.y< -10){ d.y=WORLD_H+10; d.x=Math.random()*WORLD_W; }
     const col = d.hue<.4?COL.gemini:d.hue<.7?COL.chatgpt:COL.sub;
     const px=fit.ox+pan.x*0.65+d.x*fit.scale;
@@ -890,10 +885,6 @@ function drawBackground(T){
 
 /* perspective grid floor receding into depth */
 function drawGridFloor(T){
-  // Portrait/mobile: skip the perspective grid + horizon glow entirely — on the
-  // compact phone view it reads as a "Schleier" (haze) behind/around the panels
-  // that Kai wants gone. Desktop keeps the full floor.
-  if(istMobil()) return;
   const hz = ty(500);          // horizon line (world y ~500)
   const bottom = ty(WORLD_H+260);
   const cxW = tx(BRAIN_X());
@@ -1896,14 +1887,6 @@ function frame(now){
   // beacon -> system/infra nodes (sync/deploy/heartbeat flows)
   for(const n of INFRA){ const nb = istMobil() ? 0 : (n.key==='atlas' ? 190 : (n.x<CX?24:-24));   // Portrait: gerade Speichen; Desktop: ATLAS weiter Bogen
   drawLink(bx, by, tx(n.x), ty(n.y)+ts((n.big?11.6:9.2)*(n.sz||1)), n.col, T, 0.5, nb); }
-
-  // Portrait: solid opaque backdrop behind the bottom panel band so the grid
-  // floor / horizon haze ("Schleier") doesn't shimmer through the glass panels.
-  if(istMobil()){
-    const bandTop = ty(ZONES[4].y) - ts(14);
-    ctx.fillStyle = '#04060e';
-    ctx.fillRect(0, bandTop, W, H - bandTop);
-  }
 
   // zones (back to front)
   drawLogTerminal(ZONES[4],T,dt);   // recherche (back left) — log stream
