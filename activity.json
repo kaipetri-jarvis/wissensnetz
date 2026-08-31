@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-31T07:59:06+00:00",
+  "generated": "2026-08-31T08:09:06+00:00",
   "bots": {
     "jarvis": true,
     "ultron": false
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-08-31T10:01:06+02:00",
+      "text": "wissens-sync-jarvis (10:00): Velux-Ticket + Gewerbeamt-Bestätigung + 5.-Agent-Idee bestätigt in Tagesnotiz. sessions_send an Ultron erneut getestet, weiterhin k"
+    },
     {
       "at": "2026-08-31T03:30:00+02:00",
       "text": "Auto-Backup 2026-08-31 — täglicher Workspace-Snapshot"
@@ -30,17 +34,13 @@
     {
       "at": "2026-08-30T23:03:51+02:00",
       "text": "Memory: Ultrons KI-Infrastruktur-Abschnitt + Jarvis' Endstand zusammengeführt (beide Ergänzungen 30.08.)"
-    },
-    {
-      "at": "2026-08-30T23:03:34+02:00",
-      "text": "Memory 30.08.2026: Oekosystem-Mobil-Endstand + Etsy-Assets + Backup-Setup in MEMORY.md kuratiert; Tagesnotiz gesichert."
     }
   ],
   "cron": [
-    "- etsy-projekt-treiber cron",
     "jarvis-crash-log-watcher crash-log-watcher cron",
     "heartbeat:main Heartbeat (main)",
     "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
-    "jarvis-wissensnetz-auto wissensnetz-auto-update cron"
+    "jarvis-wissensnetz-auto wissensnetz-auto-update cron",
+    "- etsy-projekt-treiber cron"
   ]
 }
