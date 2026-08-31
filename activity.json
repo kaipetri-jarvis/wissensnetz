@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-31T01:29:04+00:00",
+  "generated": "2026-08-31T01:39:04+00:00",
   "bots": {
     "jarvis": true,
     "ultron": false
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-08-31T03:30:00+02:00",
+      "text": "Auto-Backup 2026-08-31 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-08-31T00:30:34+02:00",
       "text": "wissens-sync-jarvis (00:30): OpenAI-Direct-API-Key-Update (seit 00:10 in allen 3 Gateways aktiv, alter Key entfernt) + Gaia-Ping-Bestätigung übernommen."
@@ -30,10 +34,6 @@
     {
       "at": "2026-08-30T23:03:34+02:00",
       "text": "Memory 30.08.2026: Oekosystem-Mobil-Endstand + Etsy-Assets + Backup-Setup in MEMORY.md kuratiert; Tagesnotiz gesichert."
-    },
-    {
-      "at": "2026-08-30T23:00:39+02:00",
-      "text": "Gaia-Identität + Cross-Agent-Befunde 2026-08-30: Gaia (Port 18791, @Kai_Gaia_bot) dokumentiert, Bot-zu-Bot-Telegram als Sackgasse verifiziert, Memory-Weg als Au"
     }
   ],
   "cron": [
