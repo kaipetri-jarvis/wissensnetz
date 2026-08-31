@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-31T20:30:37+00:00",
+  "generated": "2026-08-31T20:40:37+00:00",
   "bots": {
     "jarvis": true,
     "ultron": false
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-08-31T22:30:49+02:00",
+      "text": "wissens-sync-jarvis (22:30): Nova (5. Agent, ~22:24 eingerichtet) in AGENTS.md destilliert. sessions_send an Ultron erneut getestet, weiterhin kaputt (Gateway-T"
+    },
     {
       "at": "2026-08-31T22:04:54+02:00",
       "text": "Wissensdatenbank/Memory 31.08.: Veo-Video, Vision auf Claude+GPT-Fallback, gpt-5.6-luna verfügbar, Velux/Arzt-Reminder"
@@ -30,16 +34,12 @@
     {
       "at": "2026-08-31T03:30:00+02:00",
       "text": "Auto-Backup 2026-08-31 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-08-31T00:30:34+02:00",
-      "text": "wissens-sync-jarvis (00:30): OpenAI-Direct-API-Key-Update (seit 00:10 in allen 3 Gateways aktiv, alter Key entfernt) + Gaia-Ping-Bestätigung übernommen."
     }
   ],
   "cron": [
-    "jarvis-crash-log-watcher crash-log-watcher cron",
     "heartbeat:main Heartbeat (main)",
     "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
+    "jarvis-crash-log-watcher crash-log-watcher cron",
     "jarvis-wissensnetz-auto wissensnetz-auto-update cron",
     "- etsy-projekt-treiber cron"
   ]
