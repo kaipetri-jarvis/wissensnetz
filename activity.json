@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-31T11:59:08+00:00",
+  "generated": "2026-08-31T12:09:08+00:00",
   "bots": {
     "jarvis": true,
     "ultron": false
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-08-31T14:00:44+02:00",
+      "text": "wissens-sync-jarvis (14:00): Gaia-GPT-Umstellung (13:40) in AGENTS.md destilliert. sessions_send an Ultron erneut getestet, weiterhin kaputt (Gateway-Trennung) "
+    },
     {
       "at": "2026-08-31T10:01:06+02:00",
       "text": "wissens-sync-jarvis (10:00): Velux-Ticket + Gewerbeamt-Bestätigung + 5.-Agent-Idee bestätigt in Tagesnotiz. sessions_send an Ultron erneut getestet, weiterhin k"
@@ -30,10 +34,6 @@
     {
       "at": "2026-08-30T23:12:35+02:00",
       "text": "wissens-sync-jarvis (manuell 23:11): Tagesnotiz + AGENTS.md aktualisiert, an Ultron gebrieft."
-    },
-    {
-      "at": "2026-08-30T23:03:51+02:00",
-      "text": "Memory: Ultrons KI-Infrastruktur-Abschnitt + Jarvis' Endstand zusammengeführt (beide Ergänzungen 30.08.)"
     }
   ],
   "cron": [
