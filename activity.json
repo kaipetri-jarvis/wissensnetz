@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-01T07:59:27+00:00",
+  "generated": "2026-09-01T08:09:27+00:00",
   "bots": {
     "jarvis": true,
     "ultron": false
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-01T10:01:25+02:00",
+      "text": "wissens-sync-jarvis (10:00): Cron-Umbenennung outlook-finanzamt-velux-watch → outlook-finanzamt-watch in MEMORY.md nachgezogen, sonst keine Lücken seit 08:00 ge"
+    },
+    {
+      "at": "2026-09-01T10:00:37+02:00",
+      "text": "Etsy SEO-Refresh 2026-09-01 (auto, gpt-5.6-sol): frische Tag-/Longtail-Vorschläge für alle 19 Listings + 3 Bundles — nur Vorschläge, Listings unverändert"
+    },
     {
       "at": "2026-09-01T08:01:54+02:00",
       "text": "wissens-sync-jarvis (08:00): Zweite Hades-Matrix-Crash-Loop (falsche flache allowFrom/dmPolicy) + Ultrons Reparatur + korrekte nested dm-Allowlist in AGENTS.md "
@@ -26,21 +34,13 @@
     {
       "at": "2026-08-31T22:30:49+02:00",
       "text": "wissens-sync-jarvis (22:30): Nova (5. Agent, ~22:24 eingerichtet) in AGENTS.md destilliert. sessions_send an Ultron erneut getestet, weiterhin kaputt (Gateway-T"
-    },
-    {
-      "at": "2026-08-31T22:04:54+02:00",
-      "text": "Wissensdatenbank/Memory 31.08.: Veo-Video, Vision auf Claude+GPT-Fallback, gpt-5.6-luna verfügbar, Velux/Arzt-Reminder"
-    },
-    {
-      "at": "2026-08-31T22:00:58+02:00",
-      "text": "wissens-sync-jarvis (22:00): Vision-Claude-Umstellung (21:52) in AGENTS.md destilliert. sessions_send an Ultron erneut getestet, weiterhin kaputt (Gateway-Trenn"
     }
   ],
   "cron": [
-    "- etsy-projekt-treiber cron",
     "jarvis-crash-log-watcher crash-log-watcher cron",
     "heartbeat:main Heartbeat (main)",
     "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
-    "heartbeat:hades Heartbeat (hades)"
+    "heartbeat:hades Heartbeat (hades)",
+    "jarvis-wissensnetz-auto wissensnetz-auto-update cron"
   ]
 }
