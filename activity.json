@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-01T08:59:27+00:00",
+  "generated": "2026-09-01T09:09:27+00:00",
   "bots": {
     "jarvis": true,
     "ultron": false
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-01T11:00:48+02:00",
+      "text": "wissens-sync-jarvis (11:00): 10:30-Outlook-Watch (nichts Neues) und Gaias 10:58-Notiz zu Figma/Semrush-Anbindung bereits in Tagesnotiz erfasst, keine weiteren L"
+    },
     {
       "at": "2026-09-01T10:01:25+02:00",
       "text": "wissens-sync-jarvis (10:00): Cron-Umbenennung outlook-finanzamt-velux-watch → outlook-finanzamt-watch in MEMORY.md nachgezogen, sonst keine Lücken seit 08:00 ge"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-01T07:13:19+02:00",
       "text": "wissens-sync-jarvis (07:12): Jarvis-Gateway-Crashloop (04:47-07:12, behoben) in Tagesnotiz. sessions_send an Ultron erneut getestet, weiterhin kaputt (Gateway-T"
-    },
-    {
-      "at": "2026-08-31T22:30:49+02:00",
-      "text": "wissens-sync-jarvis (22:30): Nova (5. Agent, ~22:24 eingerichtet) in AGENTS.md destilliert. sessions_send an Ultron erneut getestet, weiterhin kaputt (Gateway-T"
     }
   ],
   "cron": [
