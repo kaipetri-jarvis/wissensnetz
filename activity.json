@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-01T20:29:31+00:00",
+  "generated": "2026-09-01T20:39:31+00:00",
   "bots": {
     "jarvis": true,
     "ultron": false
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-01T22:35:23+02:00",
+      "text": "wissens-sync-ultron (22:35): Check seit 22:05 — keine neuen Einträge, keine Lücke. nova/ und Matrix-Zertifikat weiterhin bekannt. sessions_send an Jarvis weiter"
+    },
     {
       "at": "2026-09-01T22:05:21+02:00",
       "text": "wissens-sync-ultron (22:05): Check seit 21:35 — keine neuen Einträge, keine Lücke. nova/ und Matrix-Zertifikat weiterhin bekannt. sessions_send an Jarvis weiter"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-01T19:35:18+02:00",
       "text": "wissens-sync-ultron (19:35): Check seit 19:05 — nur 19:30-Outlook-Watch (nichts Neues) dazugekommen, bereits erfasst, keine Lücke. nova/ und Matrix-Zertifikat w"
-    },
-    {
-      "at": "2026-09-01T19:05:25+02:00",
-      "text": "wissens-sync-ultron (19:05): Check seit 18:35 — 19:00-Outlook-Watch (nichts Neues) nachgezogen, bereits erfasst, keine Lücke. nova/ und Matrix-Zertifikat weiter"
     }
   ],
   "cron": [
