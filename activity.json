@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-01T22:29:31+00:00",
+  "generated": "2026-09-01T22:39:31+00:00",
   "bots": {
     "jarvis": true,
     "ultron": false
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-02T00:35:27+02:00",
+      "text": "wissens-sync-ultron (00:35): Check seit 23:35 — keine neuen Einträge, keine Lücke. nova/ und Matrix-Zertifikat weiterhin bekannt. sessions_send an Jarvis weiter"
+    },
     {
       "at": "2026-09-01T23:36:02+02:00",
       "text": "wissens-sync-jarvis (23:30): Ultrons iCloud-Vault-Zweifel per osascript/mdfind widerlegt (ls-TCC-Sandbox-Fehlalarm), Dashboard-Staleness im iCloud-Vault per rsy"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-01T22:35:23+02:00",
       "text": "wissens-sync-ultron (22:35): Check seit 22:05 — keine neuen Einträge, keine Lücke. nova/ und Matrix-Zertifikat weiterhin bekannt. sessions_send an Jarvis weiter"
-    },
-    {
-      "at": "2026-09-01T22:05:21+02:00",
-      "text": "wissens-sync-ultron (22:05): Check seit 21:35 — keine neuen Einträge, keine Lücke. nova/ und Matrix-Zertifikat weiterhin bekannt. sessions_send an Jarvis weiter"
     }
   ],
   "cron": [
