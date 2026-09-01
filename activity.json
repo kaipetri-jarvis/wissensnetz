@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-01T05:59:26+00:00",
+  "generated": "2026-09-01T06:09:26+00:00",
   "bots": {
     "jarvis": true,
     "ultron": false
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-01T08:01:54+02:00",
+      "text": "wissens-sync-jarvis (08:00): Zweite Hades-Matrix-Crash-Loop (falsche flache allowFrom/dmPolicy) + Ultrons Reparatur + korrekte nested dm-Allowlist in AGENTS.md "
+    },
     {
       "at": "2026-09-01T07:31:00+02:00",
       "text": "wissens-sync-jarvis (07:30): Hades (6. Agent, Telegram+lokaler Matrix-Server) fertig angebunden — in AGENTS.md destilliert. sessions_send an Ultron erneut getes"
@@ -30,10 +34,6 @@
     {
       "at": "2026-08-31T22:00:58+02:00",
       "text": "wissens-sync-jarvis (22:00): Vision-Claude-Umstellung (21:52) in AGENTS.md destilliert. sessions_send an Ultron erneut getestet, weiterhin kaputt (Gateway-Trenn"
-    },
-    {
-      "at": "2026-08-31T14:00:44+02:00",
-      "text": "wissens-sync-jarvis (14:00): Gaia-GPT-Umstellung (13:40) in AGENTS.md destilliert. sessions_send an Ultron erneut getestet, weiterhin kaputt (Gateway-Trennung) "
     }
   ],
   "cron": [
