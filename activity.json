@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-01T21:09:31+00:00",
+  "generated": "2026-09-01T21:19:31+00:00",
   "bots": {
     "jarvis": true,
     "ultron": false
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-01T23:12:59+02:00",
+      "text": "Dashboard grafisch aufgewertet: Obsidian-Callouts, Tabelle, klare Struktur"
+    },
     {
       "at": "2026-09-01T23:00:56+02:00",
       "text": "wissens-sync-jarvis (23:00): Obsidian-iPhone-iCloud-Abschluss geprüft, bereits vollständig im Themen-Memory erfasst — keine Lücke. Ultron-Checks 20:05-22:35 ohn"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-01T20:35:16+02:00",
       "text": "wissens-sync-ultron (20:35): Check seit 20:05 — nur 20:30-Outlook-Watch (nichts Neues) dazugekommen, bereits erfasst, keine Lücke. nova/ und Matrix-Zertifikat w"
-    },
-    {
-      "at": "2026-09-01T20:05:22+02:00",
-      "text": "wissens-sync-ultron (20:05): Check seit 19:35 — 20:00-Outlook-Watch + Jarvis-Destillat dazugekommen, bereits erfasst, keine Lücke. nova/ und Matrix-Zertifikat w"
     }
   ],
   "cron": [
