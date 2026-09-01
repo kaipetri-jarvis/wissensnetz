@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-01T07:39:27+00:00",
+  "generated": "2026-09-01T07:49:27+00:00",
   "bots": {
     "jarvis": true,
     "ultron": false
@@ -38,9 +38,9 @@
   ],
   "cron": [
     "jarvis-crash-log-watcher crash-log-watcher cron",
-    "heartbeat:main Heartbeat (main)",
-    "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
     "heartbeat:hades Heartbeat (hades)",
-    "- etsy-projekt-treiber cron"
+    "- etsy-projekt-treiber cron",
+    "heartbeat:main Heartbeat (main)",
+    "heartbeat:atlas-coord... Heartbeat (atlas-coor..."
   ]
 }
