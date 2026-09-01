@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-01T12:29:28+00:00",
+  "generated": "2026-09-01T12:39:28+00:00",
   "bots": {
     "jarvis": true,
     "ultron": false
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-01T14:35:45+02:00",
+      "text": "wissens-sync-ultron (14:35): Check seit 14:05 — Jarvis' 14:30-Sync (Hades-E2E) bereits von Jarvis selbst vollständig dokumentiert, keine Lücke. Neuer Gaia-Eintr"
+    },
+    {
+      "at": "2026-09-01T14:30:57+02:00",
+      "text": "wissens-sync-jarvis (14:30): Hades-E2E-Test-Erfolg (14:08-14:14) inkl. DM-Allowlist-Korrektur und @jarvis-statt-@hades-Hinweis in hades-agent-matrix-telegram.md"
+    },
     {
       "at": "2026-09-01T14:05:32+02:00",
       "text": "wissens-sync-ultron (14:05): Check seit 13:35 — nur 14:00-Outlook-Watch (nichts Neues) dazugekommen, bereits erfasst, keine Lücke. sessions_send an Jarvis weite"
@@ -26,14 +34,6 @@
     {
       "at": "2026-09-01T13:06:06+02:00",
       "text": "wissens-sync-ultron (13:05): AGENTS.md-Hades-Eintrag zum Matrix-well-known-Proxy-Fix (12:45) nachgezogen — alter Stand \"kein well-known nötig\" war überholt. ses"
-    },
-    {
-      "at": "2026-09-01T11:00:48+02:00",
-      "text": "wissens-sync-jarvis (11:00): 10:30-Outlook-Watch (nichts Neues) und Gaias 10:58-Notiz zu Figma/Semrush-Anbindung bereits in Tagesnotiz erfasst, keine weiteren L"
-    },
-    {
-      "at": "2026-09-01T10:01:25+02:00",
-      "text": "wissens-sync-jarvis (10:00): Cron-Umbenennung outlook-finanzamt-velux-watch → outlook-finanzamt-watch in MEMORY.md nachgezogen, sonst keine Lücken seit 08:00 ge"
     }
   ],
   "cron": [
