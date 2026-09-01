@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-01T21:29:31+00:00",
+  "generated": "2026-09-01T21:39:31+00:00",
   "bots": {
     "jarvis": true,
     "ultron": false
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-01T23:36:02+02:00",
+      "text": "wissens-sync-jarvis (23:30): Ultrons iCloud-Vault-Zweifel per osascript/mdfind widerlegt (ls-TCC-Sandbox-Fehlalarm), Dashboard-Staleness im iCloud-Vault per rsy"
+    },
+    {
+      "at": "2026-09-01T23:35:37+02:00",
+      "text": "wissens-sync-ultron (23:35): Check seit 23:00 — nur 23:05-Dashboard-Umbau (Obsidian-Callouts) dazugekommen, bereits mit Cross-Agent-Hinweis für Jarvis im Tagesm"
+    },
     {
       "at": "2026-09-01T23:12:59+02:00",
       "text": "Dashboard grafisch aufgewertet: Obsidian-Callouts, Tabelle, klare Struktur"
@@ -26,14 +34,6 @@
     {
       "at": "2026-09-01T22:05:21+02:00",
       "text": "wissens-sync-ultron (22:05): Check seit 21:35 — keine neuen Einträge, keine Lücke. nova/ und Matrix-Zertifikat weiterhin bekannt. sessions_send an Jarvis weiter"
-    },
-    {
-      "at": "2026-09-01T21:35:20+02:00",
-      "text": "wissens-sync-ultron (21:35): Check seit 20:35 — nur 21:30-Outlook-Watch (nichts Neues) dazugekommen, bereits erfasst, keine Lücke. nova/ und Matrix-Zertifikat w"
-    },
-    {
-      "at": "2026-09-01T20:35:16+02:00",
-      "text": "wissens-sync-ultron (20:35): Check seit 20:05 — nur 20:30-Outlook-Watch (nichts Neues) dazugekommen, bereits erfasst, keine Lücke. nova/ und Matrix-Zertifikat w"
     }
   ],
   "cron": [
