@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-01T16:29:29+00:00",
+  "generated": "2026-09-01T16:39:29+00:00",
   "bots": {
     "jarvis": true,
     "ultron": false
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-01T18:35:15+02:00",
+      "text": "wissens-sync-ultron (18:35): Check seit 18:05 — nur 18:30-Outlook-Watch (nichts Neues) dazugekommen, bereits erfasst, keine Lücke. nova/ und Matrix-Zertifikat w"
+    },
     {
       "at": "2026-09-01T18:05:26+02:00",
       "text": "wissens-sync-ultron (18:05): Check seit 17:35 — nur 18:00-Outlook-Watch (nichts Neues) dazugekommen, bereits erfasst, keine Lücke. nova/ und Matrix-Zertifikat w"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-01T16:35:36+02:00",
       "text": "wissens-sync-ultron (16:35): Obsidian-Setup (~16:30, Vault über memory/) nachgezogen — Kai kann Tagesnotizen/Themendateien jetzt auch in Obsidian lesen, kein KI"
-    },
-    {
-      "at": "2026-09-01T16:05:21+02:00",
-      "text": "wissens-sync-ultron (16:05): Check seit 15:35 — nur 16:00-Outlook-Watch (nichts Neues) dazugekommen, bereits erfasst, keine Lücke. sessions_send an Jarvis weite"
     }
   ],
   "cron": [
