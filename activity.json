@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-01T16:59:30+00:00",
+  "generated": "2026-09-01T17:09:30+00:00",
   "bots": {
     "jarvis": true,
     "ultron": false
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-01T19:05:25+02:00",
+      "text": "wissens-sync-ultron (19:05): Check seit 18:35 — 19:00-Outlook-Watch (nichts Neues) nachgezogen, bereits erfasst, keine Lücke. nova/ und Matrix-Zertifikat weiter"
+    },
     {
       "at": "2026-09-01T18:35:15+02:00",
       "text": "wissens-sync-ultron (18:35): Check seit 18:05 — nur 18:30-Outlook-Watch (nichts Neues) dazugekommen, bereits erfasst, keine Lücke. nova/ und Matrix-Zertifikat w"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-01T17:01:18+02:00",
       "text": "wissens-sync-jarvis (17:00): Hades-E2E-Reparatur (~16:58) in Themen-Memory hades-agent-matrix-telegram.md nachgezogen — Ursache (encryption=false), Fix (Element"
-    },
-    {
-      "at": "2026-09-01T16:35:36+02:00",
-      "text": "wissens-sync-ultron (16:35): Obsidian-Setup (~16:30, Vault über memory/) nachgezogen — Kai kann Tagesnotizen/Themendateien jetzt auch in Obsidian lesen, kein KI"
     }
   ],
   "cron": [
