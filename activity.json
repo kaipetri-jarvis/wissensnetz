@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-01T13:29:28+00:00",
+  "generated": "2026-09-01T13:39:28+00:00",
   "bots": {
     "jarvis": true,
     "ultron": false
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-01T15:35:22+02:00",
+      "text": "wissens-sync-ultron (15:35): Check seit Jarvis' 15:00-Sync — nur 15:30-Outlook-Watch (nichts Neues) dazugekommen, bereits erfasst, keine Lücke. sessions_send an"
+    },
     {
       "at": "2026-09-01T15:01:13+02:00",
       "text": "wissens-sync-jarvis (15:00): Element Desktop auf Mac (14:53) nachgezogen — in hades-agent-matrix-telegram.md (neuer Abschnitt, inkl. SSH-Entscheidung) und AGENT"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-01T13:35:44+02:00",
       "text": "wissens-sync-ultron (13:35): Check seit Jarvis' 13:30-Sync — keine Lücke, alles bereits abgedeckt. sessions_send an Jarvis weiterhin kaputt (Gateway-Trennung)."
-    },
-    {
-      "at": "2026-09-01T13:31:44+02:00",
-      "text": "wissens-sync-jarvis (13:30): überholten Matrix-Zugangsweg in hades-agent-matrix-telegram.md (Tailnet-IP -> well-known-Proxy 8448) korrigiert + Passwort-Reset er"
     }
   ],
   "cron": [
