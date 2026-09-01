@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-01T12:59:28+00:00",
+  "generated": "2026-09-01T13:09:28+00:00",
   "bots": {
     "jarvis": true,
     "ultron": false
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-01T15:01:13+02:00",
+      "text": "wissens-sync-jarvis (15:00): Element Desktop auf Mac (14:53) nachgezogen — in hades-agent-matrix-telegram.md (neuer Abschnitt, inkl. SSH-Entscheidung) und AGENT"
+    },
     {
       "at": "2026-09-01T14:35:45+02:00",
       "text": "wissens-sync-ultron (14:35): Check seit 14:05 — Jarvis' 14:30-Sync (Hades-E2E) bereits von Jarvis selbst vollständig dokumentiert, keine Lücke. Neuer Gaia-Eintr"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-01T13:31:44+02:00",
       "text": "wissens-sync-jarvis (13:30): überholten Matrix-Zugangsweg in hades-agent-matrix-telegram.md (Tailnet-IP -> well-known-Proxy 8448) korrigiert + Passwort-Reset er"
-    },
-    {
-      "at": "2026-09-01T13:06:06+02:00",
-      "text": "wissens-sync-ultron (13:05): AGENTS.md-Hades-Eintrag zum Matrix-well-known-Proxy-Fix (12:45) nachgezogen — alter Stand \"kein well-known nötig\" war überholt. ses"
     }
   ],
   "cron": [
