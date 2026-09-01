@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-01T14:59:29+00:00",
+  "generated": "2026-09-01T15:09:29+00:00",
   "bots": {
     "jarvis": true,
     "ultron": false
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-01T17:05:45+02:00",
+      "text": "wissens-sync-ultron (17:05): Matrix-Sitzungs-Cleanup (~17:02) in hades-agent-matrix-telegram.md nachgezogen — alte rote Bot-Test-Sessions per UIA-Delete entfern"
+    },
+    {
+      "at": "2026-09-01T17:01:18+02:00",
+      "text": "wissens-sync-jarvis (17:00): Hades-E2E-Reparatur (~16:58) in Themen-Memory hades-agent-matrix-telegram.md nachgezogen — Ursache (encryption=false), Fix (Element"
+    },
     {
       "at": "2026-09-01T16:35:36+02:00",
       "text": "wissens-sync-ultron (16:35): Obsidian-Setup (~16:30, Vault über memory/) nachgezogen — Kai kann Tagesnotizen/Themendateien jetzt auch in Obsidian lesen, kein KI"
@@ -26,14 +34,6 @@
     {
       "at": "2026-09-01T15:01:13+02:00",
       "text": "wissens-sync-jarvis (15:00): Element Desktop auf Mac (14:53) nachgezogen — in hades-agent-matrix-telegram.md (neuer Abschnitt, inkl. SSH-Entscheidung) und AGENT"
-    },
-    {
-      "at": "2026-09-01T14:35:45+02:00",
-      "text": "wissens-sync-ultron (14:35): Check seit 14:05 — Jarvis' 14:30-Sync (Hades-E2E) bereits von Jarvis selbst vollständig dokumentiert, keine Lücke. Neuer Gaia-Eintr"
-    },
-    {
-      "at": "2026-09-01T14:30:57+02:00",
-      "text": "wissens-sync-jarvis (14:30): Hades-E2E-Test-Erfolg (14:08-14:14) inkl. DM-Allowlist-Korrektur und @jarvis-statt-@hades-Hinweis in hades-agent-matrix-telegram.md"
     }
   ],
   "cron": [
