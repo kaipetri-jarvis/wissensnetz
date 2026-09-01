@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-01T11:29:28+00:00",
+  "generated": "2026-09-01T11:39:28+00:00",
   "bots": {
     "jarvis": true,
     "ultron": false
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-01T13:35:44+02:00",
+      "text": "wissens-sync-ultron (13:35): Check seit Jarvis' 13:30-Sync — keine Lücke, alles bereits abgedeckt. sessions_send an Jarvis weiterhin kaputt (Gateway-Trennung)."
+    },
+    {
+      "at": "2026-09-01T13:31:44+02:00",
+      "text": "wissens-sync-jarvis (13:30): überholten Matrix-Zugangsweg in hades-agent-matrix-telegram.md (Tailnet-IP -> well-known-Proxy 8448) korrigiert + Passwort-Reset er"
+    },
     {
       "at": "2026-09-01T13:06:06+02:00",
       "text": "wissens-sync-ultron (13:05): AGENTS.md-Hades-Eintrag zum Matrix-well-known-Proxy-Fix (12:45) nachgezogen — alter Stand \"kein well-known nötig\" war überholt. ses"
@@ -26,14 +34,6 @@
     {
       "at": "2026-09-01T10:00:37+02:00",
       "text": "Etsy SEO-Refresh 2026-09-01 (auto, gpt-5.6-sol): frische Tag-/Longtail-Vorschläge für alle 19 Listings + 3 Bundles — nur Vorschläge, Listings unverändert"
-    },
-    {
-      "at": "2026-09-01T08:01:54+02:00",
-      "text": "wissens-sync-jarvis (08:00): Zweite Hades-Matrix-Crash-Loop (falsche flache allowFrom/dmPolicy) + Ultrons Reparatur + korrekte nested dm-Allowlist in AGENTS.md "
-    },
-    {
-      "at": "2026-09-01T07:31:00+02:00",
-      "text": "wissens-sync-jarvis (07:30): Hades (6. Agent, Telegram+lokaler Matrix-Server) fertig angebunden — in AGENTS.md destilliert. sessions_send an Ultron erneut getes"
     }
   ],
   "cron": [
