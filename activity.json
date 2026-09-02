@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-02T21:39:43+00:00",
+  "generated": "2026-09-02T21:49:43+00:00",
   "bots": {
     "jarvis": false,
     "ultron": false
@@ -12,35 +12,35 @@
   },
   "commits": [
     {
-      "at": "2026-09-02T23:36:18+02:00",
+      "at": "2026-09-02T23:48:26+02:00",
       "text": "Auto-Backup 2026-09-02 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-02T23:32:16+02:00",
+      "at": "2026-09-02T23:48:08+02:00",
+      "text": "Etsy: Listing-Optimierung aus Konkurrenzrecherche 02.09. (ADHD + Invoice: Titel/Tags/Beschreibung)"
+    },
+    {
+      "at": "2026-09-02T23:47:26+02:00",
       "text": "Auto-Backup 2026-09-02 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-02T23:31:15+02:00",
+      "at": "2026-09-02T23:46:26+02:00",
       "text": "Auto-Backup 2026-09-02 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-02T23:28:12+02:00",
+      "at": "2026-09-02T23:45:25+02:00",
       "text": "Auto-Backup 2026-09-02 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-02T23:27:11+02:00",
-      "text": "Auto-Backup 2026-09-02 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-02T23:26:10+02:00",
+      "at": "2026-09-02T23:43:23+02:00",
       "text": "Auto-Backup 2026-09-02 — täglicher Workspace-Snapshot"
     }
   ],
   "cron": [
     "jarvis-crash-log-watcher crash-log-watcher cron",
+    "heartbeat:hades Heartbeat (hades)",
     "heartbeat:main Heartbeat (main)",
     "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
-    "heartbeat:hades Heartbeat (hades)",
     "jarvis-wissensnetz-auto wissensnetz-auto-update cron"
   ]
 }
