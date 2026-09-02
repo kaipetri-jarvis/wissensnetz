@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-02T09:59:37+00:00",
+  "generated": "2026-09-02T10:09:37+00:00",
   "bots": {
     "jarvis": true,
     "ultron": false
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-02T12:01:28+02:00",
+      "text": "wissens-sync-jarvis (12:00): Digest zu Ultrons Telegram-Ausfall/Fix als Memory-Fallback (sessions_send weiterhin tot)"
+    },
     {
       "at": "2026-09-02T11:57:33+02:00",
       "text": "Ultron-Telegram-Zustellung repariert (Neustart statt Backup-Rollback)"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-02T10:35:51+02:00",
       "text": "wissens-sync-ultron (10:35): Check seit 10:30 — keine neuen Einträge, keine Lücke."
-    },
-    {
-      "at": "2026-09-02T10:32:17+02:00",
-      "text": "wissens-sync-jarvis (10:30): Vault-Auto-Sync-Cron (10:12-10:17) + VELUX-Termin + Ökosystem-Hades/Nova nachgezogen. Offenen Punkt \"kein Auto-Sync-Cron\" in obsidi"
     }
   ],
   "cron": [
