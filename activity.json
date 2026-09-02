@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-02T16:09:41+00:00",
+  "generated": "2026-09-02T16:19:41+00:00",
   "bots": {
     "jarvis": false,
     "ultron": false
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-09-02T18:13:14+02:00",
+      "text": "Auto-Backup 2026-09-02 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-02T18:10:02+02:00",
+      "text": "gitignore: Obsidian-Plugins/community-plugins.json vom Backup ausschließen"
+    },
+    {
+      "at": "2026-09-02T18:09:55+02:00",
+      "text": "Obsidian-Community-Plugins nicht im Workspace-Backup halten — gehören nur in den iCloud-Vault"
+    },
+    {
       "at": "2026-09-02T18:09:12+02:00",
       "text": "Auto-Backup 2026-09-02 — täglicher Workspace-Snapshot"
     },
@@ -22,18 +34,6 @@
     {
       "at": "2026-09-02T17:30:57+02:00",
       "text": "Auto-Backup 2026-09-02 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-02T16:25:41+02:00",
-      "text": "Auto-Backup 2026-09-02 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-02T16:19:37+02:00",
-      "text": "Auto-Backup 2026-09-02 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-02T16:13:36+02:00",
-      "text": "AUFGABE 1: A2A-Watchdog (Cron alle 5 Min) — Vision-Auftrag von Ultron umgesetzt"
     }
   ],
   "cron": [
