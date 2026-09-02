@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-02T08:29:36+00:00",
+  "generated": "2026-09-02T08:39:37+00:00",
   "bots": {
     "jarvis": true,
     "ultron": false
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
+      "at": "2026-09-02T10:36:34+02:00",
+      "text": "Obsidian: Auto-Sync-Skript vault-sync.sh + Ökosystem-Knoten für mobile Wissensdatenbank"
+    },
+    {
+      "at": "2026-09-02T10:35:51+02:00",
+      "text": "wissens-sync-ultron (10:35): Check seit 10:30 — keine neuen Einträge, keine Lücke."
+    },
+    {
+      "at": "2026-09-02T10:32:17+02:00",
+      "text": "wissens-sync-jarvis (10:30): Vault-Auto-Sync-Cron (10:12-10:17) + VELUX-Termin + Ökosystem-Hades/Nova nachgezogen. Offenen Punkt \"kein Auto-Sync-Cron\" in obsidi"
+    },
+    {
+      "at": "2026-09-02T10:31:10+02:00",
+      "text": "AGENTS.md: Wissensnetz-Seite auf 8 Agenten aktualisiert; Deploy-Weg + Hades als Mitpfleger dokumentiert"
+    },
+    {
       "at": "2026-09-02T10:11:33+02:00",
       "text": "Ökosystem-Station: Hades + Nova ergänzt (Zähler 8 Agenten / 5 Modelle, Legende, Infra-Knoten)"
     },
     {
       "at": "2026-09-02T10:05:28+02:00",
       "text": "wissens-sync-ultron (10:05): Check seit 09:35 — keine neuen Einträge, keine Lücke."
-    },
-    {
-      "at": "2026-09-02T09:35:18+02:00",
-      "text": "wissens-sync-ultron (09:35): Check seit 09:32 — keine neuen Einträge, keine Lücke."
-    },
-    {
-      "at": "2026-09-02T09:32:50+02:00",
-      "text": "wissens-sync-ultron (09:32): Check seit 08:35 — keine neuen Einträge, keine Lücke. Nur Outlook-Finanzamt-Watch-Eintrag (09:22) dazugekommen, selbst ohne Neuigke"
-    },
-    {
-      "at": "2026-09-02T08:35:16+02:00",
-      "text": "wissens-sync-ultron (08:35): Check seit 08:05 — keine neuen Einträge, keine Lücke."
-    },
-    {
-      "at": "2026-09-02T08:05:25+02:00",
-      "text": "wissens-sync-ultron (08:05): Check seit 07:35 — keine neuen Einträge, keine Lücke. Nur Outlook-Finanzamt-Watch-Eintrag (08:00) dazugekommen, selbst ohne Neuigke"
     }
   ],
   "cron": [
