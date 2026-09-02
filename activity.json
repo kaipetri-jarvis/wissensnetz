@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-02T08:09:36+00:00",
+  "generated": "2026-09-02T08:19:36+00:00",
   "bots": {
     "jarvis": true,
     "ultron": false
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-02T10:11:33+02:00",
+      "text": "Ökosystem-Station: Hades + Nova ergänzt (Zähler 8 Agenten / 5 Modelle, Legende, Infra-Knoten)"
+    },
     {
       "at": "2026-09-02T10:05:28+02:00",
       "text": "wissens-sync-ultron (10:05): Check seit 09:35 — keine neuen Einträge, keine Lücke."
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-02T08:05:25+02:00",
       "text": "wissens-sync-ultron (08:05): Check seit 07:35 — keine neuen Einträge, keine Lücke. Nur Outlook-Finanzamt-Watch-Eintrag (08:00) dazugekommen, selbst ohne Neuigke"
-    },
-    {
-      "at": "2026-09-02T07:35:12+02:00",
-      "text": "wissens-sync-ultron (07:35): Check seit 07:05 — keine neuen Einträge, keine Lücke."
     }
   ],
   "cron": [
