@@ -163,25 +163,11 @@ const sim=d3.forceSimulation(DATA.nodes)
  .force("charge",d3.forceManyBody().strength(d=>d.hub?-900:(d.cat==="zentrum"?-1400:(d.leaf?-24:-440))).distanceMax(1500))
  .force("center",d3.forceCenter(W/2,H/2))
  .force("collide",d3.forceCollide(d=>radius(d)+10))
- // radiale Kraft → zieht die Notizen auf eine runde Schale, das Netz wird kugelig statt klumpig
- .force("radial",d3.forceRadial(d=>d.cat==="zentrum"?0:(d.hub?150:(d.leaf?300:250)),W/2,H/2).strength(d=>d.cat==="zentrum"?0:(d.hub?.12:.09)))
- .force("x",d3.forceX(W/2).strength(.03))
- .force("y",d3.forceY(H/2).strength(.03))
- // Cluster-Kraft: zieht Knoten gleicher Kategorie (Farbe) zu ihrem gemeinsamen
- // Schwerpunkt → gleichfarbige Punkte bleiben beieinander, auch wenn ihre
- // thematischen Kanten woanders hinziehen (z. B. grüne Etsy-Punkte)
- .force("cluster",clusterForce(.55));
-function clusterForce(strength){
-  const notes=DATA.nodes.filter(n=>!n.hub&&n.cat!=="zentrum"&&!n.leaf);
-  let f=(alpha)=>{
-    const cx={},cy={},cn={};
-    notes.forEach(n=>{const c=n.cat;cx[c]=(cx[c]||0)+n.x;cy[c]=(cy[c]||0)+n.y;cn[c]=(cn[c]||0)+1;});
-    for(const c in cn){cx[c]/=cn[c];cy[c]/=cn[c];}
-    notes.forEach(n=>{const c=n.cat;n.vx+=(cx[c]-n.x)*strength*alpha;n.vy+=(cy[c]-n.y)*strength*alpha;});
-  };
-  f.initialize=()=>{};
-  return f;
-}
+ // radiale Kraft → zieht die Notizen auf eine runde Schale, das Netz wird kugelig statt klumpig.
+ // Stärker + engerer Radien-Unterschied → insgesamt rundere Gesamtform, keine Farb-Gruppierung.
+ .force("radial",d3.forceRadial(d=>d.cat==="zentrum"?0:(d.hub?170:(d.leaf?300:270)),W/2,H/2).strength(d=>d.cat==="zentrum"?0:(d.hub?.35:.28)))
+ .force("x",d3.forceX(W/2).strength(.02))
+ .force("y",d3.forceY(H/2).strength(.02));
 // Kanten vom Zentrum / KI-Knoten etwas sichtbarer (class strong)
 function isStrong(l){
   const s=l.source.id||l.source, t=l.target.id||l.target;
