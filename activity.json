@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-02T09:49:37+00:00",
+  "generated": "2026-09-02T09:59:37+00:00",
   "bots": {
     "jarvis": true,
     "ultron": false
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-02T11:57:33+02:00",
+      "text": "Ultron-Telegram-Zustellung repariert (Neustart statt Backup-Rollback)"
+    },
     {
       "at": "2026-09-02T11:07:03+02:00",
       "text": "wissens-sync-ultron (11:05): A2A-Brücke live nachgezogen — AGENTS.md-Entwurf durch echten Live-Stand ersetzt"
@@ -30,17 +34,13 @@
     {
       "at": "2026-09-02T10:32:17+02:00",
       "text": "wissens-sync-jarvis (10:30): Vault-Auto-Sync-Cron (10:12-10:17) + VELUX-Termin + Ökosystem-Hades/Nova nachgezogen. Offenen Punkt \"kein Auto-Sync-Cron\" in obsidi"
-    },
-    {
-      "at": "2026-09-02T10:31:10+02:00",
-      "text": "AGENTS.md: Wissensnetz-Seite auf 8 Agenten aktualisiert; Deploy-Weg + Hades als Mitpfleger dokumentiert"
     }
   ],
   "cron": [
     "jarvis-crash-log-watcher crash-log-watcher cron",
-    "heartbeat:hades Heartbeat (hades)",
     "heartbeat:main Heartbeat (main)",
     "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
+    "heartbeat:hades Heartbeat (hades)",
     "jarvis-wissensnetz-auto wissensnetz-auto-update cron"
   ]
 }
