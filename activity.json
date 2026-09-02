@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-02T17:29:42+00:00",
+  "generated": "2026-09-02T17:39:42+00:00",
   "bots": {
     "jarvis": false,
     "ultron": false
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-02T19:37:01+02:00",
+      "text": "Auto-Backup 2026-09-02 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-02T19:30:59+02:00",
+      "text": "Auto-Backup 2026-09-02 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-02T19:18:49+02:00",
       "text": "Auto-Backup 2026-09-02 — täglicher Workspace-Snapshot"
@@ -26,14 +34,6 @@
     {
       "at": "2026-09-02T18:09:55+02:00",
       "text": "Obsidian-Community-Plugins nicht im Workspace-Backup halten — gehören nur in den iCloud-Vault"
-    },
-    {
-      "at": "2026-09-02T18:09:12+02:00",
-      "text": "Auto-Backup 2026-09-02 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-02T17:50:06+02:00",
-      "text": "Auto-Backup 2026-09-02 — täglicher Workspace-Snapshot"
     }
   ],
   "cron": [
