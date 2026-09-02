@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-02T13:49:40+00:00",
+  "generated": "2026-09-02T13:59:40+00:00",
   "bots": {
     "jarvis": false,
     "ultron": false
@@ -12,35 +12,35 @@
   },
   "commits": [
     {
+      "at": "2026-09-02T15:57:58+02:00",
+      "text": "Auto-Backup 2026-09-02 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-02T15:57:15+02:00",
+      "text": "Memory: Backup-Cron auf jede Minute (Live) umgestellt"
+    },
+    {
+      "at": "2026-09-02T15:56:58+02:00",
+      "text": "Auto-Backup 2026-09-02 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-02T15:54:17+02:00",
+      "text": "Memory: Backup-Cron auf 30-Min-Live-Takt umgestellt"
+    },
+    {
+      "at": "2026-09-02T15:54:12+02:00",
+      "text": "Auto-Backup 2026-09-02 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-02T15:37:54+02:00",
       "text": "Memory: Post-Split Check-up — fehlenden Backup-Cron neu angelegt"
-    },
-    {
-      "at": "2026-09-02T15:36:36+02:00",
-      "text": "wissens-sync-ultron: Backup-Cron-Prüfung nach Split (uncommitted Stand sichern)"
-    },
-    {
-      "at": "2026-09-02T14:29:50+02:00",
-      "text": "Nova-Avatar heller (Gemini-Review freigegeben)"
-    },
-    {
-      "at": "2026-09-02T14:23:25+02:00",
-      "text": "Hades-Avatar männlich (Jarvis-Basis umgefärbt, Stirn-Auge)"
-    },
-    {
-      "at": "2026-09-02T14:19:27+02:00",
-      "text": "Hades + Nova: echte Sprite-Avatare (Circuit-Android, Stirn-Auge) + Loader aktiviert"
-    },
-    {
-      "at": "2026-09-02T13:36:16+02:00",
-      "text": "wissens-sync-ultron (13:35): Telegram-Fix End-to-End verifiziert (Heartbeat ok-empty via telegram), Gegen-Digest an Jarvis"
     }
   ],
   "cron": [
     "jarvis-crash-log-watcher crash-log-watcher cron",
-    "heartbeat:hades Heartbeat (hades)",
     "heartbeat:main Heartbeat (main)",
     "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
+    "heartbeat:hades Heartbeat (hades)",
     "jarvis-wissensnetz-auto wissensnetz-auto-update cron"
   ]
 }
