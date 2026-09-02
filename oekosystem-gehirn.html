@@ -15,6 +15,7 @@
     --ultron:#25e0d0;   --atlas:#8ab4ff;
     --vision:#c77dff;   --gaia:#8fe08a;
     --hades:#ff6b8a;    --nova:#e8e34f;
+    --obsidian:#6d5ae0;
   }
   *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
   html,body{margin:0; padding:0; height:100%; width:100%;}
@@ -594,7 +595,8 @@ const COL = {
   hades:'#ff6b8a', nova:'#e8e34f',
   // system / infrastructure ring
   gateway:'#7ee0ff', watchdog:'#ff7a7a', tailscale:'#8f7dff',
-  mac:'#9fb0c4', voice:'#ffcf6b', cron:'#7fd8a0', telegram:'#4aa8ff'
+  mac:'#9fb0c4', voice:'#ffcf6b', cron:'#7fd8a0', telegram:'#4aa8ff',
+  obsidian:'#6d5ae0'
 };
 
 // zones (world coords) — Zonen etwas näher an den Reaktor gerückt
@@ -725,6 +727,10 @@ const INFRA = [
   // --- Kanal (oben Mitte-rechts) ---
   {key:'telegram', name:'Telegram', sub:'Jarvis · Ultron · Hades · Nova', x:800, y:162, col:COL.telegram,
    states:['4 Bots · Jarvis · Ultron · Hades · Nova','Kais Hauptkanal','Voice-Notes + Text','Hades zusätzlich über lokalen Matrix-Server (Ende-zu-Ende)','Alarme & Übergaben laufen hier']},
+
+  // --- Wissensdatenbank (rechte obere Fläche, iCloud/iPhone-Sync) ---
+  {key:'obsidian', name:'Obsidian', sub:'Wissensdatenbank · iPhone via iCloud', x:940, y:330, col:COL.obsidian,
+   states:['Kais Wissensdatenbank auf dem iPhone','iCloud-Vault — kein Git, kein Token','memory/ → Vault gespiegelt (vault-sync.sh)','täglicher Auto-Sync 3:20 Uhr','Tagesnotizen, Dashboard, Dreaming-Ordner']},
 ];
 
 /* ---------- PORTRAIT REFLOW ----------
@@ -752,6 +758,7 @@ const PORTRAIT_POS = {
   n_cron:     {x:255,  y:346},
   n_telegram: {x:450, y:308},
   n_github:   {x:564, y:346},
+  n_obsidian: {x:680, y:300},
   n_gateway:  {x:346, y:339},
   n_voice:    {x:624, y:418},
   n_watchdog: {x:260,  y:472},
