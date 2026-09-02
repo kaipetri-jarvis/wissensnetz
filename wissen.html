@@ -160,14 +160,14 @@ const sim=d3.forceSimulation(DATA.nodes)
      if(l.source.leaf||l.target.leaf)return .9;
      return l.weak?.07:.42;
    }))
- .force("charge",d3.forceManyBody().strength(d=>d.hub?-900:(d.cat==="zentrum"?-1400:(d.leaf?-24:-440))).distanceMax(1500))
+ .force("charge",d3.forceManyBody().strength(d=>d.hub?-700:(d.cat==="zentrum"?-1400:(d.leaf?-24:-260))).distanceMax(900))
  .force("center",d3.forceCenter(W/2,H/2))
  .force("collide",d3.forceCollide(d=>radius(d)+10))
  // radiale Kraft → zieht die Notizen auf eine runde Schale, das Netz wird kugelig statt klumpig.
  // Stärker + engerer Radien-Unterschied → insgesamt rundere Gesamtform, keine Farb-Gruppierung.
- .force("radial",d3.forceRadial(d=>d.cat==="zentrum"?0:(d.hub?170:(d.leaf?300:270)),W/2,H/2).strength(d=>d.cat==="zentrum"?0:(d.hub?.35:.28)))
- .force("x",d3.forceX(W/2).strength(.02))
- .force("y",d3.forceY(H/2).strength(.02));
+ .force("radial",d3.forceRadial(d=>d.cat==="zentrum"?0:(d.hub?190:(d.leaf?290:250)),W/2,H/2).strength(d=>d.cat==="zentrum"?0:(d.hub?.7:.6)))
+ .force("x",d3.forceX(W/2).strength(.01))
+ .force("y",d3.forceY(H/2).strength(.01));
 // Kanten vom Zentrum / KI-Knoten etwas sichtbarer (class strong)
 function isStrong(l){
   const s=l.source.id||l.source, t=l.target.id||l.target;
