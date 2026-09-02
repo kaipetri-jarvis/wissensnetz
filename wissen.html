@@ -233,7 +233,19 @@ node.on("mouseenter",(e,d)=>{
   updateLabels();
 }).on("mouseleave",()=>{activeId=null;neighbors=new Set();updateLabels();});
 document.getElementById("pClose").addEventListener("click",()=>{P.style.display="none";activeId=null;neighbors=new Set();updateLabels();});
+// Harter Kreis-Clamp (Gemini + GPT-Empfehlung): forceRadial ist "weich" und wird
+// von Link-/Ladungskräften überstimmt → ein schwach verbundener Knoten ragt sonst raus.
+// Hier zwingen wir JEDEN Knoten pro Tick innerhalb des Zielradius → perfekt runde Form.
+const RMAX=265;
 sim.on("tick",()=>{
+  DATA.nodes.forEach(d=>{
+    if(d.cat==="zentrum")return;
+    const dx=d.x-W/2, dy=d.y-H/2, dist=Math.hypot(dx,dy)||1;
+    if(dist>RMAX){
+      d.x=W/2+dx/dist*RMAX; d.y=H/2+dy/dist*RMAX;
+      d.vx*=.2; d.vy*=.2;   // am Rand dämpfen, damit nichts zappelt
+    }
+  });
   link.attr("x1",d=>d.source.x).attr("y1",d=>d.source.y).attr("x2",d=>d.target.x).attr("y2",d=>d.target.y);
   node.attr("transform",d=>`translate(${d.x},${d.y})`);
 });
