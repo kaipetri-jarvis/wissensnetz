@@ -1956,7 +1956,7 @@ function drawSub(m,T){
    State init
    ============================================================ */
 const AGENT_IMG={};
-['jarvis','codex','gemini','chatgpt','ultron','vision','gaia'].forEach(k=>{ const im=new Image(); im.src='assets/agents/'+k+'.png'; AGENT_IMG[k]=im; });
+['jarvis','codex','gemini','chatgpt','ultron','vision','gaia','hades','nova'].forEach(k=>{ const im=new Image(); im.src='assets/agents/'+k+'.png'; AGENT_IMG[k]=im; });
 AGENTS.forEach((a,i)=>{
   a.phase=i*2.1; a.target=a.states[0]; a.shown=''; a.typeI=0; a.hold=0; a.working=true;
   a.link = 'beacon';   // alle Agenten (auch ChatGPT) ans Gehirn — Kais Wunsch
