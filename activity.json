@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-02T12:09:38+00:00",
+  "generated": "2026-09-02T12:19:38+00:00",
   "bots": {
     "jarvis": true,
     "ultron": false
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-02T14:19:27+02:00",
+      "text": "Hades + Nova: echte Sprite-Avatare (Circuit-Android, Stirn-Auge) + Loader aktiviert"
+    },
     {
       "at": "2026-09-02T13:36:16+02:00",
       "text": "wissens-sync-ultron (13:35): Telegram-Fix End-to-End verifiziert (Heartbeat ok-empty via telegram), Gegen-Digest an Jarvis"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-02T11:05:13+02:00",
       "text": "A2A-Brücke live: Tokens+Bindings gesetzt, Gaia-Boot gefixt, verifiziert (Jarvis/Ultron COMPLETED)"
-    },
-    {
-      "at": "2026-09-02T10:36:34+02:00",
-      "text": "Obsidian: Auto-Sync-Skript vault-sync.sh + Ökosystem-Knoten für mobile Wissensdatenbank"
     }
   ],
   "cron": [
