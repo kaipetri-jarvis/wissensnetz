@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-02T08:59:37+00:00",
+  "generated": "2026-09-02T09:09:37+00:00",
   "bots": {
     "jarvis": true,
     "ultron": false
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-02T11:07:03+02:00",
+      "text": "wissens-sync-ultron (11:05): A2A-Brücke live nachgezogen — AGENTS.md-Entwurf durch echten Live-Stand ersetzt"
+    },
+    {
+      "at": "2026-09-02T11:05:13+02:00",
+      "text": "A2A-Brücke live: Tokens+Bindings gesetzt, Gaia-Boot gefixt, verifiziert (Jarvis/Ultron COMPLETED)"
+    },
     {
       "at": "2026-09-02T10:36:34+02:00",
       "text": "Obsidian: Auto-Sync-Skript vault-sync.sh + Ökosystem-Knoten für mobile Wissensdatenbank"
@@ -26,14 +34,6 @@
     {
       "at": "2026-09-02T10:31:10+02:00",
       "text": "AGENTS.md: Wissensnetz-Seite auf 8 Agenten aktualisiert; Deploy-Weg + Hades als Mitpfleger dokumentiert"
-    },
-    {
-      "at": "2026-09-02T10:11:33+02:00",
-      "text": "Ökosystem-Station: Hades + Nova ergänzt (Zähler 8 Agenten / 5 Modelle, Legende, Infra-Knoten)"
-    },
-    {
-      "at": "2026-09-02T10:05:28+02:00",
-      "text": "wissens-sync-ultron (10:05): Check seit 09:35 — keine neuen Einträge, keine Lücke."
     }
   ],
   "cron": [
