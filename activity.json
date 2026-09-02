@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-02T21:49:43+00:00",
+  "generated": "2026-09-02T21:59:43+00:00",
   "bots": {
     "jarvis": false,
     "ultron": false
@@ -12,35 +12,35 @@
   },
   "commits": [
     {
-      "at": "2026-09-02T23:48:26+02:00",
+      "at": "2026-09-02T23:57:53+02:00",
+      "text": "Memory: Tagesnotiz 02.09. nachziehen"
+    },
+    {
+      "at": "2026-09-02T23:57:27+02:00",
+      "text": "Etsy ADHD: vollständige Dual-Format-Listings für teens/college/daily"
+    },
+    {
+      "at": "2026-09-02T23:56:04+02:00",
+      "text": "Etsy ADHD: GoodNotes-Digitalvariante für teens/college/daily + generischer Builder + Set-ZIPs"
+    },
+    {
+      "at": "2026-09-02T23:55:30+02:00",
       "text": "Auto-Backup 2026-09-02 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-02T23:48:08+02:00",
-      "text": "Etsy: Listing-Optimierung aus Konkurrenzrecherche 02.09. (ADHD + Invoice: Titel/Tags/Beschreibung)"
-    },
-    {
-      "at": "2026-09-02T23:47:26+02:00",
+      "at": "2026-09-02T23:53:28+02:00",
       "text": "Auto-Backup 2026-09-02 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-02T23:46:26+02:00",
-      "text": "Auto-Backup 2026-09-02 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-02T23:45:25+02:00",
-      "text": "Auto-Backup 2026-09-02 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-02T23:43:23+02:00",
-      "text": "Auto-Backup 2026-09-02 — täglicher Workspace-Snapshot"
+      "at": "2026-09-02T23:52:29+02:00",
+      "text": "Etsy ADHD: digitale GoodNotes-Variante (Hyperlink-Tabs) + Set-ZIP + Listing auf Dual-Format"
     }
   ],
   "cron": [
     "jarvis-crash-log-watcher crash-log-watcher cron",
-    "heartbeat:hades Heartbeat (hades)",
     "heartbeat:main Heartbeat (main)",
     "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
+    "heartbeat:hades Heartbeat (hades)",
     "jarvis-wissensnetz-auto wissensnetz-auto-update cron"
   ]
 }
