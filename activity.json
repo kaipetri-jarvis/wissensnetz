@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-02T04:29:33+00:00",
+  "generated": "2026-09-02T04:39:33+00:00",
   "bots": {
     "jarvis": true,
     "ultron": false
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-02T06:35:20+02:00",
+      "text": "wissens-sync-ultron (06:35): Check seit 05:35 — keine neuen Einträge, keine Lücke."
+    },
     {
       "at": "2026-09-02T05:35:16+02:00",
       "text": "wissens-sync-ultron (05:35): Check seit 04:35 — keine neuen Einträge, keine Lücke."
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-02T03:31:23+02:00",
       "text": "Auto-Backup 2026-09-02 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-02T03:30:59+02:00",
-      "text": "fix: nova/ zur .gitignore hinzugefügt (Backup-Cron-Fix)"
     }
   ],
   "cron": [
