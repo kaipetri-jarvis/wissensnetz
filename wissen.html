@@ -151,18 +151,20 @@ function linkDist(l){
   const si=s.id||s, ti=t.id||t;
   if(si==="kern"||ti==="kern")return 200;                       // Hubs weit nach außen
   if(s.leaf||t.leaf)return 22;                                  // Unter-Themen dicht an ihrer Notiz
-  if(String(si).startsWith("hub_")||String(ti).startsWith("hub_"))return 90; // Notizen um den Hub
-  return 110;                                                   // Notiz-Querverbindungen (mehr Luft)
+  if(String(si).startsWith("hub_")||String(ti).startsWith("hub_"))return 130; // Notizen um den Hub
+  return 170;                                                   // Notiz-Querverbindungen (mehr Luft)
 }
 const sim=d3.forceSimulation(DATA.nodes)
  .force("link",d3.forceLink(DATA.links).id(d=>d.id).distance(linkDist)
    .strength(l=>{                                              // schwache (1 Stichwort) Kanten lockerer
      if(l.source.leaf||l.target.leaf)return .9;
-     return l.weak?.06:.4;
+     return l.weak?.03:.28;
    }))
- .force("charge",d3.forceManyBody().strength(d=>d.hub?-700:(d.cat==="zentrum"?-1200:(d.leaf?-24:-320))).distanceMax(1400))
+ .force("charge",d3.forceManyBody().strength(d=>d.hub?-1100:(d.cat==="zentrum"?-1600:(d.leaf?-24:-560))).distanceMax(1800))
  .force("center",d3.forceCenter(W/2,H/2))
- .force("collide",d3.forceCollide(d=>radius(d)+6));
+ .force("collide",d3.forceCollide(d=>radius(d)+10))
+ .force("x",d3.forceX(W/2).strength(.02))
+ .force("y",d3.forceY(H/2).strength(.02));
 // Kanten vom Zentrum / KI-Knoten etwas sichtbarer (class strong)
 function isStrong(l){
   const s=l.source.id||l.source, t=l.target.id||l.target;
