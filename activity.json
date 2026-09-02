@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-02T14:19:41+00:00",
+  "generated": "2026-09-02T14:29:41+00:00",
   "bots": {
     "jarvis": false,
     "ultron": false
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-02T16:25:41+02:00",
+      "text": "Auto-Backup 2026-09-02 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-02T16:19:37+02:00",
       "text": "Auto-Backup 2026-09-02 — täglicher Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-02T16:09:30+02:00",
       "text": "Memory: alle 4 Gateways verifiziert — Jarvis-Jobs laufen sauber (18792 bestätigt)"
-    },
-    {
-      "at": "2026-09-02T16:07:58+02:00",
-      "text": "Auto-Backup 2026-09-02 — täglicher Workspace-Snapshot"
     }
   ],
   "cron": [
