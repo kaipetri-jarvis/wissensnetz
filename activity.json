@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-02T12:29:38+00:00",
+  "generated": "2026-09-02T12:39:38+00:00",
   "bots": {
     "jarvis": true,
     "ultron": false
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-02T14:29:50+02:00",
+      "text": "Nova-Avatar heller (Gemini-Review freigegeben)"
+    },
     {
       "at": "2026-09-02T14:23:25+02:00",
       "text": "Hades-Avatar männlich (Jarvis-Basis umgefärbt, Stirn-Auge)"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-02T11:57:33+02:00",
       "text": "Ultron-Telegram-Zustellung repariert (Neustart statt Backup-Rollback)"
-    },
-    {
-      "at": "2026-09-02T11:07:03+02:00",
-      "text": "wissens-sync-ultron (11:05): A2A-Brücke live nachgezogen — AGENTS.md-Entwurf durch echten Live-Stand ersetzt"
     }
   ],
   "cron": [
