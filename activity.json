@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-02T07:59:36+00:00",
+  "generated": "2026-09-02T08:09:36+00:00",
   "bots": {
     "jarvis": true,
     "ultron": false
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-02T10:05:28+02:00",
+      "text": "wissens-sync-ultron (10:05): Check seit 09:35 — keine neuen Einträge, keine Lücke."
+    },
     {
       "at": "2026-09-02T09:35:18+02:00",
       "text": "wissens-sync-ultron (09:35): Check seit 09:32 — keine neuen Einträge, keine Lücke."
@@ -30,17 +34,13 @@
     {
       "at": "2026-09-02T07:35:12+02:00",
       "text": "wissens-sync-ultron (07:35): Check seit 07:05 — keine neuen Einträge, keine Lücke."
-    },
-    {
-      "at": "2026-09-02T07:05:26+02:00",
-      "text": "wissens-sync-ultron (07:05): Check seit 06:35 — keine neuen Einträge, keine Lücke."
     }
   ],
   "cron": [
-    "- etsy-projekt-treiber cron",
     "jarvis-crash-log-watcher crash-log-watcher cron",
     "heartbeat:main Heartbeat (main)",
     "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
-    "heartbeat:hades Heartbeat (hades)"
+    "heartbeat:hades Heartbeat (hades)",
+    "jarvis-wissensnetz-auto wissensnetz-auto-update cron"
   ]
 }
