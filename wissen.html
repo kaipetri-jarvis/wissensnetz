@@ -51,8 +51,8 @@ body{
 .hint{position:fixed;bottom:22px;right:22px;font-size:11px;color:#5e6c86;z-index:4}
 .mhint{display:none}
 svg{width:100vw;height:100vh;touch-action:none;-webkit-user-select:none;user-select:none}
-.link{stroke:rgba(130,160,220,.16);stroke-width:.8}
-.link.strong{stroke:rgba(120,180,255,.32);stroke-width:1.2}
+.link{stroke:rgba(130,160,220,.16);stroke-width:.8;fill:none}
+.link.strong{stroke:rgba(120,180,255,.32);stroke-width:1.2;fill:none}
 .node circle{cursor:pointer}
 .node text{
   font-family:Inter,-apple-system,system-ui,sans-serif;font-size:12px;font-weight:500;
@@ -82,8 +82,8 @@ svg{width:100vw;height:100vh;touch-action:none;-webkit-user-select:none;user-sel
 }
 </style></head><body>
 <div id="hdr"><h1>Kais Wissens-Netz</h1>
-<p class="long">Stand: 02.09.2026 — alle Wissens-Notizen, automatisch aus dem Gedächtnis verknüpft — wächst mit jeder neuen Notiz. Aktualisiert sich automatisch. Hover/Klick = Details · Ziehen · Zoomen · Suchen.</p>
-<div class="short">Stand: 02.09.2026 · Kais Wissens-Netz</div></div>
+<p class="long">Stand: automatisch generiert — alle Wissens-Notizen, automatisch aus dem Gedächtnis verknüpft — wächst mit jeder neuen Notiz. Aktualisiert sich automatisch. Hover/Klick = Details · Ziehen · Zoomen · Suchen.</p>
+<div class="short">Stand: auto · Kais Wissens-Netz</div></div>
 <div id="cnt"><b id="nc">0</b> Knoten<br><b id="lc">0</b> Verbindungen</div>
 <div id="legToggle" class="glass">☰ Kategorien</div>
 <div id="legend" class="glass"><span class="lgClose" id="lgClose">×</span><div class="ttl">KATEGORIEN</div><div class="lg" data-cat="zentrum"><span class="dot" style="background:#ffffff"></span>Zentrum</div><div class="lg" data-cat="produkt"><span class="dot" style="background:#41D98A"></span>Etsy/Produkte</div><div class="lg" data-cat="ki"><span class="dot" style="background:#F55CA8"></span>KI-Agenten</div><div class="lg" data-cat="technik"><span class="dot" style="background:#4DA3FF"></span>System/Tools</div><div class="lg" data-cat="strategie"><span class="dot" style="background:#FFB04A"></span>Voice/Regeln</div><div class="lg" data-cat="design"><span class="dot" style="background:#8B5CF6"></span>Obsidian/Memory</div></div>
@@ -156,21 +156,23 @@ function linkDist(l){
 }
 const sim=d3.forceSimulation(DATA.nodes)
  .force("link",d3.forceLink(DATA.links).id(d=>d.id).distance(linkDist)
-   .strength(l=>{                                              // schwache (1 Stichwort) Kanten lockerer
+   .strength(l=>{                                              // schwache (1 Stichwort) Kanten straffer → verstrickter
      if(l.source.leaf||l.target.leaf)return .9;
-     return l.weak?.03:.28;
+     return l.weak?.07:.42;
    }))
- .force("charge",d3.forceManyBody().strength(d=>d.hub?-1100:(d.cat==="zentrum"?-1600:(d.leaf?-24:-560))).distanceMax(1800))
+ .force("charge",d3.forceManyBody().strength(d=>d.hub?-900:(d.cat==="zentrum"?-1400:(d.leaf?-24:-440))).distanceMax(1500))
  .force("center",d3.forceCenter(W/2,H/2))
  .force("collide",d3.forceCollide(d=>radius(d)+10))
- .force("x",d3.forceX(W/2).strength(.02))
- .force("y",d3.forceY(H/2).strength(.02));
+ // radiale Kraft → zieht die Notizen auf eine runde Schale, das Netz wird kugelig statt klumpig
+ .force("radial",d3.forceRadial(d=>d.cat==="zentrum"?0:(d.hub?150:(d.leaf?300:250)),W/2,H/2).strength(d=>d.cat==="zentrum"?0:(d.hub?.12:.09)))
+ .force("x",d3.forceX(W/2).strength(.03))
+ .force("y",d3.forceY(H/2).strength(.03));
 // Kanten vom Zentrum / KI-Knoten etwas sichtbarer (class strong)
 function isStrong(l){
   const s=l.source.id||l.source, t=l.target.id||l.target;
   return s==="kern"||t==="kern"||String(s).startsWith("hub_")||String(t).startsWith("hub_");
 }
-const link=g.append("g").selectAll("line").data(DATA.links).join("line")
+const link=g.append("g").selectAll("path").data(DATA.links).join("path")
  .attr("class",l=>"link"+(isStrong(l)?" strong":""));
 const node=g.append("g").selectAll("g").data(DATA.nodes).join("g").attr("class","node")
  .call(d3.drag()
@@ -231,7 +233,16 @@ node.on("mouseenter",(e,d)=>{
 }).on("mouseleave",()=>{activeId=null;neighbors=new Set();updateLabels();});
 document.getElementById("pClose").addEventListener("click",()=>{P.style.display="none";activeId=null;neighbors=new Set();updateLabels();});
 sim.on("tick",()=>{
-  link.attr("x1",d=>d.source.x).attr("y1",d=>d.source.y).attr("x2",d=>d.target.x).attr("y2",d=>d.target.y);
+  // gebogene Kanten (quadratische Bézier): Kontrollpunkt senkrecht zur Verbindung
+  // versetzt → runde, ineinander verstrickte Bögen statt gerader Linien.
+  link.attr("d",d=>{
+    const x1=d.source.x,y1=d.source.y,x2=d.target.x,y2=d.target.y;
+    const dx=x2-x1,dy=y2-y1,dr=Math.sqrt(dx*dx+dy*dy)||1;
+    // Blatt-Kanten fast gerade; echte Querverbindungen deutlich geschwungen.
+    const bend=(d.source.leaf||d.target.leaf)?0.06:0.22;
+    const mx=(x1+x2)/2 - dy*bend, my=(y1+y2)/2 + dx*bend;
+    return `M${x1},${y1}Q${mx},${my} ${x2},${y2}`;
+  });
   node.attr("transform",d=>`translate(${d.x},${d.y})`);
 });
 // Auto-Fit: nach dem ersten Einschwingen den ganzen Graph ins Bild zoomen
