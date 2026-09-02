@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-02T13:29:40+00:00",
+  "generated": "2026-09-02T13:39:40+00:00",
   "bots": {
     "jarvis": false,
     "ultron": false
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-02T15:37:54+02:00",
+      "text": "Memory: Post-Split Check-up — fehlenden Backup-Cron neu angelegt"
+    },
+    {
+      "at": "2026-09-02T15:36:36+02:00",
+      "text": "wissens-sync-ultron: Backup-Cron-Prüfung nach Split (uncommitted Stand sichern)"
+    },
     {
       "at": "2026-09-02T14:29:50+02:00",
       "text": "Nova-Avatar heller (Gemini-Review freigegeben)"
@@ -26,14 +34,6 @@
     {
       "at": "2026-09-02T13:36:16+02:00",
       "text": "wissens-sync-ultron (13:35): Telegram-Fix End-to-End verifiziert (Heartbeat ok-empty via telegram), Gegen-Digest an Jarvis"
-    },
-    {
-      "at": "2026-09-02T12:01:28+02:00",
-      "text": "wissens-sync-jarvis (12:00): Digest zu Ultrons Telegram-Ausfall/Fix als Memory-Fallback (sessions_send weiterhin tot)"
-    },
-    {
-      "at": "2026-09-02T11:57:33+02:00",
-      "text": "Ultron-Telegram-Zustellung repariert (Neustart statt Backup-Rollback)"
     }
   ],
   "cron": [
