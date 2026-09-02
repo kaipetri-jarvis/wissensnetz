@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-02T19:59:42+00:00",
+  "generated": "2026-09-02T20:09:42+00:00",
   "bots": {
     "jarvis": false,
     "ultron": false
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-09-02T22:08:53+02:00",
+      "text": "Auto-Backup 2026-09-02 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-02T22:05:53+02:00",
+      "text": "Auto-Backup 2026-09-02 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-02T22:03:51+02:00",
+      "text": "Auto-Backup 2026-09-02 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-02T20:01:10+02:00",
       "text": "Auto-Backup 2026-09-02 — täglicher Workspace-Snapshot"
     },
@@ -22,18 +34,6 @@
     {
       "at": "2026-09-02T19:30:59+02:00",
       "text": "Auto-Backup 2026-09-02 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-02T19:18:49+02:00",
-      "text": "Auto-Backup 2026-09-02 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-02T18:13:14+02:00",
-      "text": "Auto-Backup 2026-09-02 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-02T18:10:02+02:00",
-      "text": "gitignore: Obsidian-Plugins/community-plugins.json vom Backup ausschließen"
     }
   ],
   "cron": [
