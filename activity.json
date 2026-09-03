@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-03T09:19:47+00:00",
+  "generated": "2026-09-03T09:29:47+00:00",
   "bots": {
     "jarvis": false,
     "ultron": false
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
-      "at": "2026-09-03T11:19:28+02:00",
+      "at": "2026-09-03T11:29:55+02:00",
+      "text": "Memory: Übergabe Bundle-fertig an Ultron (Fallback)"
+    },
+    {
+      "at": "2026-09-03T11:29:32+02:00",
       "text": "Auto-Backup 2026-09-03 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-03T11:03:22+02:00",
+      "at": "2026-09-03T11:28:43+02:00",
+      "text": "Freelancer Finance Bundle: Invoice+Tracker+Mileage (neu, auto-rechnend), Bundle-Listing+Titelbild+ZIP, UPLOAD-MAPPE B5, Gemini-geprüft"
+    },
+    {
+      "at": "2026-09-03T11:28:32+02:00",
       "text": "Auto-Backup 2026-09-03 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-03T11:01:22+02:00",
+      "at": "2026-09-03T11:27:32+02:00",
       "text": "Auto-Backup 2026-09-03 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-03T10:44:14+02:00",
+      "at": "2026-09-03T11:26:32+02:00",
       "text": "Auto-Backup 2026-09-03 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-03T10:41:14+02:00",
-      "text": "Auto-Backup 2026-09-03 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-03T10:39:45+02:00",
-      "text": "Invoice-Listing v2: Rundum-Optimierung nach Skill-Audit + Gemini/GPT-Review + neues Titelbild"
     }
   ],
   "cron": [
