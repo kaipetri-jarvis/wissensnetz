@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-03T12:31:21+00:00",
+  "generated": "2026-09-03T12:41:21+00:00",
   "bots": {
     "jarvis": false,
     "ultron": false
@@ -12,35 +12,35 @@
   },
   "commits": [
     {
+      "at": "2026-09-03T14:40:57+02:00",
+      "text": "Auto-Backup 2026-09-03 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-03T14:36:57+02:00",
+      "text": "Auto-Backup 2026-09-03 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-03T14:33:56+02:00",
+      "text": "Auto-Backup 2026-09-03 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-03T14:32:56+02:00",
+      "text": "Auto-Backup 2026-09-03 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-03T14:31:56+02:00",
+      "text": "Auto-Backup 2026-09-03 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-03T14:30:56+02:00",
       "text": "Auto-Backup 2026-09-03 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-03T14:29:56+02:00",
-      "text": "Auto-Backup 2026-09-03 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-03T14:29:12+02:00",
-      "text": "UPLOAD-MAPPE aus aktualisierten Listings nachgezogen (B2/B3-Titel+Tags, ADHD-Einzelplaner-Tags) + weitere Etsy-Hardlimit-Fixes: B4-Finance-Titel 143/146->131/13"
-    },
-    {
-      "at": "2026-09-03T14:28:56+02:00",
-      "text": "Auto-Backup 2026-09-03 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-03T14:27:58+02:00",
-      "text": "Auto-Backup 2026-09-03 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-03T14:26:36+02:00",
-      "text": "Memory: Übergabe Shop-Quercheck an Ultron"
     }
   ],
   "cron": [
     "jarvis-crash-log-watcher crash-log-watcher cron",
+    "heartbeat:hades Heartbeat (hades)",
     "heartbeat:main Heartbeat (main)",
     "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
-    "heartbeat:hades Heartbeat (hades)",
     "jarvis-wissensnetz-auto wissensnetz-auto-update cron"
   ]
 }
