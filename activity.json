@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-03T10:49:48+00:00",
+  "generated": "2026-09-03T10:59:48+00:00",
   "bots": {
     "jarvis": false,
     "ultron": false
@@ -12,35 +12,35 @@
   },
   "commits": [
     {
-      "at": "2026-09-03T12:31:51+02:00",
+      "at": "2026-09-03T12:59:02+02:00",
+      "text": "Bundle+Invoice Detail-Quercheck (Gemini+GPT): Google-Sheets ehrlich, fillable→print-and-type (keine PDFs haben AcroForm-Felder), Steuer-Claims entschärft, ZIP k"
+    },
+    {
+      "at": "2026-09-03T12:58:56+02:00",
       "text": "Auto-Backup 2026-09-03 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-03T12:10:47+02:00",
+      "at": "2026-09-03T12:57:56+02:00",
       "text": "Auto-Backup 2026-09-03 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-03T12:06:47+02:00",
+      "at": "2026-09-03T12:56:56+02:00",
       "text": "Auto-Backup 2026-09-03 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-03T11:58:36+02:00",
-      "text": "Bundle end-to-end getestet: Formeln durchgerechnet (formulas-lib), Bug gefixt (Expenses-by-Category fehlte in Tracker-xlsx), Invoice-Titel auf 137 ausgereizt"
-    },
-    {
-      "at": "2026-09-03T11:57:43+02:00",
+      "at": "2026-09-03T12:55:56+02:00",
       "text": "Auto-Backup 2026-09-03 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-03T11:55:43+02:00",
+      "at": "2026-09-03T12:53:55+02:00",
       "text": "Auto-Backup 2026-09-03 — täglicher Workspace-Snapshot"
     }
   ],
   "cron": [
     "jarvis-crash-log-watcher crash-log-watcher cron",
-    "heartbeat:hades Heartbeat (hades)",
     "heartbeat:main Heartbeat (main)",
     "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
+    "heartbeat:hades Heartbeat (hades)",
     "jarvis-wissensnetz-auto wissensnetz-auto-update cron"
   ]
 }
