@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-03T12:51:21+00:00",
+  "generated": "2026-09-03T13:01:22+00:00",
   "bots": {
     "jarvis": false,
     "ultron": false
@@ -12,35 +12,35 @@
   },
   "commits": [
     {
-      "at": "2026-09-03T14:50:58+02:00",
+      "at": "2026-09-03T15:00:58+02:00",
       "text": "Auto-Backup 2026-09-03 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-03T14:49:58+02:00",
+      "at": "2026-09-03T14:59:58+02:00",
       "text": "Auto-Backup 2026-09-03 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-03T14:48:58+02:00",
+      "at": "2026-09-03T14:58:58+02:00",
       "text": "Auto-Backup 2026-09-03 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-03T14:47:58+02:00",
+      "at": "2026-09-03T14:56:58+02:00",
       "text": "Auto-Backup 2026-09-03 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-03T14:46:58+02:00",
-      "text": "Auto-Backup 2026-09-03 — täglicher Workspace-Snapshot"
+      "at": "2026-09-03T14:54:46+02:00",
+      "text": "Memory: Übergabe ausfüllbare PDFs an Ultron"
     },
     {
-      "at": "2026-09-03T14:46:15+02:00",
-      "text": "Invoice-PDF echt ausfüllbar: 30 AcroForm-Felder (make-fillable.js + add-form-fields.py), visuell verifiziert, Bundle-ZIP + Listings ehrlich auf fillable zurück"
+      "at": "2026-09-03T14:54:10+02:00",
+      "text": "Ausfüllbare PDFs ausgerollt: Quote/Onboarding/Service-Agreement (echte AcroForm-Felder, mehrseitig), 5 Bundle-ZIPs aktualisiert, Listings ehrlich auf click-to-t"
     }
   ],
   "cron": [
-    "heartbeat:hades Heartbeat (hades)",
     "jarvis-crash-log-watcher crash-log-watcher cron",
     "heartbeat:main Heartbeat (main)",
     "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
+    "heartbeat:hades Heartbeat (hades)",
     "jarvis-wissensnetz-auto wissensnetz-auto-update cron"
   ]
 }
