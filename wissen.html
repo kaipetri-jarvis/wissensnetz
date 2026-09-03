@@ -236,6 +236,9 @@ document.getElementById("pClose").addEventListener("click",()=>{P.style.display=
 // Harter Kreis-Clamp (Gemini + GPT-Empfehlung): forceRadial ist "weich" und wird
 // von Link-/Ladungskräften überstimmt → ein schwach verbundener Knoten ragt sonst raus.
 // Hier zwingen wir JEDEN Knoten pro Tick innerhalb des Zielradius → perfekt runde Form.
+// Zentrum fest in die Bildmitte pinnen, damit "Kais Wissen" nie außermittig
+// weggezogen wird (die vielen Kanten würden es sonst je nach Seed verschieben).
+DATA.nodes.forEach(d=>{if(d.cat==="zentrum"){d.fx=W/2;d.fy=H/2;}});
 const RMAX=265;
 sim.on("tick",()=>{
   DATA.nodes.forEach(d=>{
