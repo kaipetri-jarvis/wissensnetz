@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-03T08:39:47+00:00",
+  "generated": "2026-09-03T08:49:47+00:00",
   "bots": {
     "jarvis": false,
     "ultron": false
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-03T10:44:14+02:00",
+      "text": "Auto-Backup 2026-09-03 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-03T10:41:14+02:00",
+      "text": "Auto-Backup 2026-09-03 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-03T10:39:45+02:00",
       "text": "Invoice-Listing v2: Rundum-Optimierung nach Skill-Audit + Gemini/GPT-Review + neues Titelbild"
@@ -26,21 +34,13 @@
     {
       "at": "2026-09-03T10:37:13+02:00",
       "text": "Auto-Backup 2026-09-03 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-03T10:36:13+02:00",
-      "text": "Auto-Backup 2026-09-03 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-03T10:35:13+02:00",
-      "text": "Auto-Backup 2026-09-03 — täglicher Workspace-Snapshot"
     }
   ],
   "cron": [
     "jarvis-crash-log-watcher crash-log-watcher cron",
+    "heartbeat:hades Heartbeat (hades)",
     "heartbeat:main Heartbeat (main)",
     "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
-    "heartbeat:hades Heartbeat (hades)",
     "jarvis-wissensnetz-auto wissensnetz-auto-update cron"
   ]
 }
