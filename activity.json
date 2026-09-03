@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-03T08:19:47+00:00",
+  "generated": "2026-09-03T08:29:47+00:00",
   "bots": {
     "jarvis": false,
     "ultron": false
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
-      "at": "2026-09-03T10:17:53+02:00",
-      "text": "gitcrawl-Skill installiert; github-Skill unverändert (schon aktuell)"
-    },
-    {
-      "at": "2026-09-03T10:15:01+02:00",
-      "text": "3 ClawHub-Skills (etsy-seller, etsy, image-edit) installiert + Memory"
-    },
-    {
-      "at": "2026-09-03T10:14:02+02:00",
+      "at": "2026-09-03T10:28:08+02:00",
       "text": "Auto-Backup 2026-09-03 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-03T09:55:57+02:00",
+      "at": "2026-09-03T10:27:08+02:00",
       "text": "Auto-Backup 2026-09-03 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-03T09:47:57+02:00",
+      "at": "2026-09-03T10:26:08+02:00",
       "text": "Auto-Backup 2026-09-03 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-03T09:35:53+02:00",
+      "at": "2026-09-03T10:24:06+02:00",
+      "text": "Auto-Backup 2026-09-03 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-03T10:22:06+02:00",
+      "text": "Auto-Backup 2026-09-03 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-03T10:21:06+02:00",
       "text": "Auto-Backup 2026-09-03 — täglicher Workspace-Snapshot"
     }
   ],
