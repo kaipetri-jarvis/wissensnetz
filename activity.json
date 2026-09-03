@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-03T09:09:47+00:00",
+  "generated": "2026-09-03T09:19:47+00:00",
   "bots": {
     "jarvis": false,
     "ultron": false
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-03T11:19:28+02:00",
+      "text": "Auto-Backup 2026-09-03 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-03T11:03:22+02:00",
       "text": "Auto-Backup 2026-09-03 — täglicher Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-03T10:39:45+02:00",
       "text": "Invoice-Listing v2: Rundum-Optimierung nach Skill-Audit + Gemini/GPT-Review + neues Titelbild"
-    },
-    {
-      "at": "2026-09-03T10:39:13+02:00",
-      "text": "Auto-Backup 2026-09-03 — täglicher Workspace-Snapshot"
     }
   ],
   "cron": [
