@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-04T20:51:41+00:00",
+  "generated": "2026-09-04T21:01:41+00:00",
   "bots": {
     "jarvis": false,
     "ultron": false
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-04T23:01:03+02:00",
+      "text": "Auto-Backup 2026-09-04 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-04T22:30:56+02:00",
       "text": "Content-Loop 22:30: SEO-Listing für Monthly Budget Planner"
@@ -30,17 +34,13 @@
     {
       "at": "2026-09-04T21:30:58+02:00",
       "text": "Auto-Backup 2026-09-04 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-04T21:26:58+02:00",
-      "text": "Auto-Backup 2026-09-04 — täglicher Workspace-Snapshot"
     }
   ],
   "cron": [
-    "heartbeat:hades Heartbeat (hades)",
     "jarvis-crash-log-watcher crash-log-watcher cron",
     "heartbeat:main Heartbeat (main)",
     "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
+    "heartbeat:hades Heartbeat (hades)",
     "jarvis-wissensnetz-auto wissensnetz-auto-update cron"
   ]
 }
