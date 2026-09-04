@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-04T05:01:31+00:00",
+  "generated": "2026-09-04T05:11:31+00:00",
   "bots": {
     "jarvis": false,
     "ultron": false
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
-      "at": "2026-09-04T07:00:55+02:00",
+      "at": "2026-09-04T07:08:57+02:00",
       "text": "Auto-Backup 2026-09-04 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-04T03:15:42+02:00",
+      "at": "2026-09-04T07:08:03+02:00",
+      "text": "claude-agents.json + Memory: Claude-Spezialisten im Wissens-Netz"
+    },
+    {
+      "at": "2026-09-04T07:07:58+02:00",
       "text": "Auto-Backup 2026-09-04 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-04T03:01:41+02:00",
+      "at": "2026-09-04T07:06:55+02:00",
       "text": "Auto-Backup 2026-09-04 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-04T03:00:41+02:00",
+      "at": "2026-09-04T07:05:55+02:00",
       "text": "Auto-Backup 2026-09-04 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-03T23:38:26+02:00",
-      "text": "Auto-Backup 2026-09-03 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-03T23:37:27+02:00",
-      "text": "Auto-Backup 2026-09-03 — täglicher Workspace-Snapshot"
+      "at": "2026-09-04T07:03:55+02:00",
+      "text": "Auto-Backup 2026-09-04 — täglicher Workspace-Snapshot"
     }
   ],
   "cron": [
