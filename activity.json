@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-04T21:21:42+00:00",
+  "generated": "2026-09-04T21:31:42+00:00",
   "bots": {
     "jarvis": false,
     "ultron": false
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-04T23:31:05+02:00",
+      "text": "Auto-Backup 2026-09-04 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-04T23:02:53+02:00",
       "text": "Content-Loop 23:00: Pin für Savings Tracker"
@@ -29,10 +33,6 @@
     },
     {
       "at": "2026-09-04T22:02:00+02:00",
-      "text": "Auto-Backup 2026-09-04 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-04T22:01:00+02:00",
       "text": "Auto-Backup 2026-09-04 — täglicher Workspace-Snapshot"
     }
   ],
