@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-04T19:51:41+00:00",
+  "generated": "2026-09-04T20:01:41+00:00",
   "bots": {
     "jarvis": false,
     "ultron": false
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-04T22:01:00+02:00",
+      "text": "Auto-Backup 2026-09-04 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-04T21:31:07+02:00",
       "text": "Wissens-Sync 21:30: ScrapeGraphAI in MEMORY.md destilliert + Ultron-Übergabe (Memory-Fallback)"
@@ -30,17 +34,13 @@
     {
       "at": "2026-09-04T21:21:16+02:00",
       "text": "Memory: ScrapeGraphAI eingerichtet"
-    },
-    {
-      "at": "2026-09-04T21:21:16+02:00",
-      "text": "Tool: ScrapeGraphAI-Web-Scraper (Gemini-Backend) eingerichtet - scrape.sh <url> <anweisung>"
     }
   ],
   "cron": [
-    "heartbeat:hades Heartbeat (hades)",
     "jarvis-crash-log-watcher crash-log-watcher cron",
     "heartbeat:main Heartbeat (main)",
     "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
+    "heartbeat:hades Heartbeat (hades)",
     "jarvis-wissensnetz-auto wissensnetz-auto-update cron"
   ]
 }
