@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-04T19:21:41+00:00",
+  "generated": "2026-09-04T19:31:41+00:00",
   "bots": {
     "jarvis": false,
     "ultron": false
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
+      "at": "2026-09-04T21:31:07+02:00",
+      "text": "Wissens-Sync 21:30: ScrapeGraphAI in MEMORY.md destilliert + Ultron-Übergabe (Memory-Fallback)"
+    },
+    {
+      "at": "2026-09-04T21:30:58+02:00",
+      "text": "Auto-Backup 2026-09-04 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-04T21:26:58+02:00",
+      "text": "Auto-Backup 2026-09-04 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-04T21:22:58+02:00",
+      "text": "Auto-Backup 2026-09-04 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-04T21:21:16+02:00",
       "text": "Memory: ScrapeGraphAI eingerichtet"
     },
     {
       "at": "2026-09-04T21:21:16+02:00",
       "text": "Tool: ScrapeGraphAI-Web-Scraper (Gemini-Backend) eingerichtet - scrape.sh <url> <anweisung>"
-    },
-    {
-      "at": "2026-09-04T21:19:58+02:00",
-      "text": "Auto-Backup 2026-09-04 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-04T21:19:04+02:00",
-      "text": "Auto-Backup 2026-09-04 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-04T21:17:33+02:00",
-      "text": "Auto-Backup 2026-09-04 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-04T21:16:17+02:00",
-      "text": "Auto-Backup 2026-09-04 — täglicher Workspace-Snapshot"
     }
   ],
   "cron": [
