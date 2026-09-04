@@ -53,7 +53,7 @@ body{
 svg{width:100vw;height:100vh;touch-action:none;-webkit-user-select:none;user-select:none}
 .link{stroke:rgba(130,160,220,.28);stroke-width:1.0;fill:none}
 .link.strong{stroke:rgba(120,180,255,.48);stroke-width:1.5;fill:none}
-.link.faint{stroke:rgba(130,160,220,.12);stroke-width:.6;fill:none}
+.link.faint{stroke:rgba(130,160,220,.20);stroke-width:.8;fill:none}
 .node circle{cursor:pointer}
 .node text{
   font-family:Inter,-apple-system,system-ui,sans-serif;font-size:12px;font-weight:500;
@@ -62,10 +62,12 @@ svg{width:100vw;height:100vh;touch-action:none;-webkit-user-select:none;user-sel
 }
 .node{opacity:0}
 @media (max-width:640px){
-  #hdr{padding:10px 12px}
-  #hdr h1{font-size:16px}
+  /* Header nach rechts einrücken, damit Titel/Untertitel NICHT unter dem fixierten
+     "☰ Kategorien"-Button (links) liegen — sonst überschneiden sie sich. */
+  #hdr{padding:10px 12px 10px 150px}
+  #hdr h1{font-size:15px;max-width:150px;line-height:1.15}
   #hdr p.long{display:none}
-  #hdr .short{display:block;font-size:11px;color:#9fb0c8;max-width:60%;margin-top:2px}
+  #hdr .short{display:none}
   #cnt{top:12px;right:12px;font-size:11px}
   #legToggle{display:flex}
   #legend{display:none;top:auto;bottom:82px;left:12px;right:12px;padding:16px}
@@ -83,8 +85,8 @@ svg{width:100vw;height:100vh;touch-action:none;-webkit-user-select:none;user-sel
 }
 </style></head><body>
 <div id="hdr"><h1>Etsy-Wissensnetz</h1>
-<p class="long">Stand: automatisch generiert — zusammengeführtes Wissen aus allen KI-Agenten (Claude/Jarvis, Gemini, ChatGPT) und Projektschritten. Aktualisiert sich automatisch. Hover/Klick = Details · Ziehen · Zoomen · Suchen.</p>
-<div class="short">Stand: auto · Etsy-Wissensnetz</div></div>
+<p class="long">Stand: 04.09.2026 — zusammengeführtes Wissen aus allen KI-Agenten (Claude/Jarvis, Gemini, ChatGPT) und Projektschritten. Aktualisiert sich automatisch. Hover/Klick = Details · Ziehen · Zoomen · Suchen.</p>
+<div class="short">Stand: 04.09.2026 · Etsy-Wissensnetz</div></div>
 <div id="cnt"><b id="nc">0</b> Knoten<br><b id="lc">0</b> Verbindungen</div>
 <div id="legToggle" class="glass">☰ Kategorien</div>
 <div id="legend" class="glass"><span class="lgClose" id="lgClose">×</span><div class="ttl">KATEGORIEN</div><div class="lg" data-cat="zentrum"><span class="dot" style="background:#ffffff"></span>Zentrum</div><div class="lg" data-cat="produkt"><span class="dot" style="background:#41D98A"></span>Produkte</div><div class="lg" data-cat="ki"><span class="dot" style="background:#F55CA8"></span>KI-Agenten</div><div class="lg" data-cat="technik"><span class="dot" style="background:#4DA3FF"></span>Technik/System</div><div class="lg" data-cat="strategie"><span class="dot" style="background:#FFB04A"></span>Strategie/Entscheidungen</div><div class="lg" data-cat="design"><span class="dot" style="background:#8B5CF6"></span>Design-Wissen</div></div>
@@ -157,23 +159,65 @@ function linkDist(l){
   if(String(si).startsWith("hub_")||String(ti).startsWith("hub_"))return 130; // Notizen um den Hub
   return 170;                                                   // Notiz-Querverbindungen (mehr Luft)
 }
+// Zentrum („kern") fest in die Bildmitte pinnen, damit die Wolke nicht als Ganzes
+// wegdriftet — forceCenter zentriert nur den Schwerpunkt, nicht den sichtbaren Knoten.
+DATA.nodes.forEach(n=>{if(n.cat==="zentrum"){n.fx=W/2;n.fy=H/2;}});
+// Die Kategorie-Hubs auf einem Ring verteilen — mit einem Winkel-Sektor PROPORTIONAL zur
+// Zahl ihrer Kinder. Gleiche Abstände (i/n) lassen kleine Hubs (wenige Blätter) eine dünne
+// Zone hinterlassen ("leerer Spot"); gewichtete Sektoren machen die Knoten-DICHTE gleichmäßig.
+const HUBS=DATA.nodes.filter(n=>n.hub);
+const HUBR=190;
+(()=>{
+  const kids={};
+  DATA.nodes.forEach(n=>{kids[n.id]=0;});
+  DATA.links.forEach(l=>{
+    const s=l.source.id||l.source, t=l.target.id||l.target;
+    if(String(s).startsWith("hub_"))kids[s]=(kids[s]||0)+1;
+    if(String(t).startsWith("hub_"))kids[t]=(kids[t]||0)+1;
+  });
+  const weights=HUBS.map(h=>Math.max(1,kids[h.id]||1));
+  const total=weights.reduce((a,b)=>a+b,0);
+  let acc=0;
+  HUBS.forEach((h,i)=>{
+    const share=weights[i]/total;
+    const a=(acc+share/2)*2*Math.PI - Math.PI/2;   // Winkel in der MITTE des eigenen Sektors
+    acc+=share;
+    h._ta=a; h.x=W/2+Math.cos(a)*HUBR; h.y=H/2+Math.sin(a)*HUBR;
+  });
+})();
+// Über die HÄLFTE der Knoten hängt ohne Thema direkt am Zentrum und würde sich sonst
+// ungleich verklumpen (linke Hälfte dicht, rechte dünn). Jedem Nicht-Hub/Nicht-Zentrum-
+// Knoten einen gleichmäßig um den Kreis gestreuten Ziel-Winkel geben (goldener Winkel) →
+// die gesamte Wolke füllt sich homogen, unabhängig von der Themen-Zuordnung.
+(()=>{
+  const rest=DATA.nodes.filter(n=>!n.hub&&n.cat!=="zentrum");
+  const GA=Math.PI*(3-Math.sqrt(5));   // goldener Winkel → maximal gleichmäßige Streuung
+  rest.forEach((n,i)=>{ n._sa=i*GA; });
+})();
 const sim=d3.forceSimulation(DATA.nodes)
  .force("link",d3.forceLink(DATA.links).id(d=>d.id).distance(linkDist)
    .strength(l=>{                                              // schwache (1 Stichwort) Kanten straffer → verstrickter
-     if(l.leafwiki)return .012;                                 // Blatt<->Blatt entlang Wikilinks: hauchzarter Zug (nur Optik)
-     if(l.leafcross)return .04;                                 // Blatt<->Blatt quer: nur sanft, reißt Blätter nicht von ihrer Notiz
+     if(l.leafwiki)return .03;                                  // Blatt<->Blatt entlang Wikilinks: sichtbarer Zug (dichterer Rand)
+     if(l.leafcross)return .07;                                 // Blatt<->Blatt quer: etwas straffer, reißt Blätter nicht von ihrer Notiz
      if(l.source.leaf||l.target.leaf)return .9;                 // Blatt fest an seiner Notiz
      if(l.wiki)return .6;                                       // echte Wikilinks: ziehen verbundene Notizen zusammen
      return l.weak?.07:.42;
    }))
- .force("charge",d3.forceManyBody().strength(d=>d.hub?-700:(d.cat==="zentrum"?-1400:(d.leaf?-24:-260))).distanceMax(900))
+ .force("charge",d3.forceManyBody().strength(d=>d.hub?-700:(d.cat==="zentrum"?-1400:(d.leaf?-70:-260))).distanceMax(900))
  .force("center",d3.forceCenter(W/2,H/2))
- .force("collide",d3.forceCollide(d=>radius(d)+10))
+ .force("collide",d3.forceCollide(d=>radius(d)+16).strength(.9))
  // radiale Kraft → zieht die Notizen auf eine runde Schale, das Netz wird kugelig statt klumpig.
  // Stärker + engerer Radien-Unterschied → insgesamt rundere Gesamtform, keine Farb-Gruppierung.
- .force("radial",d3.forceRadial(d=>d.cat==="zentrum"?0:(d.hub?190:(d.leaf?245:230)),W/2,H/2).strength(d=>d.cat==="zentrum"?0:(d.hub?.7:.6)))
- .force("x",d3.forceX(W/2).strength(.01))
- .force("y",d3.forceY(H/2).strength(.01));
+ .force("radial",d3.forceRadial(d=>d.cat==="zentrum"?0:(d.hub?190:(d.leaf?248:225)),W/2,H/2).strength(d=>d.cat==="zentrum"?0:(d.hub?.7:(d.leaf?.95:.55))))
+ .force("x",d3.forceX(W/2).strength(.045))
+ .force("y",d3.forceY(H/2).strength(.045))
+ // Hubs sanft auf ihren gleichmäßig verteilten Zielwinkel ziehen → keine leere Zone mehr.
+ .force("hubx",d3.forceX(d=>d.hub?W/2+Math.cos(d._ta)*190:W/2).strength(d=>d.hub?.35:0))
+ .force("huby",d3.forceY(d=>d.hub?H/2+Math.sin(d._ta)*190:H/2).strength(d=>d.hub?.35:0))
+ // Alle übrigen Knoten sanft auf ihren gleichmäßig gestreuten Winkel ziehen → homogene Wolke,
+ // keine dünne rechte Hälfte mehr. Schwach, damit die echten Kanten die Feinstruktur bestimmen.
+ .force("spreadx",d3.forceX(d=>(d._sa!==undefined)?W/2+Math.cos(d._sa)*175:W/2).strength(d=>(d._sa!==undefined)?.08:0))
+ .force("spready",d3.forceY(d=>(d._sa!==undefined)?H/2+Math.sin(d._sa)*175:H/2).strength(d=>(d._sa!==undefined)?.08:0));
 // Kanten vom Zentrum / KI-Knoten etwas sichtbarer (class strong)
 function isStrong(l){
   if(l.wiki)return true;                                         // echte Wikilinks hell zeichnen
@@ -247,15 +291,32 @@ document.getElementById("pClose").addEventListener("click",()=>{P.style.display=
 // weggezogen wird (die vielen Kanten würden es sonst je nach Seed verschieben).
 DATA.nodes.forEach(d=>{if(d.cat==="zentrum"){d.fx=W/2;d.fy=H/2;}});
 const RMAX=265;
+const LEAFRING=248;   // Ziel-Radius der äußersten Reihe (Blätter)
+const zentrum=DATA.nodes.find(n=>n.cat==="zentrum");
 sim.on("tick",()=>{
   DATA.nodes.forEach(d=>{
     if(d.cat==="zentrum")return;
     const dx=d.x-W/2, dy=d.y-H/2, dist=Math.hypot(dx,dy)||1;
+    // Blätter sanft auf einen EINHEITLICHEN Ring ziehen → die äußerste Reihe bildet trotz der
+    // vielen Querkanten eine saubere Kreislinie statt auszufransen.
+    if(d.leaf){
+      const pull=0.18;   // wie stark Richtung Ring; klein genug, dass es nicht zappelt
+      const nr=dist+(LEAFRING-dist)*pull;
+      d.x=W/2+dx/dist*nr; d.y=H/2+dy/dist*nr;
+    }
     if(dist>RMAX){
       d.x=W/2+dx/dist*RMAX; d.y=H/2+dy/dist*RMAX;
       d.vx*=.2; d.vy*=.2;   // am Rand dämpfen, damit nichts zappelt
     }
   });
+  // Zentrum ("Kais Wissen") in den ECHTEN geometrischen Mittelpunkt der Wolke setzen, statt
+  // starr auf W/2. So ist der weiße Knoten IMMER die Mitte der Struktur — der BB-Fit legt dann
+  // Knoten UND Kreis zusammen mittig, kein Auseinanderdriften mehr.
+  if(zentrum){
+    let minx=1e9,maxx=-1e9,miny=1e9,maxy=-1e9;
+    DATA.nodes.forEach(n=>{if(n.cat==="zentrum")return;if(n.x<minx)minx=n.x;if(n.x>maxx)maxx=n.x;if(n.y<miny)miny=n.y;if(n.y>maxy)maxy=n.y;});
+    zentrum.fx=(minx+maxx)/2; zentrum.fy=(miny+maxy)/2;
+  }
   link.attr("x1",d=>d.source.x).attr("y1",d=>d.source.y).attr("x2",d=>d.target.x).attr("y2",d=>d.target.y);
   node.attr("transform",d=>`translate(${d.x},${d.y})`);
 });
@@ -264,11 +325,17 @@ let fitted=false;
 function fitToViewport(){
   const xs=DATA.nodes.map(n=>n.x),ys=DATA.nodes.map(n=>n.y);
   const minX=Math.min(...xs),maxX=Math.max(...xs),minY=Math.min(...ys),maxY=Math.max(...ys);
-  const bw=(maxX-minX)||1,bh=(maxY-minY)||1;
   const pad=MOB?40:60;
+  // Auf die TATSÄCHLICHE Bounding-Box der Wolke fitten und deren Mitte auf die Bildmitte
+  // legen. Dank der gleichmäßig auf dem Ring verteilten Hubs ist die Wolke jetzt symmetrisch,
+  // also ist die BB-Mitte stabil — und "die Netzstruktur" (nicht nur der Zentrumsknoten)
+  // sitzt damit wirklich mittig. RMAX als Untergrenze, damit der Zoom nicht zu stark wird.
+  const bw=Math.max((maxX-minX),2*RMAX), bh=Math.max((maxY-minY),2*RMAX);
   const k=Math.min((W-pad*2)/bw,(H-pad*2)/bh,3.5);
   fitZoom=k; updateLabels();
-  const tx=W/2-k*(minX+maxX)/2, ty=H/2-k*(minY+maxY)/2;
+  const cx=(minX+maxX)/2, cy=(minY+maxY)/2;
+  const cyView=H/2+(MOB?H*0.03:0);
+  const tx=W/2-k*cx, ty=cyView-k*cy;
   svg.transition().duration(600).call(zoom.transform,d3.zoomIdentity.translate(tx,ty).scale(k));
 }
 sim.on("end",()=>{if(!fitted){fitted=true;fitToViewport();}});
@@ -290,6 +357,6 @@ document.getElementById("q").addEventListener("input",ev=>{
   node.style("opacity",d=>!q||d.label.toLowerCase().includes(q)||(d.desc||"").toLowerCase().includes(q)?1:.12);
 });
 // Resize-Handling
-window.addEventListener("resize",()=>{W=window.innerWidth;H=window.innerHeight;});
+window.addEventListener("resize",()=>{W=window.innerWidth;H=window.innerHeight;DATA.nodes.forEach(n=>{if(n.cat==="zentrum"){n.fx=W/2;n.fy=H/2;}});sim.alpha(.3).restart();});
 }
 </script></body></html>
