@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-05T20:11:52+00:00",
+  "generated": "2026-09-05T20:21:52+00:00",
   "bots": {
     "jarvis": false,
     "ultron": false
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-09-05T22:20:09+02:00",
+      "text": "Auto-Backup 2026-09-05 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-05T22:18:59+02:00",
+      "text": "Auto-Deploy der Station nimmt jetzt auch die genutzten Assets mit"
+    },
+    {
+      "at": "2026-09-05T22:18:08+02:00",
+      "text": "Auto-Backup 2026-09-05 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-05T22:06:34+02:00",
       "text": "Memory: Obsidian+Vault-Sync als Dauerregel festgehalten"
     },
@@ -21,18 +33,6 @@
     },
     {
       "at": "2026-09-05T22:05:08+02:00",
-      "text": "Auto-Backup 2026-09-05 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-05T22:04:07+02:00",
-      "text": "Auto-Backup 2026-09-05 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-05T22:03:07+02:00",
-      "text": "Auto-Backup 2026-09-05 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-05T22:02:07+02:00",
       "text": "Auto-Backup 2026-09-05 — täglicher Workspace-Snapshot"
     }
   ],
