@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-05T08:41:45+00:00",
+  "generated": "2026-09-05T08:51:45+00:00",
   "bots": {
     "jarvis": false,
     "ultron": false
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-09-05T10:51:45+02:00",
+      "text": "Auto-Backup 2026-09-05 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-05T10:49:45+02:00",
+      "text": "Auto-Backup 2026-09-05 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-05T10:48:45+02:00",
+      "text": "Auto-Backup 2026-09-05 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-05T10:07:39+02:00",
       "text": "Auto-Backup 2026-09-05 — täglicher Workspace-Snapshot"
     },
@@ -22,23 +34,11 @@
     {
       "at": "2026-09-05T03:01:13+02:00",
       "text": "Auto-Backup 2026-09-05 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-05T03:00:13+02:00",
-      "text": "Auto-Backup 2026-09-05 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-04T23:31:05+02:00",
-      "text": "Auto-Backup 2026-09-04 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-04T23:02:53+02:00",
-      "text": "Content-Loop 23:00: Pin für Savings Tracker"
     }
   ],
   "cron": [
-    "jarvis-crash-log-watcher crash-log-watcher cron",
     "heartbeat:hades Heartbeat (hades)",
+    "jarvis-crash-log-watcher crash-log-watcher cron",
     "heartbeat:main Heartbeat (main)",
     "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
     "jarvis-wissensnetz-auto wissensnetz-auto-update cron"
