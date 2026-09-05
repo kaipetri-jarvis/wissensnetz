@@ -15,6 +15,7 @@
     --ultron:#25e0d0;   --atlas:#8ab4ff;
     --vision:#c77dff;   --gaia:#8fe08a;
     --hades:#ff6b8a;    --nova:#e8e34f;
+    --friday:#ff6a2b;
     --obsidian:#6d5ae0;
   }
   *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
@@ -70,7 +71,7 @@
   .ticker .track{white-space:nowrap; will-change:transform; padding-left:100%; animation:scroll 92s linear infinite; font-size:13px;}
   .ticker .track:hover{animation-play-state:paused;}
   .ticker .item{display:inline-flex; align-items:center; gap:8px; margin:0 34px;}
-  .ticker .who{font-weight:800;} .ticker .who.c{color:var(--claude)} .ticker .who.g{color:var(--gemini)} .ticker .who.x{color:var(--chatgpt)} .ticker .who.s{color:var(--sub)} .ticker .who.u{color:var(--ultron)} .ticker .who.v{color:var(--vision)} .ticker .who.e{color:var(--gaia)} .ticker .who.h{color:var(--hades)} .ticker .who.n{color:var(--nova)}
+  .ticker .who{font-weight:800;} .ticker .who.c{color:var(--claude)} .ticker .who.g{color:var(--gemini)} .ticker .who.x{color:var(--chatgpt)} .ticker .who.s{color:var(--sub)} .ticker .who.u{color:var(--ultron)} .ticker .who.v{color:var(--vision)} .ticker .who.e{color:var(--gaia)} .ticker .who.h{color:var(--hades)} .ticker .who.n{color:var(--nova)} .ticker .who.f{color:var(--friday)}
   .ticker .tt{color:var(--muted);} .ticker b{color:var(--ink); font-weight:700;}
   @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
 
@@ -268,7 +269,7 @@ function BRAIN_X(){ return istMobil() ? 450 : 800; }  // Portrait world is 900 w
   <div class="stat b"><div class="n">17</div><div class="l">verkaufsf. ZIPs</div></div>
   <div class="stat c"><div class="n">14</div><div class="l">Thumbnails · Ø 8–9,5</div></div>
   <div class="stat d"><div class="n">5</div><div class="l">KI-Modelle</div></div>
-  <div class="stat e"><div class="n">8</div><div class="l">Agenten</div></div>
+  <div class="stat e"><div class="n">9</div><div class="l">Agenten</div></div>
 </div>
 
 <div class="legend">
@@ -281,6 +282,7 @@ function BRAIN_X(){ return istMobil() ? 450 : 800; }  // Portrait world is 900 w
   <div class="row"><span class="sw" style="background:var(--gaia);color:var(--gaia)"></span> Gaia <span class="lst" data-agent="gaia">aktiv</span></div>
   <div class="row"><span class="sw" style="background:var(--hades);color:var(--hades)"></span> Hades <span class="lst" data-agent="hades">sicher</span></div>
   <div class="row"><span class="sw" style="background:var(--nova);color:var(--nova)"></span> Nova <span class="lst" data-agent="nova">aktiv</span></div>
+  <div class="row"><span class="sw" style="background:var(--friday);color:var(--friday)"></span> Friday <span class="lst" data-agent="friday">aktiv</span></div>
   <div class="row"><span class="sw" style="background:var(--sub);color:var(--sub)"></span> Sub-Agenten <span class="lst">aktiv</span></div>
   <div class="row"><span class="sw" style="background:var(--atlas);color:var(--atlas)"></span> ATLAS · Fabrik <span class="lst">online</span></div>
 </div>
@@ -592,7 +594,7 @@ const COL = {
   sub:'#b79bff', gold:'#f0c674', beacon:'#8fd7ff',
   ultron:'#25e0d0', atlas:'#8ab4ff',
   vision:'#c77dff', gaia:'#8fe08a',
-  hades:'#ff6b8a', nova:'#e8e34f',
+  hades:'#ff6b8a', nova:'#e8e34f', friday:'#ff6a2b',
   // system / infrastructure ring
   gateway:'#7ee0ff', watchdog:'#ff7a7a', tailscale:'#8f7dff',
   mac:'#9fb0c4', voice:'#ffcf6b', cron:'#7fd8a0', telegram:'#4aa8ff',
@@ -611,7 +613,7 @@ const ZONES = [
 
 // main agents — leuchtende Figuren; face/pose leicht variiert
 const AGENTS = [
-  { key:'jarvis', name:'Jarvis', model:'Assistent · Opus 4.8', col:COL.claude,
+  { key:'jarvis', name:'Jarvis', model:'Assistent · Opus 5', col:COL.claude,
     zone:'werkstatt', x:385, y:685, face:'butler', pose:'lean',
     states:[
       'baut Rechnungs-/Angebots-Vorlage (DE) — PDF + Excel + Word…',
@@ -640,7 +642,7 @@ const AGENTS = [
       'Gründer-Kit-Thumbnail: jetzt 9/10 (vorher 8) ✓',
       'recherchiert Nische: Vermieter-/Ferienwohnungs-Set…',
     ]},
-  { key:'chatgpt', name:'ChatGPT', model:'openai/gpt-5.5', col:COL.chatgpt,
+  { key:'chatgpt', name:'ChatGPT', model:'openai/gpt-5.6 · Codex-OAuth', col:COL.chatgpt,
     zone:'deck', x:1350, y:445, face:'brain', pose:'wide',
     states:[
       'entwirft Bundle-Strategie: „Selbstständig Startklar" 39 €',
@@ -650,25 +652,25 @@ const AGENTS = [
       'prüft Shop-Positionierung über 5 Nischen…',
       'Idee: Jobwechsel-System mit Gehaltsverhandlungs-Rechner',
     ]},
-  { key:'vision', name:'Vision', model:'Design-Agent · Port 18790', col:COL.vision,
+  { key:'vision', name:'Vision', model:'Design-Agent · Opus 5 · Port 18790', col:COL.vision,
     zone:'design', x:580, y:705, face:'crystal', pose:'upright',
     states:[
-      'in Aufbau — wird Kais Bild- & Design-Auge',
-      'läuft auf ai.openclaw.ultron · Port 18790 — gemeinsam mit Ultron',
-      'geplant: bewertet Thumbnails & Mockups automatisch',
-      'geplant: prüft jede Vorschau vor dem Upload',
-      'wartet auf ersten Einsatz…',
+      'Bild- & Design-Auge der Station — im Einsatz',
+      'läuft auf ai.openclaw.ultron · Port 18790 — mit Ultron & Nova',
+      'bewertet Thumbnails & Mockups · Zweitmeinung von Gemini',
+      'seit 31.08. auf Claude statt GPT — darf Terminal & exec auf dem Mac',
+      'pflegt Ökosystem-Station & Wissensnetz…',
     ]},
-  { key:'gaia', name:'Gaia', model:'Memory-Agentin · Port 18791', col:COL.gaia,
+  { key:'gaia', name:'Gaia', model:'Memory-Agentin · GPT-5.6 Sol · 18791', col:COL.gaia,
     zone:'deck', x:795, y:712, face:'crystal', pose:'wide',
     states:[
-      'in Aufbau — Hüterin von Wissensnetz & Memory',
+      'Hüterin von Wissensnetz & Memory — aktiv',
       'eigenes Gateway ai.openclaw.gaia · Port 18791',
-      'geplant: pflegt das Wissensnetz automatisch',
-      'geplant: verdichtet Memory-Dateien beim Dreaming',
-      'wartet auf ersten Einsatz…',
+      'Telegram @Kai_Gaia_bot · verbunden',
+      'Heartbeat alle 30 Min (9–21 Uhr) direkt an Kai',
+      'läuft seit 31.08. auf openai/gpt-5.6-sol',
     ]},
-  { key:'ultron', name:'Ultron', model:'2. Assistent · Opus 4.8', col:COL.ultron,
+  { key:'ultron', name:'Ultron', model:'2. Assistent · Opus 5', col:COL.ultron,
     zone:'ultron', x:1023, y:694, face:'dualcore', pose:'upright',
     states:[
       'Nehme mir das im eigenen Kontext vor — melde mich mit dem Ergebnis.',
@@ -677,7 +679,7 @@ const AGENTS = [
       'arbeite parallel — getrennter Kontext, gleiches Memory',
       'ATLAS-Verdikt gesichtet — pushe es an Kai',
     ]},
-  { key:'hades', name:'Hades', model:'Sicherer Agent · Matrix + Telegram', col:COL.hades,
+  { key:'hades', name:'Hades', model:'Sicherer Agent · Opus 5 · Matrix + Telegram', col:COL.hades,
     zone:'werkstatt', x:510, y:410, face:'butler', pose:'upright',
     states:[
       'sichere Jarvis-Kopie — verschlüsselter Kanal aktiv',
@@ -695,6 +697,16 @@ const AGENTS = [
       'über ChatGPT-Login (Codex-OAuth), kein API-Key',
       'bereit für schnelle, günstige Aufgaben',
     ]},
+  { key:'friday', name:'Friday', model:'Automaton · Opus 5 · Port 18793', col:COL.friday,
+    zone:'recherche', x:1370, y:235, face:'dualcore', pose:'upright',
+    states:[
+      'autonomer Automaton — eigenes Gateway ai.openclaw.automaton · 18793',
+      'Kontingent-Wächter davor (Port 18794) deckelt jeden Aufruf',
+      'Opus bis 10 % Wochenkontingent, danach Sonnet — Tageslimit 3 Punkte',
+      'Tageslimit erreicht → Wächter lehnt ab · Not-Aus greift ✓',
+      'läuft ohne Conway-Server über Kais Claude-Abo statt Credits',
+      'schreibt & ändert eigenen Code lokal — Kai kann jederzeit stoppen',
+    ]},
 ];
 
 // infrastructure nodes — feste Systemknoten (keine wandernden Figuren)
@@ -708,7 +720,7 @@ const INFRA = [
 
   // --- Fundament / System (linke Flanke, prominent: Gateway) ---
   {key:'gateway', name:'OpenClaw Gateway', sub:'launchd · Port 18789 · das Fundament', x:596, y:245, col:COL.gateway, big:true,
-   states:['Haupt-Gateway 18789 · Jarvis + Hades','ai.openclaw.ultron 18790 · Ultron + Vision + Nova','ai.openclaw.gaia 18791 · Gaia','routet alle Kanäle & Agenten','das Nervensystem der ganzen Station']},
+   states:['Haupt-Gateway 18789 · Jarvis + Hades','ai.openclaw.ultron 18790 · Ultron + Vision + Nova','ai.openclaw.gaia 18791 · Gaia','ai.openclaw.automaton 18793 · Friday + Wächter 18794','routet alle Kanäle & Agenten','das Nervensystem der ganzen Station']},
   {key:'watchdog', name:'Watchdog', sub:'Selbstheilung · Absturzwarnung', x:507, y:457, col:COL.watchdog,
    states:['ai.openclaw.watchdog überwacht Gateway','Crash → Neustart + Telegram-Alarm','Crash-Log-Watcher alle 10 Min','hält die Station 24/7 am Leben']},
   {key:'tailscale', name:'Tailscale', sub:'Tailnet · Fernsteuerung vom iPhone', x:684, y:170, col:COL.tailscale,
@@ -776,6 +788,7 @@ const PORTRAIT_POS = {
   a_gaia:     {x:795, y:600},
   a_hades:    {x:255, y:915},
   a_nova:     {x:645, y:915},
+  a_friday:   {x:450, y:988},
 };
 function applyLayout(){
   const P = istMobil();
@@ -831,11 +844,14 @@ const TICKS = [
   ['c','Druckkette live','<b>Real-ESRGAN</b> lokal: Motiv 4× → <b>4096×6144 px @300 DPI</b> (35×52 cm) — kostenlos, kein Limit'],
   ['c','Etsy-Baustein','<b>etsy_listing.py</b> prüft Titel ≤140, genau 13 Tags, Preis — regelkonform ✓'],
   ['u','Ultron · zweiter Kopf','arbeitet parallel im eigenen Kontext — <b>prüft gegen</b> &amp; übergibt an Jarvis'],
-  ['v','Vision · neu an Bord','Bild- &amp; Design-Agent <b>in Aufbau</b> — wird Thumbnails automatisch bewerten'],
-  ['e','Gaia · neu an Bord','Wissens- &amp; Memory-Agentin <b>in Aufbau</b> — pflegt Wissensnetz &amp; Dreaming'],
+  ['v','Vision · im Einsatz','Bild- &amp; Design-Auge auf <b>Opus 5</b> — bewertet Thumbnails, pflegt die Station'],
+  ['e','Gaia · im Einsatz','Wissens- &amp; Memory-Agentin auf <b>gpt-5.6-sol</b> — Heartbeat alle 30 Min an Kai'],
   ['h','Hades · neu an Bord','sichere <b>Jarvis-Kopie</b> — Telegram @Kai_Hades_bot + lokaler Matrix-Server (Ende-zu-Ende, nur Tailnet)'],
   ['n','Nova · neu an Bord','schneller GPT-Agent <b>gpt-5.6-luna</b> — läuft mit Ultron &amp; Vision (Port 18790), @Kai_Nova_bot'],
   ['u','Ultron · ATLAS-Melder','pusht jedes <b>Review-Verdikt</b> der Fabrik schreibgeschützt per Telegram an Kai'],
+  ['f','Friday · neu an Bord','autonomer <b>Conway-Automaton</b> auf eigenem Gateway (18793) — Kontingent-Wächter (18794) deckelt jeden Aufruf'],
+  ['f','Friday · Not-Aus geprüft','Wächter bremst bei <b>Tageslimit</b> zuverlässig ab — Opus bis 10 %, danach Sonnet'],
+  ['c','Modell-Umstellung','alle Claude-Agenten laufen seit 05.09. auf <b>Opus 5</b> · Gaia &amp; Nova bleiben GPT'],
 ];
 
 /* Log stream lines for the Recherche terminal (Cyber-Ästhetik) */
@@ -1956,7 +1972,7 @@ function drawSub(m,T){
    State init
    ============================================================ */
 const AGENT_IMG={};
-['jarvis','codex','gemini','chatgpt','ultron','vision','gaia','hades','nova'].forEach(k=>{ const im=new Image(); im.src='assets/agents/'+k+'.png'; AGENT_IMG[k]=im; });
+['jarvis','codex','gemini','chatgpt','ultron','vision','gaia','hades','nova','friday'].forEach(k=>{ const im=new Image(); im.src='assets/agents/'+k+'.png'; AGENT_IMG[k]=im; });
 AGENTS.forEach((a,i)=>{
   a.phase=i*2.1; a.target=a.states[0]; a.shown=''; a.typeI=0; a.hold=0; a.working=true;
   a.link = 'beacon';   // alle Agenten (auch ChatGPT) ans Gehirn — Kais Wunsch
@@ -2090,7 +2106,7 @@ renderTicker();
    as scrollable cards, because the wide canvas panels are illegible when the
    phone view is zoomed onto the central brain. Data comes from the same
    AGENTS/CATALOG arrays the canvas uses, so it stays in sync/truthful. */
-const _mdockAgents = ['jarvis','ultron','hades','nova','gemini','chatgpt','codex'];
+const _mdockAgents = ['jarvis','ultron','vision','gaia','hades','nova','friday','gemini','chatgpt','codex'];
 const _colClass = {claude:'d',ultron:'u',gemini:'b',chatgpt:'c'};
 function buildMDock(){
   const row = document.getElementById('mrow');
