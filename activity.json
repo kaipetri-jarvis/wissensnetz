@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-05T11:41:47+00:00",
+  "generated": "2026-09-05T11:51:47+00:00",
   "bots": {
     "jarvis": false,
     "ultron": false
@@ -12,33 +12,33 @@
   },
   "commits": [
     {
-      "at": "2026-09-05T13:31:36+02:00",
-      "text": "Auto-Backup 2026-09-05 — täglicher Workspace-Snapshot"
+      "at": "2026-09-05T13:49:28+02:00",
+      "text": "Skills: 273 Claude-Rollen ins Workspace-Repo + venv aus Tracking entfernt"
     },
     {
-      "at": "2026-09-05T13:30:36+02:00",
-      "text": "Auto-Backup 2026-09-05 — täglicher Workspace-Snapshot"
+      "at": "2026-09-04T21:16:17+02:00",
+      "text": "Auto-Backup 2026-09-04 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-05T13:12:33+02:00",
-      "text": "Auto-Backup 2026-09-05 — täglicher Workspace-Snapshot"
+      "at": "2026-09-04T21:14:17+02:00",
+      "text": "Auto-Backup 2026-09-04 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-05T13:10:33+02:00",
-      "text": "Auto-Backup 2026-09-05 — täglicher Workspace-Snapshot"
+      "at": "2026-09-04T21:12:17+02:00",
+      "text": "Auto-Backup 2026-09-04 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-05T13:09:33+02:00",
-      "text": "Auto-Backup 2026-09-05 — täglicher Workspace-Snapshot"
+      "at": "2026-09-04T18:00:48+02:00",
+      "text": "Auto-Backup 2026-09-04 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-05T13:08:33+02:00",
-      "text": "Auto-Backup 2026-09-05 — täglicher Workspace-Snapshot"
+      "at": "2026-09-04T15:05:38+02:00",
+      "text": "Auto-Backup 2026-09-04 — täglicher Workspace-Snapshot"
     }
   ],
   "cron": [
-    "jarvis-crash-log-watcher crash-log-watcher cron",
     "heartbeat:hades Heartbeat (hades)",
+    "jarvis-crash-log-watcher crash-log-watcher cron",
     "heartbeat:main Heartbeat (main)",
     "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
     "jarvis-wissensnetz-auto wissensnetz-auto-update cron"
