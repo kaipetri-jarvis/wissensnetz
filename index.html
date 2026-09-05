@@ -85,8 +85,8 @@ svg{width:100vw;height:100vh;touch-action:none;-webkit-user-select:none;user-sel
 }
 </style></head><body>
 <div id="hdr"><h1>Etsy-Wissensnetz</h1>
-<p class="long">Stand: 04.09.2026 — zusammengeführtes Wissen aus allen KI-Agenten (Claude/Jarvis, Gemini, ChatGPT) und Projektschritten. Aktualisiert sich automatisch. Hover/Klick = Details · Ziehen · Zoomen · Suchen.</p>
-<div class="short">Stand: 04.09.2026 · Etsy-Wissensnetz</div></div>
+<p class="long">Stand: 05.09.2026 — zusammengeführtes Wissen aus allen KI-Agenten (Claude/Jarvis, Gemini, ChatGPT) und Projektschritten. Aktualisiert sich automatisch. Hover/Klick = Details · Ziehen · Zoomen · Suchen.</p>
+<div class="short">Stand: 05.09.2026 · Etsy-Wissensnetz</div></div>
 <div id="cnt"><b id="nc">0</b> Knoten<br><b id="lc">0</b> Verbindungen</div>
 <div id="legToggle" class="glass">☰ Kategorien</div>
 <div id="legend" class="glass"><span class="lgClose" id="lgClose">×</span><div class="ttl">KATEGORIEN</div><div class="lg" data-cat="zentrum"><span class="dot" style="background:#ffffff"></span>Zentrum</div><div class="lg" data-cat="produkt"><span class="dot" style="background:#41D98A"></span>Produkte</div><div class="lg" data-cat="ki"><span class="dot" style="background:#F55CA8"></span>KI-Agenten</div><div class="lg" data-cat="technik"><span class="dot" style="background:#4DA3FF"></span>Technik/System</div><div class="lg" data-cat="strategie"><span class="dot" style="background:#FFB04A"></span>Strategie/Entscheidungen</div><div class="lg" data-cat="design"><span class="dot" style="background:#8B5CF6"></span>Design-Wissen</div></div>
@@ -195,6 +195,9 @@ const HUBR=190;
   rest.forEach((n,i)=>{ n._sa=i*GA; });
 })();
 const sim=d3.forceSimulation(DATA.nodes)
+ .velocityDecay(.75)         // viel Reibung → Bewegung klingt sehr schnell ab (statischer Look)
+ .alphaDecay(.045)           // schnelleres Einschwingen → der Graph beruhigt sich zügig
+ .alphaMin(.03)              // Simulation früh als "fertig" betrachten
  .force("link",d3.forceLink(DATA.links).id(d=>d.id).distance(linkDist)
    .strength(l=>{                                              // schwache (1 Stichwort) Kanten straffer → verstrickter
      if(l.leafwiki)return .03;                                  // Blatt<->Blatt entlang Wikilinks: sichtbarer Zug (dichterer Rand)
@@ -340,6 +343,9 @@ function fitToViewport(){
 }
 sim.on("end",()=>{if(!fitted){fitted=true;fitToViewport();}});
 setTimeout(()=>{if(!fitted){fitted=true;fitToViewport();}},1600);
+// Nach dem Einschwingen die Simulation ANHALTEN → der Graph steht komplett still, die
+// äußeren Punkte wackeln nicht mehr. Beim Ziehen eines Knotens startet sie automatisch neu.
+setTimeout(()=>{sim.stop();},2500);
 // Legende ein-/ausklappen (mobil)
 const leg=document.getElementById("legend");
 document.getElementById("legToggle").addEventListener("click",()=>leg.classList.toggle("open"));
