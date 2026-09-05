@@ -698,7 +698,7 @@ const AGENTS = [
       'bereit für schnelle, günstige Aufgaben',
     ]},
   { key:'friday', name:'Friday', model:'Automaton · Opus 5 · Port 18793', col:COL.friday,
-    zone:'recherche', x:1240, y:345, face:'dualcore', pose:'upright',
+    zone:'recherche', x:800, y:195, face:'dualcore', pose:'upright',
     states:[
       'autonomer Automaton — eigenes Gateway ai.openclaw.automaton · 18793',
       'Kontingent-Wächter davor (Port 18794) deckelt jeden Aufruf',
@@ -733,11 +733,11 @@ const INFRA = [
    states:['TTS Microsoft de-DE-KatjaNeural (auto)','Fallback Google TTS','STT lokal · Whisper (transcribe.sh)','liest jede Antwort vor']},
 
   // --- Automation / Cron (unten links, ein Sammelknoten) ---
-  {key:'cron', name:'Automation · Cron', sub:'nächtliche & stündliche Jobs', x:925, y:190, col:COL.cron,
+  {key:'cron', name:'Automation · Cron', sub:'nächtliche & stündliche Jobs', x:1000, y:165, col:COL.cron,
    states:['Wissensnetz-Auto 3:15 · Memory-Dreaming 3:00','Heartbeats main/ultron/atlas stündlich','Activity-Feed live · alle 10 Min','Postfach-Watcher Frau Lind · werktags','läuft, während Kai schläft']},
 
   // --- Kanal (oben Mitte-rechts) ---
-  {key:'telegram', name:'Telegram', sub:'Jarvis · Ultron · Hades · Nova', x:800, y:162, col:COL.telegram,
+  {key:'telegram', name:'Telegram', sub:'Jarvis · Ultron · Hades · Nova', x:1240, y:330, col:COL.telegram,
    states:['4 Bots · Jarvis · Ultron · Hades · Nova','Kais Hauptkanal','Voice-Notes + Text','Hades zusätzlich über lokalen Matrix-Server (Ende-zu-Ende)','Alarme & Übergaben laufen hier']},
 
   // --- Wissensdatenbank (rechte obere Fläche, iCloud/iPhone-Sync) ---
@@ -1265,7 +1265,7 @@ function drawBeaconLabel(bx,by,T){
   const mobile = istMobil();
   // Desktop: Label ÜBER dem Gehirn; Portrait: knapp darunter (Dock belegt den Platz)
   const lx  = bx;   // mittig über dem Gehirn
-  const ly1 = mobile ? by + ts(120) : by - ts(245);
+  const ly1 = mobile ? by + ts(120) : by - ts(210);
   const ly2 = mobile ? ly1 + 16 : ly1 + ts(15);
   ctx.save();
   ctx.fillStyle=hexA(COL.beacon,.9); ctx.font=`700 ${mobile?12:ts(13)}px -apple-system,system-ui,sans-serif`;
