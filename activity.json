@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-05T19:21:50+00:00",
+  "generated": "2026-09-05T19:31:51+00:00",
   "bots": {
     "jarvis": false,
     "ultron": false
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
-      "at": "2026-09-05T21:20:02+02:00",
+      "at": "2026-09-05T21:31:04+02:00",
       "text": "Auto-Backup 2026-09-05 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-05T21:14:02+02:00",
+      "at": "2026-09-05T21:30:17+02:00",
+      "text": "Wissens-Graph: Claude-Rollen-JSON generieren statt handpflegen (161 -> 273)"
+    },
+    {
+      "at": "2026-09-05T21:30:05+02:00",
       "text": "Auto-Backup 2026-09-05 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-05T21:12:02+02:00",
+      "at": "2026-09-05T21:29:03+02:00",
       "text": "Auto-Backup 2026-09-05 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-05T21:10:02+02:00",
+      "at": "2026-09-05T21:28:03+02:00",
       "text": "Auto-Backup 2026-09-05 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-05T21:09:02+02:00",
-      "text": "Auto-Backup 2026-09-05 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-05T21:08:02+02:00",
+      "at": "2026-09-05T21:26:03+02:00",
       "text": "Auto-Backup 2026-09-05 — täglicher Workspace-Snapshot"
     }
   ],
