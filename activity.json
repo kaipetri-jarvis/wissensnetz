@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-06T21:22:05+00:00",
+  "generated": "2026-09-06T21:32:05+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-06T23:30:51+02:00",
+      "text": "Auto-Backup 2026-09-06 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-06T23:01:21+02:00",
       "text": "Content-Loop: neuer Pin für Landlord Management Kit"
@@ -29,10 +33,6 @@
     },
     {
       "at": "2026-09-06T22:00:46+02:00",
-      "text": "Auto-Backup 2026-09-06 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-06T21:45:45+02:00",
       "text": "Auto-Backup 2026-09-06 — täglicher Workspace-Snapshot"
     }
   ],
