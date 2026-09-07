@@ -85,8 +85,8 @@ svg{width:100vw;height:100vh;touch-action:none;-webkit-user-select:none;user-sel
 }
 </style></head><body>
 <div id="hdr"><h1>Etsy-Wissensnetz</h1>
-<p class="long">Stand: 06.09.2026 — zusammengeführtes Wissen aus allen KI-Agenten (Claude/Jarvis, Gemini, ChatGPT) und Projektschritten. Aktualisiert sich automatisch. Hover/Klick = Details · Ziehen · Zoomen · Suchen.</p>
-<div class="short">Stand: 06.09.2026 · Etsy-Wissensnetz</div></div>
+<p class="long">Stand: 07.09.2026 — zusammengeführtes Wissen aus allen KI-Agenten (Claude/Jarvis, Gemini, ChatGPT) und Projektschritten. Aktualisiert sich automatisch. Hover/Klick = Details · Ziehen · Zoomen · Suchen.</p>
+<div class="short">Stand: 07.09.2026 · Etsy-Wissensnetz</div></div>
 <div id="cnt"><b id="nc">0</b> Knoten<br><b id="lc">0</b> Verbindungen</div>
 <div id="legToggle" class="glass">☰ Kategorien</div>
 <div id="legend" class="glass"><span class="lgClose" id="lgClose">×</span><div class="ttl">KATEGORIEN</div><div class="lg" data-cat="zentrum"><span class="dot" style="background:#ffffff"></span>Zentrum</div><div class="lg" data-cat="produkt"><span class="dot" style="background:#41D98A"></span>Produkte</div><div class="lg" data-cat="ki"><span class="dot" style="background:#F55CA8"></span>KI-Agenten</div><div class="lg" data-cat="technik"><span class="dot" style="background:#4DA3FF"></span>Technik/System</div><div class="lg" data-cat="strategie"><span class="dot" style="background:#FFB04A"></span>Strategie/Entscheidungen</div><div class="lg" data-cat="design"><span class="dot" style="background:#8B5CF6"></span>Design-Wissen</div></div>
@@ -144,7 +144,13 @@ const fm=f.append("feMerge");
 fm.append("feMergeNode").attr("in","blur");
 fm.append("feMergeNode").attr("in","SourceGraphic");
 const g=svg.append("g");
-const zoom=d3.zoom().scaleExtent([0.2,4]).on("zoom",e=>{g.attr("transform",e.transform);updateLabels(e.transform.k);});
+// userMoved: sobald der Betrachter selbst zoomt oder schiebt, darf das automatische
+// Einpassen am Ende der (jetzt längeren) Simulation seine Ansicht nicht mehr wegreißen.
+let userMoved=false;
+const zoom=d3.zoom().scaleExtent([0.2,4]).on("zoom",e=>{
+  if(e.sourceEvent)userMoved=true;
+  g.attr("transform",e.transform);updateLabels(e.transform.k);
+});
 svg.call(zoom);
 svg.on("dblclick.zoom",null).on("dblclick",()=>svg.transition().call(zoom.transform,d3.zoomIdentity));
 // Distanzen/Kräfte je nach Rolle → ausgeprägte, verästelte Cluster:
@@ -152,7 +158,7 @@ svg.on("dblclick.zoom",null).on("dblclick",()=>svg.transition().call(zoom.transf
 function linkDist(l){
   const s=l.source, t=l.target;
   const si=s.id||s, ti=t.id||t;
-  if(si==="kern"||ti==="kern")return 200;                       // Hubs weit nach außen
+  if(si==="kern"||ti==="kern")return 118;                       // Hubs nah am Zentrum halten (große Punkte gehören nach innen)
   if(l.leafwiki)return 150;                                     // Blatt<->Blatt entlang Wikilinks: weite, feine Spannfäden
   if(l.leafcross)return 120;                                    // Blatt<->Blatt quer: mittlere Spannweite
   if(s.leaf||t.leaf)return 22;                                  // Unter-Themen dicht an ihrer Notiz
@@ -198,6 +204,9 @@ const sim=d3.forceSimulation(DATA.nodes)
  .velocityDecay(.75)         // viel Reibung → Bewegung klingt sehr schnell ab (statischer Look)
  .alphaDecay(.045)           // schnelleres Einschwingen → der Graph beruhigt sich zügig
  .alphaMin(.03)              // Simulation früh als "fertig" betrachten
+ // Kai, 06.09.2026: NICHT weiter laufen lassen. Ein längerer Lauf wurde getestet und
+ // verworfen — über hunderte Takte ziehen die 5000+ Querkanten die Wolke zu einem
+ // undurchdringlichen Knäuel zusammen. Die kurze Einschwingzeit hält die offene Form.
  .force("link",d3.forceLink(DATA.links).id(d=>d.id).distance(linkDist)
    .strength(l=>{                                              // schwache (1 Stichwort) Kanten straffer → verstrickter
      if(l.leafwiki)return .03;                                  // Blatt<->Blatt entlang Wikilinks: sichtbarer Zug (dichterer Rand)
@@ -208,15 +217,26 @@ const sim=d3.forceSimulation(DATA.nodes)
    }))
  .force("charge",d3.forceManyBody().strength(d=>d.hub?-700:(d.cat==="zentrum"?-1400:(d.leaf?-70:-260))).distanceMax(900))
  .force("center",d3.forceCenter(W/2,H/2))
- .force("collide",d3.forceCollide(d=>radius(d)+16).strength(.9))
+ // Überlappungs-Schutz. Große Punkte (Zentrum, Hubs, KI/Agenten) bekommen einen deutlich
+ // größeren Schutzabstand als die kleinen Blätter, damit sie sich nie überdecken —
+ // volle Stärke und mehrere Durchläufe je Takt, sonst bleibt der Konflikt ungelöst.
+ .force("collide",d3.forceCollide(d=>{
+     // Achtung: ein deutlich größerer Schutzkreis für die Hubs wurde getestet und verworfen —
+     // er drückt die ganze Wolke schief. Die Namen werden stattdessen NACH dem Einschwingen
+     // umgesetzt (siehe placeLabels weiter unten).
+     const big=(d.cat==="zentrum"||d.hub||BIG.has(d.cat));
+     return radius(d)+(big?radius(d)*.55+26:14);
+   }).strength(1).iterations(4))
  // radiale Kraft → zieht die Notizen auf eine runde Schale, das Netz wird kugelig statt klumpig.
  // Stärker + engerer Radien-Unterschied → insgesamt rundere Gesamtform, keine Farb-Gruppierung.
- .force("radial",d3.forceRadial(d=>d.cat==="zentrum"?0:(d.hub?190:(d.leaf?248:225)),W/2,H/2).strength(d=>d.cat==="zentrum"?0:(d.hub?.7:(d.leaf?.95:.55))))
+ // Hubs auf eine INNERE Schale mit hoher Stärke: die großen Punkte sollen im Kern
+ // sitzen, nicht am Rand — sonst ziehen ihre vielen Kinder sie nach außen.
+ .force("radial",d3.forceRadial(d=>d.cat==="zentrum"?0:(d.hub?118:(d.leaf?248:225)),W/2,H/2).strength(d=>d.cat==="zentrum"?0:(d.hub?.95:(d.leaf?.95:.55))))
  .force("x",d3.forceX(W/2).strength(.045))
  .force("y",d3.forceY(H/2).strength(.045))
  // Hubs sanft auf ihren gleichmäßig verteilten Zielwinkel ziehen → keine leere Zone mehr.
- .force("hubx",d3.forceX(d=>d.hub?W/2+Math.cos(d._ta)*190:W/2).strength(d=>d.hub?.35:0))
- .force("huby",d3.forceY(d=>d.hub?H/2+Math.sin(d._ta)*190:H/2).strength(d=>d.hub?.35:0))
+ .force("hubx",d3.forceX(d=>d.hub?W/2+Math.cos(d._ta)*118:W/2).strength(d=>d.hub?.55:0))
+ .force("huby",d3.forceY(d=>d.hub?H/2+Math.sin(d._ta)*118:H/2).strength(d=>d.hub?.55:0))
  // Alle übrigen Knoten sanft auf ihren gleichmäßig gestreuten Winkel ziehen → homogene Wolke,
  // keine dünne rechte Hälfte mehr. Schwach, damit die echten Kanten die Feinstruktur bestimmen.
  .force("spreadx",d3.forceX(d=>(d._sa!==undefined)?W/2+Math.cos(d._sa)*175:W/2).strength(d=>(d._sa!==undefined)?.08:0))
@@ -231,9 +251,9 @@ const link=g.append("g").selectAll("line").data(DATA.links).join("line")
  .attr("class",l=>"link"+(l.leafwiki?" faint":(isStrong(l)?" strong":"")));
 const node=g.append("g").selectAll("g").data(DATA.nodes).join("g").attr("class","node")
  .call(d3.drag()
-   .on("start",(e,d)=>{if(!e.active)sim.alphaTarget(.3).restart();d.fx=d.x;d.fy=d.y;})
-   .on("drag",(e,d)=>{d.fx=e.x;d.fy=e.y;})
-   .on("end",(e,d)=>{if(!e.active)sim.alphaTarget(0);}));
+   .on("start",(e,d)=>{if(!frozen&&!e.active)sim.alphaTarget(.3).restart();d.fx=d.x;d.fy=d.y;})
+   .on("drag",(e,d)=>{d.fx=e.x;d.fy=e.y;if(frozen){d.x=e.x;d.y=e.y;paint();}})
+   .on("end",(e,d)=>{if(!frozen&&!e.active)sim.alphaTarget(0);}));
 node.append("circle").attr("r",radius)
  .attr("fill",d=>cats[d.cat].color)
  .attr("stroke","rgba(255,255,255,.35)").attr("stroke-width",1)
@@ -295,6 +315,7 @@ document.getElementById("pClose").addEventListener("click",()=>{P.style.display=
 DATA.nodes.forEach(d=>{if(d.cat==="zentrum"){d.fx=W/2;d.fy=H/2;}});
 const RMAX=265;
 const LEAFRING=248;   // Ziel-Radius der äußersten Reihe (Blätter)
+const HUBRING=118;    // Ziel-Radius der großen Kategorie-Punkte (gehören nach innen)
 const zentrum=DATA.nodes.find(n=>n.cat==="zentrum");
 sim.on("tick",()=>{
   DATA.nodes.forEach(d=>{
@@ -305,6 +326,14 @@ sim.on("tick",()=>{
     if(d.leaf){
       const pull=0.18;   // wie stark Richtung Ring; klein genug, dass es nicht zappelt
       const nr=dist+(LEAFRING-dist)*pull;
+      d.x=W/2+dx/dist*nr; d.y=H/2+dy/dist*nr;
+    }
+    // Große Punkte (Kategorie-Hubs) hart auf die INNERE Schale holen. Die weiche
+    // Radialkraft allein reicht nicht: ein Hub mit sehr vielen Kindern (z. B.
+    // „Claude-Spezialisten") wird von deren Kanten sonst an den Rand gezogen.
+    if(d.hub){
+      const pull=0.30;
+      const nr=dist+(HUBRING-dist)*pull;
       d.x=W/2+dx/dist*nr; d.y=H/2+dy/dist*nr;
     }
     if(dist>RMAX){
@@ -341,11 +370,54 @@ function fitToViewport(){
   const tx=W/2-k*cx, ty=cyView-k*cy;
   svg.transition().duration(600).call(zoom.transform,d3.zoomIdentity.translate(tx,ty).scale(k));
 }
-sim.on("end",()=>{if(!fitted){fitted=true;fitToViewport();}});
-setTimeout(()=>{if(!fitted){fitted=true;fitToViewport();}},1600);
-// Nach dem Einschwingen die Simulation ANHALTEN → der Graph steht komplett still, die
-// äußeren Punkte wackeln nicht mehr. Beim Ziehen eines Knotens startet sie automatisch neu.
-setTimeout(()=>{sim.stop();},2500);
+// Erst grob einpassen, damit man sofort etwas sieht; wenn die Simulation dann wirklich
+// ausgeschwungen ist, noch einmal sauber auf das endgültige Bild einpassen.
+sim.on("end",()=>{fitted=true;if(!userMoved)fitToViewport();});
+setTimeout(()=>{if(!fitted&&!userMoved){fitted=true;fitToViewport();}},1600);
+// Kai, 06.09.2026: Der Graph soll DAUERHAFT stillstehen — die Standzeit ist unbegrenzt.
+// Nach dem Einschwingen wird die Simulation angehalten und ab da nie wieder gestartet
+// (frozen). Ein gezogener Knoten folgt der Maus, aber der Rest des Netzes bleibt exakt
+// liegen; vorher setzte jedes Ziehen die ganze Wolke wieder in Bewegung.
+let frozen=false;
+function paint(){
+  link.attr("x1",d=>d.source.x).attr("y1",d=>d.source.y).attr("x2",d=>d.target.x).attr("y2",d=>d.target.y);
+  node.attr("transform",d=>`translate(${d.x},${d.y})`);
+}
+// Die dauerhaft sichtbaren Namen (Zentrum + Kategorie-Hubs) entzerren. Das passiert ERST
+// nach dem Einfrieren und rührt die Physik nicht an: jeder Name bekommt die erste der vier
+// Stellen (rechts, links, oben, unten), an der er keinen anderen dauerhaften Namen
+// überdeckt. Vorher lagen z. B. "Kais Regeln" und "KI-Agenten" übereinander.
+function placeLabels(){
+  const items=[];
+  label.each(function(d){
+    if(!alwaysLabel.has(d.id))return;
+    let w=60; try{w=this.getComputedTextLength()||60;}catch(err){}
+    items.push({d:d,el:this,w:w});
+  });
+  items.sort((a,b)=>radius(b.d)-radius(a.d));   // größte Punkte zuerst platzieren
+  const boxes=[];
+  const box=(n,dx,dy,w)=>({x1:n.x+dx-3,x2:n.x+dx+w+3,y1:n.y+dy-13,y2:n.y+dy+5});
+  // Ein Name gilt als gestört, wenn er einen anderen Namen ODER irgendeinen Punkt trifft.
+  const hit=(b,self)=>{
+    if(boxes.some(o=>!(b.x2<o.x1||b.x1>o.x2||b.y2<o.y1||b.y1>o.y2)))return true;
+    return DATA.nodes.some(o=>{
+      if(o===self)return false;
+      const rr=radius(o)+1.5;
+      const cx=Math.max(b.x1,Math.min(o.x,b.x2)), cy=Math.max(b.y1,Math.min(o.y,b.y2));
+      return Math.hypot(o.x-cx,o.y-cy)<rr;
+    });
+  };
+  items.forEach(it=>{
+    const r=radius(it.d)+6, w=it.w;
+    // rechts, links, oben, unten, dann diagonal versetzt — die erste freie Stelle gewinnt
+    const cand=[[r,4],[-r-w,4],[-w/2,-r-10],[-w/2,r+18],[r,-r-6],[-r-w,-r-6],[r,r+16],[-r-w,r+16]];
+    let best=cand[0];
+    for(const c of cand){ if(!hit(box(it.d,c[0],c[1],w),it.d)){best=c;break;} }
+    boxes.push(box(it.d,best[0],best[1],w));
+    d3.select(it.el).attr("x",best[0]).attr("y",best[1]);
+  });
+}
+setTimeout(()=>{frozen=true;sim.stop();placeLabels();},4500);
 // Legende ein-/ausklappen (mobil)
 const leg=document.getElementById("legend");
 document.getElementById("legToggle").addEventListener("click",()=>leg.classList.toggle("open"));
