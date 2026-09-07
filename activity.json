@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-07T10:32:10+00:00",
+  "generated": "2026-09-07T10:42:10+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,35 +12,35 @@
   },
   "commits": [
     {
+      "at": "2026-09-07T12:39:46+02:00",
+      "text": "Auto-Backup 2026-09-07 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-07T12:37:46+02:00",
+      "text": "Auto-Backup 2026-09-07 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-07T12:35:45+02:00",
+      "text": "Auto-Backup 2026-09-07 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-07T12:34:45+02:00",
+      "text": "Auto-Backup 2026-09-07 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-07T12:00:44+02:00",
       "text": "Auto-Backup 2026-09-07 — täglicher Workspace-Snapshot"
     },
     {
       "at": "2026-09-07T11:00:40+02:00",
       "text": "Auto-Backup 2026-09-07 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-07T10:00:37+02:00",
-      "text": "Auto-Backup 2026-09-07 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-07T09:27:33+02:00",
-      "text": "Auto-Backup 2026-09-07 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-07T09:26:37+02:00",
-      "text": "beta-update-check: Telegram statt WhatsApp, korrekter Versionsvergleich"
-    },
-    {
-      "at": "2026-09-07T09:24:33+02:00",
-      "text": "Auto-Backup 2026-09-07 — täglicher Workspace-Snapshot"
     }
   ],
   "cron": [
     "jarvis-crash-log-watcher crash-log-watcher cron",
+    "heartbeat:hades Heartbeat (hades)",
     "heartbeat:main Heartbeat (main)",
     "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
-    "heartbeat:hades Heartbeat (hades)",
     "jarvis-wissensnetz-auto wissensnetz-auto-update cron"
   ]
 }
