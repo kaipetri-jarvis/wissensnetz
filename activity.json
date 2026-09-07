@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-07T05:52:08+00:00",
+  "generated": "2026-09-07T06:02:08+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-07T08:00:29+02:00",
+      "text": "Auto-Backup 2026-09-07 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-07T07:00:26+02:00",
       "text": "Auto-Backup 2026-09-07 — täglicher Workspace-Snapshot"
@@ -30,17 +34,13 @@
     {
       "at": "2026-09-07T03:15:15+02:00",
       "text": "Auto-Backup 2026-09-07 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-07T03:01:14+02:00",
-      "text": "Auto-Backup 2026-09-07 — täglicher Workspace-Snapshot"
     }
   ],
   "cron": [
-    "heartbeat:hades Heartbeat (hades)",
     "jarvis-crash-log-watcher crash-log-watcher cron",
     "heartbeat:main Heartbeat (main)",
     "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
+    "heartbeat:hades Heartbeat (hades)",
     "- etsy-konkurrenz-watch cron"
   ]
 }
