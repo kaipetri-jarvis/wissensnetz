@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-06T23:52:06+00:00",
+  "generated": "2026-09-07T00:02:06+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-07T02:01:00+02:00",
+      "text": "Auto-Backup 2026-09-07 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-07T01:00:56+02:00",
       "text": "Auto-Backup 2026-09-07 — täglicher Workspace-Snapshot"
@@ -30,17 +34,13 @@
     {
       "at": "2026-09-06T23:01:21+02:00",
       "text": "Content-Loop: neuer Pin für Landlord Management Kit"
-    },
-    {
-      "at": "2026-09-06T23:00:49+02:00",
-      "text": "Auto-Backup 2026-09-06 — täglicher Workspace-Snapshot"
     }
   ],
   "cron": [
-    "heartbeat:hades Heartbeat (hades)",
     "jarvis-crash-log-watcher crash-log-watcher cron",
     "heartbeat:main Heartbeat (main)",
     "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
+    "heartbeat:hades Heartbeat (hades)",
     "jarvis-wissensnetz-auto wissensnetz-auto-update cron"
   ]
 }
