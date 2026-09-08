@@ -1,8 +1,8 @@
 {
-  "generated": "2026-09-08T01:02:15+00:00",
+  "generated": "2026-09-08T01:12:15+00:00",
   "bots": {
     "jarvis": true,
-    "ultron": true
+    "ultron": false
   },
   "atlas": {
     "fleet": true,
@@ -37,8 +37,8 @@
     }
   ],
   "cron": [
-    "jarvis-crash-log-watcher crash-log-watcher cron",
     "jarvis-wissensnetz-auto wissensnetz-auto-update cron",
+    "jarvis-crash-log-watcher crash-log-watcher cron",
     "heartbeat:main Heartbeat (main)",
     "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
     "heartbeat:hades Heartbeat (hades)"
