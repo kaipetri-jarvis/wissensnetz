@@ -85,8 +85,8 @@ svg{width:100vw;height:100vh;touch-action:none;-webkit-user-select:none;user-sel
 }
 </style></head><body>
 <div id="hdr"><h1>Etsy-Wissensnetz</h1>
-<p class="long">Stand: 07.09.2026 — zusammengeführtes Wissen aus allen KI-Agenten (Claude/Jarvis, Gemini, ChatGPT) und Projektschritten. Aktualisiert sich automatisch. Hover/Klick = Details · Ziehen · Zoomen · Suchen.</p>
-<div class="short">Stand: 07.09.2026 · Etsy-Wissensnetz</div></div>
+<p class="long">Stand: 08.09.2026 — zusammengeführtes Wissen aus allen KI-Agenten (Claude/Jarvis, Gemini, ChatGPT) und Projektschritten. Aktualisiert sich automatisch. Hover/Klick = Details · Ziehen · Zoomen · Suchen.</p>
+<div class="short">Stand: 08.09.2026 · Etsy-Wissensnetz</div></div>
 <div id="cnt"><b id="nc">0</b> Knoten<br><b id="lc">0</b> Verbindungen</div>
 <div id="legToggle" class="glass">☰ Kategorien</div>
 <div id="legend" class="glass"><span class="lgClose" id="lgClose">×</span><div class="ttl">KATEGORIEN</div><div class="lg" data-cat="zentrum"><span class="dot" style="background:#ffffff"></span>Zentrum</div><div class="lg" data-cat="produkt"><span class="dot" style="background:#41D98A"></span>Produkte</div><div class="lg" data-cat="ki"><span class="dot" style="background:#F55CA8"></span>KI-Agenten</div><div class="lg" data-cat="technik"><span class="dot" style="background:#4DA3FF"></span>Technik/System</div><div class="lg" data-cat="strategie"><span class="dot" style="background:#FFB04A"></span>Strategie/Entscheidungen</div><div class="lg" data-cat="design"><span class="dot" style="background:#8B5CF6"></span>Design-Wissen</div></div>
@@ -158,7 +158,7 @@ svg.on("dblclick.zoom",null).on("dblclick",()=>svg.transition().call(zoom.transf
 function linkDist(l){
   const s=l.source, t=l.target;
   const si=s.id||s, ti=t.id||t;
-  if(si==="kern"||ti==="kern")return 118;                       // Hubs nah am Zentrum halten (große Punkte gehören nach innen)
+  if(si==="kern"||ti==="kern")return 134;                       // Hubs nah am Zentrum halten (große Punkte gehören nach innen)
   if(l.leafwiki)return 150;                                     // Blatt<->Blatt entlang Wikilinks: weite, feine Spannfäden
   if(l.leafcross)return 120;                                    // Blatt<->Blatt quer: mittlere Spannweite
   if(s.leaf||t.leaf)return 22;                                  // Unter-Themen dicht an ihrer Notiz
@@ -231,12 +231,12 @@ const sim=d3.forceSimulation(DATA.nodes)
  // Stärker + engerer Radien-Unterschied → insgesamt rundere Gesamtform, keine Farb-Gruppierung.
  // Hubs auf eine INNERE Schale mit hoher Stärke: die großen Punkte sollen im Kern
  // sitzen, nicht am Rand — sonst ziehen ihre vielen Kinder sie nach außen.
- .force("radial",d3.forceRadial(d=>d.cat==="zentrum"?0:(d.hub?118:(d.leaf?248:225)),W/2,H/2).strength(d=>d.cat==="zentrum"?0:(d.hub?.95:(d.leaf?.95:.55))))
+ .force("radial",d3.forceRadial(d=>d.cat==="zentrum"?0:(d.hub?134:(d.leaf?248:225)),W/2,H/2).strength(d=>d.cat==="zentrum"?0:(d.hub?.95:(d.leaf?.95:.55))))
  .force("x",d3.forceX(W/2).strength(.045))
  .force("y",d3.forceY(H/2).strength(.045))
  // Hubs sanft auf ihren gleichmäßig verteilten Zielwinkel ziehen → keine leere Zone mehr.
- .force("hubx",d3.forceX(d=>d.hub?W/2+Math.cos(d._ta)*118:W/2).strength(d=>d.hub?.55:0))
- .force("huby",d3.forceY(d=>d.hub?H/2+Math.sin(d._ta)*118:H/2).strength(d=>d.hub?.55:0))
+ .force("hubx",d3.forceX(d=>d.hub?W/2+Math.cos(d._ta)*134:W/2).strength(d=>d.hub?.55:0))
+ .force("huby",d3.forceY(d=>d.hub?H/2+Math.sin(d._ta)*134:H/2).strength(d=>d.hub?.55:0))
  // Alle übrigen Knoten sanft auf ihren gleichmäßig gestreuten Winkel ziehen → homogene Wolke,
  // keine dünne rechte Hälfte mehr. Schwach, damit die echten Kanten die Feinstruktur bestimmen.
  .force("spreadx",d3.forceX(d=>(d._sa!==undefined)?W/2+Math.cos(d._sa)*175:W/2).strength(d=>(d._sa!==undefined)?.08:0))
@@ -315,7 +315,8 @@ document.getElementById("pClose").addEventListener("click",()=>{P.style.display=
 DATA.nodes.forEach(d=>{if(d.cat==="zentrum"){d.fx=W/2;d.fy=H/2;}});
 const RMAX=265;
 const LEAFRING=248;   // Ziel-Radius der äußersten Reihe (Blätter)
-const HUBRING=118;    // Ziel-Radius der großen Kategorie-Punkte (gehören nach innen)
+const HUBRING=134;    // Ziel-Radius der großen Kategorie-Punkte: klar innen (Gesamtradius 265),
+                      // aber weit genug auseinander, dass ihre Namen nebeneinander passen
 const zentrum=DATA.nodes.find(n=>n.cat==="zentrum");
 sim.on("tick",()=>{
   DATA.nodes.forEach(d=>{
@@ -410,14 +411,101 @@ function placeLabels(){
   items.forEach(it=>{
     const r=radius(it.d)+6, w=it.w;
     // rechts, links, oben, unten, dann diagonal versetzt — die erste freie Stelle gewinnt
-    const cand=[[r,4],[-r-w,4],[-w/2,-r-10],[-w/2,r+18],[r,-r-6],[-r-w,-r-6],[r,r+16],[-r-w,r+16]];
+    let cand=[[r,4],[-r-w,4],[-w/2,-r-10],[-w/2,r+18],[r,-r-6],[-r-w,-r-6],[r,r+16],[-r-w,r+16]];
+    if(it.d.hub){
+      // Die acht Kategorie-Namen liegen auf einem engen Ring und würden sich sonst
+      // gegenseitig überdecken. Sie werden deshalb STRAHLENFÖRMIG nach außen gesetzt:
+      // jeder Name zeigt vom Zentrum weg, dadurch laufen sie auseinander statt übereinander.
+      const ax=it.d.x-W/2, ay=it.d.y-H/2, al=Math.hypot(ax,ay)||1;
+      const ux=ax/al, uy=ay/al;
+      const ox = ux>=0 ? r : -r-w;
+      const oy = 4 + uy*16;
+      cand=[[ox,oy],[ox,oy-18],[ox,oy+18],[-w/2,uy>=0?r+18:-r-10]].concat(cand);
+    }
     let best=cand[0];
     for(const c of cand){ if(!hit(box(it.d,c[0],c[1],w),it.d)){best=c;break;} }
     boxes.push(box(it.d,best[0],best[1],w));
     d3.select(it.el).attr("x",best[0]).attr("y",best[1]);
   });
 }
-setTimeout(()=>{frozen=true;sim.stop();placeLabels();},4500);
+// Kai, 07.09.2026: Die großen Punkte sollen gleichmäßig im Kreis liegen statt sich auf
+// einer Seite zu sammeln. Nach dem Einfrieren setzen wir sie deshalb exakt auf gleiche
+// Winkelabstände auf dem inneren Ring — das ist verlässlicher als jede Kraft, weil ein
+// Hub mit vielen Kindern sonst immer wieder zur Seite gezogen wird.
+function spreadHubs(){
+  const hubs=DATA.nodes.filter(n=>n.hub);
+  if(!hubs.length)return;
+  hubs.forEach((h,i)=>{
+    const a=-Math.PI/2 + i*2*Math.PI/hubs.length;
+    h.x=W/2+Math.cos(a)*HUBRING; h.y=H/2+Math.sin(a)*HUBRING;
+    h.fx=h.x; h.fy=h.y;
+  });
+}
+// Kai, 07.09.2026: Das Netz soll NICHT mehr komplett stillstehen, sondern sich langsam,
+// aber dauerhaft bewegen. Die Physik dafür weiterlaufen zu lassen wäre der falsche Weg —
+// über hunderte Takte zieht sich die Wolke zu einem Knäuel zusammen (siehe Standzeit-Notiz).
+// Stattdessen drehen wir die fertig eingeschwungene Anordnung sehr langsam um die Mitte:
+// die Struktur bleibt exakt erhalten, die Namen bleiben entzerrt, das Bild wirkt lebendig.
+function startDrift(){
+  const SPEED=0.00020;            // Bogenmaß je 60stel Sekunde → gut 8 Minuten je Umdrehung
+  let last=performance.now();
+  (function step(now){
+    const dt=Math.min(now-last,100); last=now;
+    const a=SPEED*dt/16.7, ca=Math.cos(a), sa=Math.sin(a);
+    DATA.nodes.forEach(d=>{
+      if(d.cat==="zentrum")return;   // Zentrum bleibt fest in der Bildmitte
+      const dx=d.x-W/2, dy=d.y-H/2;
+      d.x=W/2+dx*ca-dy*sa; d.y=H/2+dx*sa+dy*ca;
+      if(d.fx!=null){d.fx=d.x; d.fy=d.y;}
+    });
+    // Die Namen der großen Punkte MITDREHEN lassen. Ihre Position ist im Bildschirm
+    // festgeschrieben ("rechts vom Punkt"); ohne das hier würde ein Name beim Drehen in
+    // einen anderen hineinwandern, obwohl die Punkte selbst gleich weit auseinander bleiben.
+    // Radial nach außen ausgerichtet halten sie ihren Abstand über die ganze Umdrehung.
+    label.each(function(d){
+      if(!d.hub)return;
+      const ax=d.x-W/2, ay=d.y-H/2, al=Math.hypot(ax,ay)||1;
+      const ux=ax/al, uy=ay/al, r=radius(d)+6;
+      let w=d._lw;
+      if(w==null){ try{w=this.getComputedTextLength()||60;}catch(err){w=60;} d._lw=w; }
+      this.setAttribute("x", ux>=0 ? r : -r-w);
+      this.setAttribute("y", 4+uy*16);
+    });
+    paint();
+    requestAnimationFrame(step);
+  })(performance.now());
+}
+// Kai, 07.09.2026: Der normale Auto-Fit rahmt nur die PUNKTE — die dauerhaft sichtbaren
+// Namen ragen darüber hinaus und wurden im schmalen Hochformat rechts abgeschnitten.
+// Dieser Nach-Fit rechnet die Namen mit ein. Weil sich die Anordnung langsam dreht, darf
+// nicht die momentane Bounding-Box zählen, sondern der ungünstigste Fall über ALLE
+// Drehwinkel: größter Abstand vom Drehmittelpunkt plus weitester Namens-Überhang.
+function fitWithLabels(){
+  if(userMoved)return;
+  const cx=W/2, cy=H/2;                       // die Anordnung dreht sich um diesen Punkt
+  const lab=new Map();
+  label.each(function(d){
+    if(!alwaysLabel.has(d.id))return;
+    let w=60; try{w=this.getComputedTextLength()||60;}catch(err){}
+    lab.set(d.id,{w:w, ox:parseFloat(this.getAttribute("x"))||0, oy:parseFloat(this.getAttribute("y"))||0});
+  });
+  let effR=0;
+  DATA.nodes.forEach(d=>{
+    const dist=Math.hypot(d.x-cx,d.y-cy);
+    let over=radius(d)+2;
+    const L=lab.get(d.id);
+    if(L)over=Math.max(over, Math.abs(L.ox), Math.abs(L.ox+L.w), Math.abs(L.oy)+14);
+    effR=Math.max(effR, dist+over);
+  });
+  if(!(effR>0))return;
+  const pad=MOB?14:34;
+  const k=Math.min((W-pad*2)/(2*effR),(H-pad*2)/(2*effR),3.5);
+  fitZoom=k; updateLabels();
+  const cyView=H/2+(MOB?H*0.03:0);
+  svg.transition().duration(600).call(zoom.transform,
+    d3.zoomIdentity.translate(W/2-k*cx, cyView-k*cy).scale(k));
+}
+setTimeout(()=>{frozen=true;sim.stop();spreadHubs();paint();placeLabels();fitWithLabels();startDrift();},4500);
 // Legende ein-/ausklappen (mobil)
 const leg=document.getElementById("legend");
 document.getElementById("legToggle").addEventListener("click",()=>leg.classList.toggle("open"));
