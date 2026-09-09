@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-09T19:52:33+00:00",
+  "generated": "2026-09-09T20:02:33+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,35 +12,35 @@
   },
   "commits": [
     {
+      "at": "2026-09-09T22:02:25+02:00",
+      "text": "Auto-Backup 2026-09-09 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-09T22:01:25+02:00",
+      "text": "Auto-Backup 2026-09-09 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-09T22:00:25+02:00",
+      "text": "Auto-Backup 2026-09-09 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-09T21:53:25+02:00",
+      "text": "Auto-Backup 2026-09-09 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-09T21:52:25+02:00",
       "text": "Auto-Backup 2026-09-09 — täglicher Workspace-Snapshot"
     },
     {
       "at": "2026-09-09T21:00:22+02:00",
       "text": "Auto-Backup 2026-09-09 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-09T20:00:18+02:00",
-      "text": "Auto-Backup 2026-09-09 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-09T19:50:17+02:00",
-      "text": "Auto-Backup 2026-09-09 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-09T19:41:17+02:00",
-      "text": "Auto-Backup 2026-09-09 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-09T19:01:15+02:00",
-      "text": "Auto-Backup 2026-09-09 — täglicher Workspace-Snapshot"
     }
   ],
   "cron": [
-    "heartbeat:hades Heartbeat (hades)",
     "jarvis-crash-log-watcher crash-log-watcher cron",
     "heartbeat:main Heartbeat (main)",
     "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
+    "heartbeat:hades Heartbeat (hades)",
     "jarvis-wissensnetz-auto wissensnetz-auto-update cron"
   ]
 }
