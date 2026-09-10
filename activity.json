@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-10T17:52:41+00:00",
+  "generated": "2026-09-10T18:02:41+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-10T20:00:47+02:00",
+      "text": "Auto-Backup 2026-09-10 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-10T19:00:44+02:00",
       "text": "Auto-Backup 2026-09-10 — täglicher Workspace-Snapshot"
@@ -30,17 +34,13 @@
     {
       "at": "2026-09-10T16:18:35+02:00",
       "text": "Auto-Backup 2026-09-10 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-10T16:00:34+02:00",
-      "text": "Auto-Backup 2026-09-10 — täglicher Workspace-Snapshot"
     }
   ],
   "cron": [
-    "heartbeat:hades Heartbeat (hades)",
     "jarvis-crash-log-watcher crash-log-watcher cron",
     "heartbeat:main Heartbeat (main)",
     "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
+    "heartbeat:hades Heartbeat (hades)",
     "jarvis-wissensnetz-auto wissensnetz-auto-update cron"
   ]
 }
