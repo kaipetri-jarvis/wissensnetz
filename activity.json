@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T20:52:52+00:00",
+  "generated": "2026-09-11T21:02:52+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-09-11T23:01:41+02:00",
+      "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-11T23:01:15+02:00",
+      "text": "Legion-Knoten: SSH-Ruecktunnel als Dauerdienst, Paarung noch offen (Ultron)"
+    },
+    {
+      "at": "2026-09-11T23:00:41+02:00",
+      "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-11T22:52:07+02:00",
       "text": "Klarstellung: Legion-Laptop wird nicht neu gestartet (Ultron)"
     },
@@ -22,18 +34,6 @@
     {
       "at": "2026-09-11T22:39:35+02:00",
       "text": "Legion: OpenClaw-Knoten installiert, Verbindungsweg offen (Ultron)"
-    },
-    {
-      "at": "2026-09-11T22:32:38+02:00",
-      "text": "Legion in allen vier Gateways eingebunden, drei Modelle, verifiziert (Ultron)"
-    },
-    {
-      "at": "2026-09-11T22:30:39+02:00",
-      "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-11T22:23:09+02:00",
-      "text": "Legion live: ungueltiges auth entfernt, Gateway wieder oben, Aufruf verifiziert (Ultron)"
     }
   ],
   "cron": [
