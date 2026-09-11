@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T20:42:52+00:00",
+  "generated": "2026-09-11T20:52:52+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-11T22:52:07+02:00",
+      "text": "Klarstellung: Legion-Laptop wird nicht neu gestartet (Ultron)"
+    },
+    {
+      "at": "2026-09-11T22:48:51+02:00",
+      "text": "LAN-Bindung verworfen: unvereinbar mit Tailscale Serve, zurueckgesetzt (Ultron)"
+    },
     {
       "at": "2026-09-11T22:39:35+02:00",
       "text": "Legion: OpenClaw-Knoten installiert, Verbindungsweg offen (Ultron)"
@@ -26,14 +34,6 @@
     {
       "at": "2026-09-11T22:23:09+02:00",
       "text": "Legion live: ungueltiges auth entfernt, Gateway wieder oben, Aufruf verifiziert (Ultron)"
-    },
-    {
-      "at": "2026-09-11T22:19:25+02:00",
-      "text": "Legion-Laptop komplett ausgestattet: Werkzeuge, Workspace-Spiegel, zwei Modelle, eigener OpenClaw-Agent (Hades)"
-    },
-    {
-      "at": "2026-09-11T22:15:28+02:00",
-      "text": "Legion-Anbindung gegengelesen: modelPolicy ergaenzt, Reload steht aus (Ultron)"
     }
   ],
   "cron": [
