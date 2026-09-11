@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T22:42:53+00:00",
+  "generated": "2026-09-11T22:52:53+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
+      "at": "2026-09-12T00:49:47+02:00",
+      "text": "Auto-Backup 2026-09-12 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-12T00:48:47+02:00",
+      "text": "Legion als Systemdienst; Content-Loop und Etsy-Automationen auf lokales Modell umgestellt, kaputtes infer-chat repariert (Ultron)"
+    },
+    {
+      "at": "2026-09-12T00:48:47+02:00",
+      "text": "Auto-Backup 2026-09-12 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-12T00:47:47+02:00",
+      "text": "Auto-Backup 2026-09-12 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-12T00:00:44+02:00",
       "text": "Auto-Backup 2026-09-12 — täglicher Workspace-Snapshot"
     },
     {
       "at": "2026-09-11T23:30:26+02:00",
       "text": "Content-Loop: SEO für Pflegemappe (DE) erstellt"
-    },
-    {
-      "at": "2026-09-11T23:04:00+02:00",
-      "text": "Legion ist vollwertiger Knoten: verbunden, freigegeben, Autostart eingerichtet (Ultron)"
-    },
-    {
-      "at": "2026-09-11T23:01:41+02:00",
-      "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-11T23:01:15+02:00",
-      "text": "Legion-Knoten: SSH-Ruecktunnel als Dauerdienst, Paarung noch offen (Ultron)"
-    },
-    {
-      "at": "2026-09-11T23:00:41+02:00",
-      "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
     }
   ],
   "cron": [
