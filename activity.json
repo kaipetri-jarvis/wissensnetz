@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T17:52:51+00:00",
+  "generated": "2026-09-11T18:02:51+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-11T20:00:31+02:00",
+      "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-11T19:00:28+02:00",
       "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
@@ -30,16 +34,12 @@
     {
       "at": "2026-09-11T18:53:21+02:00",
       "text": "JARVIS-OS-Abgleich vollstaendig: Slide 2 nachgetragen, Modell-Austauschbarkeit als einziger struktureller Vorsprung (Hades)"
-    },
-    {
-      "at": "2026-09-11T18:53:07+02:00",
-      "text": "JARVIS-OS-Abgleich: Slide 1 nachgetragen (Titelbild, ohne neuen Inhalt) (Hades)"
     }
   ],
   "cron": [
-    "heartbeat:hades Heartbeat (hades)",
     "jarvis-crash-log-watcher crash-log-watcher cron",
     "heartbeat:main Heartbeat (main)",
+    "heartbeat:hades Heartbeat (hades)",
     "jarvis-wissensnetz-auto wissensnetz-auto-update cron",
     "- etsy-marketing-kalender cron"
   ]
