@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T18:02:51+00:00",
+  "generated": "2026-09-11T18:12:51+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-11T20:09:31+02:00",
+      "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-11T20:00:31+02:00",
       "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-11T18:57:28+02:00",
       "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-11T18:53:21+02:00",
-      "text": "JARVIS-OS-Abgleich vollstaendig: Slide 2 nachgetragen, Modell-Austauschbarkeit als einziger struktureller Vorsprung (Hades)"
     }
   ],
   "cron": [
