@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T23:02:53+00:00",
+  "generated": "2026-09-11T23:12:53+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-12T01:05:48+02:00",
+      "text": "Auto-Backup 2026-09-12 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-12T01:05:33+02:00",
+      "text": "Kurzliste 'Kais Zwanzig': die relevanten Rollen aus dem Katalog, mit Zweck und Pfad (Ultron)"
+    },
     {
       "at": "2026-09-12T01:00:52+02:00",
       "text": "Rollen-Sammlung ins Repo gesichert: 256 Katalog-Rollen + 17 aktive, alter Pfad per Symlink (Ultron)"
@@ -26,14 +34,6 @@
     {
       "at": "2026-09-12T00:48:47+02:00",
       "text": "Legion als Systemdienst; Content-Loop und Etsy-Automationen auf lokales Modell umgestellt, kaputtes infer-chat repariert (Ultron)"
-    },
-    {
-      "at": "2026-09-12T00:48:47+02:00",
-      "text": "Auto-Backup 2026-09-12 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-12T00:47:47+02:00",
-      "text": "Auto-Backup 2026-09-12 — täglicher Workspace-Snapshot"
     }
   ],
   "cron": [
