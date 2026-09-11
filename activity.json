@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T16:42:51+00:00",
+  "generated": "2026-09-11T16:52:51+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
-      "at": "2026-09-11T18:25:34+02:00",
-      "text": "Telegram-Routing-Bindung ergaenzt, Heartbeats auf main+hades begrenzt, Gaia-Heartbeat auf GPT, isolatedSession ueberall (Hades)"
-    },
-    {
-      "at": "2026-09-11T18:23:22+02:00",
-      "text": "Uebergabe Rollen-Katalog an alle Agenten in Tagesnotiz (Hades)"
-    },
-    {
-      "at": "2026-09-11T18:21:18+02:00",
+      "at": "2026-09-11T18:51:24+02:00",
       "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-11T18:21:14+02:00",
-      "text": "Rollen-Katalog dreistufig: Einstieg 1,7 KB + 25 Kategoriedateien statt einer 60-KB-Liste (Hades)"
+      "at": "2026-09-11T18:50:33+02:00",
+      "text": "JARVIS-OS-Slides: Abgleich mit Kais System als Themendatei festgehalten (Hades)"
     },
     {
-      "at": "2026-09-11T18:20:37+02:00",
-      "text": "Rollen-Sammlung katalogisiert: 256 von 273 Subagenten-Rollen ausgelagert, ~14k Token je Sitzungsstart gespart (Hades)"
+      "at": "2026-09-11T18:50:32+02:00",
+      "text": "Kontingent-Aufraeumen: Heartbeats halbiert, Dreaming/Wissens-Sync entdoppelt, Postfach-Wachen zusammengelegt, kaputte Jobs repariert (Ultron)"
     },
     {
-      "at": "2026-09-11T18:19:03+02:00",
-      "text": "Outlook-MCP auf 14 genutzte Werkzeuge gefiltert (3 Gateways); Kontingent-Messung des Sitzungsstarts dokumentiert (Hades)"
+      "at": "2026-09-11T18:50:24+02:00",
+      "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-11T18:49:24+02:00",
+      "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-11T18:47:24+02:00",
+      "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
     }
   ],
   "cron": [
