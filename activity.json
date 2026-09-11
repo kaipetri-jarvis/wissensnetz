@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T19:22:52+00:00",
+  "generated": "2026-09-11T19:32:52+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-11T21:32:51+02:00",
+      "text": "Lokale Inferenz auf Legion-Laptop laeuft: qwen3:14b mit 34 Tokens/s gemessen (Hades)"
+    },
     {
       "at": "2026-09-11T21:03:01+02:00",
       "text": "Ollama auf Legion-Laptop als Autostart-Dienst eingerichtet, qwen3:14b geladen (Hades)"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-11T20:16:13+02:00",
       "text": "Haengenden Hades-Turn beendet, Warteschlange wieder frei (Ultron)"
-    },
-    {
-      "at": "2026-09-11T20:09:31+02:00",
-      "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
     }
   ],
   "cron": [
