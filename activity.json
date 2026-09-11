@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T16:12:50+00:00",
+  "generated": "2026-09-11T16:22:50+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
+      "at": "2026-09-11T18:21:18+02:00",
+      "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-11T18:21:14+02:00",
+      "text": "Rollen-Katalog dreistufig: Einstieg 1,7 KB + 25 Kategoriedateien statt einer 60-KB-Liste (Hades)"
+    },
+    {
+      "at": "2026-09-11T18:20:37+02:00",
+      "text": "Rollen-Sammlung katalogisiert: 256 von 273 Subagenten-Rollen ausgelagert, ~14k Token je Sitzungsstart gespart (Hades)"
+    },
+    {
+      "at": "2026-09-11T18:19:03+02:00",
+      "text": "Outlook-MCP auf 14 genutzte Werkzeuge gefiltert (3 Gateways); Kontingent-Messung des Sitzungsstarts dokumentiert (Hades)"
+    },
+    {
       "at": "2026-09-11T17:04:44+02:00",
       "text": "Memory-Falt-Lauf von Hand: 10.+11.09. verdichtet, themen/memory-verschlankung.md neu, INDEX neu gebaut (Hades)"
     },
     {
       "at": "2026-09-11T17:04:12+02:00",
-      "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-11T17:01:12+02:00",
-      "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-11T16:01:07+02:00",
-      "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-11T15:35:53+02:00",
-      "text": "Memory-Falt-Lauf: Tagesnotizen 25.08.-07.09. verdichtet, INDEX neu gebaut (automatischer Falt-Lauf)"
-    },
-    {
-      "at": "2026-09-11T15:35:06+02:00",
       "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
     }
   ],
