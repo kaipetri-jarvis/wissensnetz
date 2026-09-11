@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T13:32:49+00:00",
+  "generated": "2026-09-11T13:42:49+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,35 +12,35 @@
   },
   "commits": [
     {
+      "at": "2026-09-11T15:35:53+02:00",
+      "text": "Memory-Falt-Lauf: Tagesnotizen 25.08.-07.09. verdichtet, INDEX neu gebaut (automatischer Falt-Lauf)"
+    },
+    {
+      "at": "2026-09-11T15:35:06+02:00",
+      "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-11T15:34:05+02:00",
+      "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-11T15:33:05+02:00",
+      "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-11T15:32:05+02:00",
       "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
     },
     {
       "at": "2026-09-11T15:31:05+02:00",
       "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-11T15:25:04+02:00",
-      "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-11T15:24:40+02:00",
-      "text": "Memory-Falt-Lauf: Tagesnotizen 23.-27.08. verdichtet, INDEX neu gebaut (automatischer Falt-Lauf)"
-    },
-    {
-      "at": "2026-09-11T15:24:04+02:00",
-      "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-11T15:19:04+02:00",
-      "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
     }
   ],
   "cron": [
     "jarvis-crash-log-watcher crash-log-watcher cron",
+    "heartbeat:hades Heartbeat (hades)",
     "heartbeat:main Heartbeat (main)",
     "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
-    "heartbeat:hades Heartbeat (hades)",
     "jarvis-wissensnetz-auto wissensnetz-auto-update cron"
   ]
 }
