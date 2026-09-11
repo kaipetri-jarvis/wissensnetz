@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T20:22:52+00:00",
+  "generated": "2026-09-11T20:32:52+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-09-11T22:32:38+02:00",
+      "text": "Legion in allen vier Gateways eingebunden, drei Modelle, verifiziert (Ultron)"
+    },
+    {
+      "at": "2026-09-11T22:30:39+02:00",
+      "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-11T22:23:09+02:00",
+      "text": "Legion live: ungueltiges auth entfernt, Gateway wieder oben, Aufruf verifiziert (Ultron)"
+    },
+    {
       "at": "2026-09-11T22:19:25+02:00",
       "text": "Legion-Laptop komplett ausgestattet: Werkzeuge, Workspace-Spiegel, zwei Modelle, eigener OpenClaw-Agent (Hades)"
     },
@@ -22,18 +34,6 @@
     {
       "at": "2026-09-11T22:08:15+02:00",
       "text": "Automaton Friday umgebaut: ein Ziel pro Zyklus, harte Abbruchregeln, Zusatzguthaben gesperrt (Ultron)"
-    },
-    {
-      "at": "2026-09-11T22:02:04+02:00",
-      "text": "Neuer Pin für Quote & Estimate Template (Content-Loop, Jarvis)"
-    },
-    {
-      "at": "2026-09-11T22:01:38+02:00",
-      "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-11T22:00:38+02:00",
-      "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
     }
   ],
   "cron": [
