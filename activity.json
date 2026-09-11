@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T13:52:49+00:00",
+  "generated": "2026-09-11T14:02:49+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-11T16:01:07+02:00",
+      "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-11T15:35:53+02:00",
       "text": "Memory-Falt-Lauf: Tagesnotizen 25.08.-07.09. verdichtet, INDEX neu gebaut (automatischer Falt-Lauf)"
@@ -30,17 +34,13 @@
     {
       "at": "2026-09-11T15:32:05+02:00",
       "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-11T15:31:05+02:00",
-      "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
     }
   ],
   "cron": [
-    "heartbeat:hades Heartbeat (hades)",
     "jarvis-crash-log-watcher crash-log-watcher cron",
     "heartbeat:main Heartbeat (main)",
     "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
+    "heartbeat:hades Heartbeat (hades)",
     "jarvis-wissensnetz-auto wissensnetz-auto-update cron"
   ]
 }
