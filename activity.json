@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T22:52:53+00:00",
+  "generated": "2026-09-11T23:02:53+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-12T01:00:52+02:00",
+      "text": "Rollen-Sammlung ins Repo gesichert: 256 Katalog-Rollen + 17 aktive, alter Pfad per Symlink (Ultron)"
+    },
+    {
+      "at": "2026-09-12T01:00:48+02:00",
+      "text": "Auto-Backup 2026-09-12 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-12T00:49:47+02:00",
       "text": "Auto-Backup 2026-09-12 — täglicher Workspace-Snapshot"
@@ -26,14 +34,6 @@
     {
       "at": "2026-09-12T00:47:47+02:00",
       "text": "Auto-Backup 2026-09-12 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-12T00:00:44+02:00",
-      "text": "Auto-Backup 2026-09-12 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-11T23:30:26+02:00",
-      "text": "Content-Loop: SEO für Pflegemappe (DE) erstellt"
     }
   ],
   "cron": [
