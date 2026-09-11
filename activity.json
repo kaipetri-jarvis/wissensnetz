@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T21:52:53+00:00",
+  "generated": "2026-09-11T22:02:53+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-12T00:00:44+02:00",
+      "text": "Auto-Backup 2026-09-12 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-11T23:30:26+02:00",
       "text": "Content-Loop: SEO für Pflegemappe (DE) erstellt"
@@ -30,16 +34,12 @@
     {
       "at": "2026-09-11T23:00:41+02:00",
       "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-11T22:52:07+02:00",
-      "text": "Klarstellung: Legion-Laptop wird nicht neu gestartet (Ultron)"
     }
   ],
   "cron": [
-    "heartbeat:hades Heartbeat (hades)",
     "jarvis-crash-log-watcher crash-log-watcher cron",
     "heartbeat:main Heartbeat (main)",
+    "heartbeat:hades Heartbeat (hades)",
     "jarvis-wissensnetz-auto wissensnetz-auto-update cron",
     "- etsy-marketing-kalender cron"
   ]
