@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T13:02:49+00:00",
+  "generated": "2026-09-11T13:12:49+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
-      "at": "2026-09-11T15:00:45+02:00",
-      "text": "Falt-Lauf scharf: Ersetzen statt Markieren, Ultrons drei Sicherungen, Allowlist-Fix (Hades)"
+      "at": "2026-09-11T15:11:03+02:00",
+      "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-11T15:00:15+02:00",
-      "text": "Memory: Allowlist-Fix belegt - sessions_send an Vision geht durch (Ultron)"
+      "at": "2026-09-11T15:10:39+02:00",
+      "text": "Memory-Falt-Lauf: Tagesnotizen 23.08.-07.09. verdichtet, INDEX neu gebaut"
     },
     {
-      "at": "2026-09-11T15:00:00+02:00",
-      "text": "Memory: Vision gibt Falt-Lauf frei (Gegenlesung)"
+      "at": "2026-09-11T15:10:03+02:00",
+      "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-11T14:57:04+02:00",
-      "text": "Memory: Ursache der Vision-Blockade - veraltete agentToAgent-Allowlist (Hades)"
+      "at": "2026-09-11T15:09:03+02:00",
+      "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-11T14:56:30+02:00",
-      "text": "Memory: Ultrons Gegenlesung zum Falt-Lauf, A2A-Weiterleitung an Vision blockiert (Ultron)"
+      "at": "2026-09-11T15:08:03+02:00",
+      "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-11T14:51:54+02:00",
-      "text": "Memory: Auto-TTS setzt still aus, manueller Sendeweg dokumentiert (Vision)"
+      "at": "2026-09-11T15:07:03+02:00",
+      "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
     }
   ],
   "cron": [
