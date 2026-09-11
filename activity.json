@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T20:32:52+00:00",
+  "generated": "2026-09-11T20:42:52+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-11T22:39:35+02:00",
+      "text": "Legion: OpenClaw-Knoten installiert, Verbindungsweg offen (Ultron)"
+    },
     {
       "at": "2026-09-11T22:32:38+02:00",
       "text": "Legion in allen vier Gateways eingebunden, drei Modelle, verifiziert (Ultron)"
@@ -30,16 +34,12 @@
     {
       "at": "2026-09-11T22:15:28+02:00",
       "text": "Legion-Anbindung gegengelesen: modelPolicy ergaenzt, Reload steht aus (Ultron)"
-    },
-    {
-      "at": "2026-09-11T22:08:15+02:00",
-      "text": "Automaton Friday umgebaut: ein Ziel pro Zyklus, harte Abbruchregeln, Zusatzguthaben gesperrt (Ultron)"
     }
   ],
   "cron": [
     "jarvis-crash-log-watcher crash-log-watcher cron",
-    "heartbeat:main Heartbeat (main)",
     "heartbeat:hades Heartbeat (hades)",
+    "heartbeat:main Heartbeat (main)",
     "jarvis-wissensnetz-auto wissensnetz-auto-update cron",
     "- etsy-marketing-kalender cron"
   ]
