@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T12:52:49+00:00",
+  "generated": "2026-09-11T13:02:49+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,35 +12,35 @@
   },
   "commits": [
     {
+      "at": "2026-09-11T15:00:45+02:00",
+      "text": "Falt-Lauf scharf: Ersetzen statt Markieren, Ultrons drei Sicherungen, Allowlist-Fix (Hades)"
+    },
+    {
+      "at": "2026-09-11T15:00:15+02:00",
+      "text": "Memory: Allowlist-Fix belegt - sessions_send an Vision geht durch (Ultron)"
+    },
+    {
+      "at": "2026-09-11T15:00:00+02:00",
+      "text": "Memory: Vision gibt Falt-Lauf frei (Gegenlesung)"
+    },
+    {
+      "at": "2026-09-11T14:57:04+02:00",
+      "text": "Memory: Ursache der Vision-Blockade - veraltete agentToAgent-Allowlist (Hades)"
+    },
+    {
+      "at": "2026-09-11T14:56:30+02:00",
+      "text": "Memory: Ultrons Gegenlesung zum Falt-Lauf, A2A-Weiterleitung an Vision blockiert (Ultron)"
+    },
+    {
       "at": "2026-09-11T14:51:54+02:00",
       "text": "Memory: Auto-TTS setzt still aus, manueller Sendeweg dokumentiert (Vision)"
-    },
-    {
-      "at": "2026-09-11T14:47:21+02:00",
-      "text": "Memory: automatischer Falt-Lauf memory-falten eingerichtet (Vision)"
-    },
-    {
-      "at": "2026-09-11T14:45:51+02:00",
-      "text": "Memory: AGENTS.md war tagelang abgeschnitten - 20k-Zeichen-Grenze belegt (Vision)"
-    },
-    {
-      "at": "2026-09-11T14:44:54+02:00",
-      "text": "Memory: Falt-Lauf ist NICHT vom Verdichtungs-Cron abgedeckt, Entwurf von Hades (Vision)"
-    },
-    {
-      "at": "2026-09-11T14:44:12+02:00",
-      "text": "Memory: Hades-Sicherung aus /tmp in dauerhafte Ablage kopiert (Vision)"
-    },
-    {
-      "at": "2026-09-11T14:43:42+02:00",
-      "text": "Memory: Zuordnung korrigiert (Komprimierung von Hades), Doppel-Cron verhindert (Vision)"
     }
   ],
   "cron": [
-    "heartbeat:hades Heartbeat (hades)",
     "jarvis-crash-log-watcher crash-log-watcher cron",
     "heartbeat:main Heartbeat (main)",
     "heartbeat:atlas-coord... Heartbeat (atlas-coor...",
+    "heartbeat:hades Heartbeat (hades)",
     "jarvis-wissensnetz-auto wissensnetz-auto-update cron"
   ]
 }
