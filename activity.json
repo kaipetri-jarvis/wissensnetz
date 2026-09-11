@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T21:22:52+00:00",
+  "generated": "2026-09-11T21:32:52+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-11T23:30:26+02:00",
+      "text": "Content-Loop: SEO für Pflegemappe (DE) erstellt"
+    },
     {
       "at": "2026-09-11T23:04:00+02:00",
       "text": "Legion ist vollwertiger Knoten: verbunden, freigegeben, Autostart eingerichtet (Ultron)"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-11T22:52:07+02:00",
       "text": "Klarstellung: Legion-Laptop wird nicht neu gestartet (Ultron)"
-    },
-    {
-      "at": "2026-09-11T22:48:51+02:00",
-      "text": "LAN-Bindung verworfen: unvereinbar mit Tailscale Serve, zurueckgesetzt (Ultron)"
     }
   ],
   "cron": [
