@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T18:12:51+00:00",
+  "generated": "2026-09-11T18:22:51+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-09-11T20:20:08+02:00",
+      "text": "SSH-Zugang zum Windows-Laptop (192.168.2.222) eingerichtet und verifiziert (Hades)"
+    },
+    {
+      "at": "2026-09-11T20:19:32+02:00",
+      "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-11T20:16:13+02:00",
+      "text": "Haengenden Hades-Turn beendet, Warteschlange wieder frei (Ultron)"
+    },
+    {
       "at": "2026-09-11T20:09:31+02:00",
       "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
     },
@@ -21,18 +33,6 @@
     },
     {
       "at": "2026-09-11T19:00:28+02:00",
-      "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-11T19:00:04+02:00",
-      "text": "Infrastruktur: Kais RTX-5090-Laptop als moeglicher lokaler Inferenz-Server erfasst (Hades)"
-    },
-    {
-      "at": "2026-09-11T18:58:28+02:00",
-      "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-11T18:57:28+02:00",
       "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
     }
   ],
