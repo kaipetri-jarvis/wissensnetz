@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T16:52:51+00:00",
+  "generated": "2026-09-11T17:02:51+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
-      "at": "2026-09-11T18:51:24+02:00",
+      "at": "2026-09-11T19:00:28+02:00",
       "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-11T18:50:33+02:00",
-      "text": "JARVIS-OS-Slides: Abgleich mit Kais System als Themendatei festgehalten (Hades)"
+      "at": "2026-09-11T19:00:04+02:00",
+      "text": "Infrastruktur: Kais RTX-5090-Laptop als moeglicher lokaler Inferenz-Server erfasst (Hades)"
     },
     {
-      "at": "2026-09-11T18:50:32+02:00",
-      "text": "Kontingent-Aufraeumen: Heartbeats halbiert, Dreaming/Wissens-Sync entdoppelt, Postfach-Wachen zusammengelegt, kaputte Jobs repariert (Ultron)"
-    },
-    {
-      "at": "2026-09-11T18:50:24+02:00",
+      "at": "2026-09-11T18:58:28+02:00",
       "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-11T18:49:24+02:00",
+      "at": "2026-09-11T18:57:28+02:00",
       "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-11T18:47:24+02:00",
-      "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
+      "at": "2026-09-11T18:53:21+02:00",
+      "text": "JARVIS-OS-Abgleich vollstaendig: Slide 2 nachgetragen, Modell-Austauschbarkeit als einziger struktureller Vorsprung (Hades)"
+    },
+    {
+      "at": "2026-09-11T18:53:07+02:00",
+      "text": "JARVIS-OS-Abgleich: Slide 1 nachgetragen (Titelbild, ohne neuen Inhalt) (Hades)"
     }
   ],
   "cron": [
