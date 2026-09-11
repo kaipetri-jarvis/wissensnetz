@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T21:02:52+00:00",
+  "generated": "2026-09-11T21:12:52+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-11T23:04:00+02:00",
+      "text": "Legion ist vollwertiger Knoten: verbunden, freigegeben, Autostart eingerichtet (Ultron)"
+    },
     {
       "at": "2026-09-11T23:01:41+02:00",
       "text": "Auto-Backup 2026-09-11 — täglicher Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-11T22:48:51+02:00",
       "text": "LAN-Bindung verworfen: unvereinbar mit Tailscale Serve, zurueckgesetzt (Ultron)"
-    },
-    {
-      "at": "2026-09-11T22:39:35+02:00",
-      "text": "Legion: OpenClaw-Knoten installiert, Verbindungsweg offen (Ultron)"
     }
   ],
   "cron": [
