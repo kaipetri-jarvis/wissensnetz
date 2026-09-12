@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-12T20:23:01+00:00",
+  "generated": "2026-09-12T20:33:01+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-12T22:30:48+02:00",
+      "text": "Content-Loop: SEO-Listing für Kunden-Onboarding-Set (DE) erstellt"
+    },
     {
       "at": "2026-09-12T22:01:58+02:00",
       "text": "Auto-Backup 2026-09-12 — täglicher Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-12T21:40:56+02:00",
       "text": "Auto-Backup 2026-09-12 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-12T21:39:50+02:00",
-      "text": "Graphify-Testlauf über projects/etsy ausgewertet: taugt als Suchwerkzeug, nicht als Schaubild"
     }
   ],
   "cron": [
