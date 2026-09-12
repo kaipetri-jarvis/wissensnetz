@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-12T19:23:00+00:00",
+  "generated": "2026-09-12T19:33:00+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-12T21:32:56+02:00",
+      "text": "Auto-Backup 2026-09-12 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-12T21:30:32+02:00",
+      "text": "Etsy: ADHD-Preise nach der Umfangserweiterung angehoben"
+    },
     {
       "at": "2026-09-12T21:09:36+02:00",
       "text": "Etsy: Bundle B4 auf Standard, 13 Produkte bepreist, ADHD-Planer auf 37 Seiten"
@@ -25,14 +33,6 @@
     },
     {
       "at": "2026-09-12T21:06:54+02:00",
-      "text": "Auto-Backup 2026-09-12 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-12T21:05:54+02:00",
-      "text": "Auto-Backup 2026-09-12 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-12T21:04:54+02:00",
       "text": "Auto-Backup 2026-09-12 — täglicher Workspace-Snapshot"
     }
   ],
