@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-12T01:12:54+00:00",
+  "generated": "2026-09-12T01:22:54+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-12T03:15:55+02:00",
+      "text": "Auto-Backup 2026-09-12 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-12T03:00:54+02:00",
       "text": "Auto-Backup 2026-09-12 — täglicher Workspace-Snapshot"
@@ -30,17 +34,13 @@
     {
       "at": "2026-09-12T01:00:52+02:00",
       "text": "Rollen-Sammlung ins Repo gesichert: 256 Katalog-Rollen + 17 aktive, alter Pfad per Symlink (Ultron)"
-    },
-    {
-      "at": "2026-09-12T01:00:48+02:00",
-      "text": "Auto-Backup 2026-09-12 — täglicher Workspace-Snapshot"
     }
   ],
   "cron": [
-    "jarvis-wissensnetz-auto wissensnetz-auto-update cron",
     "jarvis-crash-log-watcher crash-log-watcher cron",
     "heartbeat:hades Heartbeat (hades)",
     "heartbeat:main Heartbeat (main)",
+    "jarvis-wissensnetz-auto wissensnetz-auto-update cron",
     "- etsy-marketing-kalender cron"
   ]
 }
