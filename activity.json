@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-12T19:53:01+00:00",
+  "generated": "2026-09-12T20:03:01+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-12T22:01:58+02:00",
+      "text": "Auto-Backup 2026-09-12 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-12T22:00:57+02:00",
+      "text": "Auto-Backup 2026-09-12 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-12T21:43:00+02:00",
       "text": "Ponytail-Audits an drei echten Codestellen ausgewertet"
@@ -26,20 +34,12 @@
     {
       "at": "2026-09-12T21:39:50+02:00",
       "text": "Graphify-Testlauf über projects/etsy ausgewertet: taugt als Suchwerkzeug, nicht als Schaubild"
-    },
-    {
-      "at": "2026-09-12T21:36:56+02:00",
-      "text": "Auto-Backup 2026-09-12 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-12T21:35:56+02:00",
-      "text": "Auto-Backup 2026-09-12 — täglicher Workspace-Snapshot"
     }
   ],
   "cron": [
-    "heartbeat:hades Heartbeat (hades)",
     "jarvis-crash-log-watcher crash-log-watcher cron",
     "heartbeat:main Heartbeat (main)",
+    "heartbeat:hades Heartbeat (hades)",
     "jarvis-wissensnetz-auto wissensnetz-auto-update cron",
     "- etsy-marketing-kalender cron"
   ]
