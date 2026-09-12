@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-12T20:53:01+00:00",
+  "generated": "2026-09-12T21:03:01+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-12T23:02:03+02:00",
+      "text": "Auto-Backup 2026-09-12 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-12T23:01:03+02:00",
+      "text": "Auto-Backup 2026-09-12 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-12T22:30:48+02:00",
       "text": "Content-Loop: SEO-Listing für Kunden-Onboarding-Set (DE) erstellt"
@@ -26,14 +34,6 @@
     {
       "at": "2026-09-12T21:43:00+02:00",
       "text": "Ponytail-Audits an drei echten Codestellen ausgewertet"
-    },
-    {
-      "at": "2026-09-12T21:42:48+02:00",
-      "text": "Legion-Bot: Token eingetragen, Windows-Autostart-Blocker dokumentiert (Hades)"
-    },
-    {
-      "at": "2026-09-12T21:40:56+02:00",
-      "text": "Auto-Backup 2026-09-12 — täglicher Workspace-Snapshot"
     }
   ],
   "cron": [
