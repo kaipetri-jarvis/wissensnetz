@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-12T22:13:11+00:00",
+  "generated": "2026-09-12T22:23:11+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
-      "at": "2026-09-12T23:30:30+02:00",
-      "text": "Content-Loop: SEO-Listing für Mahnung-Vorlage (DE) erstellt"
+      "at": "2026-09-13T00:22:04+02:00",
+      "text": "Launch-Dokumente konsolidiert: START-CHECKLISTE.md loest die drei Dateien vom 26.08. ab"
     },
     {
-      "at": "2026-09-12T23:02:03+02:00",
-      "text": "Auto-Backup 2026-09-12 — täglicher Workspace-Snapshot"
+      "at": "2026-09-13T00:21:06+02:00",
+      "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-12T23:01:03+02:00",
-      "text": "Auto-Backup 2026-09-12 — täglicher Workspace-Snapshot"
+      "at": "2026-09-13T00:20:42+02:00",
+      "text": "Legion als eigener Agent im Mac-Gateway live (Hades)"
     },
     {
-      "at": "2026-09-12T22:30:48+02:00",
-      "text": "Content-Loop: SEO-Listing für Kunden-Onboarding-Set (DE) erstellt"
+      "at": "2026-09-13T00:19:18+02:00",
+      "text": "Stille Fehlschläge repariert: Content-Loop, vault-sync, Wissens-Graph"
     },
     {
-      "at": "2026-09-12T22:01:58+02:00",
-      "text": "Auto-Backup 2026-09-12 — täglicher Workspace-Snapshot"
+      "at": "2026-09-13T00:19:06+02:00",
+      "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-12T22:00:57+02:00",
-      "text": "Auto-Backup 2026-09-12 — täglicher Workspace-Snapshot"
+      "at": "2026-09-13T00:16:40+02:00",
+      "text": "Graphify-Abfrage als tools/frag-graph.sh fest eingebaut"
     }
   ],
   "cron": [
