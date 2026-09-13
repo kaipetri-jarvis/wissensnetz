@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-13T17:53:20+00:00",
+  "generated": "2026-09-13T18:03:20+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
-      "at": "2026-09-13T19:41:47+02:00",
-      "text": "Etsy-Gesamtpruefung vor dem Shop-Start: 23 belegte Befunde in 4 Stufen (3 Blocker), alle nachgemessen"
+      "at": "2026-09-13T20:02:22+02:00",
+      "text": "Ultron 'haengt': leere Antwort statt Haenger, Session komprimiert"
     },
     {
-      "at": "2026-09-13T19:40:21+02:00",
-      "text": "Korrektur: atlas-main-watch hat keinen Dauerfehler; dafuer eigenen Neustart-Schaden gefunden"
-    },
-    {
-      "at": "2026-09-13T19:34:51+02:00",
-      "text": "Ultrons Zeitlimit von 1 auf 3 Stunden angehoben, Subagent-Timeout explizit auf 0"
-    },
-    {
-      "at": "2026-09-13T19:21:29+02:00",
+      "at": "2026-09-13T20:01:05+02:00",
       "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-13T19:20:28+02:00",
-      "text": "Tagesnotiz 13.09.: Bilanz an den Anfang gesetzt"
+      "at": "2026-09-13T20:00:27+02:00",
+      "text": "Etsy Content-Loop: DE-Listing fuer den Wochen-Essensplaner (Titel 128 Z., 13 Tags geprueft)"
     },
     {
-      "at": "2026-09-13T19:18:29+02:00",
+      "at": "2026-09-13T19:57:04+02:00",
+      "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-13T19:56:03+02:00",
+      "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-13T19:55:04+02:00",
       "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
     }
   ]
