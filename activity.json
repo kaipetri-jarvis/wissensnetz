@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-13T17:03:19+00:00",
+  "generated": "2026-09-13T17:13:20+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
-      "at": "2026-09-13T19:02:28+02:00",
+      "at": "2026-09-13T19:10:28+02:00",
       "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-13T19:01:42+02:00",
-      "text": "Tagesnotiz: Zeitstempel chronologisch korrigiert, Werkzeug-Katalog in die Themendatei"
+      "at": "2026-09-13T19:10:07+02:00",
+      "text": "Tagesnotiz: ZIP-Rueckschrittpruefung"
     },
     {
-      "at": "2026-09-13T19:01:27+02:00",
+      "at": "2026-09-13T19:10:04+02:00",
+      "text": "baue-zips.py: Rueckschritt-Warnung auf Formularfelder und Seitenzahl statt Bytes"
+    },
+    {
+      "at": "2026-09-13T19:09:28+02:00",
+      "text": "Formularfelder in Service Agreement und Onboarding Kit nachgeruestet"
+    },
+    {
+      "at": "2026-09-13T19:09:28+02:00",
       "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-13T19:01:25+02:00",
-      "text": "Content-Loop: DE-Fassung Monats-Budgetplaner (de-budgetplaner) angelegt und gerendert"
-    },
-    {
-      "at": "2026-09-13T19:00:26+02:00",
-      "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-13T18:59:26+02:00",
-      "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
+      "at": "2026-09-13T19:09:01+02:00",
+      "text": "ZIP-Zuordnung: alle neun offenen Fälle per Inhaltsvergleich entschieden"
     }
   ]
 }
