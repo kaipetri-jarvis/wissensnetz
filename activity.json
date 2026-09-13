@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-13T13:13:18+00:00",
+  "generated": "2026-09-13T13:23:18+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-13T15:15:02+02:00",
+      "text": "Marken-Audit Befund: Marken-Fusszeile auf allen 38 Pinterest-Pins ergaenzt und gerendert"
+    },
+    {
+      "at": "2026-09-13T15:14:07+02:00",
+      "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-13T15:12:04+02:00",
       "text": "Marken-Audit Befund 2: Schreibweise 'Desklane Studio' zu 'DeskLane Studio' korrigiert"
@@ -26,14 +34,6 @@
     {
       "at": "2026-09-13T15:07:07+02:00",
       "text": "Shop-Mailadresse: Gmail empfohlen, Adressvorschlag und offene Punkte festgehalten"
-    },
-    {
-      "at": "2026-09-13T15:04:53+02:00",
-      "text": "Shop-Anlegen-Anleitung: Korrekturkasten (Euro, 39 Listings, Dauer-Sale); 2FA-Stand notiert"
-    },
-    {
-      "at": "2026-09-13T15:03:56+02:00",
-      "text": "Sicherheitspunkt: kritische Passwoerter laut Kai geaendert, Rest nachrangig"
     }
   ]
 }
