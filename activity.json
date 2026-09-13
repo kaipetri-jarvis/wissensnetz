@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-13T17:33:20+00:00",
+  "generated": "2026-09-13T17:43:20+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-09-13T19:41:47+02:00",
+      "text": "Etsy-Gesamtpruefung vor dem Shop-Start: 23 belegte Befunde in 4 Stufen (3 Blocker), alle nachgemessen"
+    },
+    {
+      "at": "2026-09-13T19:40:21+02:00",
+      "text": "Korrektur: atlas-main-watch hat keinen Dauerfehler; dafuer eigenen Neustart-Schaden gefunden"
+    },
+    {
+      "at": "2026-09-13T19:34:51+02:00",
+      "text": "Ultrons Zeitlimit von 1 auf 3 Stunden angehoben, Subagent-Timeout explizit auf 0"
+    },
+    {
       "at": "2026-09-13T19:21:29+02:00",
       "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
     },
@@ -21,18 +33,6 @@
     },
     {
       "at": "2026-09-13T19:18:29+02:00",
-      "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-13T19:18:13+02:00",
-      "text": "ADHD-Einzellistings liefern jetzt Druck- UND Digitalfassung aus"
-    },
-    {
-      "at": "2026-09-13T19:14:32+02:00",
-      "text": "Korrektur: ADHD-Doppelverkauf existiert nicht"
-    },
-    {
-      "at": "2026-09-13T19:10:28+02:00",
       "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
     }
   ]
