@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-13T17:13:20+00:00",
+  "generated": "2026-09-13T17:23:20+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
+      "at": "2026-09-13T19:21:29+02:00",
+      "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-13T19:20:28+02:00",
+      "text": "Tagesnotiz 13.09.: Bilanz an den Anfang gesetzt"
+    },
+    {
+      "at": "2026-09-13T19:18:29+02:00",
+      "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-13T19:18:13+02:00",
+      "text": "ADHD-Einzellistings liefern jetzt Druck- UND Digitalfassung aus"
+    },
+    {
+      "at": "2026-09-13T19:14:32+02:00",
+      "text": "Korrektur: ADHD-Doppelverkauf existiert nicht"
+    },
+    {
       "at": "2026-09-13T19:10:28+02:00",
       "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-13T19:10:07+02:00",
-      "text": "Tagesnotiz: ZIP-Rueckschrittpruefung"
-    },
-    {
-      "at": "2026-09-13T19:10:04+02:00",
-      "text": "baue-zips.py: Rueckschritt-Warnung auf Formularfelder und Seitenzahl statt Bytes"
-    },
-    {
-      "at": "2026-09-13T19:09:28+02:00",
-      "text": "Formularfelder in Service Agreement und Onboarding Kit nachgeruestet"
-    },
-    {
-      "at": "2026-09-13T19:09:28+02:00",
-      "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-13T19:09:01+02:00",
-      "text": "ZIP-Zuordnung: alle neun offenen Fälle per Inhaltsvergleich entschieden"
     }
   ]
 }
