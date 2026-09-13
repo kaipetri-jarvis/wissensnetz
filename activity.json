@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-13T20:03:21+00:00",
+  "generated": "2026-09-13T20:13:21+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
-      "at": "2026-09-13T22:01:54+02:00",
-      "text": "Bookkeeping Tracker: 5 Seiten (Year at a Glance + Year-End Checklist), waehrungsneutral"
-    },
-    {
-      "at": "2026-09-13T22:01:15+02:00",
+      "at": "2026-09-13T22:13:17+02:00",
       "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-13T22:00:15+02:00",
+      "at": "2026-09-13T22:13:08+02:00",
+      "text": "Lizenz: drei Stufen (Kais Entscheidung 13.09. 22:11, Weg c)"
+    },
+    {
+      "at": "2026-09-13T22:12:16+02:00",
       "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-13T21:59:14+02:00",
+      "at": "2026-09-13T22:11:44+02:00",
+      "text": "Tagesnotiz: Kais Entscheidung Lizenz 3 Stufen + Brevo, Auftrag an Jarvis"
+    },
+    {
+      "at": "2026-09-13T22:11:16+02:00",
       "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-13T21:58:14+02:00",
-      "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-13T21:57:14+02:00",
+      "at": "2026-09-13T22:10:16+02:00",
       "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
     }
   ]
