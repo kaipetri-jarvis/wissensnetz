@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-13T16:33:19+00:00",
+  "generated": "2026-09-13T16:43:19+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
-      "at": "2026-09-13T18:10:23+02:00",
+      "at": "2026-09-13T18:41:25+02:00",
       "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-13T18:09:34+02:00",
-      "text": "Upload-Mappe mit den Listings synchronisiert: Drift von 27 auf 0"
+      "at": "2026-09-13T18:41:17+02:00",
+      "text": "Eigene Bundle-Titelbilder fuer B1, B2 und B3 gebaut"
     },
     {
-      "at": "2026-09-13T18:09:23+02:00",
+      "at": "2026-09-13T18:40:25+02:00",
       "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-13T18:08:46+02:00",
-      "text": "ZIP-Bauskript gebaut, 23 veraltete Verkaufs-ZIPs erneuert; USt-Richtung korrigiert"
-    },
-    {
-      "at": "2026-09-13T18:08:23+02:00",
+      "at": "2026-09-13T18:39:25+02:00",
       "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-13T18:07:29+02:00",
-      "text": "Tagesnotiz: Uebergabe der vier offenen Etsy-Baustellen an Jarvis (Subagenten-Lauf abgebrochen, nichts gelandet)"
+      "at": "2026-09-13T18:38:25+02:00",
+      "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-13T18:35:24+02:00",
+      "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
     }
   ]
 }
