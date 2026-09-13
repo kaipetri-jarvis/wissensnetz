@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-13T18:33:20+00:00",
+  "generated": "2026-09-13T18:43:20+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-09-13T20:38:16+02:00",
+      "text": "Etsy-Fix: Verweis auf dauerhaften Etsy-Sale in REICHWEITE-UND-ADS.md entfernt"
+    },
+    {
+      "at": "2026-09-13T20:38:02+02:00",
+      "text": "Etsy-Fix: letzter Grand-Opening-Sale-Rest in REICHWEITE-UND-ADS.md; Tagesnotiz Abschluss der Fix-Runde"
+    },
+    {
+      "at": "2026-09-13T20:37:36+02:00",
+      "text": "Etsy-Fix Abschluss: B4-Titelbild auf mockup-bundle-finance.png, Tabelle neu gebaut, Shop-Sprache in alter Anleitung korrigiert"
+    },
+    {
       "at": "2026-09-13T20:11:06+02:00",
       "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
     },
@@ -21,18 +33,6 @@
     },
     {
       "at": "2026-09-13T20:09:06+02:00",
-      "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-13T20:08:05+02:00",
-      "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-13T20:07:06+02:00",
-      "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-13T20:06:05+02:00",
       "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
     }
   ]
