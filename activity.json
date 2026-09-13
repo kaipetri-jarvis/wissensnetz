@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-13T12:23:18+00:00",
+  "generated": "2026-09-13T12:33:18+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-13T14:28:16+02:00",
+      "text": "OmniRoute-Dashboard-Passwort ersetzt; Fundort des bcrypt-Hashes dokumentiert"
+    },
     {
       "at": "2026-09-13T14:15:00+02:00",
       "text": "OmniRoute produktiv: Hintergrundjobs ueber omniroute-call.py mit CLI-Rueckfall, HSTS-Header entfernt"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-13T14:00:42+02:00",
       "text": "Etsy-Content-Loop: DE-Fassung 'Wochen-Essensplaner & Einkaufsliste' angelegt (de-essensplaner)"
-    },
-    {
-      "at": "2026-09-13T13:00:51+02:00",
-      "text": "Etsy-Content-Loop: Bundle B7 'Vorsorge & Pflege Set (DE)' angelegt (erstes rein deutsches Bundle)"
     }
   ]
 }
