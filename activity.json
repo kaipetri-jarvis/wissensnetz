@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-13T11:53:17+00:00",
+  "generated": "2026-09-13T12:03:17+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-13T14:00:42+02:00",
+      "text": "Etsy-Content-Loop: DE-Fassung 'Wochen-Essensplaner & Einkaufsliste' angelegt (de-essensplaner)"
+    },
     {
       "at": "2026-09-13T13:00:51+02:00",
       "text": "Etsy-Content-Loop: Bundle B7 'Vorsorge & Pflege Set (DE)' angelegt (erstes rein deutsches Bundle)"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-13T10:00:42+02:00",
       "text": "Etsy-Content-Loop: Pinterest-Pin fuer den DE-Gewohnheits-Tracker ergaenzt und gerendert"
-    },
-    {
-      "at": "2026-09-13T10:00:27+02:00",
-      "text": "Etsy: ARBEITSSTAND + UPLOAD-MAPPE auf IST-Stand 13.09. korrigiert (39 Listings, Dauer-Sale statt Grand-Opening)"
     }
   ]
 }
