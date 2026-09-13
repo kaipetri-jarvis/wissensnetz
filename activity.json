@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-13T19:53:21+00:00",
+  "generated": "2026-09-13T20:03:21+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
-      "at": "2026-09-13T21:53:14+02:00",
+      "at": "2026-09-13T22:01:54+02:00",
+      "text": "Bookkeeping Tracker: 5 Seiten (Year at a Glance + Year-End Checklist), waehrungsneutral"
+    },
+    {
+      "at": "2026-09-13T22:01:15+02:00",
       "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-13T21:52:43+02:00",
-      "text": "Etsy Welle 8: Dopamin-Menue (DE+EN), ADHD Shift Workers, ADHD Freelancers"
-    },
-    {
-      "at": "2026-09-13T21:52:14+02:00",
+      "at": "2026-09-13T22:00:15+02:00",
       "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-13T21:51:14+02:00",
+      "at": "2026-09-13T21:59:14+02:00",
       "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-13T21:50:51+02:00",
-      "text": "Etsy Welle 7: deutsche ADHS-Reihe (4 Planer + B10), Pflege-Notfallmappe, Vorsorge-Organizer, Tax-Prep-Checkliste"
+      "at": "2026-09-13T21:58:14+02:00",
+      "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-13T21:50:13+02:00",
+      "at": "2026-09-13T21:57:14+02:00",
       "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
     }
   ]
