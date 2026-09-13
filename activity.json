@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-13T15:33:19+00:00",
+  "generated": "2026-09-13T15:43:19+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-13T17:36:31+02:00",
+      "text": "Legion stabilisiert: Denkmodus modellseitig aus, 16k Kontext, Warmhalte-Waechter"
+    },
+    {
+      "at": "2026-09-13T17:35:19+02:00",
+      "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-13T17:25:19+02:00",
       "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
@@ -26,14 +34,6 @@
     {
       "at": "2026-09-13T16:05:47+02:00",
       "text": "Zwei produktive Legion-Automationen; OmniRoute-504 durch Direktweg zu Legion umgangen"
-    },
-    {
-      "at": "2026-09-13T16:05:11+02:00",
-      "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-13T16:03:10+02:00",
-      "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
     }
   ]
 }
