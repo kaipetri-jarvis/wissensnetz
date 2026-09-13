@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-13T01:53:14+00:00",
+  "generated": "2026-09-13T02:03:14+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
+      "at": "2026-09-13T03:55:36+02:00",
+      "text": "Memory-Falten: 2026-09-11 verdichtet (automatischer Falt-Lauf)"
+    },
+    {
+      "at": "2026-09-13T03:55:18+02:00",
+      "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-13T03:54:18+02:00",
+      "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-13T03:53:17+02:00",
+      "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-13T03:52:17+02:00",
       "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
     },
     {
       "at": "2026-09-13T03:51:17+02:00",
       "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-13T03:50:17+02:00",
-      "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-13T03:40:17+02:00",
-      "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-13T03:15:16+02:00",
-      "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-13T02:03:56+02:00",
-      "text": "Content-Loop auf 20 Laeufe taeglich, mit Schutz gegen Wiederholungsarbeit"
     }
   ]
 }
