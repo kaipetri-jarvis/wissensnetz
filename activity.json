@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-13T14:53:19+00:00",
+  "generated": "2026-09-13T15:03:19+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-13T17:01:05+02:00",
+      "text": "Etsy Content-Loop: Debt Payoff Tracker von 3 auf 5 Seiten erweitert (Payoff-Reihenfolge + Meilensteine)"
+    },
     {
       "at": "2026-09-13T16:35:37+02:00",
       "text": "Vault-Sync repariert blockierte iCloud-Dateien selbst (brctl download) statt sie zu ueberspringen"
@@ -29,10 +33,6 @@
     },
     {
       "at": "2026-09-13T16:02:10+02:00",
-      "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-13T16:01:10+02:00",
       "text": "Auto-Backup 2026-09-13 — täglicher Workspace-Snapshot"
     }
   ]
