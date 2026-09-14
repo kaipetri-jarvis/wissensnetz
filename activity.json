@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-14T07:53:25+00:00",
+  "generated": "2026-09-14T08:03:25+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-09-14T10:01:12+02:00",
+      "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-14T10:00:43+02:00",
+      "text": "B7 'Vorsorge & Pflege Set DE': Liefer-ZIP gebaut, Preisplan aktualisiert"
+    },
+    {
+      "at": "2026-09-14T10:00:38+02:00",
+      "text": "Listing-SEO: listings/de-sparziel-tracker.md angelegt (DE-Fassung Savings Goal Tracker, 5 Seiten, 13 Tags, Titel 128 Z.)"
+    },
+    {
       "at": "2026-09-14T09:03:08+02:00",
       "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
     },
@@ -22,18 +34,6 @@
     {
       "at": "2026-09-14T08:01:03+02:00",
       "text": "Cross-Selling: Bundle B13 'ADHD Toolkit' angelegt und in Tabelle B eingeordnet"
-    },
-    {
-      "at": "2026-09-14T08:00:59+02:00",
-      "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-14T07:01:54+02:00",
-      "text": "Dated Planner 2027: zwei Inhaltsseiten ergaenzt, Leerseiten-Fehler in der SW-Fassung behoben"
-    },
-    {
-      "at": "2026-09-14T07:00:55+02:00",
-      "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
     }
   ]
 }
