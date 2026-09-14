@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-14T14:53:28+00:00",
+  "generated": "2026-09-14T15:03:28+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-09-14T17:01:49+02:00",
+      "text": "Weekly Meal Planner (EN) von 4 auf 6 volle Seiten erweitert (Pantry/Freezer Check + Batch Cook & Waste Log), Ueberlaufseiten behoben"
+    },
+    {
+      "at": "2026-09-14T17:01:44+02:00",
+      "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-14T17:00:43+02:00",
+      "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-14T16:00:29+02:00",
       "text": "Pin pin-schuldentilgungs-tracker-de.png angelegt (build-pins.js ergaenzt, visuell geprueft)"
     },
@@ -21,18 +33,6 @@
     },
     {
       "at": "2026-09-14T15:13:35+02:00",
-      "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-14T15:00:33+02:00",
-      "text": "Listing de-schuldentilgungs-tracker.md angelegt (Titel 128 Z., 13 Tags, 7,90 EUR)"
-    },
-    {
-      "at": "2026-09-14T14:01:18+02:00",
-      "text": "DE-Fassung Schuldentilgungs-Tracker angelegt (5 Seiten, Seiten 2+3 gefuellt), render-de-neu.js ergaenzt"
-    },
-    {
-      "at": "2026-09-14T14:00:30+02:00",
       "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
     }
   ]
