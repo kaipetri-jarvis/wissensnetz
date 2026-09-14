@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-14T21:13:30+00:00",
+  "generated": "2026-09-14T21:23:30+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-14T23:23:19+02:00",
+      "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-14T23:03:18+02:00",
       "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-14T22:02:49+02:00",
       "text": "Habit Tracker & Goal Planner von 4 auf 6 volle Seiten erweitert: Habit Setup & Streaks + Month in Review neu, bestehende Seiten gefuellt, render-en.js ergaenzt,"
-    },
-    {
-      "at": "2026-09-14T22:02:24+02:00",
-      "text": "Pin pin-arzttermine-organizer-de.png angelegt: build-pins.js um Arzttermine-Organizer erweitert (10 Seiten)"
     }
   ]
 }
