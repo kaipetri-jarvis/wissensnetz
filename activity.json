@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-14T04:53:24+00:00",
+  "generated": "2026-09-14T05:03:24+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-14T07:01:54+02:00",
+      "text": "Dated Planner 2027: zwei Inhaltsseiten ergaenzt, Leerseiten-Fehler in der SW-Fassung behoben"
+    },
+    {
+      "at": "2026-09-14T07:00:55+02:00",
+      "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-14T06:00:51+02:00",
       "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
@@ -25,14 +33,6 @@
     },
     {
       "at": "2026-09-14T04:20:46+02:00",
-      "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-14T04:01:45+02:00",
-      "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-14T04:00:45+02:00",
       "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
     }
   ]
