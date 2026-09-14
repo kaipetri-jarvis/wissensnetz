@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-14T22:53:31+00:00",
+  "generated": "2026-09-14T23:03:31+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-15T01:00:36+02:00",
+      "text": "Content-Loop: Pin pin-euer-rechnungsbuch-de fuer Rechnungsbuch/EUER (DE)"
+    },
+    {
+      "at": "2026-09-15T01:00:29+02:00",
+      "text": "Auto-Backup 2026-09-15 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-15T00:01:18+02:00",
       "text": "Content-Loop: Listing mileage-log (EN) angelegt + Preiszeile in Tabelle A"
@@ -26,14 +34,6 @@
     {
       "at": "2026-09-14T23:25:47+02:00",
       "text": "Memory: Friday-Wallet-Fehlalarm 14.09. (Ursache, Kettenbefund, Fix, Dauerregel)"
-    },
-    {
-      "at": "2026-09-14T23:23:19+02:00",
-      "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-14T23:03:18+02:00",
-      "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
     }
   ]
 }
