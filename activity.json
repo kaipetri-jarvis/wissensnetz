@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-14T08:53:26+00:00",
+  "generated": "2026-09-14T09:03:26+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-14T11:00:27+02:00",
+      "text": "Pin: pin-sparziel-tracker-de.png fuer die DE-Fassung des Sparziel-Trackers"
+    },
+    {
+      "at": "2026-09-14T11:00:16+02:00",
+      "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-14T10:01:12+02:00",
       "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
@@ -26,14 +34,6 @@
     {
       "at": "2026-09-14T09:03:08+02:00",
       "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-14T09:01:04+02:00",
-      "text": "DE-Fassung Sparziel-Tracker angelegt (Uebersetzung des Savings Goal Tracker, 5 Seiten)"
-    },
-    {
-      "at": "2026-09-14T08:01:03+02:00",
-      "text": "Cross-Selling: Bundle B13 'ADHD Toolkit' angelegt und in Tabelle B eingeordnet"
     }
   ]
 }
