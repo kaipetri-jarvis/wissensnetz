@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-14T16:53:29+00:00",
+  "generated": "2026-09-14T17:03:29+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-09-14T19:02:09+02:00",
+      "text": "DE-Fahrtenbuch angelegt: de-fahrtenbuch.html/.pdf/-preview.png, an deutsche Pflichtangaben angepasste Fassung des Business Mileage Log, 6 Seiten ohne Ueberlauf"
+    },
+    {
+      "at": "2026-09-14T19:01:54+02:00",
+      "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-14T19:00:53+02:00",
+      "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-14T18:01:06+02:00",
       "text": "Bundle B15 'Finanz-Set (DE)' angelegt: Budgetplaner + Sparziel-Tracker + Schuldentilgungs-Tracker, Summen nachgerechnet, Tabelle B ergaenzt"
     },
@@ -22,18 +34,6 @@
     {
       "at": "2026-09-14T17:01:49+02:00",
       "text": "Weekly Meal Planner (EN) von 4 auf 6 volle Seiten erweitert (Pantry/Freezer Check + Batch Cook & Waste Log), Ueberlaufseiten behoben"
-    },
-    {
-      "at": "2026-09-14T17:01:44+02:00",
-      "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-14T17:00:43+02:00",
-      "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-14T16:00:29+02:00",
-      "text": "Pin pin-schuldentilgungs-tracker-de.png angelegt (build-pins.js ergaenzt, visuell geprueft)"
     }
   ]
 }
