@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-14T01:13:23+00:00",
+  "generated": "2026-09-14T01:23:23+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-14T03:20:37+02:00",
+      "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-14T03:15:37+02:00",
+      "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-14T03:10:36+02:00",
       "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
@@ -26,14 +34,6 @@
     {
       "at": "2026-09-14T01:00:34+02:00",
       "text": "Content-Loop: Pin fuer Haushaltsbuch DE erstellt (pin-haushaltsbuch-de.png)"
-    },
-    {
-      "at": "2026-09-14T01:00:28+02:00",
-      "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-14T00:00:54+02:00",
-      "text": "Etsy-Loop: Listing fuer Dated Planner 2027 angelegt (Titel 121 Z., 13 Tags, 20 Seiten nachgezaehlt)"
     }
   ]
 }
