@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-14T20:53:30+00:00",
+  "generated": "2026-09-14T21:03:30+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-09-14T23:03:18+02:00",
+      "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-14T23:02:18+02:00",
+      "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-14T23:01:13+02:00",
+      "text": "Content-Loop: Bundle B16 'ADHD Planner Bundle Work & Family' (EN, 3 Planer) angelegt und in Tabelle B eingeordnet"
+    },
+    {
       "at": "2026-09-14T22:30:34+02:00",
       "text": "Content-Loop: SEO-Listing für Client Offboarding Kit (EN) erstellt"
     },
@@ -22,18 +34,6 @@
     {
       "at": "2026-09-14T22:02:24+02:00",
       "text": "Pin pin-arzttermine-organizer-de.png angelegt: build-pins.js um Arzttermine-Organizer erweitert (10 Seiten)"
-    },
-    {
-      "at": "2026-09-14T22:02:13+02:00",
-      "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-14T22:01:12+02:00",
-      "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-14T21:00:38+02:00",
-      "text": "Pin pin-fahrtenbuch-de.png angelegt: build-pins.js ergaenzt, gold-Akzent, Hook ohne Rechtsversprechen, visuell geprueft"
     }
   ]
 }
