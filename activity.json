@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-14T12:53:27+00:00",
+  "generated": "2026-09-14T13:03:27+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-14T15:00:33+02:00",
+      "text": "Listing de-schuldentilgungs-tracker.md angelegt (Titel 128 Z., 13 Tags, 7,90 EUR)"
+    },
     {
       "at": "2026-09-14T14:01:18+02:00",
       "text": "DE-Fassung Schuldentilgungs-Tracker angelegt (5 Seiten, Seiten 2+3 gefuellt), render-de-neu.js ergaenzt"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-14T12:01:54+02:00",
       "text": "Student Budget Planner: von 4 duennen auf 6 volle Seiten erweitert (Weekly Money Check + Money Habits), Listing nachgezogen"
-    },
-    {
-      "at": "2026-09-14T12:01:21+02:00",
-      "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
     }
   ]
 }
