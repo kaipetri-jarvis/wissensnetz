@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-14T19:53:30+00:00",
+  "generated": "2026-09-14T20:03:30+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
+      "at": "2026-09-14T22:02:49+02:00",
+      "text": "Habit Tracker & Goal Planner von 4 auf 6 volle Seiten erweitert: Habit Setup & Streaks + Month in Review neu, bestehende Seiten gefuellt, render-en.js ergaenzt,"
+    },
+    {
+      "at": "2026-09-14T22:02:24+02:00",
+      "text": "Pin pin-arzttermine-organizer-de.png angelegt: build-pins.js um Arzttermine-Organizer erweitert (10 Seiten)"
+    },
+    {
+      "at": "2026-09-14T22:02:13+02:00",
+      "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-14T22:01:12+02:00",
+      "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-14T21:00:38+02:00",
       "text": "Pin pin-fahrtenbuch-de.png angelegt: build-pins.js ergaenzt, gold-Akzent, Hook ohne Rechtsversprechen, visuell geprueft"
     },
     {
       "at": "2026-09-14T20:01:00+02:00",
       "text": "Listing de-fahrtenbuch.md angelegt: Titel 121 Z., 13 Tags (max 19), 6 Seiten belegt, Preis 7,90 EUR aus Vergleichszeilen hergeleitet; Tabelle A um Fahrtenbuch-Z"
-    },
-    {
-      "at": "2026-09-14T20:00:59+02:00",
-      "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-14T19:02:09+02:00",
-      "text": "DE-Fahrtenbuch angelegt: de-fahrtenbuch.html/.pdf/-preview.png, an deutsche Pflichtangaben angepasste Fassung des Business Mileage Log, 6 Seiten ohne Ueberlauf"
-    },
-    {
-      "at": "2026-09-14T19:01:54+02:00",
-      "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-14T19:00:53+02:00",
-      "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
     }
   ]
 }
