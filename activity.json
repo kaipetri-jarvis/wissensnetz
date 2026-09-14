@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-14T18:53:29+00:00",
+  "generated": "2026-09-14T19:03:29+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-14T21:00:38+02:00",
+      "text": "Pin pin-fahrtenbuch-de.png angelegt: build-pins.js ergaenzt, gold-Akzent, Hook ohne Rechtsversprechen, visuell geprueft"
+    },
     {
       "at": "2026-09-14T20:01:00+02:00",
       "text": "Listing de-fahrtenbuch.md angelegt: Titel 121 Z., 13 Tags (max 19), 6 Seiten belegt, Preis 7,90 EUR aus Vergleichszeilen hergeleitet; Tabelle A um Fahrtenbuch-Z"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-14T19:00:53+02:00",
       "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-14T18:01:06+02:00",
-      "text": "Bundle B15 'Finanz-Set (DE)' angelegt: Budgetplaner + Sparziel-Tracker + Schuldentilgungs-Tracker, Summen nachgerechnet, Tabelle B ergaenzt"
     }
   ]
 }
