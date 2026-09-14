@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-14T09:53:26+00:00",
+  "generated": "2026-09-14T10:03:26+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-09-14T12:01:54+02:00",
+      "text": "Student Budget Planner: von 4 duennen auf 6 volle Seiten erweitert (Weekly Money Check + Money Habits), Listing nachgezogen"
+    },
+    {
+      "at": "2026-09-14T12:01:21+02:00",
+      "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-14T12:00:20+02:00",
+      "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-14T11:00:27+02:00",
       "text": "Pin: pin-sparziel-tracker-de.png fuer die DE-Fassung des Sparziel-Trackers"
     },
@@ -21,18 +33,6 @@
     },
     {
       "at": "2026-09-14T10:01:12+02:00",
-      "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-14T10:00:43+02:00",
-      "text": "B7 'Vorsorge & Pflege Set DE': Liefer-ZIP gebaut, Preisplan aktualisiert"
-    },
-    {
-      "at": "2026-09-14T10:00:38+02:00",
-      "text": "Listing-SEO: listings/de-sparziel-tracker.md angelegt (DE-Fassung Savings Goal Tracker, 5 Seiten, 13 Tags, Titel 128 Z.)"
-    },
-    {
-      "at": "2026-09-14T09:03:08+02:00",
       "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
     }
   ]
