@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-14T20:23:30+00:00",
+  "generated": "2026-09-14T20:33:30+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-14T22:30:34+02:00",
+      "text": "Content-Loop: SEO-Listing für Client Offboarding Kit (EN) erstellt"
+    },
     {
       "at": "2026-09-14T22:02:49+02:00",
       "text": "Habit Tracker & Goal Planner von 4 auf 6 volle Seiten erweitert: Habit Setup & Streaks + Month in Review neu, bestehende Seiten gefuellt, render-en.js ergaenzt,"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-14T21:00:38+02:00",
       "text": "Pin pin-fahrtenbuch-de.png angelegt: build-pins.js ergaenzt, gold-Akzent, Hook ohne Rechtsversprechen, visuell geprueft"
-    },
-    {
-      "at": "2026-09-14T20:01:00+02:00",
-      "text": "Listing de-fahrtenbuch.md angelegt: Titel 121 Z., 13 Tags (max 19), 6 Seiten belegt, Preis 7,90 EUR aus Vergleichszeilen hergeleitet; Tabelle A um Fahrtenbuch-Z"
     }
   ]
 }
