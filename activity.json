@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-14T21:23:30+00:00",
+  "generated": "2026-09-14T21:33:30+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-14T23:30:26+02:00",
+      "text": "Content-Loop: SEO-Listing adhd-planner-college (Titel+Tags)"
+    },
+    {
+      "at": "2026-09-14T23:25:47+02:00",
+      "text": "Memory: Friday-Wallet-Fehlalarm 14.09. (Ursache, Kettenbefund, Fix, Dauerregel)"
+    },
     {
       "at": "2026-09-14T23:23:19+02:00",
       "text": "Auto-Backup 2026-09-14 — täglicher Workspace-Snapshot"
@@ -26,14 +34,6 @@
     {
       "at": "2026-09-14T23:01:13+02:00",
       "text": "Content-Loop: Bundle B16 'ADHD Planner Bundle Work & Family' (EN, 3 Planer) angelegt und in Tabelle B eingeordnet"
-    },
-    {
-      "at": "2026-09-14T22:30:34+02:00",
-      "text": "Content-Loop: SEO-Listing für Client Offboarding Kit (EN) erstellt"
-    },
-    {
-      "at": "2026-09-14T22:02:49+02:00",
-      "text": "Habit Tracker & Goal Planner von 4 auf 6 volle Seiten erweitert: Habit Setup & Streaks + Month in Review neu, bestehende Seiten gefuellt, render-en.js ergaenzt,"
     }
   ]
 }
