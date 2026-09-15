@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-15T19:53:40+00:00",
+  "generated": "2026-09-15T20:03:40+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
+      "at": "2026-09-15T22:02:19+02:00",
+      "text": "Content-Loop 22:00: DE-Social-Media-Planer von 4 auf 6 Seiten erweitert (0 px Ueberlauf, PDF 6+2, Pin neu gerendert)"
+    },
+    {
+      "at": "2026-09-15T22:02:19+02:00",
+      "text": "Auto-Backup 2026-09-15 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-15T22:01:17+02:00",
+      "text": "Auto-Backup 2026-09-15 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-15T22:00:40+02:00",
+      "text": "Content-Loop 22:00: Pin fuer de-adhs-planer-muetter gebaut (lilac, DE-Mockup)"
+    },
+    {
       "at": "2026-09-15T21:00:35+02:00",
       "text": "Content-Loop 21:00: Pin fuer de-adhs-planer-selbststaendig gebaut (teal, 38 Seiten belegt)"
     },
     {
       "at": "2026-09-15T20:01:08+02:00",
       "text": "Auto-Backup 2026-09-15 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-15T20:00:50+02:00",
-      "text": "Content-Loop 20:00: Listing fuer de-adhs-planer-selbststaendig angelegt (Titel 127 Zeichen, 13 Tags, 9,90 EUR belegt)"
-    },
-    {
-      "at": "2026-09-15T19:01:15+02:00",
-      "text": "Content-Loop 19:00: DE-Fassung ADHS-Planer fuer Selbststaendige & Freelancer (6. Variante der DE-Reihe) gebaut"
-    },
-    {
-      "at": "2026-09-15T19:01:05+02:00",
-      "text": "Auto-Backup 2026-09-15 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-15T18:01:04+02:00",
-      "text": "Content-Loop 18:00: Bundle B18 'ADHS-Planer Set DE - Schicht & Familie' angelegt, Cross-Sell-Verweise nachgezogen"
     }
   ]
 }
