@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-14T23:53:31+00:00",
+  "generated": "2026-09-15T00:03:31+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-15T02:00:32+02:00",
+      "text": "Auto-Backup 2026-09-15 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-15T01:00:36+02:00",
       "text": "Content-Loop: Pin pin-euer-rechnungsbuch-de fuer Rechnungsbuch/EUER (DE)"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-14T23:30:26+02:00",
       "text": "Content-Loop: SEO-Listing adhd-planner-college (Titel+Tags)"
-    },
-    {
-      "at": "2026-09-14T23:25:47+02:00",
-      "text": "Memory: Friday-Wallet-Fehlalarm 14.09. (Ursache, Kettenbefund, Fix, Dauerregel)"
     }
   ]
 }
