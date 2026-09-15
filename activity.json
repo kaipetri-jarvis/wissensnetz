@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-15T21:53:40+00:00",
+  "generated": "2026-09-15T22:03:40+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-16T00:00:43+02:00",
+      "text": "Content-Loop 00:00: Listing listings/en-caregiver-organizer.md angelegt (Titel 139 Z., 13 Tags, 11,90 EUR)"
+    },
+    {
+      "at": "2026-09-16T00:00:27+02:00",
+      "text": "Auto-Backup 2026-09-16 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-15T23:30:20+02:00",
       "text": "Content-Loop 23:30: Listing-SEO für caregiver-organizer (EN) erstellt"
@@ -26,14 +34,6 @@
     {
       "at": "2026-09-15T23:01:17+02:00",
       "text": "Content-Loop 23:00: Bundle B19 (ADHD Freelance & Self-Employed, EN) angelegt"
-    },
-    {
-      "at": "2026-09-15T23:00:22+02:00",
-      "text": "Auto-Backup 2026-09-15 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-15T22:30:19+02:00",
-      "text": "Content-Loop 22:30: Listing-SEO fuer de-adhs-planer-muetter erstellt"
     }
   ]
 }
