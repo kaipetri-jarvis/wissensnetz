@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-15T21:23:40+00:00",
+  "generated": "2026-09-15T21:33:40+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-15T23:30:20+02:00",
+      "text": "Content-Loop 23:30: Listing-SEO für caregiver-organizer (EN) erstellt"
+    },
     {
       "at": "2026-09-15T23:03:24+02:00",
       "text": "Auto-Backup 2026-09-15 — täglicher Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-15T22:30:19+02:00",
       "text": "Content-Loop 22:30: Listing-SEO fuer de-adhs-planer-muetter erstellt"
-    },
-    {
-      "at": "2026-09-15T22:02:19+02:00",
-      "text": "Content-Loop 22:00: DE-Social-Media-Planer von 4 auf 6 Seiten erweitert (0 px Ueberlauf, PDF 6+2, Pin neu gerendert)"
     }
   ]
 }
