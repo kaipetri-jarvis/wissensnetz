@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-16T20:23:48+00:00",
+  "generated": "2026-09-16T20:33:48+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-16T22:30:34+02:00",
+      "text": "Content-Loop: SEO-Listing für adhd-planner-teens"
+    },
     {
       "at": "2026-09-16T22:02:04+02:00",
       "text": "Content-Loop: payment-reminder.html von 2 auf 4 Seiten (Stufe 3 + Chaser-Skripte)"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-16T21:01:12+02:00",
       "text": "Auto-Backup 2026-09-16 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-16T21:00:38+02:00",
-      "text": "Content-Loop: Pinterest-Pin fuer de-adhs-routinekarten (24 Karten, teal)"
     }
   ]
 }
