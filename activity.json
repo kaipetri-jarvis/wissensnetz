@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-16T06:53:44+00:00",
+  "generated": "2026-09-16T07:03:44+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-16T09:01:40+02:00",
+      "text": "Content-Loop: DE-Fassung ADHS-Planer fuer den Bueroalltag (7. Variante der DE-Reihe) gebaut"
+    },
+    {
+      "at": "2026-09-16T09:01:12+02:00",
+      "text": "Auto-Backup 2026-09-16 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-16T08:01:05+02:00",
       "text": "Auto-Backup 2026-09-16 — täglicher Workspace-Snapshot"
@@ -26,14 +34,6 @@
     {
       "at": "2026-09-16T06:00:56+02:00",
       "text": "Content-Loop: Pinterest-Pin fuer ADHD Planner for Parents (EN) ergaenzt und gerendert"
-    },
-    {
-      "at": "2026-09-16T06:00:53+02:00",
-      "text": "Auto-Backup 2026-09-16 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-16T05:00:47+02:00",
-      "text": "Auto-Backup 2026-09-16 — täglicher Workspace-Snapshot"
     }
   ]
 }
