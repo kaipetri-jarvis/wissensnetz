@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-16T09:53:45+00:00",
+  "generated": "2026-09-16T10:03:45+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
+      "at": "2026-09-16T12:02:30+02:00",
+      "text": "Content-Loop: Delivery Note (EN) von 1 auf 3 Seiten erweitert (Packing List + Delivery Log)"
+    },
+    {
+      "at": "2026-09-16T12:02:29+02:00",
+      "text": "Auto-Backup 2026-09-16 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-16T12:01:27+02:00",
+      "text": "Auto-Backup 2026-09-16 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-16T12:00:26+02:00",
+      "text": "Auto-Backup 2026-09-16 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-16T11:00:32+02:00",
       "text": "Content-Loop: Pinterest-Pin fuer de-adhs-planer-buero (gold) gebaut und gerendert"
     },
     {
       "at": "2026-09-16T11:00:22+02:00",
       "text": "Auto-Backup 2026-09-16 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-16T10:01:17+02:00",
-      "text": "Auto-Backup 2026-09-16 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-16T10:01:07+02:00",
-      "text": "Etsy B8 Creator Brand Kit: Bundle-ZIP gebaut, Mappen-Block und Preisplan nachgezogen"
-    },
-    {
-      "at": "2026-09-16T10:00:42+02:00",
-      "text": "Content-Loop: Etsy-Listing fuer DE-ADHS-Planer Bueroalltag (Titel 121 Z., 13 Tags) angelegt"
-    },
-    {
-      "at": "2026-09-16T09:01:40+02:00",
-      "text": "Content-Loop: DE-Fassung ADHS-Planer fuer den Bueroalltag (7. Variante der DE-Reihe) gebaut"
     }
   ]
 }
