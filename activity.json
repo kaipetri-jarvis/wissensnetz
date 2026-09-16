@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-16T01:13:42+00:00",
+  "generated": "2026-09-16T01:23:42+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-16T03:20:39+02:00",
+      "text": "Auto-Backup 2026-09-16 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-16T03:15:39+02:00",
+      "text": "Auto-Backup 2026-09-16 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-16T03:10:38+02:00",
       "text": "Auto-Backup 2026-09-16 — täglicher Workspace-Snapshot"
@@ -26,14 +34,6 @@
     {
       "at": "2026-09-16T01:00:36+02:00",
       "text": "Content-Loop 01:00: Pinterest-Pin fuer adhd-planner-self-employed (EN) ergaenzt und gerendert"
-    },
-    {
-      "at": "2026-09-16T01:00:30+02:00",
-      "text": "Auto-Backup 2026-09-16 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-16T00:00:43+02:00",
-      "text": "Content-Loop 00:00: Listing listings/en-caregiver-organizer.md angelegt (Titel 139 Z., 13 Tags, 11,90 EUR)"
     }
   ]
 }
