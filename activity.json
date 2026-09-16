@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-16T05:53:44+00:00",
+  "generated": "2026-09-16T06:03:44+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-16T08:01:05+02:00",
+      "text": "Auto-Backup 2026-09-16 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-16T07:01:34+02:00",
       "text": "Content-Loop: Monthly Budget Planner (EN) von 4 auf 6 Seiten erweitert (Bill Payment Calendar, Year at a Glance)"
@@ -29,10 +33,6 @@
     },
     {
       "at": "2026-09-16T05:00:47+02:00",
-      "text": "Auto-Backup 2026-09-16 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-16T04:20:45+02:00",
       "text": "Auto-Backup 2026-09-16 — täglicher Workspace-Snapshot"
     }
   ]
