@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-17T12:03:53+00:00",
+  "generated": "2026-09-17T12:13:53+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-09-17T14:06:22+02:00",
+      "text": "Content-Loop 14:00 | DE-Fassung Quartals-Check fuer Selbststaendige: produkte/de-quartals-check.html (6 Seiten, 0 px Ueberlauf) + listings/de-quartals-check.md,"
+    },
+    {
+      "at": "2026-09-17T14:05:46+02:00",
+      "text": "Auto-Backup 2026-09-17 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-17T14:04:45+02:00",
+      "text": "Auto-Backup 2026-09-17 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-17T14:03:44+02:00",
       "text": "Auto-Backup 2026-09-17 — täglicher Workspace-Snapshot"
     },
@@ -21,18 +33,6 @@
     },
     {
       "at": "2026-09-17T14:01:42+02:00",
-      "text": "Auto-Backup 2026-09-17 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-17T14:00:41+02:00",
-      "text": "Auto-Backup 2026-09-17 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-17T13:01:25+02:00",
-      "text": "Content-Loop 13:00 | B5 Freelancer Finance: Wert-Anker korrigiert (Mileage Log ist eigenes 7,90-EUR-Listing) -> Einzelwert 27,70 EUR, Ersparnis 14,80 EUR / 53,4"
-    },
-    {
-      "at": "2026-09-17T13:00:37+02:00",
       "text": "Auto-Backup 2026-09-17 — täglicher Workspace-Snapshot"
     }
   ]
