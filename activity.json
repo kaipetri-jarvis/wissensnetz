@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-17T20:23:56+00:00",
+  "generated": "2026-09-17T20:33:56+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-17T22:30:22+02:00",
+      "text": "Content-Loop 22:30 | Listing-SEO: seo-de-nebenkosten.md erstellt (Titel + 13 Tags, Vermieter-Set Cross-Sell)"
+    },
     {
       "at": "2026-09-17T22:02:51+02:00",
       "text": "Content-Loop 22:00 | Pins: DE-Pin fuer baby-budget in build-pins.js ergaenzt und gerendert (pin-baby-budget-de.png), Gemini-Check bestanden (Hook klar, sprachre"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-17T21:00:32+02:00",
       "text": "Content-Loop 21:00 | Pins: DE-Pin fuer de-hochzeitsplaner in build-pins.js ergaenzt und gerendert (pin-hochzeitsplaner-de.png), sprachrein deutsch mit DE-Cover,"
-    },
-    {
-      "at": "2026-09-17T21:00:20+02:00",
-      "text": "Auto-Backup 2026-09-17 — täglicher Workspace-Snapshot"
     }
   ]
 }
