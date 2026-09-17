@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-17T13:53:54+00:00",
+  "generated": "2026-09-17T14:03:54+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-17T16:00:34+02:00",
+      "text": "Content-Loop 16:00 | Pin: pin-quartals-check-de.png fuer de-quartals-check in build-pins.js ergaenzt und gerendert (visuell geprueft)"
+    },
     {
       "at": "2026-09-17T15:00:44+02:00",
       "text": "Content-Loop 15:00 | Listing-SEO commercial-invoice-template: Tag-Ueberschneidung mit dem Standard-Invoice-Listing von 8 auf 3 gesenkt, Fehlintention 'business "
@@ -29,10 +33,6 @@
     },
     {
       "at": "2026-09-17T14:03:44+02:00",
-      "text": "Auto-Backup 2026-09-17 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-17T14:02:43+02:00",
       "text": "Auto-Backup 2026-09-17 — täglicher Workspace-Snapshot"
     }
   ]
