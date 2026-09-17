@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-17T09:53:52+00:00",
+  "generated": "2026-09-17T10:03:52+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
+      "at": "2026-09-17T12:03:51+02:00",
+      "text": "Content-Loop 12:00 | de-preiskalkulator.html 2->4 Seiten (Arbeitsblatt + Szenarien), Seitenueberlauf behoben, ZIP und Listing-Text nachgezogen"
+    },
+    {
+      "at": "2026-09-17T12:03:32+02:00",
+      "text": "Auto-Backup 2026-09-17 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-17T12:02:31+02:00",
+      "text": "Auto-Backup 2026-09-17 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-17T12:01:30+02:00",
+      "text": "Auto-Backup 2026-09-17 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-17T12:00:29+02:00",
+      "text": "Auto-Backup 2026-09-17 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-17T11:09:25+02:00",
-      "text": "Auto-Backup 2026-09-17 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-17T11:00:39+02:00",
-      "text": "Content-Loop 11:00 | Pin pin-kunden-offboarding-de.png fuer de-kunden-offboarding ergaenzt und gerendert (2:3, visuell geprueft)"
-    },
-    {
-      "at": "2026-09-17T11:00:24+02:00",
-      "text": "Auto-Backup 2026-09-17 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-17T10:01:05+02:00",
-      "text": "Etsy B8: Bundle-Titelbild Creator Brand Kit (eigenes Multi-Format-Layout), UPLOAD-MAPPE nachgezogen"
-    },
-    {
-      "at": "2026-09-17T10:00:45+02:00",
-      "text": "Content-Loop 10:00 | Listing-SEO dated-planner-2027: Titel 121->135 Z., 13 Tags ueberarbeitet (planner insert/digital download/year planner raus, 2027 agenda/st"
-    },
-    {
-      "at": "2026-09-17T10:00:20+02:00",
       "text": "Auto-Backup 2026-09-17 — täglicher Workspace-Snapshot"
     }
   ]
