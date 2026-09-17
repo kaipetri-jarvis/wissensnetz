@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-17T19:53:56+00:00",
+  "generated": "2026-09-17T20:03:56+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
+      "at": "2026-09-17T22:02:51+02:00",
+      "text": "Content-Loop 22:00 | Pins: DE-Pin fuer baby-budget in build-pins.js ergaenzt und gerendert (pin-baby-budget-de.png), Gemini-Check bestanden (Hook klar, sprachre"
+    },
+    {
+      "at": "2026-09-17T22:02:25+02:00",
+      "text": "Auto-Backup 2026-09-17 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-17T22:01:08+02:00",
+      "text": "Content-Loop 22:00 | Produkt erweitern: de-sparziel-tracker von 5 auf 7 Seiten (Notgroschen, Sparquote & Vertrags-Check), PDF/Preview neu, Listing auf 7 Seiten "
+    },
+    {
+      "at": "2026-09-17T22:00:24+02:00",
+      "text": "Auto-Backup 2026-09-17 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-17T21:00:32+02:00",
       "text": "Content-Loop 21:00 | Pins: DE-Pin fuer de-hochzeitsplaner in build-pins.js ergaenzt und gerendert (pin-hochzeitsplaner-de.png), sprachrein deutsch mit DE-Cover,"
     },
     {
       "at": "2026-09-17T21:00:20+02:00",
-      "text": "Auto-Backup 2026-09-17 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-17T20:00:40+02:00",
-      "text": "Content-Loop 20:00 | Listing-SEO: de-schuldentilgungs-tracker Titel auf 136 Zeichen ausgebaut (Ratenplan, Sofort-Download), 3 kannibalisierende Tags durch Lawin"
-    },
-    {
-      "at": "2026-09-17T20:00:16+02:00",
-      "text": "Auto-Backup 2026-09-17 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-17T19:03:54+02:00",
-      "text": "Content-Loop 19:00 | Uebersetzung/Variante: DE-Fassung des Wedding Planners (de-hochzeitsplaner.html/.pdf/-preview.png + Listing), nativ auf Standesamt/zwei Tra"
-    },
-    {
-      "at": "2026-09-17T19:03:13+02:00",
       "text": "Auto-Backup 2026-09-17 — täglicher Workspace-Snapshot"
     }
   ]
