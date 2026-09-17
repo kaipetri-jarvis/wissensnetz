@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-17T01:13:49+00:00",
+  "generated": "2026-09-17T01:23:49+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-17T03:20:39+02:00",
+      "text": "Auto-Backup 2026-09-17 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-17T03:15:39+02:00",
+      "text": "Auto-Backup 2026-09-17 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-17T03:10:38+02:00",
       "text": "Auto-Backup 2026-09-17 — täglicher Workspace-Snapshot"
@@ -26,14 +34,6 @@
     {
       "at": "2026-09-17T01:00:51+02:00",
       "text": "Content-Loop: Pin fuer freelancer-tax-prep-checklist"
-    },
-    {
-      "at": "2026-09-17T01:00:30+02:00",
-      "text": "Auto-Backup 2026-09-17 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-17T00:00:31+02:00",
-      "text": "Content-Loop: Titel und Tags adhd-planner-teens (GoodNotes/Executive Function statt redundanter Teen-Tags)"
     }
   ]
 }
