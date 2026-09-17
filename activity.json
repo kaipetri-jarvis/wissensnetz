@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-17T20:53:56+00:00",
+  "generated": "2026-09-17T21:03:56+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-17T23:00:58+02:00",
+      "text": "Content-Loop 23:00 | Cross-Selling: BUNDLE-de-finanz-set auf 18 Seiten nachgefuehrt (Sparziel-Tracker jetzt 7 Seiten), Summen und Etsy-Limits maschinell gepruef"
+    },
+    {
+      "at": "2026-09-17T23:00:28+02:00",
+      "text": "Auto-Backup 2026-09-17 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-17T22:30:22+02:00",
       "text": "Content-Loop 22:30 | Listing-SEO: seo-de-nebenkosten.md erstellt (Titel + 13 Tags, Vermieter-Set Cross-Sell)"
@@ -26,14 +34,6 @@
     {
       "at": "2026-09-17T22:01:08+02:00",
       "text": "Content-Loop 22:00 | Produkt erweitern: de-sparziel-tracker von 5 auf 7 Seiten (Notgroschen, Sparquote & Vertrags-Check), PDF/Preview neu, Listing auf 7 Seiten "
-    },
-    {
-      "at": "2026-09-17T22:00:24+02:00",
-      "text": "Auto-Backup 2026-09-17 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-17T21:00:32+02:00",
-      "text": "Content-Loop 21:00 | Pins: DE-Pin fuer de-hochzeitsplaner in build-pins.js ergaenzt und gerendert (pin-hochzeitsplaner-de.png), sprachrein deutsch mit DE-Cover,"
     }
   ]
 }
