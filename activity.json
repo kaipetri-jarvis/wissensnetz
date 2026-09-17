@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-17T12:53:53+00:00",
+  "generated": "2026-09-17T13:03:53+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-17T15:00:44+02:00",
+      "text": "Content-Loop 15:00 | Listing-SEO commercial-invoice-template: Tag-Ueberschneidung mit dem Standard-Invoice-Listing von 8 auf 3 gesenkt, Fehlintention 'business "
+    },
     {
       "at": "2026-09-17T14:06:22+02:00",
       "text": "Content-Loop 14:00 | DE-Fassung Quartals-Check fuer Selbststaendige: produkte/de-quartals-check.html (6 Seiten, 0 px Ueberlauf) + listings/de-quartals-check.md,"
@@ -29,10 +33,6 @@
     },
     {
       "at": "2026-09-17T14:02:43+02:00",
-      "text": "Auto-Backup 2026-09-17 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-17T14:01:42+02:00",
       "text": "Auto-Backup 2026-09-17 — täglicher Workspace-Snapshot"
     }
   ]
