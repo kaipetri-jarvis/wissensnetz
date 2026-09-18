@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-18T10:24:03+00:00",
+  "generated": "2026-09-18T10:34:03+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-18T12:28:30+02:00",
+      "text": "Memory: zweiter stiller TTS-Aussetzer (18.09.), Handweg per infer tts convert dokumentiert"
+    },
     {
       "at": "2026-09-18T12:04:38+02:00",
       "text": "Auto-Backup 2026-09-18 — täglicher Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-18T12:02:18+02:00",
       "text": "Memory: Recherche Bartonella/EBV natürliche Mittel (CDC, PubMed, Johns-Hopkins-Laborstudie, Zweitmeinungen Gemini + GPT) als Themendatei; Tagesnotiz-Übergabe"
-    },
-    {
-      "at": "2026-09-18T12:01:34+02:00",
-      "text": "Auto-Backup 2026-09-18 — täglicher Workspace-Snapshot"
     }
   ]
 }
