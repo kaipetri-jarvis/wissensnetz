@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-18T06:54:00+00:00",
+  "generated": "2026-09-18T07:04:00+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
+      "at": "2026-09-18T09:02:49+02:00",
+      "text": "Content-Loop 09:00: EN-Fassung des Arzttermine-Organizers (en-medical-appointment-organizer) mit Listing, Anhangseiten und Preisplan-Zeile"
+    },
+    {
+      "at": "2026-09-18T09:02:19+02:00",
+      "text": "Auto-Backup 2026-09-18 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-18T09:01:18+02:00",
+      "text": "Auto-Backup 2026-09-18 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-18T09:00:16+02:00",
+      "text": "Auto-Backup 2026-09-18 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-18T08:01:13+02:00",
       "text": "Content-Loop 08:00: B12 Haushalt-und-Alltag-Set auf echte 18 Seiten korrigiert (6+6+6), Folgestellen nachgezogen"
     },
     {
       "at": "2026-09-18T07:01:55+02:00",
       "text": "Content-Loop 07:00: de-studenten-budgetplaner um echte Antraege-und-Fristen-Seite erweitert (7 Seiten, 0 px Ueberlauf)"
-    },
-    {
-      "at": "2026-09-18T07:01:07+02:00",
-      "text": "Auto-Backup 2026-09-18 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-18T06:01:00+02:00",
-      "text": "Auto-Backup 2026-09-18 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-18T06:00:51+02:00",
-      "text": "Content-Loop 06:00: Pin fuer de-adhs-planer-teenager ergaenzt und gerendert"
-    },
-    {
-      "at": "2026-09-18T05:00:56+02:00",
-      "text": "Auto-Backup 2026-09-18 — täglicher Workspace-Snapshot"
     }
   ]
 }
