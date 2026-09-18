@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-18T10:44:03+00:00",
+  "generated": "2026-09-18T10:54:03+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-18T12:50:05+02:00",
+      "text": "Memory: Stand zur Voice-Note per gateway call message.action (Pfadregel, dryRun-Grenze)"
+    },
+    {
+      "at": "2026-09-18T12:49:13+02:00",
+      "text": "Memory/AGENTS: Auto-Voice-Ausfall belegt — Folge-Turns (Nachricht während laufenden Turns, steer-Modus) werden ohne TTS zugestellt; Erkennungsregel und Handweg "
+    },
     {
       "at": "2026-09-18T12:28:30+02:00",
       "text": "Memory: zweiter stiller TTS-Aussetzer (18.09.), Handweg per infer tts convert dokumentiert"
@@ -26,14 +34,6 @@
     {
       "at": "2026-09-18T12:03:38+02:00",
       "text": "Auto-Backup 2026-09-18 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-18T12:02:36+02:00",
-      "text": "Auto-Backup 2026-09-18 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-18T12:02:18+02:00",
-      "text": "Memory: Recherche Bartonella/EBV natürliche Mittel (CDC, PubMed, Johns-Hopkins-Laborstudie, Zweitmeinungen Gemini + GPT) als Themendatei; Tagesnotiz-Übergabe"
     }
   ]
 }
