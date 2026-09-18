@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-18T05:54:00+00:00",
+  "generated": "2026-09-18T06:04:00+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-18T08:01:13+02:00",
+      "text": "Content-Loop 08:00: B12 Haushalt-und-Alltag-Set auf echte 18 Seiten korrigiert (6+6+6), Folgestellen nachgezogen"
+    },
     {
       "at": "2026-09-18T07:01:55+02:00",
       "text": "Content-Loop 07:00: de-studenten-budgetplaner um echte Antraege-und-Fristen-Seite erweitert (7 Seiten, 0 px Ueberlauf)"
@@ -29,10 +33,6 @@
     },
     {
       "at": "2026-09-18T05:00:56+02:00",
-      "text": "Auto-Backup 2026-09-18 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-18T04:02:52+02:00",
       "text": "Auto-Backup 2026-09-18 — täglicher Workspace-Snapshot"
     }
   ]
