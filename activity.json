@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-18T22:54:07+00:00",
+  "generated": "2026-09-18T23:04:07+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-19T01:00:49+02:00",
+      "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-19T01:00:41+02:00",
+      "text": "Content-Loop 01:00 | Pin: pin-adhd-medication-mood-tracker-en.png ergänzt und gerendert (build-pins.js, teal, Badge 6 Pages)"
+    },
     {
       "at": "2026-09-19T00:01:01+02:00",
       "text": "Content-Loop 00:00 | Listing-SEO: de-adhs-planer-muetter — Titel 125->135 Zeichen, 7 kannibalisierende Tags durch produkteigene Begriffe ersetzt"
@@ -26,14 +34,6 @@
     {
       "at": "2026-09-18T23:01:43+02:00",
       "text": "Cross-Selling: neues Bundle B27 (Hochzeit planen & finanzieren DE) als Listing + Tabelle-B-Zeile"
-    },
-    {
-      "at": "2026-09-18T23:01:40+02:00",
-      "text": "Auto-Backup 2026-09-18 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-18T23:00:39+02:00",
-      "text": "Auto-Backup 2026-09-18 — täglicher Workspace-Snapshot"
     }
   ]
 }
