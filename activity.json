@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-18T07:54:02+00:00",
+  "generated": "2026-09-18T08:04:02+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
+      "at": "2026-09-18T10:02:24+02:00",
+      "text": "Auto-Backup 2026-09-18 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-18T10:01:22+02:00",
+      "text": "Etsy: Collage-Vorlage für Bundles mit gemischten Seitenverhältnissen + zweites B8-Listing-Foto; PREIS-GEWINN-PLAN korrigiert (B8-Titelbild war seit 17.09. ferti"
+    },
+    {
+      "at": "2026-09-18T10:00:41+02:00",
+      "text": "Content-Loop 10:00: Listing-SEO fuer listings/de-nebenkosten.md — Titel 137 Zeichen, 13 Tags entkannibalisiert gegen das Vermieter-Bundle"
+    },
+    {
+      "at": "2026-09-18T10:00:23+02:00",
+      "text": "Auto-Backup 2026-09-18 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-18T09:02:49+02:00",
       "text": "Content-Loop 09:00: EN-Fassung des Arzttermine-Organizers (en-medical-appointment-organizer) mit Listing, Anhangseiten und Preisplan-Zeile"
     },
     {
       "at": "2026-09-18T09:02:19+02:00",
       "text": "Auto-Backup 2026-09-18 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-18T09:01:18+02:00",
-      "text": "Auto-Backup 2026-09-18 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-18T09:00:16+02:00",
-      "text": "Auto-Backup 2026-09-18 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-18T08:01:13+02:00",
-      "text": "Content-Loop 08:00: B12 Haushalt-und-Alltag-Set auf echte 18 Seiten korrigiert (6+6+6), Folgestellen nachgezogen"
-    },
-    {
-      "at": "2026-09-18T07:01:55+02:00",
-      "text": "Content-Loop 07:00: de-studenten-budgetplaner um echte Antraege-und-Fristen-Seite erweitert (7 Seiten, 0 px Ueberlauf)"
     }
   ]
 }
