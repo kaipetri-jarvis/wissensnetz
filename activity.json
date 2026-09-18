@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-18T13:54:04+00:00",
+  "generated": "2026-09-18T14:04:04+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-09-18T16:00:56+02:00",
+      "text": "Auto-Backup 2026-09-18 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-18T16:00:44+02:00",
+      "text": "Pins: EN-Pin fuer New Baby Planner ergaenzt und gerendert"
+    },
+    {
+      "at": "2026-09-18T15:55:56+02:00",
+      "text": "Auto-Backup 2026-09-18 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-18T15:52:56+02:00",
       "text": "Auto-Backup 2026-09-18 — täglicher Workspace-Snapshot"
     },
@@ -22,18 +34,6 @@
     {
       "at": "2026-09-18T15:50:54+02:00",
       "text": "Memory: Gateway-Route für Sprachnachrichten im Echtbetrieb bestätigt; Tagesnotiz Bibel-Link/EPUB"
-    },
-    {
-      "at": "2026-09-18T15:47:55+02:00",
-      "text": "Auto-Backup 2026-09-18 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-18T15:00:44+02:00",
-      "text": "Content-Loop 15:00: Listing-SEO client-offboarding-kit — Titel auf 138Z erweitert, 4 generische Tags durch inhaltlich belegte ersetzt"
-    },
-    {
-      "at": "2026-09-18T14:02:44+02:00",
-      "text": "Content-Loop 14:00: EN-Fassung des Baby-Planers (en-baby-planner) mit Listing, laenderneutral statt uebersetzt"
     }
   ]
 }
