@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-18T10:54:03+00:00",
+  "generated": "2026-09-18T11:04:03+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-18T13:01:15+02:00",
+      "text": "Content-Loop 13:00: B17 Vermieter-Komplettset — Seitenzahlen auf Produktseiten vereinheitlicht (23 -> 19), Widerspruch zu de-nebenkosten.md behoben, PREIS-GEWIN"
+    },
+    {
+      "at": "2026-09-18T13:00:43+02:00",
+      "text": "Auto-Backup 2026-09-18 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-18T12:50:05+02:00",
       "text": "Memory: Stand zur Voice-Note per gateway call message.action (Pfadregel, dryRun-Grenze)"
@@ -25,14 +33,6 @@
     },
     {
       "at": "2026-09-18T12:04:38+02:00",
-      "text": "Auto-Backup 2026-09-18 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-18T12:04:31+02:00",
-      "text": "Content-Loop 12:00: Kunden-Onboarding-Kit (DE) von 4 auf 6 Seiten — Ablauf/Meilensteine und Material/Zugaenge ergaenzt, Anleitung und Vorschauen nachgezogen"
-    },
-    {
-      "at": "2026-09-18T12:03:38+02:00",
       "text": "Auto-Backup 2026-09-18 — täglicher Workspace-Snapshot"
     }
   ]
