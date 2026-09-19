@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-19T18:54:15+00:00",
+  "generated": "2026-09-19T19:04:15+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
+      "at": "2026-09-19T21:00:47+02:00",
+      "text": "Pin fuer Kleinunternehmer-Startpaket (A18) ergaenzt und gerendert"
+    },
+    {
+      "at": "2026-09-19T21:00:41+02:00",
+      "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-19T20:59:47+02:00",
+      "text": "Legion lief 1,5 h nicht: limits.json war zurueckgesetzt, wiederhergestellt"
+    },
+    {
+      "at": "2026-09-19T20:58:40+02:00",
+      "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-19T20:01:08+02:00",
       "text": "Listing-SEO service-agreement: Titel neu fokussiert, 6 Fuellbegriffe durch Berufs-Keywords ersetzt"
     },
     {
       "at": "2026-09-19T20:00:36+02:00",
       "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-19T19:35:35+02:00",
-      "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-19T19:30:34+02:00",
-      "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-19T19:23:52+02:00",
-      "text": "Friday laeuft auf Legion: null Kontingentkosten statt bis zu 6 % Wochenbudget pro Tag"
-    },
-    {
-      "at": "2026-09-19T19:20:08+02:00",
-      "text": "TikTok-Empfehlung '5 MCPs' geprueft: 4 von 5 bereits abgedeckt"
     }
   ]
 }
