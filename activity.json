@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-19T15:34:14+00:00",
+  "generated": "2026-09-19T15:44:14+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-19T17:37:25+02:00",
+      "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-19T17:34:25+02:00",
+      "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-19T17:03:44+02:00",
       "text": "Content-Loop 17:00: mileage-log von 4 auf 6 Seiten (Privatfahrten + Business-Share, Parking/Tolls), Listing und ZIP-Kommentar nachgezogen"
@@ -26,14 +34,6 @@
     {
       "at": "2026-09-19T17:01:22+02:00",
       "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-19T17:00:21+02:00",
-      "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-19T16:00:45+02:00",
-      "text": "Content-Loop 16:00: EN-Pin fuer Dopamine Menu & Reward Plan (build-pins.js + gerendertes PNG)"
     }
   ]
 }
