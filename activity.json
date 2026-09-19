@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-19T07:54:11+00:00",
+  "generated": "2026-09-19T08:04:11+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
+      "at": "2026-09-19T10:01:41+02:00",
+      "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-19T10:01:03+02:00",
+      "text": "Etsy: Bundle B12 (Haushalt & Alltag Set DE) gebaut, Mappen-Block + Preisplan-Status nachgezogen, veraltete Kurzfassung im ARBEITSSTAND korrigiert"
+    },
+    {
+      "at": "2026-09-19T10:00:43+02:00",
+      "text": "Content-Loop 10:00: Listing-SEO canva-media-kit — Titel auf Instagram/Rate-Sheet-Suchbegriffe umgestellt, 4 Breit-Tags gegen Long-Tail getauscht"
+    },
+    {
+      "at": "2026-09-19T10:00:41+02:00",
+      "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-19T09:05:43+02:00",
       "text": "Content-Loop 09:00: Deutscher Jahresplaner 2027 (de-planer-2027 + S/W) aus dem EN-Original abgeleitet, mit bundesweiten Feiertagen, Listing und Preiszeile"
     },
     {
       "at": "2026-09-19T09:05:36+02:00",
-      "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-19T09:04:35+02:00",
-      "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-19T09:03:34+02:00",
-      "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-19T09:02:33+02:00",
-      "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-19T09:01:32+02:00",
       "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
     }
   ]
