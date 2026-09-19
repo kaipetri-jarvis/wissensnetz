@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-19T19:44:15+00:00",
+  "generated": "2026-09-19T19:54:15+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
-      "at": "2026-09-19T21:41:43+02:00",
+      "at": "2026-09-19T21:53:44+02:00",
       "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-19T21:32:33+02:00",
-      "text": "Ursache gefunden: /v1-Endpunkt bricht Tool-Calling, nicht die Modellgroesse"
+      "at": "2026-09-19T21:53:24+02:00",
+      "text": "Automaton-Inferenztimeout auf 5 Minuten (Kai), per Env uebersteuerbar"
     },
     {
-      "at": "2026-09-19T21:29:36+02:00",
-      "text": "Befund: Legion-Umstellung macht Friday arbeitsunfaehig - qwen3-14b ruft keine Werkzeuge auf"
+      "at": "2026-09-19T21:50:32+02:00",
+      "text": "Praezisierung: Inferenz-Timeout ist 60 s pro Versuch (inference.ts:19), nicht 120"
     },
     {
-      "at": "2026-09-19T21:25:54+02:00",
-      "text": "Stand Legion: Ultron hat den Gateway-Umweg entfernt (localDirect), 17-35 s statt 87 s; Friday liefert"
+      "at": "2026-09-19T21:50:27+02:00",
+      "text": "Ultron: Gegenlesung Sonnet-Rueckstellung - dailyPoints ist keine Bremse, fiveHourCeiling 70 ist es"
     },
     {
-      "at": "2026-09-19T21:10:41+02:00",
-      "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
+      "at": "2026-09-19T21:47:50+02:00",
+      "text": "Zurueck auf Sonnet: Friday arbeitet wieder, 30 Punkte laufen ueber Nacht"
     },
     {
-      "at": "2026-09-19T21:05:41+02:00",
+      "at": "2026-09-19T21:47:44+02:00",
       "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
     }
   ]
