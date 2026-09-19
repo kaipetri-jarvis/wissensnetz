@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-19T09:54:11+00:00",
+  "generated": "2026-09-19T10:04:11+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-09-19T12:02:13+02:00",
+      "text": "Content-Loop 12:00: Debt Payoff Tracker (EN) von 5 auf 7 Seiten erweitert (Interest & Terms, Monthly Close), Listing und ARBEITSSTAND nachgezogen"
+    },
+    {
+      "at": "2026-09-19T12:01:50+02:00",
+      "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-19T12:00:49+02:00",
+      "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-19T11:00:44+02:00",
       "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
     },
@@ -21,18 +33,6 @@
     },
     {
       "at": "2026-09-19T10:01:41+02:00",
-      "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-19T10:01:03+02:00",
-      "text": "Etsy: Bundle B12 (Haushalt & Alltag Set DE) gebaut, Mappen-Block + Preisplan-Status nachgezogen, veraltete Kurzfassung im ARBEITSSTAND korrigiert"
-    },
-    {
-      "at": "2026-09-19T10:00:43+02:00",
-      "text": "Content-Loop 10:00: Listing-SEO canva-media-kit — Titel auf Instagram/Rate-Sheet-Suchbegriffe umgestellt, 4 Breit-Tags gegen Long-Tail getauscht"
-    },
-    {
-      "at": "2026-09-19T10:00:41+02:00",
       "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
     }
   ]
