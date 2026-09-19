@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-19T10:54:12+00:00",
+  "generated": "2026-09-19T11:04:12+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-19T13:01:45+02:00",
+      "text": "Content-Loop 13:00: Neues Bundle B29 (Jahresstart 2027 Set DE) als Listing angelegt, Tabelle B und Nachtrag im Preis-Gewinn-Plan ergaenzt"
+    },
+    {
+      "at": "2026-09-19T13:00:55+02:00",
+      "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-19T12:02:13+02:00",
       "text": "Content-Loop 12:00: Debt Payoff Tracker (EN) von 5 auf 7 Seiten erweitert (Interest & Terms, Monthly Close), Listing und ARBEITSSTAND nachgezogen"
@@ -25,14 +33,6 @@
     },
     {
       "at": "2026-09-19T11:00:44+02:00",
-      "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-19T11:00:34+02:00",
-      "text": "Content-Loop 11:00: DE-Pin fuer Jahresplaner 2027 (pin-planer-2027-de) in build-pins.js ergaenzt und gerendert"
-    },
-    {
-      "at": "2026-09-19T10:01:41+02:00",
       "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
     }
   ]
