@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-19T22:54:17+00:00",
+  "generated": "2026-09-19T23:04:17+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-20T01:02:03+02:00",
+      "text": "Content-Loop: de-fahrtenbuch um Blatt 5 'Parkgebuehren, Maut und Reisenebenkosten' erweitert (5 -> 6 Inhaltsseiten)"
+    },
+    {
+      "at": "2026-09-20T01:01:10+02:00",
+      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-20T00:38:06+02:00",
       "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
@@ -26,14 +34,6 @@
     {
       "at": "2026-09-20T00:01:04+02:00",
       "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-20T00:00:43+02:00",
-      "text": "Content-Loop: Listing-SEO commercial-service-agreement (Tag-Kollision mit Standard-Listing 7 -> 1)"
-    },
-    {
-      "at": "2026-09-19T23:53:29+02:00",
-      "text": "iPhone-Spiegelung in der EU gesperrt: belegte Ursache statt WLAN-Verdacht"
     }
   ]
 }
