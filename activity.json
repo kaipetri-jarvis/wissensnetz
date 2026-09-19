@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-19T19:04:15+00:00",
+  "generated": "2026-09-19T19:14:15+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-19T21:10:41+02:00",
+      "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-19T21:05:41+02:00",
+      "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-19T21:00:47+02:00",
       "text": "Pin fuer Kleinunternehmer-Startpaket (A18) ergaenzt und gerendert"
@@ -25,14 +33,6 @@
     },
     {
       "at": "2026-09-19T20:58:40+02:00",
-      "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-19T20:01:08+02:00",
-      "text": "Listing-SEO service-agreement: Titel neu fokussiert, 6 Fuellbegriffe durch Berufs-Keywords ersetzt"
-    },
-    {
-      "at": "2026-09-19T20:00:36+02:00",
       "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
     }
   ]
