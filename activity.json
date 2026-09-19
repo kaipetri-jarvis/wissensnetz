@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-19T12:54:12+00:00",
+  "generated": "2026-09-19T13:04:12+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-19T15:01:03+02:00",
+      "text": "Content-Loop 15:00: SEO fuer commercial-client-onboarding-kit (Titel + 13 Tags entkannibalisiert, Seitenliste auf 6 Seiten nachgezogen)"
+    },
     {
       "at": "2026-09-19T14:01:31+02:00",
       "text": "Content-Loop 14:00: Listing fuer die deutsche Baby-Planer-Fassung angelegt (de-baby-planner.md), veraltete Luecken-Notiz im EN-Listing korrigiert"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-19T12:02:13+02:00",
       "text": "Content-Loop 12:00: Debt Payoff Tracker (EN) von 5 auf 7 Seiten erweitert (Interest & Terms, Monthly Close), Listing und ARBEITSSTAND nachgezogen"
-    },
-    {
-      "at": "2026-09-19T12:01:50+02:00",
-      "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
     }
   ]
 }
