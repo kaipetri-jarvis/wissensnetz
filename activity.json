@@ -1,7 +1,7 @@
 {
-  "generated": "2026-09-19T01:04:08+00:00",
+  "generated": "2026-09-19T01:14:08+00:00",
   "bots": {
-    "jarvis": true,
+    "jarvis": false,
     "ultron": true
   },
   "atlas": {
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-19T03:10:58+02:00",
+      "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-19T03:00:57+02:00",
       "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-19T00:01:01+02:00",
       "text": "Content-Loop 00:00 | Listing-SEO: de-adhs-planer-muetter — Titel 125->135 Zeichen, 7 kannibalisierende Tags durch produkteigene Begriffe ersetzt"
-    },
-    {
-      "at": "2026-09-19T00:00:45+02:00",
-      "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
     }
   ]
 }
