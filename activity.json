@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-19T16:04:14+00:00",
+  "generated": "2026-09-19T16:14:14+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
-      "at": "2026-09-19T18:01:28+02:00",
-      "text": "Content-Loop 18:00: B30 (College Set EN) als Bundle-Listing angelegt, Tabelle B + Nachtrag im Preisplan, Loop-Log"
-    },
-    {
-      "at": "2026-09-19T18:00:27+02:00",
+      "at": "2026-09-19T18:13:29+02:00",
       "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-19T17:47:26+02:00",
+      "at": "2026-09-19T18:12:26+02:00",
+      "text": "Wissensdatenbank AI Trading: SQLite mit belegten Fakten, Abfragewerkzeug, Themendatei"
+    },
+    {
+      "at": "2026-09-19T18:11:29+02:00",
       "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-19T17:44:25+02:00",
+      "at": "2026-09-19T18:10:29+02:00",
       "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-19T17:37:25+02:00",
+      "at": "2026-09-19T18:09:29+02:00",
       "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-19T17:34:25+02:00",
+      "at": "2026-09-19T18:05:28+02:00",
       "text": "Auto-Backup 2026-09-19 — täglicher Workspace-Snapshot"
     }
   ]
