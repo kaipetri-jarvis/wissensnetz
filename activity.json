@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-20T12:54:22+00:00",
+  "generated": "2026-09-20T13:04:22+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
-      "at": "2026-09-20T14:53:57+02:00",
-      "text": "Belegt: Legion-Bot ueber die CLI nicht adressierbar; einziger Weg waere Token in Fridays Profil"
-    },
-    {
-      "at": "2026-09-20T14:52:09+02:00",
-      "text": "Kais Entscheidung: kein eigener Telegram-Bot fuer Friday"
-    },
-    {
-      "at": "2026-09-20T14:51:26+02:00",
-      "text": "Canva-OAuth abgeschlossen, Token im Cache (Vision)"
-    },
-    {
-      "at": "2026-09-20T14:50:54+02:00",
-      "text": "Korrektur: --account funktioniert in diesem Gateway nicht, Meldeweg bleibt auf Default-Bot"
-    },
-    {
-      "at": "2026-09-20T14:50:36+02:00",
+      "at": "2026-09-20T15:04:17+02:00",
       "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-20T14:48:23+02:00",
-      "text": "Fridays Meldeweg auf den Legion-Bot umgestellt; channels status ist keine Ladezustands-Quelle"
+      "at": "2026-09-20T15:03:50+02:00",
+      "text": "Themendatei zur DeskLane-Website angelegt, Livegang-Entscheidung festgehalten (Vision)"
+    },
+    {
+      "at": "2026-09-20T15:01:01+02:00",
+      "text": "Listing-SEO: adhd-planner-shift-workers Titel und 5 Tags auf Longtail geschaerft (Ultron)"
+    },
+    {
+      "at": "2026-09-20T15:00:58+02:00",
+      "text": "Tagesnotiz: Rechtsseiten vollstaendig (Vision)"
+    },
+    {
+      "at": "2026-09-20T15:00:52+02:00",
+      "text": "Rechtsseiten vollstaendig: Anschrift, Aufsichtsbehoerde LDI NRW, Hoster; alle Livegang-Platzhalter raus"
+    },
+    {
+      "at": "2026-09-20T15:00:18+02:00",
+      "text": "Tagesnotiz: Produktzaehlung 87 Listings (27 Bundles, 55 Einzel, 5 Lizenz), Mappen-Tabelle nachgezogen (Ultron)"
     }
   ]
 }
