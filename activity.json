@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-20T00:24:17+00:00",
+  "generated": "2026-09-20T00:34:17+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
-      "at": "2026-09-20T02:18:20+02:00",
-      "text": "Domain desklanestudio.com registriert (Cloudflare)"
-    },
-    {
-      "at": "2026-09-20T02:09:53+02:00",
-      "text": "Domain-Entscheidung desklanestudio.com festgehalten"
-    },
-    {
-      "at": "2026-09-20T02:02:05+02:00",
-      "text": "Gmail-MCP in die Vision-Config eingetragen (kein Reload)"
-    },
-    {
-      "at": "2026-09-20T02:01:14+02:00",
+      "at": "2026-09-20T02:34:16+02:00",
       "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-20T01:56:24+02:00",
-      "text": "Weiterleitung Gmail->Outlook: Vorarbeit und offener Ablauf notiert"
+      "at": "2026-09-20T02:33:16+02:00",
+      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-20T01:51:12+02:00",
-      "text": "Gmail-Zugang für desklane.studio@gmail.com eingerichtet und verifiziert"
+      "at": "2026-09-20T02:32:16+02:00",
+      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-20T02:32:00+02:00",
+      "text": "Mailweiterleitung hello@desklanestudio.com eingerichtet und verifiziert"
+    },
+    {
+      "at": "2026-09-20T02:31:15+02:00",
+      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-20T02:30:15+02:00",
+      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
     }
   ]
 }
