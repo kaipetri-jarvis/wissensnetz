@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-20T10:54:21+00:00",
+  "generated": "2026-09-20T11:04:22+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-20T13:01:14+02:00",
+      "text": "Content-Loop: neues Bundle B33 'Wedding: Plan It & Pay For It' (EN) als Listing angelegt — englisches Gegenstueck zu B27, 12,90 EUR / 27,5 % nachgerechnet"
+    },
+    {
+      "at": "2026-09-20T13:00:26+02:00",
+      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-20T12:06:24+02:00",
       "text": "Content-Loop: de-dienstleistungsvertrag von 4 auf 6 Seiten — Anlage A (Nachtrag) + Anlage B (Abnahme & Uebergabe), 69 Formularfelder, Komplettset-ZIP nachgezoge"
@@ -25,14 +33,6 @@
     },
     {
       "at": "2026-09-20T12:03:18+02:00",
-      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-20T12:02:17+02:00",
-      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-20T12:01:16+02:00",
       "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
     }
   ]
