@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-20T13:04:22+00:00",
+  "generated": "2026-09-20T13:14:22+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-09-20T15:13:40+02:00",
+      "text": "Legion-Vertonung: Audiodatei statt Sprachnachricht, zwei Hebel ohne Wirkung"
+    },
+    {
+      "at": "2026-09-20T15:10:47+02:00",
+      "text": "Legion-Meldeweg bestaetigt"
+    },
+    {
+      "at": "2026-09-20T15:04:34+02:00",
+      "text": "Memory: Themendatei E-Mail-Postfaecher in INDEX und Tagesnotiz (Ultron)"
+    },
+    {
       "at": "2026-09-20T15:04:17+02:00",
       "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
     },
@@ -22,18 +34,6 @@
     {
       "at": "2026-09-20T15:01:01+02:00",
       "text": "Listing-SEO: adhd-planner-shift-workers Titel und 5 Tags auf Longtail geschaerft (Ultron)"
-    },
-    {
-      "at": "2026-09-20T15:00:58+02:00",
-      "text": "Tagesnotiz: Rechtsseiten vollstaendig (Vision)"
-    },
-    {
-      "at": "2026-09-20T15:00:52+02:00",
-      "text": "Rechtsseiten vollstaendig: Anschrift, Aufsichtsbehoerde LDI NRW, Hoster; alle Livegang-Platzhalter raus"
-    },
-    {
-      "at": "2026-09-20T15:00:18+02:00",
-      "text": "Tagesnotiz: Produktzaehlung 87 Listings (27 Bundles, 55 Einzel, 5 Lizenz), Mappen-Tabelle nachgezogen (Ultron)"
     }
   ]
 }
