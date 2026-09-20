@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-20T21:54:26+00:00",
+  "generated": "2026-09-20T22:04:26+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-21T00:00:52+02:00",
+      "text": "Content-Loop 00:00 — Listing-SEO: de-kunden-offboarding Titel 121→139 Zeichen, 4 Longtail-Tags"
+    },
+    {
+      "at": "2026-09-20T23:56:33+02:00",
+      "text": "Tagesnotiz: Produktstand 23:58 – 87 gebaut, B31–B35 nur Listing-Text ohne ZIP (Ultron)"
+    },
     {
       "at": "2026-09-20T23:30:59+02:00",
       "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
@@ -26,14 +34,6 @@
     {
       "at": "2026-09-20T23:00:58+02:00",
       "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-20T22:30:32+02:00",
-      "text": "Content-Loop 22:30 — SEO-Listing für de-nachlassplaner (Titel + 13 Tags)"
-    },
-    {
-      "at": "2026-09-20T22:03:20+02:00",
-      "text": "Content-Loop 22:00 — de-mahnung.html von 4 auf 6 Seiten erweitert (Verzugszinsen-Arbeitsblatt + Ratenzahlungsvereinbarung), ZIPs und Listings nachgezogen"
     }
   ]
 }
