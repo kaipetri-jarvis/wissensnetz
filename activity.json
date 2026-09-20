@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-20T11:54:22+00:00",
+  "generated": "2026-09-20T12:04:22+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
+      "at": "2026-09-20T14:01:24+02:00",
+      "text": "Etsy: DE-Listing fuer die Kunden-Onboarding-Mappe (12,90 EUR) + Z14-Nachtrag"
+    },
+    {
+      "at": "2026-09-20T14:00:31+02:00",
+      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-20T13:58:17+02:00",
+      "text": "Vorname: im Aussenkontakt gesperrt, in Fridays Arbeitskopien erlaubt"
+    },
+    {
+      "at": "2026-09-20T13:55:25+02:00",
+      "text": "Friday: gefilterter Lesezugriff auf Etsy-Projekt und Memory (taeglicher Abgleich)"
+    },
+    {
       "at": "2026-09-20T13:53:29+02:00",
       "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
     },
     {
       "at": "2026-09-20T13:50:48+02:00",
       "text": "tools/frag-friday.sh: Friday ansprechen trotz gesetzter Sperre"
-    },
-    {
-      "at": "2026-09-20T13:49:45+02:00",
-      "text": "Automaton: Startschleuse - kein Anklopfen mehr bei gesetzter PAUSE"
-    },
-    {
-      "at": "2026-09-20T13:40:38+02:00",
-      "text": "Federfuehrung Friday/Legion liegt bei Jarvis (Kais Entscheidung)"
-    },
-    {
-      "at": "2026-09-20T13:36:04+02:00",
-      "text": "Automaton: Leerlaufbremse-Schwelle auf 10 Pruefaufrufe/h gesenkt (nachgemessen)"
-    },
-    {
-      "at": "2026-09-20T13:34:53+02:00",
-      "text": "Automaton: Leerlaufbremse fuer naechster-punkt.py ergaenzt"
     }
   ]
 }
