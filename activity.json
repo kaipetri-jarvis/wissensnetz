@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-20T19:54:25+00:00",
+  "generated": "2026-09-20T20:04:25+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
+      "at": "2026-09-20T22:03:20+02:00",
+      "text": "Content-Loop 22:00 — de-mahnung.html von 4 auf 6 Seiten erweitert (Verzugszinsen-Arbeitsblatt + Ratenzahlungsvereinbarung), ZIPs und Listings nachgezogen"
+    },
+    {
+      "at": "2026-09-20T22:02:54+02:00",
+      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-20T22:01:52+02:00",
+      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-20T22:01:28+02:00",
+      "text": "Content-Loop 22:00 — Pin pin-haushalt-alltag-set-de.png fuer BUNDLE-de-haushalt-alltag (3 Vorlagen, 18 Seiten) gerendert"
+    },
+    {
+      "at": "2026-09-20T22:00:51+02:00",
+      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-20T21:00:53+02:00",
       "text": "Content-Loop 21:00 — Pin pin-creator-content-kit-en.png fuer Bundle B31 gerendert (letztes Bundle-Listing ohne Pin)"
-    },
-    {
-      "at": "2026-09-20T21:00:47+02:00",
-      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-20T20:01:26+02:00",
-      "text": "Content-Loop 20:00 — Pin pin-kundenreise-set-de.png fuer Bundle B34 gerendert (Slot-Wechsel: Listing-SEO maschinell ohne offenen Kandidaten)"
-    },
-    {
-      "at": "2026-09-20T20:00:43+02:00",
-      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-20T19:01:25+02:00",
-      "text": "Content-Loop 19:00 — EN-Listing listings/en-landlord-set.md fuer das fertig gebaute Landlord Management Kit (Z11) angelegt, Etsy-Limits maschinell geprueft"
-    },
-    {
-      "at": "2026-09-20T19:00:39+02:00",
-      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
     }
   ]
 }
