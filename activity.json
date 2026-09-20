@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-20T13:54:23+00:00",
+  "generated": "2026-09-20T14:04:23+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-20T16:00:41+02:00",
+      "text": "Content-Loop 16:00 — Pin fuer Wedding-Set-Bundle B33 (pin-wedding-set-en.png) + build-pins.js-Eintrag"
+    },
+    {
+      "at": "2026-09-20T16:00:22+02:00",
+      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-20T15:49:50+02:00",
       "text": "E-Mail: Gmail-Weiterleitung – Passkey lief ins Leere (Popup ohne Opener), Hinzufügen-Knopf seit Neuladen weg, Ursache unbelegt; Lektionen Safari-Steuerung (Ultr"
@@ -26,14 +34,6 @@
     {
       "at": "2026-09-20T15:20:18+02:00",
       "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-20T15:19:59+02:00",
-      "text": "friday-meldet.sh verschickt echte Sprachnachrichten (OGG/Opus per --media)"
-    },
-    {
-      "at": "2026-09-20T15:16:55+02:00",
-      "text": "Korrektur: Legion-Meldung kommt als Sprachnachricht an"
     }
   ]
 }
