@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-20T20:24:25+00:00",
+  "generated": "2026-09-20T20:34:25+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-20T22:30:32+02:00",
+      "text": "Content-Loop 22:30 — SEO-Listing für de-nachlassplaner (Titel + 13 Tags)"
+    },
     {
       "at": "2026-09-20T22:03:20+02:00",
       "text": "Content-Loop 22:00 — de-mahnung.html von 4 auf 6 Seiten erweitert (Verzugszinsen-Arbeitsblatt + Ratenzahlungsvereinbarung), ZIPs und Listings nachgezogen"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-20T22:00:51+02:00",
       "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-20T21:00:53+02:00",
-      "text": "Content-Loop 21:00 — Pin pin-creator-content-kit-en.png fuer Bundle B31 gerendert (letztes Bundle-Listing ohne Pin)"
     }
   ]
 }
