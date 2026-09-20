@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-20T13:14:22+00:00",
+  "generated": "2026-09-20T13:24:22+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
-      "at": "2026-09-20T15:13:40+02:00",
-      "text": "Legion-Vertonung: Audiodatei statt Sprachnachricht, zwei Hebel ohne Wirkung"
+      "at": "2026-09-20T15:21:55+02:00",
+      "text": "E-Mail: Gmail-Weiterleitung nach Outlook nur mit Kais Passkey moeglich (API fuer Privatkonten gesperrt), Waechter gestartet, Gmail-MCP bei Jarvis eingetragen (U"
     },
     {
-      "at": "2026-09-20T15:10:47+02:00",
-      "text": "Legion-Meldeweg bestaetigt"
-    },
-    {
-      "at": "2026-09-20T15:04:34+02:00",
-      "text": "Memory: Themendatei E-Mail-Postfaecher in INDEX und Tagesnotiz (Ultron)"
-    },
-    {
-      "at": "2026-09-20T15:04:17+02:00",
+      "at": "2026-09-20T15:20:18+02:00",
       "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-20T15:03:50+02:00",
-      "text": "Themendatei zur DeskLane-Website angelegt, Livegang-Entscheidung festgehalten (Vision)"
+      "at": "2026-09-20T15:19:59+02:00",
+      "text": "friday-meldet.sh verschickt echte Sprachnachrichten (OGG/Opus per --media)"
     },
     {
-      "at": "2026-09-20T15:01:01+02:00",
-      "text": "Listing-SEO: adhd-planner-shift-workers Titel und 5 Tags auf Longtail geschaerft (Ultron)"
+      "at": "2026-09-20T15:16:55+02:00",
+      "text": "Korrektur: Legion-Meldung kommt als Sprachnachricht an"
+    },
+    {
+      "at": "2026-09-20T15:16:08+02:00",
+      "text": "Voice-Note ueber Legion nicht erzwingbar: CLI verwirft delivery-Feld"
+    },
+    {
+      "at": "2026-09-20T15:13:40+02:00",
+      "text": "Legion-Vertonung: Audiodatei statt Sprachnachricht, zwei Hebel ohne Wirkung"
     }
   ]
 }
