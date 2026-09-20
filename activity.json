@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-20T11:44:22+00:00",
+  "generated": "2026-09-20T11:54:22+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-09-20T13:53:29+02:00",
+      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-20T13:50:48+02:00",
+      "text": "tools/frag-friday.sh: Friday ansprechen trotz gesetzter Sperre"
+    },
+    {
+      "at": "2026-09-20T13:49:45+02:00",
+      "text": "Automaton: Startschleuse - kein Anklopfen mehr bei gesetzter PAUSE"
+    },
+    {
       "at": "2026-09-20T13:40:38+02:00",
       "text": "Federfuehrung Friday/Legion liegt bei Jarvis (Kais Entscheidung)"
     },
@@ -22,18 +34,6 @@
     {
       "at": "2026-09-20T13:34:53+02:00",
       "text": "Automaton: Leerlaufbremse fuer naechster-punkt.py ergaenzt"
-    },
-    {
-      "at": "2026-09-20T13:01:14+02:00",
-      "text": "Content-Loop: neues Bundle B33 'Wedding: Plan It & Pay For It' (EN) als Listing angelegt — englisches Gegenstueck zu B27, 12,90 EUR / 27,5 % nachgerechnet"
-    },
-    {
-      "at": "2026-09-20T13:00:26+02:00",
-      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-20T12:06:24+02:00",
-      "text": "Content-Loop: de-dienstleistungsvertrag von 4 auf 6 Seiten — Anlage A (Nachtrag) + Anlage B (Abnahme & Uebergabe), 69 Formularfelder, Komplettset-ZIP nachgezoge"
     }
   ]
 }
