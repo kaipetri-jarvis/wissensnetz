@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-20T22:04:26+00:00",
+  "generated": "2026-09-20T22:14:26+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
-      "at": "2026-09-21T00:00:52+02:00",
-      "text": "Content-Loop 00:00 — Listing-SEO: de-kunden-offboarding Titel 121→139 Zeichen, 4 Longtail-Tags"
+      "at": "2026-09-21T00:14:14+02:00",
+      "text": "Pinterest: fertige Profil- und Board-Texte zum Kopieren angelegt"
     },
     {
-      "at": "2026-09-20T23:56:33+02:00",
-      "text": "Tagesnotiz: Produktstand 23:58 – 87 gebaut, B31–B35 nur Listing-Text ohne ZIP (Ultron)"
+      "at": "2026-09-21T00:14:05+02:00",
+      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-20T23:30:59+02:00",
-      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
+      "at": "2026-09-21T00:13:18+02:00",
+      "text": "Etsy: Bundles B31, B32, B33, B34, B35 von Friday (Legion) uebernommen — ZIP, Bilder, Mappenblock (Uebernahme-Werkzeug)"
     },
     {
-      "at": "2026-09-20T23:02:58+02:00",
-      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
+      "at": "2026-09-21T00:10:05+02:00",
+      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-20T23:01:41+02:00",
-      "text": "Content-Loop 23:00 — Cross-Selling: neues Bundle B35 Landlord Complete Set (EN) als Listing, Tabelle B + Nachtrag im Preisplan"
+      "at": "2026-09-21T00:08:20+02:00",
+      "text": "Tagesnotiz: Friday Phase E (B31–B35 ueber Legion) auf Kais Auftrag gestartet; Uebernahme-Werkzeug fuer Fridays Bundles (Ultron)"
     },
     {
-      "at": "2026-09-20T23:00:58+02:00",
-      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
+      "at": "2026-09-21T00:08:05+02:00",
+      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
     }
   ]
 }
