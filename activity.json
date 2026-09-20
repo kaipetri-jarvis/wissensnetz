@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-20T15:54:23+00:00",
+  "generated": "2026-09-20T16:04:23+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-09-20T18:02:34+02:00",
+      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-20T18:01:25+02:00",
+      "text": "Content-Loop 18:00 — Cross-Selling: Bundle B34 'Kundenreise komplett DE' (Onboarding + Offboarding, 16,90 EUR) als echtes Listing angelegt, Tabelle B nachgezoge"
+    },
+    {
+      "at": "2026-09-20T18:00:32+02:00",
+      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-20T17:03:03+02:00",
       "text": "Content-Loop 17:00 — payment-reminder.html von 4 auf 6 Seiten (Late-Fee-/Zins-Worksheet + Instalment Plan Agreement), 3 ZIPs und 2 Bundle-Texte nachgezogen"
     },
@@ -21,18 +33,6 @@
     },
     {
       "at": "2026-09-20T17:01:27+02:00",
-      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-20T17:00:26+02:00",
-      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-20T16:00:41+02:00",
-      "text": "Content-Loop 16:00 — Pin fuer Wedding-Set-Bundle B33 (pin-wedding-set-en.png) + build-pins.js-Eintrag"
-    },
-    {
-      "at": "2026-09-20T16:00:22+02:00",
       "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
     }
   ]
