@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-20T06:54:20+00:00",
+  "generated": "2026-09-20T07:04:20+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-09-20T09:02:56+02:00",
+      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-20T09:01:51+02:00",
+      "text": "Content-Loop: EN-Listing wedding-planner angelegt + Sitzplanseite repariert"
+    },
+    {
+      "at": "2026-09-20T09:00:54+02:00",
+      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-20T08:01:21+02:00",
       "text": "Content-Loop: Bundle B32 Baby-Set DE (Planen & Sparen) als Listing angelegt"
     },
@@ -22,18 +34,6 @@
     {
       "at": "2026-09-20T07:06:29+02:00",
       "text": "Content-Loop: Service Agreement auf 6 Seiten erweitert (Exhibit A Change Order, Exhibit B Acceptance & Handover)"
-    },
-    {
-      "at": "2026-09-20T07:05:44+02:00",
-      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-20T07:04:43+02:00",
-      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-20T07:03:42+02:00",
-      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
     }
   ]
 }
