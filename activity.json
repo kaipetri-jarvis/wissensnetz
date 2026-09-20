@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-20T20:54:25+00:00",
+  "generated": "2026-09-20T21:04:26+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-09-20T23:02:58+02:00",
+      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-20T23:01:41+02:00",
+      "text": "Content-Loop 23:00 — Cross-Selling: neues Bundle B35 Landlord Complete Set (EN) als Listing, Tabelle B + Nachtrag im Preisplan"
+    },
+    {
+      "at": "2026-09-20T23:00:58+02:00",
+      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-20T22:30:32+02:00",
       "text": "Content-Loop 22:30 — SEO-Listing für de-nachlassplaner (Titel + 13 Tags)"
     },
@@ -21,18 +33,6 @@
     },
     {
       "at": "2026-09-20T22:02:54+02:00",
-      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-20T22:01:52+02:00",
-      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-20T22:01:28+02:00",
-      "text": "Content-Loop 22:00 — Pin pin-haushalt-alltag-set-de.png fuer BUNDLE-de-haushalt-alltag (3 Vorlagen, 18 Seiten) gerendert"
-    },
-    {
-      "at": "2026-09-20T22:00:51+02:00",
       "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
     }
   ]
