@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-20T07:54:20+00:00",
+  "generated": "2026-09-20T08:04:20+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-09-20T10:01:01+02:00",
+      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-20T10:00:47+02:00",
+      "text": "Content-Loop: SEO fuer listings/adhd-daily-planner.md (Titel + 5 Tags ersetzt, KI-Offenlegung ergaenzt)"
+    },
+    {
+      "at": "2026-09-20T10:00:45+02:00",
+      "text": "Etsy: Fridays 28 Bilder uebernommen — alle 89 Listings der Upload-Mappe komplett"
+    },
+    {
       "at": "2026-09-20T09:15:57+02:00",
       "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
     },
@@ -22,18 +34,6 @@
     {
       "at": "2026-09-20T09:04:38+02:00",
       "text": "Etsy: 15 Bundles B13-B30 aus Fridays Lieferung uebernommen (ZIPs, Bilder, Mappenbloecke), B23-Umlaute korrigiert"
-    },
-    {
-      "at": "2026-09-20T09:02:56+02:00",
-      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-20T09:01:51+02:00",
-      "text": "Content-Loop: EN-Listing wedding-planner angelegt + Sitzplanseite repariert"
-    },
-    {
-      "at": "2026-09-20T09:00:54+02:00",
-      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
     }
   ]
 }
