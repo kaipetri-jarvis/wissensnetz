@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-20T18:54:25+00:00",
+  "generated": "2026-09-20T19:04:25+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-20T21:00:53+02:00",
+      "text": "Content-Loop 21:00 — Pin pin-creator-content-kit-en.png fuer Bundle B31 gerendert (letztes Bundle-Listing ohne Pin)"
+    },
+    {
+      "at": "2026-09-20T21:00:47+02:00",
+      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-20T20:01:26+02:00",
       "text": "Content-Loop 20:00 — Pin pin-kundenreise-set-de.png fuer Bundle B34 gerendert (Slot-Wechsel: Listing-SEO maschinell ohne offenen Kandidaten)"
@@ -26,14 +34,6 @@
     {
       "at": "2026-09-20T19:00:39+02:00",
       "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-20T18:02:34+02:00",
-      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-20T18:01:25+02:00",
-      "text": "Content-Loop 18:00 — Cross-Selling: Bundle B34 'Kundenreise komplett DE' (Onboarding + Offboarding, 16,90 EUR) als echtes Listing angelegt, Tabelle B nachgezoge"
     }
   ]
 }
