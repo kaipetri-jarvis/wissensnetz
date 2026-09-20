@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-20T12:14:22+00:00",
+  "generated": "2026-09-20T12:24:22+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
+      "at": "2026-09-20T14:24:12+02:00",
+      "text": "TikTok-Empfehlungen bewertet; impeccable installiert"
+    },
+    {
+      "at": "2026-09-20T14:23:34+02:00",
+      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-20T14:21:33+02:00",
+      "text": "Friday: Lagebericht beim Zuruf, Waechter-Skripte ins Repo, Datenbankpflege"
+    },
+    {
+      "at": "2026-09-20T14:17:23+02:00",
+      "text": "Legion-Bot als Fridays Absender: Laufzeit kennt den Account nicht, Default-Weg bleibt aktiv"
+    },
+    {
+      "at": "2026-09-20T14:16:33+02:00",
+      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-20T14:13:11+02:00",
       "text": "Friday meldet sich selbst bei Kai (ueber Jarvis-Bot, mit Tagesdeckel)"
-    },
-    {
-      "at": "2026-09-20T14:12:33+02:00",
-      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-20T14:09:46+02:00",
-      "text": "Legion-Tunnel auf neue IP korrigiert und angehalten; offene Friday-Punkte dokumentiert"
-    },
-    {
-      "at": "2026-09-20T14:01:24+02:00",
-      "text": "Etsy: DE-Listing fuer die Kunden-Onboarding-Mappe (12,90 EUR) + Z14-Nachtrag"
-    },
-    {
-      "at": "2026-09-20T14:00:31+02:00",
-      "text": "Auto-Backup 2026-09-20 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-20T13:58:17+02:00",
-      "text": "Vorname: im Aussenkontakt gesperrt, in Fridays Arbeitskopien erlaubt"
     }
   ]
 }
