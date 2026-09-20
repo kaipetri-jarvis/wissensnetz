@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-20T13:24:22+00:00",
+  "generated": "2026-09-20T13:34:22+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-20T15:30:39+02:00",
+      "text": "Sprachnachricht-Weg bestaetigt und in der Themendatei festgeschrieben"
+    },
     {
       "at": "2026-09-20T15:21:55+02:00",
       "text": "E-Mail: Gmail-Weiterleitung nach Outlook nur mit Kais Passkey moeglich (API fuer Privatkonten gesperrt), Waechter gestartet, Gmail-MCP bei Jarvis eingetragen (U"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-20T15:16:08+02:00",
       "text": "Voice-Note ueber Legion nicht erzwingbar: CLI verwirft delivery-Feld"
-    },
-    {
-      "at": "2026-09-20T15:13:40+02:00",
-      "text": "Legion-Vertonung: Audiodatei statt Sprachnachricht, zwei Hebel ohne Wirkung"
     }
   ]
 }
