@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-21T16:54:34+00:00",
+  "generated": "2026-09-21T17:04:34+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-09-21T19:02:01+02:00",
+      "text": "Content-Loop: DE-Set-Listing 'Rechnungs- & Angebots-Vorlagen' (Z4, 14,90 EUR) angelegt — Luecke aus BUNDLE-de-kundenreise-komplett belegt, Seiten/Felder/Formeln"
+    },
+    {
+      "at": "2026-09-21T19:01:46+02:00",
+      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-21T19:00:45+02:00",
+      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-21T18:01:47+02:00",
       "text": "Content-Loop: Neues Bundle B38 'Caregiver Complete Set' EN (3 Mappen, 16,90 EUR, 41,11 % Ersparnis) — Luecke maschinell belegt, Tabelle B um B38 und das fehlend"
     },
@@ -21,18 +33,6 @@
     },
     {
       "at": "2026-09-21T18:00:39+02:00",
-      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-21T17:06:04+02:00",
-      "text": "Content-Loop: Kleinunternehmer-Start-Checkliste von 5 auf 7 Seiten (Wechsel zur Regelbesteuerung, Nebenberuflich selbststaendig) — Seitenhoehen gemessen, ZIP un"
-    },
-    {
-      "at": "2026-09-21T17:05:35+02:00",
-      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-21T17:04:34+02:00",
       "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
     }
   ]
