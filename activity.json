@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-21T19:14:35+00:00",
+  "generated": "2026-09-21T19:24:35+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
-      "at": "2026-09-21T21:11:59+02:00",
+      "at": "2026-09-21T21:24:07+02:00",
+      "text": "Markenfamilie auf die Hausfarben gebracht: Leder als Duoton auf TEAL_D, Akzent auf TERRA, Emblem enger freigestellt"
+    },
+    {
+      "at": "2026-09-21T21:23:58+02:00",
       "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-21T21:08:57+02:00",
+      "at": "2026-09-21T21:21:21+02:00",
+      "text": "Banner und Website-Kopf verfeinert: Lichtfuehrung, Schlagschatten, Goldrahmen, eingepasster Schriftgrad; Bauskript mit abgelegt"
+    },
+    {
+      "at": "2026-09-21T21:20:58+02:00",
       "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-21T21:07:58+02:00",
-      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
+      "at": "2026-09-21T21:20:03+02:00",
+      "text": "Markenfamilie E16: README mit Dateiübersicht, Farben und der Banner-Texturfalle"
     },
     {
-      "at": "2026-09-21T21:05:58+02:00",
-      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-21T21:04:58+02:00",
-      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-21T21:03:56+02:00",
+      "at": "2026-09-21T21:18:58+02:00",
       "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
     }
   ]
