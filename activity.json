@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-21T17:54:34+00:00",
+  "generated": "2026-09-21T18:04:34+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-21T20:00:40+02:00",
+      "text": "Content-Loop: Listing-SEO de-adhs-planer-buero — Titel 121->127 Zeichen mit 'zum Ausdrucken', 3 schwache Tags getauscht, Limits maschinell geprueft"
+    },
     {
       "at": "2026-09-21T19:02:01+02:00",
       "text": "Content-Loop: DE-Set-Listing 'Rechnungs- & Angebots-Vorlagen' (Z4, 14,90 EUR) angelegt — Luecke aus BUNDLE-de-kundenreise-komplett belegt, Seiten/Felder/Formeln"
@@ -29,10 +33,6 @@
     },
     {
       "at": "2026-09-21T18:01:41+02:00",
-      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-21T18:00:39+02:00",
       "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
     }
   ]
