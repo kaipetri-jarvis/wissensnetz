@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-21T15:04:33+00:00",
+  "generated": "2026-09-21T15:14:33+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-09-21T17:06:04+02:00",
+      "text": "Content-Loop: Kleinunternehmer-Start-Checkliste von 5 auf 7 Seiten (Wechsel zur Regelbesteuerung, Nebenberuflich selbststaendig) — Seitenhoehen gemessen, ZIP un"
+    },
+    {
+      "at": "2026-09-21T17:05:35+02:00",
+      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-21T17:04:34+02:00",
+      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-21T17:03:33+02:00",
       "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
     },
@@ -21,18 +33,6 @@
     },
     {
       "at": "2026-09-21T17:01:31+02:00",
-      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-21T17:00:30+02:00",
-      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-21T16:00:45+02:00",
-      "text": "Content-Loop: Pin fuer Bundle B37 (Home & Life Set EN) — pin-home-everyday-set-en.png, Eintrag in build-pins.js, Badge maschinell gezaehlt"
-    },
-    {
-      "at": "2026-09-21T16:00:24+02:00",
       "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
     }
   ]
