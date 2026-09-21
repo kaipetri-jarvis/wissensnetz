@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-21T18:54:35+00:00",
+  "generated": "2026-09-21T19:04:35+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
+      "at": "2026-09-21T21:03:56+02:00",
+      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-21T21:00:56+02:00",
+      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-21T21:00:48+02:00",
+      "text": "Content-Loop: Pin fuer B38 Caregiver Complete Set (EN) — build-pins.js Eintrag + gerendertes 1000x1500-PNG, Seitenzahl 11+8+7=26 gegengezaehlt, Bild geprueft"
+    },
+    {
+      "at": "2026-09-21T20:59:56+02:00",
+      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-21T20:56:55+02:00",
+      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-21T20:00:40+02:00",
       "text": "Content-Loop: Listing-SEO de-adhs-planer-buero — Titel 121->127 Zeichen mit 'zum Ausdrucken', 3 schwache Tags getauscht, Limits maschinell geprueft"
-    },
-    {
-      "at": "2026-09-21T19:02:01+02:00",
-      "text": "Content-Loop: DE-Set-Listing 'Rechnungs- & Angebots-Vorlagen' (Z4, 14,90 EUR) angelegt — Luecke aus BUNDLE-de-kundenreise-komplett belegt, Seiten/Felder/Formeln"
-    },
-    {
-      "at": "2026-09-21T19:01:46+02:00",
-      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-21T19:00:45+02:00",
-      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-21T18:01:47+02:00",
-      "text": "Content-Loop: Neues Bundle B38 'Caregiver Complete Set' EN (3 Mappen, 16,90 EUR, 41,11 % Ersparnis) — Luecke maschinell belegt, Tabelle B um B38 und das fehlend"
-    },
-    {
-      "at": "2026-09-21T18:01:41+02:00",
-      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
     }
   ]
 }
