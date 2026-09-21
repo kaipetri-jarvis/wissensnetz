@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-21T19:04:35+00:00",
+  "generated": "2026-09-21T19:14:35+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
+      "at": "2026-09-21T21:11:59+02:00",
+      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-21T21:08:57+02:00",
+      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-21T21:07:58+02:00",
+      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-21T21:05:58+02:00",
+      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-21T21:04:58+02:00",
+      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-21T21:03:56+02:00",
       "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-21T21:00:56+02:00",
-      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-21T21:00:48+02:00",
-      "text": "Content-Loop: Pin fuer B38 Caregiver Complete Set (EN) — build-pins.js Eintrag + gerendertes 1000x1500-PNG, Seitenzahl 11+8+7=26 gegengezaehlt, Bild geprueft"
-    },
-    {
-      "at": "2026-09-21T20:59:56+02:00",
-      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-21T20:56:55+02:00",
-      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-21T20:00:40+02:00",
-      "text": "Content-Loop: Listing-SEO de-adhs-planer-buero — Titel 121->127 Zeichen mit 'zum Ausdrucken', 3 schwache Tags getauscht, Limits maschinell geprueft"
     }
   ]
 }
