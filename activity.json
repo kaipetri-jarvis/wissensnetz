@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-21T20:54:36+00:00",
+  "generated": "2026-09-21T21:04:36+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
+      "at": "2026-09-21T23:02:46+02:00",
+      "text": "Tagesnotiz: Markenzeichen abgenommen, Gemini-Guthaben aufgebraucht, ambientCG als Texturquelle"
+    },
+    {
+      "at": "2026-09-21T23:02:32+02:00",
+      "text": "Markenzeichen abgenommen: README auf den tatsaechlichen Stand gebracht, widerspruechliche Altabschnitte entfernt"
+    },
+    {
+      "at": "2026-09-21T23:02:14+02:00",
+      "text": "Content-Loop Cross-Selling 23:00: B17 Fahrtenbuch-Seitenzahl nachgefuehrt (6->7, Blatt 5 Parkgebuehren/Maut), Gesamtsumme 19->20; neues Bundle geprueft und wege"
+    },
+    {
+      "at": "2026-09-21T23:01:12+02:00",
+      "text": "Content-Loop: Pin fuer Bundle-Luecke B27 (Hochzeit planen & finanzieren DE) ergaenzt"
+    },
+    {
+      "at": "2026-09-21T23:00:39+02:00",
+      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-21T22:38:11+02:00",
       "text": "Schatten wie Vorlage: gemessene Karte fuehrt allein, synthetische Zutaten stillgelegt, Gamma 2.2 gegen die JPEG-Aufhellung, Emblem auf 76 Prozent"
-    },
-    {
-      "at": "2026-09-21T22:37:36+02:00",
-      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-21T22:35:13+02:00",
-      "text": "Gegenlicht-Saum gerettet: Schattenkarte transportiert jetzt auch Aufhellung statt bei 1.0 gekappt zu werden; synthetischer Wulst gedaempft, Kartenversatz von 2 "
-    },
-    {
-      "at": "2026-09-21T22:31:36+02:00",
-      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-21T22:31:01+02:00",
-      "text": "Originalschatten aus E16 ausgemessen und als Multiplikationskarte uebernommen statt nachgebaut"
-    },
-    {
-      "at": "2026-09-21T22:30:36+02:00",
-      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
     }
   ]
 }
