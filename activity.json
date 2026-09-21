@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-21T19:24:35+00:00",
+  "generated": "2026-09-21T19:34:35+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
-      "at": "2026-09-21T21:24:07+02:00",
-      "text": "Markenfamilie auf die Hausfarben gebracht: Leder als Duoton auf TEAL_D, Akzent auf TERRA, Emblem enger freigestellt"
+      "at": "2026-09-21T21:34:02+02:00",
+      "text": "Leder realistisch: Farbtonverschiebung in HSV statt Duoton — Glanz und Sattigungsgefaelle des Fotos bleiben erhalten"
     },
     {
-      "at": "2026-09-21T21:23:58+02:00",
+      "at": "2026-09-21T21:33:59+02:00",
       "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-21T21:21:21+02:00",
-      "text": "Banner und Website-Kopf verfeinert: Lichtfuehrung, Schlagschatten, Goldrahmen, eingepasster Schriftgrad; Bauskript mit abgelegt"
-    },
-    {
-      "at": "2026-09-21T21:20:58+02:00",
+      "at": "2026-09-21T21:32:59+02:00",
       "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-21T21:20:03+02:00",
-      "text": "Markenfamilie E16: README mit Dateiübersicht, Farben und der Banner-Texturfalle"
+      "at": "2026-09-21T21:32:47+02:00",
+      "text": "Monogramm in der Serifenschrift der Wortmarke statt in einer Groteske, Akzentstrich unter die Grundlinie; doppelte Monogramm-Logik zusammengefuehrt"
     },
     {
-      "at": "2026-09-21T21:18:58+02:00",
+      "at": "2026-09-21T21:31:59+02:00",
       "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-21T21:31:21+02:00",
+      "text": "Leder in allen fuenf Formaten sichtbar: groesstmoeglicher Ausschnitt im Zielformat statt Streckung oder Kachelung"
     }
   ]
 }
