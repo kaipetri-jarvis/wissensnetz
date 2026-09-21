@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-21T20:24:36+00:00",
+  "generated": "2026-09-21T20:34:36+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
-      "at": "2026-09-21T22:23:55+02:00",
-      "text": "Innenschatten laeuft rundum statt nur oben links — eine Mulde ist ringsum beschattet, nicht einseitig"
-    },
-    {
-      "at": "2026-09-21T22:23:35+02:00",
+      "at": "2026-09-21T22:31:36+02:00",
       "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-21T22:20:18+02:00",
-      "text": "Zwei Praegestufen nach Kais Skizze: auch die Kante der polierten Innenscheibe eingesenkt, Radius 0.560 gemessen"
+      "at": "2026-09-21T22:31:01+02:00",
+      "text": "Originalschatten aus E16 ausgemessen und als Multiplikationskarte uebernommen statt nachgebaut"
     },
     {
-      "at": "2026-09-21T22:19:35+02:00",
+      "at": "2026-09-21T22:30:36+02:00",
       "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-21T22:07:01+02:00",
-      "text": "Baby-Planer DE: Erstausstattungs-Budget und Monatliches Baby-Budget als Druckseiten ergaenzt (6 -> 8 Seiten)"
+      "at": "2026-09-21T22:29:02+02:00",
+      "text": "Kontaktschatten auf dem Leder nach unten rechts verlagert, passend zu Kais Vorlage; Wandschatten innen bleibt oben links"
     },
     {
-      "at": "2026-09-21T22:06:35+02:00",
-      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
+      "at": "2026-09-21T22:27:32+02:00",
+      "text": "Schatten sitzt an der Nahtstelle Gold-Leder: schmales Band statt breitem Hof, am dunkelsten direkt an der Emblemkante"
+    },
+    {
+      "at": "2026-09-21T22:26:09+02:00",
+      "text": "Schatten liegt auf dem Leder rund ums Gold, nicht auf dem Gold: Hof verstaerkt und verbreitert, Innenschatten stark zurueck, Emblem im Quadrat etwas kleiner"
     }
   ]
 }
