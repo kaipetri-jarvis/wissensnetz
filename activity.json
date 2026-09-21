@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-21T20:34:36+00:00",
+  "generated": "2026-09-21T20:44:36+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-09-21T22:38:11+02:00",
+      "text": "Schatten wie Vorlage: gemessene Karte fuehrt allein, synthetische Zutaten stillgelegt, Gamma 2.2 gegen die JPEG-Aufhellung, Emblem auf 76 Prozent"
+    },
+    {
+      "at": "2026-09-21T22:37:36+02:00",
+      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-21T22:35:13+02:00",
+      "text": "Gegenlicht-Saum gerettet: Schattenkarte transportiert jetzt auch Aufhellung statt bei 1.0 gekappt zu werden; synthetischer Wulst gedaempft, Kartenversatz von 2 "
+    },
+    {
       "at": "2026-09-21T22:31:36+02:00",
       "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
     },
@@ -22,18 +34,6 @@
     {
       "at": "2026-09-21T22:30:36+02:00",
       "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-21T22:29:02+02:00",
-      "text": "Kontaktschatten auf dem Leder nach unten rechts verlagert, passend zu Kais Vorlage; Wandschatten innen bleibt oben links"
-    },
-    {
-      "at": "2026-09-21T22:27:32+02:00",
-      "text": "Schatten sitzt an der Nahtstelle Gold-Leder: schmales Band statt breitem Hof, am dunkelsten direkt an der Emblemkante"
-    },
-    {
-      "at": "2026-09-21T22:26:09+02:00",
-      "text": "Schatten liegt auf dem Leder rund ums Gold, nicht auf dem Gold: Hof verstaerkt und verbreitert, Innenschatten stark zurueck, Emblem im Quadrat etwas kleiner"
     }
   ]
 }
