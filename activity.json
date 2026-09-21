@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-21T19:34:35+00:00",
+  "generated": "2026-09-21T19:44:35+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
-      "at": "2026-09-21T21:34:02+02:00",
-      "text": "Leder realistisch: Farbtonverschiebung in HSV statt Duoton — Glanz und Sattigungsgefaelle des Fotos bleiben erhalten"
+      "at": "2026-09-21T21:43:18+02:00",
+      "text": "Mehr Tiefe im Leder: Porenverschattung aus der Hoehenkarte, Narbungsflanken von 3.4 auf 5.0"
     },
     {
-      "at": "2026-09-21T21:33:59+02:00",
+      "at": "2026-09-21T21:43:00+02:00",
       "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-21T21:32:59+02:00",
+      "at": "2026-09-21T21:42:07+02:00",
+      "text": "Mehr Struktur im Leder: Narbung ueber die Normalmap des Materials beleuchtet statt nachgeschaerft, mit Glanzlicht und verstaerkten Flanken"
+    },
+    {
+      "at": "2026-09-21T21:42:00+02:00",
       "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-21T21:32:47+02:00",
-      "text": "Monogramm in der Serifenschrift der Wortmarke statt in einer Groteske, Akzentstrich unter die Grundlinie; doppelte Monogramm-Logik zusammengefuehrt"
+      "at": "2026-09-21T21:39:54+02:00",
+      "text": "Fachreview umgesetzt: Kontaktschatten statt bloss Schlagschatten, Leder ohne Skalierung, Farbwolken auf dem Saettigungskanal, Akzentstrich sichtbar bemassen"
     },
     {
-      "at": "2026-09-21T21:31:59+02:00",
+      "at": "2026-09-21T21:37:59+02:00",
       "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-21T21:31:21+02:00",
-      "text": "Leder in allen fuenf Formaten sichtbar: groesstmoeglicher Ausschnitt im Zielformat statt Streckung oder Kachelung"
     }
   ]
 }
