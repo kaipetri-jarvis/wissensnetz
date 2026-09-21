@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-21T21:14:36+00:00",
+  "generated": "2026-09-21T21:24:36+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-21T23:14:42+02:00",
+      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-21T23:02:46+02:00",
       "text": "Tagesnotiz: Markenzeichen abgenommen, Gemini-Guthaben aufgebraucht, ambientCG als Texturquelle"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-21T23:00:39+02:00",
       "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-21T22:38:11+02:00",
-      "text": "Schatten wie Vorlage: gemessene Karte fuehrt allein, synthetische Zutaten stillgelegt, Gamma 2.2 gegen die JPEG-Aufhellung, Emblem auf 76 Prozent"
     }
   ]
 }
