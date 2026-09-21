@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-21T06:54:30+00:00",
+  "generated": "2026-09-21T07:04:30+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-21T09:01:35+02:00",
+      "text": "Content-Loop: deutsches Einzel-Listing Dopamin-Menue & Belohnungsplan (7,90 EUR)"
+    },
+    {
+      "at": "2026-09-21T09:00:46+02:00",
+      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-21T08:02:03+02:00",
       "text": "Content-Loop: Bundle B36 Creator-Content-Set DE (Planer + Instagram-Vorlagen + Media Kit, 19,90 EUR)"
@@ -26,14 +34,6 @@
     {
       "at": "2026-09-21T07:03:19+02:00",
       "text": "Content-Loop: Preiskalkulator DE auf 6 Seiten (Zuschlaege/Nachkalkulation + Paketpreise)"
-    },
-    {
-      "at": "2026-09-21T07:02:36+02:00",
-      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-21T07:01:35+02:00",
-      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
     }
   ]
 }
