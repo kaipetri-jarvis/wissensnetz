@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-21T11:54:32+00:00",
+  "generated": "2026-09-21T12:04:32+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-21T14:01:37+02:00",
+      "text": "Content-Loop: Einzel-Listing listings/de-pflegemappe.md angelegt — DE-Gegenstueck zum Caregiver Organizer, Hardlimits maschinell geprueft"
+    },
+    {
+      "at": "2026-09-21T14:01:14+02:00",
+      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-21T13:01:28+02:00",
       "text": "Content-Loop: Neues Bundle B37 'Home & Life Set' (EN) — englisches Gegenstueck zum DE-Haushalt-Set, Summen und Hardlimits maschinell geprueft"
@@ -25,14 +33,6 @@
     },
     {
       "at": "2026-09-21T12:03:02+02:00",
-      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-21T12:02:01+02:00",
-      "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-21T12:00:59+02:00",
       "text": "Auto-Backup 2026-09-21 — täglicher Workspace-Snapshot"
     }
   ]
