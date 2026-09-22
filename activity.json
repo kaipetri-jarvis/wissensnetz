@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-22T04:54:39+00:00",
+  "generated": "2026-09-22T05:04:39+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
+      "at": "2026-09-22T07:03:08+02:00",
+      "text": "Content-Loop 07:00: en-baby-planner von 6 auf 8 Seiten (Essentials Budget + Monthly Baby Budget)"
+    },
+    {
+      "at": "2026-09-22T07:02:25+02:00",
+      "text": "Auto-Backup 2026-09-22 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-22T07:01:24+02:00",
+      "text": "Auto-Backup 2026-09-22 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-22T07:00:22+02:00",
+      "text": "Auto-Backup 2026-09-22 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-22T06:00:54+02:00",
       "text": "Content-Loop 06:00: Set-Pin fuer B22 Commercial License Business Toolkit"
     },
     {
       "at": "2026-09-22T06:00:19+02:00",
-      "text": "Auto-Backup 2026-09-22 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-22T05:01:14+02:00",
-      "text": "Auto-Backup 2026-09-22 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-22T04:01:07+02:00",
-      "text": "Auto-Backup 2026-09-22 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-22T03:56:22+02:00",
-      "text": "Falt-Lauf: Tagesnotizen 19./20.09. verdichtet, Sperre entfernt (automatischer Falt-Lauf)"
-    },
-    {
-      "at": "2026-09-22T03:56:06+02:00",
       "text": "Auto-Backup 2026-09-22 — täglicher Workspace-Snapshot"
     }
   ]
