@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-22T10:04:41+00:00",
+  "generated": "2026-09-22T10:14:41+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-22T12:06:07+02:00",
+      "text": "Content-Loop 12:00: de-nebenkosten von 6 auf 8 Seiten erweitert (Jahresuebersicht + Einheiten & Mieter), ZIPs und Listings nachgezogen"
+    },
+    {
+      "at": "2026-09-22T12:05:59+02:00",
+      "text": "Auto-Backup 2026-09-22 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-22T12:03:57+02:00",
       "text": "Auto-Backup 2026-09-22 — täglicher Workspace-Snapshot"
@@ -26,14 +34,6 @@
     {
       "at": "2026-09-22T12:00:53+02:00",
       "text": "Auto-Backup 2026-09-22 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-22T11:00:38+02:00",
-      "text": "Content-Loop 11:00: Pinterest-Pin fuer en-pricing-calculator (Z6-EN) gebaut und in build-pins.js eingetragen"
-    },
-    {
-      "at": "2026-09-22T10:01:02+02:00",
-      "text": "Content-Loop 10:00: SEO fuer BUNDLE-de-selbststaendig-abschluss (Titel 134 Zeichen, 13 Tags auf Suchphrasen umgestellt)"
     }
   ]
 }
