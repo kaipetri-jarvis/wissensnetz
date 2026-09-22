@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-22T15:54:43+00:00",
+  "generated": "2026-09-22T16:04:43+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-22T18:00:40+02:00",
+      "text": "Auto-Backup 2026-09-22 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-22T17:07:56+02:00",
       "text": "Content-Loop 17:00: de-haushaltsbuch von 6 auf 8 Seiten (Abo- & Fixkosten-Check, Fixkosten-Kalender & Konten) — ZIPs, Listings und Upload-Mappe nachgezogen"
@@ -29,10 +33,6 @@
     },
     {
       "at": "2026-09-22T17:04:33+02:00",
-      "text": "Auto-Backup 2026-09-22 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-22T17:03:33+02:00",
       "text": "Auto-Backup 2026-09-22 — täglicher Workspace-Snapshot"
     }
   ]
