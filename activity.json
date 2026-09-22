@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-22T11:54:42+00:00",
+  "generated": "2026-09-22T12:04:42+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-22T14:02:41+02:00",
+      "text": "Content-Loop 14:00: listings/de-preiskalkulator.md angelegt (DE-Gegenstueck zum EN-Pricing-Calculator, Z6) — Titel 127 Zeichen, 13 Tags, Limits maschinell gepru"
+    },
+    {
+      "at": "2026-09-22T14:01:12+02:00",
+      "text": "Auto-Backup 2026-09-22 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-22T13:01:40+02:00",
       "text": "Content-Loop 13:00: neues Bundle B39 'Price It & Bill It' (EN) — Listing + ZIP aus vorhandenen Bausteinen, Summen nachgerechnet"
@@ -25,14 +33,6 @@
     },
     {
       "at": "2026-09-22T12:05:59+02:00",
-      "text": "Auto-Backup 2026-09-22 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-22T12:03:57+02:00",
-      "text": "Auto-Backup 2026-09-22 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-22T12:02:56+02:00",
       "text": "Auto-Backup 2026-09-22 — täglicher Workspace-Snapshot"
     }
   ]
