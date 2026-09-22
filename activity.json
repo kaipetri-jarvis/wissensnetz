@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-22T14:54:43+00:00",
+  "generated": "2026-09-22T15:04:43+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
+      "at": "2026-09-22T17:04:33+02:00",
+      "text": "Auto-Backup 2026-09-22 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-22T17:03:33+02:00",
+      "text": "Auto-Backup 2026-09-22 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-22T17:02:31+02:00",
+      "text": "Auto-Backup 2026-09-22 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-22T17:00:29+02:00",
+      "text": "Auto-Backup 2026-09-22 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-22T16:02:28+02:00",
       "text": "Content-Loop 16:00: Pinterest-Pin fuer Bundle B39 (Price It & Bill It) — build-pins.js + gerenderter Pin, Badge maschinell aus dem ZIP gezaehlt"
     },
     {
       "at": "2026-09-22T16:02:25+02:00",
       "text": "Auto-Backup 2026-09-22 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-22T16:01:24+02:00",
-      "text": "Auto-Backup 2026-09-22 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-22T16:00:22+02:00",
-      "text": "Auto-Backup 2026-09-22 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-22T15:23:19+02:00",
-      "text": "Auto-Backup 2026-09-22 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-22T15:01:10+02:00",
-      "text": "Content-Loop 15:00: listings/de-sparziel-tracker.md SEO — Titel 126->136 Zeichen, 5 generische/kannibalisierende Tags gegen belegte Longtails getauscht"
     }
   ]
 }
