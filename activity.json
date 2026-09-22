@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-22T12:54:42+00:00",
+  "generated": "2026-09-22T13:04:42+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-22T15:01:10+02:00",
+      "text": "Content-Loop 15:00: listings/de-sparziel-tracker.md SEO — Titel 126->136 Zeichen, 5 generische/kannibalisierende Tags gegen belegte Longtails getauscht"
+    },
     {
       "at": "2026-09-22T14:02:41+02:00",
       "text": "Content-Loop 14:00: listings/de-preiskalkulator.md angelegt (DE-Gegenstueck zum EN-Pricing-Calculator, Z6) — Titel 127 Zeichen, 13 Tags, Limits maschinell gepru"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-22T12:06:07+02:00",
       "text": "Content-Loop 12:00: de-nebenkosten von 6 auf 8 Seiten erweitert (Jahresuebersicht + Einheiten & Mieter), ZIPs und Listings nachgezogen"
-    },
-    {
-      "at": "2026-09-22T12:05:59+02:00",
-      "text": "Auto-Backup 2026-09-22 — täglicher Workspace-Snapshot"
     }
   ]
 }
