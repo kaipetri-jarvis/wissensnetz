@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-22T20:49:53+00:00",
+  "generated": "2026-09-22T20:59:53+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
+      "at": "2026-09-22T22:57:31+02:00",
+      "text": "Tagesnotiz: Commit-Hash nachgetragen"
+    },
+    {
+      "at": "2026-09-22T22:56:46+02:00",
+      "text": "Auto-Backup 2026-09-22 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-22T22:56:10+02:00",
+      "text": "Tagesnotiz 22.09.: Embedding-Umstellung, Uebergabe; INDEX neu"
+    },
+    {
+      "at": "2026-09-22T22:52:45+02:00",
+      "text": "Auto-Backup 2026-09-22 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-22T22:30:34+02:00",
       "text": "Content-Loop: SEO-Listing für Social-Media-Content-Planer (DE)"
     },
     {
       "at": "2026-09-22T22:23:44+02:00",
-      "text": "Auto-Backup 2026-09-22 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-22T22:13:43+02:00",
-      "text": "Auto-Backup 2026-09-22 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-22T22:11:28+02:00",
-      "text": "Legion: Fernzugang ausgefallen (nur Port 11434), Auto-Update-Umstellung als Klickweg dokumentiert"
-    },
-    {
-      "at": "2026-09-22T22:07:05+02:00",
-      "text": "Meal Planner (EN) von 6 auf 8 Seiten: Lunchboxes & On-the-Go + Monthly Meal Map; Listings und 2027-Bundle-ZIP nachgezogen"
-    },
-    {
-      "at": "2026-09-22T22:06:43+02:00",
       "text": "Auto-Backup 2026-09-22 — täglicher Workspace-Snapshot"
     }
   ]
