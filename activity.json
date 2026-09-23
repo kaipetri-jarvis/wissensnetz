@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-23T17:00:03+00:00",
+  "generated": "2026-09-23T17:10:03+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
+      "at": "2026-09-23T19:05:44+02:00",
+      "text": "Etsy Content-Loop 19:00 — Uebersetzung/Variante: deutsche Fassung der Preisliste-Vorlage (pricelist_de in build-pptx-templates.py, pptx + ZIP + listings/de-prei"
+    },
+    {
+      "at": "2026-09-23T19:04:55+02:00",
+      "text": "Auto-Backup 2026-09-23 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-23T19:03:54+02:00",
+      "text": "Auto-Backup 2026-09-23 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-23T19:02:53+02:00",
+      "text": "Auto-Backup 2026-09-23 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-23T19:00:51+02:00",
+      "text": "Auto-Backup 2026-09-23 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-23T18:04:08+02:00",
       "text": "Etsy Content-Loop 18:00 — Cross-Selling: Bundle B2 (Complete Freelancer Toolkit) reparieren: ZIP enthielt drei veraltete PDFs, aus aktuellen Quellen neu geschnu"
-    },
-    {
-      "at": "2026-09-23T18:03:45+02:00",
-      "text": "Auto-Backup 2026-09-23 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-23T18:02:44+02:00",
-      "text": "Auto-Backup 2026-09-23 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-23T18:00:41+02:00",
-      "text": "Auto-Backup 2026-09-23 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-23T17:04:50+02:00",
-      "text": "Etsy Content-Loop 17:00 — Produkt erweitern: Tax Prep Checklist von 6 auf 8 Seiten (Asset-/Abschreibungs-Log + Payer & Document Tracker), Listings und Bundle-ZI"
-    },
-    {
-      "at": "2026-09-23T17:04:36+02:00",
-      "text": "Auto-Backup 2026-09-23 — täglicher Workspace-Snapshot"
     }
   ]
 }
