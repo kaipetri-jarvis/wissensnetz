@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-23T20:30:04+00:00",
+  "generated": "2026-09-23T20:40:04+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-23T22:30:49+02:00",
+      "text": "Content-Loop: Listing-SEO Titel BUNDLE-en-landlord-complete.md nachgeschaerft"
+    },
     {
       "at": "2026-09-23T22:04:00+02:00",
       "text": "Etsy-Loop: Quarterly Review von 6 auf 8 Seiten (Stunden-Audit + gewichtete Pipeline), Listings und Year-End-ZIP nachgezogen"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-23T21:58:20+02:00",
       "text": "3D-Druck: MagSafe-Becherhalter für iPhone 17 Pro — Eigenentwurf (Generator, STL/3MF, Vorschau, README); Apple-Maßdaten in Themendatei; USER.md: Geräte"
-    },
-    {
-      "at": "2026-09-23T21:58:16+02:00",
-      "text": "Auto-Backup 2026-09-23 — täglicher Workspace-Snapshot"
     }
   ]
 }
