@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-23T08:59:58+00:00",
+  "generated": "2026-09-23T09:09:58+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-23T11:01:07+02:00",
+      "text": "Content-Loop 23.09. 11:00 (Pins): Pin fuer en-legacy-planner (Z7-EN) gebaut und in build-pins.js eingetragen"
+    },
+    {
+      "at": "2026-09-23T11:00:41+02:00",
+      "text": "Auto-Backup 2026-09-23 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-23T10:02:35+02:00",
       "text": "Auto-Backup 2026-09-23 — täglicher Workspace-Snapshot"
@@ -26,14 +34,6 @@
     {
       "at": "2026-09-23T10:01:48+02:00",
       "text": "Content-Loop 23.09. 10:00 (Listing-SEO): en-caregiver-organizer — Titel auf 137 Zeichen geschaerft, 6 schwache Tags durch Long-Tail-Varianten ersetzt"
-    },
-    {
-      "at": "2026-09-23T10:01:35+02:00",
-      "text": "Auto-Backup 2026-09-23 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-23T10:00:33+02:00",
-      "text": "Auto-Backup 2026-09-23 — täglicher Workspace-Snapshot"
     }
   ]
 }
