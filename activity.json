@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-23T06:59:57+00:00",
+  "generated": "2026-09-23T07:09:57+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
-      "at": "2026-09-23T08:02:21+02:00",
-      "text": "Content-Loop 23.09. 08:00 (Cross-Selling): B4 Finance & Budget Bundle — Ersparnis 22,60 EUR (53 %), 33 Seiten und Einzelpreise kaeufersichtbar; ZIP-Angabe 24 ->"
-    },
-    {
-      "at": "2026-09-23T08:02:09+02:00",
+      "at": "2026-09-23T09:09:24+02:00",
       "text": "Auto-Backup 2026-09-23 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-23T08:01:07+02:00",
+      "at": "2026-09-23T09:08:23+02:00",
       "text": "Auto-Backup 2026-09-23 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-23T07:06:32+02:00",
-      "text": "Content-Loop 23.09. 07:00 (Produkt erweitern): de-essensplaner 6 -> 8 Seiten (Brotdose & unterwegs, Monats-Essensplan & Budget) + B12-Bundle nachgezogen"
-    },
-    {
-      "at": "2026-09-23T07:06:02+02:00",
+      "at": "2026-09-23T09:07:21+02:00",
       "text": "Auto-Backup 2026-09-23 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-23T07:05:02+02:00",
+      "at": "2026-09-23T09:06:20+02:00",
+      "text": "Auto-Backup 2026-09-23 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-23T09:04:18+02:00",
+      "text": "Auto-Backup 2026-09-23 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-23T09:03:17+02:00",
       "text": "Auto-Backup 2026-09-23 — täglicher Workspace-Snapshot"
     }
   ]
