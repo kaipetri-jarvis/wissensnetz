@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-23T12:50:00+00:00",
+  "generated": "2026-09-23T13:00:00+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
+      "at": "2026-09-23T14:55:40+02:00",
+      "text": "VELUX-KLI-Halter: Fingerausschnitt entfernt, Auflage unten durchgehend wie das Original (Kais Hinweis); Vorschau-Renderer repariert"
+    },
+    {
+      "at": "2026-09-23T14:55:20+02:00",
+      "text": "Auto-Backup 2026-09-23 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-23T14:54:19+02:00",
+      "text": "Auto-Backup 2026-09-23 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-23T14:53:19+02:00",
+      "text": "Auto-Backup 2026-09-23 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-23T14:43:19+02:00",
       "text": "Auto-Backup 2026-09-23 — täglicher Workspace-Snapshot"
     },
     {
       "at": "2026-09-23T14:43:10+02:00",
       "text": "3D-Druck: Wandhalter für VELUX KLI 310–313 (Bambu Lab) — parametrischer Generator, STL/3MF, Vorschau, README; Themendatei 3d-druck.md"
-    },
-    {
-      "at": "2026-09-23T14:41:19+02:00",
-      "text": "Auto-Backup 2026-09-23 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-23T14:40:18+02:00",
-      "text": "Auto-Backup 2026-09-23 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-23T14:39:18+02:00",
-      "text": "Auto-Backup 2026-09-23 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-23T14:09:14+02:00",
-      "text": "Content-Loop 23.09. 14:00 (Uebersetzung/Variante): de-social-media-planer von 6 auf 8 Seiten (Launch-Fahrplan + Community/Kooperationen), deckungsgleich zur EN-"
     }
   ]
 }
