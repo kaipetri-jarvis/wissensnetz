@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-23T07:59:58+00:00",
+  "generated": "2026-09-23T08:09:58+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
-      "at": "2026-09-23T09:14:08+02:00",
-      "text": "Content-Loop 23.09. 09:00 (Uebersetzung/Variante): EN-Fassung von Z7 als en-legacy-planner (11 Seiten, PDF+ZIP+Listing Z7-EN, 11,90 EUR)"
-    },
-    {
-      "at": "2026-09-23T09:13:28+02:00",
+      "at": "2026-09-23T10:02:35+02:00",
       "text": "Auto-Backup 2026-09-23 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-23T09:12:27+02:00",
+      "at": "2026-09-23T10:01:55+02:00",
+      "text": "Tagesnotiz 23.09.: Etsy-Lückenprüfung + Z7-EN-Bildfix"
+    },
+    {
+      "at": "2026-09-23T10:01:49+02:00",
+      "text": "Etsy: Z7-EN hatte zweimal dasselbe Foto — eigene EN-Info-Grafik (info-legacy-en.png) gerendert und als Foto 2 eingetragen"
+    },
+    {
+      "at": "2026-09-23T10:01:48+02:00",
+      "text": "Content-Loop 23.09. 10:00 (Listing-SEO): en-caregiver-organizer — Titel auf 137 Zeichen geschaerft, 6 schwache Tags durch Long-Tail-Varianten ersetzt"
+    },
+    {
+      "at": "2026-09-23T10:01:35+02:00",
       "text": "Auto-Backup 2026-09-23 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-23T09:11:26+02:00",
-      "text": "Auto-Backup 2026-09-23 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-23T09:10:25+02:00",
-      "text": "Auto-Backup 2026-09-23 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-23T09:09:24+02:00",
+      "at": "2026-09-23T10:00:33+02:00",
       "text": "Auto-Backup 2026-09-23 — täglicher Workspace-Snapshot"
     }
   ]
