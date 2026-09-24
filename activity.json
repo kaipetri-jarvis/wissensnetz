@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-24T19:10:33+00:00",
+  "generated": "2026-09-24T19:20:34+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-24T21:18:03+02:00",
+      "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-24T21:02:41+02:00",
       "text": "Content-Loop 21:00 Pinterest-Pin: Set-Pin pin-adhs-planer-set-de.png fuer BUNDLE-de-adhs-planer-set (107. Pin in build-pins.js)"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-24T19:05:59+02:00",
       "text": "Content-Loop 19:00 Uebersetzung/Variante: de-studenten-budgetplaner von 7 auf 8 Seiten (neue Seite 'Nebenjob & geteilte Kosten' mit Minijob-/Werkstudenten-/BAfo"
-    },
-    {
-      "at": "2026-09-24T19:05:46+02:00",
-      "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
     }
   ]
 }
