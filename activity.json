@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-24T21:30:40+00:00",
+  "generated": "2026-09-24T21:40:40+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
-      "at": "2026-09-24T23:04:40+02:00",
+      "at": "2026-09-24T23:37:42+02:00",
       "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-24T23:03:41+02:00",
+      "at": "2026-09-24T23:36:42+02:00",
       "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-24T23:03:16+02:00",
-      "text": "Content-Loop 23:00 | Cross-Selling: BUNDLE-de-finanz-set auf 22 Seiten korrigiert (Schuldentilgungs-Tracker 5 -> 7), Summen und Etsy-Limits maschinell geprueft"
-    },
-    {
-      "at": "2026-09-24T23:02:40+02:00",
+      "at": "2026-09-24T23:35:42+02:00",
       "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-24T23:00:38+02:00",
+      "at": "2026-09-24T23:32:42+02:00",
       "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-24T22:53:35+02:00",
+      "at": "2026-09-24T23:31:42+02:00",
       "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-24T23:30:50+02:00",
+      "text": "Content-Loop 23:30 | Listing-SEO: seo-de-budgetplaner.md erstellt (Titel + 13 Tags)"
     }
   ]
 }
