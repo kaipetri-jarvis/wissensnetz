@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-24T10:00:18+00:00",
+  "generated": "2026-09-24T10:10:18+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
-      "at": "2026-09-24T11:02:15+02:00",
-      "text": "Pinterest-Pin fuer das Instagram-Post-Set: eigenes Hochformat-Mockup loest die 1:1-Sperre"
+      "at": "2026-09-24T12:05:12+02:00",
+      "text": "Content-Loop 12:00: Monthly Budget Planner von 6 auf 8 Seiten (Weekly Money Check-in + Where The Money Goes), ZIPs und Listing nachgezogen"
     },
     {
-      "at": "2026-09-24T11:01:26+02:00",
+      "at": "2026-09-24T12:04:39+02:00",
       "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-24T11:00:25+02:00",
+      "at": "2026-09-24T12:03:37+02:00",
       "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-24T10:02:15+02:00",
-      "text": "Tagesnotiz 24.09.: Etsy-Treiber-Cron"
+      "at": "2026-09-24T12:02:36+02:00",
+      "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-24T10:02:10+02:00",
-      "text": "Upload-Mappe: Listing 19-DE fiel aus der Uebersichtstabelle (ID-Muster mit Sprachsuffix)"
+      "at": "2026-09-24T12:01:34+02:00",
+      "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-24T10:01:33+02:00",
-      "text": "Listing-SEO: de-hochzeitsplaner — Titel auf 137 Zeichen mit Sofort-Download, drei schwache Tags ersetzt"
+      "at": "2026-09-24T12:00:33+02:00",
+      "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
     }
   ]
 }
