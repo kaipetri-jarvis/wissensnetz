@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-24T07:10:14+00:00",
+  "generated": "2026-09-24T07:20:14+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-09-24T09:12:44+02:00",
+      "text": "Legion-Skript: nur Windows-Updates sperren, Ollama freigeben, Dauerbetrieb per powercfg erzwingen"
+    },
+    {
+      "at": "2026-09-24T09:12:14+02:00",
+      "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-24T09:10:50+02:00",
+      "text": "Legion-IP von Ultron gegengeprueft (identisch), Memory-Index auf qwen3-embedding neu gebaut"
+    },
+    {
       "at": "2026-09-24T09:09:14+02:00",
       "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
     },
@@ -21,18 +33,6 @@
     },
     {
       "at": "2026-09-24T09:05:13+02:00",
-      "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-24T09:04:12+02:00",
-      "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-24T09:03:11+02:00",
-      "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-24T09:02:09+02:00",
       "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
     }
   ]
