@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-24T07:40:14+00:00",
+  "generated": "2026-09-24T07:50:14+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-24T09:44:56+02:00",
+      "text": "Legion: Update-Sperre und Dauerbetrieb per SSH verifiziert, Ruecktunnel wieder aktiv"
+    },
+    {
+      "at": "2026-09-24T09:41:16+02:00",
+      "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-24T09:12:44+02:00",
       "text": "Legion-Skript: nur Windows-Updates sperren, Ollama freigeben, Dauerbetrieb per powercfg erzwingen"
@@ -25,14 +33,6 @@
     },
     {
       "at": "2026-09-24T09:09:14+02:00",
-      "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-24T09:05:51+02:00",
-      "text": "Content-Loop 09:00: de-quartals-check von 6 auf 8 Seiten an die EN-Fassung angeglichen (Stundenseite, Auftragslage), Listing + Bundle B25 + ZIP nachgezogen"
-    },
-    {
-      "at": "2026-09-24T09:05:13+02:00",
       "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
     }
   ]
