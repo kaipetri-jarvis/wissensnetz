@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-24T17:00:31+00:00",
+  "generated": "2026-09-24T17:10:31+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
-      "at": "2026-09-24T18:03:22+02:00",
-      "text": "Content-Loop 18:00 Cross-Selling: drei ADHS-Einzellistings werben jetzt mit nachgerechneten Set-Summen (28,70 -> 16,90 EUR, 11,80 EUR / 41 %) statt mit 'Vorteil"
+      "at": "2026-09-24T19:05:59+02:00",
+      "text": "Content-Loop 19:00 Uebersetzung/Variante: de-studenten-budgetplaner von 7 auf 8 Seiten (neue Seite 'Nebenjob & geteilte Kosten' mit Minijob-/Werkstudenten-/BAfo"
     },
     {
-      "at": "2026-09-24T18:00:35+02:00",
+      "at": "2026-09-24T19:05:46+02:00",
       "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-24T17:05:38+02:00",
-      "text": "Content-Loop 17:00 Produkt erweitern: student-budget-planner von 6 auf 8 Seiten (Funding & Deadlines, Term-Time Job & Shared Costs), 3 Listings und 3 ZIPs nachg"
-    },
-    {
-      "at": "2026-09-24T17:05:23+02:00",
+      "at": "2026-09-24T19:04:45+02:00",
       "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-24T17:04:22+02:00",
+      "at": "2026-09-24T19:03:44+02:00",
       "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-24T17:03:20+02:00",
+      "at": "2026-09-24T19:02:44+02:00",
+      "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-24T19:00:41+02:00",
       "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
     }
   ]
