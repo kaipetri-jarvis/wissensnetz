@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-24T15:00:28+00:00",
+  "generated": "2026-09-24T15:10:28+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
-      "at": "2026-09-24T16:02:00+02:00",
-      "text": "Content-Loop 16:00 Pinterest-Pin: pin-proposal-deck-en fuer canva-proposal-deck, neues Hochformat-Mockup aus den 16:9-Slides (compose-proposal-preview.py)"
+      "at": "2026-09-24T17:05:38+02:00",
+      "text": "Content-Loop 17:00 Produkt erweitern: student-budget-planner von 6 auf 8 Seiten (Funding & Deadlines, Term-Time Job & Shared Costs), 3 Listings und 3 ZIPs nachg"
     },
     {
-      "at": "2026-09-24T16:01:06+02:00",
+      "at": "2026-09-24T17:05:23+02:00",
       "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-24T15:01:03+02:00",
-      "text": "Content-Loop 15:00 Listing-SEO: BUNDLE-commercial-license-toolkit Titel auf 132 Zeichen (Editable/Agency), Tag business license -> extended license"
-    },
-    {
-      "at": "2026-09-24T15:00:57+02:00",
+      "at": "2026-09-24T17:04:22+02:00",
       "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-24T14:03:19+02:00",
-      "text": "Content-Loop 14:00 Uebersetzung/Variante: de-budgetplaner von 6 auf 8 Seiten an die EN-Fassung angeglichen (Zahlungskalender + Jahresuebersicht), Listing und Fi"
+      "at": "2026-09-24T17:03:20+02:00",
+      "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-24T14:02:52+02:00",
+      "at": "2026-09-24T17:02:19+02:00",
+      "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-24T17:01:18+02:00",
       "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
     }
   ]
