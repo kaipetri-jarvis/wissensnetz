@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-24T01:20:12+00:00",
+  "generated": "2026-09-24T01:30:12+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-24T03:20:58+02:00",
+      "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-24T03:15:58+02:00",
       "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-24T01:10:17+02:00",
       "text": "Content-Loop: ADHD Medication & Mood Tracker von 6 auf 8 Seiten (Sleep & Appetite, Timeline & Admin), Listings/Bundle/ZIP nachgezogen"
-    },
-    {
-      "at": "2026-09-24T01:09:50+02:00",
-      "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
     }
   ]
 }
