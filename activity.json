@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-24T09:00:16+00:00",
+  "generated": "2026-09-24T09:10:16+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-24T11:02:15+02:00",
+      "text": "Pinterest-Pin fuer das Instagram-Post-Set: eigenes Hochformat-Mockup loest die 1:1-Sperre"
+    },
+    {
+      "at": "2026-09-24T11:01:26+02:00",
+      "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-24T11:00:25+02:00",
       "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
@@ -26,14 +34,6 @@
     {
       "at": "2026-09-24T10:01:33+02:00",
       "text": "Listing-SEO: de-hochzeitsplaner — Titel auf 137 Zeichen mit Sofort-Download, drei schwache Tags ersetzt"
-    },
-    {
-      "at": "2026-09-24T10:01:18+02:00",
-      "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-24T09:56:46+02:00",
-      "text": "Legion: WLAN-Adapter auf statische IP 192.168.2.210 umgestellt und verifiziert"
     }
   ]
 }
