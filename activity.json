@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-24T08:00:15+00:00",
+  "generated": "2026-09-24T08:10:15+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
+      "at": "2026-09-24T10:02:15+02:00",
+      "text": "Tagesnotiz 24.09.: Etsy-Treiber-Cron"
+    },
+    {
+      "at": "2026-09-24T10:02:10+02:00",
+      "text": "Upload-Mappe: Listing 19-DE fiel aus der Uebersichtstabelle (ID-Muster mit Sprachsuffix)"
+    },
+    {
+      "at": "2026-09-24T10:01:33+02:00",
+      "text": "Listing-SEO: de-hochzeitsplaner — Titel auf 137 Zeichen mit Sofort-Download, drei schwache Tags ersetzt"
+    },
+    {
+      "at": "2026-09-24T10:01:18+02:00",
+      "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-24T09:56:46+02:00",
       "text": "Legion: WLAN-Adapter auf statische IP 192.168.2.210 umgestellt und verifiziert"
     },
     {
       "at": "2026-09-24T09:44:56+02:00",
       "text": "Legion: Update-Sperre und Dauerbetrieb per SSH verifiziert, Ruecktunnel wieder aktiv"
-    },
-    {
-      "at": "2026-09-24T09:41:16+02:00",
-      "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-24T09:12:44+02:00",
-      "text": "Legion-Skript: nur Windows-Updates sperren, Ollama freigeben, Dauerbetrieb per powercfg erzwingen"
-    },
-    {
-      "at": "2026-09-24T09:12:14+02:00",
-      "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-24T09:10:50+02:00",
-      "text": "Legion-IP von Ultron gegengeprueft (identisch), Memory-Index auf qwen3-embedding neu gebaut"
     }
   ]
 }
