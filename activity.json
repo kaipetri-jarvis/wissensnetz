@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-24T07:00:14+00:00",
+  "generated": "2026-09-24T07:10:14+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
-      "at": "2026-09-24T08:55:05+02:00",
+      "at": "2026-09-24T09:09:14+02:00",
       "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-24T08:55:00+02:00",
-      "text": "Legion: Skript zum Abschalten automatischer Updates plus Wiederherstellung des SSH-Zugangs"
+      "at": "2026-09-24T09:05:51+02:00",
+      "text": "Content-Loop 09:00: de-quartals-check von 6 auf 8 Seiten an die EN-Fassung angeglichen (Stundenseite, Auftragslage), Listing + Bundle B25 + ZIP nachgezogen"
     },
     {
-      "at": "2026-09-24T08:10:53+02:00",
-      "text": "Content-Loop 08:00: de-gewohnheits-tracker auf 8 Seiten an die EN-Fassung angeglichen (Jahresuebersicht, Tagesroutine-Plan), Listing + 2 Bundles + 2 ZIPs nachge"
-    },
-    {
-      "at": "2026-09-24T08:10:02+02:00",
+      "at": "2026-09-24T09:05:13+02:00",
       "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-24T08:09:00+02:00",
+      "at": "2026-09-24T09:04:12+02:00",
       "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-24T08:07:59+02:00",
+      "at": "2026-09-24T09:03:11+02:00",
+      "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-24T09:02:09+02:00",
       "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
     }
   ]
