@@ -613,7 +613,7 @@ const ZONES = [
 
 // main agents — leuchtende Figuren; face/pose leicht variiert
 const AGENTS = [
-  { key:'jarvis', name:'Jarvis', model:'Assistent · Opus 5.5 · Fast', col:COL.claude,
+  { key:'jarvis', name:'Jarvis', model:'Assistent · Opus 5', col:COL.claude,
     zone:'werkstatt', x:385, y:685, face:'butler', pose:'lean',
     states:[
       'baut Rechnungs-/Angebots-Vorlage (DE) — PDF + Excel + Word…',
@@ -652,7 +652,7 @@ const AGENTS = [
       'prüft Shop-Positionierung über 5 Nischen…',
       'Idee: Jobwechsel-System mit Gehaltsverhandlungs-Rechner',
     ]},
-  { key:'vision', name:'Vision', model:'Design-Agent · Opus 5.5 Fast · Port 18790', col:COL.vision,
+  { key:'vision', name:'Vision', model:'Design-Agent · Opus 5 · Port 18790', col:COL.vision,
     zone:'design', x:580, y:705, face:'crystal', pose:'upright',
     states:[
       'Bild- & Design-Auge der Station — im Einsatz',
@@ -670,7 +670,7 @@ const AGENTS = [
       'Heartbeat alle 30 Min (9–21 Uhr) direkt an Kai',
       'läuft seit 31.08. auf openai/gpt-5.6-sol',
     ]},
-  { key:'ultron', name:'Ultron', model:'2. Assistent · Opus 5.5 · Fast', col:COL.ultron,
+  { key:'ultron', name:'Ultron', model:'2. Assistent · Opus 5', col:COL.ultron,
     zone:'ultron', x:1023, y:694, face:'dualcore', pose:'upright',
     states:[
       'Nehme mir das im eigenen Kontext vor — melde mich mit dem Ergebnis.',
@@ -679,7 +679,7 @@ const AGENTS = [
       'arbeite parallel — getrennter Kontext, gleiches Memory',
       'ATLAS-Verdikt gesichtet — pushe es an Kai',
     ]},
-  { key:'hades', name:'Hades', model:'Sicherer Agent · Opus 5.5 Fast · Matrix + Telegram', col:COL.hades,
+  { key:'hades', name:'Hades', model:'Sicherer Agent · Opus 5 · Matrix + Telegram', col:COL.hades,
     zone:'werkstatt', x:510, y:410, face:'butler', pose:'upright',
     states:[
       'sichere Jarvis-Kopie — verschlüsselter Kanal aktiv',
@@ -844,7 +844,7 @@ const TICKS = [
   ['c','Druckkette live','<b>Real-ESRGAN</b> lokal: Motiv 4× → <b>4096×6144 px @300 DPI</b> (35×52 cm) — kostenlos, kein Limit'],
   ['c','Etsy-Baustein','<b>etsy_listing.py</b> prüft Titel ≤140, genau 13 Tags, Preis — regelkonform ✓'],
   ['u','Ultron · zweiter Kopf','arbeitet parallel im eigenen Kontext — <b>prüft gegen</b> &amp; übergibt an Jarvis'],
-  ['v','Vision · im Einsatz','Bild- &amp; Design-Auge auf <b>Opus 5.5 (Fast)</b> — bewertet Thumbnails, pflegt die Station'],
+  ['v','Vision · im Einsatz','Bild- &amp; Design-Auge auf <b>Opus 5</b> — bewertet Thumbnails, pflegt die Station'],
   ['e','Gaia · im Einsatz','Wissens- &amp; Memory-Agentin auf <b>gpt-5.6-sol</b> — Heartbeat alle 30 Min an Kai'],
   ['h','Hades · neu an Bord','sichere <b>Jarvis-Kopie</b> — Telegram @Kai_Hades_bot + lokaler Matrix-Server (Ende-zu-Ende, nur Tailnet)'],
   ['n','Nova · neu an Bord','schneller GPT-Agent <b>gpt-5.6-luna</b> — läuft mit Ultron &amp; Vision (Port 18790), @Kai_Nova_bot'],
@@ -852,7 +852,6 @@ const TICKS = [
   ['f','Friday · neu an Bord','autonomer <b>Conway-Automaton</b> auf eigenem Gateway (18793) — Kontingent-Wächter (18794) deckelt jeden Aufruf'],
   ['f','Friday · Not-Aus geprüft','Wächter bremst bei <b>Tageslimit</b> zuverlässig ab — Opus bis 10 %, danach Sonnet'],
   ['c','Modell-Umstellung','alle Claude-Agenten laufen seit 05.09. auf <b>Opus 5</b> · Gaia &amp; Nova bleiben GPT'],
-  ['c','Modell-Umstellung','alle Claude-Agenten außer Friday laufen jetzt auf <b>Opus 5.5 im Fast-Modus</b> · Gaia &amp; Nova bleiben GPT'],
 ];
 
 /* Log stream lines for the Recherche terminal (Cyber-Ästhetik) */
