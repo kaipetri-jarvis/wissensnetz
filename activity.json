@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-24T19:00:33+00:00",
+  "generated": "2026-09-24T19:10:33+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-24T21:02:41+02:00",
+      "text": "Content-Loop 21:00 Pinterest-Pin: Set-Pin pin-adhs-planer-set-de.png fuer BUNDLE-de-adhs-planer-set (107. Pin in build-pins.js)"
+    },
+    {
+      "at": "2026-09-24T21:00:58+02:00",
+      "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-24T20:02:45+02:00",
       "text": "Content-Loop 20:00 Listing-SEO: de-dopamin-menue Titel 125->140 Zeichen ausgereizt, 4 generische Tags durch kaufnahe Phrasen ersetzt (13 Tags, max 19 Zeichen)"
@@ -25,14 +33,6 @@
     },
     {
       "at": "2026-09-24T19:05:46+02:00",
-      "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-24T19:04:45+02:00",
-      "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-24T19:03:44+02:00",
       "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
     }
   ]
