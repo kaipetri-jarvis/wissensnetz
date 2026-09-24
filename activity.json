@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-24T06:10:13+00:00",
+  "generated": "2026-09-24T06:20:13+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-24T08:10:53+02:00",
+      "text": "Content-Loop 08:00: de-gewohnheits-tracker auf 8 Seiten an die EN-Fassung angeglichen (Jahresuebersicht, Tagesroutine-Plan), Listing + 2 Bundles + 2 ZIPs nachge"
+    },
     {
       "at": "2026-09-24T08:10:02+02:00",
       "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
@@ -29,10 +33,6 @@
     },
     {
       "at": "2026-09-24T08:05:57+02:00",
-      "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-24T08:04:56+02:00",
       "text": "Auto-Backup 2026-09-24 — täglicher Workspace-Snapshot"
     }
   ]
