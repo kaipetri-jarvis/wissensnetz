@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-25T10:50:50+00:00",
+  "generated": "2026-09-25T11:00:50+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-25T13:00:31+02:00",
+      "text": "Auto-Backup 2026-09-25 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-25T12:04:25+02:00",
       "text": "Content-Loop 12:00 Produkt erweitern: neun DE-PDFs bekommen die fehlenden Anhangseiten"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-25T11:01:16+02:00",
       "text": "Auto-Backup 2026-09-25 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-25T10:04:40+02:00",
-      "text": "Content-Loop 10:00 Pinterest-Pin: Set-Pin fuer das EN-Baby-Bundle (B28) — pin-baby-set-en, coral, 15 Seiten maschinell aus der ZIP belegt"
     }
   ]
 }
