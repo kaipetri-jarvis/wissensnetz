@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-25T20:30:59+00:00",
+  "generated": "2026-09-25T20:40:59+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-25T22:31:01+02:00",
+      "text": "Content-Loop 22:30 Listing-SEO: seo-de-lieferschein.md (Titel+13 Tags) fuer bisher unoptimierte Lieferschein-Vorlage"
+    },
     {
       "at": "2026-09-25T22:04:43+02:00",
       "text": "Content-Loop 22:00 Produkt erweitern: adhd-routine-cards um Kartenbogen 'Home & Admin' (6 Karten) auf 7 Seiten/30 Karten, Listing und Bogennummern nachgezogen"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-25T21:05:08+02:00",
       "text": "Auto-Backup 2026-09-25 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-25T21:02:43+02:00",
-      "text": "Content-Loop 21:00 Pinterest-Pin: neuer Set-Pin pin-adhd-planner-set-en.png fuer BUNDLE-adhd-planners (B3), Eintrag in produkte/build-pins.js, Badge maschinell "
     }
   ]
 }
