@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-25T07:00:48+00:00",
+  "generated": "2026-09-25T07:10:48+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
+      "at": "2026-09-25T09:06:19+02:00",
+      "text": "Content-Loop 09:00: Start-Checkliste DE auf 8 Seiten — Belegablage & Uebergabe an den Steuerberater"
+    },
+    {
+      "at": "2026-09-25T09:06:02+02:00",
+      "text": "Auto-Backup 2026-09-25 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-25T09:05:01+02:00",
+      "text": "Auto-Backup 2026-09-25 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-25T09:00:57+02:00",
+      "text": "Auto-Backup 2026-09-25 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-25T08:02:51+02:00",
       "text": "Content-Loop 08:00: Cross-Selling — nachgerechnete Set-Ersparnisse in drei ADHS-Planer-Listings"
     },
     {
       "at": "2026-09-25T08:00:51+02:00",
-      "text": "Auto-Backup 2026-09-25 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-25T07:08:58+02:00",
-      "text": "Content-Loop 07:00: Dopamin-Menue DE+EN auf 8 Seiten erweitert"
-    },
-    {
-      "at": "2026-09-25T07:08:46+02:00",
-      "text": "Auto-Backup 2026-09-25 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-25T07:07:45+02:00",
-      "text": "Auto-Backup 2026-09-25 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-25T07:06:43+02:00",
       "text": "Auto-Backup 2026-09-25 — täglicher Workspace-Snapshot"
     }
   ]
