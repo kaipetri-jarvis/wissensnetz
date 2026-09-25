@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-25T16:00:55+00:00",
+  "generated": "2026-09-25T16:10:54+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-25T18:06:15+02:00",
+      "text": "Content-Loop 18:00 Cross-Selling: Household Budget Book (11,90 EUR) beidseitig mit Monthly Budget Planner und Savings Goal Tracker verzahnt, Paar- und Bundle-Su"
+    },
+    {
+      "at": "2026-09-25T18:05:32+02:00",
+      "text": "Auto-Backup 2026-09-25 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-25T18:00:26+02:00",
       "text": "Auto-Backup 2026-09-25 — täglicher Workspace-Snapshot"
@@ -25,14 +33,6 @@
     },
     {
       "at": "2026-09-25T17:07:18+02:00",
-      "text": "Auto-Backup 2026-09-25 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-25T17:06:16+02:00",
-      "text": "Auto-Backup 2026-09-25 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-25T17:05:15+02:00",
       "text": "Auto-Backup 2026-09-25 — täglicher Workspace-Snapshot"
     }
   ]
