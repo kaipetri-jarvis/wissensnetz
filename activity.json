@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-25T21:21:00+00:00",
+  "generated": "2026-09-25T21:31:01+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-25T23:30:34+02:00",
+      "text": "Content-Loop 23:30 Listing-SEO: seo-de-sparziel-tracker.md (Titel+13 Tags) fuer bisher unoptimierten Sparziel-Tracker"
+    },
     {
       "at": "2026-09-25T23:04:31+02:00",
       "text": "Auto-Backup 2026-09-25 — täglicher Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-25T22:31:01+02:00",
       "text": "Content-Loop 22:30 Listing-SEO: seo-de-lieferschein.md (Titel+13 Tags) fuer bisher unoptimierte Lieferschein-Vorlage"
-    },
-    {
-      "at": "2026-09-25T22:04:43+02:00",
-      "text": "Content-Loop 22:00 Produkt erweitern: adhd-routine-cards um Kartenbogen 'Home & Admin' (6 Karten) auf 7 Seiten/30 Karten, Listing und Bogennummern nachgezogen"
     }
   ]
 }
