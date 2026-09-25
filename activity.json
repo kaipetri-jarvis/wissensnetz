@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-25T11:50:50+00:00",
+  "generated": "2026-09-25T12:00:51+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-25T14:00:39+02:00",
+      "text": "Auto-Backup 2026-09-25 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-25T13:02:36+02:00",
       "text": "Content-Loop 13:00 Cross-Selling: falschen Bundle-Verweis der beiden EN-Freelancer-Planer korrigiert, Ersparnisse ausgerechnet, ADHS-Werkzeugkasten auf 22 Seite"
@@ -29,10 +33,6 @@
     },
     {
       "at": "2026-09-25T12:03:23+02:00",
-      "text": "Auto-Backup 2026-09-25 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-25T12:00:20+02:00",
       "text": "Auto-Backup 2026-09-25 — täglicher Workspace-Snapshot"
     }
   ]
