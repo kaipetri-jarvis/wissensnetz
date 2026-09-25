@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-25T20:01:00+00:00",
+  "generated": "2026-09-25T20:10:59+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
+      "at": "2026-09-25T22:04:43+02:00",
+      "text": "Content-Loop 22:00 Produkt erweitern: adhd-routine-cards um Kartenbogen 'Home & Admin' (6 Karten) auf 7 Seiten/30 Karten, Listing und Bogennummern nachgezogen"
+    },
+    {
+      "at": "2026-09-25T22:03:19+02:00",
+      "text": "Auto-Backup 2026-09-25 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-25T22:01:28+02:00",
+      "text": "Content-Loop 22:00 Pinterest-Pin: neuer Set-Pin pin-adhs-werkzeugkasten-set-de.png fuer BUNDLE-de-adhs-werkzeugkasten (B23)"
+    },
+    {
+      "at": "2026-09-25T22:01:14+02:00",
+      "text": "Auto-Backup 2026-09-25 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-25T21:05:08+02:00",
       "text": "Auto-Backup 2026-09-25 — täglicher Workspace-Snapshot"
     },
     {
       "at": "2026-09-25T21:02:43+02:00",
       "text": "Content-Loop 21:00 Pinterest-Pin: neuer Set-Pin pin-adhd-planner-set-en.png fuer BUNDLE-adhd-planners (B3), Eintrag in produkte/build-pins.js, Badge maschinell "
-    },
-    {
-      "at": "2026-09-25T21:02:08+02:00",
-      "text": "Auto-Backup 2026-09-25 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-25T20:03:57+02:00",
-      "text": "Content-Loop 20:00 Pinterest-Pin (Listing-SEO-Slot leer): neuer Pin pin-media-kit-en.png fuer listings/canva-media-kit.md, Eintrag in produkte/build-pins.js, Ba"
-    },
-    {
-      "at": "2026-09-25T20:03:53+02:00",
-      "text": "Auto-Backup 2026-09-25 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-25T20:00:47+02:00",
-      "text": "Auto-Backup 2026-09-25 — täglicher Workspace-Snapshot"
     }
   ]
 }
