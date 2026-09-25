@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-25T12:00:51+00:00",
+  "generated": "2026-09-25T12:10:51+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
+      "at": "2026-09-25T14:10:49+02:00",
+      "text": "Content-Loop 14:00 Uebersetzung/Variante: EN-Fassung des Haushaltsbuchs als neues Produkt (PDF 8 Seiten + Excel mit 256 geprueften Formeln, waehrungsneutral)"
+    },
+    {
+      "at": "2026-09-25T14:09:50+02:00",
+      "text": "Auto-Backup 2026-09-25 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-25T14:07:47+02:00",
+      "text": "Auto-Backup 2026-09-25 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-25T14:06:46+02:00",
+      "text": "Auto-Backup 2026-09-25 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-25T14:04:43+02:00",
+      "text": "Auto-Backup 2026-09-25 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-25T14:00:39+02:00",
-      "text": "Auto-Backup 2026-09-25 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-25T13:02:36+02:00",
-      "text": "Content-Loop 13:00 Cross-Selling: falschen Bundle-Verweis der beiden EN-Freelancer-Planer korrigiert, Ersparnisse ausgerechnet, ADHS-Werkzeugkasten auf 22 Seite"
-    },
-    {
-      "at": "2026-09-25T13:02:33+02:00",
-      "text": "Auto-Backup 2026-09-25 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-25T13:00:31+02:00",
-      "text": "Auto-Backup 2026-09-25 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-25T12:04:25+02:00",
-      "text": "Content-Loop 12:00 Produkt erweitern: neun DE-PDFs bekommen die fehlenden Anhangseiten"
-    },
-    {
-      "at": "2026-09-25T12:03:23+02:00",
       "text": "Auto-Backup 2026-09-25 — täglicher Workspace-Snapshot"
     }
   ]
