@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-25T15:50:52+00:00",
+  "generated": "2026-09-25T16:00:55+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-25T18:00:26+02:00",
+      "text": "Auto-Backup 2026-09-25 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-25T17:08:51+02:00",
       "text": "Content-Loop 17:00 Produkt erweitern: Client Onboarding Kit EN+DE von 6 auf 8 Seiten (Kickoff-Agenda + Uebergabe), Guides, 7 ZIPs und 9 Listings nachgezogen"
@@ -29,10 +33,6 @@
     },
     {
       "at": "2026-09-25T17:05:15+02:00",
-      "text": "Auto-Backup 2026-09-25 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-25T17:04:13+02:00",
       "text": "Auto-Backup 2026-09-25 — täglicher Workspace-Snapshot"
     }
   ]
