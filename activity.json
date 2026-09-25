@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-25T04:00:45+00:00",
+  "generated": "2026-09-25T04:10:46+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-25T06:02:26+02:00",
+      "text": "Content-Loop 06:00: Set-Pin fuer Pflege-Alltag Komplettpaket DE"
+    },
     {
       "at": "2026-09-25T06:00:27+02:00",
       "text": "Auto-Backup 2026-09-25 — täglicher Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-25T03:52:10+02:00",
       "text": "Auto-Backup 2026-09-25 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-25T03:51:44+02:00",
-      "text": "Memory-Falten: Tagesnotiz 23.09.2026 verdichtet"
     }
   ]
 }
