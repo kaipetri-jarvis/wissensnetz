@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-26T21:21:16+00:00",
+  "generated": "2026-09-26T21:31:16+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
+      "at": "2026-09-26T23:30:57+02:00",
+      "text": "Content-Loop 23:30 Listing-SEO: Titel + 13 Tags für Pflegemappe (DE) erstellt"
+    },
+    {
+      "at": "2026-09-26T23:30:57+02:00",
+      "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-26T23:23:41+02:00",
+      "text": "Content-Loop 23:00 Cross-Selling: Bookkeeping Tracker bekommt gerechnete Ersparnis-Leiter (3 Bundles) statt zahlenloser Set-Nennungen; PAIRS-WELL-WITH auf Landl"
+    },
+    {
+      "at": "2026-09-26T23:22:55+02:00",
+      "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-26T23:01:33+02:00",
       "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
     },
     {
       "at": "2026-09-26T23:00:31+02:00",
-      "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-26T22:30:38+02:00",
-      "text": "Content-Loop 22:30 Listing-SEO: Titel + 13 Tags für Quartals-Check & Ziele (DE) erstellt"
-    },
-    {
-      "at": "2026-09-26T22:09:05+02:00",
-      "text": "Content-Loop 22:00 Produkt erweitern: Service Agreement (EN) und Dienstleistungsvertrag (DE) um Anlage C 'Abbruch & Schlussabrechnung' auf 7 Seiten erweitert; F"
-    },
-    {
-      "at": "2026-09-26T22:08:28+02:00",
-      "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-26T22:07:27+02:00",
       "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
     }
   ]
