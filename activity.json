@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-26T10:51:13+00:00",
+  "generated": "2026-09-26T11:01:13+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-26T13:00:45+02:00",
+      "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-26T12:09:11+02:00",
       "text": "Content-Loop 12:00: Preiskalkulator DE+EN um Seite 7 'Preiserhoehung bei Bestandskunden' erweitert (6->7 Seiten), 5 Verkaufs-ZIPs, 5 Listings und 2 Pins nachgez"
@@ -29,10 +33,6 @@
     },
     {
       "at": "2026-09-26T12:05:33+02:00",
-      "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-26T12:04:32+02:00",
       "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
     }
   ]
