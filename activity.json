@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-26T15:01:14+00:00",
+  "generated": "2026-09-26T15:11:14+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
+      "at": "2026-09-26T17:07:49+02:00",
+      "text": "Content-Loop 17:00: 7 Verkaufs-ZIPs neu gepackt (13 veraltete PDFs, u.a. mileage-log 8->9 Seiten), Seitenzahlen in listings/mileage-log.md und BUNDLE-en-landlor"
+    },
+    {
+      "at": "2026-09-26T17:07:37+02:00",
+      "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-26T17:06:36+02:00",
+      "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-26T17:01:28+02:00",
+      "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-26T17:00:30+02:00",
       "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
     },
     {
       "at": "2026-09-26T16:08:34+02:00",
       "text": "Content-Loop 16:00: mileage-log.html von 6 auf 7 Seiten — neue Seite 'Mileage Billed to Clients' (Weiterberechnung an Kunden), Anleitung auf Seite 7, Anhangseit"
-    },
-    {
-      "at": "2026-09-26T16:08:22+02:00",
-      "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-26T16:07:22+02:00",
-      "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-26T16:06:20+02:00",
-      "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-26T16:04:18+02:00",
-      "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
     }
   ]
 }
