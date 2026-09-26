@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-26T13:01:13+00:00",
+  "generated": "2026-09-26T13:11:13+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
+      "at": "2026-09-26T15:07:20+02:00",
+      "text": "Content-Loop 15:00: Pin-Layout — Mockup-Rahmen kollidierte mit der Fusszeile (19 von 121 Pins), fitStage() kuerzt nur die betroffenen Rahmen; PIN-TEXTE.md auf d"
+    },
+    {
+      "at": "2026-09-26T15:07:10+02:00",
+      "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-26T15:06:09+02:00",
+      "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-26T15:05:10+02:00",
+      "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-26T15:04:08+02:00",
+      "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-26T15:01:06+02:00",
-      "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-26T14:07:59+02:00",
-      "text": "Content-Loop 14:00: de-euer-rechnungsbuch um Seite 'Steuerrücklage' erweitert (6->7 Inhaltsseiten, gleichauf mit bookkeeping-tracker EN), 4 ZIPs, 4 Listings und"
-    },
-    {
-      "at": "2026-09-26T14:06:59+02:00",
-      "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-26T14:05:58+02:00",
-      "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-26T14:04:57+02:00",
-      "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-26T14:03:56+02:00",
       "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
     }
   ]
