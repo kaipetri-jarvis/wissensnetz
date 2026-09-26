@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-26T20:01:16+00:00",
+  "generated": "2026-09-26T20:11:16+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
-      "at": "2026-09-26T22:00:20+02:00",
+      "at": "2026-09-26T22:09:05+02:00",
+      "text": "Content-Loop 22:00 Produkt erweitern: Service Agreement (EN) und Dienstleistungsvertrag (DE) um Anlage C 'Abbruch & Schlussabrechnung' auf 7 Seiten erweitert; F"
+    },
+    {
+      "at": "2026-09-26T22:08:28+02:00",
       "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-26T21:07:00+02:00",
-      "text": "Content-Loop 21:00 Pinterest-Pin: neuer Pin fuer das deutsche Commercial-License-Listing (C6) angelegt und gerendert; dabei belegte Seitenzahl-Korrektur 14 -> 1"
-    },
-    {
-      "at": "2026-09-26T21:06:15+02:00",
+      "at": "2026-09-26T22:07:27+02:00",
       "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-26T21:01:10+02:00",
+      "at": "2026-09-26T22:06:26+02:00",
       "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-26T20:07:22+02:00",
-      "text": "Content-Loop 20:00 Pin-Audit: 13 veraltete Pinterest-Pins neu gerendert (Mockups waren durch fruehere Produkterweiterungen gewachsen, Pins bewarben alten Funkti"
+      "at": "2026-09-26T22:05:25+02:00",
+      "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-26T20:05:04+02:00",
+      "at": "2026-09-26T22:04:23+02:00",
       "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
     }
   ]
