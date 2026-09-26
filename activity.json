@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-26T18:51:15+00:00",
+  "generated": "2026-09-26T19:01:15+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-26T21:01:10+02:00",
+      "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-26T20:07:22+02:00",
       "text": "Content-Loop 20:00 Pin-Audit: 13 veraltete Pinterest-Pins neu gerendert (Mockups waren durch fruehere Produkterweiterungen gewachsen, Pins bewarben alten Funkti"
@@ -29,10 +33,6 @@
     },
     {
       "at": "2026-09-26T20:02:00+02:00",
-      "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-26T20:00:58+02:00",
       "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
     }
   ]
