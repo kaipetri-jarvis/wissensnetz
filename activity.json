@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-26T14:01:14+00:00",
+  "generated": "2026-09-26T14:11:14+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
-      "at": "2026-09-26T15:07:20+02:00",
-      "text": "Content-Loop 15:00: Pin-Layout — Mockup-Rahmen kollidierte mit der Fusszeile (19 von 121 Pins), fitStage() kuerzt nur die betroffenen Rahmen; PIN-TEXTE.md auf d"
+      "at": "2026-09-26T16:08:34+02:00",
+      "text": "Content-Loop 16:00: mileage-log.html von 6 auf 7 Seiten — neue Seite 'Mileage Billed to Clients' (Weiterberechnung an Kunden), Anleitung auf Seite 7, Anhangseit"
     },
     {
-      "at": "2026-09-26T15:07:10+02:00",
+      "at": "2026-09-26T16:08:22+02:00",
       "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-26T15:06:09+02:00",
+      "at": "2026-09-26T16:07:22+02:00",
       "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-26T15:05:10+02:00",
+      "at": "2026-09-26T16:06:20+02:00",
       "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-26T15:04:08+02:00",
+      "at": "2026-09-26T16:04:18+02:00",
       "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-26T15:01:06+02:00",
+      "at": "2026-09-26T16:01:15+02:00",
       "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
     }
   ]
