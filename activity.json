@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-26T11:01:13+00:00",
+  "generated": "2026-09-26T11:11:13+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-26T13:02:18+02:00",
+      "text": "Content-Loop 13:00: Cross-Sell-Block der 5 Commercial-Listings korrigiert — nennt jetzt die vier anderen Lizenzen statt sich selbst, plus nachgerechnete Ersparn"
+    },
     {
       "at": "2026-09-26T13:00:45+02:00",
       "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
@@ -29,10 +33,6 @@
     },
     {
       "at": "2026-09-26T12:06:34+02:00",
-      "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-26T12:05:33+02:00",
       "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
     }
   ]
