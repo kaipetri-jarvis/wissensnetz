@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-26T10:01:12+00:00",
+  "generated": "2026-09-26T10:11:12+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
-      "at": "2026-09-26T12:00:28+02:00",
+      "at": "2026-09-26T12:09:11+02:00",
+      "text": "Content-Loop 12:00: Preiskalkulator DE+EN um Seite 7 'Preiserhoehung bei Bestandskunden' erweitert (6->7 Seiten), 5 Verkaufs-ZIPs, 5 Listings und 2 Pins nachgez"
+    },
+    {
+      "at": "2026-09-26T12:08:37+02:00",
       "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-26T11:05:31+02:00",
-      "text": "Content-Loop 11:00: Badge-Audit aller 121 Pins, 6 veraltete Seitenzahlen in build-pins.js korrigiert und Pins neu gerendert"
-    },
-    {
-      "at": "2026-09-26T11:05:24+02:00",
+      "at": "2026-09-26T12:07:36+02:00",
       "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-26T11:04:23+02:00",
+      "at": "2026-09-26T12:06:34+02:00",
       "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-26T11:01:19+02:00",
+      "at": "2026-09-26T12:05:33+02:00",
       "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-26T10:05:40+02:00",
-      "text": "Content-Loop 10:00: Set-Pin pin-selbststaendig-abschluss-set-de.png (121. Pin) fuer BUNDLE-de-selbststaendig-abschluss, Listing-SEO-Slot maschinell leer"
+      "at": "2026-09-26T12:04:32+02:00",
+      "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
     }
   ]
 }
