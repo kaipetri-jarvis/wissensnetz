@@ -1,8 +1,8 @@
 {
-  "generated": "2026-09-26T01:11:06+00:00",
+  "generated": "2026-09-26T01:21:06+00:00",
   "bots": {
     "jarvis": true,
-    "ultron": false
+    "ultron": true
   },
   "atlas": {
     "fleet": true,
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-26T03:20:07+02:00",
+      "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-26T03:15:06+02:00",
+      "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-26T03:10:07+02:00",
       "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
@@ -25,14 +33,6 @@
     },
     {
       "at": "2026-09-26T02:01:00+02:00",
-      "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-26T01:03:10+02:00",
-      "text": "Content-Loop 01:00 Produkt erweitern: fehlende Anhangseiten in adhd-routine-cards.pdf (7->9) nachgezogen, ADHD-Toolkit-Bundle.zip neu gepackt, BUNDLE-adhd-toolk"
-    },
-    {
-      "at": "2026-09-26T01:02:57+02:00",
       "text": "Auto-Backup 2026-09-26 — täglicher Workspace-Snapshot"
     }
   ]
