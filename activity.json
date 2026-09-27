@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-27T17:51:29+00:00",
+  "generated": "2026-09-27T18:01:30+00:00",
   "bots": {
     "jarvis": false,
     "ultron": false
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-27T20:00:43+02:00",
+      "text": "Auto-Backup 2026-09-27 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-27T19:37:41+02:00",
       "text": "Auto-Backup 2026-09-27 — täglicher Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-27T19:08:12+02:00",
       "text": "Etsy: DE-Listing fuer den Nachlass- & Vorsorgeplaner (Z7) angelegt"
-    },
-    {
-      "at": "2026-09-27T19:07:39+02:00",
-      "text": "Auto-Backup 2026-09-27 — täglicher Workspace-Snapshot"
     }
   ]
 }
