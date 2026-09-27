@@ -1,8 +1,8 @@
 {
-  "generated": "2026-09-27T07:51:22+00:00",
+  "generated": "2026-09-27T08:01:24+00:00",
   "bots": {
-    "jarvis": true,
-    "ultron": true
+    "jarvis": false,
+    "ultron": false
   },
   "atlas": {
     "fleet": true,
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-27T10:01:16+02:00",
+      "text": "Auto-Backup 2026-09-27 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-27T09:05:42+02:00",
       "text": "Content-Loop: EN-Fassung des Vorsorge-Organizers — en-advance-directive-organizer (12 Seiten) inkl. Listing und Render-Eintrag"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-27T08:03:46+02:00",
       "text": "Content-Loop: Cross-Selling — C6 (Commercial DE) in den Cross-Sell-Kreis aufgenommen, falsche Break-even-Aussage im Commercial-Bundle korrigiert"
-    },
-    {
-      "at": "2026-09-27T08:02:56+02:00",
-      "text": "Auto-Backup 2026-09-27 — täglicher Workspace-Snapshot"
     }
   ]
 }
