@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-27T14:01:26+00:00",
+  "generated": "2026-09-27T14:11:26+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-27T16:07:11+02:00",
+      "text": "Content-Loop: Pinterest-Pin fuer das Advance Care Complete Set (B41)"
+    },
+    {
+      "at": "2026-09-27T16:06:43+02:00",
+      "text": "Auto-Backup 2026-09-27 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-27T16:00:35+02:00",
       "text": "Auto-Backup 2026-09-27 — täglicher Workspace-Snapshot"
@@ -25,14 +33,6 @@
     },
     {
       "at": "2026-09-27T15:00:28+02:00",
-      "text": "Auto-Backup 2026-09-27 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-27T14:03:47+02:00",
-      "text": "Content-Loop: DE-Listing fuer das Vermieter-Verwaltungsset (Gegenfassung zu en-landlord-set)"
-    },
-    {
-      "at": "2026-09-27T14:03:25+02:00",
       "text": "Auto-Backup 2026-09-27 — täglicher Workspace-Snapshot"
     }
   ]
