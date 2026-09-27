@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-27T21:21:31+00:00",
+  "generated": "2026-09-27T21:31:31+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-27T23:30:57+02:00",
+      "text": "Auto-Backup 2026-09-27 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-27T23:02:09+02:00",
       "text": "Content-Loop 23:00: Cross-Selling — gerechnete Set-Bloecke in de-fahrtenbuch und de-social-media-planer"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-27T22:31:06+02:00",
       "text": "Content-Loop 22:30: SEO-Listing für Essensplaner-DE erstellt"
-    },
-    {
-      "at": "2026-09-27T22:30:50+02:00",
-      "text": "Auto-Backup 2026-09-27 — täglicher Workspace-Snapshot"
     }
   ]
 }
