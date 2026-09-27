@@ -1,8 +1,8 @@
 {
-  "generated": "2026-09-27T15:51:27+00:00",
+  "generated": "2026-09-27T16:01:27+00:00",
   "bots": {
-    "jarvis": true,
-    "ultron": true
+    "jarvis": false,
+    "ultron": false
   },
   "atlas": {
     "fleet": true,
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-27T17:54:58+02:00",
+      "text": "Auto-Backup 2026-09-27 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-27T17:53:58+02:00",
+      "text": "Auto-Backup 2026-09-27 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-27T17:34:57+02:00",
       "text": "Auto-Backup 2026-09-27 — täglicher Workspace-Snapshot"
@@ -25,14 +33,6 @@
     },
     {
       "at": "2026-09-27T17:30:52+02:00",
-      "text": "Auto-Backup 2026-09-27 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-27T17:23:51+02:00",
-      "text": "Auto-Backup 2026-09-27 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-27T17:17:51+02:00",
       "text": "Auto-Backup 2026-09-27 — täglicher Workspace-Snapshot"
     }
   ]
