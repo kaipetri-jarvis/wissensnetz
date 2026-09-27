@@ -1,8 +1,8 @@
 {
-  "generated": "2026-09-27T18:41:30+00:00",
+  "generated": "2026-09-27T18:51:30+00:00",
   "bots": {
-    "jarvis": false,
-    "ultron": false
+    "jarvis": true,
+    "ultron": true
   },
   "atlas": {
     "fleet": true,
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
+      "at": "2026-09-27T20:47:29+02:00",
+      "text": "Auto-Backup 2026-09-27 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-27T20:46:29+02:00",
+      "text": "Auto-Backup 2026-09-27 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-27T20:45:29+02:00",
+      "text": "Auto-Backup 2026-09-27 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-27T20:44:29+02:00",
+      "text": "Auto-Backup 2026-09-27 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-27T20:13:44+02:00",
       "text": "Listing-SEO: de-adhs-planer-teenager — Titel +9 Zeichen, Tag Routine"
     },
     {
       "at": "2026-09-27T20:13:01+02:00",
-      "text": "Auto-Backup 2026-09-27 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-27T20:00:43+02:00",
-      "text": "Auto-Backup 2026-09-27 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-27T19:37:41+02:00",
-      "text": "Auto-Backup 2026-09-27 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-27T19:35:07+02:00",
-      "text": "3D-Druck: volle P2S-Platte mit 20 Dosendeckeln, HF-Düse und Bügeln geslict"
-    },
-    {
-      "at": "2026-09-27T19:34:41+02:00",
       "text": "Auto-Backup 2026-09-27 — täglicher Workspace-Snapshot"
     }
   ]
