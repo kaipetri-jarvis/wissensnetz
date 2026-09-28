@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-28T14:51:40+00:00",
+  "generated": "2026-09-28T15:01:45+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-09-28T17:01:04+02:00",
+      "text": "Auto-Backup 2026-09-28 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-28T16:55:00+02:00",
+      "text": "Auto-Backup 2026-09-28 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-28T16:54:52+02:00",
+      "text": "Etsy: Farbwelt-Befund (92 Bilder gemessen) und Palettenvorschlag aus dem Bestand"
+    },
+    {
       "at": "2026-09-28T16:07:44+02:00",
       "text": "Etsy Content-Loop: Pinterest-Pin fuer die DE-Angebots-Praesentation"
     },
@@ -21,18 +33,6 @@
     },
     {
       "at": "2026-09-28T16:04:50+02:00",
-      "text": "Auto-Backup 2026-09-28 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-28T16:03:50+02:00",
-      "text": "Auto-Backup 2026-09-28 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-28T16:03:13+02:00",
-      "text": "Tagesnotiz 28.09.: n8n lokal per launchd aufgesetzt (Docker hing)"
-    },
-    {
-      "at": "2026-09-28T16:02:48+02:00",
       "text": "Auto-Backup 2026-09-28 — täglicher Workspace-Snapshot"
     }
   ]
