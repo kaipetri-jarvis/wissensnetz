@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-28T11:21:39+00:00",
+  "generated": "2026-09-28T11:31:39+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-28T13:28:20+02:00",
+      "text": "Etsy: Ads-/Marketing-Block in Start-Checkliste, REICHWEITE-UND-ADS auf Stand 28.09. (38 Listings, 14 Pins, Zugpferde benannt)"
+    },
+    {
+      "at": "2026-09-28T13:28:16+02:00",
+      "text": "Auto-Backup 2026-09-28 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-28T13:20:15+02:00",
       "text": "Auto-Backup 2026-09-28 — täglicher Workspace-Snapshot"
@@ -26,14 +34,6 @@
     {
       "at": "2026-09-28T13:02:13+02:00",
       "text": "Auto-Backup 2026-09-28 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-28T13:01:11+02:00",
-      "text": "Auto-Backup 2026-09-28 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-28T12:09:30+02:00",
-      "text": "Content-Loop: Vermieter-Set DE/EN auf 8 Seiten — neue Seite Miete & Kaution"
     }
   ]
 }
