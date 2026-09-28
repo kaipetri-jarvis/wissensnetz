@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-28T08:01:37+00:00",
+  "generated": "2026-09-28T08:11:37+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-28T10:02:32+02:00",
+      "text": "Content-Loop: Listing-SEO de-pflegegrad-antrag (Titel + 3 Tags)"
+    },
     {
       "at": "2026-09-28T10:00:57+02:00",
       "text": "Etsy: Arbeitsstand 28.09. — 95 Listings, 0 Dateiluecken"
@@ -29,10 +33,6 @@
     },
     {
       "at": "2026-09-28T09:07:29+02:00",
-      "text": "Auto-Backup 2026-09-28 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-28T09:06:27+02:00",
       "text": "Auto-Backup 2026-09-28 — täglicher Workspace-Snapshot"
     }
   ]
