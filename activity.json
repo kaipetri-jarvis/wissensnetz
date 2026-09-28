@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-28T13:01:39+00:00",
+  "generated": "2026-09-28T13:11:39+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
+      "at": "2026-09-28T15:11:37+02:00",
+      "text": "Auto-Backup 2026-09-28 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-28T15:10:37+02:00",
+      "text": "Auto-Backup 2026-09-28 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-28T15:09:37+02:00",
+      "text": "Auto-Backup 2026-09-28 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-28T15:05:29+02:00",
+      "text": "Ultron-Gateway: fehlendes Telegram-Fallback-Binding ergaenzt, Agenten-Draht wieder offen"
+    },
+    {
+      "at": "2026-09-28T15:01:50+02:00",
+      "text": "Etsy Listing-SEO: Vorsorge-Organizer DE - Titel auf Vorsorgeregister zugespitzt, 3 schwache Tags ersetzt"
+    },
+    {
       "at": "2026-09-28T15:01:36+02:00",
-      "text": "Auto-Backup 2026-09-28 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-28T15:00:35+02:00",
-      "text": "Auto-Backup 2026-09-28 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-28T14:50:00+02:00",
-      "text": "Uebergabe an Ultron: sechs Symbole fuer das Minimal-Angebots-Deck"
-    },
-    {
-      "at": "2026-09-28T14:46:15+02:00",
-      "text": "Etsy #17: zwei Stilvarianten (Classic + Minimal) in einem Listing, Minimal-Deck auf 10 Folien"
-    },
-    {
-      "at": "2026-09-28T14:45:34+02:00",
-      "text": "Auto-Backup 2026-09-28 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-28T14:44:34+02:00",
       "text": "Auto-Backup 2026-09-28 — täglicher Workspace-Snapshot"
     }
   ]
