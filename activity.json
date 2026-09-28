@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-28T15:01:45+00:00",
+  "generated": "2026-09-28T15:11:45+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
-      "at": "2026-09-28T17:01:04+02:00",
+      "at": "2026-09-28T17:08:14+02:00",
+      "text": "Etsy Content-Loop: ADHD Planner for Adults um Seite 'Admin Catch-Up' erweitert (7 -> 8 Inhaltsseiten)"
+    },
+    {
+      "at": "2026-09-28T17:08:12+02:00",
       "text": "Auto-Backup 2026-09-28 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-28T16:55:00+02:00",
+      "at": "2026-09-28T17:07:10+02:00",
       "text": "Auto-Backup 2026-09-28 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-28T16:54:52+02:00",
-      "text": "Etsy: Farbwelt-Befund (92 Bilder gemessen) und Palettenvorschlag aus dem Bestand"
-    },
-    {
-      "at": "2026-09-28T16:07:44+02:00",
-      "text": "Etsy Content-Loop: Pinterest-Pin fuer die DE-Angebots-Praesentation"
-    },
-    {
-      "at": "2026-09-28T16:05:52+02:00",
+      "at": "2026-09-28T17:06:09+02:00",
       "text": "Auto-Backup 2026-09-28 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-28T16:04:50+02:00",
+      "at": "2026-09-28T17:05:16+02:00",
+      "text": "DeskLane: Petrol als Markenfarbe festgelegt, Website umgestellt, MARKE-FARBEN.md angelegt"
+    },
+    {
+      "at": "2026-09-28T17:05:08+02:00",
       "text": "Auto-Backup 2026-09-28 — täglicher Workspace-Snapshot"
     }
   ]
