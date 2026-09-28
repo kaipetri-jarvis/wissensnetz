@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-28T12:41:39+00:00",
+  "generated": "2026-09-28T12:51:39+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
+      "at": "2026-09-28T14:50:00+02:00",
+      "text": "Uebergabe an Ultron: sechs Symbole fuer das Minimal-Angebots-Deck"
+    },
+    {
+      "at": "2026-09-28T14:46:15+02:00",
+      "text": "Etsy #17: zwei Stilvarianten (Classic + Minimal) in einem Listing, Minimal-Deck auf 10 Folien"
+    },
+    {
+      "at": "2026-09-28T14:45:34+02:00",
+      "text": "Auto-Backup 2026-09-28 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-28T14:44:34+02:00",
+      "text": "Auto-Backup 2026-09-28 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-28T14:43:33+02:00",
+      "text": "Auto-Backup 2026-09-28 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-28T14:24:54+02:00",
       "text": "Etsy: Kontakt-Symbole (Mail/Telefon/Web/LinkedIn) fuer das Angebots-Deck gezeichnet"
-    },
-    {
-      "at": "2026-09-28T14:24:32+02:00",
-      "text": "Auto-Backup 2026-09-28 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-28T14:21:10+02:00",
-      "text": "Etsy: pptx-auf-ci.py — Claude-Slides-Deck auf DeskLane-CI umgefaerbt, 4 Layouts ergaenzt"
-    },
-    {
-      "at": "2026-09-28T14:20:32+02:00",
-      "text": "Auto-Backup 2026-09-28 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-28T14:09:48+02:00",
-      "text": "Content-Loop: deutsche Angebots-Praesentation (10 Folien PPTX) als neues Produkt + Listing"
-    },
-    {
-      "at": "2026-09-28T14:09:31+02:00",
-      "text": "Auto-Backup 2026-09-28 — täglicher Workspace-Snapshot"
     }
   ]
 }
