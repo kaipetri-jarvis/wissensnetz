@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-28T05:51:36+00:00",
+  "generated": "2026-09-28T06:01:36+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-28T08:01:08+02:00",
+      "text": "Auto-Backup 2026-09-28 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-28T07:08:40+02:00",
       "text": "Content-Loop: Bookkeeping Tracker um Seite 'Invoices & Payments Due' erweitert (7->8 Seiten)"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-28T07:00:49+02:00",
       "text": "Auto-Backup 2026-09-28 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-28T06:02:31+02:00",
-      "text": "Content-Loop: Pin fuer ADHS-Planer Set Schicht & Familie (B18)"
     }
   ]
 }
