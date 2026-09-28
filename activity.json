@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-28T21:21:49+00:00",
+  "generated": "2026-09-28T21:31:49+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-28T23:30:24+02:00",
+      "text": "Content-Loop: Listing-SEO für DE-Gewohnheitstracker erstellt"
+    },
     {
       "at": "2026-09-28T23:03:18+02:00",
       "text": "Content-Loop: Pinterest-Pin für Freelancer Finance Bundle ergänzt"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-28T22:30:43+02:00",
       "text": "Content-Loop: SEO-Listing für ADHS-Planer Büroalltag (DE) erstellt"
-    },
-    {
-      "at": "2026-09-28T22:05:30+02:00",
-      "text": "Content-Loop: Pflege-Notfallmappe DE/EN um Seite 'Entlassung & Rueckkehr' erweitert (7 -> 8 Seiten)"
     }
   ]
 }
