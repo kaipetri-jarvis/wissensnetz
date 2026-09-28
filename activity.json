@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-28T12:21:39+00:00",
+  "generated": "2026-09-28T12:31:39+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-28T14:24:54+02:00",
+      "text": "Etsy: Kontakt-Symbole (Mail/Telefon/Web/LinkedIn) fuer das Angebots-Deck gezeichnet"
+    },
+    {
+      "at": "2026-09-28T14:24:32+02:00",
+      "text": "Auto-Backup 2026-09-28 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-28T14:21:10+02:00",
       "text": "Etsy: pptx-auf-ci.py — Claude-Slides-Deck auf DeskLane-CI umgefaerbt, 4 Layouts ergaenzt"
@@ -25,14 +33,6 @@
     },
     {
       "at": "2026-09-28T14:09:31+02:00",
-      "text": "Auto-Backup 2026-09-28 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-28T14:08:30+02:00",
-      "text": "Auto-Backup 2026-09-28 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-28T14:07:28+02:00",
       "text": "Auto-Backup 2026-09-28 — täglicher Workspace-Snapshot"
     }
   ]
