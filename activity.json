@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-28T22:51:50+00:00",
+  "generated": "2026-09-28T23:01:50+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-29T01:00:39+02:00",
+      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-29T00:01:48+02:00",
       "text": "Content-Loop Listing-SEO: ADHD College Planner — GoodNotes im Titel, 3 redundante Tags gegen belegte Longtails getauscht"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-28T23:03:18+02:00",
       "text": "Content-Loop: Pinterest-Pin für Freelancer Finance Bundle ergänzt"
-    },
-    {
-      "at": "2026-09-28T23:02:35+02:00",
-      "text": "Content-Loop Cross-Selling: gerechnete Set-Ersparnis im Studenten-Budgetplaner, Seitensumme B20 45 -> 46 korrigiert"
     }
   ]
 }
