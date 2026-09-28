@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-28T12:11:39+00:00",
+  "generated": "2026-09-28T12:21:39+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-28T14:21:10+02:00",
+      "text": "Etsy: pptx-auf-ci.py — Claude-Slides-Deck auf DeskLane-CI umgefaerbt, 4 Layouts ergaenzt"
+    },
+    {
+      "at": "2026-09-28T14:20:32+02:00",
+      "text": "Auto-Backup 2026-09-28 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-28T14:09:48+02:00",
       "text": "Content-Loop: deutsche Angebots-Praesentation (10 Folien PPTX) als neues Produkt + Listing"
@@ -25,14 +33,6 @@
     },
     {
       "at": "2026-09-28T14:07:28+02:00",
-      "text": "Auto-Backup 2026-09-28 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-28T14:05:26+02:00",
-      "text": "Auto-Backup 2026-09-28 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-28T14:00:19+02:00",
       "text": "Auto-Backup 2026-09-28 — täglicher Workspace-Snapshot"
     }
   ]
