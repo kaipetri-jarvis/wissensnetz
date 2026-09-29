@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-29T23:02:00+00:00",
+  "generated": "2026-09-29T23:12:00+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-30T01:02:51+02:00",
+      "text": "Content-Loop 30.09. 01:00 — Pin fuer Quote & Estimate Template (Commercial License)"
+    },
+    {
+      "at": "2026-09-30T01:02:29+02:00",
+      "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-30T01:00:27+02:00",
       "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
@@ -26,14 +34,6 @@
     {
       "at": "2026-09-30T00:01:21+02:00",
       "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-29T23:30:37+02:00",
-      "text": "Content-Loop 29.09. 23:30 — SEO-Listing für ADHD Planner for Parents (bisher unoptimiert)"
-    },
-    {
-      "at": "2026-09-29T23:01:57+02:00",
-      "text": "Content-Loop 29.09. 23:00 — Cross-Selling: en-caregiver-organizer bekommt Bundle-Hinweise (B41/B38/B26/B40) mit nachgerechneten Summen"
     }
   ]
 }
