@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-29T07:51:53+00:00",
+  "generated": "2026-09-29T08:01:54+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-29T10:01:06+02:00",
+      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-29T09:08:26+02:00",
       "text": "Content-Loop 29.09. 09:00 — Uebersetzung/Variante: deutsche Instagram-Post-Vorlagen (12 Posts) als instagram_de(), ZIP, Vorschau und Listing de-instagram-set.md"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-29T09:04:52+02:00",
       "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-29T09:04:47+02:00",
-      "text": "Legion geprueft: gesund; Memory-Suche haengt am Gemini-Fallback im laufenden Prozess"
     }
   ]
 }
