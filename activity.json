@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-29T10:01:54+00:00",
+  "generated": "2026-09-29T10:11:54+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-09-29T12:05:36+02:00",
+      "text": "Content-Loop 29.09. 12:00 — ADHD Planner Office Professionals: neue Seite 7 \"Email & Chat\" (8 -> 9 Seiten)"
+    },
+    {
+      "at": "2026-09-29T12:04:36+02:00",
+      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-29T12:03:35+02:00",
+      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-29T12:00:32+02:00",
       "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
     },
@@ -22,18 +34,6 @@
     {
       "at": "2026-09-29T11:01:54+02:00",
       "text": "Tagesnotiz 29.09.: Pages-Deploy-Fehler wissensnetz als transienter GitHub-OIDC-Timeout belegt — nichts zu tun"
-    },
-    {
-      "at": "2026-09-29T11:00:24+02:00",
-      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-29T10:02:41+02:00",
-      "text": "Etsy-Treiber 29.09.: Schattenstapel dokumentiert — Content-Loop-Produkte ohne Mappen-Block"
-    },
-    {
-      "at": "2026-09-29T10:02:22+02:00",
-      "text": "Content-Loop 29.09. 10:00 — Listing-SEO Preisliste: Titel entdoppelt (Rate Card/Pricing Guide/Beauty), 4 redundante Tags ersetzt, UPLOAD-MAPPE nachgezogen"
     }
   ]
 }
