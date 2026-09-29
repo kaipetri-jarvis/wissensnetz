@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-29T20:51:59+00:00",
+  "generated": "2026-09-29T21:01:59+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-09-29T23:01:57+02:00",
+      "text": "Content-Loop 29.09. 23:00 — Cross-Selling: en-caregiver-organizer bekommt Bundle-Hinweise (B41/B38/B26/B40) mit nachgerechneten Summen"
+    },
+    {
+      "at": "2026-09-29T23:01:15+02:00",
+      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-29T23:00:51+02:00",
+      "text": "Content-Loop 29.09. 23:00 — neuer Pin für Angebots-Präsentation DE"
+    },
+    {
       "at": "2026-09-29T22:30:37+02:00",
       "text": "Content-Loop 29.09. 22:30 — SEO-Listing für Complete Freelancer Toolkit (Bundle, bisher unoptimiert)"
     },
@@ -21,18 +33,6 @@
     },
     {
       "at": "2026-09-29T22:10:08+02:00",
-      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-29T22:09:07+02:00",
-      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-29T22:08:06+02:00",
-      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-29T22:07:04+02:00",
       "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
     }
   ]
