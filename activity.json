@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-29T19:51:59+00:00",
+  "generated": "2026-09-29T20:01:59+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-29T22:01:26+02:00",
+      "text": "Content-Loop: Freebie-Text Caregiver-Emergency-Card (EN)"
+    },
+    {
+      "at": "2026-09-29T22:00:57+02:00",
+      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-29T21:03:15+02:00",
       "text": "Content-Loop: Pinterest-Pin fuer commercial-invoice-template (EN, gold)"
@@ -25,14 +33,6 @@
     },
     {
       "at": "2026-09-29T20:01:45+02:00",
-      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-29T20:01:25+02:00",
-      "text": "Content-Loop: canva-proposal-deck hatte 14 Tags - Etsy-Hartlimit auf 13 korrigiert"
-    },
-    {
-      "at": "2026-09-29T20:00:45+02:00",
       "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
     }
   ]
