@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-29T22:02:00+00:00",
+  "generated": "2026-09-29T22:12:00+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-30T00:02:37+02:00",
+      "text": "Content-Loop 30.09. 00:00 — Listing-SEO B8 Creator Brand Kit: 3 titelredundante Tags durch belegte, kollisionsfreie ersetzt"
+    },
+    {
+      "at": "2026-09-30T00:02:22+02:00",
+      "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-30T00:01:21+02:00",
       "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
@@ -26,14 +34,6 @@
     {
       "at": "2026-09-29T23:01:15+02:00",
       "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-29T23:00:51+02:00",
-      "text": "Content-Loop 29.09. 23:00 — neuer Pin für Angebots-Präsentation DE"
-    },
-    {
-      "at": "2026-09-29T22:30:37+02:00",
-      "text": "Content-Loop 29.09. 22:30 — SEO-Listing für Complete Freelancer Toolkit (Bundle, bisher unoptimiert)"
     }
   ]
 }
