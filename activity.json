@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-29T06:01:53+00:00",
+  "generated": "2026-09-29T06:11:53+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-29T08:02:08+02:00",
+      "text": "Content-Loop 29.09. 08:00 — Cross-Selling: de-vermieter-set.md auf Fahrtenbuch 8 Seiten / Set 24 Seiten nachgefuehrt"
+    },
     {
       "at": "2026-09-29T08:01:43+02:00",
       "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
@@ -29,10 +33,6 @@
     },
     {
       "at": "2026-09-29T07:06:36+02:00",
-      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-29T07:05:35+02:00",
       "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
     }
   ]
