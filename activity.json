@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-29T15:01:56+00:00",
+  "generated": "2026-09-29T15:11:57+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
+      "at": "2026-09-29T17:04:52+02:00",
+      "text": "Content-Loop 29.09. 17:00 — Wedding Planner (EN): neue Seite 'Payment Schedule & Deposits' (9 -> 10 Seiten), Listings + ZIPs nachgezogen"
+    },
+    {
+      "at": "2026-09-29T17:04:17+02:00",
+      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-29T17:03:16+02:00",
+      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-29T17:02:15+02:00",
+      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-29T17:01:13+02:00",
       "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
     },
     {
       "at": "2026-09-29T16:04:32+02:00",
       "text": "Content-Loop 29.09. 16:00 — Pinterest-Pin: pin-creator-brand-kit-de.png (B41) + DE-Set-Mockup"
-    },
-    {
-      "at": "2026-09-29T16:04:08+02:00",
-      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-29T16:03:07+02:00",
-      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-29T16:01:04+02:00",
-      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-29T15:58:14+02:00",
-      "text": "TikTok-MCP-Auswertung: Playwright empfohlen, vier abgelehnt; TikTok-Foto-Posts nicht abrufbar"
     }
   ]
 }
