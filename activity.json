@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-29T20:21:59+00:00",
+  "generated": "2026-09-29T20:31:59+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-29T22:30:37+02:00",
+      "text": "Content-Loop 29.09. 22:30 — SEO-Listing für Complete Freelancer Toolkit (Bundle, bisher unoptimiert)"
+    },
     {
       "at": "2026-09-29T22:10:39+02:00",
       "text": "Content-Loop 29.09. 22:00 — Monthly Budget Planner: neue Seite 'Accounts & Balances' (8 -> 9 Seiten)"
@@ -29,10 +33,6 @@
     },
     {
       "at": "2026-09-29T22:07:04+02:00",
-      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-29T22:05:02+02:00",
       "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
     }
   ]
