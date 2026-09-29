@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-29T20:01:59+00:00",
+  "generated": "2026-09-29T20:11:59+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
-      "at": "2026-09-29T22:01:26+02:00",
-      "text": "Content-Loop: Freebie-Text Caregiver-Emergency-Card (EN)"
+      "at": "2026-09-29T22:10:39+02:00",
+      "text": "Content-Loop 29.09. 22:00 — Monthly Budget Planner: neue Seite 'Accounts & Balances' (8 -> 9 Seiten)"
     },
     {
-      "at": "2026-09-29T22:00:57+02:00",
+      "at": "2026-09-29T22:10:08+02:00",
       "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-29T21:03:15+02:00",
-      "text": "Content-Loop: Pinterest-Pin fuer commercial-invoice-template (EN, gold)"
-    },
-    {
-      "at": "2026-09-29T21:02:52+02:00",
+      "at": "2026-09-29T22:09:07+02:00",
       "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-29T21:00:50+02:00",
+      "at": "2026-09-29T22:08:06+02:00",
       "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-29T20:01:45+02:00",
+      "at": "2026-09-29T22:07:04+02:00",
+      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-29T22:05:02+02:00",
       "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
     }
   ]
