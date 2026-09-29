@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-29T01:41:51+00:00",
+  "generated": "2026-09-29T01:51:51+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-09-29T03:51:29+02:00",
+      "text": "Falten-Sperre wieder entfernt (automatischer Falt-Lauf)"
+    },
+    {
+      "at": "2026-09-29T03:51:21+02:00",
+      "text": "Memory-Falten: 2026-09-27 verdichtet (WhatsApp, VELUX, Outlook-Token, Dosendeckel), Index neu gebaut (automatischer Falt-Lauf)"
+    },
+    {
+      "at": "2026-09-29T03:50:53+02:00",
+      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-29T03:40:52+02:00",
       "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
     },
@@ -21,18 +33,6 @@
     },
     {
       "at": "2026-09-29T03:20:50+02:00",
-      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-29T03:15:50+02:00",
-      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-29T03:10:50+02:00",
-      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-29T03:00:49+02:00",
       "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
     }
   ]
