@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-29T12:51:56+00:00",
+  "generated": "2026-09-29T13:01:56+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-29T15:01:51+02:00",
+      "text": "Content-Loop 29.09. 15:00 — Listing-SEO: invoice-template Titel und 4 Tags entredundanziert (Excel/Sheets/Small Business/Tested Formulas raus, xlsx/Apple Number"
+    },
+    {
+      "at": "2026-09-29T15:01:00+02:00",
+      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-29T14:05:25+02:00",
       "text": "Content-Loop 29.09. 14:00 — Uebersetzung/Variante: neues Bundle B41 Creator-Brand-Kit DE (deutsches Gegenstueck zu B8), Listing + ZIP + Builder, Cross-Sell in B"
@@ -25,14 +33,6 @@
     },
     {
       "at": "2026-09-29T14:00:49+02:00",
-      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-29T13:02:36+02:00",
-      "text": "Content-Loop 29.09. 13:00 — Cross-Selling: de-instagram-set verweist jetzt auf das Creator-Content-Set DE mit nachgerechneter Ersparnis (30,70 -> 19,90 EUR, 10,"
-    },
-    {
-      "at": "2026-09-29T13:01:42+02:00",
       "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
     }
   ]
