@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-29T14:51:56+00:00",
+  "generated": "2026-09-29T15:01:56+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-29T17:01:13+02:00",
+      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-29T16:04:32+02:00",
       "text": "Content-Loop 29.09. 16:00 — Pinterest-Pin: pin-creator-brand-kit-de.png (B41) + DE-Set-Mockup"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-29T15:58:14+02:00",
       "text": "TikTok-MCP-Auswertung: Playwright empfohlen, vier abgelehnt; TikTok-Foto-Posts nicht abrufbar"
-    },
-    {
-      "at": "2026-09-29T15:01:51+02:00",
-      "text": "Content-Loop 29.09. 15:00 — Listing-SEO: invoice-template Titel und 4 Tags entredundanziert (Excel/Sheets/Small Business/Tested Formulas raus, xlsx/Apple Number"
     }
   ]
 }
