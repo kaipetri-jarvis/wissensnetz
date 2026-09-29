@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-29T15:41:57+00:00",
+  "generated": "2026-09-29T15:51:57+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
+      "at": "2026-09-29T17:50:24+02:00",
+      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-29T17:46:24+02:00",
+      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-29T17:45:24+02:00",
+      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-29T17:42:24+02:00",
+      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-29T17:39:20+02:00",
       "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
     },
     {
       "at": "2026-09-29T17:39:15+02:00",
       "text": "Playwright-MCP im Ultron-Gateway eingetragen (feste Version, eigenes Browser-Profil)"
-    },
-    {
-      "at": "2026-09-29T17:04:52+02:00",
-      "text": "Content-Loop 29.09. 17:00 — Wedding Planner (EN): neue Seite 'Payment Schedule & Deposits' (9 -> 10 Seiten), Listings + ZIPs nachgezogen"
-    },
-    {
-      "at": "2026-09-29T17:04:17+02:00",
-      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-29T17:03:16+02:00",
-      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-29T17:02:15+02:00",
-      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
     }
   ]
 }
