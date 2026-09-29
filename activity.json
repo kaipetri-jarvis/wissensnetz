@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-29T16:01:57+00:00",
+  "generated": "2026-09-29T16:11:57+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-09-29T18:11:29+02:00",
+      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-29T18:03:02+02:00",
+      "text": "Content-Loop 29.09. 18:00 — Cross-Selling: client-offboarding-kit verweist jetzt auf das Freelancer Year-End Kit mit nachgerechneter Ersparnis (26,70 -> 16,90 E"
+    },
+    {
+      "at": "2026-09-29T18:02:28+02:00",
+      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-29T18:00:25+02:00",
       "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
     },
@@ -21,18 +33,6 @@
     },
     {
       "at": "2026-09-29T17:50:24+02:00",
-      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-29T17:46:24+02:00",
-      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-29T17:45:24+02:00",
-      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-29T17:42:24+02:00",
       "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
     }
   ]
