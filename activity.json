@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-29T07:01:53+00:00",
+  "generated": "2026-09-29T07:11:53+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
-      "at": "2026-09-29T09:00:48+02:00",
+      "at": "2026-09-29T09:08:26+02:00",
+      "text": "Content-Loop 29.09. 09:00 — Uebersetzung/Variante: deutsche Instagram-Post-Vorlagen (12 Posts) als instagram_de(), ZIP, Vorschau und Listing de-instagram-set.md"
+    },
+    {
+      "at": "2026-09-29T09:07:57+02:00",
       "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-29T08:02:08+02:00",
-      "text": "Content-Loop 29.09. 08:00 — Cross-Selling: de-vermieter-set.md auf Fahrtenbuch 8 Seiten / Set 24 Seiten nachgefuehrt"
-    },
-    {
-      "at": "2026-09-29T08:01:43+02:00",
+      "at": "2026-09-29T09:06:55+02:00",
       "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-29T08:00:41+02:00",
+      "at": "2026-09-29T09:05:54+02:00",
       "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-29T07:08:04+02:00",
-      "text": "Content-Loop 29.09. 07:00 — Mileage Log EN: neue Seite 6 'Standard Rate or Actual Cost' (7 -> 8 Seiten)"
+      "at": "2026-09-29T09:04:52+02:00",
+      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-29T07:07:38+02:00",
-      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
+      "at": "2026-09-29T09:04:47+02:00",
+      "text": "Legion geprueft: gesund; Memory-Suche haengt am Gemini-Fallback im laufenden Prozess"
     }
   ]
 }
