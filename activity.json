@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-29T05:01:52+00:00",
+  "generated": "2026-09-29T05:11:52+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
-      "at": "2026-09-29T07:00:29+02:00",
+      "at": "2026-09-29T07:08:04+02:00",
+      "text": "Content-Loop 29.09. 07:00 — Mileage Log EN: neue Seite 6 'Standard Rate or Actual Cost' (7 -> 8 Seiten)"
+    },
+    {
+      "at": "2026-09-29T07:07:38+02:00",
       "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-29T06:08:00+02:00",
-      "text": "Content-Loop 29.09. 06:00 — Fahrtenbuch DE: neues Blatt 5 'Ein Prozent oder Fahrtenbuch' (7 -> 8 Seiten)"
-    },
-    {
-      "at": "2026-09-29T06:07:22+02:00",
+      "at": "2026-09-29T07:06:36+02:00",
       "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-29T06:06:20+02:00",
+      "at": "2026-09-29T07:05:35+02:00",
       "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-29T06:05:19+02:00",
+      "at": "2026-09-29T07:04:33+02:00",
       "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-29T06:04:18+02:00",
+      "at": "2026-09-29T07:03:32+02:00",
       "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
     }
   ]
