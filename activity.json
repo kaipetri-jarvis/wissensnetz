@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-29T01:01:51+00:00",
+  "generated": "2026-09-29T01:11:51+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-29T03:10:50+02:00",
+      "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-29T03:00:49+02:00",
       "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-29T01:00:39+02:00",
       "text": "Auto-Backup 2026-09-29 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-29T00:01:48+02:00",
-      "text": "Content-Loop Listing-SEO: ADHD College Planner — GoodNotes im Titel, 3 redundante Tags gegen belegte Longtails getauscht"
     }
   ]
 }
