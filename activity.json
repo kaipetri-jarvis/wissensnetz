@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-30T20:22:16+00:00",
+  "generated": "2026-09-30T20:32:16+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-30T22:30:27+02:00",
+      "text": "Etsy Content-Loop: SEO-Listing für ADHD Planner Office Workers erstellt"
+    },
     {
       "at": "2026-09-30T22:11:48+02:00",
       "text": "Arbeitsbilder der Logo-Pruefung entfernt"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-30T22:10:24+02:00",
       "text": "Website: Markenzeichen E16 eingesetzt, Favicons und Teilen-Vorschau neu"
-    },
-    {
-      "at": "2026-09-30T22:10:01+02:00",
-      "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
     }
   ]
 }
