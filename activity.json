@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-30T14:02:11+00:00",
+  "generated": "2026-09-30T14:12:11+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-30T16:02:20+02:00",
+      "text": "Etsy Content-Loop 30.09. 16:00 — Pinterest-Pin: pin-commercial-client-onboarding-en (letzte der fuenf EN-Lizenzvarianten)"
+    },
     {
       "at": "2026-09-30T16:00:37+02:00",
       "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-30T14:05:46+02:00",
       "text": "Etsy Content-Loop 30.09. 14:00 — Uebersetzung/Variante: DE Commercial License fuer die Kunden-Onboarding-Mappe (C7, 44,90 EUR)"
-    },
-    {
-      "at": "2026-09-30T14:05:26+02:00",
-      "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
     }
   ]
 }
