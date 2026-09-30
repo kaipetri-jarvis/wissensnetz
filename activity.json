@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-30T09:02:08+00:00",
+  "generated": "2026-09-30T09:12:08+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-30T11:02:18+02:00",
+      "text": "Etsy Content-Loop: Pin fuer Bookkeeping-Tracker Commercial License"
+    },
     {
       "at": "2026-09-30T11:01:51+02:00",
       "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
@@ -29,10 +33,6 @@
     },
     {
       "at": "2026-09-30T10:03:43+02:00",
-      "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-30T10:02:41+02:00",
       "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
     }
   ]
