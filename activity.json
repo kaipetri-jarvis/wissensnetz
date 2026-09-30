@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-30T20:52:17+00:00",
+  "generated": "2026-09-30T21:02:17+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-30T23:01:52+02:00",
+      "text": "Etsy Content-Loop: Pin für commercial-de-euer-rechnungsbuch (C8) ergänzt"
+    },
+    {
+      "at": "2026-09-30T23:01:08+02:00",
+      "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-30T22:30:27+02:00",
       "text": "Etsy Content-Loop: SEO-Listing für ADHD Planner Office Workers erstellt"
@@ -26,14 +34,6 @@
     {
       "at": "2026-09-30T22:10:43+02:00",
       "text": "Etsy Content-Loop: ADHS-Routinekarten EN+DE um Kartenbogen 'Menschen & Nachrichten' erweitert (7 -> 8 Seiten, 36 Karten)"
-    },
-    {
-      "at": "2026-09-30T22:10:43+02:00",
-      "text": "Tagesnotiz 30.09.: Markenzeichen E16 auf der Website; baue-banner.py nicht mehr lauffaehig (Quelle in /tmp verloren)"
-    },
-    {
-      "at": "2026-09-30T22:10:24+02:00",
-      "text": "Website: Markenzeichen E16 eingesetzt, Favicons und Teilen-Vorschau neu"
     }
   ]
 }
