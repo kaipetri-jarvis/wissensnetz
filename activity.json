@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-30T15:02:12+00:00",
+  "generated": "2026-09-30T15:12:12+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
-      "at": "2026-09-30T17:00:44+02:00",
+      "at": "2026-09-30T17:11:34+02:00",
+      "text": "Etsy Content-Loop 30.09. 17:00 — Preiskalkulator DE+EN: neue PDF-Seite 8 'Rabatte, Anzahlung & Zahlungsbedingungen' (7->8 Seiten), ZIPs und Listing-Texte nachge"
+    },
+    {
+      "at": "2026-09-30T17:10:58+02:00",
       "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-30T16:02:20+02:00",
-      "text": "Etsy Content-Loop 30.09. 16:00 — Pinterest-Pin: pin-commercial-client-onboarding-en (letzte der fuenf EN-Lizenzvarianten)"
-    },
-    {
-      "at": "2026-09-30T16:00:37+02:00",
+      "at": "2026-09-30T17:09:56+02:00",
       "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-30T15:01:36+02:00",
-      "text": "Etsy Content-Loop 30.09. 15:00 — Listing-SEO: de-haushaltsbuch Titel + 13 Tags, Tag-Kannibalisierung mit de-budgetplaner beseitigt"
-    },
-    {
-      "at": "2026-09-30T15:01:32+02:00",
+      "at": "2026-09-30T17:08:55+02:00",
       "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-09-30T15:00:31+02:00",
+      "at": "2026-09-30T17:07:54+02:00",
+      "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-30T17:06:52+02:00",
       "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
     }
   ]
