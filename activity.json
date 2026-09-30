@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-30T10:52:09+00:00",
+  "generated": "2026-09-30T11:02:09+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-30T13:02:05+02:00",
+      "text": "Content-Loop 30.09. 13:00 — Cross-Selling: wedding-planner bekommt Bundle-Hinweis auf B33 mit nachgerechneten Summen"
+    },
+    {
+      "at": "2026-09-30T13:01:12+02:00",
+      "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-30T12:08:50+02:00",
       "text": "Etsy Content-Loop: Dopamin-Menue EN+DE um Seite 'Ready to Order' erweitert (8 -> 9 Seiten)"
@@ -25,14 +33,6 @@
     },
     {
       "at": "2026-09-30T12:06:03+02:00",
-      "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-30T12:05:01+02:00",
-      "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-30T12:04:00+02:00",
       "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
     }
   ]
