@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-30T18:42:14+00:00",
+  "generated": "2026-09-30T18:52:14+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-09-30T20:46:42+02:00",
+      "text": "Tagesnotiz 30.09.: Kais ChatGPT-Plan ist Business, Codex-CLI auf 0.159.2, Codex Cloud live bestaetigt"
+    },
+    {
+      "at": "2026-09-30T20:46:21+02:00",
+      "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-30T20:45:22+02:00",
+      "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-30T20:33:20+02:00",
       "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
     },
@@ -21,18 +33,6 @@
     },
     {
       "at": "2026-09-30T20:01:17+02:00",
-      "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-30T19:03:49+02:00",
-      "text": "Etsy Content-Loop 30.09. 19:00 — Variante: neues DE-Commercial-Listing C8 (Rechnungsbuch & EUER, 44,90 EUR), Preisplan Tabelle C und Standard-Listing nachgezoge"
-    },
-    {
-      "at": "2026-09-30T19:03:12+02:00",
-      "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-30T19:01:10+02:00",
       "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
     }
   ]
