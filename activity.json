@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-30T12:52:10+00:00",
+  "generated": "2026-09-30T13:02:10+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-09-30T15:01:36+02:00",
+      "text": "Etsy Content-Loop 30.09. 15:00 — Listing-SEO: de-haushaltsbuch Titel + 13 Tags, Tag-Kannibalisierung mit de-budgetplaner beseitigt"
+    },
+    {
+      "at": "2026-09-30T15:01:32+02:00",
+      "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-30T15:00:31+02:00",
+      "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-09-30T14:05:46+02:00",
       "text": "Etsy Content-Loop 30.09. 14:00 — Uebersetzung/Variante: DE Commercial License fuer die Kunden-Onboarding-Mappe (C7, 44,90 EUR)"
     },
@@ -22,18 +34,6 @@
     {
       "at": "2026-09-30T14:00:18+02:00",
       "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-30T13:02:05+02:00",
-      "text": "Content-Loop 30.09. 13:00 — Cross-Selling: wedding-planner bekommt Bundle-Hinweis auf B33 mit nachgerechneten Summen"
-    },
-    {
-      "at": "2026-09-30T13:01:12+02:00",
-      "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-30T12:08:50+02:00",
-      "text": "Etsy Content-Loop: Dopamin-Menue EN+DE um Seite 'Ready to Order' erweitert (8 -> 9 Seiten)"
     }
   ]
 }
