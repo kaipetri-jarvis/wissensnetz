@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-30T06:52:07+00:00",
+  "generated": "2026-09-30T07:02:07+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-30T09:00:23+02:00",
+      "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-30T08:01:54+02:00",
       "text": "Content-Loop 30.09. 08:00 — Cross-Selling: Quarterly Review verweist jetzt auf das Freelancer Year-End Kit (26,70 -> 16,90 EUR, 9,80 EUR / 36,7 %)"
@@ -29,10 +33,6 @@
     },
     {
       "at": "2026-09-30T07:06:12+02:00",
-      "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-30T07:05:11+02:00",
       "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
     }
   ]
