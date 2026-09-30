@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-30T18:32:13+00:00",
+  "generated": "2026-09-30T18:42:14+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-09-30T20:33:20+02:00",
+      "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-09-30T20:02:13+02:00",
       "text": "Etsy Content-Loop 30.09. 20:00 — Listing-SEO: social-media-planner.md Titel entdoppelt (131 Z.) und 4 breite Tags gegen Long-Tail getauscht, UPLOAD-MAPPE nachge"
@@ -30,10 +34,6 @@
     {
       "at": "2026-09-30T19:01:10+02:00",
       "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-30T18:01:34+02:00",
-      "text": "Etsy Content-Loop 30.09. 18:00 — Cross-Selling: savings-tracker.md verweist jetzt auf B33 (Wedding: Plan It & Pay For It), Summen nachgerechnet"
     }
   ]
 }
