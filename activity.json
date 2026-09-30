@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-30T22:02:17+00:00",
+  "generated": "2026-09-30T22:12:17+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-10-01T00:04:57+02:00",
+      "text": "Website: fuenf zu lange Meta-Beschreibungen gekuerzt, keine liegt mehr ueber 160 Zeichen"
+    },
+    {
+      "at": "2026-10-01T00:02:45+02:00",
+      "text": "Content-Loop: SEO für de-essensplaner (Titel + 13 Tags, ungenutztes Budget geschlossen)"
+    },
+    {
+      "at": "2026-10-01T00:02:19+02:00",
+      "text": "Auto-Backup 2026-10-01 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-10-01T00:01:18+02:00",
       "text": "Auto-Backup 2026-10-01 — täglicher Workspace-Snapshot"
     },
@@ -22,18 +34,6 @@
     {
       "at": "2026-09-30T23:33:14+02:00",
       "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-30T23:32:39+02:00",
-      "text": "Testbilder entfernt"
-    },
-    {
-      "at": "2026-09-30T23:32:14+02:00",
-      "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-30T23:30:32+02:00",
-      "text": "Content-Loop: SEO-Listing für Rechnungsvorlage DE (de-rechnung) erstellt"
     }
   ]
 }
