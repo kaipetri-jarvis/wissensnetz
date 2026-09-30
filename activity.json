@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-30T21:12:17+00:00",
+  "generated": "2026-09-30T21:22:17+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-09-30T23:22:13+02:00",
+      "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-30T23:22:09+02:00",
+      "text": "Marke: Kleinfassung als Petrol-Kasten mit DL-Monogramm (Kai, 30.09.), Website-Kopf/-Fuss/Favicon darauf umgestellt"
+    },
+    {
+      "at": "2026-09-30T23:22:07+02:00",
+      "text": "Website: Hosting-Abschnitt und Opt-in-Einwilligung rechtlich nachgeschaerft"
+    },
+    {
       "at": "2026-09-30T23:03:13+02:00",
       "text": "Etsy Content-Loop: Schuldentilgungs-Tracker DE mit Bundle-Verweis auf B15; Seitenzahl des Finanz-Sets auf 24 korrigiert"
     },
@@ -22,18 +34,6 @@
     {
       "at": "2026-09-30T23:01:52+02:00",
       "text": "Etsy Content-Loop: Pin für commercial-de-euer-rechnungsbuch (C8) ergänzt"
-    },
-    {
-      "at": "2026-09-30T23:01:08+02:00",
-      "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-30T22:30:27+02:00",
-      "text": "Etsy Content-Loop: SEO-Listing für ADHD Planner Office Workers erstellt"
-    },
-    {
-      "at": "2026-09-30T22:11:48+02:00",
-      "text": "Arbeitsbilder der Logo-Pruefung entfernt"
     }
   ]
 }
