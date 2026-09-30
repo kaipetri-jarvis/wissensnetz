@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-30T07:22:08+00:00",
+  "generated": "2026-09-30T07:32:08+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
+      "at": "2026-09-30T09:29:35+02:00",
+      "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-30T09:28:35+02:00",
+      "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-30T09:27:34+02:00",
+      "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-30T09:24:34+02:00",
+      "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-09-30T09:22:27+02:00",
+      "text": "Tagesnotiz 30.09.: Visions Reveal-Befund widerlegt (.js-Selektor), Playwright kann No-JS nicht belegen"
+    },
+    {
       "at": "2026-09-30T09:18:47+02:00",
       "text": "Tagesnotiz 30.09.: Ultron-Gegenlesung zur deutschen Website-Fassung (Empfehlung: EN-only bis Shop-Eröffnung)"
-    },
-    {
-      "at": "2026-09-30T09:13:28+02:00",
-      "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-30T09:12:28+02:00",
-      "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-30T09:04:34+02:00",
-      "text": "Content-Loop 30.09. 09:00 — EN-Listing zum ADHD Planner for Adults (Z1) in listings/ angelegt, UPLOAD-MAPPE Z1 nachgezogen"
-    },
-    {
-      "at": "2026-09-30T09:04:28+02:00",
-      "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-09-30T09:00:23+02:00",
-      "text": "Auto-Backup 2026-09-30 — täglicher Workspace-Snapshot"
     }
   ]
 }
