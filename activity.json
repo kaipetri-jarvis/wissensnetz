@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-01T22:02:32+00:00",
+  "generated": "2026-10-01T22:12:32+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-02T00:03:02+02:00",
+      "text": "Content-Loop 00:00 — Listing-SEO fuer de-arzttermine-organizer (Titel 138 Zeichen + 13 Tags, UPLOAD-MAPPE nachgezogen)"
+    },
     {
       "at": "2026-10-02T00:01:14+02:00",
       "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-10-01T23:01:05+02:00",
       "text": "Auto-Backup 2026-10-01 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-01T22:30:37+02:00",
-      "text": "Content-Loop 22:30 — Listing-SEO für en-pricing-calculator (Titel + 13 Tags)"
     }
   ]
 }
