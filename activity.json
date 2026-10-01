@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-01T05:52:21+00:00",
+  "generated": "2026-10-01T06:02:22+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
+      "at": "2026-10-01T08:02:29+02:00",
+      "text": "Content-Loop Cross-Selling: stale Seitensummen in Vermieter- und Haushalt-Bundle korrigiert (25 statt 24), Fahrtenbuch-Cross-Sell nachgezogen"
+    },
+    {
+      "at": "2026-10-01T08:02:20+02:00",
+      "text": "Auto-Backup 2026-10-01 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-01T08:01:18+02:00",
+      "text": "Auto-Backup 2026-10-01 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-01T08:00:17+02:00",
+      "text": "Auto-Backup 2026-10-01 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-10-01T07:05:52+02:00",
       "text": "Content-Loop: Nebenkosten-Mappe auf 9 Seiten — neue Seite 'Zahlung, Einwendungen & neue Vorauszahlung', Listings/Bundles und ZIPs nachgezogen"
     },
     {
       "at": "2026-10-01T07:05:13+02:00",
       "text": "Auto-Backup 2026-10-01 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-01T07:04:12+02:00",
-      "text": "Auto-Backup 2026-10-01 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-01T07:03:10+02:00",
-      "text": "Auto-Backup 2026-10-01 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-01T07:01:08+02:00",
-      "text": "Auto-Backup 2026-10-01 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-01T06:02:03+02:00",
-      "text": "Content-Loop: DE-Schuldentilgungs-Tracker auf 9 Seiten — neue Seite 'Schritt 4 — Den Extrabetrag finden', zieht die EN-Fassung nach"
     }
   ]
 }
