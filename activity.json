@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-01T20:02:31+00:00",
+  "generated": "2026-10-01T20:12:31+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
-      "at": "2026-10-01T22:00:38+02:00",
+      "at": "2026-10-01T22:09:29+02:00",
+      "text": "Content-Loop 22:00 — Sparziel-Tracker EN+DE auf 9 Seiten: neue Seite 'Setbacks, Windfalls & the Monthly Review' / 'Rueckschlaege, Sondergeld & Monatsrueckblick'"
+    },
+    {
+      "at": "2026-10-01T22:07:48+02:00",
       "text": "Auto-Backup 2026-10-01 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-01T21:01:32+02:00",
-      "text": "Content-Loop 21:00 — Pinterest-Pin fuer das DE-Freebie: pin-freebie-rechnungs-checkliste-de.png (147. Eintrag in build-pins.js), deutsches Gegenstueck zum EN-Le"
-    },
-    {
-      "at": "2026-10-01T21:00:31+02:00",
+      "at": "2026-10-01T22:05:45+02:00",
       "text": "Auto-Backup 2026-10-01 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-01T20:01:56+02:00",
-      "text": "Content-Loop 20:00 — Listing-SEO BUNDLE-adhd-planners: Titel 137 Zeichen, 13 Tags neu (digital/goodnotes/executive function statt redundanter Generika)"
-    },
-    {
-      "at": "2026-10-01T20:00:27+02:00",
+      "at": "2026-10-01T22:04:44+02:00",
       "text": "Auto-Backup 2026-10-01 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-01T19:05:59+02:00",
-      "text": "Content-Loop 19:00 — DE-Fassung des Rechnungs-Checklisten-Freebies (de-freebie-rechnungs-checkliste, 2 Seiten, deutsch gesetzt mit § 14/§ 19 UStG, GoBD, § 288 B"
+      "at": "2026-10-01T22:03:43+02:00",
+      "text": "Auto-Backup 2026-10-01 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-01T22:02:41+02:00",
+      "text": "Auto-Backup 2026-10-01 — täglicher Workspace-Snapshot"
     }
   ]
 }
