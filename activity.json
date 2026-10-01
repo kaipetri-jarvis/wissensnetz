@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-01T21:02:32+00:00",
+  "generated": "2026-10-01T21:12:32+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-01T23:04:14+02:00",
+      "text": "Content-Loop 23:00 — Cross-Selling: stale Set-Summen in listings/de-sparziel-tracker.md korrigiert (Finanz-Set 22->26, Jahresstart-2027 35->36 Seiten, beide aus"
+    },
+    {
+      "at": "2026-10-01T23:04:09+02:00",
+      "text": "Auto-Backup 2026-10-01 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-01T23:01:05+02:00",
       "text": "Auto-Backup 2026-10-01 — täglicher Workspace-Snapshot"
@@ -25,14 +33,6 @@
     },
     {
       "at": "2026-10-01T22:07:48+02:00",
-      "text": "Auto-Backup 2026-10-01 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-01T22:05:45+02:00",
-      "text": "Auto-Backup 2026-10-01 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-01T22:04:44+02:00",
       "text": "Auto-Backup 2026-10-01 — täglicher Workspace-Snapshot"
     }
   ]
