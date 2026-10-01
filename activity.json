@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-01T09:52:27+00:00",
+  "generated": "2026-10-01T10:02:27+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-01T12:00:53+02:00",
+      "text": "Auto-Backup 2026-10-01 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-01T11:01:42+02:00",
       "text": "Content-Loop 01.10. 11:00: Pin fuer C9 Dienstleistungsvertrag DE - Commercial License"
@@ -30,10 +34,6 @@
     {
       "at": "2026-10-01T10:03:13+02:00",
       "text": "Etsy: 3 fehlende Bundle-ZIPs gebaut (ADHS Arbeit, ADHS Schicht/Familie, Creator Content DE), als S34-S36 in Upload-Mappe"
-    },
-    {
-      "at": "2026-10-01T10:00:38+02:00",
-      "text": "Auto-Backup 2026-10-01 — täglicher Workspace-Snapshot"
     }
   ]
 }
