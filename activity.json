@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-01T08:02:26+00:00",
+  "generated": "2026-10-01T08:12:26+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-10-01T10:03:40+02:00",
+      "text": "Auto-Backup 2026-10-01 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-01T10:03:23+02:00",
+      "text": "Tagesnotiz 01.10.: Etsy-Bundle-ZIPs + Seitenzahl-Befund"
+    },
+    {
+      "at": "2026-10-01T10:03:13+02:00",
+      "text": "Etsy: 3 fehlende Bundle-ZIPs gebaut (ADHS Arbeit, ADHS Schicht/Familie, Creator Content DE), als S34-S36 in Upload-Mappe"
+    },
+    {
       "at": "2026-10-01T10:00:38+02:00",
       "text": "Auto-Backup 2026-10-01 — täglicher Workspace-Snapshot"
     },
@@ -21,18 +33,6 @@
     },
     {
       "at": "2026-10-01T09:03:27+02:00",
-      "text": "Auto-Backup 2026-10-01 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-01T09:00:25+02:00",
-      "text": "Auto-Backup 2026-10-01 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-01T08:38:23+02:00",
-      "text": "Auto-Backup 2026-10-01 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-01T08:37:23+02:00",
       "text": "Auto-Backup 2026-10-01 — täglicher Workspace-Snapshot"
     }
   ]
