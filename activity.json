@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-01T19:52:31+00:00",
+  "generated": "2026-10-01T20:02:31+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-01T22:00:38+02:00",
+      "text": "Auto-Backup 2026-10-01 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-01T21:01:32+02:00",
       "text": "Content-Loop 21:00 — Pinterest-Pin fuer das DE-Freebie: pin-freebie-rechnungs-checkliste-de.png (147. Eintrag in build-pins.js), deutsches Gegenstueck zum EN-Le"
@@ -30,10 +34,6 @@
     {
       "at": "2026-10-01T19:05:59+02:00",
       "text": "Content-Loop 19:00 — DE-Fassung des Rechnungs-Checklisten-Freebies (de-freebie-rechnungs-checkliste, 2 Seiten, deutsch gesetzt mit § 14/§ 19 UStG, GoBD, § 288 B"
-    },
-    {
-      "at": "2026-10-01T19:05:22+02:00",
-      "text": "Auto-Backup 2026-10-01 — täglicher Workspace-Snapshot"
     }
   ]
 }
