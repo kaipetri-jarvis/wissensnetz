@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-01T10:52:27+00:00",
+  "generated": "2026-10-01T11:02:27+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-01T13:01:08+02:00",
+      "text": "Auto-Backup 2026-10-01 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-01T12:07:22+02:00",
       "text": "Content-Loop 01.10. 12:00: Social-Media-Planer EN+DE auf 9 Seiten (neue Seite Produktionstag/Batch Day), Listings, Bundles und 5 ZIPs nachgezogen"
@@ -29,10 +33,6 @@
     },
     {
       "at": "2026-10-01T12:03:58+02:00",
-      "text": "Auto-Backup 2026-10-01 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-01T12:02:56+02:00",
       "text": "Auto-Backup 2026-10-01 — täglicher Workspace-Snapshot"
     }
   ]
