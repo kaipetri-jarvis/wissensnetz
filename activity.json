@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-01T11:52:28+00:00",
+  "generated": "2026-10-01T12:02:28+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-01T14:00:18+02:00",
+      "text": "Auto-Backup 2026-10-01 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-01T13:05:49+02:00",
       "text": "Content-Loop 01.10. 13:00: Neues Bundle B42 Commercial-Lizenz-Set DE (4 gewerbliche Lizenzen, 109,90 EUR), Querverweise in den vier Quell-Listings und im englis"
@@ -30,10 +34,6 @@
     {
       "at": "2026-10-01T12:07:22+02:00",
       "text": "Content-Loop 01.10. 12:00: Social-Media-Planer EN+DE auf 9 Seiten (neue Seite Produktionstag/Batch Day), Listings, Bundles und 5 ZIPs nachgezogen"
-    },
-    {
-      "at": "2026-10-01T12:07:02+02:00",
-      "text": "Auto-Backup 2026-10-01 — täglicher Workspace-Snapshot"
     }
   ]
 }
