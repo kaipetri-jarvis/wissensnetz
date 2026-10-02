@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-01T23:52:33+00:00",
+  "generated": "2026-10-02T00:02:33+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-02T02:00:32+02:00",
+      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-02T01:03:18+02:00",
       "text": "Content-Loop 01:00 — neun veraltete Seitenzahl-Badges in build-pins.js korrigiert und Pins neu gerendert"
@@ -30,10 +34,6 @@
     {
       "at": "2026-10-02T00:01:14+02:00",
       "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-01T23:30:36+02:00",
-      "text": "Content-Loop 23:30 — Listing-SEO für freelancer-tax-prep-checklist (Titel + 13 Tags)"
     }
   ]
 }
