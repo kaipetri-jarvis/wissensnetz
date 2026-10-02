@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-02T21:22:44+00:00",
+  "generated": "2026-10-02T21:32:44+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-02T23:31:14+02:00",
+      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-02T23:22:43+02:00",
       "text": "Brevo: Domain desklanestudio.com authentifiziert (DNS per Cloudflare-API, DMARC zusammengeführt), Absender hello@ verifiziert; Memory"
@@ -30,10 +34,6 @@
     {
       "at": "2026-10-02T23:11:57+02:00",
       "text": "Brevo: Anmeldeformular im ferngesteuerten Chrome fertig gebaut, Einbettungscode (3 Fassungen) + README, CDP-Treiber tools/brevo-cdp.mjs, Memory"
-    },
-    {
-      "at": "2026-10-02T23:11:13+02:00",
-      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
     }
   ]
 }
