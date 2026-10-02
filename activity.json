@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-02T15:02:40+00:00",
+  "generated": "2026-10-02T15:12:40+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
+      "at": "2026-10-02T17:07:13+02:00",
+      "text": "Content-Loop 02.10. 17:00 Produkt erweitern: Dienstleistungsvertrag DE um Anlage D (Vertrauliche Unterlagen) erweitert, 10 Seiten/130 Felder, Listings nachgezog"
+    },
+    {
+      "at": "2026-10-02T17:06:22+02:00",
+      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-02T17:05:21+02:00",
+      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-02T17:04:20+02:00",
+      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-02T17:03:18+02:00",
+      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-10-02T17:01:16+02:00",
       "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-02T16:03:00+02:00",
-      "text": "Content-Loop 02.10. 16:00 Pinterest-Pin: pin-commercial-client-offboarding-en fuer das neue Lizenz-Listing angelegt und gerendert"
-    },
-    {
-      "at": "2026-10-02T16:01:07+02:00",
-      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-02T15:01:45+02:00",
-      "text": "Content-Loop 02.10. 15:00 Listing-SEO: BUNDLE-freelancer-finance Titel + 4 Tags geschaerft (toter Tag 'tested formulas' raus), UPLOAD-MAPPE B5 nachgezogen"
-    },
-    {
-      "at": "2026-10-02T15:01:00+02:00",
-      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-02T14:03:53+02:00",
-      "text": "Content-Loop 02.10. 14:00 Uebersetzung/Variante: Commercial-License-Listing zum Client Offboarding Kit (34,90 EUR) angelegt, UPLOAD-MAPPE-Block C10 ergaenzt"
     }
   ]
 }
