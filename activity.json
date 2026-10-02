@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-02T15:52:40+00:00",
+  "generated": "2026-10-02T16:02:40+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-02T18:00:31+02:00",
+      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-02T17:07:13+02:00",
       "text": "Content-Loop 02.10. 17:00 Produkt erweitern: Dienstleistungsvertrag DE um Anlage D (Vertrauliche Unterlagen) erweitert, 10 Seiten/130 Felder, Listings nachgezog"
@@ -29,10 +33,6 @@
     },
     {
       "at": "2026-10-02T17:03:18+02:00",
-      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-02T17:01:16+02:00",
       "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
     }
   ]
