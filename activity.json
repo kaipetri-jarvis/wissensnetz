@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-02T19:02:42+00:00",
+  "generated": "2026-10-02T19:12:42+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
+      "at": "2026-10-02T21:09:16+02:00",
+      "text": "find-skills (Vercel) nach Prüfung installiert: Claude Code global + Workspace-Skills, skills-lock.json; Fund dokumentiert: 200er-Limit pro Skill-Quelle schneide"
+    },
+    {
+      "at": "2026-10-02T21:08:25+02:00",
+      "text": "Content-Loop 02.10. 21:00 Pinterest-Pin: pin-client-journey-set-en fuer Bundle B43 angelegt und gerendert (einziges Bundle-Listing ohne Pin)"
+    },
+    {
+      "at": "2026-10-02T21:08:10+02:00",
+      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-02T21:03:04+02:00",
+      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-10-02T21:01:01+02:00",
       "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
     },
     {
       "at": "2026-10-02T20:34:57+02:00",
       "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-02T20:34:29+02:00",
-      "text": "TikTok (Ben Gusberg) zu Vercels find-skills transkribiert und geprüft: Behauptungen gegen Quelle abgeglichen, Nutzen/Risiko für OpenClaw-Setup festgehalten, Tra"
-    },
-    {
-      "at": "2026-10-02T20:01:44+02:00",
-      "text": "Content-Loop 02.10. 20:00 Listing-SEO: Titel und 13 Tags von dated-planner-2027 auf Jahres-Longtail umgestellt, Allerwelts-Tags ersetzt"
-    },
-    {
-      "at": "2026-10-02T20:00:54+02:00",
-      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-02T19:07:08+02:00",
-      "text": "Content-Loop 02.10. 19:00 Uebersetzung/Variante: deutsche Schnellstart-Anleitung zum EUeR-Rechnungsbuch gebaut (Gegenstueck zu bookkeeping-tracker-GUIDE), Listi"
     }
   ]
 }
