@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-02T16:52:41+00:00",
+  "generated": "2026-10-02T17:02:41+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-02T19:00:41+02:00",
+      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-02T18:04:31+02:00",
       "text": "Content-Loop 02.10. 18:00 Cross-Selling: neues Bundle B43 Client Journey Complete (EN) als Gegenstück zu B34, Cross-Sell-Blöcke in beiden Einzel-Listings, veral"
@@ -29,10 +33,6 @@
     },
     {
       "at": "2026-10-02T17:06:22+02:00",
-      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-02T17:05:21+02:00",
       "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
     }
   ]
