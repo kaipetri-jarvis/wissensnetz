@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-02T22:32:44+00:00",
+  "generated": "2026-10-02T22:42:44+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-03T00:39:24+02:00",
+      "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-03T00:33:45+02:00",
+      "text": "Brevo: Telefon-Verifizierung bestätigt, Ende-zu-Ende-Testanmeldung beider Formulare erfolgreich, Testkontakt entfernt; Gmail-MCP-Reauth erneuert (Prozess-Neusta"
+    },
     {
       "at": "2026-10-03T00:32:24+02:00",
       "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
@@ -25,14 +33,6 @@
     },
     {
       "at": "2026-10-03T00:30:23+02:00",
-      "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-03T00:29:23+02:00",
-      "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-03T00:28:23+02:00",
       "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
     }
   ]
