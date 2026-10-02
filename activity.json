@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-02T17:02:41+00:00",
+  "generated": "2026-10-02T17:12:41+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
-      "at": "2026-10-02T19:00:41+02:00",
+      "at": "2026-10-02T19:07:08+02:00",
+      "text": "Content-Loop 02.10. 19:00 Uebersetzung/Variante: deutsche Schnellstart-Anleitung zum EUeR-Rechnungsbuch gebaut (Gegenstueck zu bookkeeping-tracker-GUIDE), Listi"
+    },
+    {
+      "at": "2026-10-02T19:06:49+02:00",
       "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-02T18:04:31+02:00",
-      "text": "Content-Loop 02.10. 18:00 Cross-Selling: neues Bundle B43 Client Journey Complete (EN) als Gegenstück zu B34, Cross-Sell-Blöcke in beiden Einzel-Listings, veral"
-    },
-    {
-      "at": "2026-10-02T18:03:35+02:00",
+      "at": "2026-10-02T19:05:47+02:00",
       "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-02T18:00:31+02:00",
+      "at": "2026-10-02T19:04:46+02:00",
       "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-02T17:07:13+02:00",
-      "text": "Content-Loop 02.10. 17:00 Produkt erweitern: Dienstleistungsvertrag DE um Anlage D (Vertrauliche Unterlagen) erweitert, 10 Seiten/130 Felder, Listings nachgezog"
+      "at": "2026-10-02T19:03:45+02:00",
+      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-02T17:06:22+02:00",
+      "at": "2026-10-02T19:02:44+02:00",
       "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
     }
   ]
