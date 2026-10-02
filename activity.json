@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-02T12:02:39+00:00",
+  "generated": "2026-10-02T12:12:39+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-02T14:03:53+02:00",
+      "text": "Content-Loop 02.10. 14:00 Uebersetzung/Variante: Commercial-License-Listing zum Client Offboarding Kit (34,90 EUR) angelegt, UPLOAD-MAPPE-Block C10 ergaenzt"
+    },
     {
       "at": "2026-10-02T14:00:49+02:00",
       "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-10-02T12:08:00+02:00",
       "text": "Content-Loop 02.10. 12:00: service-agreement um Exhibit D 'Confidential Material' erweitert (8 Seiten/131 Felder), Listings, Pin-Badge und 4 ZIPs nachgezogen"
-    },
-    {
-      "at": "2026-10-02T12:07:37+02:00",
-      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
     }
   ]
 }
