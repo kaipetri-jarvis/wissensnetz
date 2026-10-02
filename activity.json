@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-02T10:52:38+00:00",
+  "generated": "2026-10-02T11:02:38+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-02T13:00:41+02:00",
+      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-02T12:08:00+02:00",
       "text": "Content-Loop 02.10. 12:00: service-agreement um Exhibit D 'Confidential Material' erweitert (8 Seiten/131 Felder), Listings, Pin-Badge und 4 ZIPs nachgezogen"
@@ -29,10 +33,6 @@
     },
     {
       "at": "2026-10-02T12:04:32+02:00",
-      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-02T12:03:31+02:00",
       "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
     }
   ]
