@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-02T19:52:42+00:00",
+  "generated": "2026-10-02T20:02:43+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
+      "at": "2026-10-02T22:02:39+02:00",
+      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-02T22:01:38+02:00",
+      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-02T22:00:38+02:00",
+      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-02T21:57:28+02:00",
+      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-02T21:56:28+02:00",
+      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-10-02T21:38:11+02:00",
       "text": "Tagesnotiz: Etsy-Skill bleibt wegen requires.config aus"
-    },
-    {
-      "at": "2026-10-02T21:37:15+02:00",
-      "text": "Memory: Skill-Struktur nach Oberthema, Limit 500, vier Gateways, Allowlist-Namen Etsy/Image Editing, Reload-Weg per launchctl"
-    },
-    {
-      "at": "2026-10-02T21:35:07+02:00",
-      "text": "Graph-Generator: Pfad rollen/skill-katalog korrigiert, claude-agents.json wieder mit allen 273 Rollen"
-    },
-    {
-      "at": "2026-10-02T21:34:01+02:00",
-      "text": "Rollen konsolidiert: Skill-Katalog nach rollen/skill-katalog/ (neben katalog/ und aktiv/), eine Wurzel für alle Rollenablagen; READMEs und Graph-Generator nachg"
-    },
-    {
-      "at": "2026-10-02T21:30:38+02:00",
-      "text": "Brevo-Anleitung nachgezogen: Einwilligungstext nennt jetzt die Erfolgsmessung, DE-Fassung ergaenzt"
-    },
-    {
-      "at": "2026-10-02T21:29:06+02:00",
-      "text": "Skills nach Oberthema strukturiert (Kai, 02.10.): 16 freigeschaltete Rollen unter skills/rollen/<oberthema>/, 257 Katalog-Rollen nach rollen-katalog/<oberthema>"
     }
   ]
 }
