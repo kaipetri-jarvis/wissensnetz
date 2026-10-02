@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-02T21:02:48+00:00",
+  "generated": "2026-10-02T21:12:44+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
-      "at": "2026-10-02T23:01:07+02:00",
+      "at": "2026-10-02T23:11:57+02:00",
+      "text": "Brevo: Anmeldeformular im ferngesteuerten Chrome fertig gebaut, Einbettungscode (3 Fassungen) + README, CDP-Treiber tools/brevo-cdp.mjs, Memory"
+    },
+    {
+      "at": "2026-10-02T23:11:13+02:00",
       "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-02T23:01:07+02:00",
-      "text": "Content-Loop 23:00: Listing-SEO für ADHS-Planer Studium (DE)"
-    },
-    {
-      "at": "2026-10-02T22:37:08+02:00",
+      "at": "2026-10-02T23:10:13+02:00",
       "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-02T22:30:40+02:00",
-      "text": "Content-Loop 22:30: Listing-SEO für ADHS-Schichtplaner (DE)"
+      "at": "2026-10-02T23:04:33+02:00",
+      "text": "Content-Loop 23:00: Cross-Selling — neues Bundle B44 (Commercial License Client Journey Set)"
     },
     {
-      "at": "2026-10-02T22:14:01+02:00",
-      "text": "Web-App-Huellen: YouTube und YouTube Music als eigenstaendige Mac-Apps"
+      "at": "2026-10-02T23:04:13+02:00",
+      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-02T22:13:45+02:00",
+      "at": "2026-10-02T23:03:12+02:00",
       "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
     }
   ]
