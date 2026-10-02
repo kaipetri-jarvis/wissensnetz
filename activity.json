@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-02T21:42:44+00:00",
+  "generated": "2026-10-02T21:52:44+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
-      "at": "2026-10-02T23:42:15+02:00",
+      "at": "2026-10-02T23:51:06+02:00",
+      "text": "Brevo: deutsches Anmeldeformular komplett (DOI-Vorlage DE per API, Einbettungscodes *-de), Treiber-Timeout konfigurierbar, Memory"
+    },
+    {
+      "at": "2026-10-02T23:47:20+02:00",
+      "text": "Steuerpult: eine Seite fuer Kontingent, Agenten-Modelle, Dienste und Zeitplan"
+    },
+    {
+      "at": "2026-10-02T23:46:32+02:00",
       "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-02T23:39:46+02:00",
-      "text": "Brevo: API-Schlüssel (nur Ablageort dokumentiert), englische DOI-Vorlage per API angelegt und im Formular gesetzt"
-    },
-    {
-      "at": "2026-10-02T23:38:15+02:00",
+      "at": "2026-10-02T23:45:15+02:00",
       "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-02T23:31:14+02:00",
+      "at": "2026-10-02T23:44:15+02:00",
       "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-02T23:22:43+02:00",
-      "text": "Brevo: Domain desklanestudio.com authentifiziert (DNS per Cloudflare-API, DMARC zusammengeführt), Absender hello@ verifiziert; Memory"
-    },
-    {
-      "at": "2026-10-02T23:19:56+02:00",
-      "text": "RuFlo-Routing analysiert: 105-Zeilen-Stichworttabelle, keine Lernlogik, semantische Stufe standardmaessig aus"
+      "at": "2026-10-02T23:43:15+02:00",
+      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
     }
   ]
 }
