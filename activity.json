@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-02T17:52:41+00:00",
+  "generated": "2026-10-02T18:02:41+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-02T20:01:44+02:00",
+      "text": "Content-Loop 02.10. 20:00 Listing-SEO: Titel und 13 Tags von dated-planner-2027 auf Jahres-Longtail umgestellt, Allerwelts-Tags ersetzt"
+    },
+    {
+      "at": "2026-10-02T20:00:54+02:00",
+      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-02T19:07:08+02:00",
       "text": "Content-Loop 02.10. 19:00 Uebersetzung/Variante: deutsche Schnellstart-Anleitung zum EUeR-Rechnungsbuch gebaut (Gegenstueck zu bookkeeping-tracker-GUIDE), Listi"
@@ -25,14 +33,6 @@
     },
     {
       "at": "2026-10-02T19:04:46+02:00",
-      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-02T19:03:45+02:00",
-      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-02T19:02:44+02:00",
       "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
     }
   ]
