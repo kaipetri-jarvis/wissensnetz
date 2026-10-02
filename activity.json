@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-02T21:32:44+00:00",
+  "generated": "2026-10-02T21:42:44+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-10-02T23:42:15+02:00",
+      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-02T23:39:46+02:00",
+      "text": "Brevo: API-Schlüssel (nur Ablageort dokumentiert), englische DOI-Vorlage per API angelegt und im Formular gesetzt"
+    },
+    {
+      "at": "2026-10-02T23:38:15+02:00",
+      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-10-02T23:31:14+02:00",
       "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
     },
@@ -22,18 +34,6 @@
     {
       "at": "2026-10-02T23:19:56+02:00",
       "text": "RuFlo-Routing analysiert: 105-Zeilen-Stichworttabelle, keine Lernlogik, semantische Stufe standardmaessig aus"
-    },
-    {
-      "at": "2026-10-02T23:15:54+02:00",
-      "text": "Tagesnotiz: RuFlo geprueft (73k Sterne, echt) - Kostenversprechen zielt auf API-Nutzer, nicht aufs Abo"
-    },
-    {
-      "at": "2026-10-02T23:15:13+02:00",
-      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-02T23:11:57+02:00",
-      "text": "Brevo: Anmeldeformular im ferngesteuerten Chrome fertig gebaut, Einbettungscode (3 Fassungen) + README, CDP-Treiber tools/brevo-cdp.mjs, Memory"
     }
   ]
 }
