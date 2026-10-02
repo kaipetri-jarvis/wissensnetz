@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-02T04:02:35+00:00",
+  "generated": "2026-10-02T04:12:35+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
-      "at": "2026-10-02T06:00:55+02:00",
+      "at": "2026-10-02T06:11:28+02:00",
+      "text": "Content-Loop 02.10. 06:00: de-budgetplaner um Seite 'Konten & Kontostände' erweitert (8->9), Listing/Bundle/Mappe/ZIP nachgezogen"
+    },
+    {
+      "at": "2026-10-02T06:11:08+02:00",
       "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-02T05:00:51+02:00",
+      "at": "2026-10-02T06:10:08+02:00",
       "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-02T04:02:47+02:00",
+      "at": "2026-10-02T06:09:06+02:00",
       "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-02T04:00:45+02:00",
+      "at": "2026-10-02T06:08:05+02:00",
       "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-02T03:55:43+02:00",
-      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-02T03:54:43+02:00",
+      "at": "2026-10-02T06:07:04+02:00",
       "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
     }
   ]
