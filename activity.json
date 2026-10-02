@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-02T21:52:44+00:00",
+  "generated": "2026-10-02T22:02:44+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
+      "at": "2026-10-03T00:01:53+02:00",
+      "text": "Etsy Content-Loop: Listing-SEO B19 (ADHD Freelance & Self-Employed) — Titel und 3 Tags"
+    },
+    {
+      "at": "2026-10-03T00:00:18+02:00",
+      "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-02T23:57:16+02:00",
+      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-02T23:56:17+02:00",
+      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-10-02T23:51:06+02:00",
       "text": "Brevo: deutsches Anmeldeformular komplett (DOI-Vorlage DE per API, Einbettungscodes *-de), Treiber-Timeout konfigurierbar, Memory"
     },
     {
       "at": "2026-10-02T23:47:20+02:00",
       "text": "Steuerpult: eine Seite fuer Kontingent, Agenten-Modelle, Dienste und Zeitplan"
-    },
-    {
-      "at": "2026-10-02T23:46:32+02:00",
-      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-02T23:45:15+02:00",
-      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-02T23:44:15+02:00",
-      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-02T23:43:15+02:00",
-      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
     }
   ]
 }
