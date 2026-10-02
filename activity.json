@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-02T14:02:39+00:00",
+  "generated": "2026-10-02T14:12:40+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-02T16:03:00+02:00",
+      "text": "Content-Loop 02.10. 16:00 Pinterest-Pin: pin-commercial-client-offboarding-en fuer das neue Lizenz-Listing angelegt und gerendert"
+    },
     {
       "at": "2026-10-02T16:01:07+02:00",
       "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-10-02T14:00:49+02:00",
       "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-02T13:02:53+02:00",
-      "text": "Content-Loop 02.10. 13:00 Cross-Selling: BUNDLE-en-price-it-bill-it auf 10-Seiten-Preiskalkulator korrigiert (ZIP 20 statt 19 Seiten), Pin-Badge nachgezogen"
     }
   ]
 }
