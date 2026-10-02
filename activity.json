@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-02T20:52:43+00:00",
+  "generated": "2026-10-02T21:02:48+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-02T23:01:07+02:00",
+      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-02T23:01:07+02:00",
+      "text": "Content-Loop 23:00: Listing-SEO für ADHS-Planer Studium (DE)"
+    },
     {
       "at": "2026-10-02T22:37:08+02:00",
       "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
@@ -25,14 +33,6 @@
     },
     {
       "at": "2026-10-02T22:13:45+02:00",
-      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-02T22:12:45+02:00",
-      "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-02T22:11:45+02:00",
       "text": "Auto-Backup 2026-10-02 — täglicher Workspace-Snapshot"
     }
   ]
