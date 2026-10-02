@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-02T20:22:43+00:00",
+  "generated": "2026-10-02T20:32:43+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-02T22:30:40+02:00",
+      "text": "Content-Loop 22:30: Listing-SEO für ADHS-Schichtplaner (DE)"
+    },
     {
       "at": "2026-10-02T22:14:01+02:00",
       "text": "Web-App-Huellen: YouTube und YouTube Music als eigenstaendige Mac-Apps"
@@ -30,10 +34,6 @@
     {
       "at": "2026-10-02T22:07:20+02:00",
       "text": "Content-Loop 22:00: Pflegegrad-Antrag um Seite 9 'Widerspruch begruenden' erweitert"
-    },
-    {
-      "at": "2026-10-02T22:06:52+02:00",
-      "text": "Tagesnotiz: Brevo-Registrierungsseite geöffnet, Gmail-MCP invalid_grant"
     }
   ]
 }
