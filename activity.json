@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-03T16:42:53+00:00",
+  "generated": "2026-10-03T16:52:53+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-03T18:51:26+02:00",
+      "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-03T18:41:25+02:00",
       "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-10-03T18:02:20+02:00",
       "text": "Etsy Content-Loop 18:00: B27-Bundle-Hinweis in beide Einzel-Listings (Hochzeitsplaner, Sparziel-Tracker)"
-    },
-    {
-      "at": "2026-10-03T18:01:22+02:00",
-      "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
     }
   ]
 }
