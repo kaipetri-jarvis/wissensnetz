@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-03T13:02:52+00:00",
+  "generated": "2026-10-03T13:12:52+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-03T15:09:54+02:00",
+      "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-03T15:01:50+02:00",
       "text": "Listing-SEO: Quote/Estimate Template — Titel geschaerft, 4 schwache Tags getauscht"
@@ -29,10 +33,6 @@
     },
     {
       "at": "2026-10-03T14:40:50+02:00",
-      "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-03T14:39:50+02:00",
       "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
     }
   ]
