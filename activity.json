@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-03T07:42:48+00:00",
+  "generated": "2026-10-03T07:52:48+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-03T09:45:43+02:00",
+      "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-03T09:35:42+02:00",
       "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-10-03T09:07:07+02:00",
       "text": "Content-Loop: ADHS-Kompaktsystem (DE) als deutsche Gegenfassung zu adhd-planner-adults"
-    },
-    {
-      "at": "2026-10-03T09:06:39+02:00",
-      "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
     }
   ]
 }
