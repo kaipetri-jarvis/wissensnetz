@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-03T08:12:49+00:00",
+  "generated": "2026-10-03T08:22:49+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-10-03T10:21:53+02:00",
+      "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-03T10:16:52+02:00",
+      "text": "Tagesnotiz 03.10.: Modell-Zuordnung live gemessen — Ultron auf Opus statt Fable, und es laeuft doch ein Agent lokal"
+    },
+    {
+      "at": "2026-10-03T10:15:53+02:00",
+      "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-10-03T10:05:51+02:00",
       "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
     },
@@ -21,18 +33,6 @@
     },
     {
       "at": "2026-10-03T10:03:50+02:00",
-      "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-03T10:03:36+02:00",
-      "text": "Etsy Content-Loop: SEO-Titel und 13 Tags fuer B26 Caregiver & Medical Organizer Set"
-    },
-    {
-      "at": "2026-10-03T10:00:48+02:00",
-      "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-03T09:55:43+02:00",
       "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
     }
   ]
