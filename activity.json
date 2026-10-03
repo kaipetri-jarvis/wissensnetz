@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-03T21:53:12+00:00",
+  "generated": "2026-10-03T22:03:13+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
+      "at": "2026-10-04T00:01:57+02:00",
+      "text": "Content-Loop: Listing-SEO canva-media-kit — Tags entdupliziert, falschen Canva-Tag entfernt, 5 neue Suchabsichten"
+    },
+    {
+      "at": "2026-10-04T00:01:52+02:00",
+      "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-04T00:00:51+02:00",
+      "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-03T23:58:50+02:00",
+      "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-10-03T23:48:44+02:00",
       "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
     },
     {
       "at": "2026-10-03T23:38:38+02:00",
-      "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-03T23:31:37+02:00",
-      "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-03T23:28:37+02:00",
-      "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-03T23:18:36+02:00",
-      "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-03T23:08:36+02:00",
       "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
     }
   ]
