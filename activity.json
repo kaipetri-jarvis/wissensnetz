@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-03T10:22:51+00:00",
+  "generated": "2026-10-03T10:32:50+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-03T12:28:32+02:00",
+      "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-03T12:20:07+02:00",
       "text": "3D-Druck-Anleitung: Erfahrungen aus der Einrichtung ergaenzt"
@@ -30,10 +34,6 @@
     {
       "at": "2026-10-03T12:06:32+02:00",
       "text": "Content-Loop: Arzttermine-Organizer um Seite 'Rezepte, Ueberweisungen, Genehmigungen' erweitert (8->9 Seiten)"
-    },
-    {
-      "at": "2026-10-03T12:06:14+02:00",
-      "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
     }
   ]
 }
