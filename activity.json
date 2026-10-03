@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-03T15:02:52+00:00",
+  "generated": "2026-10-03T15:12:53+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-10-03T17:11:16+02:00",
+      "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-03T17:03:44+02:00",
+      "text": "Content-Loop 17:00 — Client Offboarding Kit: neue Seite 8 'Early Exit & Partial Handover' (8 -> 9 Seiten)"
+    },
+    {
+      "at": "2026-10-03T17:03:16+02:00",
+      "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-10-03T17:02:15+02:00",
       "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
     },
@@ -21,18 +33,6 @@
     },
     {
       "at": "2026-10-03T16:51:11+02:00",
-      "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-03T16:41:10+02:00",
-      "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-03T16:31:10+02:00",
-      "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-03T16:30:10+02:00",
       "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
     }
   ]
