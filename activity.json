@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-03T05:52:47+00:00",
+  "generated": "2026-10-03T06:02:47+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-03T08:00:19+02:00",
+      "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-03T07:54:16+02:00",
+      "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-03T07:44:16+02:00",
       "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
@@ -25,14 +33,6 @@
     },
     {
       "at": "2026-10-03T07:14:14+02:00",
-      "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-03T07:04:58+02:00",
-      "text": "Content-Loop: ADHD Planner Self-Employed um Seite 'New Job, Priced' erweitert (8 -> 9 Seiten)"
-    },
-    {
-      "at": "2026-10-03T07:04:12+02:00",
       "text": "Auto-Backup 2026-10-03 — täglicher Workspace-Snapshot"
     }
   ]
