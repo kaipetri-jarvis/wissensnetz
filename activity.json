@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-04T01:03:14+00:00",
+  "generated": "2026-10-04T01:13:14+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
-      "at": "2026-10-04T03:01:28+02:00",
+      "at": "2026-10-04T03:12:29+02:00",
       "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-04T03:00:28+02:00",
+      "at": "2026-10-04T03:11:29+02:00",
       "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-04T02:57:34+02:00",
-      "text": "Etsy: erste Welle mit 14 Listings aus zwei Nischen festgelegt"
-    },
-    {
-      "at": "2026-10-04T02:57:28+02:00",
+      "at": "2026-10-04T03:10:29+02:00",
       "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-04T02:51:27+02:00",
+      "at": "2026-10-04T03:09:28+02:00",
       "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-04T02:41:27+02:00",
-      "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
+      "at": "2026-10-04T03:08:32+02:00",
+      "text": "Tagesnotiz: Upload-Paket und belegte Grenze beim Etsy-API-Upload"
+    },
+    {
+      "at": "2026-10-04T03:08:22+02:00",
+      "text": "Etsy: Upload-Paket-Generator fuer die erste Welle"
     }
   ]
 }
