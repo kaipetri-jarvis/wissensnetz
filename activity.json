@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-04T20:21:31+00:00",
+  "generated": "2026-10-04T20:31:31+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
+      "at": "2026-10-04T22:30:59+02:00",
+      "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-04T22:28:49+02:00",
+      "text": "Etsy: Verkaeuferstatus auf Haendler umgestellt"
+    },
+    {
+      "at": "2026-10-04T22:27:43+02:00",
+      "text": "Etsy: Impressum-Fundort belegt, Verkaeuferstatus steht faelschlich auf Privatperson"
+    },
+    {
+      "at": "2026-10-04T22:22:58+02:00",
+      "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-10-04T22:12:58+02:00",
       "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
     },
     {
       "at": "2026-10-04T22:08:51+02:00",
       "text": "Etsy: Hilfsseite mit Kopierknoepfen fuer die Rechtstexte"
-    },
-    {
-      "at": "2026-10-04T22:06:56+02:00",
-      "text": "Etsy: Shop-URL auf der Website gesetzt, Tags live, Bundles existieren bereits"
-    },
-    {
-      "at": "2026-10-04T22:05:58+02:00",
-      "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-04T22:03:20+02:00",
-      "text": "Etsy: Onboarding abgeschlossen, Shop angelegt"
-    },
-    {
-      "at": "2026-10-04T22:02:57+02:00",
-      "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
     }
   ]
 }
