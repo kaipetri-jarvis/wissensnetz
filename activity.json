@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-04T16:01:29+00:00",
+  "generated": "2026-10-04T16:11:29+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
+      "at": "2026-10-04T18:10:39+02:00",
+      "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-04T18:03:03+02:00",
+      "text": "Etsy Content-Loop 18:00: Bundle-Hinweis für B19 (ADHD Freelancer & Self-Employed) in Listing eingefügt"
+    },
+    {
+      "at": "2026-10-04T18:02:38+02:00",
+      "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-04T18:01:37+02:00",
+      "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-10-04T18:00:36+02:00",
       "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
     },
     {
       "at": "2026-10-04T17:50:33+02:00",
       "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-04T17:40:16+02:00",
-      "text": "Etsy: Tag-Vorschlaege fuer alle 14 Listings der Welle 1"
-    },
-    {
-      "at": "2026-10-04T17:39:32+02:00",
-      "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-04T17:37:32+02:00",
-      "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-04T17:36:24+02:00",
-      "text": "Etsy: Arbeit auf Jarvis, Ultron, Hades und den etsy-seller-Skill verteilt"
     }
   ]
 }
