@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-04T20:31:31+00:00",
+  "generated": "2026-10-04T20:41:31+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-04T22:39:38+02:00",
+      "text": "Etsy: Steuernummer nicht hinterlegbar (nur USt-IdNr), zwei Beinahe-Fehler abgefangen"
+    },
+    {
+      "at": "2026-10-04T22:32:59+02:00",
+      "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-04T22:30:59+02:00",
       "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
@@ -26,14 +34,6 @@
     {
       "at": "2026-10-04T22:22:58+02:00",
       "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-04T22:12:58+02:00",
-      "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-04T22:08:51+02:00",
-      "text": "Etsy: Hilfsseite mit Kopierknoepfen fuer die Rechtstexte"
     }
   ]
 }
