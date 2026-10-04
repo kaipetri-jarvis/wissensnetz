@@ -1,16 +1,24 @@
 {
-  "generated": "2026-10-04T08:53:17+00:00",
+  "generated": "2026-10-04T10:41:25+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
   },
   "atlas": {
     "fleet": true,
-    "postgres": true,
-    "nats": true,
-    "online": true
+    "postgres": false,
+    "nats": false,
+    "online": false
   },
   "commits": [
+    {
+      "at": "2026-10-04T12:41:29+02:00",
+      "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-04T10:55:11+02:00",
+      "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-04T10:45:10+02:00",
       "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
@@ -26,14 +34,6 @@
     {
       "at": "2026-10-04T10:15:08+02:00",
       "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-04T10:05:08+02:00",
-      "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-04T10:03:37+02:00",
-      "text": "Listing-SEO: de-planer-2027 Tags optimiert"
     }
   ]
 }
