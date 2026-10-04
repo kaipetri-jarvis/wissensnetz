@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-04T16:21:29+00:00",
+  "generated": "2026-10-04T16:31:29+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
-      "at": "2026-10-04T18:20:39+02:00",
+      "at": "2026-10-04T18:30:40+02:00",
       "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-04T18:19:39+02:00",
+      "at": "2026-10-04T18:28:40+02:00",
       "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-04T18:10:39+02:00",
+      "at": "2026-10-04T18:27:40+02:00",
       "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-04T18:03:03+02:00",
-      "text": "Etsy Content-Loop 18:00: Bundle-Hinweis für B19 (ADHD Freelancer & Self-Employed) in Listing eingefügt"
-    },
-    {
-      "at": "2026-10-04T18:02:38+02:00",
+      "at": "2026-10-04T18:26:39+02:00",
       "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-04T18:01:37+02:00",
+      "at": "2026-10-04T18:25:39+02:00",
+      "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-04T18:24:39+02:00",
       "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
     }
   ]
