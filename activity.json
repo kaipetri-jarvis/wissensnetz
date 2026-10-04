@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-04T15:41:28+00:00",
+  "generated": "2026-10-04T15:51:28+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-04T17:50:33+02:00",
+      "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-04T17:40:16+02:00",
       "text": "Etsy: Tag-Vorschlaege fuer alle 14 Listings der Welle 1"
@@ -30,10 +34,6 @@
     {
       "at": "2026-10-04T17:35:32+02:00",
       "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-04T17:33:08+02:00",
-      "text": "Etsy: canva-compatible-Tag aus vier weiteren Listings entfernt, Audit gegengelesen"
     }
   ]
 }
