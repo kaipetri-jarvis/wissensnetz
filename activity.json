@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-04T11:31:27+00:00",
+  "generated": "2026-10-04T11:41:26+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-10-04T13:36:59+02:00",
+      "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-04T13:31:58+02:00",
+      "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-04T13:31:31+02:00",
+      "text": "Etsy Content-Loop: SEO-Tags adhd-daily-planner (2 von 13 getauscht)"
+    },
+    {
       "at": "2026-10-04T13:29:00+02:00",
       "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
     },
@@ -21,18 +33,6 @@
     },
     {
       "at": "2026-10-04T13:16:59+02:00",
-      "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-04T13:05:00+02:00",
-      "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-04T13:01:58+02:00",
-      "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-04T12:55:58+02:00",
       "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
     }
   ]
