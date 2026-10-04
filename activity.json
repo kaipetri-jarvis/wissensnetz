@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-04T12:21:27+00:00",
+  "generated": "2026-10-04T12:31:27+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
+      "at": "2026-10-04T14:29:08+02:00",
+      "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-04T14:28:08+02:00",
+      "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-04T14:27:08+02:00",
+      "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-04T14:24:19+02:00",
+      "text": "Etsy: Audit der 14 Entwuerfe vor der Freigabe"
+    },
+    {
       "at": "2026-10-04T14:18:28+02:00",
       "text": "Etsy: restliche 13 Listings als Entwurf hochgeladen, --skip-Schalter ergaenzt"
     },
     {
       "at": "2026-10-04T14:18:07+02:00",
-      "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-04T14:17:07+02:00",
-      "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-04T14:11:39+02:00",
-      "text": "Etsy-API-Zugang hergestellt: x-api-key als keystring:shared_secret, Callback auf localhost"
-    },
-    {
-      "at": "2026-10-04T14:07:07+02:00",
-      "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-04T14:05:07+02:00",
       "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
     }
   ]
