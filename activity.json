@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-04T15:21:28+00:00",
+  "generated": "2026-10-04T15:31:28+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
+      "at": "2026-10-04T17:29:32+02:00",
+      "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-04T17:28:56+02:00",
+      "text": "Etsy-Rechtstexte: alle Anbieterangaben befuellt, Aufsichtsbehoerde gesetzt"
+    },
+    {
+      "at": "2026-10-04T17:28:31+02:00",
+      "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-04T17:27:31+02:00",
+      "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-10-04T17:19:31+02:00",
       "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
     },
     {
       "at": "2026-10-04T17:16:08+02:00",
       "text": "Uebergabe an Jarvis: v3-Profile gegengelesen, Arbeitsteilung Drucker/Etsy"
-    },
-    {
-      "at": "2026-10-04T17:15:10+02:00",
-      "text": "Dosendeckel: 3MF-Huelle Bambu-konform, Config-Annahme per CLI belegt"
-    },
-    {
-      "at": "2026-10-04T17:14:31+02:00",
-      "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-04T17:13:31+02:00",
-      "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-04T17:12:31+02:00",
-      "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
     }
   ]
 }
