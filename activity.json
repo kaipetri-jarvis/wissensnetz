@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-04T21:11:31+00:00",
+  "generated": "2026-10-04T21:21:31+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-10-04T23:14:43+02:00",
+      "text": "Website nicht live: kein DNS-Eintrag; Shop-URL im Deploy-Repo nachgezogen"
+    },
+    {
+      "at": "2026-10-04T23:13:04+02:00",
+      "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-04T23:12:57+02:00",
+      "text": "Etsy: Shop rechtlich vollstaendig eingerichtet, Startcheckliste nachgezogen"
+    },
+    {
       "at": "2026-10-04T23:08:34+02:00",
       "text": "Etsy-Hilfsseite: Hinweis zum Erloeschen des Widerrufsrechts als sechster Block"
     },
@@ -22,18 +34,6 @@
     {
       "at": "2026-10-04T23:01:04+02:00",
       "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-04T22:53:00+02:00",
-      "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-04T22:42:59+02:00",
-      "text": "Auto-Backup 2026-10-04 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-04T22:39:38+02:00",
-      "text": "Etsy: Steuernummer nicht hinterlegbar (nur USt-IdNr), zwei Beinahe-Fehler abgefangen"
     }
   ]
 }
