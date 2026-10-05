@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-05T17:30:15+00:00",
+  "generated": "2026-10-05T17:40:15+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-05T19:33:21+02:00",
+      "text": "Auto-Backup 2026-10-05 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-05T19:29:22+02:00",
       "text": "Entscheidungen 05.10.: n8n bleibt, JEV vertagt"
@@ -30,10 +34,6 @@
     {
       "at": "2026-10-05T19:22:20+02:00",
       "text": "Auto-Backup 2026-10-05 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-05T19:18:06+02:00",
-      "text": "etsy: Compliance-Check der 100er-Liste — 0 Upload-Blocker, Pruefer als Werkzeug"
     }
   ]
 }
