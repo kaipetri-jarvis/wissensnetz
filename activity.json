@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-05T17:20:15+00:00",
+  "generated": "2026-10-05T17:30:15+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
+      "at": "2026-10-05T19:29:22+02:00",
+      "text": "Entscheidungen 05.10.: n8n bleibt, JEV vertagt"
+    },
+    {
+      "at": "2026-10-05T19:29:00+02:00",
+      "text": "etsy: Pruefpunkt 4 repariert — 35 Phantom-Produktluecken waren Namensvarianten"
+    },
+    {
+      "at": "2026-10-05T19:28:21+02:00",
+      "text": "Auto-Backup 2026-10-05 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-05T19:23:20+02:00",
+      "text": "Auto-Backup 2026-10-05 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-05T19:22:20+02:00",
+      "text": "Auto-Backup 2026-10-05 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-10-05T19:18:06+02:00",
       "text": "etsy: Compliance-Check der 100er-Liste — 0 Upload-Blocker, Pruefer als Werkzeug"
-    },
-    {
-      "at": "2026-10-05T19:17:20+02:00",
-      "text": "Auto-Backup 2026-10-05 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-05T19:13:20+02:00",
-      "text": "Auto-Backup 2026-10-05 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-05T19:12:30+02:00",
-      "text": "memory: PRs 27/28 dokumentiert, Fehlschluss zu Fridays launchd-Jobs korrigiert"
-    },
-    {
-      "at": "2026-10-05T19:09:20+02:00",
-      "text": "Auto-Backup 2026-10-05 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-05T19:08:32+02:00",
-      "text": "Warteliste fuer gebuendelte Config-Aenderungen plus woechentliche Erinnerung"
     }
   ]
 }
