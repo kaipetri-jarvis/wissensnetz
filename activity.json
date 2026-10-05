@@ -1,16 +1,20 @@
 {
-  "generated": "2026-10-05T12:11:44+00:00",
+  "generated": "2026-10-05T15:10:13+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
   },
   "atlas": {
     "fleet": true,
-    "postgres": true,
-    "nats": true,
-    "online": true
+    "postgres": false,
+    "nats": false,
+    "online": false
   },
   "commits": [
+    {
+      "at": "2026-10-05T17:09:44+02:00",
+      "text": "Auto-Backup 2026-10-05 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-05T14:11:18+02:00",
       "text": "Auto-Backup 2026-10-05 — täglicher Workspace-Snapshot"
@@ -29,10 +33,6 @@
     },
     {
       "at": "2026-10-05T14:01:16+02:00",
-      "text": "Auto-Backup 2026-10-05 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-05T14:00:15+02:00",
       "text": "Auto-Backup 2026-10-05 — täglicher Workspace-Snapshot"
     }
   ]
