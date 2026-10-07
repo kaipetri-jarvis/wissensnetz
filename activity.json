@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-07T08:30:50+00:00",
+  "generated": "2026-10-07T08:40:50+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-07T10:33:53+02:00",
+      "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-07T10:28:53+02:00",
       "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-10-07T10:02:51+02:00",
       "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-07T10:01:58+02:00",
-      "text": "Etsy-Content-Loop 2026-10-07 10:00 — Listing-SEO (Slot 0): Pflegemappe-Listing optimiert"
     }
   ]
 }
