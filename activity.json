@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-07T13:20:52+00:00",
+  "generated": "2026-10-07T13:30:52+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
-      "at": "2026-10-07T15:20:21+02:00",
-      "text": "Etsy Plus gerechnet: jetzt nicht, Februar 2027 neu bewerten"
+      "at": "2026-10-07T15:29:52+02:00",
+      "text": "Etsy-Ads-Empfehlung mit Zahlen: 42 EUR Deckel auf die 12 ads-faehigen Listings"
     },
     {
-      "at": "2026-10-07T15:17:17+02:00",
-      "text": "Etsy: PPTX per PowerPoint auf Legion in PDF umgewandelt, Zusatzbilder nutzen Cache"
+      "at": "2026-10-07T15:28:35+02:00",
+      "text": "Pinterest umpriorisiert: 157 von 160 Pins haben keinen Text, keiner ist hochgeladen"
     },
     {
-      "at": "2026-10-07T15:16:50+02:00",
-      "text": "Ads-Rechnung nach echten Gebuehren + Leck im 109,90-EUR-Listing gefunden"
-    },
-    {
-      "at": "2026-10-07T15:16:21+02:00",
+      "at": "2026-10-07T15:28:22+02:00",
       "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-07T15:15:21+02:00",
+      "at": "2026-10-07T15:27:21+02:00",
       "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-07T15:14:24+02:00",
-      "text": "Neuer etsy-tiefe-loop auf Kais Wunsch: 3x taeglich, Pruefen statt Nachlegen"
+      "at": "2026-10-07T15:26:21+02:00",
+      "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-07T15:25:36+02:00",
+      "text": "Erstes neues Listing-Video gebaut, Loop-Takt auf 3 Videos pro Lauf korrigiert"
     }
   ]
 }
