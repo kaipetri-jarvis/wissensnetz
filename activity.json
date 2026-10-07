@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-07T13:10:52+00:00",
+  "generated": "2026-10-07T13:20:52+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
-      "at": "2026-10-07T15:10:39+02:00",
-      "text": "Tiefenpruefung: nur eine echte Fehlerklasse; Kanalentscheidungen festgeschrieben"
+      "at": "2026-10-07T15:20:21+02:00",
+      "text": "Etsy Plus gerechnet: jetzt nicht, Februar 2027 neu bewerten"
     },
     {
-      "at": "2026-10-07T15:10:20+02:00",
+      "at": "2026-10-07T15:17:17+02:00",
+      "text": "Etsy: PPTX per PowerPoint auf Legion in PDF umgewandelt, Zusatzbilder nutzen Cache"
+    },
+    {
+      "at": "2026-10-07T15:16:50+02:00",
+      "text": "Ads-Rechnung nach echten Gebuehren + Leck im 109,90-EUR-Listing gefunden"
+    },
+    {
+      "at": "2026-10-07T15:16:21+02:00",
       "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-07T15:06:48+02:00",
-      "text": "Brevo: Weiterleitung nach DOI auf Danke-Seiten gesetzt"
-    },
-    {
-      "at": "2026-10-07T15:06:20+02:00",
+      "at": "2026-10-07T15:15:21+02:00",
       "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-07T15:01:05+02:00",
-      "text": "Reichweite-Recherche kalibriert: Shop ist 135 statt 38 Listings, Titelmassnahme erledigt"
-    },
-    {
-      "at": "2026-10-07T15:00:20+02:00",
-      "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
+      "at": "2026-10-07T15:14:24+02:00",
+      "text": "Neuer etsy-tiefe-loop auf Kais Wunsch: 3x taeglich, Pruefen statt Nachlegen"
     }
   ]
 }
