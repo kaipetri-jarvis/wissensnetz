@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-07T13:30:52+00:00",
+  "generated": "2026-10-07T13:40:52+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
-      "at": "2026-10-07T15:29:52+02:00",
-      "text": "Etsy-Ads-Empfehlung mit Zahlen: 42 EUR Deckel auf die 12 ads-faehigen Listings"
+      "at": "2026-10-07T15:40:04+02:00",
+      "text": "Etsy Ads bis 19.10.2026 gesperrt: 15-Tage-Wartefrist fuer neue Verkaeufer"
     },
     {
-      "at": "2026-10-07T15:28:35+02:00",
-      "text": "Pinterest umpriorisiert: 157 von 160 Pins haben keinen Text, keiner ist hochgeladen"
+      "at": "2026-10-07T15:38:37+02:00",
+      "text": "Pinterest-Uploader ueber API v5 gebaut, base64 statt oeffentlicher URLs"
     },
     {
-      "at": "2026-10-07T15:28:22+02:00",
+      "at": "2026-10-07T15:38:24+02:00",
       "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-07T15:27:21+02:00",
+      "at": "2026-10-07T15:37:24+02:00",
       "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-07T15:26:21+02:00",
-      "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
+      "at": "2026-10-07T15:36:28+02:00",
+      "text": "Pinterest-Texte: 20 neue Pin-Blöcke (4–23) — ADHD Planner EN/DE, Life Reset, Shift Worker, Toolkit, Caregiving"
     },
     {
-      "at": "2026-10-07T15:25:36+02:00",
-      "text": "Erstes neues Listing-Video gebaut, Loop-Takt auf 3 Videos pro Lauf korrigiert"
+      "at": "2026-10-07T15:36:24+02:00",
+      "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
     }
   ]
 }
