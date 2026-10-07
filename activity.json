@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-07T19:00:54+00:00",
+  "generated": "2026-10-07T19:10:54+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
-      "at": "2026-10-07T21:00:20+02:00",
+      "at": "2026-10-07T21:10:22+02:00",
       "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-07T20:57:12+02:00",
-      "text": "Korrekturlauf vorgezogen und abgeschlossen: 14 Dateien, 2 entfernt, 0 Fehler"
+      "at": "2026-10-07T21:06:41+02:00",
+      "text": "Cron-Agenten kommen nicht an die Etsy-Schluessel im macOS-Schluesselbund"
     },
     {
-      "at": "2026-10-07T20:56:20+02:00",
+      "at": "2026-10-07T21:04:13+02:00",
+      "text": "Vier aeltere Videos nachgezogen, alle sieben jetzt im Shop"
+    },
+    {
+      "at": "2026-10-07T21:03:22+02:00",
       "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-07T20:55:20+02:00",
+      "at": "2026-10-07T21:01:45+02:00",
+      "text": "Drei Listing-Videos hochgeladen, alle active"
+    },
+    {
+      "at": "2026-10-07T21:01:22+02:00",
       "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-07T20:54:50+02:00",
-      "text": "Tagesnotiz: Video-Werkzeug watch"
-    },
-    {
-      "at": "2026-10-07T20:54:43+02:00",
-      "text": "Video-Werkzeug watch eingerichtet und an einem Bambu-Tutorial belegt"
     }
   ]
 }
