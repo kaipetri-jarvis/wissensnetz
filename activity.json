@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-07T13:40:52+00:00",
+  "generated": "2026-10-07T13:50:52+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
-      "at": "2026-10-07T15:40:04+02:00",
-      "text": "Etsy Ads bis 19.10.2026 gesperrt: 15-Tage-Wartefrist fuer neue Verkaeufer"
+      "at": "2026-10-07T15:49:31+02:00",
+      "text": "Trackinglink-Schreibweise an Etsys eigene Teilen-Funktion angeglichen"
     },
     {
-      "at": "2026-10-07T15:38:37+02:00",
-      "text": "Pinterest-Uploader ueber API v5 gebaut, base64 statt oeffentlicher URLs"
-    },
-    {
-      "at": "2026-10-07T15:38:24+02:00",
+      "at": "2026-10-07T15:49:25+02:00",
       "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-07T15:37:24+02:00",
+      "at": "2026-10-07T15:48:26+02:00",
+      "text": "Share-&-Save-Linkformat verifiziert und ueberall umgestellt"
+    },
+    {
+      "at": "2026-10-07T15:48:25+02:00",
       "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-07T15:36:28+02:00",
-      "text": "Pinterest-Texte: 20 neue Pin-Blöcke (4–23) — ADHD Planner EN/DE, Life Reset, Shift Worker, Toolkit, Caregiving"
+      "at": "2026-10-07T15:47:25+02:00",
+      "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-07T15:36:24+02:00",
-      "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
+      "at": "2026-10-07T15:45:17+02:00",
+      "text": "Kopierfertige Aufgabenliste fuer Kai"
     }
   ]
 }
