@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-07T17:00:53+00:00",
+  "generated": "2026-10-07T17:10:53+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-10-07T19:09:11+02:00",
+      "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-07T19:06:48+02:00",
+      "text": "Pin-Texte: Lauf 8 — 20 weitere Blöcke hinzugefügt (134–153, Quartals-Check bis Vorsorge) Co-Authored-By: Claude Haiku 4.5 <noreply@anthropic.com>"
+    },
+    {
+      "at": "2026-10-07T19:01:09+02:00",
+      "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-10-07T18:59:09+02:00",
       "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
     },
@@ -21,18 +33,6 @@
     },
     {
       "at": "2026-10-07T18:39:08+02:00",
-      "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-07T18:38:07+02:00",
-      "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-07T18:37:07+02:00",
-      "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-07T18:29:00+02:00",
       "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
     }
   ]
