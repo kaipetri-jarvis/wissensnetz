@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-07T18:20:54+00:00",
+  "generated": "2026-10-07T18:30:54+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
-      "at": "2026-10-07T20:19:28+02:00",
-      "text": "Sandbox als Umweg geprueft: haengt an derselben Trial-Freigabe"
-    },
-    {
-      "at": "2026-10-07T20:19:17+02:00",
+      "at": "2026-10-07T20:29:18+02:00",
       "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-07T20:09:16+02:00",
+      "at": "2026-10-07T20:28:50+02:00",
+      "text": "Sandbox gemessen: gleiche Sperre, mit Gegenprobe belegt"
+    },
+    {
+      "at": "2026-10-07T20:28:18+02:00",
       "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-07T20:09:15+02:00",
-      "text": "Pin-Texte abgeschlossen: 160 von 160 Bildern haben einen Eintrag"
+      "at": "2026-10-07T20:27:58+02:00",
+      "text": "Pin-Zuordnung von Hand nachgeprueft: 8 weitere Fehler korrigiert"
     },
     {
-      "at": "2026-10-07T20:01:16+02:00",
-      "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
+      "at": "2026-10-07T20:22:19+02:00",
+      "text": "Pin-Zuordnung neu gebaut: Kaeuferdatei zuerst, 37 Ziel-URLs korrigiert"
     },
     {
-      "at": "2026-10-07T19:59:16+02:00",
+      "at": "2026-10-07T20:22:17+02:00",
       "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
     }
   ]
