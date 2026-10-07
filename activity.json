@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-07T18:10:54+00:00",
+  "generated": "2026-10-07T18:20:54+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-07T20:19:28+02:00",
+      "text": "Sandbox als Umweg geprueft: haengt an derselben Trial-Freigabe"
+    },
+    {
+      "at": "2026-10-07T20:19:17+02:00",
+      "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-07T20:09:16+02:00",
       "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
@@ -25,14 +33,6 @@
     },
     {
       "at": "2026-10-07T19:59:16+02:00",
-      "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-07T19:49:15+02:00",
-      "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-07T19:39:14+02:00",
       "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
     }
   ]
