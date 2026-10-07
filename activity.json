@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-07T17:30:53+00:00",
+  "generated": "2026-10-07T17:40:53+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-07T19:39:14+02:00",
+      "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-07T19:36:07+02:00",
+      "text": "Pin-Texte: Lauf 9 — Hochzeitspins hinzugefügt (154–155), alle 155 Pins komplett"
+    },
     {
       "at": "2026-10-07T19:29:13+02:00",
       "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
@@ -25,14 +33,6 @@
     },
     {
       "at": "2026-10-07T19:09:11+02:00",
-      "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-07T19:06:48+02:00",
-      "text": "Pin-Texte: Lauf 8 — 20 weitere Blöcke hinzugefügt (134–153, Quartals-Check bis Vorsorge) Co-Authored-By: Claude Haiku 4.5 <noreply@anthropic.com>"
-    },
-    {
-      "at": "2026-10-07T19:01:09+02:00",
       "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
     }
   ]
