@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-07T14:20:52+00:00",
+  "generated": "2026-10-07T14:30:52+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-10-07T16:29:35+02:00",
+      "text": "Pinterest-API: Trial-Zugriff blockiert alle v5-Endpunkte, belegt"
+    },
+    {
+      "at": "2026-10-07T16:28:31+02:00",
+      "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-07T16:27:31+02:00",
+      "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-10-07T16:19:50+02:00",
       "text": "Pinterest-App-Anleitung von vorn, kopierfertig"
     },
@@ -22,18 +34,6 @@
     {
       "at": "2026-10-07T16:07:30+02:00",
       "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-07T16:07:12+02:00",
-      "text": "Pin-Texte: 20 neue Blöcke (24–43), 43/160 fertig"
-    },
-    {
-      "at": "2026-10-07T16:02:34+02:00",
-      "text": "Loop-Auftrag nachgebessert: Datenquelle fuer den Titel-Format-Check benannt"
-    },
-    {
-      "at": "2026-10-07T16:01:35+02:00",
-      "text": "Lieferpruefung 16:00 — Seitenzahl-Audit abgeschlossen"
     }
   ]
 }
