@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-07T14:40:52+00:00",
+  "generated": "2026-10-07T14:50:52+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-07T16:47:35+02:00",
+      "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-07T16:37:34+02:00",
       "text": "Auto-Backup 2026-10-07 — täglicher Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-10-07T16:32:42+02:00",
       "text": "Pinterest: offizieller Ticket-Weg statt Forenbeitrag, Known Issue belegt"
-    },
-    {
-      "at": "2026-10-07T16:31:30+02:00",
-      "text": "Pinterest-Freigabe-Wache: taeglich 09:10, meldet nur bei Statuswechsel"
     }
   ]
 }
