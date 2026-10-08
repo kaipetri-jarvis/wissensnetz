@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-08T15:11:37+00:00",
+  "generated": "2026-10-08T15:21:37+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
+      "at": "2026-10-08T17:19:52+02:00",
+      "text": "Pinterest-CSV: offizielle Spaltennamen, UTC-Zeiten, Keywords"
+    },
+    {
+      "at": "2026-10-08T17:19:37+02:00",
+      "text": "Auto-Backup 2026-10-08 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-08T17:18:37+02:00",
+      "text": "Auto-Backup 2026-10-08 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-08T17:12:36+02:00",
+      "text": "Auto-Backup 2026-10-08 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-10-08T17:10:24+02:00",
       "text": "Pinterest: Bilder live, CSV-Paket fertig, Boards offen"
     },
     {
       "at": "2026-10-08T17:08:36+02:00",
-      "text": "Auto-Backup 2026-10-08 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-08T17:07:16+02:00",
-      "text": "Sicherheitsprüfung aller Skills und Rollen (SkillSpector), Playwright-Werkzeug, Tagesnotiz"
-    },
-    {
-      "at": "2026-10-08T17:05:36+02:00",
-      "text": "Auto-Backup 2026-10-08 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-08T17:04:36+02:00",
-      "text": "Auto-Backup 2026-10-08 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-08T17:03:36+02:00",
       "text": "Auto-Backup 2026-10-08 — täglicher Workspace-Snapshot"
     }
   ]
