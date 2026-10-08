@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-08T15:31:37+00:00",
+  "generated": "2026-10-08T15:41:37+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-08T17:39:29+02:00",
+      "text": "Pinterest: erster CSV-Upload durch (TEST-5-pins.csv)"
+    },
+    {
+      "at": "2026-10-08T17:32:37+02:00",
+      "text": "Auto-Backup 2026-10-08 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-08T17:22:37+02:00",
       "text": "Auto-Backup 2026-10-08 — täglicher Workspace-Snapshot"
@@ -26,14 +34,6 @@
     {
       "at": "2026-10-08T17:18:37+02:00",
       "text": "Auto-Backup 2026-10-08 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-08T17:12:36+02:00",
-      "text": "Auto-Backup 2026-10-08 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-08T17:10:24+02:00",
-      "text": "Pinterest: Bilder live, CSV-Paket fertig, Boards offen"
     }
   ]
 }
