@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-08T19:31:38+00:00",
+  "generated": "2026-10-08T19:41:38+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-08T21:34:52+02:00",
+      "text": "Auto-Backup 2026-10-08 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-08T21:28:02+02:00",
       "text": "Korrektur itsdavidkettner: Werkzeugdiagramm, Pleo statt freier KI-Buchhaltung, Lehre fuers Video-Werkzeug"
@@ -29,10 +33,6 @@
     },
     {
       "at": "2026-10-08T21:03:51+02:00",
-      "text": "Auto-Backup 2026-10-08 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-08T21:02:50+02:00",
       "text": "Auto-Backup 2026-10-08 — täglicher Workspace-Snapshot"
     }
   ]
