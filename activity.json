@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-08T19:01:38+00:00",
+  "generated": "2026-10-08T19:11:38+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-10-08T21:04:01+02:00",
+      "text": "Listing-Videos: Drei neue Renders (Social Media Planer, Kunden Onboarding, Kunden Offboarding DE)"
+    },
+    {
+      "at": "2026-10-08T21:03:51+02:00",
+      "text": "Auto-Backup 2026-10-08 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-08T21:02:50+02:00",
+      "text": "Auto-Backup 2026-10-08 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-10-08T21:00:47+02:00",
       "text": "Auto-Backup 2026-10-08 — täglicher Workspace-Snapshot"
     },
@@ -22,18 +34,6 @@
     {
       "at": "2026-10-08T20:55:49+02:00",
       "text": "TikTok-Leser fuer Foto-Karussells (Playwright) + Einordnung wavaai.feeds Trading-Prompt"
-    },
-    {
-      "at": "2026-10-08T20:55:46+02:00",
-      "text": "Auto-Backup 2026-10-08 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-08T20:54:46+02:00",
-      "text": "Auto-Backup 2026-10-08 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-08T20:53:46+02:00",
-      "text": "Auto-Backup 2026-10-08 — täglicher Workspace-Snapshot"
     }
   ]
 }
