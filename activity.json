@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-08T19:11:38+00:00",
+  "generated": "2026-10-08T19:21:38+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-08T21:14:51+02:00",
+      "text": "Auto-Backup 2026-10-08 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-08T21:04:01+02:00",
       "text": "Listing-Videos: Drei neue Renders (Social Media Planer, Kunden Onboarding, Kunden Offboarding DE)"
@@ -30,10 +34,6 @@
     {
       "at": "2026-10-08T20:57:54+02:00",
       "text": "Einordnung TikTok itsdavidkettner: Prozesse statt mehr KI"
-    },
-    {
-      "at": "2026-10-08T20:55:49+02:00",
-      "text": "TikTok-Leser fuer Foto-Karussells (Playwright) + Einordnung wavaai.feeds Trading-Prompt"
     }
   ]
 }
