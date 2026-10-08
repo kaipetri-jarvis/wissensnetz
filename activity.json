@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-08T19:21:38+00:00",
+  "generated": "2026-10-08T19:31:38+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-08T21:28:02+02:00",
+      "text": "Korrektur itsdavidkettner: Werkzeugdiagramm, Pleo statt freier KI-Buchhaltung, Lehre fuers Video-Werkzeug"
+    },
+    {
+      "at": "2026-10-08T21:24:51+02:00",
+      "text": "Auto-Backup 2026-10-08 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-08T21:14:51+02:00",
       "text": "Auto-Backup 2026-10-08 — täglicher Workspace-Snapshot"
@@ -26,14 +34,6 @@
     {
       "at": "2026-10-08T21:02:50+02:00",
       "text": "Auto-Backup 2026-10-08 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-08T21:00:47+02:00",
-      "text": "Auto-Backup 2026-10-08 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-08T20:57:54+02:00",
-      "text": "Einordnung TikTok itsdavidkettner: Prozesse statt mehr KI"
     }
   ]
 }
