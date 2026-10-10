@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-10T20:51:57+00:00",
+  "generated": "2026-10-10T21:01:57+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
-      "at": "2026-10-10T22:51:05+02:00",
-      "text": "Pinterest-Profil extern geprueft: 5 Test-Pins live, aus welle-1 entfernt (30 statt 35)"
+      "at": "2026-10-10T23:01:51+02:00",
+      "text": "Eigenes Browserprofil fuer Automatisierung angelegt; Chrome-Debug-Port beim Standardprofil gesperrt"
     },
     {
-      "at": "2026-10-10T22:50:49+02:00",
+      "at": "2026-10-10T23:01:50+02:00",
       "text": "Auto-Backup 2026-10-10 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-10T22:48:49+02:00",
-      "text": "Pinterest-Wellen neu terminiert ab 11.10., alte Fassung gesichert, Dublettengefahr dokumentiert"
-    },
-    {
-      "at": "2026-10-10T22:48:49+02:00",
+      "at": "2026-10-10T23:00:50+02:00",
       "text": "Auto-Backup 2026-10-10 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-10T22:47:49+02:00",
+      "at": "2026-10-10T22:58:49+02:00",
+      "text": "Pinterest endgueltig: App nicht freigegeben, Tokens werden abgelehnt"
+    },
+    {
+      "at": "2026-10-10T22:57:49+02:00",
       "text": "Auto-Backup 2026-10-10 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-10T22:45:41+02:00",
-      "text": "Tokeneingabe: maskierter macOS-Dialog statt Terminal-Prompt"
+      "at": "2026-10-10T22:55:17+02:00",
+      "text": "Geprueft: CSV-Upload durch Hades waere ueber Chrome-Debug-Port moeglich; USER.md-Eintrag zum Chrome-Profil veraltet"
     }
   ]
 }
