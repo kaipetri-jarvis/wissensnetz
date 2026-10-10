@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-10T22:21:58+00:00",
+  "generated": "2026-10-10T22:31:58+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
-      "at": "2026-10-11T00:21:45+02:00",
-      "text": "Auf Opus 5.5 umgestellt per Sitzungs-Pin, Ursache der Diskrepanz belegt"
-    },
-    {
-      "at": "2026-10-11T00:20:46+02:00",
-      "text": "Ultron laeuft auf Opus 5.0, Config gibt 5.5 vor"
-    },
-    {
-      "at": "2026-10-11T00:19:54+02:00",
+      "at": "2026-10-11T00:28:54+02:00",
       "text": "Auto-Backup 2026-10-11 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-11T00:18:54+02:00",
+      "at": "2026-10-11T00:26:01+02:00",
+      "text": "Opus 5.5 bestaetigt, danach auf Fable 5.1 umgestellt"
+    },
+    {
+      "at": "2026-10-11T00:24:54+02:00",
       "text": "Auto-Backup 2026-10-11 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-11T00:17:54+02:00",
+      "at": "2026-10-11T00:23:54+02:00",
       "text": "Auto-Backup 2026-10-11 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-11T00:16:54+02:00",
+      "at": "2026-10-11T00:23:20+02:00",
+      "text": "Sitzungsmodell auf Opus 5.5 gepinnt (nur diese Sitzung, keine Config-Aenderung)"
+    },
+    {
+      "at": "2026-10-11T00:22:54+02:00",
       "text": "Auto-Backup 2026-10-11 — täglicher Workspace-Snapshot"
     }
   ]
