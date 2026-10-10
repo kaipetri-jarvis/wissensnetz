@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-10T19:31:57+00:00",
+  "generated": "2026-10-10T19:41:57+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
+      "at": "2026-10-10T21:41:53+02:00",
+      "text": "Rangliste der 15 TikTok-Auswertungen vom 10.10.2026"
+    },
+    {
+      "at": "2026-10-10T21:37:39+02:00",
+      "text": "Einordnung TikTok digitallauraanderson: drei Automationen, Zapier-Preise geprueft"
+    },
+    {
+      "at": "2026-10-10T21:36:45+02:00",
+      "text": "Auto-Backup 2026-10-10 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-10T21:34:02+02:00",
+      "text": "Einordnung TikTok nazarethliving 2: Q4-Dropshipping, Adobe-Zahlen und GPSR geprueft"
+    },
+    {
       "at": "2026-10-10T21:27:06+02:00",
       "text": "Context7 geprueft und als MCP in Claude Code installiert (ohne Gateway-Reload)"
     },
     {
       "at": "2026-10-10T21:26:44+02:00",
       "text": "Auto-Backup 2026-10-10 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-10T21:25:44+02:00",
-      "text": "Auto-Backup 2026-10-10 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-10T21:23:24+02:00",
-      "text": "Einordnung TikTok robin.billinger: 100K-Prompt, Kommentar-Koeder nachgewiesen"
-    },
-    {
-      "at": "2026-10-10T21:21:03+02:00",
-      "text": "Einordnung TikTok createwithpoo: SideShift-UGC, Median 7-9 USD je Video belegt"
-    },
-    {
-      "at": "2026-10-10T21:18:04+02:00",
-      "text": "Einordnung TikTok theromanknox: Skill-Crews, Projekte per GitHub-API verifiziert"
     }
   ]
 }
