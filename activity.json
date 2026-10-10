@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-10T18:51:57+00:00",
+  "generated": "2026-10-10T19:01:57+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
+      "at": "2026-10-10T21:00:53+02:00",
+      "text": "Einordnung TikTok yukilein29 Part 12: Zollauktion-PCs, Speicherpreise verifiziert, Vorlagen-Muster belegt"
+    },
+    {
+      "at": "2026-10-10T21:00:43+02:00",
+      "text": "Auto-Backup 2026-10-10 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-10T20:58:47+02:00",
+      "text": "Einordnung TikTok yukilein29 Part 10: Insolvenzauktionen, Plattformen verifiziert"
+    },
+    {
+      "at": "2026-10-10T20:56:42+02:00",
+      "text": "Auto-Backup 2026-10-10 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-10T20:53:17+02:00",
+      "text": "Einordnung TikTok yukilein29 Part 5: eBay-Arbitrage gegen Etsy-Shops, Plattformregeln und Marge geprueft"
+    },
+    {
       "at": "2026-10-10T20:51:42+02:00",
       "text": "Auto-Backup 2026-10-10 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-10T20:50:05+02:00",
-      "text": "Einordnung TikTok yukilein29 Part 2: Zwangsversteigerung, ZVG-Wertgrenzen und Nebenkosten geprueft"
-    },
-    {
-      "at": "2026-10-10T20:48:22+02:00",
-      "text": "Einordnung TikTok yukilein29: Bauzaun-Vermietung, Mietpreise und Kapitalbedarf geprueft"
-    },
-    {
-      "at": "2026-10-10T20:46:41+02:00",
-      "text": "Auto-Backup 2026-10-10 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-10T20:36:41+02:00",
-      "text": "Auto-Backup 2026-10-10 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-10T20:32:29+02:00",
-      "text": "Einordnung TikTok historyrecap.ai: Forderungskauf-Masche, RDG/Verjaehrung geprueft"
     }
   ]
 }
