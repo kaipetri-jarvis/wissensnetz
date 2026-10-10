@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-10T22:31:58+00:00",
+  "generated": "2026-10-10T22:41:58+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-11T00:38:55+02:00",
+      "text": "Auto-Backup 2026-10-11 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-11T00:28:54+02:00",
       "text": "Auto-Backup 2026-10-11 — täglicher Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-10-11T00:23:20+02:00",
       "text": "Sitzungsmodell auf Opus 5.5 gepinnt (nur diese Sitzung, keine Config-Aenderung)"
-    },
-    {
-      "at": "2026-10-11T00:22:54+02:00",
-      "text": "Auto-Backup 2026-10-11 — täglicher Workspace-Snapshot"
     }
   ]
 }
