@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-11T23:12:07+00:00",
+  "generated": "2026-10-11T23:22:07+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
-      "at": "2026-10-12T01:09:40+02:00",
+      "at": "2026-10-12T01:20:41+02:00",
       "text": "Auto-Backup 2026-10-12 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-12T01:02:12+02:00",
-      "text": "Einordnung TikTok kev.creatoros: Farm iOS, Funnel auf eigene Repo-Kopie"
-    },
-    {
-      "at": "2026-10-12T01:01:18+02:00",
-      "text": "Erinnerung fuer 12.10. im Heartbeat hinterlegt; erledigten Pinterest-Messauftrag entfernt"
-    },
-    {
-      "at": "2026-10-12T01:00:40+02:00",
+      "at": "2026-10-12T01:19:41+02:00",
       "text": "Auto-Backup 2026-10-12 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-12T00:59:39+02:00",
+      "at": "2026-10-12T01:18:31+02:00",
+      "text": "Etsy-Zugang geprueft: API frei, nur Scope transactions_r fehlt; Scope fuer naechste Freigabe vorbereitet"
+    },
+    {
+      "at": "2026-10-12T01:17:28+02:00",
+      "text": "10 Etsy-Ads-Erinnerungen fuer 19.10. als Command-Automationen, Zustellung getestet"
+    },
+    {
+      "at": "2026-10-12T01:13:40+02:00",
       "text": "Auto-Backup 2026-10-12 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-12T00:59:26+02:00",
-      "text": "Einordnung TikTok vladojoinee: Phone Farming, Klickfarmen und Strom gerechnet"
+      "at": "2026-10-12T01:12:35+02:00",
+      "text": "POD-Kalender-Skill live getestet: Familienplaner 2027 passt auf Gelato-Mass; Schicht-Vorlage fehlt"
     }
   ]
 }
