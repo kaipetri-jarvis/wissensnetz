@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-12T17:22:13+00:00",
+  "generated": "2026-10-12T17:32:13+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
-      "at": "2026-10-12T19:21:06+02:00",
+      "at": "2026-10-12T19:31:07+02:00",
       "text": "Auto-Backup 2026-10-12 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-12T19:20:06+02:00",
+      "at": "2026-10-12T19:28:37+02:00",
+      "text": "Wissens-Sync: geheimer Gist statt oeffentlichem"
+    },
+    {
+      "at": "2026-10-12T19:28:07+02:00",
       "text": "Auto-Backup 2026-10-12 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-12T19:19:06+02:00",
+      "at": "2026-10-12T19:24:08+02:00",
+      "text": "Kai bestaetigt Toolkit-Umbau und DE/EN-Paar"
+    },
+    {
+      "at": "2026-10-12T19:24:06+02:00",
       "text": "Auto-Backup 2026-10-12 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-12T19:17:35+02:00",
-      "text": "Commercial License Toolkit: Lizenzdatei + volle Beschreibung live, Dubletten-Scan"
-    },
-    {
-      "at": "2026-10-12T19:17:06+02:00",
-      "text": "Auto-Backup 2026-10-12 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-12T19:11:05+02:00",
-      "text": "Auto-Backup 2026-10-12 — täglicher Workspace-Snapshot"
+      "at": "2026-10-12T19:23:55+02:00",
+      "text": "Name aus Gist entfernt, 5 doppelte Pins geloescht"
     }
   ]
 }
