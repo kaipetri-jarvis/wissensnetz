@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-12T17:32:13+00:00",
+  "generated": "2026-10-12T17:42:13+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-12T19:41:07+02:00",
+      "text": "Auto-Backup 2026-10-12 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-12T19:31:07+02:00",
       "text": "Auto-Backup 2026-10-12 — täglicher Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-10-12T19:24:06+02:00",
       "text": "Auto-Backup 2026-10-12 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-12T19:23:55+02:00",
-      "text": "Name aus Gist entfernt, 5 doppelte Pins geloescht"
     }
   ]
 }
