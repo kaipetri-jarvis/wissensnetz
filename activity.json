@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-12T18:32:13+00:00",
+  "generated": "2026-10-12T18:42:13+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
+      "at": "2026-10-12T20:41:11+02:00",
+      "text": "Auto-Backup 2026-10-12 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-12T20:39:11+02:00",
+      "text": "Auto-Backup 2026-10-12 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-12T20:38:03+02:00",
+      "text": "TODO-PLAN: POD-Fahrplan mit Ultrons Korrekturen"
+    },
+    {
+      "at": "2026-10-12T20:36:11+02:00",
+      "text": "Auto-Backup 2026-10-12 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-12T20:35:11+02:00",
+      "text": "Auto-Backup 2026-10-12 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-10-12T20:31:10+02:00",
-      "text": "Auto-Backup 2026-10-12 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-12T20:29:11+02:00",
-      "text": "Notiz: Vision-Printify-Plan eingeordnet"
-    },
-    {
-      "at": "2026-10-12T20:21:10+02:00",
-      "text": "Auto-Backup 2026-10-12 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-12T20:13:00+02:00",
-      "text": "Recherche Druck selbst vs. auslagern"
-    },
-    {
-      "at": "2026-10-12T20:12:09+02:00",
-      "text": "Auto-Backup 2026-10-12 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-12T20:11:09+02:00",
       "text": "Auto-Backup 2026-10-12 — täglicher Workspace-Snapshot"
     }
   ]
