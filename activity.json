@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-12T18:02:13+00:00",
+  "generated": "2026-10-12T18:12:13+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
+      "at": "2026-10-12T20:12:09+02:00",
+      "text": "Auto-Backup 2026-10-12 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-12T20:11:09+02:00",
+      "text": "Auto-Backup 2026-10-12 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-12T20:10:09+02:00",
+      "text": "Auto-Backup 2026-10-12 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-12T20:07:09+02:00",
+      "text": "Auto-Backup 2026-10-12 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-12T20:06:09+02:00",
+      "text": "Auto-Backup 2026-10-12 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-10-12T20:01:09+02:00",
-      "text": "Auto-Backup 2026-10-12 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-12T19:57:38+02:00",
-      "text": "Wissensnetz: verschluesselte Vollfassung, stuendlich mitgebaut"
-    },
-    {
-      "at": "2026-10-12T19:57:08+02:00",
-      "text": "Auto-Backup 2026-10-12 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-12T19:56:09+02:00",
-      "text": "Auto-Backup 2026-10-12 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-12T19:54:53+02:00",
-      "text": "Wissens-Graph: Privatfilter fuer oeffentliche Seite"
-    },
-    {
-      "at": "2026-10-12T19:54:08+02:00",
       "text": "Auto-Backup 2026-10-12 — täglicher Workspace-Snapshot"
     }
   ]
