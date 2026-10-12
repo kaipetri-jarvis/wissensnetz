@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-12T18:12:13+00:00",
+  "generated": "2026-10-12T18:22:13+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-12T20:21:10+02:00",
+      "text": "Auto-Backup 2026-10-12 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-12T20:13:00+02:00",
+      "text": "Recherche Druck selbst vs. auslagern"
+    },
     {
       "at": "2026-10-12T20:12:09+02:00",
       "text": "Auto-Backup 2026-10-12 — täglicher Workspace-Snapshot"
@@ -25,14 +33,6 @@
     },
     {
       "at": "2026-10-12T20:07:09+02:00",
-      "text": "Auto-Backup 2026-10-12 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-12T20:06:09+02:00",
-      "text": "Auto-Backup 2026-10-12 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-12T20:01:09+02:00",
       "text": "Auto-Backup 2026-10-12 — täglicher Workspace-Snapshot"
     }
   ]
