@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-13T12:22:21+00:00",
+  "generated": "2026-10-13T12:32:21+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-10-13T14:31:29+02:00",
+      "text": "Auto-Backup 2026-10-13 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-13T14:27:52+02:00",
+      "text": "Maskenetui: 3 Schnapper + 3 Rastnasen wie Original"
+    },
+    {
+      "at": "2026-10-13T14:24:19+02:00",
+      "text": "Maskenetui: Schnapper wie Original (2 Laschen mit Fenster an der Unterschale, Rastnasen am Deckel)"
+    },
+    {
       "at": "2026-10-13T14:21:28+02:00",
       "text": "Auto-Backup 2026-10-13 — täglicher Workspace-Snapshot"
     },
@@ -21,18 +33,6 @@
     },
     {
       "at": "2026-10-13T14:11:27+02:00",
-      "text": "Auto-Backup 2026-10-13 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-13T14:08:16+02:00",
-      "text": "LayerForge: Maskenetui-Entwurf"
-    },
-    {
-      "at": "2026-10-13T14:02:27+02:00",
-      "text": "LayerForge: Kartenstaender raus"
-    },
-    {
-      "at": "2026-10-13T14:01:26+02:00",
       "text": "Auto-Backup 2026-10-13 — täglicher Workspace-Snapshot"
     }
   ]
