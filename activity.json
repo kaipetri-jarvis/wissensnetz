@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-13T12:02:21+00:00",
+  "generated": "2026-10-13T12:12:21+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-10-13T14:11:27+02:00",
+      "text": "Auto-Backup 2026-10-13 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-13T14:08:16+02:00",
+      "text": "LayerForge: Maskenetui-Entwurf"
+    },
+    {
+      "at": "2026-10-13T14:02:27+02:00",
+      "text": "LayerForge: Kartenstaender raus"
+    },
+    {
       "at": "2026-10-13T14:01:26+02:00",
       "text": "Auto-Backup 2026-10-13 — täglicher Workspace-Snapshot"
     },
@@ -22,18 +34,6 @@
     {
       "at": "2026-10-13T14:00:07+02:00",
       "text": "LayerForge: Preisvorschlaege fuer 15 Auftraege"
-    },
-    {
-      "at": "2026-10-13T13:59:26+02:00",
-      "text": "Auto-Backup 2026-10-13 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-13T13:51:26+02:00",
-      "text": "Auto-Backup 2026-10-13 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-13T13:50:26+02:00",
-      "text": "Auto-Backup 2026-10-13 — täglicher Workspace-Snapshot"
     }
   ]
 }
