@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-13T18:52:23+00:00",
+  "generated": "2026-10-13T19:02:24+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-10-13T21:01:58+02:00",
+      "text": "Listing-Video fuer Commercial License Business Toolkit (#2) gebaut"
+    },
+    {
+      "at": "2026-10-13T21:01:03+02:00",
+      "text": "Auto-Backup 2026-10-13 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-13T20:54:59+02:00",
+      "text": "Auto-Backup 2026-10-13 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-10-13T20:51:59+02:00",
       "text": "Auto-Backup 2026-10-13 — täglicher Workspace-Snapshot"
     },
@@ -21,18 +33,6 @@
     },
     {
       "at": "2026-10-13T20:34:58+02:00",
-      "text": "Auto-Backup 2026-10-13 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-13T20:24:57+02:00",
-      "text": "Auto-Backup 2026-10-13 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-13T20:14:56+02:00",
-      "text": "Auto-Backup 2026-10-13 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-13T20:13:56+02:00",
       "text": "Auto-Backup 2026-10-13 — täglicher Workspace-Snapshot"
     }
   ]
