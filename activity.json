@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-14T16:02:34+00:00",
+  "generated": "2026-10-14T16:12:34+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-14T18:06:32+02:00",
+      "text": "Auto-Backup 2026-10-14 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-14T18:00:32+02:00",
       "text": "Auto-Backup 2026-10-14 — täglicher Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-10-14T17:43:08+02:00",
       "text": "Canva-KI-Motive Januar bis Mai im Siebdruck-Stil, Kontingent danach erschoepft; Entscheidungen und Uebergaben festgehalten"
-    },
-    {
-      "at": "2026-10-14T17:42:31+02:00",
-      "text": "Auto-Backup 2026-10-14 — täglicher Workspace-Snapshot"
     }
   ]
 }
