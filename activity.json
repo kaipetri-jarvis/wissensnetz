@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-15T12:52:46+00:00",
+  "generated": "2026-10-15T13:02:46+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-10-15T15:01:11+02:00",
+      "text": "Auto-Backup 2026-10-15 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-15T14:57:11+02:00",
+      "text": "Auto-Backup 2026-10-15 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-15T14:56:49+02:00",
+      "text": "Brevo-CSP: Stand notiert"
+    },
+    {
       "at": "2026-10-15T14:52:10+02:00",
       "text": "Auto-Backup 2026-10-15 — täglicher Workspace-Snapshot"
     },
@@ -21,18 +33,6 @@
     },
     {
       "at": "2026-10-15T14:37:09+02:00",
-      "text": "Auto-Backup 2026-10-15 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-15T14:27:09+02:00",
-      "text": "Auto-Backup 2026-10-15 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-15T14:17:08+02:00",
-      "text": "Auto-Backup 2026-10-15 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-15T14:07:07+02:00",
       "text": "Auto-Backup 2026-10-15 — täglicher Workspace-Snapshot"
     }
   ]
