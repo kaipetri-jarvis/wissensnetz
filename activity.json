@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-17T23:13:56+00:00",
+  "generated": "2026-10-17T23:23:56+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
+      "at": "2026-10-18T01:23:03+02:00",
+      "text": "3D: Wildkamera-Dach 14 cm und 12 cm einzeln"
+    },
+    {
+      "at": "2026-10-18T01:22:52+02:00",
+      "text": "Auto-Backup 2026-10-18 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-18T01:20:51+02:00",
+      "text": "Auto-Backup 2026-10-18 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-18T01:20:09+02:00",
+      "text": "3D: 18-cm-Variante verworfen"
+    },
+    {
       "at": "2026-10-18T01:12:09+02:00",
       "text": "3D: zwei Wildkamera-Daecher 10,5 cm auf einer Platte"
     },
     {
       "at": "2026-10-18T01:10:50+02:00",
-      "text": "Auto-Backup 2026-10-18 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-18T01:03:21+02:00",
-      "text": "3D: Wildkamera-Dach 18-cm-Variante gewaehlt"
-    },
-    {
-      "at": "2026-10-18T01:01:55+02:00",
-      "text": "3D: Wildkamera-Dach v28 mit Befestigungsstegen"
-    },
-    {
-      "at": "2026-10-18T01:01:50+02:00",
-      "text": "Auto-Backup 2026-10-18 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-18T01:00:49+02:00",
       "text": "Auto-Backup 2026-10-18 — täglicher Workspace-Snapshot"
     }
   ]
