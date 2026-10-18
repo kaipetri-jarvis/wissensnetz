@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-18T19:04:03+00:00",
+  "generated": "2026-10-18T19:14:03+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-18T21:13:07+02:00",
+      "text": "Auto-Backup 2026-10-18 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-18T21:05:06+02:00",
+      "text": "Auto-Backup 2026-10-18 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-18T21:04:06+02:00",
       "text": "Auto-Backup 2026-10-18 — täglicher Workspace-Snapshot"
@@ -26,14 +34,6 @@
     {
       "at": "2026-10-18T21:00:25+02:00",
       "text": "Loop: Listing-Videos-Check 2026-10-18 21:00 (Rest 0), keine neuen Slugs"
-    },
-    {
-      "at": "2026-10-18T20:59:05+02:00",
-      "text": "Auto-Backup 2026-10-18 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-18T20:58:34+02:00",
-      "text": "3D: v37 Doppelplatte mit leicht lösbaren Stützen"
     }
   ]
 }
