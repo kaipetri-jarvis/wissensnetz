@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-19T12:24:11+00:00",
+  "generated": "2026-10-19T12:34:11+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-19T14:24:26+02:00",
+      "text": "Auto-Backup 2026-10-19 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-19T14:23:26+02:00",
       "text": "Auto-Backup 2026-10-19 — täglicher Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-10-19T14:08:21+02:00",
       "text": "Notiz POD"
-    },
-    {
-      "at": "2026-10-19T14:08:21+02:00",
-      "text": "POD: produkte.json repariert (ASCII-Anführungszeichen brach das JSON)"
     }
   ]
 }
