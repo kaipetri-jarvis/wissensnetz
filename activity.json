@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-19T13:44:12+00:00",
+  "generated": "2026-10-19T13:54:12+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
-      "at": "2026-10-19T15:34:32+02:00",
+      "at": "2026-10-19T15:52:33+02:00",
       "text": "Auto-Backup 2026-10-19 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-19T15:26:31+02:00",
+      "at": "2026-10-19T15:50:57+02:00",
+      "text": "Notiz POD-Entwürfe"
+    },
+    {
+      "at": "2026-10-19T15:50:33+02:00",
       "text": "Auto-Backup 2026-10-19 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-19T15:24:31+02:00",
+      "at": "2026-10-19T15:49:33+02:00",
       "text": "Auto-Backup 2026-10-19 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-19T15:17:54+02:00",
-      "text": "Notiz POD-Hosting"
+      "at": "2026-10-19T15:46:32+02:00",
+      "text": "Auto-Backup 2026-10-19 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-10-19T15:17:54+02:00",
-      "text": "POD: Druckdateien über Cloudflare R2 + Worker (Kürzel-Pfad, 14 Tage Löschfrist)"
-    },
-    {
-      "at": "2026-10-19T15:17:31+02:00",
+      "at": "2026-10-19T15:45:32+02:00",
       "text": "Auto-Backup 2026-10-19 — täglicher Workspace-Snapshot"
     }
   ]
