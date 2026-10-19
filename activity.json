@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-19T12:04:11+00:00",
+  "generated": "2026-10-19T12:14:11+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
+      "at": "2026-10-19T14:13:25+02:00",
+      "text": "Auto-Backup 2026-10-19 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-19T14:10:25+02:00",
+      "text": "Auto-Backup 2026-10-19 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-19T14:08:21+02:00",
+      "text": "Notiz POD"
+    },
+    {
+      "at": "2026-10-19T14:08:21+02:00",
+      "text": "POD: produkte.json repariert (ASCII-Anführungszeichen brach das JSON)"
+    },
+    {
       "at": "2026-10-19T14:03:24+02:00",
       "text": "Auto-Backup 2026-10-19 — täglicher Workspace-Snapshot"
     },
     {
       "at": "2026-10-19T13:53:23+02:00",
-      "text": "Auto-Backup 2026-10-19 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-19T13:52:23+02:00",
-      "text": "Auto-Backup 2026-10-19 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-19T13:43:23+02:00",
-      "text": "Auto-Backup 2026-10-19 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-19T13:33:22+02:00",
-      "text": "Auto-Backup 2026-10-19 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-19T13:23:21+02:00",
       "text": "Auto-Backup 2026-10-19 — täglicher Workspace-Snapshot"
     }
   ]
