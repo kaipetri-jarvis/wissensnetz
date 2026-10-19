@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-19T14:34:15+00:00",
+  "generated": "2026-10-19T14:44:15+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
+      "at": "2026-10-19T16:41:07+02:00",
+      "text": "Notiz Cron POD-Ads"
+    },
+    {
+      "at": "2026-10-19T16:36:37+02:00",
+      "text": "Notiz Bestellwächter"
+    },
+    {
+      "at": "2026-10-19T16:36:37+02:00",
+      "text": "POD: Bestellwächter (launchd alle 30 Min): Telegram bei jeder neuen Bestellung, POD -> Gelato-Entwurf"
+    },
+    {
+      "at": "2026-10-19T16:35:46+02:00",
+      "text": "Auto-Backup 2026-10-19 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-19T16:34:41+02:00",
+      "text": "Auto-Backup 2026-10-19 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-10-19T16:32:26+02:00",
       "text": "Notiz Etsy Ads Start"
-    },
-    {
-      "at": "2026-10-19T16:29:37+02:00",
-      "text": "Auto-Backup 2026-10-19 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-19T16:25:37+02:00",
-      "text": "Auto-Backup 2026-10-19 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-19T16:23:31+02:00",
-      "text": "Notiz POD live"
-    },
-    {
-      "at": "2026-10-19T16:22:37+02:00",
-      "text": "Auto-Backup 2026-10-19 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-19T16:21:37+02:00",
-      "text": "Auto-Backup 2026-10-19 — täglicher Workspace-Snapshot"
     }
   ]
 }
