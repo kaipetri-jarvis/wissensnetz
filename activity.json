@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-19T13:14:12+00:00",
+  "generated": "2026-10-19T13:24:12+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
+      "at": "2026-10-19T15:17:54+02:00",
+      "text": "Notiz POD-Hosting"
+    },
+    {
+      "at": "2026-10-19T15:17:54+02:00",
+      "text": "POD: Druckdateien über Cloudflare R2 + Worker (Kürzel-Pfad, 14 Tage Löschfrist)"
+    },
+    {
+      "at": "2026-10-19T15:17:31+02:00",
+      "text": "Auto-Backup 2026-10-19 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-19T15:16:31+02:00",
+      "text": "Auto-Backup 2026-10-19 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-19T15:14:30+02:00",
+      "text": "Auto-Backup 2026-10-19 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-10-19T15:13:31+02:00",
-      "text": "Auto-Backup 2026-10-19 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-19T15:10:00+02:00",
-      "text": "Notiz POD/Watchdog"
-    },
-    {
-      "at": "2026-10-19T15:09:29+02:00",
-      "text": "Auto-Backup 2026-10-19 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-19T15:08:03+02:00",
-      "text": "Notiz: TikTok-Urteil"
-    },
-    {
-      "at": "2026-10-19T15:05:29+02:00",
-      "text": "Auto-Backup 2026-10-19 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-19T15:04:29+02:00",
       "text": "Auto-Backup 2026-10-19 — täglicher Workspace-Snapshot"
     }
   ]
