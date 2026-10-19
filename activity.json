@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-19T21:26:10+00:00",
+  "generated": "2026-10-19T21:36:10+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-19T23:31:59+02:00",
+      "text": "Auto-Backup 2026-10-19 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-19T23:30:59+02:00",
+      "text": "Auto-Backup 2026-10-19 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-19T23:21:58+02:00",
       "text": "Auto-Backup 2026-10-19 — täglicher Workspace-Snapshot"
@@ -26,14 +34,6 @@
     {
       "at": "2026-10-19T23:01:13+02:00",
       "text": "Content-Loop: SEO-Listing für de-adhs-planer-selbststaendig ergänzt"
-    },
-    {
-      "at": "2026-10-19T23:00:57+02:00",
-      "text": "Auto-Backup 2026-10-19 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-19T22:52:57+02:00",
-      "text": "Auto-Backup 2026-10-19 — täglicher Workspace-Snapshot"
     }
   ]
 }
