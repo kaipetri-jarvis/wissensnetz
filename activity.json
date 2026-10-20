@@ -1,14 +1,14 @@
 {
-  "generated": "2026-10-20T08:06:16+00:00",
+  "generated": "2026-10-20T08:16:21+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
   },
   "atlas": {
     "fleet": true,
-    "postgres": true,
-    "nats": true,
-    "online": true
+    "postgres": false,
+    "nats": false,
+    "online": false
   },
   "commits": [
     {
