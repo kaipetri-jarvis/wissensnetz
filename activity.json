@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-20T22:50:25+00:00",
+  "generated": "2026-10-20T23:00:25+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-21T00:52:36+02:00",
+      "text": "Auto-Backup 2026-10-21 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-21T00:42:35+02:00",
       "text": "Auto-Backup 2026-10-21 — täglicher Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-10-21T00:12:33+02:00",
       "text": "Auto-Backup 2026-10-21 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-21T00:05:20+02:00",
-      "text": "FarmLoop-Eigenbau: Recherchebericht (Kit vs. Eigenbau, P2S-Schnittstellen, Stückliste); Motivkalender MOTIVE=vektor-Schalter"
     }
   ]
 }
