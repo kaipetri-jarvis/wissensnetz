@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-20T17:50:20+00:00",
+  "generated": "2026-10-20T18:00:21+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-20T20:00:15+02:00",
+      "text": "Auto-Backup 2026-10-20 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-20T19:50:14+02:00",
       "text": "Auto-Backup 2026-10-20 — täglicher Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-10-20T19:34:34+02:00",
       "text": "Etsy-Stand 20.10.: Morgenbericht korrigiert, Ads-Messung im Cron, Pinterest-Wache aus"
-    },
-    {
-      "at": "2026-10-20T19:34:13+02:00",
-      "text": "Auto-Backup 2026-10-20 — täglicher Workspace-Snapshot"
     }
   ]
 }
