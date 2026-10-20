@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-20T22:00:24+00:00",
+  "generated": "2026-10-20T22:10:24+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
+      "at": "2026-10-21T00:05:20+02:00",
+      "text": "FarmLoop-Eigenbau: Recherchebericht (Kit vs. Eigenbau, P2S-Schnittstellen, Stückliste); Motivkalender MOTIVE=vektor-Schalter"
+    },
+    {
+      "at": "2026-10-21T00:04:32+02:00",
+      "text": "Auto-Backup 2026-10-21 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-21T00:02:32+02:00",
+      "text": "Auto-Backup 2026-10-21 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-21T00:00:32+02:00",
+      "text": "Auto-Backup 2026-10-21 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-10-20T23:52:31+02:00",
       "text": "Auto-Backup 2026-10-20 — täglicher Workspace-Snapshot"
     },
     {
       "at": "2026-10-20T23:47:31+02:00",
-      "text": "Auto-Backup 2026-10-20 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-20T23:42:31+02:00",
-      "text": "Auto-Backup 2026-10-20 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-20T23:37:30+02:00",
-      "text": "Auto-Backup 2026-10-20 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-20T23:34:30+02:00",
-      "text": "Auto-Backup 2026-10-20 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-20T23:33:30+02:00",
       "text": "Auto-Backup 2026-10-20 — täglicher Workspace-Snapshot"
     }
   ]
