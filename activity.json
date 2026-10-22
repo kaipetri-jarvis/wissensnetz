@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-22T21:50:53+00:00",
+  "generated": "2026-10-22T22:00:53+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-10-22T23:57:56+02:00",
+      "text": "Auto-Backup 2026-10-22 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-22T23:57:34+02:00",
+      "text": "legion-watch: Adresse per MAC aus ARP ermitteln, Standard .210 statt toter .222"
+    },
+    {
+      "at": "2026-10-22T23:51:56+02:00",
+      "text": "Auto-Backup 2026-10-22 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-10-22T23:49:56+02:00",
       "text": "Auto-Backup 2026-10-22 — täglicher Workspace-Snapshot"
     },
@@ -21,18 +33,6 @@
     },
     {
       "at": "2026-10-22T23:46:56+02:00",
-      "text": "Auto-Backup 2026-10-22 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-22T23:36:55+02:00",
-      "text": "Auto-Backup 2026-10-22 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-22T23:30:55+02:00",
-      "text": "Auto-Backup 2026-10-22 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-22T23:26:54+02:00",
       "text": "Auto-Backup 2026-10-22 — täglicher Workspace-Snapshot"
     }
   ]
