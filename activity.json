@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-25T20:51:18+00:00",
+  "generated": "2026-10-25T21:01:19+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-10-25T22:01:03+01:00",
+      "text": "Auto-Backup 2026-10-25 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-25T22:01:00+01:00",
+      "text": "Content-Loop: SEO-Listing für ADHD-Planner-Bundle-Work-Family"
+    },
+    {
+      "at": "2026-10-25T21:57:03+01:00",
+      "text": "Auto-Backup 2026-10-25 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-10-25T21:47:00+01:00",
       "text": "Auto-Backup 2026-10-25 — täglicher Workspace-Snapshot"
     },
@@ -21,18 +33,6 @@
     },
     {
       "at": "2026-10-25T21:35:59+01:00",
-      "text": "Auto-Backup 2026-10-25 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-25T21:26:58+01:00",
-      "text": "Auto-Backup 2026-10-25 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-25T21:26:53+01:00",
-      "text": "Hades-Crons: vier Announce-ohne-Ziel auf no-deliver, Konkurrenz-Watch auf Konto hades, seo-refresh-Timeout auf 9000s (148 Listings x 50s)"
-    },
-    {
-      "at": "2026-10-25T21:25:58+01:00",
       "text": "Auto-Backup 2026-10-25 — täglicher Workspace-Snapshot"
     }
   ]
