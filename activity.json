@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-25T22:31:19+00:00",
+  "generated": "2026-10-25T22:41:19+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-25T23:38:12+01:00",
+      "text": "Auto-Backup 2026-10-25 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-25T23:37:12+01:00",
+      "text": "Auto-Backup 2026-10-25 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-25T23:30:58+01:00",
       "text": "Content-Loop: SEO-Listing für Vermieter-Komplettset-DE"
@@ -25,14 +33,6 @@
     },
     {
       "at": "2026-10-25T23:07:10+01:00",
-      "text": "Auto-Backup 2026-10-25 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-25T23:05:10+01:00",
-      "text": "Auto-Backup 2026-10-25 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-25T23:02:09+01:00",
       "text": "Auto-Backup 2026-10-25 — täglicher Workspace-Snapshot"
     }
   ]
