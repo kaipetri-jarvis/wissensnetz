@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-26T15:01:27+00:00",
+  "generated": "2026-10-26T15:11:27+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
+      "at": "2026-10-26T16:08:32+01:00",
+      "text": "Auto-Backup 2026-10-26 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-26T16:05:32+01:00",
+      "text": "Auto-Backup 2026-10-26 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-26T16:03:18+01:00",
+      "text": "Lieferprüfung 16:00: Titel-Format-Check live gegen heutige Titeländerung"
+    },
+    {
+      "at": "2026-10-26T16:02:32+01:00",
+      "text": "Auto-Backup 2026-10-26 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-10-26T16:00:29+01:00",
       "text": "Auto-Backup 2026-10-26 — täglicher Workspace-Snapshot"
     },
     {
       "at": "2026-10-26T15:58:28+01:00",
-      "text": "Auto-Backup 2026-10-26 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-26T15:48:27+01:00",
-      "text": "Auto-Backup 2026-10-26 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-26T15:38:26+01:00",
-      "text": "Auto-Backup 2026-10-26 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-26T15:37:26+01:00",
-      "text": "Auto-Backup 2026-10-26 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-26T15:27:25+01:00",
       "text": "Auto-Backup 2026-10-26 — täglicher Workspace-Snapshot"
     }
   ]
