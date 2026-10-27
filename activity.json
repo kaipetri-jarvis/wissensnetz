@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-27T09:01:37+00:00",
+  "generated": "2026-10-27T09:11:37+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-27T10:10:30+01:00",
+      "text": "Auto-Backup 2026-10-27 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-27T10:05:29+01:00",
+      "text": "Auto-Backup 2026-10-27 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-27T10:01:32+01:00",
       "text": "etsy-tiefe-loop: Listing-Videos geprueft, keine neuen Funde (27.10. 10:00)"
@@ -25,14 +33,6 @@
     },
     {
       "at": "2026-10-27T10:00:30+01:00",
-      "text": "Auto-Backup 2026-10-27 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-27T09:50:27+01:00",
-      "text": "Auto-Backup 2026-10-27 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-27T09:40:27+01:00",
       "text": "Auto-Backup 2026-10-27 — täglicher Workspace-Snapshot"
     }
   ]
