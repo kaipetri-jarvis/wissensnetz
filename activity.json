@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-28T19:51:50+00:00",
+  "generated": "2026-10-28T20:01:50+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-10-28T21:01:31+01:00",
+      "text": "Auto-Backup 2026-10-28 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-28T21:01:01+01:00",
+      "text": "Loop 21:00: Listing-Video-Upload-Status geprueft, 17/17 oben, keine neuen qualifizierenden Listings"
+    },
+    {
+      "at": "2026-10-28T21:00:31+01:00",
+      "text": "Auto-Backup 2026-10-28 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-10-28T20:51:29+01:00",
       "text": "Auto-Backup 2026-10-28 — täglicher Workspace-Snapshot"
     },
@@ -21,18 +33,6 @@
     },
     {
       "at": "2026-10-28T20:31:27+01:00",
-      "text": "Auto-Backup 2026-10-28 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-28T20:21:27+01:00",
-      "text": "Auto-Backup 2026-10-28 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-28T20:11:26+01:00",
-      "text": "Auto-Backup 2026-10-28 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-28T20:05:26+01:00",
       "text": "Auto-Backup 2026-10-28 — täglicher Workspace-Snapshot"
     }
   ]
