@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-28T21:31:51+00:00",
+  "generated": "2026-10-28T21:41:51+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-28T22:32:36+01:00",
+      "text": "Auto-Backup 2026-10-28 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-28T22:31:36+01:00",
       "text": "Auto-Backup 2026-10-28 — täglicher Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-10-28T22:02:34+01:00",
       "text": "Auto-Backup 2026-10-28 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-28T22:00:54+01:00",
-      "text": "Content-Loop 22:00: Freebie-Text Social-Media-5-Minuten-Check (Pins-Slot ohne echten Rückstand)"
     }
   ]
 }
