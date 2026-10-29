@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-29T05:31:55+00:00",
+  "generated": "2026-10-29T05:41:55+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-10-29T06:36:37+01:00",
+      "text": "Auto-Backup 2026-10-29 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-29T06:33:37+01:00",
+      "text": "Auto-Backup 2026-10-29 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-10-29T06:33:13+01:00",
+      "text": "Etsy-Verbesserung 29.10.2026: Begriffe aufgefrischt, Tags geprueft"
+    },
+    {
       "at": "2026-10-29T06:26:28+01:00",
       "text": "Auto-Backup 2026-10-29 — täglicher Workspace-Snapshot"
     },
@@ -21,18 +33,6 @@
     },
     {
       "at": "2026-10-29T06:16:12+01:00",
-      "text": "Auto-Backup 2026-10-29 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-29T06:06:59+01:00",
-      "text": "Auto-Backup 2026-10-29 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-29T06:05:57+01:00",
-      "text": "Auto-Backup 2026-10-29 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-29T06:00:50+01:00",
       "text": "Auto-Backup 2026-10-29 — täglicher Workspace-Snapshot"
     }
   ]
