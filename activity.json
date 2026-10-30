@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-30T15:32:10+00:00",
+  "generated": "2026-10-30T15:42:11+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-30T16:36:56+01:00",
+      "text": "Auto-Backup 2026-10-30 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-30T16:26:55+01:00",
       "text": "Auto-Backup 2026-10-30 — täglicher Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-10-30T16:00:53+01:00",
       "text": "Auto-Backup 2026-10-30 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-30T16:00:43+01:00",
-      "text": "Lieferpruefung 30.10. 16:00 — Muster unveraendert, keine neuen Funde"
     }
   ]
 }
