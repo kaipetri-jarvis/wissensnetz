@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-31T20:32:26+00:00",
+  "generated": "2026-10-31T20:42:26+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-10-31T21:34:39+01:00",
+      "text": "Auto-Backup 2026-10-31 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-10-31T21:24:38+01:00",
       "text": "Auto-Backup 2026-10-31 — täglicher Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-10-31T21:03:37+01:00",
       "text": "Auto-Backup 2026-10-31 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-10-31T21:00:57+01:00",
-      "text": "Loop etsy-tiefe: 21:00 Listing-Video-Check, keine neuen Funde"
     }
   ]
 }
