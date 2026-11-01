@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-01T19:32:57+00:00",
+  "generated": "2026-11-01T19:42:57+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
+      "at": "2026-11-01T20:41:45+01:00",
+      "text": "Auto-Backup 2026-11-01 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-11-01T20:38:45+01:00",
+      "text": "Auto-Backup 2026-11-01 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-11-01T20:37:45+01:00",
+      "text": "Auto-Backup 2026-11-01 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-11-01T20:35:24+01:00",
+      "text": "hookify: trash-Sperre nur an echten Kommandopositionen"
+    },
+    {
+      "at": "2026-11-01T20:34:44+01:00",
+      "text": "Auto-Backup 2026-11-01 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-11-01T20:28:04+01:00",
       "text": "hookify-Sperren + ralph-Vorlage (Sonnet, max 10 Runden)"
-    },
-    {
-      "at": "2026-11-01T20:27:43+01:00",
-      "text": "Auto-Backup 2026-11-01 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-11-01T20:26:43+01:00",
-      "text": "Auto-Backup 2026-11-01 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-11-01T20:20:43+01:00",
-      "text": "Auto-Backup 2026-11-01 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-11-01T20:16:42+01:00",
-      "text": "Auto-Backup 2026-11-01 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-11-01T20:06:41+01:00",
-      "text": "Auto-Backup 2026-11-01 — täglicher Workspace-Snapshot"
     }
   ]
 }
