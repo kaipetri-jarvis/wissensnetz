@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-01T19:22:57+00:00",
+  "generated": "2026-11-01T19:32:57+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-11-01T20:28:04+01:00",
+      "text": "hookify-Sperren + ralph-Vorlage (Sonnet, max 10 Runden)"
+    },
+    {
+      "at": "2026-11-01T20:27:43+01:00",
+      "text": "Auto-Backup 2026-11-01 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-11-01T20:26:43+01:00",
+      "text": "Auto-Backup 2026-11-01 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-11-01T20:20:43+01:00",
       "text": "Auto-Backup 2026-11-01 — täglicher Workspace-Snapshot"
     },
@@ -21,18 +33,6 @@
     },
     {
       "at": "2026-11-01T20:06:41+01:00",
-      "text": "Auto-Backup 2026-11-01 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-11-01T20:05:41+01:00",
-      "text": "Auto-Backup 2026-11-01 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-11-01T20:00:41+01:00",
-      "text": "Auto-Backup 2026-11-01 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-11-01T19:56:40+01:00",
       "text": "Auto-Backup 2026-11-01 — täglicher Workspace-Snapshot"
     }
   ]
