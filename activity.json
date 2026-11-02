@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-02T15:33:06+00:00",
+  "generated": "2026-11-02T15:43:06+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-11-02T16:40:10+01:00",
+      "text": "Auto-Backup 2026-11-02 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-11-02T16:30:10+01:00",
       "text": "Auto-Backup 2026-11-02 — täglicher Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-11-02T16:06:09+01:00",
       "text": "Auto-Backup 2026-11-02 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-11-02T16:01:12+01:00",
-      "text": "Lieferpruefung 2026-11-02 16:00: Seitenzahl-Audit mit programmatischem Kaeufer-Nachteil-Check"
     }
   ]
 }
