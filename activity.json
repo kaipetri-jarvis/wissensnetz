@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-05T20:35:19+00:00",
+  "generated": "2026-11-05T20:45:19+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-11-05T21:40:42+01:00",
+      "text": "Auto-Backup 2026-11-05 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-11-05T21:39:42+01:00",
+      "text": "Auto-Backup 2026-11-05 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-11-05T21:29:42+01:00",
       "text": "Auto-Backup 2026-11-05 — täglicher Workspace-Snapshot"
@@ -25,14 +33,6 @@
     },
     {
       "at": "2026-11-05T21:06:41+01:00",
-      "text": "Auto-Backup 2026-11-05 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-11-05T21:01:38+01:00",
-      "text": "Auto-Loop 2026-11-05 21:00: Listing-Videos geprueft, keine neuen Funde"
-    },
-    {
-      "at": "2026-11-05T21:00:39+01:00",
       "text": "Auto-Backup 2026-11-05 — täglicher Workspace-Snapshot"
     }
   ]
