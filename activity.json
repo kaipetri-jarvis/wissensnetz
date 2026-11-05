@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-05T05:25:14+00:00",
+  "generated": "2026-11-05T05:35:14+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-11-05T06:32:45+01:00",
+      "text": "Auto-Backup 2026-11-05 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-11-05T06:29:45+01:00",
+      "text": "Auto-Backup 2026-11-05 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-11-05T06:29:30+01:00",
+      "text": "Etsy-Verbesserung 05.11.2026: Begriffe aufgefrischt, Tags geprueft"
+    },
+    {
       "at": "2026-11-05T06:22:35+01:00",
       "text": "Auto-Backup 2026-11-05 — täglicher Workspace-Snapshot"
     },
@@ -22,18 +34,6 @@
     {
       "at": "2026-11-05T06:06:14+01:00",
       "text": "Auto-Backup 2026-11-05 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-11-05T06:02:08+01:00",
-      "text": "Auto-Backup 2026-11-05 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-11-05T06:01:07+01:00",
-      "text": "Auto-Backup 2026-11-05 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-11-05T06:00:32+01:00",
-      "text": "Marketing-Stand 05.11.2026"
     }
   ]
 }
