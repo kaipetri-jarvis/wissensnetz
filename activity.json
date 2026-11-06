@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-06T09:25:24+00:00",
+  "generated": "2026-11-06T09:35:24+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-11-06T10:26:50+01:00",
+      "text": "Auto-Backup 2026-11-06 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-11-06T10:16:50+01:00",
       "text": "Auto-Backup 2026-11-06 — täglicher Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-11-06T10:01:29+01:00",
       "text": "Etsy-Tiefe-Loop: Video-Upload-Stand geprueft (17/17, keine neuen Funde)"
-    },
-    {
-      "at": "2026-11-06T10:00:49+01:00",
-      "text": "Auto-Backup 2026-11-06 — täglicher Workspace-Snapshot"
     }
   ]
 }
