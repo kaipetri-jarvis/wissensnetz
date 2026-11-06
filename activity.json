@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-06T22:35:28+00:00",
+  "generated": "2026-11-06T22:45:28+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
+      "at": "2026-11-06T23:43:37+01:00",
+      "text": "Auto-Backup 2026-11-06 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-11-06T23:42:37+01:00",
+      "text": "Auto-Backup 2026-11-06 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-11-06T23:37:37+01:00",
+      "text": "Auto-Backup 2026-11-06 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-11-06T23:35:37+01:00",
+      "text": "Auto-Backup 2026-11-06 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-11-06T23:33:37+01:00",
       "text": "Auto-Backup 2026-11-06 — täglicher Workspace-Snapshot"
     },
     {
       "at": "2026-11-06T23:31:37+01:00",
-      "text": "Auto-Backup 2026-11-06 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-11-06T23:30:49+01:00",
-      "text": "Content-Loop: Listing-SEO für Care-and-Legacy-Set-EN Bundle"
-    },
-    {
-      "at": "2026-11-06T23:27:36+01:00",
-      "text": "Auto-Backup 2026-11-06 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-11-06T23:27:33+01:00",
-      "text": "Textilservice Petri: Landingpage-Entwurf mit Logo als Maschine"
-    },
-    {
-      "at": "2026-11-06T23:25:36+01:00",
       "text": "Auto-Backup 2026-11-06 — täglicher Workspace-Snapshot"
     }
   ]
