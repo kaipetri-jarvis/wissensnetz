@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-06T23:15:29+00:00",
+  "generated": "2026-11-06T23:25:29+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,28 +12,28 @@
   },
   "commits": [
     {
-      "at": "2026-11-07T00:14:20+01:00",
-      "text": "Vorgabe KI-Aufwertung für nächste Runde"
+      "at": "2026-11-07T00:25:26+01:00",
+      "text": "Textilservice Petri: Kritik Runde 5 abgearbeitet, Maschinenbedienung und Mikro-Interaktionen"
     },
     {
-      "at": "2026-11-07T00:13:39+01:00",
+      "at": "2026-11-07T00:23:40+01:00",
       "text": "Auto-Backup 2026-11-07 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-11-07T00:12:40+01:00",
+      "at": "2026-11-07T00:22:40+01:00",
       "text": "Auto-Backup 2026-11-07 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-11-07T00:11:39+01:00",
+      "at": "2026-11-07T00:19:41+01:00",
+      "text": "Textilservice Petri: Kritik Runde 4 abgearbeitet, nur noch Firmenfotos"
+    },
+    {
+      "at": "2026-11-07T00:19:40+01:00",
       "text": "Auto-Backup 2026-11-07 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-11-07T00:11:23+01:00",
-      "text": "Vorgabe Animationen für nächste Runde"
-    },
-    {
-      "at": "2026-11-07T00:10:38+01:00",
-      "text": "Plan nächste Runde Textilservice"
+      "at": "2026-11-07T00:18:40+01:00",
+      "text": "Auto-Backup 2026-11-07 — täglicher Workspace-Snapshot"
     }
   ]
 }
