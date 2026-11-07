@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-07T23:46:17+00:00",
+  "generated": "2026-11-07T23:56:17+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
-      "at": "2026-11-08T00:45:59+01:00",
+      "at": "2026-11-08T00:55:00+01:00",
       "text": "Auto-Backup 2026-11-08 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-11-08T00:43:58+01:00",
+      "at": "2026-11-08T00:53:43+01:00",
+      "text": "Tagesnotiz: NATS/Matrix-Backup von Legion ergänzt"
+    },
+    {
+      "at": "2026-11-08T00:52:58+01:00",
       "text": "Auto-Backup 2026-11-08 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-11-08T00:42:58+01:00",
+      "at": "2026-11-08T00:50:58+01:00",
       "text": "Auto-Backup 2026-11-08 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-11-08T00:41:57+01:00",
-      "text": "Tagesnotiz: Docker-Umzug umgestellt"
+      "at": "2026-11-08T00:50:20+01:00",
+      "text": "Tagesnotiz: Legion-Überwachung ohne Modell geprüft"
     },
     {
-      "at": "2026-11-08T00:41:57+01:00",
-      "text": "Docker-Umzug: Postgres/NATS/Matrix laufen auf Legion, Mac per SSH-Tunnel"
-    },
-    {
-      "at": "2026-11-08T00:34:59+01:00",
+      "at": "2026-11-08T00:49:58+01:00",
       "text": "Auto-Backup 2026-11-08 — täglicher Workspace-Snapshot"
     }
   ]
