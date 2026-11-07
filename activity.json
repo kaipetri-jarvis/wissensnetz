@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-07T22:46:18+00:00",
+  "generated": "2026-11-07T22:56:17+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-11-07T23:56:17+01:00",
+      "text": "Docker-Umzug: Legion-Kopie geprüft, Umstellung offen"
+    },
+    {
+      "at": "2026-11-07T23:51:58+01:00",
+      "text": "Auto-Backup 2026-11-07 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-11-07T23:49:53+01:00",
+      "text": "Konzept Maschine: Waschschleudermaschine in Blender (ganz, Tür, Trommel)"
+    },
+    {
       "at": "2026-11-07T23:44:00+01:00",
       "text": "Auto-Backup 2026-11-07 — täglicher Workspace-Snapshot"
     },
@@ -21,18 +33,6 @@
     },
     {
       "at": "2026-11-07T23:36:18+01:00",
-      "text": "Auto-Backup 2026-11-07 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-11-07T23:34:07+01:00",
-      "text": "Auto-Backup 2026-11-07 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-11-07T23:31:02+01:00",
-      "text": "Auto-Backup 2026-11-07 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-11-07T23:28:05+01:00",
       "text": "Auto-Backup 2026-11-07 — täglicher Workspace-Snapshot"
     }
   ]
