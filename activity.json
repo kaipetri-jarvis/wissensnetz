@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-07T15:34:06+00:00",
+  "generated": "2026-11-07T15:44:06+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-11-07T16:43:10+01:00",
+      "text": "Auto-Backup 2026-11-07 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-11-07T16:37:10+01:00",
+      "text": "Auto-Backup 2026-11-07 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-11-07T16:27:10+01:00",
       "text": "Auto-Backup 2026-11-07 — täglicher Workspace-Snapshot"
@@ -25,14 +33,6 @@
     },
     {
       "at": "2026-11-07T16:01:09+01:00",
-      "text": "Auto-Backup 2026-11-07 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-11-07T16:00:46+01:00",
-      "text": "Lieferprüfung 2026-11-07 16:00 — unverändertes Ergebnis, kein neuer Mangelfall"
-    },
-    {
-      "at": "2026-11-07T15:57:07+01:00",
       "text": "Auto-Backup 2026-11-07 — täglicher Workspace-Snapshot"
     }
   ]
