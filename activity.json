@@ -1,16 +1,20 @@
 {
-  "generated": "2026-11-07T23:26:17+00:00",
+  "generated": "2026-11-07T23:36:17+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
   },
   "atlas": {
-    "fleet": true,
-    "postgres": true,
-    "nats": true,
-    "online": true
+    "fleet": false,
+    "postgres": false,
+    "nats": false,
+    "online": false
   },
   "commits": [
+    {
+      "at": "2026-11-08T00:34:59+01:00",
+      "text": "Auto-Backup 2026-11-08 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-11-08T00:24:58+01:00",
       "text": "Auto-Backup 2026-11-08 — täglicher Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-11-08T00:00:58+01:00",
       "text": "Auto-Backup 2026-11-08 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-11-07T23:56:17+01:00",
-      "text": "Docker-Umzug: Legion-Kopie geprüft, Umstellung offen"
     }
   ]
 }
