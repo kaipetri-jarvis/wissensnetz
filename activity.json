@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-07T23:16:17+00:00",
+  "generated": "2026-11-07T23:26:17+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": true
   },
   "commits": [
+    {
+      "at": "2026-11-08T00:24:58+01:00",
+      "text": "Auto-Backup 2026-11-08 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-11-08T00:14:58+01:00",
       "text": "Auto-Backup 2026-11-08 — täglicher Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-11-07T23:56:17+01:00",
       "text": "Docker-Umzug: Legion-Kopie geprüft, Umstellung offen"
-    },
-    {
-      "at": "2026-11-07T23:51:58+01:00",
-      "text": "Auto-Backup 2026-11-07 — täglicher Workspace-Snapshot"
     }
   ]
 }
