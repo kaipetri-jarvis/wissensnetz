@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-08T15:46:29+00:00",
+  "generated": "2026-11-08T15:56:29+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": false
   },
   "commits": [
+    {
+      "at": "2026-11-08T16:52:58+01:00",
+      "text": "Auto-Backup 2026-11-08 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-11-08T16:46:58+01:00",
+      "text": "Auto-Backup 2026-11-08 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-11-08T16:34:58+01:00",
       "text": "Auto-Backup 2026-11-08 — täglicher Workspace-Snapshot"
@@ -25,14 +33,6 @@
     },
     {
       "at": "2026-11-08T16:04:58+01:00",
-      "text": "Auto-Backup 2026-11-08 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-11-08T16:01:22+01:00",
-      "text": "Etsy-Tiefe-Loop 08.11. 16:00: Lieferpruefung ohne neue Funde"
-    },
-    {
-      "at": "2026-11-08T15:58:59+01:00",
       "text": "Auto-Backup 2026-11-08 — täglicher Workspace-Snapshot"
     }
   ]
