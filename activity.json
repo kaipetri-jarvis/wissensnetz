@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-08T09:36:24+00:00",
+  "generated": "2026-11-08T09:46:25+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
+      "at": "2026-11-08T10:45:03+01:00",
+      "text": "Auto-Backup 2026-11-08 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-11-08T10:41:22+01:00",
+      "text": "Auto-Backup 2026-11-08 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-11-08T10:40:50+01:00",
+      "text": "Legion-Pull repariert: Doppelpunkt-Pfade per Sparse-Checkout ausgeblendet"
+    },
+    {
+      "at": "2026-11-08T10:38:09+01:00",
+      "text": "Auto-Backup 2026-11-08 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-11-08T10:36:02+01:00",
       "text": "Auto-Backup 2026-11-08 — täglicher Workspace-Snapshot"
     },
     {
       "at": "2026-11-08T10:33:59+01:00",
-      "text": "Auto-Backup 2026-11-08 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-11-08T10:33:11+01:00",
-      "text": "TikTok-Retry 08.11. 10:30: weiter Tageslimit, Nachtrag SOCIAL-MEDIA-SETUP + Tagesnotiz"
-    },
-    {
-      "at": "2026-11-08T10:31:59+01:00",
-      "text": "Auto-Backup 2026-11-08 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-11-08T10:31:51+01:00",
-      "text": "Legion-Standbein: Sync Mac→Legion aktiv, Runbook, Slice/Whisper-Skripte"
-    },
-    {
-      "at": "2026-11-08T10:27:58+01:00",
       "text": "Auto-Backup 2026-11-08 — täglicher Workspace-Snapshot"
     }
   ]
