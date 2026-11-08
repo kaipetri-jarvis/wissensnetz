@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-08T10:16:28+00:00",
+  "generated": "2026-11-08T10:26:28+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": false
   },
   "commits": [
+    {
+      "at": "2026-11-08T11:24:02+01:00",
+      "text": "Auto-Backup 2026-11-08 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-11-08T11:19:01+01:00",
+      "text": "Auto-Backup 2026-11-08 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-11-08T11:14:02+01:00",
       "text": "Auto-Backup 2026-11-08 — täglicher Workspace-Snapshot"
@@ -25,14 +33,6 @@
     },
     {
       "at": "2026-11-08T11:04:58+01:00",
-      "text": "Auto-Backup 2026-11-08 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-11-08T11:04:57+01:00",
-      "text": "Rollen-Katalog: Spiele-Ordner ohne Doppelpunkt (Windows/Legion-tauglich)"
-    },
-    {
-      "at": "2026-11-08T10:59:59+01:00",
       "text": "Auto-Backup 2026-11-08 — täglicher Workspace-Snapshot"
     }
   ]
