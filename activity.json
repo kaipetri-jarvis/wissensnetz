@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-08T09:26:24+00:00",
+  "generated": "2026-11-08T09:36:24+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,27 +12,27 @@
   },
   "commits": [
     {
-      "at": "2026-11-08T10:17:58+01:00",
+      "at": "2026-11-08T10:36:02+01:00",
       "text": "Auto-Backup 2026-11-08 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-11-08T10:07:58+01:00",
+      "at": "2026-11-08T10:33:59+01:00",
       "text": "Auto-Backup 2026-11-08 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-11-08T10:01:58+01:00",
+      "at": "2026-11-08T10:33:11+01:00",
+      "text": "TikTok-Retry 08.11. 10:30: weiter Tageslimit, Nachtrag SOCIAL-MEDIA-SETUP + Tagesnotiz"
+    },
+    {
+      "at": "2026-11-08T10:31:59+01:00",
       "text": "Auto-Backup 2026-11-08 — täglicher Workspace-Snapshot"
     },
     {
-      "at": "2026-11-08T10:01:33+01:00",
-      "text": "Etsy-Tiefe-Loop 2026-11-08 10:00: Upload-Stand 17/17, keine neue qualifizierende Zeile fuer VIDEO-PRIORITAET.md"
+      "at": "2026-11-08T10:31:51+01:00",
+      "text": "Legion-Standbein: Sync Mac→Legion aktiv, Runbook, Slice/Whisper-Skripte"
     },
     {
-      "at": "2026-11-08T10:01:10+01:00",
-      "text": "Ads-Messung 08.11.2026: Chrome-Sitzung ausgeloggt"
-    },
-    {
-      "at": "2026-11-08T09:57:58+01:00",
+      "at": "2026-11-08T10:27:58+01:00",
       "text": "Auto-Backup 2026-11-08 — täglicher Workspace-Snapshot"
     }
   ]
