@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-08T10:26:28+00:00",
+  "generated": "2026-11-08T10:36:28+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-11-08T11:33:58+01:00",
+      "text": "Auto-Backup 2026-11-08 — täglicher Workspace-Snapshot"
+    },
+    {
+      "at": "2026-11-08T11:30:19+01:00",
+      "text": "TikTok: Konto per Google-Login angelegt, Handle-Umbenennung im Web von Bot-Abwehr blockiert — Stand dokumentiert"
+    },
+    {
+      "at": "2026-11-08T11:28:59+01:00",
+      "text": "Auto-Backup 2026-11-08 — täglicher Workspace-Snapshot"
+    },
+    {
       "at": "2026-11-08T11:24:02+01:00",
       "text": "Auto-Backup 2026-11-08 — täglicher Workspace-Snapshot"
     },
@@ -21,18 +33,6 @@
     },
     {
       "at": "2026-11-08T11:14:02+01:00",
-      "text": "Auto-Backup 2026-11-08 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-11-08T11:12:15+01:00",
-      "text": "Tagesnotiz: Spiele-Umbenennung"
-    },
-    {
-      "at": "2026-11-08T11:10:03+01:00",
-      "text": "Auto-Backup 2026-11-08 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-11-08T11:04:58+01:00",
       "text": "Auto-Backup 2026-11-08 — täglicher Workspace-Snapshot"
     }
   ]
