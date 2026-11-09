@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-09T10:26:39+00:00",
+  "generated": "2026-11-09T10:36:39+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": false
   },
   "commits": [
+    {
+      "at": "2026-11-09T11:33:33+01:00",
+      "text": "Auto-Backup 2026-11-09 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-11-09T11:26:39+01:00",
       "text": "desk-lane.de: Paket-Finder-Frage 3 umformuliert („Zweite Sprache oder Online-Terminbuchung?“), Tagesnotiz"
@@ -30,10 +34,6 @@
     {
       "at": "2026-11-09T11:04:32+01:00",
       "text": "desk-lane.de: Cloudflare-Zone aktiviert, NS umgestellt, Livegang dokumentiert"
-    },
-    {
-      "at": "2026-11-09T10:57:01+01:00",
-      "text": "Auto-Backup 2026-11-09 — täglicher Workspace-Snapshot"
     }
   ]
 }
