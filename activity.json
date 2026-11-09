@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-09T13:36:40+00:00",
+  "generated": "2026-11-09T13:46:40+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-11-09T14:44:57+01:00",
+      "text": "Snapshot vor Historien-Bereinigung 2026-11-09 (Ultron, Kais Freigabe 14:38)"
+    },
+    {
+      "at": "2026-11-09T14:44:12+01:00",
+      "text": "Snapshot vor Historien-Bereinigung 2026-11-09 (Ultron, Kais Freigabe 14:38)"
+    },
+    {
+      "at": "2026-11-09T14:42:38+01:00",
+      "text": "Snapshot vor Historien-Bereinigung 2026-11-09 (Ultron, Kais Freigabe 14:38)"
+    },
+    {
       "at": "2026-11-09T14:18:29+01:00",
       "text": "Auto-Backup 2026-11-09 — täglicher Workspace-Snapshot"
     },
@@ -21,18 +33,6 @@
     },
     {
       "at": "2026-11-09T11:58:38+01:00",
-      "text": "Auto-Backup 2026-11-09 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-11-09T11:33:33+01:00",
-      "text": "Auto-Backup 2026-11-09 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-11-09T11:26:39+01:00",
-      "text": "desk-lane.de: Paket-Finder-Frage 3 umformuliert („Zweite Sprache oder Online-Terminbuchung?“), Tagesnotiz"
-    },
-    {
-      "at": "2026-11-09T11:18:28+01:00",
       "text": "Auto-Backup 2026-11-09 — täglicher Workspace-Snapshot"
     }
   ]
