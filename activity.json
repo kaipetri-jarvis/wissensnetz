@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-09T14:06:40+00:00",
+  "generated": "2026-11-09T14:16:40+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -12,6 +12,18 @@
   },
   "commits": [
     {
+      "at": "2026-11-09T15:16:16+01:00",
+      "text": "Auto-Backup 2026-11-09 15:16 — Workspace-Snapshot"
+    },
+    {
+      "at": "2026-11-09T15:11:54+01:00",
+      "text": "Auto-Backup 2026-11-09 15:11 — Workspace-Snapshot"
+    },
+    {
+      "at": "2026-11-09T15:09:48+01:00",
+      "text": "3D-Druck: Marktanalyse Formen→Gussteile (Etsy + TikTok Shop DE)"
+    },
+    {
       "at": "2026-11-09T14:46:42+01:00",
       "text": "Backup: kai-4.mp4 (126 MB) ignoriert, backup-to-github.sh mit Größenwächter und Push-Fehlerprüfung"
     },
@@ -22,18 +34,6 @@
     {
       "at": "2026-11-09T14:44:12+01:00",
       "text": "Snapshot vor Historien-Bereinigung 2026-11-09 (Ultron, Kais Freigabe 14:38)"
-    },
-    {
-      "at": "2026-11-09T14:42:38+01:00",
-      "text": "Snapshot vor Historien-Bereinigung 2026-11-09 (Ultron, Kais Freigabe 14:38)"
-    },
-    {
-      "at": "2026-11-09T14:18:29+01:00",
-      "text": "Auto-Backup 2026-11-09 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-11-09T13:08:29+01:00",
-      "text": "Auto-Backup 2026-11-09 — täglicher Workspace-Snapshot"
     }
   ]
 }
