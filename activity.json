@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-09T10:16:39+00:00",
+  "generated": "2026-11-09T10:26:39+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": false
   },
   "commits": [
+    {
+      "at": "2026-11-09T11:26:39+01:00",
+      "text": "desk-lane.de: Paket-Finder-Frage 3 umformuliert („Zweite Sprache oder Online-Terminbuchung?“), Tagesnotiz"
+    },
+    {
+      "at": "2026-11-09T11:18:28+01:00",
+      "text": "Auto-Backup 2026-11-09 — täglicher Workspace-Snapshot"
+    },
     {
       "at": "2026-11-09T11:07:51+01:00",
       "text": "desk-lane.de: INWX-Zone-Apex als Übergang auf Cloudflare-IPs"
@@ -25,14 +33,6 @@
     },
     {
       "at": "2026-11-09T10:57:01+01:00",
-      "text": "Auto-Backup 2026-11-09 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-11-09T10:46:58+01:00",
-      "text": "Auto-Backup 2026-11-09 — täglicher Workspace-Snapshot"
-    },
-    {
-      "at": "2026-11-09T10:36:58+01:00",
       "text": "Auto-Backup 2026-11-09 — täglicher Workspace-Snapshot"
     }
   ]
