@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-10T16:26:48+00:00",
+  "generated": "2026-11-10T16:36:48+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": false
   },
   "commits": [
+    {
+      "at": "2026-11-10T17:36:31+01:00",
+      "text": "Auto-Backup 2026-11-10 17:36 — Workspace-Snapshot"
+    },
     {
       "at": "2026-11-10T17:26:30+01:00",
       "text": "Auto-Backup 2026-11-10 17:26 — Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-11-10T16:56:31+01:00",
       "text": "Auto-Backup 2026-11-10 16:56 — Workspace-Snapshot"
-    },
-    {
-      "at": "2026-11-10T16:56:11+01:00",
-      "text": "Tagesnotiz: Gegenlese Markentrennung (Adressquelle, Elara-Vex)"
     }
   ]
 }
