@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-10T22:56:51+00:00",
+  "generated": "2026-11-10T23:06:51+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": false
   },
   "commits": [
+    {
+      "at": "2026-11-11T00:06:33+01:00",
+      "text": "Auto-Backup 2026-11-11 00:06 — Workspace-Snapshot"
+    },
     {
       "at": "2026-11-10T23:56:33+01:00",
       "text": "Auto-Backup 2026-11-10 23:56 — Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-11-10T23:35:16+01:00",
       "text": "Sprachregel: Desk-Lane (Webdesign) vs. DeskLane Studio (Etsy)"
-    },
-    {
-      "at": "2026-11-10T23:30:57+01:00",
-      "text": "Content-Loop: Freebie-Text für Service Agreement (EN) ergänzt"
     }
   ]
 }
