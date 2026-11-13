@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-13T21:57:14+00:00",
+  "generated": "2026-11-13T22:07:14+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": false
   },
   "commits": [
+    {
+      "at": "2026-11-13T23:06:31+01:00",
+      "text": "Auto-Backup 2026-11-13 23:06 — Workspace-Snapshot"
+    },
+    {
+      "at": "2026-11-13T23:01:12+01:00",
+      "text": "Content-Loop: neuer Pin für ADHD-Planner-Adults Day-Page-Mockup"
+    },
     {
       "at": "2026-11-13T22:56:31+01:00",
       "text": "Auto-Backup 2026-11-13 22:56 — Workspace-Snapshot"
@@ -26,14 +34,6 @@
     {
       "at": "2026-11-13T22:31:33+01:00",
       "text": "Content-Loop: Freebie-Text EN-Health-Nische (medical-appointment-organizer)"
-    },
-    {
-      "at": "2026-11-13T22:26:31+01:00",
-      "text": "Auto-Backup 2026-11-13 22:26 — Workspace-Snapshot"
-    },
-    {
-      "at": "2026-11-13T22:16:31+01:00",
-      "text": "Auto-Backup 2026-11-13 22:16 — Workspace-Snapshot"
     }
   ]
 }
