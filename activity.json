@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-18T21:27:55+00:00",
+  "generated": "2026-11-18T21:37:55+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": false
   },
   "commits": [
+    {
+      "at": "2026-11-18T22:37:20+01:00",
+      "text": "Auto-Backup 2026-11-18 22:37 — Workspace-Snapshot"
+    },
+    {
+      "at": "2026-11-18T22:31:07+01:00",
+      "text": "Content-Loop: Freebie-Text Price List EN (SEO/Pins vollständig, Fallback)"
+    },
     {
       "at": "2026-11-18T22:27:19+01:00",
       "text": "Auto-Backup 2026-11-18 22:27 — Workspace-Snapshot"
@@ -26,14 +34,6 @@
     {
       "at": "2026-11-18T22:00:46+01:00",
       "text": "Content-Loop: Freebie-Text Schnellstart-Checkliste (Fallback, kein Pin-/SEO-Gap)"
-    },
-    {
-      "at": "2026-11-18T21:57:19+01:00",
-      "text": "Auto-Backup 2026-11-18 21:57 — Workspace-Snapshot"
-    },
-    {
-      "at": "2026-11-18T21:47:19+01:00",
-      "text": "Auto-Backup 2026-11-18 21:47 — Workspace-Snapshot"
     }
   ]
 }
