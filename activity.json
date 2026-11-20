@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-20T23:08:14+00:00",
+  "generated": "2026-11-20T23:18:14+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": false
   },
   "commits": [
+    {
+      "at": "2026-11-21T00:17:48+01:00",
+      "text": "Auto-Backup 2026-11-21 00:17 — Workspace-Snapshot"
+    },
     {
       "at": "2026-11-21T00:07:48+01:00",
       "text": "Auto-Backup 2026-11-21 00:07 — Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-11-20T23:30:35+01:00",
       "text": "Content-Loop: SEO für Student Budget Planner Digital (Titel+Tags)"
-    },
-    {
-      "at": "2026-11-20T23:27:48+01:00",
-      "text": "Auto-Backup 2026-11-20 23:27 — Workspace-Snapshot"
     }
   ]
 }
