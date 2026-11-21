@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-21T21:58:20+00:00",
+  "generated": "2026-11-21T22:08:20+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,14 @@
     "online": false
   },
   "commits": [
+    {
+      "at": "2026-11-21T23:07:55+01:00",
+      "text": "Auto-Backup 2026-11-21 23:07 — Workspace-Snapshot"
+    },
+    {
+      "at": "2026-11-21T23:01:07+01:00",
+      "text": "Content-Loop: Freebie-Text für Creator Content Kit (EN)"
+    },
     {
       "at": "2026-11-21T22:57:55+01:00",
       "text": "Auto-Backup 2026-11-21 22:57 — Workspace-Snapshot"
@@ -26,14 +34,6 @@
     {
       "at": "2026-11-21T22:30:35+01:00",
       "text": "Content-Loop: SEO-Listing für Pflege-Alltag-Komplettpaket (DE)"
-    },
-    {
-      "at": "2026-11-21T22:27:54+01:00",
-      "text": "Auto-Backup 2026-11-21 22:27 — Workspace-Snapshot"
-    },
-    {
-      "at": "2026-11-21T22:17:54+01:00",
-      "text": "Auto-Backup 2026-11-21 22:17 — Workspace-Snapshot"
     }
   ]
 }
