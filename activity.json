@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-21T22:38:21+00:00",
+  "generated": "2026-11-21T22:48:21+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": false
   },
   "commits": [
+    {
+      "at": "2026-11-21T23:47:55+01:00",
+      "text": "Auto-Backup 2026-11-21 23:47 — Workspace-Snapshot"
+    },
     {
       "at": "2026-11-21T23:37:55+01:00",
       "text": "Auto-Backup 2026-11-21 23:37 — Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-11-21T23:01:07+01:00",
       "text": "Content-Loop: Freebie-Text für Creator Content Kit (EN)"
-    },
-    {
-      "at": "2026-11-21T22:57:55+01:00",
-      "text": "Auto-Backup 2026-11-21 22:57 — Workspace-Snapshot"
     }
   ]
 }
