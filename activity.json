@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-24T21:38:41+00:00",
+  "generated": "2026-11-24T21:48:41+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": false
   },
   "commits": [
+    {
+      "at": "2026-11-24T22:38:42+01:00",
+      "text": "Auto-Backup 2026-11-24 22:38 — Workspace-Snapshot"
+    },
     {
       "at": "2026-11-24T22:30:51+01:00",
       "text": "Content-Loop: Freebie-Opt-in Weihnachtsbudget-5-Minuten-Check"
@@ -30,10 +34,6 @@
     {
       "at": "2026-11-24T22:00:39+01:00",
       "text": "Content-Loop: SEO-Listing für Baby Budget Planner (Titel+Tags)"
-    },
-    {
-      "at": "2026-11-24T21:58:41+01:00",
-      "text": "Auto-Backup 2026-11-24 21:58 — Workspace-Snapshot"
     }
   ]
 }
