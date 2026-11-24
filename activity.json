@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-24T22:28:41+00:00",
+  "generated": "2026-11-24T22:38:41+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": false
   },
   "commits": [
+    {
+      "at": "2026-11-24T23:28:42+01:00",
+      "text": "Auto-Backup 2026-11-24 23:28 — Workspace-Snapshot"
+    },
     {
       "at": "2026-11-24T23:18:42+01:00",
       "text": "Auto-Backup 2026-11-24 23:18 — Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-11-24T22:38:42+01:00",
       "text": "Auto-Backup 2026-11-24 22:38 — Workspace-Snapshot"
-    },
-    {
-      "at": "2026-11-24T22:30:51+01:00",
-      "text": "Content-Loop: Freebie-Opt-in Weihnachtsbudget-5-Minuten-Check"
     }
   ]
 }
