@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-25T22:18:49+00:00",
+  "generated": "2026-11-25T22:28:49+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": false
   },
   "commits": [
+    {
+      "at": "2026-11-25T23:18:58+01:00",
+      "text": "Auto-Backup 2026-11-25 23:18 — Workspace-Snapshot"
+    },
     {
       "at": "2026-11-25T23:08:58+01:00",
       "text": "Auto-Backup 2026-11-25 23:08 — Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-11-25T22:38:58+01:00",
       "text": "Auto-Backup 2026-11-25 22:38 — Workspace-Snapshot"
-    },
-    {
-      "at": "2026-11-25T22:30:49+01:00",
-      "text": "Content-Loop: Freebie payment-reminder EN (Rotation-Lücke, keine SEO-Kandidaten übrig)"
     }
   ]
 }
