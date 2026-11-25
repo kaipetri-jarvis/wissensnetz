@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-25T22:48:49+00:00",
+  "generated": "2026-11-25T22:58:49+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": false
   },
   "commits": [
+    {
+      "at": "2026-11-25T23:48:58+01:00",
+      "text": "Auto-Backup 2026-11-25 23:48 — Workspace-Snapshot"
+    },
     {
       "at": "2026-11-25T23:38:58+01:00",
       "text": "Auto-Backup 2026-11-25 23:38 — Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-11-25T23:08:58+01:00",
       "text": "Auto-Backup 2026-11-25 23:08 — Workspace-Snapshot"
-    },
-    {
-      "at": "2026-11-25T23:00:43+01:00",
-      "text": "Content-Loop: Listing-SEO für ADHD Daily Planner Fillable PDF (Adults-Digital)"
     }
   ]
 }
