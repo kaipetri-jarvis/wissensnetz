@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-25T20:48:48+00:00",
+  "generated": "2026-11-25T20:58:48+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": false
   },
   "commits": [
+    {
+      "at": "2026-11-25T21:48:58+01:00",
+      "text": "Auto-Backup 2026-11-25 21:48 — Workspace-Snapshot"
+    },
     {
       "at": "2026-11-25T21:38:57+01:00",
       "text": "Auto-Backup 2026-11-25 21:38 — Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-11-25T21:00:51+01:00",
       "text": "Etsy-Tiefe-Loop 2026-11-25 21:00: Listing-Video-Stand geprueft, 17/17 oben, keine neuen Treffer"
-    },
-    {
-      "at": "2026-11-25T20:58:57+01:00",
-      "text": "Auto-Backup 2026-11-25 20:58 — Workspace-Snapshot"
     }
   ]
 }
