@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-26T22:08:56+00:00",
+  "generated": "2026-11-26T22:18:56+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": false
   },
   "commits": [
+    {
+      "at": "2026-11-26T23:09:15+01:00",
+      "text": "Auto-Backup 2026-11-26 23:09 — Workspace-Snapshot"
+    },
     {
       "at": "2026-11-26T23:01:08+01:00",
       "text": "Content-Loop: Freebie-Opt-in für ADHD Routine Cards (EN)"
@@ -30,10 +34,6 @@
     {
       "at": "2026-11-26T22:29:15+01:00",
       "text": "Auto-Backup 2026-11-26 22:29 — Workspace-Snapshot"
-    },
-    {
-      "at": "2026-11-26T22:19:14+01:00",
-      "text": "Auto-Backup 2026-11-26 22:19 — Workspace-Snapshot"
     }
   ]
 }
