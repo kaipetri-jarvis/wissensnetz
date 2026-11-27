@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-27T22:49:03+00:00",
+  "generated": "2026-11-27T22:59:03+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": false
   },
   "commits": [
+    {
+      "at": "2026-11-27T23:49:29+01:00",
+      "text": "Auto-Backup 2026-11-27 23:49 — Workspace-Snapshot"
+    },
     {
       "at": "2026-11-27T23:39:29+01:00",
       "text": "Auto-Backup 2026-11-27 23:39 — Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-11-27T23:09:29+01:00",
       "text": "Auto-Backup 2026-11-27 23:09 — Workspace-Snapshot"
-    },
-    {
-      "at": "2026-11-27T23:01:39+01:00",
-      "text": "Content-Loop: 22 Etsy-Tag-Verstöße (>20 Zeichen) in 11 SEO-Dateien behoben"
     }
   ]
 }
