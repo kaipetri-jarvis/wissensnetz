@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-28T09:49:06+00:00",
+  "generated": "2026-11-28T09:59:06+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": false
   },
   "commits": [
+    {
+      "at": "2026-11-28T10:49:32+01:00",
+      "text": "Auto-Backup 2026-11-28 10:49 — Workspace-Snapshot"
+    },
     {
       "at": "2026-11-28T10:39:32+01:00",
       "text": "Auto-Backup 2026-11-28 10:39 — Workspace-Snapshot"
@@ -30,10 +34,6 @@
     {
       "at": "2026-11-28T10:03:12+01:00",
       "text": "Etsy-Loop 28.11. 10:00: Video-Upload-Stand und Preise live geprueft, keine neuen Video-Kandidaten"
-    },
-    {
-      "at": "2026-11-28T10:01:34+01:00",
-      "text": "Ads-Messung 2026-11-28: weiterhin kein Tab offen"
     }
   ]
 }
