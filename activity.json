@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-28T15:09:08+00:00",
+  "generated": "2026-11-28T15:19:08+00:00",
   "bots": {
     "jarvis": true,
     "ultron": true
@@ -11,6 +11,10 @@
     "online": false
   },
   "commits": [
+    {
+      "at": "2026-11-28T16:09:34+01:00",
+      "text": "Auto-Backup 2026-11-28 16:09 — Workspace-Snapshot"
+    },
     {
       "at": "2026-11-28T16:00:58+01:00",
       "text": "Lieferprüfung 28.11. 16:00: Seiten-Audit unverändert, 0 Nachteilsfälle"
@@ -30,10 +34,6 @@
     {
       "at": "2026-11-28T15:29:34+01:00",
       "text": "Auto-Backup 2026-11-28 15:29 — Workspace-Snapshot"
-    },
-    {
-      "at": "2026-11-28T15:19:33+01:00",
-      "text": "Auto-Backup 2026-11-28 15:19 — Workspace-Snapshot"
     }
   ]
 }
